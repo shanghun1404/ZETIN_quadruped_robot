@@ -1,9 +1,5 @@
 # FOR Quadruped Robot Training
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Isaac Sim](https://img.shields.io/badge/Isaac%20Sim-Ready-blue.svg)](https://developer.nvidia.com/isaac-sim)
-[![RSL-RL](https://img.shields.io/badge/RSL--RL-Supported-orange.svg)](https://github.com/leggedrobotics/rsl_rl)
-
 This repository contains the environment configurations and training scripts for a quadruped robot named **"FOR"**, utilizing the IsaacLab and RSL-RL libraries for Deep Reinforcement Learning (RL). 
 
 ## 📖 Overview
