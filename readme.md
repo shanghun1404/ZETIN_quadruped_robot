@@ -1,4 +1,4 @@
-# FOR Quadruped Robot Training
+# Quadruped Robot Training
 
 This repository contains the environment configurations and training scripts for a quadruped robot named **"FOR"**, utilizing the IsaacLab and RSL-RL libraries for Deep Reinforcement Learning (RL). 
 
