@@ -1,0 +1,322 @@
+<?xml version='1.0' encoding='utf-8'?>
+<robot name="for">
+    <link name="BODY">
+        <inertial>
+            <origin xyz="0.0 0.0 0.06" rpy="0.0 0.0 0.0" />
+            <mass value="25.73999999999999" />
+            <inertia ixx="0.5671379999999995" iyy="0.22393800000000003" izz="0.7292999999999994" ixy="0.0" iyz="0.0" ixz="-3.3294782042503356e-17" />
+        </inertial>
+        <visual name="BODY_visual">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/BODY.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="BODY_collision">
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+            <geometry>
+                <mesh filename="meshes/BODY.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="BL_DOWNLEG">
+        <inertial>
+            <origin xyz="-0.04876893730103509 -0.04876894670776217 0.029999999999999877" rpy="0.0 -0.0 0.0" />
+            <mass value="2.1616981997332476" />
+            <inertia ixx="0.01067513449584084" iyy="0.010675134495841076" izz="0.0204168041982416" ixy="-0.009264345441016838" iyz="1.3877787807814455e-17" ixz="-7.63278329429795e-17" />
+        </inertial>
+        <visual name="BL_DOWNLEG_visual">
+            <origin xyz="0.34648232748477137 -0.07778175063388382 0.14999999999999994" rpy="-0.7853981633974481 1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/BL_DOWNLEG.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="BL_DOWNLEG_collision">
+            <origin xyz="0.34648232748477137 -0.07778175063388382 0.14999999999999994" rpy="-0.7853981633974481 1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/BL_DOWNLEG.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="BL_LEG">
+        <inertial>
+            <origin xyz="-0.08838834764831845 -0.08838834764831838 0.009999999999999946" rpy="0.0 -0.0 0.0" />
+            <mass value="0.7822123542077758" />
+            <inertia ixx="0.00328889490198922" iyy="0.0032888949019892165" izz="0.006525642313697844" ixy="-0.003111502172424334" iyz="-8.326672684688674e-17" ixz="1.0972125985553305e-16" />
+        </inertial>
+        <visual name="BL_LEG_visual">
+            <origin xyz="-0.2545584412271565 0.16970562748477075 -0.15000000000000005" rpy="-2.3561944901923435 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/BL_LEG.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="BL_LEG_collision">
+            <origin xyz="-0.2545584412271565 0.16970562748477075 -0.15000000000000005" rpy="-2.3561944901923435 -1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/BL_LEG.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="BL_MOTOR">
+        <inertial>
+            <origin xyz="-8.881784197001253e-18 -0.03000000000000002 0.04999999999999989" rpy="0.0 -0.0 0.0" />
+            <mass value="1.2723450247038663" />
+            <inertia ixx="0.0011769191478511187" iyy="0.0015904312808798643" izz="0.001176919147851091" ixy="-3.469446951953614e-18" iyz="-2.0816681711721685e-17" ixz="6.938893903907228e-18" />
+        </inertial>
+        <visual name="BL_MOTOR_visual">
+            <origin xyz="-0.06 -0.15 -0.25" rpy="1.5707963267948966 -0.0 1.5707963267948966" />
+            <geometry>
+                <mesh filename="meshes/BL_MOTOR.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="BL_MOTOR_collision">
+            <origin xyz="-0.06 -0.15 -0.25" rpy="1.5707963267948966 -0.0 1.5707963267948966" />
+            <geometry>
+                <mesh filename="meshes/BL_MOTOR.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="FL_DOWNLEG2">
+        <inertial>
+            <origin xyz="-0.04876893730103552 -0.04876894670776176 0.030000000000000054" rpy="0.0 -0.0 0.0" />
+            <mass value="2.161698199733248" />
+            <inertia ixx="0.010675134495840857" iyy="0.010675134495840927" izz="0.020416804198242433" ixy="-0.009264345441016918" iyz="-1.1102230246251565e-16" ixz="2.0816681711721685e-16" />
+        </inertial>
+        <visual name="FL_DOWNLEG2_visual">
+            <origin xyz="-0.07778174122715724 0.346482318078045 0.15" rpy="2.356194490192345 1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/FL_DOWNLEG2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="FL_DOWNLEG2_collision">
+            <origin xyz="-0.07778174122715724 0.346482318078045 0.15" rpy="2.356194490192345 1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/FL_DOWNLEG2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="FL_LEG2">
+        <inertial>
+            <origin xyz="-0.08838834764831847 -0.08838834764831852 0.01" rpy="0.0 -0.0 0.0" />
+            <mass value="0.7822123542077758" />
+            <inertia ixx="0.003288894901989192" iyy="0.003288894901989192" izz="0.006525642313697962" ixy="-0.0031115021724244752" iyz="-6.938893903907228e-18" ixz="1.734723475976807e-18" />
+        </inertial>
+        <visual name="FL_LEG2_visual">
+            <origin xyz="0.16970562748477103 -0.254558441227157 -0.15" rpy="0.7853981633974484 -1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/FL_LEG2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="FL_LEG2_collision">
+            <origin xyz="0.16970562748477103 -0.254558441227157 -0.15" rpy="0.7853981633974484 -1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/FL_LEG2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="FL_MOTOR2">
+        <inertial>
+            <origin xyz="8.881784197001253e-18 0.029999999999999964 0.04999999999999989" rpy="0.0 -0.0 0.0" />
+            <mass value="1.2723450247038663" />
+            <inertia ixx="0.0011769191478510632" iyy="0.0015904312808798643" izz="0.0011769191478510632" ixy="1.5612511283791264e-17" iyz="-3.469446951953614e-17" ixz="-2.0816681711721685e-17" />
+        </inertial>
+        <visual name="FL_MOTOR2_visual">
+            <origin xyz="-0.05999999999999999 0.15 -0.24999999999999994" rpy="1.5707963267948963 -1.665334536937735e-16 -1.5707963267948968" />
+            <geometry>
+                <mesh filename="meshes/FL_MOTOR2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="FL_MOTOR2_collision">
+            <origin xyz="-0.05999999999999999 0.15 -0.24999999999999994" rpy="1.5707963267948963 -1.665334536937735e-16 -1.5707963267948968" />
+            <geometry>
+                <mesh filename="meshes/FL_MOTOR2.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="BR_DOWNLEG3">
+        <inertial>
+            <origin xyz="-0.04876893730103509 -0.048768946707761746 -0.030000000000000037" rpy="0.0 -0.0 0.0" />
+            <mass value="2.161698199733248" />
+            <inertia ixx="0.01067513449584101" iyy="0.010675134495840219" izz="0.02041680419824099" ixy="-0.009264345441017008" iyz="-6.938893903907228e-17" ixz="-2.0816681711721685e-17" />
+        </inertial>
+        <visual name="BR_DOWNLEG3_visual">
+            <origin xyz="0.34648232748477187 -0.07778175063388325 -0.14999999999999988" rpy="0.7853981633974485 -1.5707963267948963 0" />
+            <geometry>
+                <mesh filename="meshes/BR_DOWNLEG3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="BR_DOWNLEG3_collision">
+            <origin xyz="0.34648232748477187 -0.07778175063388325 -0.14999999999999988" rpy="0.7853981633974485 -1.5707963267948963 0" />
+            <geometry>
+                <mesh filename="meshes/BR_DOWNLEG3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="BR_LEG3">
+        <inertial>
+            <origin xyz="-0.08838834764831838 -0.08838834764831816 -0.009999999999999912" rpy="0.0 -0.0 0.0" />
+            <mass value="0.7822123542077758" />
+            <inertia ixx="0.003288894901989081" iyy="0.003288894901989064" izz="0.006525642313697594" ixy="-0.003111502172424707" iyz="2.0816681711721685e-17" ixz="-2.2985086056692694e-17" />
+        </inertial>
+        <visual name="BR_LEG3_visual">
+            <origin xyz="-0.25455844122715704 0.16970562748477153 0.14999999999999994" rpy="2.3561944901923453 1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/BR_LEG3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="BR_LEG3_collision">
+            <origin xyz="-0.25455844122715704 0.16970562748477153 0.14999999999999994" rpy="2.3561944901923453 1.5707963267948966 0" />
+            <geometry>
+                <mesh filename="meshes/BR_LEG3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="BR_MOTOR3">
+        <inertial>
+            <origin xyz="8.881784197001253e-18 0.030000000000000054 0.04999999999999989" rpy="0.0 -0.0 0.0" />
+            <mass value="1.2723450247038663" />
+            <inertia ixx="0.001176919147851091" iyy="0.0015904312808799337" izz="0.0011769191478510355" ixy="-5.204170427930421e-18" iyz="-2.7755575615628914e-17" ixz="-3.469446951953614e-18" />
+        </inertial>
+        <visual name="BR_MOTOR3_visual">
+            <origin xyz="-0.060000000000000026 0.15000000000000013 -0.25000000000000006" rpy="1.5707963267948966 -2.220446049250312e-16 -1.5707963267948966" />
+            <geometry>
+                <mesh filename="meshes/BR_MOTOR3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="BR_MOTOR3_collision">
+            <origin xyz="-0.060000000000000026 0.15000000000000013 -0.25000000000000006" rpy="1.5707963267948966 -2.220446049250312e-16 -1.5707963267948966" />
+            <geometry>
+                <mesh filename="meshes/BR_MOTOR3.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="BR_DOWNLEG4">
+        <inertial>
+            <origin xyz="-0.048768937301035445 -0.04876894670776233 -0.029999999999999877" rpy="0.0 -0.0 0.0" />
+            <mass value="2.1616981997332476" />
+            <inertia ixx="0.010675134495840774" iyy="0.010675134495840857" izz="0.02041680419824174" ixy="-0.009264345441016952" iyz="1.387778780781446e-17" ixz="-2.7755575615628914e-17" />
+        </inertial>
+        <visual name="BR_DOWNLEG4_visual">
+            <origin xyz="-0.07778174122715724 0.3464823180780447 -0.1499999999999996" rpy="-2.356194490192345 -1.5707963267948957 0" />
+            <geometry>
+                <mesh filename="meshes/BR_DOWNLEG4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="BR_DOWNLEG4_collision">
+            <origin xyz="-0.07778174122715724 0.3464823180780447 -0.1499999999999996" rpy="-2.356194490192345 -1.5707963267948957 0" />
+            <geometry>
+                <mesh filename="meshes/BR_DOWNLEG4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="FR_LEG4">
+        <inertial>
+            <origin xyz="-0.08838834764831852 -0.08838834764831816 -0.010000000000000071" rpy="3.0385816786431356e-64 -0.0 0.0" />
+            <mass value="0.7822123542077758" />
+            <inertia ixx="0.003288894901989199" iyy="0.003288894901989199" izz="0.006525642313697837" ixy="-0.0031115021724246643" iyz="6.938893903907228e-17" ixz="-7.502679033599691e-17" />
+        </inertial>
+        <visual name="FR_LEG4_visual">
+            <origin xyz="0.16970562748477128 -0.254558441227157 0.1499999999999997" rpy="-0.7853981633974477 1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/FR_LEG4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="FR_LEG4_collision">
+            <origin xyz="0.16970562748477128 -0.254558441227157 0.1499999999999997" rpy="-0.7853981633974477 1.5707963267948961 0" />
+            <geometry>
+                <mesh filename="meshes/FR_LEG4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="FR_MOTOR4">
+        <inertial>
+            <origin xyz="8.881784197001253e-18 -0.030000000000000054 0.05000000000000011" rpy="0.0 -0.0 0.0" />
+            <mass value="1.2723450247038663" />
+            <inertia ixx="0.0011769191478511465" iyy="0.0015904312808798227" izz="0.0011769191478510632" ixy="-1.5612511283791264e-17" iyz="2.0816681711721685e-17" ixz="1.734723475976807e-17" />
+        </inertial>
+        <visual name="FR_MOTOR4_visual">
+            <origin xyz="-0.06000000000000009 -0.1500000000000002 -0.2500000000000002" rpy="1.5707963267948968 -3.3306690738754686e-16 1.5707963267948968" />
+            <geometry>
+                <mesh filename="meshes/FR_MOTOR4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </visual>
+        <collision name="FR_MOTOR4_collision">
+            <origin xyz="-0.06000000000000009 -0.1500000000000002 -0.2500000000000002" rpy="1.5707963267948968 -3.3306690738754686e-16 1.5707963267948968" />
+            <geometry>
+                <mesh filename="meshes/FR_MOTOR4.stl" scale="0.001 0.001 0.001" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="BODY_Revolute-1" type="continuous">
+        <origin xyz="0.15 0.25 0.06" rpy="-1.5707963267948966 -1.5707963267948966 0" />
+        <parent link="BODY" />
+        <child link="BL_MOTOR" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+    <joint name="BL_MOTOR_Revolute-2" type="continuous">
+        <origin xyz="0.0 0.0 0.05" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="BL_MOTOR" />
+        <child link="BL_LEG" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+    <joint name="BL_LEG_Revolute-3" type="continuous">
+        <origin xyz="-0.17677669999999998 -0.17677669999999998 0.0" rpy="3.141592653589793 -0.0 0.0" />
+        <parent link="BL_LEG" />
+        <child link="BL_DOWNLEG" />
+        <axis xyz="-0.0 -0.0 1.0" />
+    </joint>
+    <joint name="BODY_Revolute-4" type="continuous">
+        <origin xyz="-0.15 0.25 0.06" rpy="-1.5707963267948966 -1.5707963267948966 0" />
+        <parent link="BODY" />
+        <child link="BR_MOTOR3" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+    <joint name="BR_MOTOR3_Revolute-5" type="continuous">
+        <origin xyz="0.0 0.0 0.05" rpy="-1.5707963267948966 -0.0 0.0" />
+        <parent link="BR_MOTOR3" />
+        <child link="BR_LEG3" />
+        <axis xyz="0.0 -7.49879891330929e-33 -1.0" />
+    </joint>
+    <joint name="BR_LEG3_Revolute-6" type="continuous">
+        <origin xyz="-0.17677669999999998 -0.17677669999999998 0.0" rpy="3.141592653589793 2.465190328815662e-32 4.29331795099739e-65" />
+        <parent link="BR_LEG3" />
+        <child link="BR_DOWNLEG3" />
+        <axis xyz="-2.465190328815662e-32 0.0 -1.0" />
+    </joint>
+    <joint name="BODY_Revolute-7" type="continuous">
+        <origin xyz="0.15 -0.25 0.06" rpy="1.5707963267948966 -1.5707963267948966 0" />
+        <parent link="BODY" />
+        <child link="FL_MOTOR2" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+    <joint name="FL_MOTOR2_Revolute-8" type="continuous">
+        <origin xyz="0.0 0.0 0.05" rpy="1.5707963267948966 -4.930380657631324e-32 0.0" />
+        <parent link="FL_MOTOR2" />
+        <child link="FL_LEG2" />
+        <axis xyz="0.0 -1.7153104374847325e-32 1.0" />
+    </joint>
+    <joint name="FL_LEG2_Revolute-9" type="continuous">
+        <origin xyz="-0.17677669999999998 -0.17677669999999998 0.0" rpy="-3.141592653589793 8.45713340280785e-64 -4.930380657631324e-32" />
+        <parent link="FL_LEG2" />
+        <child link="FL_DOWNLEG2" />
+        <axis xyz="0.0 -1.5407439555097887e-33 1.0" />
+    </joint>
+    <joint name="BODY_Revolute-10" type="continuous">
+        <origin xyz="-0.15 -0.25 0.06" rpy="1.5707963267948966 -1.5707963267948966 0" />
+        <parent link="BODY" />
+        <child link="FR_MOTOR4" />
+        <axis xyz="0.0 0.0 1.0" />
+    </joint>
+    <joint name="FR_MOTOR4_Revolute-11" type="continuous">
+        <origin xyz="0.0 0.0 0.05" rpy="1.5707963267948966 -1.232595164407831e-32 1.232595164407831e-32" />
+        <parent link="FR_MOTOR4" />
+        <child link="FR_LEG4" />
+        <axis xyz="1.232595164407831e-32 4.827152730769016e-33 -1.0" />
+    </joint>
+    <joint name="FR_LEG4_Revolute-12" type="continuous">
+        <origin xyz="-0.17677669999999998 -0.17677669999999998 0.0" rpy="-3.141592653589793 -1.232595164407831e-32 -1.232595164407831e-32" />
+        <parent link="FR_LEG4" />
+        <child link="BR_DOWNLEG4" />
+        <axis xyz="0.0 -1.232595164407831e-31 -1.0" />
+    </joint>
+</robot>
