@@ -1,0 +1,64 @@
+{
+  "checkpoint": "/home/kang/quadruped_training_smooth_v8/logs/rsl_rl/guide_v10_4_terrain_robot_v2/2026-08-05_20-51-23_robot_v2_blind_terrain/model_2000.pt",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "thresholds": {
+    "rear_contact_correlation_weak_above": -0.2,
+    "rear_transition_coincidence_weak_above": 0.05,
+    "min_valid_fraction": 0.9,
+    "confirmation_seed_count": 4
+  },
+  "per_seed": [
+    {
+      "seed": 42,
+      "rear_contact_correlation_median": -0.8156834244728088,
+      "rear_transition_coincidence": 0.006375518161803484,
+      "rear_weak": false,
+      "survival": 0.984375,
+      "speed": 0.5109651684761047
+    },
+    {
+      "seed": 43,
+      "rear_contact_correlation_median": -0.818842351436615,
+      "rear_transition_coincidence": 0.011335012502968311,
+      "rear_weak": false,
+      "survival": 0.96875,
+      "speed": 0.5107532143592834
+    },
+    {
+      "seed": 44,
+      "rear_contact_correlation_median": -0.8153602480888367,
+      "rear_transition_coincidence": 0.009279999881982803,
+      "rear_weak": false,
+      "survival": 0.984375,
+      "speed": 0.515619695186615
+    },
+    {
+      "seed": 45,
+      "rear_contact_correlation_median": -0.8145774602890015,
+      "rear_transition_coincidence": 0.006333122029900551,
+      "rear_weak": false,
+      "survival": 0.96875,
+      "speed": 0.48727649450302124
+    },
+    {
+      "seed": 46,
+      "rear_contact_correlation_median": -0.8185498118400574,
+      "rear_transition_coincidence": 0.008349389769136906,
+      "rear_weak": false,
+      "survival": 1.0,
+      "speed": 0.5244113206863403
+    }
+  ],
+  "weak_seed_count": 0,
+  "rear_weakness_confirmed": false,
+  "median_across_seeds": {
+    "rear_contact_correlation": -0.8156834244728088,
+    "rear_transition_coincidence": 0.008349389769136906
+  }
+}

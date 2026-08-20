@@ -1,0 +1,24 @@
+{
+  "ranked": [
+    {
+      "gate_json": "/home/kang/quadruped_training_smooth_v8/run_control/v10_1_flat_pilot_gate.json",
+      "iteration": -1,
+      "passed": false,
+      "gates_passed": 7,
+      "min_foot_contact": 0.24812500178813934,
+      "survival": 0.984375,
+      "speed": 0.441739946603775,
+      "height": 0.43247145414352417
+    },
+    {
+      "gate_json": "/home/kang/quadruped_training_smooth_v8/run_control/v10_1_flat_gate_2000.json",
+      "iteration": 2000,
+      "passed": false,
+      "gates_passed": 7,
+      "min_foot_contact": 0.24656249582767487,
+      "survival": 1.0,
+      "speed": 0.4488740563392639,
+      "height": 0.4184263348579407
+    }
+  ]
+}

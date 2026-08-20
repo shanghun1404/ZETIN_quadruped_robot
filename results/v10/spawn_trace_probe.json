@@ -1,0 +1,62 @@
+{
+  "ok": true,
+  "configured_spawn_z": -0.37,
+  "root_z_before_any_step": -0.37,
+  "trace": [
+    {
+      "step": 1,
+      "root_z": -0.3651,
+      "support": 2.432
+    },
+    {
+      "step": 2,
+      "root_z": -0.3534,
+      "support": 2.093
+    },
+    {
+      "step": 3,
+      "root_z": -0.3368,
+      "support": 1.708
+    },
+    {
+      "step": 5,
+      "root_z": -0.2958,
+      "support": 1.06
+    },
+    {
+      "step": 10,
+      "root_z": -0.1938,
+      "support": 0.874
+    },
+    {
+      "step": 20,
+      "root_z": -0.0018,
+      "support": 0.979
+    },
+    {
+      "step": 50,
+      "root_z": 0.3848,
+      "support": 0.771
+    },
+    {
+      "step": 100,
+      "root_z": 0.3215,
+      "support": 0.938
+    },
+    {
+      "step": 200,
+      "root_z": 0.4328,
+      "support": 0.949
+    },
+    {
+      "step": 400,
+      "root_z": 0.4451,
+      "support": 0.949
+    }
+  ],
+  "settled_root_z": 0.4451,
+  "support_fraction": 0.949,
+  "tilt_deg_mean": 1.773,
+  "rise_from_spawn_m": 0.8151,
+  "spawned_underground": true
+}

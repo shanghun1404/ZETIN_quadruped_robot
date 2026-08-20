@@ -1,0 +1,45 @@
+{
+  "metrics": {
+    "mean_forward_speed_m_s": 0.6641618609428406,
+    "mean_base_height_m": 0.3640345633029938,
+    "survival_fraction": 0.9375,
+    "commanded_speed": 0.5
+  },
+  "phase_metrics": {
+    "foot_contact_fraction": {
+      "FL": 0.5061718821525574,
+      "FR": 0.43308594822883606,
+      "RL": 0.4475390613079071,
+      "RR": 0.5094921588897705
+    },
+    "foot_swing_fraction": {
+      "FL": 0.4938281178474426,
+      "FR": 0.5669140517711639,
+      "RL": 0.5524609386920929,
+      "RR": 0.4905078411102295
+    },
+    "min_foot_contact_fraction": 0.43308594822883606,
+    "min_foot_swing_fraction": 0.4905078411102295,
+    "same_joint_pair_correlation": {
+      "HFE": {
+        "FL-FR": -0.4988647401332855,
+        "RL-RR": -0.6367055177688599,
+        "FL-RR": 0.8683509826660156,
+        "FR-RL": 0.8039135932922363,
+        "FL-RL": -0.5713086128234863,
+        "FR-RR": -0.5754761695861816
+      }
+    }
+  },
+  "gates": {
+    "front_pair_out_of_phase": true,
+    "rear_pair_out_of_phase": true,
+    "diagonal_FL_RR_in_phase": true,
+    "diagonal_FR_RL_in_phase": true,
+    "min_foot_contact": true,
+    "min_foot_swing": true,
+    "forward_speed": true,
+    "survival": false
+  },
+  "passed": false
+}

@@ -1,0 +1,81 @@
+{
+  "scenario": "rough",
+  "checkpoint": "/home/kang/quadruped_training_smooth_v11/logs/rsl_rl/guide_v11_scanner_terrain_robot_v2/2026-08-12_07-19-56_robot_v2_scanner_terrain_bootstrap/model_4999.pt",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "per_seed": [
+    {
+      "seed": 42,
+      "survival_fraction": 0.96875,
+      "mean_forward_speed_m_s": 0.5814216136932373,
+      "direct_phase_valid_fraction": 1.0,
+      "gates": {
+        "rough_survival": true,
+        "rough_speed": true,
+        "direct_phase_valid": true
+      },
+      "passed": true
+    },
+    {
+      "seed": 43,
+      "survival_fraction": 0.953125,
+      "mean_forward_speed_m_s": 0.5740665793418884,
+      "direct_phase_valid_fraction": 1.0,
+      "gates": {
+        "rough_survival": true,
+        "rough_speed": true,
+        "direct_phase_valid": true
+      },
+      "passed": true
+    },
+    {
+      "seed": 44,
+      "survival_fraction": 0.90625,
+      "mean_forward_speed_m_s": 0.5543144941329956,
+      "direct_phase_valid_fraction": 1.0,
+      "gates": {
+        "rough_survival": true,
+        "rough_speed": true,
+        "direct_phase_valid": true
+      },
+      "passed": true
+    },
+    {
+      "seed": 45,
+      "survival_fraction": 0.984375,
+      "mean_forward_speed_m_s": 0.5636690855026245,
+      "direct_phase_valid_fraction": 1.0,
+      "gates": {
+        "rough_survival": true,
+        "rough_speed": true,
+        "direct_phase_valid": true
+      },
+      "passed": true
+    },
+    {
+      "seed": 46,
+      "survival_fraction": 1.0,
+      "mean_forward_speed_m_s": 0.5781851410865784,
+      "direct_phase_valid_fraction": 1.0,
+      "gates": {
+        "rough_survival": true,
+        "rough_speed": true,
+        "direct_phase_valid": true
+      },
+      "passed": true
+    }
+  ],
+  "passing_seed_count": 5,
+  "required_seed_count": 5,
+  "worst_case": {
+    "survival_fraction": 0.90625,
+    "mean_forward_speed_m_s": 0.5543144941329956,
+    "direct_phase_valid_fraction": 1.0
+  },
+  "passed": true
+}

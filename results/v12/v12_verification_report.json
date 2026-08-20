@@ -1,0 +1,62 @@
+{
+  "status": "verified",
+  "teacher_sha256": "53a6a5002f4cafb87889d777fcc567157245c786f82376db08962c9227acc2b7",
+  "selected_checkpoint": "/home/kang/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+  "selected_checkpoint_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+  "selected_checkpoint_finite": true,
+  "strict_load": true,
+  "parameter_count": 579387,
+  "forward_shape": [
+    2,
+    187
+  ],
+  "forward_finite": true,
+  "dataset_manifests": {
+    "train": {
+      "samples": 65536,
+      "shards": 32,
+      "all_hashes_valid": true,
+      "rollout_policy": "teacher",
+      "actor_equivalence": 0.0
+    },
+    "validation": {
+      "samples": 8192,
+      "shards": 4,
+      "all_hashes_valid": true,
+      "rollout_policy": "teacher",
+      "actor_equivalence": 0.0
+    },
+    "dagger": {
+      "samples": 32768,
+      "shards": 16,
+      "all_hashes_valid": true,
+      "rollout_policy": "student",
+      "actor_equivalence": 0.0
+    }
+  },
+  "total_verified_shards": 52,
+  "closed_loop_results": {
+    "v12_initial_closed_loop": {
+      "files": 9,
+      "operational_passes": 6,
+      "all_finite": true,
+      "actor_equivalence_max_abs_error": 0.0
+    },
+    "v12_dagger_closed_loop": {
+      "files": 9,
+      "operational_passes": 7,
+      "all_finite": true,
+      "actor_equivalence_max_abs_error": 0.0
+    }
+  },
+  "best_epoch": 7,
+  "best_validation": {
+    "total_loss": 0.0018424222616886254,
+    "scan_loss": 0.0013203810158302076,
+    "action_loss": 0.00208816498707165,
+    "scan_mae": 0.03471118124092326,
+    "scan_rmse": 0.05138834486387973,
+    "action_mae": 0.02772162462739895,
+    "action_rmse": 0.045696443244808566
+  }
+}

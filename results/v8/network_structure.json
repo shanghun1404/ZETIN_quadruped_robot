@@ -1,0 +1,72 @@
+{
+  "checkpoint": "model_1900.pt",
+  "iteration": 1900,
+  "top_level_keys": [
+    "model_state_dict",
+    "optimizer_state_dict",
+    "iter",
+    "infos"
+  ],
+  "total_parameters": 380313,
+  "parameter_shapes": {
+    "std": [
+      12
+    ],
+    "actor.0.weight": [
+      512,
+      48
+    ],
+    "actor.0.bias": [
+      512
+    ],
+    "actor.2.weight": [
+      256,
+      512
+    ],
+    "actor.2.bias": [
+      256
+    ],
+    "actor.4.weight": [
+      128,
+      256
+    ],
+    "actor.4.bias": [
+      128
+    ],
+    "actor.6.weight": [
+      12,
+      128
+    ],
+    "actor.6.bias": [
+      12
+    ],
+    "critic.0.weight": [
+      512,
+      48
+    ],
+    "critic.0.bias": [
+      512
+    ],
+    "critic.2.weight": [
+      256,
+      512
+    ],
+    "critic.2.bias": [
+      256
+    ],
+    "critic.4.weight": [
+      128,
+      256
+    ],
+    "critic.4.bias": [
+      128
+    ],
+    "critic.6.weight": [
+      1,
+      128
+    ],
+    "critic.6.bias": [
+      1
+    ]
+  }
+}

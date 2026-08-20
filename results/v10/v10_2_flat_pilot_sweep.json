@@ -1,0 +1,34 @@
+{
+  "ranked": [
+    {
+      "gate_json": "/home/kang/quadruped_training_smooth_v8/run_control/v10_2_flat_gate_2000.json",
+      "iteration": 2000,
+      "passed": true,
+      "gates_passed": 8,
+      "min_foot_contact": 0.500195324420929,
+      "survival": 1.0,
+      "speed": 0.48912957310676575,
+      "height": 0.4259134531021118
+    },
+    {
+      "gate_json": "/home/kang/quadruped_training_smooth_v8/run_control/v10_2_flat_gate_1000.json",
+      "iteration": 1000,
+      "passed": true,
+      "gates_passed": 8,
+      "min_foot_contact": 0.49992188811302185,
+      "survival": 1.0,
+      "speed": 0.4803401827812195,
+      "height": 0.42665717005729675
+    },
+    {
+      "gate_json": "/home/kang/quadruped_training_smooth_v8/run_control/v10_2_flat_pilot_gate.json",
+      "iteration": -1,
+      "passed": true,
+      "gates_passed": 8,
+      "min_foot_contact": 0.4949609339237213,
+      "survival": 1.0,
+      "speed": 0.47429966926574707,
+      "height": 0.4246515929698944
+    }
+  ]
+}

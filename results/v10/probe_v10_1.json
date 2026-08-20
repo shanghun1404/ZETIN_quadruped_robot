@@ -1,0 +1,75 @@
+{
+  "ok": true,
+  "active_terms": [
+    "action_smoothness",
+    "air_time",
+    "air_time_variance",
+    "base_angular_velocity",
+    "base_linear_velocity",
+    "base_motion",
+    "base_orientation",
+    "duty_floor",
+    "foot_clearance",
+    "foot_slip",
+    "gait",
+    "joint_acc",
+    "joint_pos",
+    "joint_torques",
+    "joint_vel"
+  ],
+  "weights": {
+    "action_smoothness": -1.0,
+    "air_time": 5.0,
+    "air_time_variance": -1.0,
+    "base_angular_velocity": 5.0,
+    "base_linear_velocity": 5.0,
+    "base_motion": -2.0,
+    "base_orientation": -3.0,
+    "duty_floor": -3.0,
+    "foot_clearance": 0.5,
+    "foot_slip": -0.5,
+    "gait": 10.0,
+    "joint_acc": -0.0001,
+    "joint_pos": -0.7,
+    "joint_torques": -0.0005,
+    "joint_vel": -0.01
+  },
+  "obs_width": 48,
+  "action_scale": 0.2,
+  "body_count": 54,
+  "root_body": "base",
+  "joint_count": 12,
+  "mass_one_env_kg": 48.802,
+  "termination_terms": [
+    "time_out",
+    "base_tilt"
+  ],
+  "contact_bodies": [
+    "FL_foot",
+    "FR_foot",
+    "RR_foot",
+    "RL_foot"
+  ],
+  "support_fraction": 0.936,
+  "tilt_deg_mean": 1.318,
+  "tilt_deg_max": 4.242,
+  "settled_root_z": 0.4357,
+  "contact_floor": 0.35,
+  "height_at_rest": 0.4356975555419922,
+  "fore_aft_axis_measured": "y",
+  "fore_aft_separation_m": 0.8766,
+  "front_minus_rear": [
+    0.1811,
+    0.8766,
+    0.1687
+  ],
+  "cmd_lin_vel_x": [
+    0.0,
+    0.0
+  ],
+  "cmd_lin_vel_y": [
+    0.3,
+    0.9
+  ],
+  "failures": []
+}

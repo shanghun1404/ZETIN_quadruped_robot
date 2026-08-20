@@ -1,0 +1,90 @@
+{
+  "ok": true,
+  "configured_spawn_z": 0.495,
+  "root_z_before_any_step": 0.495,
+  "expected_spawn_z": 0.495,
+  "support_on_first_step": 0.0,
+  "active_terms": [
+    "action_smoothness",
+    "air_time",
+    "air_time_variance",
+    "base_angular_velocity",
+    "base_linear_velocity",
+    "base_motion",
+    "base_orientation",
+    "duty_floor",
+    "foot_clearance",
+    "foot_slip",
+    "gait",
+    "joint_acc",
+    "joint_pos",
+    "joint_torques",
+    "joint_vel"
+  ],
+  "weights": {
+    "action_smoothness": -1.0,
+    "air_time": 5.0,
+    "air_time_variance": -1.0,
+    "base_angular_velocity": 5.0,
+    "base_linear_velocity": 5.0,
+    "base_motion": -2.0,
+    "base_orientation": -3.0,
+    "duty_floor": -3.0,
+    "foot_clearance": 0.5,
+    "foot_slip": -0.5,
+    "gait": 10.0,
+    "joint_acc": -0.0001,
+    "joint_pos": -0.7,
+    "joint_torques": -0.0005,
+    "joint_vel": -0.01
+  },
+  "obs_width": 48,
+  "action_scale": 0.2,
+  "body_count": 54,
+  "root_body": "base",
+  "joint_count": 12,
+  "mass_one_env_kg": 48.802,
+  "termination_terms": [
+    "time_out",
+    "base_tilt"
+  ],
+  "contact_bodies": [
+    "FL_foot",
+    "FR_foot",
+    "RR_foot",
+    "RL_foot"
+  ],
+  "moving_mask_fraction": 0.9062,
+  "all_finite": true,
+  "measured_duty_after_settling": [
+    0.6443653106689453,
+    0.6980092525482178,
+    0.7407500743865967,
+    0.7407552003860474
+  ],
+  "duty_penalty_when_planted": 0.0,
+  "duty_penalty_when_abandoned_mean": -2.596759796142578,
+  "duty_penalty_when_abandoned_min": -3.0,
+  "fraction_firing": 0.90625,
+  "contact_floor": 0.35,
+  "support_fraction": 0.952,
+  "tilt_deg_mean": 1.585,
+  "tilt_deg_max": 3.857,
+  "settled_root_z": 0.4447,
+  "fore_aft_axis_measured": "y",
+  "fore_aft_separation_m": 0.8704,
+  "front_minus_rear": [
+    0.1805,
+    0.8704,
+    0.2137
+  ],
+  "cmd_lin_vel_x": [
+    0.0,
+    0.0
+  ],
+  "cmd_lin_vel_y": [
+    0.3,
+    0.9
+  ],
+  "failures": []
+}

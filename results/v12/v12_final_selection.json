@@ -1,0 +1,71 @@
+{
+  "selected_model": "dagger",
+  "selected_checkpoint": "/home/kang/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+  "reason": "higher operational pass count across identical 9-rollout suite",
+  "initial": {
+    "name": "v12_initial_closed_loop",
+    "result_count": 9,
+    "operational_passes": 6,
+    "pass_rate": 0.6666666666666666,
+    "mean_survival": 0.8923611111111112,
+    "mean_forward_speed_m_s": 0.4610513382487827,
+    "mean_scan_mae": 0.0544631029996607,
+    "mean_action_mae": 0.05341697153117922,
+    "by_scenario": {
+      "rough": {
+        "passes": 2,
+        "count": 3,
+        "mean_survival": 0.8125,
+        "mean_speed_m_s": 0.4893493056297302,
+        "mean_traversal_rate": null
+      },
+      "stairs_up": {
+        "passes": 1,
+        "count": 3,
+        "mean_survival": 0.8645833333333334,
+        "mean_speed_m_s": 0.3665514787038167,
+        "mean_traversal_rate": 0.3541666666666667
+      },
+      "stairs_down": {
+        "passes": 3,
+        "count": 3,
+        "mean_survival": 1.0,
+        "mean_speed_m_s": 0.5272532304128011,
+        "mean_traversal_rate": 1.0
+      }
+    }
+  },
+  "dagger": {
+    "name": "v12_dagger_closed_loop",
+    "result_count": 9,
+    "operational_passes": 7,
+    "pass_rate": 0.7777777777777778,
+    "mean_survival": 0.9166666666666666,
+    "mean_forward_speed_m_s": 0.43840744760301376,
+    "mean_scan_mae": 0.05041374017794927,
+    "mean_action_mae": 0.047956667840480804,
+    "by_scenario": {
+      "rough": {
+        "passes": 3,
+        "count": 3,
+        "mean_survival": 0.8854166666666666,
+        "mean_speed_m_s": 0.4566713273525238,
+        "mean_traversal_rate": null
+      },
+      "stairs_up": {
+        "passes": 1,
+        "count": 3,
+        "mean_survival": 0.8645833333333334,
+        "mean_speed_m_s": 0.39540910720825195,
+        "mean_traversal_rate": 0.4479166666666667
+      },
+      "stairs_down": {
+        "passes": 3,
+        "count": 3,
+        "mean_survival": 1.0,
+        "mean_speed_m_s": 0.46314190824826557,
+        "mean_traversal_rate": 0.8958333333333334
+      }
+    }
+  }
+}

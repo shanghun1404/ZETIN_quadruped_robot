@@ -1,0 +1,64 @@
+{
+  "checkpoint": "/home/kang/quadruped_training_smooth_v8/logs/rsl_rl/guide_v10_3_flat_robot_v2/2026-08-05_18-44-55_robot_v2_flat_spawn_fixed/model_2000.pt",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "thresholds": {
+    "rear_contact_correlation_weak_above": -0.2,
+    "rear_transition_coincidence_weak_above": 0.05,
+    "min_valid_fraction": 0.9,
+    "confirmation_seed_count": 4
+  },
+  "per_seed": [
+    {
+      "seed": 42,
+      "rear_contact_correlation_median": -0.9942977428436279,
+      "rear_transition_coincidence": 0.0,
+      "rear_weak": false,
+      "survival": 1.0,
+      "speed": 0.4785420000553131
+    },
+    {
+      "seed": 43,
+      "rear_contact_correlation_median": -0.9942991733551025,
+      "rear_transition_coincidence": 0.0,
+      "rear_weak": false,
+      "survival": 1.0,
+      "speed": 0.4770914614200592
+    },
+    {
+      "seed": 44,
+      "rear_contact_correlation_median": -0.9943004846572876,
+      "rear_transition_coincidence": 0.0,
+      "rear_weak": false,
+      "survival": 1.0,
+      "speed": 0.47672486305236816
+    },
+    {
+      "seed": 45,
+      "rear_contact_correlation_median": -0.994300365447998,
+      "rear_transition_coincidence": 0.0,
+      "rear_weak": false,
+      "survival": 1.0,
+      "speed": 0.4777008891105652
+    },
+    {
+      "seed": 46,
+      "rear_contact_correlation_median": -0.994300365447998,
+      "rear_transition_coincidence": 0.0,
+      "rear_weak": false,
+      "survival": 1.0,
+      "speed": 0.4787026047706604
+    }
+  ],
+  "weak_seed_count": 0,
+  "rear_weakness_confirmed": false,
+  "median_across_seeds": {
+    "rear_contact_correlation": -0.994300365447998,
+    "rear_transition_coincidence": 0.0
+  }
+}

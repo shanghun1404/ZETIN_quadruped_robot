@@ -1,0 +1,98 @@
+{
+  "scenario": "stairs",
+  "checkpoint": "/home/kang/quadruped_training_smooth_v11/logs/rsl_rl/guide_v11_scanner_terrain_robot_v2/2026-08-12_07-19-56_robot_v2_scanner_terrain_bootstrap/model_4999.pt",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "per_seed": [
+    {
+      "seed": 42,
+      "survival_fraction": 0.9375,
+      "mean_forward_speed_m_s": 0.45038387179374695,
+      "climb_success_fraction": 0.671875,
+      "hardest_level_cleared": 6,
+      "hardest_step_height_cleared_m": 0.1785714285714286,
+      "realistic_level": 5,
+      "gates": {
+        "stairs_survival": true,
+        "stairs_climb_success": true,
+        "stairs_clears_real_step": true
+      },
+      "passed": true
+    },
+    {
+      "seed": 43,
+      "survival_fraction": 0.9375,
+      "mean_forward_speed_m_s": 0.42852938175201416,
+      "climb_success_fraction": 0.59375,
+      "hardest_level_cleared": 5,
+      "hardest_step_height_cleared_m": 0.15714285714285717,
+      "realistic_level": 5,
+      "gates": {
+        "stairs_survival": true,
+        "stairs_climb_success": true,
+        "stairs_clears_real_step": true
+      },
+      "passed": true
+    },
+    {
+      "seed": 44,
+      "survival_fraction": 0.9375,
+      "mean_forward_speed_m_s": 0.41639265418052673,
+      "climb_success_fraction": 0.65625,
+      "hardest_level_cleared": 6,
+      "hardest_step_height_cleared_m": 0.1785714285714286,
+      "realistic_level": 5,
+      "gates": {
+        "stairs_survival": true,
+        "stairs_climb_success": true,
+        "stairs_clears_real_step": true
+      },
+      "passed": true
+    },
+    {
+      "seed": 45,
+      "survival_fraction": 0.9375,
+      "mean_forward_speed_m_s": 0.41490936279296875,
+      "climb_success_fraction": 0.625,
+      "hardest_level_cleared": 5,
+      "hardest_step_height_cleared_m": 0.15714285714285717,
+      "realistic_level": 5,
+      "gates": {
+        "stairs_survival": true,
+        "stairs_climb_success": true,
+        "stairs_clears_real_step": true
+      },
+      "passed": true
+    },
+    {
+      "seed": 46,
+      "survival_fraction": 0.9375,
+      "mean_forward_speed_m_s": 0.43918028473854065,
+      "climb_success_fraction": 0.625,
+      "hardest_level_cleared": 5,
+      "hardest_step_height_cleared_m": 0.15714285714285717,
+      "realistic_level": 5,
+      "gates": {
+        "stairs_survival": true,
+        "stairs_climb_success": true,
+        "stairs_clears_real_step": true
+      },
+      "passed": true
+    }
+  ],
+  "passing_seed_count": 5,
+  "required_seed_count": 5,
+  "worst_case": {
+    "survival_fraction": 0.9375,
+    "mean_forward_speed_m_s": 0.41490936279296875,
+    "climb_success_fraction": 0.59375,
+    "hardest_level_cleared": 5,
+    "hardest_step_height_cleared_m": 0.15714285714285717
+  },
+  "passed": true
+}

@@ -1,0 +1,81 @@
+{
+  "scenario": "rough",
+  "checkpoint": "/home/kang/quadruped_training_smooth_v8/logs/rsl_rl/guide_v10_4_terrain_robot_v2/2026-08-05_20-51-23_robot_v2_blind_terrain/model_2000.pt",
+  "seeds": [
+    42,
+    43,
+    44,
+    45,
+    46
+  ],
+  "per_seed": [
+    {
+      "seed": 42,
+      "survival_fraction": 0.90625,
+      "mean_forward_speed_m_s": 0.4071075916290283,
+      "direct_phase_valid_fraction": 1.0,
+      "gates": {
+        "rough_survival": true,
+        "rough_speed": true,
+        "direct_phase_valid": true
+      },
+      "passed": true
+    },
+    {
+      "seed": 43,
+      "survival_fraction": 0.875,
+      "mean_forward_speed_m_s": 0.424267053604126,
+      "direct_phase_valid_fraction": 1.0,
+      "gates": {
+        "rough_survival": false,
+        "rough_speed": true,
+        "direct_phase_valid": true
+      },
+      "passed": false
+    },
+    {
+      "seed": 44,
+      "survival_fraction": 0.890625,
+      "mean_forward_speed_m_s": 0.411962628364563,
+      "direct_phase_valid_fraction": 0.984375,
+      "gates": {
+        "rough_survival": false,
+        "rough_speed": true,
+        "direct_phase_valid": true
+      },
+      "passed": false
+    },
+    {
+      "seed": 45,
+      "survival_fraction": 0.921875,
+      "mean_forward_speed_m_s": 0.42702919244766235,
+      "direct_phase_valid_fraction": 1.0,
+      "gates": {
+        "rough_survival": true,
+        "rough_speed": true,
+        "direct_phase_valid": true
+      },
+      "passed": true
+    },
+    {
+      "seed": 46,
+      "survival_fraction": 0.9375,
+      "mean_forward_speed_m_s": 0.402312308549881,
+      "direct_phase_valid_fraction": 1.0,
+      "gates": {
+        "rough_survival": true,
+        "rough_speed": true,
+        "direct_phase_valid": true
+      },
+      "passed": true
+    }
+  ],
+  "passing_seed_count": 3,
+  "required_seed_count": 5,
+  "worst_case": {
+    "survival_fraction": 0.875,
+    "mean_forward_speed_m_s": 0.402312308549881,
+    "direct_phase_valid_fraction": 0.984375
+  },
+  "passed": false
+}

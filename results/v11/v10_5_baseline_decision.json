@@ -1,0 +1,38 @@
+{
+  "decision": "skip_v10_5_reward_change",
+  "flat_reward_change_required": false,
+  "reason": "Direct foot-contact phase does not reproduce the weak rear-pair signal seen in pooled HFE velocity. All three V10.3 checkpoints have zero weak seeds across seeds 42-46.",
+  "thresholds": {
+    "rear_contact_correlation_weak_above": -0.2,
+    "rear_transition_coincidence_weak_above": 0.05,
+    "confirmation_seed_count": 4
+  },
+  "v10_3": {
+    "model_1000": {
+      "weak_seed_count": 0,
+      "median_rear_contact_correlation": -0.9999998211860657,
+      "median_rear_transition_coincidence": 0.0
+    },
+    "model_2000": {
+      "weak_seed_count": 0,
+      "median_rear_contact_correlation": -0.994300365447998,
+      "median_rear_transition_coincidence": 0.0
+    },
+    "model_2999": {
+      "weak_seed_count": 0,
+      "median_rear_contact_correlation": -0.9886342883110046,
+      "median_rear_transition_coincidence": 0.0
+    }
+  },
+  "selected_flat_reference": "v10_3/model_2000.pt",
+  "selected_v11_bootstrap": "v10_4/model_2000.pt",
+  "bootstrap_reason": "V10.4 model_2000 already learned generated terrain, has five-seed minimum survival 0.96875, minimum speed 0.48727649450302124, median rear contact correlation -0.8156834244728088, and no weak seeds. It provides more terrain-relevant initialization than a flat checkpoint while retaining the same 48-input architecture.",
+  "evidence": [
+    "v10_3_model_1000_multiseed.json",
+    "v10_3_model_2000_multiseed.json",
+    "v10_3_model_2999_multiseed.json",
+    "v10_4_model_1000_multiseed.json",
+    "v10_4_model_2000_multiseed.json",
+    "v10_4_model_2999_multiseed.json"
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "version": "v8.1",
+  "note": "Published IsaacLab Spot locomotion weights, verbatim, plus one added term (duty_floor). The 14 Spot weights are inherited from v8 and are not edited.",
+  "spot_weights_inherited_from_v8": {
+    "gait": 10.0,
+    "air_time": 5.0,
+    "base_angular_velocity": 5.0,
+    "base_linear_velocity": 5.0,
+    "foot_clearance": 0.5,
+    "action_smoothness": -1.0,
+    "air_time_variance": -1.0,
+    "base_motion": -2.0,
+    "base_orientation": -3.0,
+    "foot_slip": -0.5,
+    "joint_acc": -1.0e-4,
+    "joint_pos": -0.7,
+    "joint_torques": -5.0e-4,
+    "joint_vel": -1.0e-2
+  },
+  "added_in_v8_1": {
+    "duty_floor": {
+      "weight": -3.0,
+      "func": "v5_12_mdp.abandoned_foot_penalty",
+      "contact_floor": 0.35,
+      "contact_threshold_N": 5.0,
+      "window_s": 1.0,
+      "moving_threshold": 0.05,
+      "rationale": "Spot's GaitReward constrains only relative foot timing; a 84/16 duty split satisfies all six of its pairwise comparisons exactly as well as 50/50. air_time_reward scores max(air, contact), rewarding both extremes. Nothing in the 14-term table pins the duty factor, so v8 converged to a two-legged drag. This term is the missing floor."
+    }
+  }
+}
