@@ -1,0 +1,72 @@
+{
+  "variant": "v13",
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "actuation": {
+    "peak_applied_nm": [
+      23.570390701293945,
+      45.70318603515625,
+      45.71761703491211,
+      23.586381912231445,
+      37.78619384765625,
+      45.70946502685547,
+      23.17398452758789,
+      27.11355972290039,
+      45.633426666259766,
+      23.564990997314453,
+      36.044124603271484,
+      45.774009704589844
+    ],
+    "peak_requested_nm": [
+      23.570390701293945,
+      45.70318603515625,
+      45.71761703491211,
+      23.586381912231445,
+      37.78619384765625,
+      45.70946502685547,
+      23.17398452758789,
+      27.11355972290039,
+      45.633426666259766,
+      23.564990997314453,
+      36.044124603271484,
+      45.774009704589844
+    ],
+    "p99_applied_nm": 45.61602783203125,
+    "p99_requested_nm": 45.61602783203125,
+    "applied_saturation_fraction": 0.0,
+    "over_limit_request_fraction": 0.0,
+    "mean_joint_power_w": 11.626384735107422,
+    "sampled_physics_steps": 76800,
+    "p99_applied_torque_slew_nm_s": 4149.86279296875
+  },
+  "mean_forward_speed_m_s": 0.6779142200946808,
+  "mean_directed_progress_m": 7.942300319671631,
+  "survived_envs": 32,
+  "initial_envs": 32,
+  "metadata": {
+    "actor_checkpoint": "/home/shanghun1404/v13_torque/pilot_jobs/69/guide_v13_v12_depth_torque/2026-09-23_08-00-58_v12_frozen_depth_actor_torque/model_6498.pt",
+    "actor_sha256": "41bbd38253fd938a43215d4effb4311836c6229723fdc8cea4451ae06974a3f6",
+    "student_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+    "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+    "usd_sha256": "3df1d83c036f4679ab183440a3de9520537f037a461f7e1e0a10e43ec0df6e18",
+    "seed": 44,
+    "warmup_s": 2.0,
+    "measured_s": 12.0,
+    "control_dt_s": 0.02,
+    "physics_dt_s": 0.005,
+    "command_forward_m_s": 0.4,
+    "effort_guard_fraction": 0.95
+  }
+}

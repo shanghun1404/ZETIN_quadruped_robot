@@ -1,0 +1,80 @@
+{
+  "variant": "v13",
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "actuation": {
+    "peak_applied_nm": [
+      24.59233856201172,
+      47.577911376953125,
+      47.62079620361328,
+      24.577579498291016,
+      47.57685852050781,
+      47.61186218261719,
+      24.57787322998047,
+      47.55558395385742,
+      47.59527587890625,
+      24.58135223388672,
+      47.57345962524414,
+      47.62663269042969
+    ],
+    "peak_requested_nm": [
+      24.59233856201172,
+      47.577911376953125,
+      47.62079620361328,
+      24.577579498291016,
+      47.57685852050781,
+      47.61186218261719,
+      24.57787322998047,
+      47.55558395385742,
+      47.59527587890625,
+      24.58135223388672,
+      47.57345962524414,
+      47.62663269042969
+    ],
+    "p99_applied_nm": 47.52854919433594,
+    "p99_requested_nm": 47.52854919433594,
+    "applied_saturation_fraction": 0.07633747905492783,
+    "over_limit_request_fraction": 0.0,
+    "mean_joint_power_w": 22.773508071899414,
+    "sampled_physics_steps": 72400,
+    "p99_applied_torque_slew_nm_s": 6642.33251953125
+  },
+  "mean_forward_speed_m_s": 0.362705853270233,
+  "mean_directed_progress_m": 2.3672056198120117,
+  "survived_envs": 26,
+  "initial_envs": 32,
+  "metadata": {
+    "actor_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/logs/rsl_rl/guide_v11_scanner_terrain_robot_v2/2026-08-12_07-19-56_robot_v2_scanner_terrain_bootstrap/model_4999.pt",
+    "actor_sha256": "53a6a5002f4cafb87889d777fcc567157245c786f82376db08962c9227acc2b7",
+    "student_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+    "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+    "usd_sha256": "3df1d83c036f4679ab183440a3de9520537f037a461f7e1e0a10e43ec0df6e18",
+    "seed": 44,
+    "warmup_s": 0.0,
+    "measured_s": 12.0,
+    "control_dt_s": 0.02,
+    "physics_dt_s": 0.005,
+    "command_forward_m_s": 0.5,
+    "effort_guard_fraction": 0.99,
+    "scenario": "stairs_up",
+    "terrain_level": 5
+  },
+  "stairs": {
+    "step_height_m": 0.15714285714285717,
+    "traversed_count": 9,
+    "traversal_rate": 0.28125,
+    "mean_vertical_after_approach_m": 0.24945302307605743
+  }
+}
