@@ -1,0 +1,108 @@
+[
+  {
+    "path": "/home/projects/legacy/robot_v2/usd/v2_plain.usd",
+    "mass_properties": {
+      "/quadruped/base/FL_thigh_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/FL_calf_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/FR_thigh_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/FR_calf_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/RL_thigh_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/RL_calf_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/RR_thigh_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/RR_calf_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      }
+    }
+  },
+  {
+    "path": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+    "mass_properties": {
+      "/quadruped/base/FL_thigh_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/FL_calf_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/FR_thigh_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/FR_calf_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/RL_thigh_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/RL_calf_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/RR_thigh_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      },
+      "/quadruped/base/RR_calf_profile": {
+        "physics:centerOfMass": "(0.12499999, 0.09, 0.24)",
+        "physics:diagonalInertia": "(0.000007955911, 0.0005170968, 0.0005170968)",
+        "physics:mass": "0.09851881116628647",
+        "physics:principalAxes": "(1, 0, 0, 0)"
+      }
+    }
+  }
+]

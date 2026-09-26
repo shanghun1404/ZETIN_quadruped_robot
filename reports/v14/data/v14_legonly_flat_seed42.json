@@ -1,0 +1,83 @@
+{
+  "variant": "v13",
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "actuation": {
+    "peak_applied_nm": [
+      24.555177688598633,
+      47.52602005004883,
+      47.53440475463867,
+      24.556766510009766,
+      47.52561569213867,
+      47.57099533081055,
+      24.55327796936035,
+      31.625228881835938,
+      47.537437438964844,
+      24.552560806274414,
+      47.52448654174805,
+      47.5604248046875
+    ],
+    "peak_requested_nm": [
+      24.555177688598633,
+      47.52602005004883,
+      47.53440475463867,
+      24.556766510009766,
+      47.52561569213867,
+      47.57099533081055,
+      24.55327796936035,
+      31.625228881835938,
+      47.537437438964844,
+      24.552560806274414,
+      47.52448654174805,
+      47.5604248046875
+    ],
+    "p99_applied_nm": 47.526241302490234,
+    "p99_requested_nm": 47.526241302490234,
+    "applied_saturation_fraction": 0.04740776866674423,
+    "over_limit_request_fraction": 0.0,
+    "mean_joint_power_w": 15.56639289855957,
+    "sampled_physics_steps": 76800,
+    "p99_applied_torque_slew_nm_s": 5165.7939453125
+  },
+  "mean_forward_speed_m_s": 0.6738051916162173,
+  "mean_directed_progress_m": 7.986362934112549,
+  "survived_envs": 32,
+  "initial_envs": 32,
+  "metadata": {
+    "actor_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/logs/rsl_rl/guide_v11_scanner_terrain_robot_v2/2026-08-12_07-19-56_robot_v2_scanner_terrain_bootstrap/model_4999.pt",
+    "actor_sha256": "53a6a5002f4cafb87889d777fcc567157245c786f82376db08962c9227acc2b7",
+    "student_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+    "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+    "usd_sha256": "23bda89e1b7f2a47ecd4f2f28a91f220a8f8fa0b0221db6c991085050b638080",
+    "seed": 42,
+    "warmup_s": 2.0,
+    "measured_s": 12.0,
+    "control_dt_s": 0.02,
+    "physics_dt_s": 0.005,
+    "command_forward_m_s": 0.4,
+    "effort_guard_fraction": 0.99,
+    "scenario": "flat",
+    "terrain_level": null,
+    "self_collisions_enabled": true,
+    "measure_leg_clearance": true,
+    "leg_capsule_radius_m": 0.015
+  },
+  "interleg_clearance": {
+    "measured_env_frames": 19200,
+    "minimum_gap_m": -0.02996488681228782,
+    "negative_gap_frame_fraction": 0.0640625,
+    "gap_below_minus_2mm_frame_fraction": 0.05921875
+  }
+}

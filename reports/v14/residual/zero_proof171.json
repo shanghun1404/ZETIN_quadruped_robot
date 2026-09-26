@@ -1,0 +1,36 @@
+{
+  "passed": true,
+  "checks": {
+    "valid": true,
+    "alive_at_end": true,
+    "time_s": true,
+    "positions": true,
+    "quaternions": true,
+    "ground_height": true,
+    "commands": true,
+    "linear_velocity_w": true,
+    "angular_velocity_b": true
+  },
+  "maximum_errors": {
+    "positions": 0.0,
+    "quaternions": 0.0,
+    "ground_height": 0.0,
+    "commands": 0.0,
+    "linear_velocity_w": 0.0,
+    "angular_velocity_b": 0.0
+  },
+  "absolute_tolerance": 1e-06,
+  "settings_equal": true,
+  "correction_zero": true,
+  "outcomes_equal": true,
+  "base_sha256": "009cb093951868dfc042b0bac4bc0939d921857311b5988e046667457b2d27bd",
+  "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+  "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+  "baseline": "/home/shanghun1404/v14_leg_collision/results/direction/fixed_heading_stairs_up_seed42.json",
+  "candidate": "/home/shanghun1404/v14_leg_collision/results/direction/residual_zero171_stairs_up_seed42.json",
+  "candidate_checkpoint_sha256": "3b5d36b5bcc98078a577144f7f5c671ae37a47aa2b81fc736e6224c917619e43",
+  "report_hashes": {
+    "fixed_heading_stairs_up_seed42.json": "2e14e47cef5986704be369730d86d705fc880ca54f669b2638907561ac56c578",
+    "residual_zero171_stairs_up_seed42.json": "fb17a30ad4bfc9e7871f5048b465ea037bfdba48c3d6b6da945ad4f01a584749"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "source_usd": "/home/projects/legacy/robot_v2/usd/v2_plain.usd",
+  "source_sha256": "3df1d83c036f4679ab183440a3de9520537f037a461f7e1e0a10e43ec0df6e18",
+  "output_usd": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+  "output_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+  "capsule_count": 8,
+  "same_leg_filtered_pair_count": 12,
+  "capsule_radius_m": 0.02
+}

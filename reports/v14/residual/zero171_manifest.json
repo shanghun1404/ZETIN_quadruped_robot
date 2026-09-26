@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "base_sha256": "009cb093951868dfc042b0bac4bc0939d921857311b5988e046667457b2d27bd",
+  "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+  "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+  "base_checkpoint": "/home/shanghun1404/v14_leg_collision/pilot_jobs/110/guide_v14_interleg_collision/2026-09-24_22-59-31_v11_actor_v12_depth_guard_099/model_5700.pt",
+  "student_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+  "usd_path": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+  "max_rad": 0.05,
+  "action_scale": 0.2,
+  "observation_dim": 307,
+  "actor_hidden_dims": [
+    128,
+    128
+  ],
+  "heading_control": true,
+  "num_envs": 32,
+  "seed": 46,
+  "iterations": 300,
+  "zero_only": true,
+  "zero_proof": null,
+  "learning_rate": 0.0001,
+  "initial_noise_std": 0.05,
+  "noise_std_type": "log",
+  "entropy_coef": 0.0,
+  "initial_terrain_level": 0,
+  "yaw_reward_std": 2.0,
+  "yaw_reward_weight": 5.0,
+  "effort_guard_fraction": 0.99,
+  "action_lpf_hz": 25.0,
+  "reward_weights": {
+    "clearance": -2.0,
+    "correction": -0.25,
+    "correction_change": -0.05
+  },
+  "checkpoints": {
+    "model_zero.pt": "3b5d36b5bcc98078a577144f7f5c671ae37a47aa2b81fc736e6224c917619e43"
+  }
+}

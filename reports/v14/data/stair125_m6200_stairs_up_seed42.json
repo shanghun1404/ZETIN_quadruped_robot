@@ -1,0 +1,90 @@
+{
+  "variant": "v13",
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "actuation": {
+    "peak_applied_nm": [
+      24.58940887451172,
+      47.572845458984375,
+      47.632568359375,
+      24.572765350341797,
+      47.55113983154297,
+      47.61304473876953,
+      24.564090728759766,
+      47.554298400878906,
+      47.596717834472656,
+      24.574886322021484,
+      47.570228576660156,
+      47.6416015625
+    ],
+    "peak_requested_nm": [
+      24.58940887451172,
+      47.572845458984375,
+      47.632568359375,
+      24.572765350341797,
+      47.55113983154297,
+      47.61304473876953,
+      24.564090728759766,
+      47.554298400878906,
+      47.596717834472656,
+      24.574886322021484,
+      47.570228576660156,
+      47.6416015625
+    ],
+    "p99_applied_nm": 47.5288200378418,
+    "p99_requested_nm": 47.5288200378418,
+    "applied_saturation_fraction": 0.07036131620407104,
+    "over_limit_request_fraction": 0.0,
+    "mean_joint_power_w": 20.55843162536621,
+    "sampled_physics_steps": 74680,
+    "p99_applied_torque_slew_nm_s": 6466.4765625
+  },
+  "mean_forward_speed_m_s": 0.3889272363414468,
+  "mean_directed_progress_m": 0.5804005861282349,
+  "survived_envs": 30,
+  "initial_envs": 32,
+  "metadata": {
+    "actor_checkpoint": "/home/shanghun1404/v14_leg_collision/stair_jobs/125/guide_v14_stair_adaptation/2026-09-26_13-59-07_v14_m5700_stair_focus/model_6200.pt",
+    "actor_sha256": "14f5d944625f3245a315670bc8544e5b02e6c0e84fb26d6103d635cb32dcc9bf",
+    "student_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+    "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+    "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+    "seed": 42,
+    "warmup_s": 0.0,
+    "measured_s": 12.0,
+    "control_dt_s": 0.02,
+    "physics_dt_s": 0.005,
+    "command_forward_m_s": 0.5,
+    "effort_guard_fraction": 0.99,
+    "scenario": "stairs_up",
+    "terrain_level": 5,
+    "self_collisions_enabled": true,
+    "measure_leg_clearance": true,
+    "leg_capsule_radius_m": 0.02,
+    "leg_terrain_filtered": true
+  },
+  "interleg_clearance": {
+    "measured_env_frames": 18668,
+    "minimum_gap_m": -0.002810471769550897,
+    "negative_gap_frame_fraction": 0.00032140561388472255,
+    "gap_below_minus_2mm_frame_fraction": 5.356760231412042e-05
+  },
+  "stairs": {
+    "step_height_m": 0.15714285714285717,
+    "traversed_count": 6,
+    "traversal_rate": 0.1875,
+    "mean_vertical_after_approach_m": 0.1470135599374771
+  }
+}

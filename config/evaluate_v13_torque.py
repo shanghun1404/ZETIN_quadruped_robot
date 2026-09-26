@@ -22,6 +22,13 @@ parser.add_argument("--student-checkpoint", required=True)
 parser.add_argument("--usd-path", required=True)
 parser.add_argument("--output", required=True)
 parser.add_argument("--trace-output", help="Optional compressed physics-step torque trace (.npz)")
+parser.add_argument("--protocol", choices=("legacy", "fixed_v2"), default="legacy")
+parser.add_argument("--heading-control", action="store_true")
+parser.add_argument("--residual-checkpoint", help="Optional V14 bounded residual; actor-checkpoint remains the frozen base")
+parser.add_argument("--trajectory-output", help="Optional path/pose/command/terrain trace (.npz)")
+parser.add_argument("--video-dir", help="Record selected environments into a new directory")
+parser.add_argument("--video-env-ids", type=int, nargs="+", default=[])
+parser.add_argument("--video-view", choices=("side", "rear_quarter"), default="rear_quarter")
 parser.add_argument("--seed", type=int, default=42)
 parser.add_argument("--num-envs", type=int, default=32)
 parser.add_argument("--warmup-seconds", type=float, default=2.0)
@@ -30,13 +37,20 @@ parser.add_argument("--forward-speed", type=float, default=0.4)
 parser.add_argument("--effort-guard-fraction", type=float, help="Fraction of the V13 motor torque-speed envelope")
 parser.add_argument("--scenario", choices=("flat", "rough", "stairs_up", "stairs_down"), default="flat")
 parser.add_argument("--terrain-level", type=int)
+parser.add_argument("--enable-self-collisions", action="store_true", help="Use the derived V14 USD inter-leg colliders")
+parser.add_argument("--measure-leg-clearance", action="store_true", help="Measure V14 capsule gaps at every control step")
+parser.add_argument("--leg-capsule-radius-m", type=float, default=0.02)
+parser.add_argument("--filter-leg-terrain", action="store_true", help="Filter V14 capsules against terrain before physics starts")
 AppLauncher.add_app_launcher_args(parser)
 args_cli = parser.parse_args()
+if args_cli.trajectory_output and args_cli.protocol != "fixed_v2":
+    parser.error("--trajectory-output requires --protocol fixed_v2 with known terrain geometry")
 simulation_app = AppLauncher(args_cli).app
 
 import gymnasium as gym
 import numpy as np
 import torch
+from isaaclab.managers import EventTermCfg as EventTerm
 from rsl_rl.runners import OnPolicyRunner
 
 from v11_terrain_env_cfg import GuideV2ScannerTerrainEnvCfg
@@ -46,6 +60,8 @@ from v13_depth_policy import make_v13_depth_wrapper
 from v13_torque_env_cfg import GuideV13TorqueEnvCfg
 from v13_torque_metrics import summarize_actuation
 from v13_torque_ppo_cfg import V13_TORQUE_PPO_CFG
+from v14_clearance import interleg_clearances_m, summarize_interleg_clearance
+from v14_terrain_filter import apply_v14_ground_filter
 from v9_env_cfg import (
     STAIRS_DOWN_EVAL_TERRAIN_CFG,
     STAIRS_NUM_LEVELS,
@@ -73,11 +89,45 @@ def main() -> None:
     if args_cli.effort_guard_fraction is not None:
         if args_cli.variant != "v13" or not 0.0 < args_cli.effort_guard_fraction <= 1.0:
             raise ValueError("effort guard requires v13 and a fraction in (0, 1]")
+    if args_cli.measure_leg_clearance and not 0.01 <= args_cli.leg_capsule_radius_m <= 0.025:
+        raise ValueError("measured leg capsule radius must be in [0.01, 0.025] m")
+    if args_cli.filter_leg_terrain and not args_cli.enable_self_collisions:
+        raise ValueError("terrain filtering requires V14 self collisions")
+    if args_cli.heading_control and args_cli.protocol != "fixed_v2":
+        raise ValueError("heading control requires the fixed_v2 protocol")
+    residual_manifest = None
+    if args_cli.residual_checkpoint:
+        from v14_residual_policy import load_residual_manifest
+
+        if (args_cli.variant != "v13" or args_cli.protocol != "fixed_v2"
+                or args_cli.effort_guard_fraction != .99 or not args_cli.enable_self_collisions
+                or not args_cli.filter_leg_terrain or args_cli.leg_capsule_radius_m != .02):
+            raise ValueError("residual evaluation requires the reviewed V14 fixed protocol and guard")
+        residual_manifest = load_residual_manifest(
+            args_cli.residual_checkpoint, base_checkpoint=args_cli.actor_checkpoint,
+            student_checkpoint=args_cli.student_checkpoint, usd_path=args_cli.usd_path,
+            heading_control=args_cli.heading_control,
+        )
+    if bool(args_cli.video_dir) != bool(args_cli.video_env_ids):
+        raise ValueError("video-dir and video-env-ids must be supplied together")
+    if len(set(args_cli.video_env_ids)) != len(args_cli.video_env_ids) or any(
+        not 0 <= env_id < args_cli.num_envs for env_id in args_cli.video_env_ids
+    ):
+        raise ValueError("video environment IDs must be unique and in range")
 
     env_type = GuideV13TorqueEnvCfg if args_cli.variant == "v13" else GuideV2ScannerTerrainEnvCfg
     env_cfg = env_type()
     env_cfg.scene.num_envs = args_cli.num_envs
+    if args_cli.protocol == "fixed_v2":
+        env_cfg.scene.env_spacing = 12.0
     env_cfg.scene.robot.spawn.usd_path = args_cli.usd_path
+    if args_cli.enable_self_collisions:
+        env_cfg.scene.robot.spawn.articulation_props.enabled_self_collisions = True
+    if args_cli.filter_leg_terrain:
+        env_cfg.scene.replicate_physics = False
+        env_cfg.events.v14_ground_filter = EventTerm(
+            func=apply_v14_ground_filter, mode="prestartup"
+        )
     if args_cli.effort_guard_fraction is not None:
         env_cfg.actions.joint_pos.effort_guard_fraction = args_cli.effort_guard_fraction
     env_cfg.seed = args_cli.seed
@@ -86,6 +136,7 @@ def main() -> None:
     env_cfg.curriculum = None
     env_cfg.events.push_robot = None
     terrain_level = None
+    geometry = {}
     if args_cli.scenario == "flat":
         env_cfg.scene.terrain.terrain_type = "plane"
         env_cfg.scene.terrain.terrain_generator = None
@@ -108,6 +159,14 @@ def main() -> None:
             raise ValueError("terrain level must exist in the selected generator")
         generator.curriculum = False
         env_cfg.scene.terrain.max_init_terrain_level = terrain_level
+        if args_cli.protocol == "fixed_v2":
+            from v14_eval_protocol import fixed_eval_generator
+
+            generator, geometry = fixed_eval_generator(
+                generator, args_cli.scenario, terrain_level, args_cli.num_envs
+            )
+            env_cfg.scene.terrain.terrain_generator = generator
+            env_cfg.scene.terrain.max_init_terrain_level = 0
     if args_cli.variant == "v12":
         env_cfg.scene.depth_camera = make_v12_depth_camera_cfg(env_cfg.decimation * env_cfg.sim.dt)
     command = env_cfg.commands.base_velocity
@@ -116,6 +175,19 @@ def main() -> None:
     command.ranges.lin_vel_x = (0.0, 0.0)
     command.ranges.lin_vel_y = (args_cli.forward_speed, args_cli.forward_speed)
     command.ranges.ang_vel_z = (0.0, 0.0)
+    if args_cli.protocol == "fixed_v2":
+        command.debug_vis = False
+        env_cfg.events.reset_base.params["pose_range"] = {
+            "x": (0.0, 0.0), "y": (0.0, 0.0), "yaw": (0.0, 0.0),
+        }
+        env_cfg.events.reset_base.params["velocity_range"] = {
+            key: (0.0, 0.0) for key in ("x", "y", "z", "roll", "pitch", "yaw")
+        }
+
+    if args_cli.heading_control:
+        from v14_heading_command import make_lane_command_cfg
+        env_cfg.commands.base_velocity = make_lane_command_cfg(command)
+        env_cfg.commands.base_velocity.ranges.ang_vel_z = (-0.4, 0.4)
 
     agent_cfg = copy.deepcopy(V13_TORQUE_PPO_CFG if args_cli.variant == "v13" else V11_TERRAIN_PPO_CFG)
     agent_cfg.device = env_cfg.sim.device
@@ -124,21 +196,53 @@ def main() -> None:
     if terrain_level is not None:
         base = raw_env.unwrapped
         terrain = base.scene.terrain
-        terrain.terrain_levels.fill_(terrain_level)
+        terrain.terrain_levels.fill_(0 if args_cli.protocol == "fixed_v2" else terrain_level)
         env_ids = torch.arange(base.num_envs, device=base.device)
         terrain.terrain_types[:] = env_ids % int(generator.num_cols)
         terrain.env_origins[:] = terrain.terrain_origins[terrain.terrain_levels, terrain.terrain_types]
+        if args_cli.protocol == "fixed_v2":
+            origins = terrain.env_origins.detach().cpu().numpy()
+            geometry["unique_origins"] = len(np.unique(origins, axis=0))
+            geometry["origin_z_m"] = origins[:, 2].tolist()
+            if geometry["unique_origins"] != args_cli.num_envs:
+                raise RuntimeError("fixed protocol environments overlap")
+            if "full_rise_m" in geometry:
+                expected_z = geometry["full_rise_m"] * (-1 if args_cli.scenario == "stairs_up" else 1)
+                if not np.allclose(origins[:, 2], expected_z, atol=1e-4):
+                    raise RuntimeError("actual stair origins disagree with fixed geometry")
         raw_env.reset()
     DepthWrapper = make_v13_depth_wrapper()
     env = DepthWrapper(raw_env, student_checkpoint=args_cli.student_checkpoint, clip_actions=agent_cfg.clip_actions)
+    video = None
     try:
         runner = OnPolicyRunner(env, agent_cfg.to_dict(), log_dir=None, device=agent_cfg.device)
         runner.load(args_cli.actor_checkpoint, load_optimizer=False, map_location=agent_cfg.device)
         policy = runner.get_inference_policy(device=agent_cfg.device)
+        if residual_manifest is not None:
+            from v14_residual_policy import ResidualPolicyWrapper, module_digest, residual_agent_cfg
+
+            env = ResidualPolicyWrapper(env, runner.alg.policy, max_rad=residual_manifest["max_rad"])
+            frozen_before = (module_digest(env.frozen_actor), module_digest(env.env._student))
+            residual_runner = OnPolicyRunner(env, residual_agent_cfg(agent_cfg).to_dict(), log_dir=None, device=agent_cfg.device)
+            residual_runner.load(args_cli.residual_checkpoint, load_optimizer=False, map_location=agent_cfg.device)
+            policy = residual_runner.get_inference_policy(device=agent_cfg.device)
         base_env = env.unwrapped
         robot = base_env.scene["robot"]
         lookup = {name: index for index, name in enumerate(robot.joint_names)}
         indices = torch.tensor([lookup[name] for name in JOINT_NAMES], device=base_env.device)
+        if args_cli.measure_leg_clearance:
+            profile_names = tuple(
+                f"{leg}_{part}_profile"
+                for leg in ("FL", "FR", "RL", "RR")
+                for part in ("thigh", "calf")
+            )
+            body_lookup = {name: index for index, name in enumerate(robot.body_names)}
+            profile_indices = torch.tensor(
+                [body_lookup[name] for name in profile_names], device=base_env.device
+            )
+            profile_positions = []
+            profile_quaternions = []
+            profile_alive = []
         joint_limits = torch.tensor([24.8 if name.endswith("HAA") else 48.0 for name in JOINT_NAMES])
         physics_dt = float(env_cfg.sim.dt)
         control_dt = float(base_env.step_dt)
@@ -146,6 +250,13 @@ def main() -> None:
         measured_steps = round(args_cli.seconds / control_dt)
         if measured_steps < 1:
             raise ValueError("measurement interval rounds to zero steps")
+        if args_cli.video_dir:
+            from v14_video import RolloutVideos
+
+            video = RolloutVideos(
+                base_env.sim, robot, args_cli.video_dir, args_cli.video_env_ids,
+                view=args_cli.video_view, fps=1.0 / (2 * control_dt),
+            )
 
         applied = []
         requested = []
@@ -153,6 +264,8 @@ def main() -> None:
         alive_samples = []
         recording = False
         alive = torch.ones(args_cli.num_envs, dtype=torch.bool, device=base_env.device)
+        first_termination_s = [None] * args_cli.num_envs
+        first_termination_terms = [[] for _ in range(args_cli.num_envs)]
         original_write = base_env.scene.write_data_to_sim
 
         def write_and_record() -> None:
@@ -173,9 +286,25 @@ def main() -> None:
         vertical_after_approach = torch.zeros(args_cli.num_envs, device=base_env.device)
         speed_sum = 0.0
         speed_count = 0
+        trajectory = {key: [] for key in ("positions", "quaternions", "ground_height", "valid",
+                                         "linear_velocity_w", "angular_velocity_b", "commands")}
+        record_path = args_cli.protocol == "fixed_v2" or bool(args_cli.trajectory_output)
 
         with torch.inference_mode():
             for step in range(warmup_steps + measured_steps):
+                if record_path and step >= warmup_steps:
+                    if args_cli.scenario == "flat":
+                        ground = torch.zeros(args_cli.num_envs, device=base_env.device)
+                    else:
+                        from v14_eval_protocol import ground_below_robot
+                        ground = ground_below_robot(base_env)
+                    values = dict(positions=robot.data.root_pos_w, quaternions=robot.data.root_quat_w,
+                                  ground_height=ground, valid=alive,
+                                  linear_velocity_w=robot.data.root_lin_vel_w,
+                                  angular_velocity_b=robot.data.root_ang_vel_b,
+                                  commands=base_env.command_manager.get_command("base_velocity"))
+                    for key, value in values.items():
+                        trajectory[key].append(value.detach().cpu().numpy().copy())
                 if step == warmup_steps:
                     initial_xy = robot.data.root_pos_w[:, :2].clone()
                     last_xy = initial_xy.clone()
@@ -202,11 +331,28 @@ def main() -> None:
                             torch.maximum(vertical_after_approach, height_change),
                             vertical_after_approach,
                         )
+                if video is not None and step >= warmup_steps and (step - warmup_steps) % 2 == 0:
+                    # Capture before stepping: the environment auto-resets terminated robots.
+                    video.capture(alive)
                 recording = step >= warmup_steps
                 observations, _, dones, _ = env.step(policy(observations))
                 recording = False
                 if step >= warmup_steps:
+                    for env_id in torch.nonzero(alive & dones.bool()).flatten().tolist():
+                        first_termination_s[env_id] = (step - warmup_steps + 1) * control_dt
+                        first_termination_terms[env_id] = [
+                            name for name in base_env.termination_manager.active_terms
+                            if bool(base_env.termination_manager.get_term(name)[env_id])
+                        ]
                     alive &= ~dones.bool()
+                    if args_cli.measure_leg_clearance:
+                        profile_positions.append(
+                            robot.data.body_pos_w[:, profile_indices].detach().cpu().numpy().copy()
+                        )
+                        profile_quaternions.append(
+                            robot.data.body_quat_w[:, profile_indices].detach().cpu().numpy().copy()
+                        )
+                        profile_alive.append(alive.cpu().numpy().copy())
 
         base_env.scene.write_data_to_sim = original_write
         expected = measured_steps * env_cfg.decimation
@@ -241,9 +387,40 @@ def main() -> None:
                 "command_forward_m_s": args_cli.forward_speed,
                 "effort_guard_fraction": args_cli.effort_guard_fraction,
                 "scenario": args_cli.scenario,
+                "protocol": args_cli.protocol,
+                "heading_control": args_cli.heading_control,
+                "geometry": geometry,
                 "terrain_level": terrain_level,
+                "self_collisions_enabled": args_cli.enable_self_collisions,
+                "measure_leg_clearance": args_cli.measure_leg_clearance,
+                "leg_capsule_radius_m": args_cli.leg_capsule_radius_m if args_cli.measure_leg_clearance else None,
+                "leg_terrain_filtered": args_cli.filter_leg_terrain,
             },
         }
+        if residual_manifest is not None:
+            unchanged = frozen_before == (module_digest(env.frozen_actor), module_digest(env.env._student))
+            if not unchanged or env.max_observed_delta_rad > residual_manifest["max_rad"] + 1e-6:
+                raise RuntimeError("residual evaluation violated frozen/limit contract")
+            report["metadata"]["residual"] = {
+                "checkpoint": args_cli.residual_checkpoint,
+                "sha256": sha256(args_cli.residual_checkpoint),
+                "max_rad": residual_manifest["max_rad"],
+                "max_observed_delta_rad": env.max_observed_delta_rad,
+                "frozen_base_student_unchanged": unchanged,
+            }
+        if args_cli.measure_leg_clearance:
+            positions = np.stack(profile_positions)
+            quaternions = np.stack(profile_quaternions)
+            gaps = interleg_clearances_m(
+                positions.reshape(-1, 8, 3),
+                quaternions.reshape(-1, 8, 4),
+                profile_names,
+                radius_m=args_cli.leg_capsule_radius_m,
+            ).reshape(measured_steps, args_cli.num_envs, 24)
+            report["interleg_clearance"] = summarize_interleg_clearance(
+                gaps, np.stack(profile_alive)
+            )
+        traversed = None
         if args_cli.scenario in ("stairs_up", "stairs_down"):
             step_height = stair_step_height_m(STAIRS_STEP_HEIGHT_RANGE, STAIRS_NUM_LEVELS, terrain_level)
             traversed = stair_traversal_mask(
@@ -256,6 +433,39 @@ def main() -> None:
                 "traversal_rate": float(traversed.float().mean()),
                 "mean_vertical_after_approach_m": float(vertical_after_approach.mean()),
             }
+        directed_progress = ((last_xy - initial_xy) * forward_xy).sum(dim=-1)
+        report["per_environment"] = [
+            {
+                "env_id": env_id,
+                "survived": bool(alive[env_id]),
+                "first_termination_s": first_termination_s[env_id],
+                "first_termination_terms": first_termination_terms[env_id],
+                "directed_progress_m": float(directed_progress[env_id]),
+                "max_radial_progress_m": float(max_progress[env_id]),
+                "vertical_after_approach_m": float(vertical_after_approach[env_id]),
+                "traversed": bool(traversed[env_id]) if traversed is not None else None,
+            }
+            for env_id in range(args_cli.num_envs)
+        ]
+        if record_path:
+            from v14_path_metrics import summarize_path
+
+            arrays = {key: np.stack(value) for key, value in trajectory.items()}
+            report["path"] = summarize_path(
+                **{key: arrays[key] for key in ("positions", "quaternions", "ground_height", "valid")},
+                alive_at_end=alive.cpu().numpy(), scenario=args_cli.scenario,
+                step_height_m=geometry.get("step_height_m", 0.0),
+                full_rise_m=geometry.get("full_rise_m", 0.0),
+            )
+            if args_cli.trajectory_output:
+                path = Path(args_cli.trajectory_output)
+                path.parent.mkdir(parents=True, exist_ok=True)
+                np.savez_compressed(path, **arrays, alive_at_end=alive.cpu().numpy(),
+                                    time_s=np.arange(measured_steps)*control_dt)
+                report["trajectory_path"] = str(path)
+        if video is not None:
+            video.close()
+            report["videos"] = video.metadata()
         output = Path(args_cli.output)
         output.parent.mkdir(parents=True, exist_ok=True)
         if args_cli.trace_output:
@@ -276,20 +486,22 @@ def main() -> None:
         output.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
         print(json.dumps(report, indent=2), flush=True)
     finally:
-        env.close()
+        try:
+            if video is not None:
+                video.close()
+        finally:
+            env.close()
 
 
 if __name__ == "__main__":
-    failed = False
     try:
         main()
     except BaseException:
         traceback.print_exc()
-        failed = True
-    try:
+        # Kit's fast shutdown otherwise replaces Python's nonzero exit with 0.
+        import omni.kit.app
+
+        omni.kit.app.get_app().post_uncancellable_quit(1)
         simulation_app.close()
-    except BaseException:
-        traceback.print_exc()
-        failed = True
-    if failed:
         raise SystemExit(1)
+    simulation_app.close()

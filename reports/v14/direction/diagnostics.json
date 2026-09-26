@@ -1,0 +1,72 @@
+[
+  {
+    "label": "direction159_early_stairs_up_seed42",
+    "failed": 30,
+    "median_failure_seconds": 3.54,
+    "yaw_rate_mae": 0.41778498888015747,
+    "command_saturation_fraction": 0.1658144631117604,
+    "final_at_least_two_steps": 0,
+    "survived_at_least_two_steps": 0,
+    "gap_below_minus_2mm_frame_fraction": 0.0008804108584005869
+  },
+  {
+    "label": "direction159_final_stairs_up_seed42",
+    "failed": 27,
+    "median_failure_seconds": 3.56,
+    "yaw_rate_mae": 0.35913893580436707,
+    "command_saturation_fraction": 0.2829896907216495,
+    "final_at_least_two_steps": 0,
+    "survived_at_least_two_steps": 0,
+    "gap_below_minus_2mm_frame_fraction": 0.0
+  },
+  {
+    "label": "direction165_soft_stairs_up_seed42",
+    "failed": 29,
+    "median_failure_seconds": 3.96,
+    "yaw_rate_mae": 0.3013560175895691,
+    "command_saturation_fraction": 0.3126945309026234,
+    "final_at_least_two_steps": 0,
+    "survived_at_least_two_steps": 0,
+    "gap_below_minus_2mm_frame_fraction": 0.0
+  },
+  {
+    "label": "fixed_baseline_stairs_up_seed42",
+    "failed": 10,
+    "median_failure_seconds": 8.29,
+    "yaw_rate_mae": 0.36104437708854675,
+    "command_saturation_fraction": 0.0,
+    "final_at_least_two_steps": 6,
+    "survived_at_least_two_steps": 3,
+    "gap_below_minus_2mm_frame_fraction": 0.0005749770009199632
+  },
+  {
+    "label": "fixed_baseline_stairs_up_seed43",
+    "failed": 6,
+    "median_failure_seconds": 8.52,
+    "yaw_rate_mae": 0.35566651821136475,
+    "command_saturation_fraction": 0.0,
+    "final_at_least_two_steps": 6,
+    "survived_at_least_two_steps": 3,
+    "gap_below_minus_2mm_frame_fraction": 0.0009863554167351635
+  },
+  {
+    "label": "fixed_heading_stairs_up_seed42",
+    "failed": 6,
+    "median_failure_seconds": 8.379999999999999,
+    "yaw_rate_mae": 0.448965460062027,
+    "command_saturation_fraction": 0.8272334372777504,
+    "final_at_least_two_steps": 26,
+    "survived_at_least_two_steps": 24,
+    "gap_below_minus_2mm_frame_fraction": 0.003119356427516007
+  },
+  {
+    "label": "fixed_heading_stairs_up_seed43",
+    "failed": 9,
+    "median_failure_seconds": 9.1,
+    "yaw_rate_mae": 0.4727376699447632,
+    "command_saturation_fraction": 0.82203485103991,
+    "final_at_least_two_steps": 25,
+    "survived_at_least_two_steps": 19,
+    "gap_below_minus_2mm_frame_fraction": 0.0017996738091220967
+  }
+]

@@ -1,0 +1,90 @@
+{
+  "variant": "v13",
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "actuation": {
+    "peak_applied_nm": [
+      24.58641815185547,
+      47.583377838134766,
+      47.6163330078125,
+      24.5809326171875,
+      47.56748580932617,
+      47.603050231933594,
+      24.57024383544922,
+      47.558570861816406,
+      47.58403015136719,
+      24.587203979492188,
+      47.567108154296875,
+      47.60076141357422
+    ],
+    "peak_requested_nm": [
+      24.58641815185547,
+      47.583377838134766,
+      47.6163330078125,
+      24.5809326171875,
+      47.56748580932617,
+      47.603050231933594,
+      24.57024383544922,
+      47.558570861816406,
+      47.58403015136719,
+      24.587203979492188,
+      47.567108154296875,
+      47.60076141357422
+    ],
+    "p99_applied_nm": 47.52867889404297,
+    "p99_requested_nm": 47.52867889404297,
+    "applied_saturation_fraction": 0.07285447418689728,
+    "over_limit_request_fraction": 0.0,
+    "mean_joint_power_w": 21.443239212036133,
+    "sampled_physics_steps": 71684,
+    "p99_applied_torque_slew_nm_s": 6550.474609375
+  },
+  "mean_forward_speed_m_s": 0.43775388444907154,
+  "mean_directed_progress_m": 2.450294017791748,
+  "survived_envs": 26,
+  "initial_envs": 32,
+  "metadata": {
+    "actor_checkpoint": "/home/shanghun1404/v14_leg_collision/pilot_jobs/110/guide_v14_interleg_collision/2026-09-24_22-59-31_v11_actor_v12_depth_guard_099/model_5700.pt",
+    "actor_sha256": "009cb093951868dfc042b0bac4bc0939d921857311b5988e046667457b2d27bd",
+    "student_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+    "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+    "usd_sha256": "a4d78c9b7763db290c6c78c49ec49d072d4d1f18f93fab5645d91a48d249ae98",
+    "seed": 42,
+    "warmup_s": 0.0,
+    "measured_s": 12.0,
+    "control_dt_s": 0.02,
+    "physics_dt_s": 0.005,
+    "command_forward_m_s": 0.5,
+    "effort_guard_fraction": 0.99,
+    "scenario": "stairs_up",
+    "terrain_level": 5,
+    "self_collisions_enabled": true,
+    "measure_leg_clearance": true,
+    "leg_capsule_radius_m": 0.015,
+    "leg_terrain_filtered": true
+  },
+  "interleg_clearance": {
+    "measured_env_frames": 17915,
+    "minimum_gap_m": -0.004937756658780455,
+    "negative_gap_frame_fraction": 0.004353893385431203,
+    "gap_below_minus_2mm_frame_fraction": 0.00039073402176946693
+  },
+  "stairs": {
+    "step_height_m": 0.15714285714285717,
+    "traversed_count": 11,
+    "traversal_rate": 0.34375,
+    "mean_vertical_after_approach_m": 0.21828153729438782
+  }
+}

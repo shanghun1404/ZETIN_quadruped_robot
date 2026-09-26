@@ -1,0 +1,38 @@
+[
+  {
+    "configuration": "fixed_heading",
+    "seeds": [
+      42,
+      43
+    ],
+    "total": 64,
+    "survived": 49,
+    "directed_stairs": 0,
+    "full_flight": 0,
+    "valid_gap_frames": 36054,
+    "minimum_gap_m": -0.01615818449828376,
+    "progress_m": 2.0976685732603073,
+    "cross_track_m": 2.278705257922411,
+    "heading_deg": 66.15164017677307,
+    "overlap_fraction": 0.006628945470682865,
+    "deep_overlap_fraction": 0.002468519443057636
+  },
+  {
+    "configuration": "residual174_early",
+    "seeds": [
+      42,
+      43
+    ],
+    "total": 64,
+    "survived": 55,
+    "directed_stairs": 0,
+    "full_flight": 0,
+    "valid_gap_frames": 37460,
+    "minimum_gap_m": -0.0147736331508606,
+    "progress_m": 2.054446764290333,
+    "cross_track_m": 2.3411495499312878,
+    "heading_deg": 68.40565341711044,
+    "overlap_fraction": 0.007234383342231714,
+    "deep_overlap_fraction": 0.0020822210357714895
+  }
+]

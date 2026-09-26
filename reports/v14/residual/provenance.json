@@ -1,0 +1,8 @@
+{
+  "original_usd": "/home/projects/legacy/robot_v2/usd/v2_plain.usd",
+  "original_usd_sha256": "3df1d83c036f4679ab183440a3de9520537f037a461f7e1e0a10e43ec0df6e18",
+  "unchanged": true,
+  "training_and_simulation_host": "ws1",
+  "partition": "compute",
+  "qos": "admin"
+}

@@ -1,0 +1,194 @@
+#usda 1.0
+(
+    defaultPrim = "quadruped"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "quadruped" (
+    prepend references = @/home/projects/legacy/robot_v2/usd/v2_plain.usd@</quadruped>
+)
+{
+    over "base"
+    {
+        over "FL_thigh_profile" (
+            prepend apiSchemas = ["PhysicsFilteredPairsAPI"]
+        )
+        {
+            prepend rel physics:filteredPairs = [
+                </quadruped/base/FL_calf_profile>,
+                </quadruped/base/FL_foot>,
+            ]
+
+            def Capsule "v14_leg_collision" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                uniform token axis = "X"
+                double height = 0.23
+                bool physics:collisionEnabled = 1
+                double radius = 0.02
+                token visibility = "invisible"
+                double3 xformOp:translate = (0.125, 0.09, 0.24)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+            }
+        }
+
+        over "FL_calf_profile" (
+            prepend apiSchemas = ["PhysicsFilteredPairsAPI"]
+        )
+        {
+            prepend rel physics:filteredPairs = </quadruped/base/FL_foot>
+
+            def Capsule "v14_leg_collision" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                uniform token axis = "X"
+                double height = 0.23
+                bool physics:collisionEnabled = 1
+                double radius = 0.02
+                token visibility = "invisible"
+                double3 xformOp:translate = (0.125, 0.09, 0.24)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+            }
+        }
+
+        over "FR_thigh_profile" (
+            prepend apiSchemas = ["PhysicsFilteredPairsAPI"]
+        )
+        {
+            prepend rel physics:filteredPairs = [
+                </quadruped/base/FR_calf_profile>,
+                </quadruped/base/FR_foot>,
+            ]
+
+            def Capsule "v14_leg_collision" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                uniform token axis = "X"
+                double height = 0.23
+                bool physics:collisionEnabled = 1
+                double radius = 0.02
+                token visibility = "invisible"
+                double3 xformOp:translate = (0.125, 0.09, 0.24)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+            }
+        }
+
+        over "FR_calf_profile" (
+            prepend apiSchemas = ["PhysicsFilteredPairsAPI"]
+        )
+        {
+            prepend rel physics:filteredPairs = </quadruped/base/FR_foot>
+
+            def Capsule "v14_leg_collision" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                uniform token axis = "X"
+                double height = 0.23
+                bool physics:collisionEnabled = 1
+                double radius = 0.02
+                token visibility = "invisible"
+                double3 xformOp:translate = (0.125, 0.09, 0.24)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+            }
+        }
+
+        over "RL_thigh_profile" (
+            prepend apiSchemas = ["PhysicsFilteredPairsAPI"]
+        )
+        {
+            prepend rel physics:filteredPairs = [
+                </quadruped/base/RL_calf_profile>,
+                </quadruped/base/RL_foot>,
+            ]
+
+            def Capsule "v14_leg_collision" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                uniform token axis = "X"
+                double height = 0.23
+                bool physics:collisionEnabled = 1
+                double radius = 0.02
+                token visibility = "invisible"
+                double3 xformOp:translate = (0.125, 0.09, 0.24)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+            }
+        }
+
+        over "RL_calf_profile" (
+            prepend apiSchemas = ["PhysicsFilteredPairsAPI"]
+        )
+        {
+            prepend rel physics:filteredPairs = </quadruped/base/RL_foot>
+
+            def Capsule "v14_leg_collision" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                uniform token axis = "X"
+                double height = 0.23
+                bool physics:collisionEnabled = 1
+                double radius = 0.02
+                token visibility = "invisible"
+                double3 xformOp:translate = (0.125, 0.09, 0.24)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+            }
+        }
+
+        over "RR_thigh_profile" (
+            prepend apiSchemas = ["PhysicsFilteredPairsAPI"]
+        )
+        {
+            prepend rel physics:filteredPairs = [
+                </quadruped/base/RR_calf_profile>,
+                </quadruped/base/RR_foot>,
+            ]
+
+            def Capsule "v14_leg_collision" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                uniform token axis = "X"
+                double height = 0.23
+                bool physics:collisionEnabled = 1
+                double radius = 0.02
+                token visibility = "invisible"
+                double3 xformOp:translate = (0.125, 0.09, 0.24)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+            }
+        }
+
+        over "RR_calf_profile" (
+            prepend apiSchemas = ["PhysicsFilteredPairsAPI"]
+        )
+        {
+            prepend rel physics:filteredPairs = </quadruped/base/RR_foot>
+
+            def Capsule "v14_leg_collision" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI"]
+            )
+            {
+                uniform token axis = "X"
+                double height = 0.23
+                bool physics:collisionEnabled = 1
+                double radius = 0.02
+                token visibility = "invisible"
+                double3 xformOp:translate = (0.125, 0.09, 0.24)
+                uniform token[] xformOpOrder = ["xformOp:translate"]
+            }
+        }
+
+        over "base" (
+            prepend apiSchemas = ["PhysxArticulationAPI"]
+        )
+        {
+            bool physxArticulation:enabledSelfCollisions = 1
+        }
+    }
+}
+

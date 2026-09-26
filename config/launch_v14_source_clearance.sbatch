@@ -1,0 +1,23 @@
+#!/bin/bash
+#SBATCH --partition=compute
+#SBATCH --qos=admin
+#SBATCH --gres=gpu:1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=24G
+#SBATCH --time=00:30:00
+#SBATCH --job-name=v14-source-gap
+#SBATCH --output=/home/shanghun1404/v14_leg_collision/slurm-%j.out
+
+set -euo pipefail
+export OMNI_KIT_ACCEPT_EULA=YES
+export PYTHONPATH=/home/shanghun1404/v14_leg_collision/config:/home/shanghun1404/v13_torque/config:/home/projects/legacy/quadruped_training_smooth_v11
+cd /home/shanghun1404/v14_leg_collision/config
+
+/opt/isaacsim-env/bin/python evaluate_v13_torque.py \
+  --headless --enable_cameras --variant v13 --num-envs 32 --seed 42 \
+  --warmup-seconds 2 --seconds 12 --forward-speed 0.4 --scenario flat \
+  --effort-guard-fraction 0.99 --measure-leg-clearance \
+  --actor-checkpoint /home/projects/legacy/quadruped_training_smooth_v11/logs/rsl_rl/guide_v11_scanner_terrain_robot_v2/2026-08-12_07-19-56_robot_v2_scanner_terrain_bootstrap/model_4999.pt \
+  --student-checkpoint /home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt \
+  --usd-path /home/projects/legacy/robot_v2/usd/v2_plain.usd \
+  --output /home/shanghun1404/v14_leg_collision/results/v13_flat_with_clearance_seed42.json

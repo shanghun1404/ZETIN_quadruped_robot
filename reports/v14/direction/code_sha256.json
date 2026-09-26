@@ -1,0 +1,12 @@
+{
+  "evaluate_v13_torque.py": "427533f45598259eda5879ea7f61b192bc6a007dab5d93b5a87af974d51092f3",
+  "v14_eval_protocol.py": "4f817f1c83a84fed9d83cb6829aaee8391ee8f90ce83f3b900ba4ee527c4e67c",
+  "v14_path_metrics.py": "4cc6c22046f8a386e8ee3c39e67998d1b943f2757234e57b9aa566309d473ca5",
+  "v14_heading_math.py": "ee3cd7766bdd84166cef89239a483e87d85b463e8ed8eb4ca5b23ebea5d6a8a8",
+  "v14_heading_command.py": "26bca4e45a23fa49383390f9a723bb819fba309d2915b81d456118d5ed960382",
+  "v14_leg_env_cfg.py": "2cc074a3419189b1b95378d025106c0a189a68d4a58710967071f8520d60a3c4",
+  "train_v14_leg_collision.py": "1d7d60e5755ceb9c331b89e7adeb623584c27430a593aaeeb4ed508197a69dc3",
+  "launch_v14_direction_train.sbatch": "ba46daa429483bd2d3a58097f44062981028ce1f4f1c4eb1c6b42ada834a8abc",
+  "launch_v14_direction_eval.sbatch": "a9cd9632cc65d05e860171cf69fc674943153a555d9d589cb2aca615fcbe755c",
+  "launch_v14_direction_soft_train.sbatch": "9e5ca708e37acee95bfc655952afd35f43745b0e3c8ebf106e56078a2f335d97"
+}

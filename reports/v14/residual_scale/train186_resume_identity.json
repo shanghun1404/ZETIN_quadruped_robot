@@ -1,0 +1,5 @@
+{
+  "model_exact": true,
+  "optimizer_exact": true,
+  "completed_iteration": 100
+}

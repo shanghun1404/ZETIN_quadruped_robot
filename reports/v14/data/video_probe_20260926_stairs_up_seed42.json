@@ -1,0 +1,380 @@
+{
+  "variant": "v13",
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "actuation": {
+    "peak_applied_nm": [
+      24.589637756347656,
+      47.575111389160156,
+      47.62391662597656,
+      24.584556579589844,
+      47.554290771484375,
+      47.60639190673828,
+      24.567533493041992,
+      47.55879211425781,
+      47.59777069091797,
+      24.57156753540039,
+      47.567108154296875,
+      47.64814758300781
+    ],
+    "peak_requested_nm": [
+      24.589637756347656,
+      47.575111389160156,
+      47.62391662597656,
+      24.584556579589844,
+      47.554290771484375,
+      47.60639190673828,
+      24.567533493041992,
+      47.55879211425781,
+      47.59777069091797,
+      24.57156753540039,
+      47.567108154296875,
+      47.64814758300781
+    ],
+    "p99_applied_nm": 47.528507232666016,
+    "p99_requested_nm": 47.528507232666016,
+    "applied_saturation_fraction": 0.07537589967250824,
+    "over_limit_request_fraction": 0.0,
+    "mean_joint_power_w": 21.89605712890625,
+    "sampled_physics_steps": 72448,
+    "p99_applied_torque_slew_nm_s": 6698.52001953125
+  },
+  "mean_forward_speed_m_s": 0.4073970773756708,
+  "mean_directed_progress_m": 2.5265514850616455,
+  "survived_envs": 28,
+  "initial_envs": 32,
+  "metadata": {
+    "actor_checkpoint": "/home/shanghun1404/v14_leg_collision/pilot_jobs/110/guide_v14_interleg_collision/2026-09-24_22-59-31_v11_actor_v12_depth_guard_099/model_5700.pt",
+    "actor_sha256": "009cb093951868dfc042b0bac4bc0939d921857311b5988e046667457b2d27bd",
+    "student_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+    "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+    "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+    "seed": 42,
+    "warmup_s": 0.0,
+    "measured_s": 12.0,
+    "control_dt_s": 0.02,
+    "physics_dt_s": 0.005,
+    "command_forward_m_s": 0.5,
+    "effort_guard_fraction": 0.99,
+    "scenario": "stairs_up",
+    "terrain_level": 5,
+    "self_collisions_enabled": true,
+    "measure_leg_clearance": true,
+    "leg_capsule_radius_m": 0.02,
+    "leg_terrain_filtered": true
+  },
+  "interleg_clearance": {
+    "measured_env_frames": 18108,
+    "minimum_gap_m": -0.007051309961248274,
+    "negative_gap_frame_fraction": 0.00905677048818202,
+    "gap_below_minus_2mm_frame_fraction": 0.0012149326264634416
+  },
+  "stairs": {
+    "step_height_m": 0.15714285714285717,
+    "traversed_count": 12,
+    "traversal_rate": 0.375,
+    "mean_vertical_after_approach_m": 0.24654889106750488
+  },
+  "per_environment": [
+    {
+      "env_id": 0,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 0.05795097351074219,
+      "max_radial_progress_m": 3.368380308151245,
+      "vertical_after_approach_m": 0.39472004771232605,
+      "traversed": true
+    },
+    {
+      "env_id": 1,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 3.8232250213623047,
+      "max_radial_progress_m": 4.840357780456543,
+      "vertical_after_approach_m": 0.1931600272655487,
+      "traversed": false
+    },
+    {
+      "env_id": 2,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 5.971167087554932,
+      "max_radial_progress_m": 6.396459102630615,
+      "vertical_after_approach_m": 0.11348769068717957,
+      "traversed": false
+    },
+    {
+      "env_id": 3,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 1.5508599281311035,
+      "max_radial_progress_m": 2.9703006744384766,
+      "vertical_after_approach_m": 0.2993258535861969,
+      "traversed": false
+    },
+    {
+      "env_id": 4,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 1.0788569450378418,
+      "max_radial_progress_m": 1.5549970865249634,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 5,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 1.6241540908813477,
+      "max_radial_progress_m": 6.178184986114502,
+      "vertical_after_approach_m": 0.7466132640838623,
+      "traversed": true
+    },
+    {
+      "env_id": 6,
+      "survived": false,
+      "first_termination_s": 7.0600000000000005,
+      "directed_progress_m": 1.9629974365234375,
+      "max_radial_progress_m": 2.423503875732422,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 7,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 0.5787525177001953,
+      "max_radial_progress_m": 1.810943603515625,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 8,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 3.8911094665527344,
+      "max_radial_progress_m": 5.963140964508057,
+      "vertical_after_approach_m": 0.44170060753822327,
+      "traversed": true
+    },
+    {
+      "env_id": 9,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 5.035411834716797,
+      "max_radial_progress_m": 7.054267883300781,
+      "vertical_after_approach_m": 0.19228428602218628,
+      "traversed": false
+    },
+    {
+      "env_id": 10,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 6.631809711456299,
+      "max_radial_progress_m": 7.238972187042236,
+      "vertical_after_approach_m": 0.1080889105796814,
+      "traversed": false
+    },
+    {
+      "env_id": 11,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 2.20664119720459,
+      "max_radial_progress_m": 4.372086048126221,
+      "vertical_after_approach_m": 0.5202159881591797,
+      "traversed": true
+    },
+    {
+      "env_id": 12,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 1.076005458831787,
+      "max_radial_progress_m": 3.554800510406494,
+      "vertical_after_approach_m": 0.492669016122818,
+      "traversed": true
+    },
+    {
+      "env_id": 13,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": -0.9790773391723633,
+      "max_radial_progress_m": 1.268263578414917,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 14,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 0.6284618377685547,
+      "max_radial_progress_m": 4.583031177520752,
+      "vertical_after_approach_m": 0.4141905903816223,
+      "traversed": true
+    },
+    {
+      "env_id": 15,
+      "survived": false,
+      "first_termination_s": 8.5,
+      "directed_progress_m": 1.3609619140625,
+      "max_radial_progress_m": 1.8020217418670654,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 16,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 2.0252037048339844,
+      "max_radial_progress_m": 3.3960978984832764,
+      "vertical_after_approach_m": 0.34977319836616516,
+      "traversed": true
+    },
+    {
+      "env_id": 17,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 6.349418640136719,
+      "max_radial_progress_m": 7.204553127288818,
+      "vertical_after_approach_m": 0.19111180305480957,
+      "traversed": false
+    },
+    {
+      "env_id": 18,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 6.913074970245361,
+      "max_radial_progress_m": 7.276864051818848,
+      "vertical_after_approach_m": 0.11239340901374817,
+      "traversed": false
+    },
+    {
+      "env_id": 19,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 2.10422420501709,
+      "max_radial_progress_m": 4.962188243865967,
+      "vertical_after_approach_m": 0.5082066059112549,
+      "traversed": true
+    },
+    {
+      "env_id": 20,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 1.6571321487426758,
+      "max_radial_progress_m": 3.921403169631958,
+      "vertical_after_approach_m": 0.5395278930664062,
+      "traversed": true
+    },
+    {
+      "env_id": 21,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 1.2997369766235352,
+      "max_radial_progress_m": 2.510220527648926,
+      "vertical_after_approach_m": 0.13981880247592926,
+      "traversed": false
+    },
+    {
+      "env_id": 22,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": -0.5805511474609375,
+      "max_radial_progress_m": 1.815230369567871,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 23,
+      "survived": false,
+      "first_termination_s": 4.36,
+      "directed_progress_m": -0.09002304077148438,
+      "max_radial_progress_m": 0.8913455009460449,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 24,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 2.416400909423828,
+      "max_radial_progress_m": 3.4901440143585205,
+      "vertical_after_approach_m": 0.22903570532798767,
+      "traversed": false
+    },
+    {
+      "env_id": 25,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 4.165170669555664,
+      "max_radial_progress_m": 5.758944034576416,
+      "vertical_after_approach_m": 0.19128593802452087,
+      "traversed": false
+    },
+    {
+      "env_id": 26,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 6.794360637664795,
+      "max_radial_progress_m": 7.033655643463135,
+      "vertical_after_approach_m": 0.11027762293815613,
+      "traversed": false
+    },
+    {
+      "env_id": 27,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 3.5191152095794678,
+      "max_radial_progress_m": 6.019608020782471,
+      "vertical_after_approach_m": 0.5008751153945923,
+      "traversed": true
+    },
+    {
+      "env_id": 28,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 0.24104976654052734,
+      "max_radial_progress_m": 1.9621297121047974,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 29,
+      "survived": false,
+      "first_termination_s": 6.32,
+      "directed_progress_m": 1.3974580764770508,
+      "max_radial_progress_m": 2.0197861194610596,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 30,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 5.078207015991211,
+      "max_radial_progress_m": 6.811855792999268,
+      "vertical_after_approach_m": 0.4166073501110077,
+      "traversed": true
+    },
+    {
+      "env_id": 31,
+      "survived": true,
+      "first_termination_s": null,
+      "directed_progress_m": 1.0603771209716797,
+      "max_radial_progress_m": 4.717110633850098,
+      "vertical_after_approach_m": 0.6841951608657837,
+      "traversed": true
+    }
+  ]
+}

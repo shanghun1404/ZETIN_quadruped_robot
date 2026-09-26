@@ -1,0 +1,9 @@
+     JOBID                    NAME     STATE       TIME         NODELIST(REASON)
+       190        v14-scale-mid200   PENDING       0:00              (Resources)
+       189        v14-scale-flat42   PENDING       0:00             (Dependency)
+       188       v14-scale-final43   PENDING       0:00             (Dependency)
+       187       v14-scale-final42   PENDING       0:00             (Dependency)
+       186      v14-residual-scale   RUNNING       6:40                      ws1
+JobID|State|ExitCode|Elapsed|MaxRSS|ReqMem
+184|COMPLETED|0:0|00:02:44||32G
+184.batch|COMPLETED|0:0|00:02:44|13617796K|

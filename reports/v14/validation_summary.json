@@ -1,0 +1,132 @@
+{
+  "candidate": "pilot110/model_5700.pt",
+  "actor_sha256": "009cb093951868dfc042b0bac4bc0939d921857311b5988e046667457b2d27bd",
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "note": "Progress/power are means of the three seed-level metrics. Gap fractions weight alive environment frames. Evaluation protocol metadata matched against V13.",
+  "terrains": [
+    {
+      "scenario": "flat",
+      "v13": {
+        "total_envs": 96,
+        "survived": 96,
+        "traversed": null,
+        "seed_mean_progress_m": 7.987258275349935,
+        "seed_mean_joint_power_w": 15.579096158345541,
+        "max_seed_over_limit_request_fraction": 0.0
+      },
+      "v14_m5700": {
+        "total_envs": 96,
+        "survived": 96,
+        "traversed": null,
+        "seed_mean_progress_m": 8.325718561808268,
+        "seed_mean_joint_power_w": 13.205965995788574,
+        "max_seed_over_limit_request_fraction": 0.0,
+        "interleg_clearance": {
+          "measured_env_frames": 57600,
+          "minimum_gap_m": 0.04465998422475958,
+          "negative_gap_frame_fraction": 0.0,
+          "gap_below_minus_2mm_frame_fraction": 0.0
+        }
+      },
+      "v14_source_json": [
+        "data/m5700_flat_seed42.json",
+        "data/m5700_verified_flat_seed43.json",
+        "data/m5700_flat_seed44.json"
+      ]
+    },
+    {
+      "scenario": "rough",
+      "v13": {
+        "total_envs": 96,
+        "survived": 83,
+        "traversed": null,
+        "seed_mean_progress_m": 4.36273209253947,
+        "seed_mean_joint_power_w": 20.880573272705078,
+        "max_seed_over_limit_request_fraction": 0.0
+      },
+      "v14_m5700": {
+        "total_envs": 96,
+        "survived": 63,
+        "traversed": null,
+        "seed_mean_progress_m": 3.851643959681193,
+        "seed_mean_joint_power_w": 17.921248118082683,
+        "max_seed_over_limit_request_fraction": 0.0,
+        "interleg_clearance": {
+          "measured_env_frames": 49878,
+          "minimum_gap_m": -0.014517449651158702,
+          "negative_gap_frame_fraction": 0.004811740647179117,
+          "gap_below_minus_2mm_frame_fraction": 0.0005814186615341433
+        }
+      },
+      "v14_source_json": [
+        "data/m5700_rough_seed42.json",
+        "data/m5700_verified_rough_seed43.json",
+        "data/m5700_rough_seed44.json"
+      ]
+    },
+    {
+      "scenario": "stairs_up",
+      "v13": {
+        "total_envs": 96,
+        "survived": 85,
+        "traversed": 46,
+        "seed_mean_progress_m": 2.3565611044565835,
+        "seed_mean_joint_power_w": 22.54482142130534,
+        "max_seed_over_limit_request_fraction": 0.0
+      },
+      "v14_m5700": {
+        "total_envs": 96,
+        "survived": 84,
+        "traversed": 25,
+        "seed_mean_progress_m": 2.1540631453196206,
+        "seed_mean_joint_power_w": 21.27001126607259,
+        "max_seed_over_limit_request_fraction": 0.0,
+        "interleg_clearance": {
+          "measured_env_frames": 54976,
+          "minimum_gap_m": -0.012538784386102043,
+          "negative_gap_frame_fraction": 0.007457799767171129,
+          "gap_below_minus_2mm_frame_fraction": 0.0011459545983701978
+        }
+      },
+      "v14_source_json": [
+        "data/m5700_stairs_up_seed42.json",
+        "data/m5700_stairs_up_seed43.json",
+        "data/m5700_stairs_up_seed44.json"
+      ]
+    },
+    {
+      "scenario": "stairs_down",
+      "v13": {
+        "total_envs": 96,
+        "survived": 96,
+        "traversed": 96,
+        "seed_mean_progress_m": 5.30764102935791,
+        "seed_mean_joint_power_w": 19.6543394724528,
+        "max_seed_over_limit_request_fraction": 0.0
+      },
+      "v14_m5700": {
+        "total_envs": 96,
+        "survived": 78,
+        "traversed": 78,
+        "seed_mean_progress_m": 5.191749572753906,
+        "seed_mean_joint_power_w": 18.749696731567383,
+        "max_seed_over_limit_request_fraction": 0.0,
+        "interleg_clearance": {
+          "measured_env_frames": 52539,
+          "minimum_gap_m": -0.010036513585720629,
+          "negative_gap_frame_fraction": 0.005253240449951464,
+          "gap_below_minus_2mm_frame_fraction": 0.0005519709168427263
+        }
+      },
+      "v14_source_json": [
+        "data/m5700_stairs_down_seed42.json",
+        "data/m5700_stairs_down_seed43.json",
+        "data/m5700_stairs_down_seed44.json"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "Mean reward": {
+    "first": 1.81,
+    "last": 213.6,
+    "samples": 300
+  },
+  "Mean episode length": {
+    "first": 16.0,
+    "last": 777.34,
+    "samples": 300
+  },
+  "Curriculum/terrain_levels": {
+    "first": 0.9935,
+    "last": 5.0312,
+    "samples": 300
+  },
+  "Episode_Reward/v14_clearance": {
+    "first": 0.0,
+    "last": -0.0577,
+    "samples": 300
+  },
+  "Episode_Reward/v14_correction": {
+    "first": -0.0,
+    "last": -0.0014,
+    "samples": 300
+  },
+  "Episode_Termination/base_tilt": {
+    "first": 0.0,
+    "last": 0.4375,
+    "samples": 300
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "base_unchanged": true,
+  "student_unchanged": true,
+  "base_tensor_sha256": "576eb2089c410efffa5bb7e77e965990aaf6850cff0ce631bf1ea07c7e14b868",
+  "student_tensor_sha256": "4c18a3b7ae274c37edc96ef5a5a6129d9aee68f247d827e707199bb8483ae3df",
+  "max_observed_delta_rad": 0.0,
+  "residual_parameters_finite": true
+}

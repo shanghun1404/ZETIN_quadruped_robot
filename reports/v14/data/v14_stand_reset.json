@@ -1,0 +1,45 @@
+{
+  "mode": "stand",
+  "usd_path": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+  "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+  "self_collisions_enabled": true,
+  "physics_dt_s": 0.005,
+  "num_envs": 1,
+  "measured_steps": 400,
+  "haa_amplitude_rad": 0.0,
+  "haa_sign_patterns": [
+    [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  ],
+  "minimum_interleg_capsule_gap_m": 0.28636598305229094,
+  "minimum_gap_by_env_m": [
+    0.28636598305229094
+  ],
+  "negative_clearance_sample_fraction": [
+    0.0
+  ],
+  "root_z_initial_m": [
+    0.5519999861717224
+  ],
+  "root_z_min_m": [
+    0.4246225655078888
+  ],
+  "root_z_max_m": [
+    0.5517506003379822
+  ],
+  "root_z_final_m": [
+    0.4447062909603119
+  ],
+  "haa_final_rad": [
+    [
+      -0.004444028250873089,
+      0.004250986967235804,
+      -0.0030612838454544544,
+      0.007795992307364941
+    ]
+  ]
+}

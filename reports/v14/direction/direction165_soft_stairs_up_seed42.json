@@ -1,0 +1,947 @@
+{
+  "variant": "v13",
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "actuation": {
+    "peak_applied_nm": [
+      24.570621490478516,
+      47.57332229614258,
+      47.595069885253906,
+      24.568111419677734,
+      47.56486511230469,
+      47.57829284667969,
+      24.566247940063477,
+      47.548702239990234,
+      47.607398986816406,
+      24.57781219482422,
+      47.57413101196289,
+      47.604888916015625
+    ],
+    "peak_requested_nm": [
+      24.570621490478516,
+      47.57332229614258,
+      47.595069885253906,
+      24.568111419677734,
+      47.56486511230469,
+      47.57829284667969,
+      24.566247940063477,
+      47.548702239990234,
+      47.607398986816406,
+      24.57781219482422,
+      47.57413101196289,
+      47.604888916015625
+    ],
+    "p99_applied_nm": 47.53022384643555,
+    "p99_requested_nm": 47.53022384643555,
+    "applied_saturation_fraction": 0.08287248015403748,
+    "over_limit_request_fraction": 0.0,
+    "mean_joint_power_w": 18.19732666015625,
+    "sampled_physics_steps": 35984,
+    "p99_applied_torque_slew_nm_s": 5500.248046875
+  },
+  "mean_forward_speed_m_s": 0.07163324299216248,
+  "mean_directed_progress_m": 0.21325072646141052,
+  "survived_envs": 3,
+  "initial_envs": 32,
+  "metadata": {
+    "actor_checkpoint": "/home/shanghun1404/v14_leg_collision/direction_jobs/165/guide_v14_direction_adaptation/2026-09-26_17-43-05_v14_m5700_lane_yaw/model_5799.pt",
+    "actor_sha256": "097223e3b1a0be32c3062f1446cea26d3cb7ed6024e57d0a2c19100c419ee0a5",
+    "student_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+    "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+    "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+    "seed": 42,
+    "warmup_s": 0.0,
+    "measured_s": 12.0,
+    "control_dt_s": 0.02,
+    "physics_dt_s": 0.005,
+    "command_forward_m_s": 0.5,
+    "effort_guard_fraction": 0.99,
+    "scenario": "stairs_up",
+    "protocol": "fixed_v2",
+    "heading_control": true,
+    "geometry": {
+      "difficulty": 0.7142857142857143,
+      "unique_tiles": 32,
+      "step_height_m": 0.15714285714285717,
+      "full_rise_m": 1.1,
+      "unique_origins": 32,
+      "origin_z_m": [
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858
+      ]
+    },
+    "terrain_level": 5,
+    "self_collisions_enabled": true,
+    "measure_leg_clearance": true,
+    "leg_capsule_radius_m": 0.02,
+    "leg_terrain_filtered": true
+  },
+  "interleg_clearance": {
+    "measured_env_frames": 8967,
+    "minimum_gap_m": 0.004570139728915797,
+    "negative_gap_frame_fraction": 0.0,
+    "gap_below_minus_2mm_frame_fraction": 0.0
+  },
+  "stairs": {
+    "step_height_m": 0.15714285714285717,
+    "traversed_count": 0,
+    "traversal_rate": 0.0,
+    "mean_vertical_after_approach_m": 0.0
+  },
+  "per_environment": [
+    {
+      "env_id": 0,
+      "survived": false,
+      "first_termination_s": 3.7800000000000002,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.18360137939453125,
+      "max_radial_progress_m": 0.8629530668258667,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 1,
+      "survived": false,
+      "first_termination_s": 3.74,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.33039093017578125,
+      "max_radial_progress_m": 0.868101179599762,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 2,
+      "survived": false,
+      "first_termination_s": 4.12,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.15193939208984375,
+      "max_radial_progress_m": 0.8486239314079285,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 3,
+      "survived": false,
+      "first_termination_s": 3.54,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.30402374267578125,
+      "max_radial_progress_m": 0.8737080693244934,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 4,
+      "survived": false,
+      "first_termination_s": 3.62,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.36521148681640625,
+      "max_radial_progress_m": 0.8701342344284058,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 5,
+      "survived": true,
+      "first_termination_s": null,
+      "first_termination_terms": [],
+      "directed_progress_m": 0.6709823608398438,
+      "max_radial_progress_m": 1.1898934841156006,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 6,
+      "survived": false,
+      "first_termination_s": 3.6,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.3309783935546875,
+      "max_radial_progress_m": 0.8609805107116699,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 7,
+      "survived": false,
+      "first_termination_s": 3.56,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.22557830810546875,
+      "max_radial_progress_m": 0.8668253421783447,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 8,
+      "survived": false,
+      "first_termination_s": 3.66,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.22306442260742188,
+      "max_radial_progress_m": 0.8597458004951477,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 9,
+      "survived": false,
+      "first_termination_s": 3.8200000000000003,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.30681610107421875,
+      "max_radial_progress_m": 0.8758313655853271,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 10,
+      "survived": false,
+      "first_termination_s": 8.2,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.3537635803222656,
+      "max_radial_progress_m": 1.0280261039733887,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 11,
+      "survived": false,
+      "first_termination_s": 3.58,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.4325523376464844,
+      "max_radial_progress_m": 0.8657061457633972,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 12,
+      "survived": false,
+      "first_termination_s": 8.700000000000001,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.017152786254882812,
+      "max_radial_progress_m": 1.136760950088501,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 13,
+      "survived": false,
+      "first_termination_s": 4.5,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": -0.19444656372070312,
+      "max_radial_progress_m": 0.8733695149421692,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 14,
+      "survived": false,
+      "first_termination_s": 8.02,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.2614898681640625,
+      "max_radial_progress_m": 1.1603758335113525,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 15,
+      "survived": false,
+      "first_termination_s": 3.88,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.1666886806488037,
+      "max_radial_progress_m": 0.7933101654052734,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 16,
+      "survived": false,
+      "first_termination_s": 4.14,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.15045499801635742,
+      "max_radial_progress_m": 0.9005201458930969,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 17,
+      "survived": false,
+      "first_termination_s": 4.58,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": -0.08961296081542969,
+      "max_radial_progress_m": 0.8596152663230896,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 18,
+      "survived": false,
+      "first_termination_s": 3.8000000000000003,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.355560302734375,
+      "max_radial_progress_m": 0.8788091540336609,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 19,
+      "survived": false,
+      "first_termination_s": 4.18,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.1824169158935547,
+      "max_radial_progress_m": 0.9158215522766113,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 20,
+      "survived": false,
+      "first_termination_s": 3.7600000000000002,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.1996307373046875,
+      "max_radial_progress_m": 0.8662129044532776,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 21,
+      "survived": true,
+      "first_termination_s": null,
+      "first_termination_terms": [],
+      "directed_progress_m": 0.42305755615234375,
+      "max_radial_progress_m": 1.1552022695541382,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 22,
+      "survived": false,
+      "first_termination_s": 4.18,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.17966461181640625,
+      "max_radial_progress_m": 0.8468317985534668,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 23,
+      "survived": false,
+      "first_termination_s": 4.04,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": -0.006679534912109375,
+      "max_radial_progress_m": 0.8737069964408875,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 24,
+      "survived": false,
+      "first_termination_s": 5.7,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": -0.13062286376953125,
+      "max_radial_progress_m": 0.8680249452590942,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 25,
+      "survived": false,
+      "first_termination_s": 3.52,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.4845428466796875,
+      "max_radial_progress_m": 0.8644792437553406,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 26,
+      "survived": false,
+      "first_termination_s": 9.76,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": -0.01856231689453125,
+      "max_radial_progress_m": 1.1925042867660522,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 27,
+      "survived": false,
+      "first_termination_s": 3.96,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.02243804931640625,
+      "max_radial_progress_m": 0.8568313121795654,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 28,
+      "survived": false,
+      "first_termination_s": 8.68,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.35296630859375,
+      "max_radial_progress_m": 0.9231148362159729,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 29,
+      "survived": true,
+      "first_termination_s": null,
+      "first_termination_terms": [],
+      "directed_progress_m": 0.21134185791015625,
+      "max_radial_progress_m": 0.9015269875526428,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 30,
+      "survived": false,
+      "first_termination_s": 3.62,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.247314453125,
+      "max_radial_progress_m": 0.8657744526863098,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 31,
+      "survived": false,
+      "first_termination_s": 9.68,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.1303253173828125,
+      "max_radial_progress_m": 1.1944347620010376,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    }
+  ],
+  "path": {
+    "per_environment": [
+      {
+        "env_id": 0,
+        "final_directed_progress_m": 0.18360137939453125,
+        "max_abs_cross_track_m": 0.1389654576778412,
+        "final_cross_track_m": 0.0683111920952797,
+        "max_abs_heading_error_deg": 30.91645622253418,
+        "final_heading_error_deg": 30.91645622253418,
+        "path_length_m": 1.5847233533859253,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 1,
+        "final_directed_progress_m": 0.33039093017578125,
+        "max_abs_cross_track_m": 0.15553829073905945,
+        "final_cross_track_m": -0.09017741680145264,
+        "max_abs_heading_error_deg": 22.327655792236328,
+        "final_heading_error_deg": 21.627853393554688,
+        "path_length_m": 1.5156395435333252,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 2,
+        "final_directed_progress_m": 0.15193939208984375,
+        "max_abs_cross_track_m": 0.13785524666309357,
+        "final_cross_track_m": -0.12903641164302826,
+        "max_abs_heading_error_deg": 21.71004295349121,
+        "final_heading_error_deg": 19.496383666992188,
+        "path_length_m": 1.6567848920822144,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 3,
+        "final_directed_progress_m": 0.30402374267578125,
+        "max_abs_cross_track_m": 0.15610386431217194,
+        "final_cross_track_m": 0.08089887350797653,
+        "max_abs_heading_error_deg": 32.12992477416992,
+        "final_heading_error_deg": 32.12992477416992,
+        "path_length_m": 1.4818637371063232,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 4,
+        "final_directed_progress_m": 0.36521148681640625,
+        "max_abs_cross_track_m": 0.1711607128381729,
+        "final_cross_track_m": -8.121738210320473e-05,
+        "max_abs_heading_error_deg": 23.841711044311523,
+        "final_heading_error_deg": 23.14876937866211,
+        "path_length_m": 1.4326071739196777,
+        "final_ground_change_m": -1.9073486328125e-06,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 5,
+        "final_directed_progress_m": 0.6709823608398438,
+        "max_abs_cross_track_m": 1.0778299570083618,
+        "final_cross_track_m": -0.7066434621810913,
+        "max_abs_heading_error_deg": 24.88798713684082,
+        "final_heading_error_deg": -21.826705932617188,
+        "path_length_m": 3.523684024810791,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 6,
+        "final_directed_progress_m": 0.3309783935546875,
+        "max_abs_cross_track_m": 0.16478632390499115,
+        "final_cross_track_m": -0.16416862607002258,
+        "max_abs_heading_error_deg": 15.718524932861328,
+        "final_heading_error_deg": 13.894454002380371,
+        "path_length_m": 1.5135915279388428,
+        "final_ground_change_m": -1.9073486328125e-06,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 7,
+        "final_directed_progress_m": 0.22557830810546875,
+        "max_abs_cross_track_m": 0.1618669182062149,
+        "final_cross_track_m": -0.018145199865102768,
+        "max_abs_heading_error_deg": 43.6338005065918,
+        "final_heading_error_deg": 43.6338005065918,
+        "path_length_m": 1.5547722578048706,
+        "final_ground_change_m": -1.9073486328125e-06,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 8,
+        "final_directed_progress_m": 0.22306442260742188,
+        "max_abs_cross_track_m": 0.14480240643024445,
+        "final_cross_track_m": 0.04543117806315422,
+        "max_abs_heading_error_deg": 27.73483657836914,
+        "final_heading_error_deg": 27.73483657836914,
+        "path_length_m": 1.5416855812072754,
+        "final_ground_change_m": 1.9073486328125e-06,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 9,
+        "final_directed_progress_m": 0.30681610107421875,
+        "max_abs_cross_track_m": 0.1767706274986267,
+        "final_cross_track_m": -0.06742459535598755,
+        "max_abs_heading_error_deg": 21.708772659301758,
+        "final_heading_error_deg": 21.708772659301758,
+        "path_length_m": 1.5591226816177368,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 10,
+        "final_directed_progress_m": 0.3537635803222656,
+        "max_abs_cross_track_m": 0.6263257265090942,
+        "final_cross_track_m": -0.12092940509319305,
+        "max_abs_heading_error_deg": 30.17054557800293,
+        "final_heading_error_deg": -0.4419473707675934,
+        "path_length_m": 3.186885356903076,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 11,
+        "final_directed_progress_m": 0.4325523376464844,
+        "max_abs_cross_track_m": 0.1556234061717987,
+        "final_cross_track_m": -0.11490330845117569,
+        "max_abs_heading_error_deg": 15.978313446044922,
+        "final_heading_error_deg": 3.21977162361145,
+        "path_length_m": 1.4132730960845947,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 12,
+        "final_directed_progress_m": 0.017152786254882812,
+        "max_abs_cross_track_m": 1.0054138898849487,
+        "final_cross_track_m": -1.0054138898849487,
+        "max_abs_heading_error_deg": 27.311323165893555,
+        "final_heading_error_deg": 25.24993133544922,
+        "path_length_m": 3.0488388538360596,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 13,
+        "final_directed_progress_m": -0.19444656372070312,
+        "max_abs_cross_track_m": 0.4807879328727722,
+        "final_cross_track_m": -0.4807879328727722,
+        "max_abs_heading_error_deg": 22.14727020263672,
+        "final_heading_error_deg": 22.14727020263672,
+        "path_length_m": 2.1762497425079346,
+        "final_ground_change_m": 1.9073486328125e-06,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 14,
+        "final_directed_progress_m": 0.2614898681640625,
+        "max_abs_cross_track_m": 1.092702865600586,
+        "final_cross_track_m": -1.092702865600586,
+        "max_abs_heading_error_deg": 32.21290588378906,
+        "final_heading_error_deg": 18.296688079833984,
+        "path_length_m": 3.2677979469299316,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 15,
+        "final_directed_progress_m": 0.1666886806488037,
+        "max_abs_cross_track_m": 0.2775810956954956,
+        "final_cross_track_m": -0.2775810956954956,
+        "max_abs_heading_error_deg": 28.655941009521484,
+        "final_heading_error_deg": 28.655941009521484,
+        "path_length_m": 1.6215879917144775,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 16,
+        "final_directed_progress_m": 0.15045499801635742,
+        "max_abs_cross_track_m": 0.4775007963180542,
+        "final_cross_track_m": -0.4775007963180542,
+        "max_abs_heading_error_deg": 19.446853637695312,
+        "final_heading_error_deg": -2.0782833099365234,
+        "path_length_m": 1.944943904876709,
+        "final_ground_change_m": 1.9073486328125e-06,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 17,
+        "final_directed_progress_m": -0.08961296081542969,
+        "max_abs_cross_track_m": 0.26007774472236633,
+        "final_cross_track_m": -0.26007774472236633,
+        "max_abs_heading_error_deg": 26.001033782958984,
+        "final_heading_error_deg": 26.001033782958984,
+        "path_length_m": 1.9925117492675781,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 18,
+        "final_directed_progress_m": 0.355560302734375,
+        "max_abs_cross_track_m": 0.14507229626178741,
+        "final_cross_track_m": -0.07167860865592957,
+        "max_abs_heading_error_deg": 44.402130126953125,
+        "final_heading_error_deg": 44.402130126953125,
+        "path_length_m": 1.504775881767273,
+        "final_ground_change_m": 1.9073486328125e-06,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 19,
+        "final_directed_progress_m": 0.1824169158935547,
+        "max_abs_cross_track_m": 0.16409270465373993,
+        "final_cross_track_m": 0.0904473215341568,
+        "max_abs_heading_error_deg": 32.79922866821289,
+        "final_heading_error_deg": 32.79922866821289,
+        "path_length_m": 1.7082246541976929,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 20,
+        "final_directed_progress_m": 0.1996307373046875,
+        "max_abs_cross_track_m": 0.3315191864967346,
+        "final_cross_track_m": -0.3315191864967346,
+        "max_abs_heading_error_deg": 19.178733825683594,
+        "final_heading_error_deg": 10.838923454284668,
+        "path_length_m": 1.737567663192749,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 21,
+        "final_directed_progress_m": 0.42305755615234375,
+        "max_abs_cross_track_m": 1.0638165473937988,
+        "final_cross_track_m": -0.8441341519355774,
+        "max_abs_heading_error_deg": 31.24812126159668,
+        "final_heading_error_deg": -21.81468963623047,
+        "path_length_m": 3.5936193466186523,
+        "final_ground_change_m": 1.9073486328125e-06,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 22,
+        "final_directed_progress_m": 0.17966461181640625,
+        "max_abs_cross_track_m": 0.20829829573631287,
+        "final_cross_track_m": -0.20829829573631287,
+        "max_abs_heading_error_deg": 24.95399284362793,
+        "final_heading_error_deg": 23.568462371826172,
+        "path_length_m": 1.6736958026885986,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 23,
+        "final_directed_progress_m": -0.006679534912109375,
+        "max_abs_cross_track_m": 0.32276833057403564,
+        "final_cross_track_m": -0.32276833057403564,
+        "max_abs_heading_error_deg": 19.046188354492188,
+        "final_heading_error_deg": 8.611406326293945,
+        "path_length_m": 1.9331681728363037,
+        "final_ground_change_m": 1.9073486328125e-06,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 24,
+        "final_directed_progress_m": -0.13062286376953125,
+        "max_abs_cross_track_m": 0.6846497058868408,
+        "final_cross_track_m": -0.6846497058868408,
+        "max_abs_heading_error_deg": 15.130314826965332,
+        "final_heading_error_deg": -0.007110226433724165,
+        "path_length_m": 2.3439693450927734,
+        "final_ground_change_m": 1.9073486328125e-06,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 25,
+        "final_directed_progress_m": 0.4845428466796875,
+        "max_abs_cross_track_m": 0.22218333184719086,
+        "final_cross_track_m": -0.22218333184719086,
+        "max_abs_heading_error_deg": 16.091535568237305,
+        "final_heading_error_deg": 7.9604902267456055,
+        "path_length_m": 1.4453530311584473,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 26,
+        "final_directed_progress_m": -0.01856231689453125,
+        "max_abs_cross_track_m": 1.0815974473953247,
+        "final_cross_track_m": -1.0815974473953247,
+        "max_abs_heading_error_deg": 35.11809158325195,
+        "final_heading_error_deg": 35.11809158325195,
+        "path_length_m": 3.4283065795898438,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 27,
+        "final_directed_progress_m": 0.02243804931640625,
+        "max_abs_cross_track_m": 0.14306102693080902,
+        "final_cross_track_m": -0.14063173532485962,
+        "max_abs_heading_error_deg": 25.2694091796875,
+        "final_heading_error_deg": 25.2694091796875,
+        "path_length_m": 1.7735180854797363,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 28,
+        "final_directed_progress_m": 0.35296630859375,
+        "max_abs_cross_track_m": 0.21706685423851013,
+        "final_cross_track_m": 0.0368102490901947,
+        "max_abs_heading_error_deg": 21.440093994140625,
+        "final_heading_error_deg": 11.249784469604492,
+        "path_length_m": 3.6012864112854004,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 29,
+        "final_directed_progress_m": 0.21134185791015625,
+        "max_abs_cross_track_m": 0.6630213856697083,
+        "final_cross_track_m": -0.47561755776405334,
+        "max_abs_heading_error_deg": 22.494293212890625,
+        "final_heading_error_deg": 16.019695281982422,
+        "path_length_m": 4.569454193115234,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 30,
+        "final_directed_progress_m": 0.247314453125,
+        "max_abs_cross_track_m": 0.14945413172245026,
+        "final_cross_track_m": 0.019067736342549324,
+        "max_abs_heading_error_deg": 31.281179428100586,
+        "final_heading_error_deg": 31.11545181274414,
+        "path_length_m": 1.5351977348327637,
+        "final_ground_change_m": 1.9073486328125e-06,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 31,
+        "final_directed_progress_m": 0.1303253173828125,
+        "max_abs_cross_track_m": 1.1873035430908203,
+        "final_cross_track_m": -1.1873035430908203,
+        "max_abs_heading_error_deg": 25.498567581176758,
+        "final_heading_error_deg": -3.34535813331604,
+        "path_length_m": 3.5637059211730957,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      }
+    ],
+    "directed_stair_success_count": 0,
+    "full_flight_success_count": 0,
+    "corridor_kept_count": 23,
+    "mean_final_directed_progress_m": 0.21325073391199112,
+    "mean_max_abs_cross_track_m": 0.4201749390922487,
+    "mean_max_abs_heading_error_deg": 25.952680617570877,
+    "criteria": {
+      "min_forward_m": 2.1,
+      "max_cross_track_m": 0.6,
+      "max_heading_error_deg": 60,
+      "ground_height_tolerance_m": 0.02,
+      "full_forward_m": 3.6
+    }
+  },
+  "trajectory_path": "/home/shanghun1404/v14_leg_collision/results/direction/direction165_soft_stairs_up_seed42.npz"
+}

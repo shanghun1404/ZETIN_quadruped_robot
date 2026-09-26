@@ -1,0 +1,38 @@
+[
+  {
+    "configuration": "fixed_baseline",
+    "seeds": [
+      42,
+      43
+    ],
+    "survived": 48,
+    "total": 64,
+    "directed_stairs": 0,
+    "full_flight": 0,
+    "mean_progress_m": -0.11126010864973068,
+    "mean_max_cross_track_m": 1.8328182771801949,
+    "mean_max_heading_deg": 155.32306438684464,
+    "live_env_frames": 35641,
+    "negative_gap_frame_fraction": 0.0027215846917875482,
+    "gap_below_minus_2mm_frame_fraction": 0.0007856120759799108,
+    "minimum_gap_m": -0.00807329551489093
+  },
+  {
+    "configuration": "fixed_heading",
+    "seeds": [
+      42,
+      43
+    ],
+    "survived": 49,
+    "total": 64,
+    "directed_stairs": 0,
+    "full_flight": 0,
+    "mean_progress_m": 2.0976685732603073,
+    "mean_max_cross_track_m": 2.278705257922411,
+    "mean_max_heading_deg": 66.15164017677307,
+    "live_env_frames": 36054,
+    "negative_gap_frame_fraction": 0.006628945470682865,
+    "gap_below_minus_2mm_frame_fraction": 0.002468519443057636,
+    "minimum_gap_m": -0.01615818449828376
+  }
+]
