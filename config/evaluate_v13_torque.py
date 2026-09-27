@@ -44,6 +44,8 @@ parser.add_argument("--filter-leg-terrain", action="store_true", help="Filter V1
 parser.add_argument("--control", choices=("isaaclab", "ros2"), default="isaaclab",
                     help="ros2: policy, LPF and torque guard run as ROS2 nodes; PhysX joint drives do PD")
 parser.add_argument("--ros2-namespace", default="/v14")
+parser.add_argument("--joint-drive", choices=("dcmotor", "physx"), default="dcmotor",
+                    help="physx: in-process V13 LPF/guard on PhysX joint-drive PD, the V15 and ROS2 plant")
 AppLauncher.add_app_launcher_args(parser)
 args_cli = parser.parse_args()
 if args_cli.trajectory_output and args_cli.protocol != "fixed_v2":
@@ -103,6 +105,8 @@ def main() -> None:
         or args_cli.residual_checkpoint or args_cli.heading_control
     ):
         raise ValueError("ros2 control drives one v13-variant robot; the guard is a ROS2 node parameter")
+    if args_cli.joint_drive == "physx" and (args_cli.control != "isaaclab" or args_cli.effort_guard_fraction is None):
+        raise ValueError("physx joint drives are evaluated in-process with the torque guard")
     residual_manifest = None
     if args_cli.residual_checkpoint:
         from v14_residual_policy import load_residual_manifest
@@ -145,6 +149,10 @@ def main() -> None:
             asset_name="robot", namespace=args_cli.ros2_namespace
         )
         implicit_joint_drives(env_cfg.scene.robot)
+    if args_cli.joint_drive == "physx":
+        from v15_env_cfg import use_physx_joint_drives
+
+        use_physx_joint_drives(env_cfg, max_delay_steps=0, guard_fraction=args_cli.effort_guard_fraction)
     env_cfg.seed = args_cli.seed
     env_cfg.episode_length_s = args_cli.seconds + args_cli.warmup_seconds + 10.0
     env_cfg.observations.policy.enable_corruption = False
@@ -403,6 +411,7 @@ def main() -> None:
                 "command_forward_m_s": args_cli.forward_speed,
                 "effort_guard_fraction": args_cli.effort_guard_fraction,
                 "control": args_cli.control,
+                "joint_drive": "physx" if args_cli.control == "ros2" else args_cli.joint_drive,
                 "ros2_namespace": args_cli.ros2_namespace if args_cli.control == "ros2" else None,
                 "scenario": args_cli.scenario,
                 "protocol": args_cli.protocol,

@@ -10,7 +10,7 @@ import sys
 import pytest
 
 
-def setup_evaluator(scenario, heading, monkeypatch, control="isaaclab"):
+def setup_evaluator(scenario, heading, monkeypatch, control="isaaclab", **overrides):
     source = ast.parse((Path(__file__).parents[1]/"evaluate_v13_torque.py").read_text())
     main = next(n for n in source.body if isinstance(n, ast.FunctionDef) and n.name == "main")
     def assigns(node, name):
@@ -34,7 +34,8 @@ def setup_evaluator(scenario, heading, monkeypatch, control="isaaclab"):
     args=NS(variant="v13",num_envs=32,protocol="fixed_v2",usd_path="robot.usda",seed=42,
             enable_self_collisions=False,filter_leg_terrain=False,effort_guard_fraction=None,
             seconds=12.,warmup_seconds=0.,scenario=scenario,terrain_level=5,heading_control=heading,forward_speed=.5,
-            control=control,ros2_namespace="/v14")
+            control=control,ros2_namespace="/v14",joint_drive="dcmotor")
+    vars(args).update(overrides)
     scope=dict(copy=copy,args_cli=args,GuideV13TorqueEnvCfg=env_type,GuideV2ScannerTerrainEnvCfg=env_type,
                STAIRS_UP_EVAL_TERRAIN_CFG=terrain,STAIRS_DOWN_EVAL_TERRAIN_CFG=terrain)
     exec(compile(module,"<evaluator-config>","exec"),scope)
@@ -79,3 +80,11 @@ def test_ros2_control_swaps_action_term_and_joint_drives(monkeypatch):
     cfg, _ = setup_evaluator("flat", False, monkeypatch, control="ros2")
     assert cfg.actions.joint_pos.ros2 == {"asset_name": "robot", "namespace": "/v14"}
     assert calls == [cfg.scene.robot]
+
+
+def test_physx_joint_drive_uses_v15_guarded_action_without_delay(monkeypatch):
+    calls = []
+    monkeypatch.setitem(sys.modules, "v15_env_cfg", NS(
+        use_physx_joint_drives=lambda cfg, **kwargs: calls.append(kwargs)))
+    setup_evaluator("flat", False, monkeypatch, joint_drive="physx", effort_guard_fraction=.99)
+    assert calls == [{"max_delay_steps": 0, "guard_fraction": .99}]

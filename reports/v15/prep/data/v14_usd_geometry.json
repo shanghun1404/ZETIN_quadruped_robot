@@ -1,0 +1,1829 @@
+{
+  "usd_path": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+  "trunk": "/quadruped/base/base",
+  "trunk_world_translation": [
+    0.0,
+    0.0,
+    0.5519999861717224
+  ],
+  "bodies": {
+    "/quadruped/base/base": {
+      "bound_in_trunk": {
+        "min": [
+          -0.14580000997688636,
+          -0.2500000118743628,
+          0.0
+        ],
+        "max": [
+          0.14580000997688636,
+          0.2500000118743628,
+          0.013000000617466867
+        ]
+      },
+      "origin_in_trunk": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/body_front": {
+      "bound_in_trunk": {
+        "min": [
+          -0.20000000949949026,
+          0.2500000118743628,
+          0.0
+        ],
+        "max": [
+          0.20000000949949026,
+          0.26000001234933734,
+          0.1500000071246177
+        ]
+      },
+      "origin_in_trunk": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/FL_haa_motor": {
+      "bound_in_trunk": {
+        "min": [
+          -0.14447889688277948,
+          0.20575000193462153,
+          0.03049998596543435
+        ],
+        "max": [
+          -0.05552110437746841,
+          0.25600000736626394,
+          0.11949999019270763
+        ]
+      },
+      "origin_in_trunk": [
+        -0.10000000149011612,
+        0.2057500034570694,
+        0.07499998807907104
+      ],
+      "active": true
+    },
+    "/quadruped/base/FL_hip": {
+      "bound_in_trunk": {
+        "min": [
+          -0.1250000208383426,
+          0.25600002706050873,
+          0.03000000142492354
+        ],
+        "max": [
+          -0.07500001846347004,
+          0.3000000291503966,
+          0.12000000569969416
+        ]
+      },
+      "origin_in_trunk": [
+        -1.4901161193847656e-08,
+        1.4901161193847656e-08,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/FL_hfe_motor": {
+      "bound_in_trunk": {
+        "min": [
+          -0.1306999905095351,
+          0.2660084790187794,
+          0.02599998575169593
+        ],
+        "max": [
+          -0.06899997920340145,
+          0.3639952673261637,
+          0.12399999040644616
+        ]
+      },
+      "origin_in_trunk": [
+        -0.11799998581409454,
+        0.3150039315223694,
+        0.07499998807907104
+      ],
+      "active": true
+    },
+    "/quadruped/base/FL_thigh": {
+      "bound_in_trunk": {
+        "min": [
+          -0.19570002114465446,
+          0.26599991404618706,
+          0.02599600152466075
+        ],
+        "max": [
+          -0.12570002544922776,
+          0.3640079143067858,
+          0.12400400369260822
+        ]
+      },
+      "origin_in_trunk": [
+        -1.4901161193847656e-08,
+        0.6300039291381836,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/FL_thigh_cover": {
+      "bound_in_trunk": {
+        "min": [
+          -0.2007000213821435,
+          0.26602185618590113,
+          0.026001485152240544
+        ],
+        "max": [
+          -0.18070002043219446,
+          0.3640079143067858,
+          0.1239985257870746
+        ]
+      },
+      "origin_in_trunk": [
+        -1.4901162970204496e-08,
+        0.6300039291381836,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/FL_thigh_compro1": {
+      "bound_in_trunk": {
+        "min": [
+          -0.22570005484025313,
+          0.29547902125705655,
+          0.039999972265745254
+        ],
+        "max": [
+          -0.20070005023894497,
+          0.33452916567826757,
+          0.09452560008445543
+        ]
+      },
+      "origin_in_trunk": [
+        -0.013875961303710938,
+        -0.03805243968963623,
+        0.01151818037033081
+      ],
+      "active": true
+    },
+    "/quadruped/base/FL_thigh_profile": {
+      "bound_in_trunk": {
+        "min": [
+          -0.22320009076962735,
+          0.305004049206718,
+          -0.1950001237727063
+        ],
+        "max": [
+          -0.20320003736724007,
+          0.32500408139021597,
+          0.054999893906425346
+        ]
+      },
+      "origin_in_trunk": [
+        -0.4532000422477722,
+        0.22500404715538025,
+        0.0549999475479126
+      ],
+      "active": true
+    },
+    "/quadruped/base/FL_thigh_compro2": {
+      "bound_in_trunk": {
+        "min": [
+          -0.22570017192381583,
+          0.29547877446809523,
+          -0.23452573543502547
+        ],
+        "max": [
+          -0.20070016732250714,
+          0.3345289236560881,
+          -0.18000010420244345
+        ]
+      },
+      "origin_in_trunk": [
+        -0.013876140117645264,
+        0.6680604219436646,
+        -0.1515183448791504
+      ],
+      "active": true
+    },
+    "/quadruped/base/FL_calf": {
+      "bound_in_trunk": {
+        "min": [
+          -0.20070016217091272,
+          0.26600856842574644,
+          -0.2640000953106213
+        ],
+        "max": [
+          -0.13900015086477774,
+          0.36399535673313127,
+          -0.16600009065587062
+        ]
+      },
+      "origin_in_trunk": [
+        -0.1880001574754715,
+        0.31500402092933655,
+        -0.21500009298324585
+      ],
+      "active": true
+    },
+    "/quadruped/base/FL_knee_bracket": {
+      "bound_in_trunk": {
+        "min": [
+          -0.19550017663533323,
+          0.2600174014176763,
+          -0.28500005602836276
+        ],
+        "max": [
+          -0.1475001647412861,
+          0.36999067743898184,
+          -0.16001342442042954
+        ]
+      },
+      "origin_in_trunk": [
+        0.3199998736381531,
+        0.07500407099723816,
+        -0.2850000560283661
+      ],
+      "active": true
+    },
+    "/quadruped/base/FL_calf_profile": {
+      "bound_in_trunk": {
+        "min": [
+          -0.17985016906628862,
+          0.3050040194043957,
+          -0.5200001416540996
+        ],
+        "max": [
+          -0.15985011566390134,
+          0.3250040515878937,
+          -0.2700001239749679
+        ]
+      },
+      "origin_in_trunk": [
+        -0.4098501205444336,
+        0.22500401735305786,
+        -0.27000007033348083
+      ],
+      "active": true
+    },
+    "/quadruped/base/FL_foot": {
+      "bound_in_trunk": {
+        "min": [
+          -0.19009377526919954,
+          0.2947361201426612,
+          -0.5502703540750369
+        ],
+        "max": [
+          -0.15009569299745582,
+          0.3347710036370372,
+          -0.5052002067246748
+        ]
+      },
+      "origin_in_trunk": [
+        -0.3497500419616699,
+        0.005104124546051025,
+        0.014999926090240479
+      ],
+      "active": true
+    },
+    "/quadruped/base/FR_haa_motor": {
+      "bound_in_trunk": {
+        "min": [
+          0.05552110609745271,
+          0.20224999992438347,
+          0.030499981572439716
+        ],
+        "max": [
+          0.14447889688277954,
+          0.25250001009175793,
+          0.11949999019270752
+        ]
+      },
+      "origin_in_trunk": [
+        0.10000000149011612,
+        0.20225000381469727,
+        0.07499998807907104
+      ],
+      "active": true
+    },
+    "/quadruped/base/FR_hip": {
+      "bound_in_trunk": {
+        "min": [
+          0.07499999611172828,
+          0.2525000169274013,
+          0.030000003836256894
+        ],
+        "max": [
+          0.12499999848660089,
+          0.2965000268853398,
+          0.12000001195762977
+        ]
+      },
+      "origin_in_trunk": [
+        -7.450580596923828e-09,
+        -0.0034999847412109375,
+        0.15000003576278687
+      ],
+      "active": true
+    },
+    "/quadruped/base/FR_hfe_motor": {
+      "bound_in_trunk": {
+        "min": [
+          0.06899998665398192,
+          0.26250843038920735,
+          0.02599998146873761
+        ],
+        "max": [
+          0.130699997960116,
+          0.3604952272640241,
+          0.12399999468976441
+        ]
+      },
+      "origin_in_trunk": [
+        0.11799999326467514,
+        0.31150388717651367,
+        0.07499998807907104
+      ],
+      "active": true
+    },
+    "/quadruped/base/FR_thigh": {
+      "bound_in_trunk": {
+        "min": [
+          0.12570000309748477,
+          0.2624999043920974,
+          0.025996001524659307
+        ],
+        "max": [
+          0.1956999987929124,
+          0.3605079046526969,
+          0.12400400369260811
+        ]
+      },
+      "origin_in_trunk": [
+        -7.450580596923828e-09,
+        -0.003496110439300537,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/FR_thigh_cover": {
+      "bound_in_trunk": {
+        "min": [
+          0.1806999980804499,
+          0.26249990439209814,
+          0.026001485152239878
+        ],
+        "max": [
+          0.20069999903040034,
+          0.36048596251298365,
+          0.12399852578707482
+        ]
+      },
+      "origin_in_trunk": [
+        -7.450578820566989e-09,
+        -0.003496110439300537,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/FR_thigh_compro1": {
+      "bound_in_trunk": {
+        "min": [
+          0.20093027270271369,
+          0.29210791268317715,
+          0.039999972301009934
+        ],
+        "max": [
+          0.22595723338209436,
+          0.3311753089602823,
+          0.09452560012412536
+        ]
+      },
+      "origin_in_trunk": [
+        0.013875942677259445,
+        0.6645604372024536,
+        0.01151818037033081
+      ],
+      "active": true
+    },
+    "/quadruped/base/FR_thigh_profile": {
+      "bound_in_trunk": {
+        "min": [
+          0.2031999895535916,
+          0.3015040565188821,
+          -0.1950001150304282
+        ],
+        "max": [
+          0.22320004295598014,
+          0.3215040668466854,
+          0.05499990090024809
+        ]
+      },
+      "origin_in_trunk": [
+        -0.026799961924552917,
+        0.22150403261184692,
+        0.0549999475479126
+      ],
+      "active": true
+    },
+    "/quadruped/base/FR_thigh_compro2": {
+      "bound_in_trunk": {
+        "min": [
+          0.20070002853127678,
+          0.29197908483641694,
+          -0.2345256453839873
+        ],
+        "max": [
+          0.2257000297187132,
+          0.33102922707205873,
+          -0.18000001756527706
+        ]
+      },
+      "origin_in_trunk": [
+        0.013875968754291534,
+        -0.04155239462852478,
+        -0.15151822566986084
+      ],
+      "active": true
+    },
+    "/quadruped/base/FR_calf": {
+      "bound_in_trunk": {
+        "min": [
+          0.13899996142747825,
+          0.26246496587439294,
+          -0.26404785945598325
+        ],
+        "max": [
+          0.200699964178381,
+          0.36054740518420747,
+          -0.16595221132575888
+        ]
+      },
+      "origin_in_trunk": [
+        0.18799996376037598,
+        0.3115041255950928,
+        -0.21500003337860107
+      ],
+      "active": true
+    },
+    "/quadruped/base/FR_knee_bracket": {
+      "bound_in_trunk": {
+        "min": [
+          0.14750020818448553,
+          0.25651750931118117,
+          -0.2848193491177794
+        ],
+        "max": [
+          0.1955002104766248,
+          0.36661278594019703,
+          -0.15972538134975234
+        ]
+      },
+      "origin_in_trunk": [
+        -0.3199998140335083,
+        0.5515040159225464,
+        -0.2850000262260437
+      ],
+      "active": true
+    },
+    "/quadruped/base/FR_calf_profile": {
+      "bound_in_trunk": {
+        "min": [
+          0.1598498339839343,
+          0.3015042044687875,
+          -0.5200000428687733
+        ],
+        "max": [
+          0.17984987474977993,
+          0.3215042674075744,
+          -0.2700000238418606
+        ]
+      },
+      "origin_in_trunk": [
+        0.2598499059677124,
+        0.07150426506996155,
+        -0.26999998092651367
+      ],
+      "active": true
+    },
+    "/quadruped/base/FR_foot": {
+      "bound_in_trunk": {
+        "min": [
+          0.14989549665099308,
+          0.2891939181706347,
+          -0.5500428461101204
+        ],
+        "max": [
+          0.1898659727926528,
+          0.3291701217279553,
+          -0.5050002977012733
+        ]
+      },
+      "origin_in_trunk": [
+        0.34974995255470276,
+        0.6190820932388306,
+        0.014999687671661377
+      ],
+      "active": true
+    },
+    "/quadruped/base/body_right": {
+      "bound_in_trunk": {
+        "min": [
+          0.12000000569969416,
+          -0.2500000118743628,
+          0.0
+        ],
+        "max": [
+          0.20000000949949026,
+          0.2500000118743628,
+          0.1500000071246177
+        ]
+      },
+      "origin_in_trunk": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/body_head": {
+      "bound_in_trunk": {
+        "min": [
+          -0.13000000617466867,
+          -0.2500000118743628,
+          0.14500000688713044
+        ],
+        "max": [
+          0.13000000617466867,
+          0.2500000118743628,
+          0.1500000071246177
+        ]
+      },
+      "origin_in_trunk": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/body_left": {
+      "bound_in_trunk": {
+        "min": [
+          -0.20000000949949026,
+          -0.2500000118743628,
+          0.0
+        ],
+        "max": [
+          -0.12000000569969416,
+          0.2500000118743628,
+          0.1500000071246177
+        ]
+      },
+      "origin_in_trunk": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/body_back": {
+      "bound_in_trunk": {
+        "min": [
+          -0.20000000949949026,
+          -0.26000001234933734,
+          0.0
+        ],
+        "max": [
+          0.20000000949949026,
+          -0.2500000118743628,
+          0.1500000071246177
+        ]
+      },
+      "origin_in_trunk": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/RR_haa_motor": {
+      "bound_in_trunk": {
+        "min": [
+          0.05552110609745277,
+          -0.256000007366264,
+          0.030499985965434462
+        ],
+        "max": [
+          0.14447889860276378,
+          -0.20575000193462167,
+          0.11949999019270763
+        ]
+      },
+      "origin_in_trunk": [
+        0.10000000149011612,
+        -0.2057500034570694,
+        0.07499998807907104
+      ],
+      "active": true
+    },
+    "/quadruped/base/RR_hip": {
+      "bound_in_trunk": {
+        "min": [
+          0.07499998866114758,
+          -0.3000000291503967,
+          0.030000001424923317
+        ],
+        "max": [
+          0.12499999103602018,
+          -0.25600002706050873,
+          0.12000000569969393
+        ]
+      },
+      "origin_in_trunk": [
+        -1.4901161193847656e-08,
+        -1.4901161193847656e-08,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/RR_hfe_motor": {
+      "bound_in_trunk": {
+        "min": [
+          0.06896616214767246,
+          -0.3640291471303562,
+          0.025999985750698285
+        ],
+        "max": [
+          0.13073381337530668,
+          -0.2659997816338326,
+          0.12399999040691667
+        ]
+      },
+      "origin_in_trunk": [
+        0.11799998581409454,
+        -0.31500399112701416,
+        0.07499998807907104
+      ],
+      "active": true
+    },
+    "/quadruped/base/RR_thigh": {
+      "bound_in_trunk": {
+        "min": [
+          0.12569999160707,
+          -0.3640078923287042,
+          0.02599600152466064
+        ],
+        "max": [
+          0.19570000443875746,
+          -0.2659998798289198,
+          0.12400400369260822
+        ]
+      },
+      "origin_in_trunk": [
+        4.470348358154297e-08,
+        -0.6300039291381836,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/RR_thigh_cover": {
+      "bound_in_trunk": {
+        "min": [
+          0.18069998659386893,
+          -0.3640078827121978,
+          0.026001485152240655
+        ],
+        "max": [
+          0.20070000467624427,
+          -0.2660218210944033,
+          0.12399852578707471
+        ]
+      },
+      "origin_in_trunk": [
+        4.470348713425665e-08,
+        -0.6300039291381836,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/RR_thigh_compro1": {
+      "bound_in_trunk": {
+        "min": [
+          0.20093020844884787,
+          -0.33439990601746505,
+          0.0399999722646992
+        ],
+        "max": [
+          0.22595716912348413,
+          -0.29533250974331277,
+          0.09452560008352318
+        ]
+      },
+      "origin_in_trunk": [
+        0.013875878416001797,
+        0.03805261850357056,
+        0.01151818037033081
+      ],
+      "active": true
+    },
+    "/quadruped/base/RR_thigh_profile": {
+      "bound_in_trunk": {
+        "min": [
+          0.20320004017899454,
+          -0.3250037905965429,
+          -0.19499998585362233
+        ],
+        "max": [
+          0.22320004637431445,
+          -0.3050037549161355,
+          0.055000027769196325
+        ]
+      },
+      "origin_in_trunk": [
+        -0.026799991726875305,
+        -0.22500383853912354,
+        -0.19499999284744263
+      ],
+      "active": true
+    },
+    "/quadruped/base/RR_thigh_compro2": {
+      "bound_in_trunk": {
+        "min": [
+          0.2007000202218732,
+          -0.334528841132792,
+          -0.23452561835146052
+        ],
+        "max": [
+          0.22570003165092548,
+          -0.29547868757366164,
+          -0.17999998711887877
+        ]
+      },
+      "origin_in_trunk": [
+        0.013876058161258698,
+        -0.6680603623390198,
+        -0.15151816606521606
+      ],
+      "active": true
+    },
+    "/quadruped/base/RR_calf": {
+      "bound_in_trunk": {
+        "min": [
+          0.13896015561763042,
+          -0.3640614488408186,
+          -0.2640265125092018
+        ],
+        "max": [
+          0.2007397786239149,
+          -0.26597149183972035,
+          -0.16597342928321918
+        ]
+      },
+      "origin_in_trunk": [
+        0.18799996376037598,
+        -0.31500378251075745,
+        -0.2149999737739563
+      ],
+      "active": true
+    },
+    "/quadruped/base/RR_knee_bracket": {
+      "bound_in_trunk": {
+        "min": [
+          0.14765029915767194,
+          -0.36961069607124863,
+          -0.28489988823146156
+        ],
+        "max": [
+          0.19573967177659074,
+          -0.2595307691583762,
+          -0.15985369195332894
+        ]
+      },
+      "origin_in_trunk": [
+        -0.3199998736381531,
+        -0.07500405609607697,
+        -0.2849999964237213
+      ],
+      "active": true
+    },
+    "/quadruped/base/RR_calf_profile": {
+      "bound_in_trunk": {
+        "min": [
+          0.15985007377216726,
+          -0.3250039098058273,
+          -0.519999825834604
+        ],
+        "max": [
+          0.17985007996749308,
+          -0.3050038304140319,
+          -0.2699998087148803
+        ]
+      },
+      "origin_in_trunk": [
+        -0.07014995813369751,
+        -0.22500395774841309,
+        -0.5199998468160629
+      ],
+      "active": true
+    },
+    "/quadruped/base/RR_foot": {
+      "bound_in_trunk": {
+        "min": [
+          0.14965537181789865,
+          -0.33536454254815323,
+          -0.5503103711409986
+        ],
+        "max": [
+          0.18964750708778932,
+          -0.2953301121687805,
+          -0.5052353509507511
+        ]
+      },
+      "origin_in_trunk": [
+        -0.010049998760223389,
+        -0.6249037981033325,
+        0.015000104904174805
+      ],
+      "active": true
+    },
+    "/quadruped/base/RL_haa_motor": {
+      "bound_in_trunk": {
+        "min": [
+          -0.14447889688277948,
+          -0.256000007366264,
+          0.03049998596543435
+        ],
+        "max": [
+          -0.055521104377468385,
+          -0.2057500019346216,
+          0.11949999019270774
+        ]
+      },
+      "origin_in_trunk": [
+        -0.10000000149011612,
+        -0.2057500034570694,
+        0.07499998807907104
+      ],
+      "active": true
+    },
+    "/quadruped/base/RL_hip": {
+      "bound_in_trunk": {
+        "min": [
+          -0.12500001431908464,
+          -0.3000000291503967,
+          0.030000001424923317
+        ],
+        "max": [
+          -0.07500001194421206,
+          -0.25600002706050873,
+          0.12000000569969393
+        ]
+      },
+      "origin_in_trunk": [
+        -0.20000001788139343,
+        -1.4901161193847656e-08,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/RL_hfe_motor": {
+      "bound_in_trunk": {
+        "min": [
+          -0.13070001602890108,
+          -0.3639994425203366,
+          0.025999985751696153
+        ],
+        "max": [
+          -0.06900001328904043,
+          -0.26601265960693526,
+          0.12399999040644638
+        ]
+      },
+      "origin_in_trunk": [
+        -0.11800001561641693,
+        -0.31500399112701416,
+        0.07499998807907104
+      ],
+      "active": true
+    },
+    "/quadruped/base/RL_thigh": {
+      "bound_in_trunk": {
+        "min": [
+          -0.19595133160744985,
+          -0.3639211216974651,
+          0.025996001519292378
+        ],
+        "max": [
+          -0.12588367475019646,
+          -0.2658648074324807,
+          0.12400400368968167
+        ]
+      },
+      "origin_in_trunk": [
+        -1.4901161193847656e-08,
+        -3.993511199951172e-06,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/RL_thigh_cover": {
+      "bound_in_trunk": {
+        "min": [
+          -0.20095131550005615,
+          -0.3638612002011465,
+          0.02600148514833267
+        ],
+        "max": [
+          -0.1808836566199338,
+          -0.2658613547627443,
+          0.1239985257838927
+        ]
+      },
+      "origin_in_trunk": [
+        -1.4901162970204496e-08,
+        -3.993511199951172e-06,
+        0.0
+      ],
+      "active": true
+    },
+    "/quadruped/base/RL_thigh_compro1": {
+      "bound_in_trunk": {
+        "min": [
+          -0.2257000226249569,
+          -0.3345288502087276,
+          0.039999972265745254
+        ],
+        "max": [
+          -0.20070001460977707,
+          -0.2954787036019475,
+          0.09452560008445554
+        ]
+      },
+      "origin_in_trunk": [
+        -0.013876019977033138,
+        -0.6680603623390198,
+        0.01151818037033081
+      ],
+      "active": true
+    },
+    "/quadruped/base/RL_thigh_profile": {
+      "bound_in_trunk": {
+        "min": [
+          -0.2232000382373805,
+          -0.3250038180520145,
+          -0.19500012377270548
+        ],
+        "max": [
+          -0.20319998308653558,
+          -0.3050037841200657,
+          0.054999893906426456
+        ]
+      },
+      "origin_in_trunk": [
+        -0.45320001244544983,
+        -0.40500375628471375,
+        0.0549999475479126
+      ],
+      "active": true
+    },
+    "/quadruped/base/RL_thigh_compro2": {
+      "bound_in_trunk": {
+        "min": [
+          -0.22570014701701827,
+          -0.3345290671953538,
+          -0.23452573543503002
+        ],
+        "max": [
+          -0.20070013900183795,
+          -0.29547891582179225,
+          -0.18000010420244822
+        ]
+      },
+      "origin_in_trunk": [
+        -0.013876020908355713,
+        0.038052529096603394,
+        -0.1515183448791504
+      ],
+      "active": true
+    },
+    "/quadruped/base/RL_calf": {
+      "bound_in_trunk": {
+        "min": [
+          -0.2007001366522679,
+          -0.36399927227383244,
+          -0.26400009531062135
+        ],
+        "max": [
+          -0.13900011677985874,
+          -0.2660124785724634,
+          -0.16600009065587018
+        ]
+      },
+      "origin_in_trunk": [
+        -0.1880001276731491,
+        -0.31500381231307983,
+        -0.21500009298324585
+      ],
+      "active": true
+    },
+    "/quadruped/base/RL_knee_bracket": {
+      "bound_in_trunk": {
+        "min": [
+          -0.19550017810265696,
+          -0.36999042422729567,
+          -0.28500005602836687
+        ],
+        "max": [
+          -0.14750015659444363,
+          -0.26001714400969794,
+          -0.16001342442043298
+        ]
+      },
+      "origin_in_trunk": [
+        0.3199998140335083,
+        -0.5550038814544678,
+        -0.2850000560283661
+      ],
+      "active": true
+    },
+    "/quadruped/base/RL_calf_profile": {
+      "bound_in_trunk": {
+        "min": [
+          -0.17985020594101053,
+          -0.32500378824968723,
+          -0.5200001416540987
+        ],
+        "max": [
+          -0.159850150790166,
+          -0.3050037543177388,
+          -0.2700001239749668
+        ]
+      },
+      "origin_in_trunk": [
+        -0.40985018014907837,
+        -0.40500372648239136,
+        -0.27000007033348083
+      ],
+      "active": true
+    },
+    "/quadruped/base/RL_foot": {
+      "bound_in_trunk": {
+        "min": [
+          -0.18961312257913834,
+          -0.33541318581468454,
+          -0.550186630550091
+        ],
+        "max": [
+          -0.1496077353269035,
+          -0.29538242240162443,
+          -0.5051266246951485
+        ]
+      },
+      "origin_in_trunk": [
+        -0.3497501611709595,
+        -0.6249036192893982,
+        0.014999926090240479
+      ],
+      "active": true
+    }
+  },
+  "joints": [
+    {
+      "path": "/quadruped/joints/body_front",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/base"
+      ],
+      "body1": [
+        "/quadruped/base/body_front"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FL_haa_motor",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/body_front"
+      ],
+      "body1": [
+        "/quadruped/base/FL_haa_motor"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FL_hfe_motor",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FL_hip"
+      ],
+      "body1": [
+        "/quadruped/base/FL_hfe_motor"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FL_thigh_cover",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FL_thigh"
+      ],
+      "body1": [
+        "/quadruped/base/FL_thigh_cover"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FL_thigh_compro1",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FL_thigh_cover"
+      ],
+      "body1": [
+        "/quadruped/base/FL_thigh_compro1"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FL_thigh_profile",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FL_thigh_compro1"
+      ],
+      "body1": [
+        "/quadruped/base/FL_thigh_profile"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FL_thigh_compro2",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FL_thigh_profile"
+      ],
+      "body1": [
+        "/quadruped/base/FL_thigh_compro2"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FL_knee_bracket",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FL_calf"
+      ],
+      "body1": [
+        "/quadruped/base/FL_knee_bracket"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FL_calf_profile",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FL_knee_bracket"
+      ],
+      "body1": [
+        "/quadruped/base/FL_calf_profile"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FL_foot",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FL_calf_profile"
+      ],
+      "body1": [
+        "/quadruped/base/FL_foot"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FR_haa_motor",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/body_front"
+      ],
+      "body1": [
+        "/quadruped/base/FR_haa_motor"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FR_hfe_motor",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FR_hip"
+      ],
+      "body1": [
+        "/quadruped/base/FR_hfe_motor"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FR_thigh_cover",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FR_thigh"
+      ],
+      "body1": [
+        "/quadruped/base/FR_thigh_cover"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FR_thigh_compro1",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FR_thigh_cover"
+      ],
+      "body1": [
+        "/quadruped/base/FR_thigh_compro1"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FR_thigh_profile",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FR_thigh_compro1"
+      ],
+      "body1": [
+        "/quadruped/base/FR_thigh_profile"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FR_thigh_compro2",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FR_thigh_profile"
+      ],
+      "body1": [
+        "/quadruped/base/FR_thigh_compro2"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FR_knee_bracket",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FR_calf"
+      ],
+      "body1": [
+        "/quadruped/base/FR_knee_bracket"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FR_calf_profile",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FR_knee_bracket"
+      ],
+      "body1": [
+        "/quadruped/base/FR_calf_profile"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FR_foot",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/FR_calf_profile"
+      ],
+      "body1": [
+        "/quadruped/base/FR_foot"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/body_right",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/base"
+      ],
+      "body1": [
+        "/quadruped/base/body_right"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/body_head",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/body_right"
+      ],
+      "body1": [
+        "/quadruped/base/body_head"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/body_left",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/body_head"
+      ],
+      "body1": [
+        "/quadruped/base/body_left"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/body_back",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/body_head"
+      ],
+      "body1": [
+        "/quadruped/base/body_back"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RR_haa_motor",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/body_back"
+      ],
+      "body1": [
+        "/quadruped/base/RR_haa_motor"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RR_hfe_motor",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RR_hip"
+      ],
+      "body1": [
+        "/quadruped/base/RR_hfe_motor"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RR_thigh_cover",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RR_thigh"
+      ],
+      "body1": [
+        "/quadruped/base/RR_thigh_cover"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RR_thigh_compro1",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RR_thigh_cover"
+      ],
+      "body1": [
+        "/quadruped/base/RR_thigh_compro1"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RR_thigh_profile",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RR_thigh_compro1"
+      ],
+      "body1": [
+        "/quadruped/base/RR_thigh_profile"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RR_thigh_compro2",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RR_thigh_profile"
+      ],
+      "body1": [
+        "/quadruped/base/RR_thigh_compro2"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RR_knee_bracket",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RR_calf"
+      ],
+      "body1": [
+        "/quadruped/base/RR_knee_bracket"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RR_calf_profile",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RR_knee_bracket"
+      ],
+      "body1": [
+        "/quadruped/base/RR_calf_profile"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RR_foot",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RR_calf_profile"
+      ],
+      "body1": [
+        "/quadruped/base/RR_foot"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RL_haa_motor",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/body_back"
+      ],
+      "body1": [
+        "/quadruped/base/RL_haa_motor"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RL_hfe_motor",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RL_hip"
+      ],
+      "body1": [
+        "/quadruped/base/RL_hfe_motor"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RL_thigh_cover",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RL_thigh"
+      ],
+      "body1": [
+        "/quadruped/base/RL_thigh_cover"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RL_thigh_compro1",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RL_thigh_cover"
+      ],
+      "body1": [
+        "/quadruped/base/RL_thigh_compro1"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RL_thigh_profile",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RL_thigh_compro1"
+      ],
+      "body1": [
+        "/quadruped/base/RL_thigh_profile"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RL_thigh_compro2",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RL_thigh_profile"
+      ],
+      "body1": [
+        "/quadruped/base/RL_thigh_compro2"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RL_knee_bracket",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RL_calf"
+      ],
+      "body1": [
+        "/quadruped/base/RL_knee_bracket"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RL_calf_profile",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RL_knee_bracket"
+      ],
+      "body1": [
+        "/quadruped/base/RL_calf_profile"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RL_foot",
+      "type": "PhysicsFixedJoint",
+      "body0": [
+        "/quadruped/base/RL_calf_profile"
+      ],
+      "body1": [
+        "/quadruped/base/RL_foot"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FL_HAA",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/quadruped/base/FL_haa_motor"
+      ],
+      "body1": [
+        "/quadruped/base/FL_hip"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FL_HFE",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/quadruped/base/FL_hfe_motor"
+      ],
+      "body1": [
+        "/quadruped/base/FL_thigh"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FL_KFE",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/quadruped/base/FL_thigh_compro2"
+      ],
+      "body1": [
+        "/quadruped/base/FL_calf"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FR_HAA",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/quadruped/base/FR_haa_motor"
+      ],
+      "body1": [
+        "/quadruped/base/FR_hip"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FR_HFE",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/quadruped/base/FR_hfe_motor"
+      ],
+      "body1": [
+        "/quadruped/base/FR_thigh"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/FR_KFE",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/quadruped/base/FR_thigh_compro2"
+      ],
+      "body1": [
+        "/quadruped/base/FR_calf"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RR_HAA",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/quadruped/base/RR_haa_motor"
+      ],
+      "body1": [
+        "/quadruped/base/RR_hip"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RR_HFE",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/quadruped/base/RR_hfe_motor"
+      ],
+      "body1": [
+        "/quadruped/base/RR_thigh"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RR_KFE",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/quadruped/base/RR_thigh_compro2"
+      ],
+      "body1": [
+        "/quadruped/base/RR_calf"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RL_HAA",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/quadruped/base/RL_haa_motor"
+      ],
+      "body1": [
+        "/quadruped/base/RL_hip"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RL_HFE",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/quadruped/base/RL_hfe_motor"
+      ],
+      "body1": [
+        "/quadruped/base/RL_thigh"
+      ]
+    },
+    {
+      "path": "/quadruped/joints/RL_KFE",
+      "type": "PhysicsRevoluteJoint",
+      "body0": [
+        "/quadruped/base/RL_thigh_compro2"
+      ],
+      "body1": [
+        "/quadruped/base/RL_calf"
+      ]
+    }
+  ],
+  "colliders": [
+    {
+      "path": "/quadruped/base/FL_thigh_profile/v14_leg_collision",
+      "type": "Capsule",
+      "enabled": true,
+      "bound_in_trunk": {
+        "min": [
+          -0.23320010414939057,
+          0.29500404410550074,
+          -0.20500012016514468
+        ],
+        "max": [
+          -0.19320004678624908,
+          0.3350040703124961,
+          0.0649999021732325
+        ]
+      }
+    },
+    {
+      "path": "/quadruped/base/FL_calf_profile/v14_leg_collision",
+      "type": "Capsule",
+      "enabled": true,
+      "bound_in_trunk": {
+        "min": [
+          -0.18985018244605195,
+          0.29500401430317846,
+          -0.530000138046538
+        ],
+        "max": [
+          -0.1498501250829105,
+          0.33500404051017385,
+          -0.26000011570816095
+        ]
+      }
+    },
+    {
+      "path": "/quadruped/base/FL_foot/collisions/foot/foot",
+      "type": "Mesh",
+      "enabled": true,
+      "bound_in_trunk": {
+        "min": [
+          -0.19009377526919954,
+          0.2947361201426612,
+          -0.5502703540750371
+        ],
+        "max": [
+          -0.15009569299745582,
+          0.3347710036370372,
+          -0.505200206724675
+        ]
+      }
+    },
+    {
+      "path": "/quadruped/base/FR_thigh_profile/v14_leg_collision",
+      "type": "Capsule",
+      "enabled": true,
+      "bound_in_trunk": {
+        "min": [
+          0.19319997617382823,
+          0.2915040522918919,
+          -0.20500011054864006
+        ],
+        "max": [
+          0.23320003353697083,
+          0.33150405489473744,
+          0.0649999082928274
+        ]
+      }
+    },
+    {
+      "path": "/quadruped/base/FR_calf_profile/v14_leg_collision",
+      "type": "Capsule",
+      "enabled": true,
+      "bound_in_trunk": {
+        "min": [
+          0.14984984442592614,
+          0.2915041904151334,
+          -0.5300000399351041
+        ],
+        "max": [
+          0.18984988048672852,
+          0.3315042586624566,
+          -0.26000001490116303
+        ]
+      }
+    },
+    {
+      "path": "/quadruped/base/FR_foot/collisions/foot/foot",
+      "type": "Mesh",
+      "enabled": true,
+      "bound_in_trunk": {
+        "min": [
+          0.14989549665099308,
+          0.28919391817063456,
+          -0.5500428461101204
+        ],
+        "max": [
+          0.1898659727926528,
+          0.32917012172795507,
+          -0.5050002977012732
+        ]
+      }
+    },
+    {
+      "path": "/quadruped/base/RR_thigh_profile/v14_leg_collision",
+      "type": "Capsule",
+      "enabled": true,
+      "bound_in_trunk": {
+        "min": [
+          0.19320002707893166,
+          -0.33500378126728175,
+          -0.20499999209226857
+        ],
+        "max": [
+          0.23320003667559638,
+          -0.2950037480664673,
+          0.0650000221334783
+        ]
+      }
+    },
+    {
+      "path": "/quadruped/base/RR_calf_profile/v14_leg_collision",
+      "type": "Capsule",
+      "enabled": true,
+      "bound_in_trunk": {
+        "min": [
+          0.1498500606721041,
+          -0.33500390222502247,
+          -0.5299998338217062
+        ],
+        "max": [
+          0.18985007026877532,
+          -0.2950038218159096,
+          -0.25999981260214516
+        ]
+      }
+    },
+    {
+      "path": "/quadruped/base/RR_foot/collisions/foot/foot",
+      "type": "Mesh",
+      "enabled": true,
+      "bound_in_trunk": {
+        "min": [
+          0.14965537181789865,
+          -0.3353645425481537,
+          -0.5503103711409983
+        ],
+        "max": [
+          0.18964750708778932,
+          -0.29533011216878097,
+          -0.5052353509507508
+        ]
+      }
+    },
+    {
+      "path": "/quadruped/base/RL_thigh_profile/v14_leg_collision",
+      "type": "Capsule",
+      "enabled": true,
+      "bound_in_trunk": {
+        "min": [
+          -0.23320005249137338,
+          -0.33500382402745654,
+          -0.20500012016514377
+        ],
+        "max": [
+          -0.19319999163131957,
+          -0.29500379432355484,
+          0.064999902173234
+        ]
+      }
+    },
+    {
+      "path": "/quadruped/base/RL_calf_profile/v14_leg_collision",
+      "type": "Capsule",
+      "enabled": true,
+      "bound_in_trunk": {
+        "min": [
+          -0.1898502201950033,
+          -0.33500379422512894,
+          -0.5300001380465372
+        ],
+        "max": [
+          -0.14985015933495033,
+          -0.295003764521228,
+          -0.2600001157081594
+        ]
+      }
+    },
+    {
+      "path": "/quadruped/base/RL_foot/collisions/foot/foot",
+      "type": "Mesh",
+      "enabled": true,
+      "bound_in_trunk": {
+        "min": [
+          -0.18961312257913832,
+          -0.33541318581468477,
+          -0.5501866305500909
+        ],
+        "max": [
+          -0.1496077353269035,
+          -0.29538242240162466,
+          -0.5051266246951484
+        ]
+      }
+    }
+  ]
+}

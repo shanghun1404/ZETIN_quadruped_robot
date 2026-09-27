@@ -1,0 +1,44 @@
+#usda 1.0
+(
+    defaultPrim = "quadruped"
+    metersPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "quadruped" (
+    prepend references = @/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda@</quadruped>
+)
+{
+    over "base"
+    {
+        over "base"
+        {
+            def Cube "v15_trunk_collision" (
+                prepend apiSchemas = ["PhysicsCollisionAPI", "PhysxCollisionAPI", "PhysicsFilteredPairsAPI"]
+            )
+            {
+                bool physics:collisionEnabled = 1
+                prepend rel physics:filteredPairs = [
+                    </quadruped/base/FL_thigh_profile/v14_leg_collision>,
+                    </quadruped/base/FL_calf_profile/v14_leg_collision>,
+                    </quadruped/base/FL_foot/collisions/foot/foot>,
+                    </quadruped/base/FR_thigh_profile/v14_leg_collision>,
+                    </quadruped/base/FR_calf_profile/v14_leg_collision>,
+                    </quadruped/base/FR_foot/collisions/foot/foot>,
+                    </quadruped/base/RL_thigh_profile/v14_leg_collision>,
+                    </quadruped/base/RL_calf_profile/v14_leg_collision>,
+                    </quadruped/base/RL_foot/collisions/foot/foot>,
+                    </quadruped/base/RR_thigh_profile/v14_leg_collision>,
+                    </quadruped/base/RR_calf_profile/v14_leg_collision>,
+                    </quadruped/base/RR_foot/collisions/foot/foot>,
+                ]
+                double size = 1
+                token visibility = "invisible"
+                double3 xformOp:scale = (0.4, 0.52, 0.15)
+                double3 xformOp:translate = (0, 0, 0.075)
+                uniform token[] xformOpOrder = ["xformOp:translate", "xformOp:scale"]
+            }
+        }
+    }
+}
+

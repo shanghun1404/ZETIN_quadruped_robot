@@ -1,0 +1,31 @@
+{
+  "source_usd": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+  "source_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+  "output_usd": "/home/shanghun1404/v15_large_scale/assets/robot_v2_v15_recovery.usda",
+  "output_sha256": "be4add9477d9b75bad355ce25d3668c61bced9ac8326ebda51e4b91ddde04a27",
+  "trunk_box_center_m": [
+    0.0,
+    0.0,
+    0.075
+  ],
+  "trunk_box_size_m": [
+    0.4,
+    0.52,
+    0.15
+  ],
+  "trunk_authored_mass_kg": 5.345043182373047,
+  "filtered_leg_colliders": [
+    "/quadruped/base/FL_thigh_profile/v14_leg_collision",
+    "/quadruped/base/FL_calf_profile/v14_leg_collision",
+    "/quadruped/base/FL_foot/collisions/foot/foot",
+    "/quadruped/base/FR_thigh_profile/v14_leg_collision",
+    "/quadruped/base/FR_calf_profile/v14_leg_collision",
+    "/quadruped/base/FR_foot/collisions/foot/foot",
+    "/quadruped/base/RL_thigh_profile/v14_leg_collision",
+    "/quadruped/base/RL_calf_profile/v14_leg_collision",
+    "/quadruped/base/RL_foot/collisions/foot/foot",
+    "/quadruped/base/RR_thigh_profile/v14_leg_collision",
+    "/quadruped/base/RR_calf_profile/v14_leg_collision",
+    "/quadruped/base/RR_foot/collisions/foot/foot"
+  ]
+}
