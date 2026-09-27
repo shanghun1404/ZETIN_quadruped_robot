@@ -1,0 +1,146 @@
+{
+  "variant": "v13",
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "actuation": {
+    "peak_applied_nm": [
+      24.52394676208496,
+      35.70289611816406,
+      47.52479934692383,
+      19.063602447509766,
+      22.474973678588867,
+      37.61199951171875,
+      14.001245498657227,
+      23.761442184448242,
+      46.836082458496094,
+      14.023680686950684,
+      20.28591537475586,
+      47.537498474121094
+    ],
+    "peak_requested_nm": [
+      24.52394676208496,
+      35.70289611816406,
+      47.52479934692383,
+      19.063602447509766,
+      22.474973678588867,
+      37.61199951171875,
+      14.001245498657227,
+      23.761442184448242,
+      46.836082458496094,
+      14.023680686950684,
+      20.28591537475586,
+      47.537498474121094
+    ],
+    "p99_applied_nm": 36.11420822143555,
+    "p99_requested_nm": 36.11420822143555,
+    "applied_saturation_fraction": 0.0014236110728234053,
+    "over_limit_request_fraction": 0.0,
+    "mean_joint_power_w": 5.670436382293701,
+    "sampled_physics_steps": 2400,
+    "p99_applied_torque_slew_nm_s": 2531.646484375
+  },
+  "mean_forward_speed_m_s": 0.3227425242463748,
+  "mean_directed_progress_m": 3.5901167392730713,
+  "survived_envs": 1,
+  "initial_envs": 1,
+  "metadata": {
+    "actor_checkpoint": "/home/shanghun1404/v15_large_scale/locomotion_jobs/403/guide_v15_physx_pd/2026-09-27_16-51-47_v14_m5700_physx_pd_lane_stairs/model_16699.pt",
+    "actor_sha256": "13adf28f1f912c4591396f23edaa9eef03ea235b1867116689f3158551d1f45b",
+    "student_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+    "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+    "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+    "seed": 42,
+    "warmup_s": 2.0,
+    "measured_s": 12.0,
+    "control_dt_s": 0.02,
+    "physics_dt_s": 0.005,
+    "command_forward_m_s": 0.4,
+    "effort_guard_fraction": null,
+    "control": "ros2",
+    "ros2_namespace": "/v14",
+    "scenario": "flat",
+    "protocol": "fixed_v2",
+    "heading_control": false,
+    "geometry": {},
+    "terrain_level": null,
+    "self_collisions_enabled": true,
+    "measure_leg_clearance": true,
+    "leg_capsule_radius_m": 0.02,
+    "leg_terrain_filtered": true,
+    "ros2_parity": {
+      "policy_target": {
+        "samples": 700,
+        "max_abs_rad": 3.4809112548828125e-05,
+        "mean_abs_rad": 9.723534541470664e-06
+      },
+      "joint_command": {
+        "samples": 2800,
+        "max_abs_rad": 3.4689903259277344e-05,
+        "mean_abs_rad": 9.567468826259886e-06
+      },
+      "shadow_cutoff_hz": 25.0,
+      "shadow_guard_fraction": 0.99
+    }
+  },
+  "interleg_clearance": {
+    "measured_env_frames": 600,
+    "minimum_gap_m": 0.06791089456177102,
+    "negative_gap_frame_fraction": 0.0,
+    "gap_below_minus_2mm_frame_fraction": 0.0
+  },
+  "per_environment": [
+    {
+      "env_id": 0,
+      "survived": true,
+      "first_termination_s": null,
+      "first_termination_terms": [],
+      "directed_progress_m": 3.5901167392730713,
+      "max_radial_progress_m": 0.0,
+      "vertical_after_approach_m": 0.0,
+      "traversed": null
+    }
+  ],
+  "path": {
+    "per_environment": [
+      {
+        "env_id": 0,
+        "final_directed_progress_m": 3.5905303955078125,
+        "max_abs_cross_track_m": 1.2570397853851318,
+        "final_cross_track_m": -1.2570397853851318,
+        "max_abs_heading_error_deg": 38.15128707885742,
+        "final_heading_error_deg": 38.15128707885742,
+        "path_length_m": 4.0908966064453125,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      }
+    ],
+    "directed_stair_success_count": 0,
+    "full_flight_success_count": 0,
+    "corridor_kept_count": 0,
+    "mean_final_directed_progress_m": 3.5905303955078125,
+    "mean_max_abs_cross_track_m": 1.2570397853851318,
+    "mean_max_abs_heading_error_deg": 38.15128707885742,
+    "criteria": {
+      "min_forward_m": 2.1,
+      "max_cross_track_m": 0.6,
+      "max_heading_error_deg": 60,
+      "ground_height_tolerance_m": 0.02,
+      "full_forward_m": 3.6
+    }
+  },
+  "trajectory_path": "/home/shanghun1404/v14_leg_collision/results/ros2/v15main403_ros2_flat_seed42.npz"
+}

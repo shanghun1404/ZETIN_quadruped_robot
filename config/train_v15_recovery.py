@@ -7,6 +7,7 @@ import copy
 import hashlib
 import json
 import os
+import sys
 import traceback
 from datetime import datetime
 from pathlib import Path
@@ -36,6 +37,7 @@ from isaaclab_rl.rsl_rl import RslRlVecEnvWrapper
 from rsl_rl.runners import OnPolicyRunner
 
 from v15_env_cfg import V15_GAIN_SCALE_RANGE
+from v15_math import make_finite_rollout
 from v15_recovery_env_cfg import (
     DROP_ROOT_HEIGHT_M, FALLEN_FRACTION, RECOVERY_ACTION_SCALE, GuideV15RecoveryEnvCfg,
 )
@@ -43,6 +45,9 @@ from v15_recovery_ppo_cfg import V15_RECOVERY_PPO_CFG
 
 
 gym.register(id=TASK_ID, entry_point="isaaclab.envs:ManagerBasedRLEnv", disable_env_checker=True)
+
+
+FiniteRolloutWrapper = make_finite_rollout(RslRlVecEnvWrapper)
 
 
 def file_sha256(path: str) -> str:
@@ -95,7 +100,7 @@ def main() -> None:
     }
     (log_dir / "v15_recovery_manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
 
-    env = RslRlVecEnvWrapper(gym.make(TASK_ID, cfg=env_cfg), clip_actions=agent_cfg.clip_actions)
+    env = FiniteRolloutWrapper(gym.make(TASK_ID, cfg=env_cfg), clip_actions=agent_cfg.clip_actions)
     obs = env.get_observations()
     report = {key: (tuple(value.shape), int((~torch.isfinite(value)).sum())) for key, value in obs.items()}
     if obs["policy"].shape != (args_cli.num_envs, 42) or any(bad for _, bad in report.values()):
@@ -119,10 +124,8 @@ if __name__ == "__main__":
         main()
     except BaseException:
         traceback.print_exc()
-        # Kit fast shutdown must preserve the failed job's exit status.
-        import omni.kit.app
-
-        omni.kit.app.get_app().post_uncancellable_quit(1)
-        simulation_app.close()
-        raise SystemExit(1)
+        # Kit's shutdown hung with the GPU held after failures (jobs 258, 301, 315): exit now.
+        sys.stdout.flush()
+        sys.stderr.flush()
+        os._exit(1)
     simulation_app.close()

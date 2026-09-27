@@ -4,7 +4,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=24G
-#SBATCH --time=24:00:00
+#SBATCH --time=02:00:00
 #SBATCH --job-name=v15-recovery
 #SBATCH --output=/home/shanghun1404/v15_large_scale/slurm-%j.out
 # V15-R: train the blind fall-recovery policy from scratch (see docs/v15_design.md).

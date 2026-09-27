@@ -56,3 +56,32 @@ def test_recovery_reset_orientations_cover_falls_and_upright_starts():
     assert float(scores.mean()) == pytest.approx(0.5, abs=0.03)  # uniform SO(3): mean tilt 90 deg
     with pytest.raises(ValueError):
         sample_recovery_orientations(3, 1.5)
+
+
+def test_non_physical_state_flags_divergence_only():
+    from v15_math import non_physical_state
+
+    joint_vel = torch.zeros(5, 12)
+    lin, ang = torch.zeros(5, 3), torch.zeros(5, 3)
+    joint_vel[1, 3] = 120.0
+    lin[2] = torch.tensor([8.0, 8.0, 0.0])
+    ang[3, 2] = float("nan")
+    joint_vel[4, 0] = 49.0  # fast but physical
+    assert non_physical_state(joint_vel, lin, ang).tolist() == [False, True, True, True, False]
+
+
+def test_finite_rollout_zeroes_nonfinite_rewards_and_observations():
+    from v15_math import make_finite_rollout
+
+    class FakeWrapper:
+        def get_observations(self):
+            return {"policy": torch.tensor([[1.0, float("nan")]])}
+
+        def step(self, actions):
+            return self.get_observations(), torch.tensor([float("inf"), 2.0]), torch.zeros(2), {}
+
+    env = make_finite_rollout(FakeWrapper)()
+    assert env.get_observations()["policy"].tolist() == [[1.0, 0.0]]
+    observations, rewards, _, extras = env.step(None)
+    assert rewards.tolist() == [0.0, 2.0] and observations["policy"].tolist() == [[1.0, 0.0]]
+    assert extras["log"]["Diagnostics/nonfinite_steps"] == 3.0

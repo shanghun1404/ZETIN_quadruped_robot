@@ -1,0 +1,20 @@
+{
+  "start": "fallen",
+  "success_count": 217,
+  "num_envs": 256,
+  "success_rate": 0.84765625,
+  "median_time_to_recover_s": 1.4199999570846558,
+  "recovered_at_least_once": 218,
+  "physics_diverged_resets": 0,
+  "mean_initial_tilt_deg": 90.94970703125,
+  "metadata": {
+    "checkpoint": "/home/shanghun1404/v15_large_scale/recovery_jobs/416/guide_v15_recovery/2026-09-27_14-05-19_blind_fall_recovery/model_8000.pt",
+    "checkpoint_sha256": "d8bfd6b8424b97e0081419aff829381c560c6088b512a28c584246c42984f711",
+    "usd_path": "/home/shanghun1404/v15_large_scale/assets/robot_v2_v15_recovery.usda",
+    "usd_sha256": "be4add9477d9b75bad355ce25d3668c61bced9ac8326ebda51e4b91ddde04a27",
+    "seed": 43,
+    "seconds": 5.0,
+    "hold_seconds": 1.0,
+    "criterion": "tilt < 20 deg and 0.35 m < root height < 0.52 m, held; first recovery = 0.5 s held"
+  }
+}

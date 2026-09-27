@@ -1,0 +1,78 @@
+{
+  "training": [
+    {
+      "log": "slurm-314.out",
+      "iterations_logged": 1000,
+      "last_iteration": 6699,
+      "mean_reward": {
+        "first": 2.12,
+        "last": 205.01,
+        "max": 231.65
+      },
+      "mean_episode_length": {
+        "first": 12.27,
+        "last": 811.06,
+        "max": 872.14
+      },
+      "terrain_level": {
+        "first": 0.9897,
+        "last": 4.4893,
+        "max": 4.5534
+      },
+      "iteration_time_s": {
+        "first": 2.52,
+        "last": 1.73,
+        "max": 2.52
+      }
+    },
+    {
+      "log": "slurm-315.out",
+      "iterations_logged": 2860,
+      "last_iteration": 2859,
+      "mean_reward": {
+        "first": -0.05,
+        "last": 8.72,
+        "max": 9.86
+      },
+      "mean_episode_length": {
+        "first": 20.41,
+        "last": 300.0,
+        "max": 300.0
+      },
+      "iteration_time_s": {
+        "first": 1.09,
+        "last": 0.66,
+        "max": 1.09
+      }
+    }
+  ],
+  "locomotion": [
+    {
+      "file": "pilot314_flat_seed42.json",
+      "scenario": "flat",
+      "seed": 42,
+      "heading_control": false,
+      "survived": 32,
+      "initial": 32,
+      "progress_m": 6.763697624206543,
+      "directed_stair_success": 0,
+      "over_limit_request_fraction": 0.0,
+      "applied_saturation_fraction": 0.046719834208488464,
+      "actor_sha256": "47ae2982a2aad850fda99f41a021949d009c639c27ed3d51d3bce404805c9256"
+    },
+    {
+      "file": "pilot314_stairs_up_seed42.json",
+      "scenario": "stairs_up",
+      "seed": 42,
+      "heading_control": true,
+      "survived": 32,
+      "initial": 32,
+      "progress_m": 1.1314432621002197,
+      "directed_stair_success": 0,
+      "over_limit_request_fraction": 0.0,
+      "applied_saturation_fraction": 0.08183485269546509,
+      "actor_sha256": "47ae2982a2aad850fda99f41a021949d009c639c27ed3d51d3bce404805c9256"
+    }
+  ],
+  "recovery": []
+}

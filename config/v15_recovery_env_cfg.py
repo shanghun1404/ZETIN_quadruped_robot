@@ -15,8 +15,9 @@ PD (gains U(0.8, 1.2)), V13 25 Hz LPF + 0.99 torque guard, 0-3 step target delay
   joint velocity, last action -- no linear velocity, command or depth.
   Critic adds base linear velocity and root height.
 * Rewards: uprightness, standing height and stand pose (gated by uprightness),
-  action rate, joint power, joint velocity and assumed-range penalties. No early
-  termination; 6 s episodes.
+  action rate, joint power, joint velocity and assumed-range penalties. 6 s episodes;
+  the only early termination resets environments whose physics diverged (job 315
+  crashed at iteration ~2860 when a NaN reached the PPO update).
 """
 
 from __future__ import annotations
@@ -39,7 +40,9 @@ from isaaclab.utils.noise import AdditiveUniformNoiseCfg as Unoise
 
 from guide_robot_v2_cfg import GUIDE_ROBOT_V2_CFG, GUIDE_V2_BASE_BODY
 from v14_ros2_bridge import implicit_joint_drives
-from v15_env_cfg import V15_GAIN_SCALE_RANGE, V15_MAX_ACTION_DELAY_STEPS, V15DelayedLowPassJointPositionActionCfg
+from v15_env_cfg import (
+    V15_GAIN_SCALE_RANGE, V15_MAX_ACTION_DELAY_STEPS, V15DelayedLowPassJointPositionActionCfg, physics_diverged,
+)
 from v15_math import STAND_ROOT_HEIGHT_M, sample_recovery_orientations, standing_gate, upright_score
 
 
@@ -193,6 +196,7 @@ class V15RecoveryRewardsCfg:
 @configclass
 class V15RecoveryTerminationsCfg:
     time_out = DoneTerm(func=mdp.time_out, time_out=True)
+    physics_diverged = DoneTerm(func=physics_diverged)
 
 
 @configclass

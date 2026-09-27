@@ -8,6 +8,7 @@ import hashlib
 import json
 import math
 import os
+import sys
 import traceback
 from datetime import datetime
 from pathlib import Path
@@ -42,6 +43,7 @@ from rsl_rl.runners import OnPolicyRunner
 from v13_depth_policy import make_v13_depth_wrapper
 from v14_leg_ppo_cfg import V14_LEG_PPO_CFG
 from v15_env_cfg import V15_GAIN_SCALE_RANGE, GuideV15LocomotionEnvCfg
+from v15_math import make_finite_rollout
 
 
 gym.register(id=TASK_ID, entry_point="isaaclab.envs:ManagerBasedRLEnv", disable_env_checker=True)
@@ -115,8 +117,8 @@ def main() -> None:
     (log_dir / "v15_manifest.json").write_text(json.dumps(manifest, indent=2) + "\n")
 
     raw_env = gym.make(TASK_ID, cfg=env_cfg)
-    env = make_v13_depth_wrapper()(raw_env, student_checkpoint=args_cli.student_checkpoint,
-                                   clip_actions=agent_cfg.clip_actions)
+    env = make_finite_rollout(make_v13_depth_wrapper())(
+        raw_env, student_checkpoint=args_cli.student_checkpoint, clip_actions=agent_cfg.clip_actions)
     obs = env.get_observations()["policy"]
     if obs.shape != (args_cli.num_envs, 235) or not bool(torch.isfinite(obs).all()):
         raise RuntimeError("V15 requires finite 235-dimensional depth observations")
@@ -141,10 +143,8 @@ if __name__ == "__main__":
         main()
     except BaseException:
         traceback.print_exc()
-        # Kit fast shutdown must preserve the failed job's exit status.
-        import omni.kit.app
-
-        omni.kit.app.get_app().post_uncancellable_quit(1)
-        simulation_app.close()
-        raise SystemExit(1)
+        # Kit's shutdown hung with the GPU held after failures (jobs 258, 301, 315): exit now.
+        sys.stdout.flush()
+        sys.stderr.flush()
+        os._exit(1)
     simulation_app.close()

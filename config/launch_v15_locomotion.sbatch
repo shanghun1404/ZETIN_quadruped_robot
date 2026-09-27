@@ -4,7 +4,7 @@
 #SBATCH --gres=gpu:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=24G
-#SBATCH --time=24:00:00
+#SBATCH --time=06:00:00
 #SBATCH --job-name=v15-locomotion
 #SBATCH --output=/home/shanghun1404/v15_large_scale/slurm-%j.out
 # V15-L: fine-tune the V14 5700 actor on PhysX joint-drive PD (see docs/v15_design.md).

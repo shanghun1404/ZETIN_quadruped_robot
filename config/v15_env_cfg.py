@@ -23,6 +23,7 @@ from isaaclab.envs import mdp
 from isaaclab.envs.mdp.actions.joint_actions import JointPositionAction
 from isaaclab.managers import EventTermCfg as EventTerm
 from isaaclab.managers import SceneEntityCfg
+from isaaclab.managers import TerminationTermCfg as DoneTerm
 from isaaclab.managers.action_manager import ActionTerm
 from isaaclab.utils import configclass
 
@@ -32,7 +33,7 @@ from v13_torque_mdp import low_pass_alpha
 from v14_heading_command import make_lane_command_cfg
 from v14_leg_env_cfg import GuideV14StairEnvCfg
 from v14_ros2_bridge import implicit_joint_drives
-from v15_math import TargetDelayLine
+from v15_math import TargetDelayLine, non_physical_state
 
 
 V15_GAIN_SCALE_RANGE = (0.8, 1.2)
@@ -82,6 +83,12 @@ class V15DelayedLowPassJointPositionActionCfg(V13LowPassJointPositionActionCfg):
     max_delay_steps: int = V15_MAX_ACTION_DELAY_STEPS
 
 
+def physics_diverged(env, asset_cfg: SceneEntityCfg = SceneEntityCfg("robot")) -> torch.Tensor:
+    """Reset robots whose physics diverged before a NaN reaches the PPO update."""
+    data = env.scene[asset_cfg.name].data
+    return non_physical_state(data.joint_vel, data.root_lin_vel_w, data.root_ang_vel_w)
+
+
 def use_physx_joint_drives(env_cfg, *, max_delay_steps: int, guard_fraction: float = 0.99) -> None:
     """Swap the V13 explicit-DCMotor action for PhysX drives + V15 delayed LPF/guard."""
     implicit_joint_drives(env_cfg.scene.robot)
@@ -110,3 +117,5 @@ class GuideV15LocomotionEnvCfg(GuideV14StairEnvCfg):
         )
         self.commands.base_velocity = make_lane_command_cfg(self.commands.base_velocity)
         self.commands.base_velocity.ranges.ang_vel_z = (-0.4, 0.4)
+        # Added after pilot 314 / main 339 (V15-R job 315 diverged); later runs carry it.
+        self.terminations.physics_diverged = DoneTerm(func=physics_diverged)

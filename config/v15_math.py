@@ -68,3 +68,45 @@ def sample_recovery_orientations(count: int, fallen_fraction: float, *, device=N
     yaw = (torch.rand(count, generator=generator, device=device) * 2.0 - 1.0) * math.pi
     upright = torch.stack((torch.cos(yaw / 2), torch.zeros_like(yaw), torch.zeros_like(yaw), torch.sin(yaw / 2)), -1)
     return fallen, torch.where(fallen[:, None], random, upright)
+
+
+def non_physical_state(joint_vel: torch.Tensor, root_lin_vel: torch.Tensor, root_ang_vel: torch.Tensor,
+                       *, max_joint_vel: float = 100.0, max_lin_vel: float = 10.0,
+                       max_ang_vel: float = 50.0) -> torch.Tensor:
+    """Environments whose physics diverged: non-finite or far beyond the robot's reachable speeds."""
+    finite = torch.isfinite(joint_vel).all(-1) & torch.isfinite(root_lin_vel).all(-1) & torch.isfinite(root_ang_vel).all(-1)
+    fast = ((joint_vel.abs() > max_joint_vel).any(-1) | (torch.linalg.vector_norm(root_lin_vel, dim=-1) > max_lin_vel)
+            | (torch.linalg.vector_norm(root_ang_vel, dim=-1) > max_ang_vel))
+    return ~finite | fast
+
+
+def make_finite_rollout(base_cls):
+    """Subclass an RSL-RL VecEnv wrapper to zero non-finite rewards/observations.
+
+    One diverged robot otherwise poisons the whole PPO update (V15-R job 315 crashed at
+    iteration ~2860). The ``physics_diverged`` termination resets that robot on the same step.
+    """
+
+    class FiniteRollout(base_cls):
+        nonfinite_steps = 0
+
+        def _clean(self, observations):
+            for key, value in observations.items():
+                if not bool(torch.isfinite(value).all()):
+                    self.nonfinite_steps += 1
+                    observations[key] = torch.nan_to_num(value, nan=0.0, posinf=0.0, neginf=0.0)
+            return observations
+
+        def get_observations(self):
+            return self._clean(super().get_observations())
+
+        def step(self, actions):
+            observations, rewards, dones, extras = super().step(actions)
+            if not bool(torch.isfinite(rewards).all()):
+                self.nonfinite_steps += 1
+                rewards = torch.nan_to_num(rewards, nan=0.0, posinf=0.0, neginf=0.0)
+            extras.setdefault("log", {})["Diagnostics/nonfinite_steps"] = float(self.nonfinite_steps)
+            return self._clean(observations), rewards, dones, extras
+
+    FiniteRollout.__name__ = f"Finite{base_cls.__name__}"
+    return FiniteRollout

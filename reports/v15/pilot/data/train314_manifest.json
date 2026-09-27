@@ -1,0 +1,39 @@
+{
+  "schema": 1,
+  "initial_checkpoint": "/home/shanghun1404/v14_leg_collision/pilot_jobs/110/guide_v14_interleg_collision/2026-09-24_22-59-31_v11_actor_v12_depth_guard_099/model_5700.pt",
+  "initial_checkpoint_sha256": "009cb093951868dfc042b0bac4bc0939d921857311b5988e046667457b2d27bd",
+  "resume": false,
+  "frozen_v12_student": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+  "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+  "usd_path": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+  "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+  "num_envs": 512,
+  "seed": 47,
+  "terrain_rows": 10,
+  "terrain_columns": 128,
+  "terrain_proportions": {
+    "pyramid_stairs": 0.25,
+    "pyramid_stairs_inv": 0.45,
+    "boxes": 0.1,
+    "random_rough": 0.1,
+    "hf_pyramid_slope": 0.05,
+    "hf_pyramid_slope_inv": 0.05
+  },
+  "joint_drive": "physx_implicit_pd",
+  "pd_gain_scale_range": [
+    0.8,
+    1.2
+  ],
+  "max_action_delay_steps": 3,
+  "action_lpf_hz": 25.0,
+  "effort_guard_fraction": 0.99,
+  "lane_heading_command": true,
+  "base_angular_velocity_reward": {
+    "weight": 5.0,
+    "std": 2.0
+  },
+  "learning_rate": 0.001,
+  "learning_rate_schedule": "adaptive",
+  "control_dt_s": 0.02,
+  "physics_dt_s": 0.005
+}
