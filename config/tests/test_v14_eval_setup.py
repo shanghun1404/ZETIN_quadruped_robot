@@ -10,7 +10,7 @@ import sys
 import pytest
 
 
-def setup_evaluator(scenario, heading, monkeypatch):
+def setup_evaluator(scenario, heading, monkeypatch, control="isaaclab"):
     source = ast.parse((Path(__file__).parents[1]/"evaluate_v13_torque.py").read_text())
     main = next(n for n in source.body if isinstance(n, ast.FunctionDef) and n.name == "main")
     def assigns(node, name):
@@ -33,7 +33,8 @@ def setup_evaluator(scenario, heading, monkeypatch):
     monkeypatch.setitem(sys.modules,"v14_heading_command", NS(make_lane_command_cfg=lane_command))
     args=NS(variant="v13",num_envs=32,protocol="fixed_v2",usd_path="robot.usda",seed=42,
             enable_self_collisions=False,filter_leg_terrain=False,effort_guard_fraction=None,
-            seconds=12.,warmup_seconds=0.,scenario=scenario,terrain_level=5,heading_control=heading,forward_speed=.5)
+            seconds=12.,warmup_seconds=0.,scenario=scenario,terrain_level=5,heading_control=heading,forward_speed=.5,
+            control=control,ros2_namespace="/v14")
     scope=dict(copy=copy,args_cli=args,GuideV13TorqueEnvCfg=env_type,GuideV2ScannerTerrainEnvCfg=env_type,
                STAIRS_UP_EVAL_TERRAIN_CFG=terrain,STAIRS_DOWN_EVAL_TERRAIN_CFG=terrain)
     exec(compile(module,"<evaluator-config>","exec"),scope)
@@ -68,3 +69,13 @@ def test_legacy_trajectory_rejected_before_simulator_launch(monkeypatch):
         exec(compile(cli,"<evaluator-cli>","exec"),dict(argparse=argparse,__doc__="evaluation",
              AppLauncher=NS(add_app_launcher_args=lambda parser:None)))
     assert error.value.code == 2
+
+
+def test_ros2_control_swaps_action_term_and_joint_drives(monkeypatch):
+    calls = []
+    bridge = NS(V14Ros2JointTargetActionCfg=lambda **kwargs: NS(ros2=kwargs),
+                implicit_joint_drives=lambda robot: calls.append(robot))
+    monkeypatch.setitem(sys.modules, "v14_ros2_bridge", bridge)
+    cfg, _ = setup_evaluator("flat", False, monkeypatch, control="ros2")
+    assert cfg.actions.joint_pos.ros2 == {"asset_name": "robot", "namespace": "/v14"}
+    assert calls == [cfg.scene.robot]

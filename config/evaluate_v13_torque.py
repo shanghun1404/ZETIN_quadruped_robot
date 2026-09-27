@@ -41,6 +41,9 @@ parser.add_argument("--enable-self-collisions", action="store_true", help="Use t
 parser.add_argument("--measure-leg-clearance", action="store_true", help="Measure V14 capsule gaps at every control step")
 parser.add_argument("--leg-capsule-radius-m", type=float, default=0.02)
 parser.add_argument("--filter-leg-terrain", action="store_true", help="Filter V14 capsules against terrain before physics starts")
+parser.add_argument("--control", choices=("isaaclab", "ros2"), default="isaaclab",
+                    help="ros2: policy, LPF and torque guard run as ROS2 nodes; PhysX joint drives do PD")
+parser.add_argument("--ros2-namespace", default="/v14")
 AppLauncher.add_app_launcher_args(parser)
 args_cli = parser.parse_args()
 if args_cli.trajectory_output and args_cli.protocol != "fixed_v2":
@@ -95,6 +98,11 @@ def main() -> None:
         raise ValueError("terrain filtering requires V14 self collisions")
     if args_cli.heading_control and args_cli.protocol != "fixed_v2":
         raise ValueError("heading control requires the fixed_v2 protocol")
+    if args_cli.control == "ros2" and (
+        args_cli.variant != "v13" or args_cli.num_envs != 1 or args_cli.effort_guard_fraction is not None
+        or args_cli.residual_checkpoint or args_cli.heading_control
+    ):
+        raise ValueError("ros2 control drives one v13-variant robot; the guard is a ROS2 node parameter")
     residual_manifest = None
     if args_cli.residual_checkpoint:
         from v14_residual_policy import load_residual_manifest
@@ -130,6 +138,13 @@ def main() -> None:
         )
     if args_cli.effort_guard_fraction is not None:
         env_cfg.actions.joint_pos.effort_guard_fraction = args_cli.effort_guard_fraction
+    if args_cli.control == "ros2":
+        from v14_ros2_bridge import V14Ros2JointTargetActionCfg, implicit_joint_drives
+
+        env_cfg.actions.joint_pos = V14Ros2JointTargetActionCfg(
+            asset_name="robot", namespace=args_cli.ros2_namespace
+        )
+        implicit_joint_drives(env_cfg.scene.robot)
     env_cfg.seed = args_cli.seed
     env_cfg.episode_length_s = args_cli.seconds + args_cli.warmup_seconds + 10.0
     env_cfg.observations.policy.enable_corruption = False
@@ -215,6 +230,7 @@ def main() -> None:
     env = DepthWrapper(raw_env, student_checkpoint=args_cli.student_checkpoint, clip_actions=agent_cfg.clip_actions)
     video = None
     try:
+        # With --control ros2 this in-process policy only shadows the ROS2 nodes for the parity report.
         runner = OnPolicyRunner(env, agent_cfg.to_dict(), log_dir=None, device=agent_cfg.device)
         runner.load(args_cli.actor_checkpoint, load_optimizer=False, map_location=agent_cfg.device)
         policy = runner.get_inference_policy(device=agent_cfg.device)
@@ -386,6 +402,8 @@ def main() -> None:
                 "physics_dt_s": physics_dt,
                 "command_forward_m_s": args_cli.forward_speed,
                 "effort_guard_fraction": args_cli.effort_guard_fraction,
+                "control": args_cli.control,
+                "ros2_namespace": args_cli.ros2_namespace if args_cli.control == "ros2" else None,
                 "scenario": args_cli.scenario,
                 "protocol": args_cli.protocol,
                 "heading_control": args_cli.heading_control,
@@ -397,6 +415,8 @@ def main() -> None:
                 "leg_terrain_filtered": args_cli.filter_leg_terrain,
             },
         }
+        if args_cli.control == "ros2":
+            report["metadata"]["ros2_parity"] = base_env.action_manager.get_term("joint_pos").parity_summary()
         if residual_manifest is not None:
             unchanged = frozen_before == (module_digest(env.frozen_actor), module_digest(env.env._student))
             if not unchanged or env.max_observed_delta_rad > residual_manifest["max_rad"] + 1e-6:

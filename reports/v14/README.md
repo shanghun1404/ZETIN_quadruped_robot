@@ -6,6 +6,13 @@
 > 제한하지 않았다. 새 고정 지형·방향 평가와 적응 실험은
 > [후속 설계](../../docs/v14_direction_design.md), [결과 폴더](direction/)에 기록한다.
 
+## 최신 후속: ROS2 제어 구조 (2026-09-27)
+
+정책(50 Hz)과 25 Hz LPF·0.99 토크 가드(200 Hz)를 ROS2 노드로 옮겼다. Isaac Sim은 PhysX
+관절 드라이브 PD로 위치 목표만 따른다. ROS2 계산은 in-process와 최대 2.7×10⁻⁴ rad 차이로
+같았다. 그러나 5700 정책은 PhysX PD에서 평지 0/3 생존했다(in-process 3/3, 8.37 m).
+[결과](ros2/README.md), [설계](../../docs/v14_ros2_design.md).
+
 ## 최신 후속: 보정 policy 확대 훈련 (2026-09-26)
 
 작업186에서128환경·3,000회 추가 훈련을 진행 중이다. 기존 model100에서
