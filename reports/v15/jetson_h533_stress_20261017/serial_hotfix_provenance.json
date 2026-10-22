@@ -1,0 +1,12 @@
+{
+  "base_archive_sha256": "d9d4ae8b186dce284c76c1a155ee485e56f597a9c6e679a0794abf127d7073d0",
+  "original_gateway_sha256": "56540e4dcfe14574be6723b7a937b138bc1aa037864c1c5a14048a098e0017c0",
+  "files": {
+    "ros2/v15_hardware_bridge/v15_hardware_bridge/usb_gateway.py": "3e759c5c769287a495986f9cbee49ed33c93dde230be185d11e19671b8ec1c21",
+    "ros2/v15_hardware_bridge/v15_hardware_bridge/serial_transport.py": "326d4932a47362ae8fae527f2087125a87012a578f535b457449fd919e822a4d",
+    "ros2/v15_hardware_bridge/test/test_serial_transport.py": "c5adcf46529c1ad471cdffcd1a56a869060e8ddc76d2d53bd3ec9249395b938f",
+    "ros2/v15_hardware_bridge/test/test_gateway_failure.py": "0a7f4ae3fcbf0e0eaa9a4710e989bfcd27161c88a1547af9ce23ffa5a0dae6f4"
+  },
+  "reason": "pyserial3.5 timed write waits for next-slot readiness after accepting the whole frame; replaced by exactly one nonblocking write, retaining fatal EAGAIN/partial writes and latched STOP failures.",
+  "tests": "Jetson ROS package136 passed3 skipped; native firmware make all test passed; host realPTY/fullpipe/partial/blocking transport4 passed."
+}

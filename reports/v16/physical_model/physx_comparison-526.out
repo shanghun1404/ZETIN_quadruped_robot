@@ -1,0 +1,204 @@
+{
+  "slurm_job_id": "526",
+  "source_total_mass_kg": 45.451322469636764,
+  "physx_total_mass_kg": 45.45132318139076,
+  "total_mass_difference_kg": 7.117539979617504e-07,
+  "source_body_count": 54,
+  "physx_body_count": 54,
+  "root_twist_consistency": {
+    "shape": [
+      6
+    ],
+    "max_abs": 4.3643708091956057e-10,
+    "frobenius": 5.267638643719683e-10,
+    "relative_frobenius": 1.6254382015930444e-08
+  },
+  "dynamics": {
+    "M_raw_vs_source_rigid": {
+      "shape": [
+        18,
+        18
+      ],
+      "max_abs": 3.7242919001790296e-06,
+      "frobenius": 1.0524857109584344e-05,
+      "relative_frobenius": 1.3316068604332532e-07
+    },
+    "M_raw_vs_source_with_armature": {
+      "shape": [
+        18,
+        18
+      ],
+      "max_abs": 0.020000291543209175,
+      "frobenius": 0.06928239206384414,
+      "relative_frobenius": 0.0008765575248411761
+    },
+    "gravity": {
+      "shape": [
+        18
+      ],
+      "max_abs": 4.130118095102553e-05,
+      "frobenius": 5.334311496672196e-05,
+      "relative_frobenius": 1.1957943005885636e-07
+    },
+    "coriolis_with_transport": {
+      "shape": [
+        18
+      ],
+      "max_abs": 3.7029881366085204e-09,
+      "frobenius": 4.288364885267493e-09,
+      "relative_frobenius": 3.445038216095538e-07
+    },
+    "bias_with_transport": {
+      "shape": [
+        18
+      ],
+      "max_abs": 4.130210179886795e-05,
+      "frobenius": 4.910985494587676e-05,
+      "relative_frobenius": 1.1009235846188379e-07
+    },
+    "bias_without_transport": {
+      "shape": [
+        18
+      ],
+      "max_abs": 0.014739651777688323,
+      "frobenius": 0.015452865002999302,
+      "relative_frobenius": 3.4641567462339524e-05
+    },
+    "h_vs_exported_gravity_plus_coriolis": {
+      "shape": [
+        18
+      ],
+      "max_abs": 8.750241249799728e-06,
+      "frobenius": 8.75527619000179e-06,
+      "relative_frobenius": 1.9626662981668536e-08
+    },
+    "M_blocks_rigid": {
+      "base_translation": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 1.9932538677380762e-06,
+        "frobenius": 3.452416971305523e-06,
+        "relative_frobenius": 4.385469463665544e-08
+      },
+      "base_rotation": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 5.311755431946846e-07,
+        "frobenius": 9.257511800376358e-07,
+        "relative_frobenius": 1.617519132533619e-07
+      },
+      "joint_block": {
+        "shape": [
+          12,
+          12
+        ],
+        "max_abs": 2.9154320918545196e-07,
+        "frobenius": 5.716884471070366e-07,
+        "relative_frobenius": 1.0881896655436703e-06
+      }
+    },
+    "M_base_joint_coupling_rigid": {
+      "shape": [
+        6,
+        12
+      ],
+      "max_abs": 1.5292774222519512e-06,
+      "frobenius": 2.7311504936192756e-06,
+      "relative_frobenius": 1.4531169778551113e-06
+    },
+    "M_blocks_source_armature": {
+      "base_translation": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 1.9932538677380762e-06,
+        "frobenius": 3.452416971305523e-06,
+        "relative_frobenius": 4.385469463665544e-08
+      },
+      "base_rotation": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 5.311755431946846e-07,
+        "frobenius": 9.257511800376358e-07,
+        "relative_frobenius": 1.617519132533619e-07
+      },
+      "joint_block": {
+        "shape": [
+          12,
+          12
+        ],
+        "max_abs": 0.020000291543209175,
+        "frobenius": 0.06928239126677443,
+        "relative_frobenius": 0.11860496566293902
+      }
+    },
+    "M_base_joint_coupling_source_armature": {
+      "shape": [
+        6,
+        12
+      ],
+      "max_abs": 1.5292774222519512e-06,
+      "frobenius": 2.7311504936192756e-06,
+      "relative_frobenius": 1.4531169778551113e-06
+    }
+  },
+  "jacobian": {
+    "shape": [
+      4,
+      6,
+      18
+    ],
+    "max_abs": 6.357587063465786e-07,
+    "frobenius": 1.9160456828539247e-06,
+    "relative_frobenius": 2.996940674330805e-07
+  },
+  "jacobian_base_coordinate_hypotheses": {
+    "root_com_world_to_link_com": {
+      "shape": [
+        4,
+        6,
+        6
+      ],
+      "max_abs": 2.699974439579478e-07,
+      "frobenius": 6.668230431644984e-07,
+      "relative_frobenius": 1.2953633749770333e-07
+    },
+    "root_com_world_to_link_actor": {
+      "shape": [
+        4,
+        6,
+        6
+      ],
+      "max_abs": 0.6165626347064972,
+      "frobenius": 1.8451964732634314,
+      "relative_frobenius": 0.34796774473608694
+    },
+    "root_actor_world_to_link_com": {
+      "shape": [
+        4,
+        6,
+        6
+      ],
+      "max_abs": 0.006448266468375485,
+      "frobenius": 0.01824955765876698,
+      "relative_frobenius": 0.0035480976600972634
+    },
+    "root_actor_world_to_link_actor": {
+      "shape": [
+        4,
+        6,
+        6
+      ],
+      "max_abs": 0.623010903596878,
+      "frobenius": 1.8546472320153116,
+      "relative_frobenius": 0.34980926573668436
+    }
+  }
+}

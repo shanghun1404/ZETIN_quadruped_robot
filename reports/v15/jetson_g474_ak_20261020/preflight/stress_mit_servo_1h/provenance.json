@@ -1,0 +1,16 @@
+{
+  "start_utc": "2026-10-19T15:45:08.148098+00:00",
+  "host": "jetson",
+  "files": {
+    "build/g474_can_fixture.elf": "70d4308c1909c55ab9abb4cf5237a11a4db3c4ced3bb6fb94814e36a214280c8",
+    "build/g474_can_fixture.bin": "12281533fd15e790fcb59d78ba5923b48a2de492d972c8b513cbcb0d71af9a2f",
+    "ak_stress.py": "2748db49f6430d7a9bdbf472960c7f60e827b193b6d188a8083ea2cc7ff40aca",
+    "g474_control.py": "9b12a93bb7ee857e3c64054ee72080410a343345bb2ba18c8e77df79b7ff2b2f",
+    "run_modes.py": "97a1c3cd6fd512330716e6e9e9d205fb4ed14239f1cdf23d85655e54c17c2578",
+    "firmware/g474_can_fixture.c": "d8da984be2bc6b96c9a1af15c8bd7cccad803d001641983146b3e2d2beaa0602",
+    "firmware/g474_diag.h": "89d840db4077c37f9032cf9ad144f097055e84a6b4a3005c9ff00be078b8c497",
+    "core/src/qd_protocol.c": "277a856b3554015d9e52bc69d29eaf02b28e11343be9f1ad5be80fe3f21e2492",
+    "core/examples/qd_ak_virtual.c": "e18007bef0dc68a2d8b69264c7e3965eee1c30c000c237f1d7e679b59a28c286",
+    "original_flash_512k.bin": "06c9c130cd6f5ebc60d6265e0926ecd9369b326593a6c166a21c6739b024a35f"
+  }
+}

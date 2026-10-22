@@ -1,0 +1,14 @@
+{
+  "training_completed": true,
+  "checkpoint": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_finetune_556/guide_v15_torque_reward_finetune/2026-09-29_03-05-52_339_g099_lpf25_torque1p25_lr3p375e-5/model_11949.pt",
+  "checkpoint_sha256": "3bd366c775e6bc347bec28fb6716ad54708ddc80633643090734261cb2f93a1e",
+  "last_learning_iteration": 11949,
+  "policy_std_min_max": [
+    0.11167245358228683,
+    0.14600695669651031
+  ],
+  "nonfinite_steps": 0,
+  "actual_contract_sha256": "fb9f72d20d4f7be9c54d036a3923a97354719ce215e113093f820dec814dccec",
+  "behavior_and_torque_gates_evaluated": false,
+  "motor_thermal_safety_proven": false
+}

@@ -1,0 +1,17 @@
+{
+  "best_parameters": [
+    12.0,
+    1.0,
+    45.0,
+    14.0,
+    45.0,
+    14.0,
+    4.0,
+    0.16,
+    0.02,
+    0.82,
+    1.0,
+    0.1
+  ],
+  "purpose": "initial CEM distribution, not a trained policy or verified walking result"
+}

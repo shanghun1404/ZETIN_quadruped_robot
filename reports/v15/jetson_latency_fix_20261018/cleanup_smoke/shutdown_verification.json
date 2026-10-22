@@ -1,0 +1,15 @@
+{
+  "integration_checks_passed": true,
+  "diagnostic_cleanup_passed": true,
+  "commands": 4000,
+  "expected": 4000,
+  "faults": [],
+  "owned_pids": [
+    90565,
+    90522,
+    90523,
+    90524,
+    90525
+  ],
+  "alive": []
+}

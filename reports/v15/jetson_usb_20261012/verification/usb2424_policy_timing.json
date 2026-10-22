@@ -1,0 +1,38 @@
+{
+  "scope": "Recorded x86 controller wall-clock computation during lockstep Isaac trial2424, not Jetson timing or a standalone benchmark",
+  "policy_period_target_ms": 20,
+  "motor_period_target_ms": 5,
+  "trials": [
+    {
+      "case": "standing_hold",
+      "policy_wbc_ticks": 600,
+      "compute_ms_p50_p95_p99": [
+        59.47787599870935,
+        93.60164886165876,
+        101.89434456813615
+      ],
+      "compute_over_20ms_ticks": 600
+    },
+    {
+      "case": "sit_rise_walk_stop_sit",
+      "policy_wbc_ticks": 1034,
+      "compute_ms_p50_p95_p99": [
+        61.19948299601674,
+        89.1787446278613,
+        103.63071211264464
+      ],
+      "compute_over_20ms_ticks": 1034
+    },
+    {
+      "case": "deep_crouch_rise_walk_stop_sit",
+      "policy_wbc_ticks": 1034,
+      "compute_ms_p50_p95_p99": [
+        60.11976799345575,
+        100.76578611915465,
+        105.0372841116041
+      ],
+      "compute_over_20ms_ticks": 1034
+    }
+  ],
+  "observation": "Every recorded active WBC policy tick exceeded20ms. Successful lockstep physics does not validate real-time50Hz execution. Jetson runtime and WBC performance optimization remain required before enabled hardware use."
+}

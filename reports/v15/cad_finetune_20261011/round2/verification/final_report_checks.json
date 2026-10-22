@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "overview_updates": 3000,
+  "pass_counts": [
+    2,
+    7,
+    12
+  ],
+  "stages": {
+    "reports/v15/cad_finetune_20261011": {
+      "cases": 15,
+      "motor_rows": 180,
+      "passed": 7
+    },
+    "reports/v15/cad_finetune_20261011/round2": {
+      "cases": 15,
+      "motor_rows": 180,
+      "passed": 12
+    }
+  },
+  "checkpoint_digest_verified": true
+}

@@ -1,0 +1,6 @@
+{
+  "recorded_utc": "2026-10-12T08:44:26.477778+00:00",
+  "job2424_state": "COMPLETED",
+  "job2432_state": "FAILED",
+  "raw_accounting": "JobID|JobName|QOS|State|ExitCode|Elapsed|Start|End\n2424|v15-usb-suite|admin|COMPLETED|0:0|00:12:19|2026-10-12T13:39:21|2026-10-12T13:51:40\n2424.batch|batch||COMPLETED|0:0|00:12:19|2026-10-12T13:39:21|2026-10-12T13:51:40\n2432|v15-origin-check|admin|FAILED|2:0|00:08:54|2026-10-12T17:30:45|2026-10-12T17:39:39\n2432.batch|batch||FAILED|2:0|00:08:54|2026-10-12T17:30:45|2026-10-12T17:39:39\n"
+}

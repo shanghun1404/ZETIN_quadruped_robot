@@ -1,0 +1,363 @@
+{
+  "scope": "CPU replay of recorded BLEND_STAND inputs and inherited CAD standing controller state; no simulation",
+  "source_snapshot": "/home/shanghun1404/v15_cad_20261011/suite_jobs/2320/source",
+  "failed_command_stamp_ns": 17920000000,
+  "raw_contact_sensor_to_canonical_indices": [
+    2,
+    3,
+    0,
+    1
+  ],
+  "permutation_matched_policy_ticks": 29,
+  "replayed_policy_ticks": 30,
+  "replay_checks": [
+    {
+      "stamp_ns": 17320000000,
+      "reference_max_abs_error_rad": 3.5539293730124655e-11,
+      "body_goal_max_abs_error_m": 2.3131496718065137e-12,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 7.721219759559972e-06
+    },
+    {
+      "stamp_ns": 17340000000,
+      "reference_max_abs_error_rad": 2.5808394310544713e-10,
+      "body_goal_max_abs_error_m": 1.7947310304577968e-11,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 5.857673699871668e-06
+    },
+    {
+      "stamp_ns": 17360000000,
+      "reference_max_abs_error_rad": 8.324569367168522e-10,
+      "body_goal_max_abs_error_m": 5.871847452709744e-11,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 1.0861591505317847e-05
+    },
+    {
+      "stamp_ns": 17380000000,
+      "reference_max_abs_error_rad": 1.8924137812348363e-09,
+      "body_goal_max_abs_error_m": 1.3486323169331627e-10,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 1.4711071969486511e-06
+    },
+    {
+      "stamp_ns": 17400000000,
+      "reference_max_abs_error_rad": 3.5622410021751705e-09,
+      "body_goal_max_abs_error_m": 2.5510793477678817e-10,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 1.6693047797389227e-06
+    },
+    {
+      "stamp_ns": 17420000000,
+      "reference_max_abs_error_rad": 5.940896663503281e-09,
+      "body_goal_max_abs_error_m": 4.267365349974739e-10,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 3.6711663327082533e-06
+    },
+    {
+      "stamp_ns": 17440000000,
+      "reference_max_abs_error_rad": 9.108527099233044e-09,
+      "body_goal_max_abs_error_m": 6.556598597384777e-10,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 2.3512222249166825e-06
+    },
+    {
+      "stamp_ns": 17460000000,
+      "reference_max_abs_error_rad": 1.3136223386833734e-08,
+      "body_goal_max_abs_error_m": 9.46484335351272e-10,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 4.810480959349661e-06
+    },
+    {
+      "stamp_ns": 17480000000,
+      "reference_max_abs_error_rad": 1.8064424178731997e-08,
+      "body_goal_max_abs_error_m": 1.3025802658717112e-09,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 4.507271817999481e-06
+    },
+    {
+      "stamp_ns": 17500000000,
+      "reference_max_abs_error_rad": 2.3884001165708213e-08,
+      "body_goal_max_abs_error_m": 1.7261505558252566e-09,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 4.898315136614428e-06
+    },
+    {
+      "stamp_ns": 17520000000,
+      "reference_max_abs_error_rad": 3.054643260558265e-08,
+      "body_goal_max_abs_error_m": 2.2182994330322003e-09,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 9.383303499532758e-06
+    },
+    {
+      "stamp_ns": 17540000000,
+      "reference_max_abs_error_rad": 3.7970843469459226e-08,
+      "body_goal_max_abs_error_m": 2.7791015044797973e-09,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 8.469284320966608e-06
+    },
+    {
+      "stamp_ns": 17560000000,
+      "reference_max_abs_error_rad": 4.603898307031784e-08,
+      "body_goal_max_abs_error_m": 3.4076698129936744e-09,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 8.143500744850485e-06
+    },
+    {
+      "stamp_ns": 17580000000,
+      "reference_max_abs_error_rad": 5.468003527742127e-08,
+      "body_goal_max_abs_error_m": 4.10222478208766e-09,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 1.1979391951966178e-05
+    },
+    {
+      "stamp_ns": 17600000000,
+      "reference_max_abs_error_rad": 6.387349238412554e-08,
+      "body_goal_max_abs_error_m": 4.860162716724403e-09,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 1.355245892264989e-05
+    },
+    {
+      "stamp_ns": 17620000000,
+      "reference_max_abs_error_rad": 7.358395825995956e-08,
+      "body_goal_max_abs_error_m": 5.6781250812321105e-09,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 1.9703190299757978e-05
+    },
+    {
+      "stamp_ns": 17640000000,
+      "reference_max_abs_error_rad": 9.331025990766406e-08,
+      "body_goal_max_abs_error_m": 6.552066111886745e-09,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 2.487015798635639e-05
+    },
+    {
+      "stamp_ns": 17660000000,
+      "reference_max_abs_error_rad": 8.772324944228416e-08,
+      "body_goal_max_abs_error_m": 7.477322427895672e-09,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 7.085197960066125e-05
+    },
+    {
+      "stamp_ns": 17680000000,
+      "reference_max_abs_error_rad": 9.274657231106431e-08,
+      "body_goal_max_abs_error_m": 8.448681199091368e-09,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 1.550665700733589e-05
+    },
+    {
+      "stamp_ns": 17700000000,
+      "reference_max_abs_error_rad": 9.816086143921154e-08,
+      "body_goal_max_abs_error_m": 9.460449201803556e-09,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 1.6853336262556695e-05
+    },
+    {
+      "stamp_ns": 17720000000,
+      "reference_max_abs_error_rad": 9.125189304182157e-08,
+      "body_goal_max_abs_error_m": 1.0506520875530612e-08,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 4.023483583637244e-06
+    },
+    {
+      "stamp_ns": 17740000000,
+      "reference_max_abs_error_rad": 1.1347304673670067e-07,
+      "body_goal_max_abs_error_m": 1.1580447267789395e-08,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 1.8443343336116413e-05
+    },
+    {
+      "stamp_ns": 17760000000,
+      "reference_max_abs_error_rad": 1.195236550843859e-07,
+      "body_goal_max_abs_error_m": 1.2675505534076592e-08,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 1.710940513177661e-05
+    },
+    {
+      "stamp_ns": 17780000000,
+      "reference_max_abs_error_rad": 1.2587829112398197e-07,
+      "body_goal_max_abs_error_m": 1.378476560676134e-08,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 1.2188432265247684e-05
+    },
+    {
+      "stamp_ns": 17800000000,
+      "reference_max_abs_error_rad": 1.324599183671893e-07,
+      "body_goal_max_abs_error_m": 1.4901161193847656e-08,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 7.5739065152902185e-06
+    },
+    {
+      "stamp_ns": 17820000000,
+      "reference_max_abs_error_rad": 1.3916632857213784e-07,
+      "body_goal_max_abs_error_m": 1.6017556780933973e-08,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 9.517612667764297e-06
+    },
+    {
+      "stamp_ns": 17840000000,
+      "reference_max_abs_error_rad": 1.458986942370899e-07,
+      "body_goal_max_abs_error_m": 1.7126816964641023e-08,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 8.82234273902327e-06
+    },
+    {
+      "stamp_ns": 17860000000,
+      "reference_max_abs_error_rad": 1.525557166148772e-07,
+      "body_goal_max_abs_error_m": 1.8221875008883615e-08,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 1.1565083809728094e-05
+    },
+    {
+      "stamp_ns": 17880000000,
+      "reference_max_abs_error_rad": 1.5908157102728637e-07,
+      "body_goal_max_abs_error_m": 1.92958015121647e-08,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 9.477914321820435e-06
+    },
+    {
+      "stamp_ns": 17900000000,
+      "reference_max_abs_error_rad": 0.0,
+      "body_goal_max_abs_error_m": 2.0341873185891757e-08,
+      "support_mask_matches": true,
+      "wbc_acceleration_max_abs_error": 4.722094382714204e-05
+    }
+  ],
+  "supervisor_output": {
+    "mode": "BLEND_STAND",
+    "walk_weight": 0.2834907007999984,
+    "height_fraction": 1.0,
+    "command": [
+      0.0,
+      0.09778752944712538,
+      0.0
+    ]
+  },
+  "actor_origin_world_m": [
+    30.09389877319336,
+    5.554696083068848,
+    0.5295829772949219
+  ],
+  "quat_wxyz": [
+    0.999531626701355,
+    0.011319916695356369,
+    -0.020959846675395966,
+    0.01920429989695549
+  ],
+  "canonical_joint_position_rad": [
+    0.04142683744430542,
+    -0.26045987010002136,
+    0.5273675918579102,
+    -0.11490456014871597,
+    -0.24032460153102875,
+    0.42887505888938904,
+    -0.032685570418834686,
+    -0.22324351966381073,
+    0.6365063786506653,
+    0.25093650817871094,
+    -0.4439861476421356,
+    0.4564323425292969
+  ],
+  "stance_mask_canonical": [
+    false,
+    false,
+    true,
+    false
+  ],
+  "latched_contact_anchors_world_m": [
+    [
+      29.897648643613596,
+      5.840910296703546,
+      0.00022259036259718312
+    ],
+    [
+      30.29231520896483,
+      5.565976095454739,
+      0.00032456403388685107
+    ],
+    [
+      29.986804857982793,
+      4.935223906175105,
+      0.0003896840303793947
+    ],
+    [
+      30.150851002309725,
+      5.1180051029214555,
+      0.0001220079681858166
+    ]
+  ],
+  "support_plane_z_before_call_m": 0.00017229916539149986,
+  "target_root_height_m": 0.4834128714210043,
+  "handover_root_height_m": 0.5251852869987488,
+  "stand_target_root_height_m": 0.4668853938579559,
+  "comparisons": [
+    {
+      "landing_depth_m": 0.005,
+      "ik_success": false,
+      "error": "Landing IK unreachable for FR_foot: residual 0.00205351 m",
+      "support_plane_z_after_call_m": 0.00021084116859782648
+    },
+    {
+      "landing_depth_m": 0.0,
+      "ik_success": true,
+      "canonical_joint_reference_rad": [
+        0.004825118347987697,
+        -0.22989754995038333,
+        0.4972006072940358,
+        0.005700003036482483,
+        -0.08726775218202502,
+        0.2287354820317078,
+        -0.10267611580574115,
+        -0.17056564722715883,
+        0.8348201410459911,
+        0.0048673355470042826,
+        -0.23072016906931114,
+        0.49872041997502103
+      ],
+      "body_goal_world_m": [
+        30.083441790719178,
+        5.476517624927381,
+        0.4834128714210043
+      ],
+      "support_plane_z_after_call_m": 0.00021084116859782648,
+      "landing_targets_world_m": [
+        [
+          29.930708101824372,
+          5.885372961948277,
+          0.00021084116859782648
+        ],
+        [
+          30.269848682026158,
+          5.898519670524391,
+          0.00021084116859782648
+        ],
+        [
+          29.955193297592153,
+          5.255995116243573,
+          0.00021084116859782648
+        ],
+        [
+          30.29433402907058,
+          5.269137825828535,
+          0.00021084116859782648
+        ]
+      ],
+      "unsupported_foot_max_abs_residual_m": 2.4577406082526565e-10,
+      "wbc_finite": true,
+      "wbc_feasible": true,
+      "torque_Nm": [
+        -15.383111568228824,
+        6.885213548596183,
+        0.15993163895530685,
+        8.498676024898351,
+        17.179204754307914,
+        -2.3789865106459707,
+        0.2704265598132793,
+        -5.0410339154648796,
+        1.3399955651375721,
+        2.2483753131923963,
+        2.2919160193154036,
+        0.6437990290640772
+      ]
+    }
+  ]
+}

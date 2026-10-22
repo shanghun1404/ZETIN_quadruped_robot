@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "completed": false,
+  "task_success": false,
+  "motion_success": false,
+  "collision_checks_pass": false,
+  "failure": "TimeoutError('V15.1 command missing at 0.000s')",
+  "seconds_recorded": 0
+}

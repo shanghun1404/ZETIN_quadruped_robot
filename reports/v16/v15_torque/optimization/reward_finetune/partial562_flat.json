@@ -1,0 +1,67 @@
+{
+  "evaluation_job": 562,
+  "all_two_cases_complete": false,
+  "verified_raw_data_files": [
+    "adapt_torque1p25_g099_lpf25_flat_seed42.json",
+    "adapt_torque1p25_g099_lpf25_flat_seed42_trace.npz",
+    "adapt_torque1p25_g099_lpf25_flat_seed42_trace_audit.npz",
+    "adapt_torque1p25_g099_lpf25_flat_seed42_trajectory.npz"
+  ],
+  "actual_contract_matches_reused508": true,
+  "comparison_to_original508": {
+    "control_gates": {
+      "survival": true,
+      "progress": true,
+      "command_tracking": true,
+      "rough_corridor": true,
+      "rough_heading": true
+    },
+    "torque_gates": {
+      "rms_not_increased": false,
+      "power_not_increased": false,
+      "limit_demand_improved": false
+    },
+    "control_pass": true,
+    "torque_pass": false,
+    "ratios_to_baseline": {
+      "rms": 1.0174255029653199,
+      "power": 1.131228953046121,
+      "above80": 1.104741975262509,
+      "slew": 1.0494680730982004,
+      "peak_fraction": 0.999677968411388,
+      "p99_fraction_mean": 1.0955739299871918
+    },
+    "ranking_score": 1.0709097405731056,
+    "survived_envs": 32,
+    "mean_progress_m": 5.746467590332031,
+    "mean_forward_speed_m_s": 0.4834907462199529,
+    "absolute_command_error_m_s": 0.0834907462199529,
+    "corridor_kept_envs": 13,
+    "mean_max_heading_error_deg": 31.445822596549988,
+    "rms_mean_joint_nm": 12.745419009035354,
+    "pooled_p99_estimated_nm": 46.101376419067385,
+    "max_estimated_limit_fraction": 0.9905263582865397,
+    "above80_fraction": 0.03849479166666667,
+    "saturation99_fraction": 0.006333333333333333,
+    "mean_abs_joint_power_w": 9.643545150756836,
+    "p99_torque_slew_nm_s": 2912.8319580078096,
+    "worst_joint_rms_ratio": 1.5845975607311513,
+    "worst_joint_rms_ratio_joint": "FR_KFE",
+    "per_joint_rms_ratios": {
+      "FL_HAA": 0.9975040814904569,
+      "FL_HFE": 0.6697039740349544,
+      "FL_KFE": 0.9284947747122549,
+      "FR_HAA": 1.0405751231704197,
+      "FR_HFE": 0.7969082900585466,
+      "FR_KFE": 1.5845975607311513,
+      "RL_HAA": 0.970408841175565,
+      "RL_HFE": 1.0549622834961154,
+      "RL_KFE": 1.1176411253907945,
+      "RR_HAA": 0.9709640959819404,
+      "RR_HFE": 1.1461892651230348,
+      "RR_KFE": 0.8743462067851714
+    },
+    "baseline_estimated_abs_mechanical_energy_per_m_j_m": 207.47882665429364,
+    "estimated_abs_mechanical_energy_per_m_j_m": 241.13106859921854
+  }
+}

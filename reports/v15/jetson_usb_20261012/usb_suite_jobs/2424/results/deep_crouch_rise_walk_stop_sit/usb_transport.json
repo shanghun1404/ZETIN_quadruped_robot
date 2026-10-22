@@ -1,0 +1,7 @@
+{
+  "frames": 12000,
+  "tx_bytes": 2688000,
+  "rx_bytes": 2688000,
+  "max_roundtrip_ms": 3.8380310288630426,
+  "transport": "Linux PTY through native G474 C codec; actual USB/CAN/Jetson untested"
+}

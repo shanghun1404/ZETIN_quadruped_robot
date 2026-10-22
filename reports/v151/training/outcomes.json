@@ -1,0 +1,341 @@
+{
+  "generated_at": "2026-10-01T13:37:06.054585+09:00",
+  "training": {
+    "589": {
+      "training_status": "완료",
+      "evaluation_status": "후보 전체 탈락",
+      "checkpoints": [
+        {
+          "updates": 250,
+          "iteration": 11949,
+          "path": "/home/shanghun1404/v151_ros2/training_jobs/589/guide_v151_rated_load/2026-10-01_00-50-04_339_rated_squared_w0p02_lr1e-5/pilot_update_0250.pt",
+          "sha256": "7b18f1a4f9373c827a83f8ab1eb0a7d8afe0aa5555c3f2b50f98845cadd2e2c2"
+        },
+        {
+          "updates": 500,
+          "iteration": 12199,
+          "path": "/home/shanghun1404/v151_ros2/training_jobs/589/guide_v151_rated_load/2026-10-01_00-50-04_339_rated_squared_w0p02_lr1e-5/pilot_update_0500.pt",
+          "sha256": "9295d2b3529b630ba294017b8dc5404988651ab92a12938d0defff5e1a81931e"
+        }
+      ],
+      "nonfinite_steps": 0,
+      "rated_load_weight": -0.02,
+      "actual_targeted_scope": null,
+      "source_contract_available": true
+    },
+    "598": {
+      "training_status": "완료",
+      "evaluation_status": "후보 전체 탈락",
+      "checkpoints": [
+        {
+          "updates": 25,
+          "iteration": 11724,
+          "path": "/home/shanghun1404/v151_ros2/targeted_training_jobs/598/guide_v151_targeted_load/2026-10-01_01-59-47_339_fixed04_flatrough_w0p1_lr1e-5/pilot_update_0025.pt",
+          "sha256": "bb9f8dcc5fb88e56a33f83b7bced3b5f50f774a3a5e158736f01580146549f71"
+        },
+        {
+          "updates": 50,
+          "iteration": 11749,
+          "path": "/home/shanghun1404/v151_ros2/targeted_training_jobs/598/guide_v151_targeted_load/2026-10-01_01-59-47_339_fixed04_flatrough_w0p1_lr1e-5/pilot_update_0050.pt",
+          "sha256": "4652eda812bad428d7abe591f81a40433339c4c5088013d3b1e6aa96fc3c2faf"
+        },
+        {
+          "updates": 100,
+          "iteration": 11799,
+          "path": "/home/shanghun1404/v151_ros2/targeted_training_jobs/598/guide_v151_targeted_load/2026-10-01_01-59-47_339_fixed04_flatrough_w0p1_lr1e-5/pilot_update_0100.pt",
+          "sha256": "be59c031fbcebf0650a0f6e9171b0469a92c5a8c542d8ffa3ad03ad2561da310"
+        }
+      ],
+      "nonfinite_steps": 0,
+      "rated_load_weight": -0.1,
+      "actual_targeted_scope": {
+        "command_class": "UniformVelocityCommand",
+        "num_environments": 512,
+        "command_min": [
+          0.0,
+          0.4000000059604645,
+          0.0
+        ],
+        "command_max": [
+          0.0,
+          0.4000000059604645,
+          0.0
+        ],
+        "command_ranges": {
+          "x": [
+            0.0,
+            0.0
+          ],
+          "y": [
+            0.4,
+            0.4
+          ],
+          "yaw": [
+            0.0,
+            0.0
+          ]
+        },
+        "command_module": "isaaclab.envs.mdp.commands.velocity_command",
+        "terrain_generator_class": "TerrainGeneratorCfg",
+        "terrain_classes": {
+          "flat": "HfRandomUniformTerrainCfg",
+          "random_rough": "HfRandomUniformTerrainCfg"
+        },
+        "terrain_proportions": {
+          "flat": 0.5,
+          "random_rough": 0.5
+        },
+        "terrain_noise_ranges": {
+          "flat": [
+            0.0,
+            0.0
+          ],
+          "random_rough": [
+            0.02,
+            0.1
+          ]
+        },
+        "difficulty_range": [
+          0.4444444444444444,
+          0.4444444444444444
+        ],
+        "curriculum_enabled": false,
+        "terrain_origins_shape": [
+          1,
+          128,
+          3
+        ],
+        "environment_terrain_column_counts": {
+          "0": 4,
+          "1": 4,
+          "2": 4,
+          "3": 4,
+          "4": 4,
+          "5": 4,
+          "6": 4,
+          "7": 4,
+          "8": 4,
+          "9": 4,
+          "10": 4,
+          "11": 4,
+          "12": 4,
+          "13": 4,
+          "14": 4,
+          "15": 4,
+          "16": 4,
+          "17": 4,
+          "18": 4,
+          "19": 4,
+          "20": 4,
+          "21": 4,
+          "22": 4,
+          "23": 4,
+          "24": 4,
+          "25": 4,
+          "26": 4,
+          "27": 4,
+          "28": 4,
+          "29": 4,
+          "30": 4,
+          "31": 4,
+          "32": 4,
+          "33": 4,
+          "34": 4,
+          "35": 4,
+          "36": 4,
+          "37": 4,
+          "38": 4,
+          "39": 4,
+          "40": 4,
+          "41": 4,
+          "42": 4,
+          "43": 4,
+          "44": 4,
+          "45": 4,
+          "46": 4,
+          "47": 4,
+          "48": 4,
+          "49": 4,
+          "50": 4,
+          "51": 4,
+          "52": 4,
+          "53": 4,
+          "54": 4,
+          "55": 4,
+          "56": 4,
+          "57": 4,
+          "58": 4,
+          "59": 4,
+          "60": 4,
+          "61": 4,
+          "62": 4,
+          "63": 4,
+          "64": 4,
+          "65": 4,
+          "66": 4,
+          "67": 4,
+          "68": 4,
+          "69": 4,
+          "70": 4,
+          "71": 4,
+          "72": 4,
+          "73": 4,
+          "74": 4,
+          "75": 4,
+          "76": 4,
+          "77": 4,
+          "78": 4,
+          "79": 4,
+          "80": 4,
+          "81": 4,
+          "82": 4,
+          "83": 4,
+          "84": 4,
+          "85": 4,
+          "86": 4,
+          "87": 4,
+          "88": 4,
+          "89": 4,
+          "90": 4,
+          "91": 4,
+          "92": 4,
+          "93": 4,
+          "94": 4,
+          "95": 4,
+          "96": 4,
+          "97": 4,
+          "98": 4,
+          "99": 4,
+          "100": 4,
+          "101": 4,
+          "102": 4,
+          "103": 4,
+          "104": 4,
+          "105": 4,
+          "106": 4,
+          "107": 4,
+          "108": 4,
+          "109": 4,
+          "110": 4,
+          "111": 4,
+          "112": 4,
+          "113": 4,
+          "114": 4,
+          "115": 4,
+          "116": 4,
+          "117": 4,
+          "118": 4,
+          "119": 4,
+          "120": 4,
+          "121": 4,
+          "122": 4,
+          "123": 4,
+          "124": 4,
+          "125": 4,
+          "126": 4,
+          "127": 4
+        },
+        "terrain_levels_min_max": [
+          0,
+          0
+        ]
+      },
+      "source_contract_available": true
+    }
+  },
+  "targeted_candidates": {
+    "candidate25": {
+      "status": "rejected_flat",
+      "failed_gates": [
+        "command_tracking"
+      ],
+      "mean_joint_rms_change_percent": -1.8616235985210672,
+      "absolute_power_change_percent": -1.112129384818028,
+      "command_speed_mae_m_s": 0.15626314930730067,
+      "baseline_command_speed_mae_m_s": 0.0992773066262099,
+      "rough_evaluated": false
+    },
+    "candidate50": {
+      "status": "rejected_flat",
+      "failed_gates": [
+        "command_tracking"
+      ],
+      "mean_joint_rms_change_percent": -3.4694480635966696,
+      "absolute_power_change_percent": -6.539845848855208,
+      "command_speed_mae_m_s": 0.12249195357958835,
+      "baseline_command_speed_mae_m_s": 0.0992773066262099,
+      "rough_evaluated": false
+    },
+    "candidate100": {
+      "status": "rejected_flat",
+      "failed_gates": [
+        "command_tracking"
+      ],
+      "mean_joint_rms_change_percent": -8.538574158114077,
+      "absolute_power_change_percent": -15.741162559936805,
+      "command_speed_mae_m_s": 0.12319481859498774,
+      "baseline_command_speed_mae_m_s": 0.0992773066262099,
+      "rough_evaluated": false
+    }
+  },
+  "adoption_confirmed": false,
+  "display_policy": "baseline339",
+  "comparison600_status": "완료",
+  "latest_full_sequence": {
+    "job": "625",
+    "status": "성공"
+  },
+  "latest_stairs": {
+    "job": "602",
+    "status": "실패"
+  },
+  "source_sha256": {
+    "comparison/594/comparison_summary.json": "1d48eab62869db4b78ddacdbfdea8dd3980ca4a9b003563e97a35cf4ddcf21ed",
+    "comparison/600/comparison_summary.json": "aa8dc9e6e15197e2cd11b8dd1c671a1b94c8cf55967dc24a508e3e8961e6f8f2",
+    "comparison/594/collision_incident.json": "bd2c429ee1b71ac14d55ae9fc3c84bcecb3019dbd1109c5b0c7209069281c26f",
+    "analysis/reconstructed_collision/summary.json": "95510c7171809e7483b11e313c4e6a4af9f1e93e402ee7f944a4aebf08693821",
+    "../motor_audit_20260930/specs/motors.json": "76e6eb3972a68cc93bbd9e3ee53d528118b5b8b189be5a1353931519bab20a85",
+    "static_pose_search.json": "8ab24221b38284b6fbef93a8f53f1cf693702037bfbc83f60f43169ec5d88851",
+    "training/evaluation_plan.json": "c173f2eb34d2d933998b1e460c55d8fd087cd18c11cd42a176546efd0d27a838",
+    "analysis/integration_reports/integration_591.json": "0c3d2d3f96c7672c692bb256a8b1b8049b66b9837cd8f0b65e117b88d2d100b6",
+    "integration/591/result.json": "6910460286147ed71932c51be4b1b9b4cb026d90da9a2a1475732f15ce11e361",
+    "analysis/integration_reports/integration_593.json": "bf602dd824a7eea737cf66a47da82eb0f31e172288ddeec28b4c498e2b3ff567",
+    "integration/593/result.json": "9d9c034721b98831856db938cfb7613f5ba4b3338c89b9b1c483184d145cb551",
+    "integration/593/result.npz": "739254f7759d4704311abdf3f68b603412e24ce0e6d031fbee484580cb9ae86a",
+    "analysis/integration_reports/integration_597.json": "a732f2bdf13d75a9d38d3104283df38b02047d336f0c6410bb3b74a37ae55671",
+    "integration/597/result.json": "dfabbab1acedde16e4e73f1508dab1e85248cefaa2607f5aaaf59c65215b3dbe",
+    "integration/597/result.npz": "9b6dbf0ddc76fd3ce5d42e1c0e3ea829dc49d619bdddf2f0b76538ba5dc9a64f",
+    "analysis/integration_reports/integration_599.json": "07613cd3dcbd3687d45c11324db7d9873b9218c6765d816ea69816d15f50a2b5",
+    "integration/599/result.json": "ef762b26864d54c9a52b23d13d4f9f82747daef63bf8a4afa2538ac3b7bf437b",
+    "integration/599/result.npz": "e15e7ad461251baf9c7b5552da315a1080ec78a1f5fb87c728cd5c570557fb02",
+    "analysis/integration_reports/integration_601.json": "3cb7a255aa909ce4462cdef9b3dc5808636fa2f91e7558b9971c7f61325ca591",
+    "integration/601/result.json": "7c3fdf524744b5d12fe1c0d429f90dbbfcf52d4a6ad386d1d524c904d098f632",
+    "integration/601/result.npz": "9a314f0f1f30a3e55ec6500fda5b479e1fec9613b9fb263a37535cdedb96aa3c",
+    "analysis/integration_reports/integration_602.json": "a5e8260d7662c177f83b9a00ceb50782b404af722b23663685e97bb1a6677497",
+    "integration/602/result.json": "acccf825ee725d84ebbb0c49e3120f8f4e00a0dc3467f92a858c5ffc4f719d92",
+    "analysis/stair_602.json": "b5907b893e145e36dd7cda3a2b806349ba170025f824f0d6f4abe970b95a8097",
+    "integration/616/result.json": "18fddbad3b4f20a44393581b776bdfc583f0d8cd3df8205c0b1c403fecbd6645",
+    "integration/617/result.json": "cf2a87950daec2419177749e23c9de04afc5495650e0addd54800e1385a8b41a",
+    "integration/618/result.json": "cf2a87950daec2419177749e23c9de04afc5495650e0addd54800e1385a8b41a",
+    "integration/620/result.json": "0d806185ac2a0d0cc380b0eba6cb0080bc02c742f08f2c2c430672c9b1a2142b",
+    "analysis/integration_reports/integration_621.json": "5d9482d6d78e4876c1df8a434bfbadefabda9aae2ac7cd333af8a8c69cbb7ef4",
+    "integration/621/result.json": "8fd65e6247d9b9b679e4e47ed04b89d94c9205eba9af45bb5c162c42f4cd9886",
+    "integration/621/result.npz": "a080bcf91df298496988d4d53b377549e7f60d17f2b67280c35dd9ace23a4dd8",
+    "analysis/integration_reports/integration_622.json": "82e83ac1266d9b3b3dd07a1a78911c53034e7818fd7e4830d52b517c8ad9b6c5",
+    "integration/622/result.json": "43635ccb46e6a01ec76f991e8650e37940d666c4bad2ae904eab2674720b3f67",
+    "integration/622/result.npz": "9092c355dafc20040440495acf972692095009534131d30cccb28b9c3cd90446",
+    "analysis/integration_reports/integration_623.json": "d0c3229cbfa22ebfe65bffa084d48adcb5f7b6f10df9f3e1598cc29dd93763cf",
+    "integration/623/result.json": "b12d938c6503240754e8b9bef877e7907e20bded45eebf6fecb978a2850e2bcf",
+    "integration/623/result.npz": "853025adc3783cee472ae4d939c73a50052d85d929c0023f6fd3ac2cf1ad9f1e",
+    "integration/624/startup_failure.json": "d62e6449e879f39a9cb9d5731369687ac2397b1167c79fc8d578eb76c2c8326d",
+    "analysis/integration_reports/integration_625.json": "7f6649960b7eb68efc05e02a68eee00cddb353bad95412eef785b990fdb4833e",
+    "integration/625/result.json": "6816eaf812bdb681a7df86ee6f6305d1f01b754ee06a356a371ae71584b82608",
+    "integration/625/result.npz": "a0bfe14abb1418694b481e8cda674fa27a0103780d4310db42a0f0674dbf0f4f",
+    "training/589/guide_v151_rated_load/2026-10-01_00-50-04_339_rated_squared_w0p02_lr1e-5/run_completed.json": "b5acbf15883d9db8a678ce731930c0d38fa38c2b491945ad5b93b042c26f7185",
+    "training/589/guide_v151_rated_load/2026-10-01_00-50-04_339_rated_squared_w0p02_lr1e-5/finetune_actual_contract.json": "a098526fc1471ce955e8e0a8a4b588c50159f05102cfa161402a6bca04eb81c3",
+    "training/598/guide_v151_targeted_load/2026-10-01_01-59-47_339_fixed04_flatrough_w0p1_lr1e-5/run_completed.json": "103ee3a43f277a1b805de1e6e8d2a29b8d9d40b9bd4d14df941a5955e76dc3e8",
+    "training/598/guide_v151_targeted_load/2026-10-01_01-59-47_339_fixed04_flatrough_w0p1_lr1e-5/finetune_actual_contract.json": "9235c5609ca368aa19a197c277102817518f98f8ed1e357c9754672e6e9e8b70",
+    "optimization_20261001/summary.json": "4272c9fb2c68f017a2462676958d4a49ba14cf8dfb79f5c8b1e4982d0d8b5d08",
+    "release_manifest.json": "165d0ea225f6707ad418211bffcd2736b9028d9c9fdf8257ede9d6d897a3dae1"
+  }
+}

@@ -1,0 +1,188 @@
+test_siso_channels_keep_cross_coupling_and_match_state_space (test_v16_model.DiscreteAlgebra.test_siso_channels_keep_cross_coupling_and_match_state_space) ... ok
+test_zoh_double_integrator_and_nonzero_initial_conditions (test_v16_model.DiscreteAlgebra.test_zoh_double_integrator_and_nonzero_initial_conditions) ... ok
+test_foot_point_jacobians_include_base_and_match_finite_difference (test_v16_model.RobotModel.test_foot_point_jacobians_include_base_and_match_finite_difference) ... ERROR
+test_joint_order_dimensions_total_mass_and_keyframe (test_v16_model.RobotModel.test_joint_order_dimensions_total_mass_and_keyframe) ... ERROR
+test_mass_spd_and_inverse_forward_roundtrip (test_v16_model.RobotModel.test_mass_spd_and_inverse_forward_roundtrip) ... ERROR
+test_fixed_mass_is_aggregated_once_and_armature_is_explicit (test_v16_model.SmallPhysicsFixture.test_fixed_mass_is_aggregated_once_and_armature_is_explicit) ... ERROR
+test_floating_base_has_no_virtual_actuator (test_v16_model.SmallPhysicsFixture.test_floating_base_has_no_virtual_actuator) ... ERROR
+test_intrinsic_euler_is_not_extrinsic_xyz (test_v16_model.SmallPhysicsFixture.test_intrinsic_euler_is_not_extrinsic_xyz) ... ok
+test_offset_axis_and_fixed_member_kinematics (test_v16_model.SmallPhysicsFixture.test_offset_axis_and_fixed_member_kinematics) ... ERROR
+test_rnea_aba_with_rotor_armature_and_damping (test_v16_model.SmallPhysicsFixture.test_rnea_aba_with_rotor_armature_and_damping) ... ERROR
+
+======================================================================
+ERROR: test_foot_point_jacobians_include_base_and_match_finite_difference (test_v16_model.RobotModel.test_foot_point_jacobians_include_base_and_match_finite_difference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 123, in setUp
+    self.fixed = self.module.build_model(os.environ["V16_MJCF"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 320, in build_model
+    return PhysicalModel(mjcf_path, floating_base=floating_base, joint_names=joint_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 185, in __init__
+    visit(world.find("body"), 0, pin.SE3.Identity())
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 179, in visit
+    self.model.addFrame(pin.Frame(name, joint_id, transform, pin.FrameType.BODY))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Boost.Python.ArgumentError: Python argument types in
+    Frame.__init__(Frame, str, int, SE3, FrameType)
+did not match C++ signature:
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type, pinocchio::InertiaTpl<double, 0> inertia)
+    __init__(_object* self, pinocchio::FrameTpl<double, 0> other)
+    __init__(_object* self)
+
+======================================================================
+ERROR: test_joint_order_dimensions_total_mass_and_keyframe (test_v16_model.RobotModel.test_joint_order_dimensions_total_mass_and_keyframe)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 123, in setUp
+    self.fixed = self.module.build_model(os.environ["V16_MJCF"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 320, in build_model
+    return PhysicalModel(mjcf_path, floating_base=floating_base, joint_names=joint_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 185, in __init__
+    visit(world.find("body"), 0, pin.SE3.Identity())
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 179, in visit
+    self.model.addFrame(pin.Frame(name, joint_id, transform, pin.FrameType.BODY))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Boost.Python.ArgumentError: Python argument types in
+    Frame.__init__(Frame, str, int, SE3, FrameType)
+did not match C++ signature:
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type, pinocchio::InertiaTpl<double, 0> inertia)
+    __init__(_object* self, pinocchio::FrameTpl<double, 0> other)
+    __init__(_object* self)
+
+======================================================================
+ERROR: test_mass_spd_and_inverse_forward_roundtrip (test_v16_model.RobotModel.test_mass_spd_and_inverse_forward_roundtrip)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 123, in setUp
+    self.fixed = self.module.build_model(os.environ["V16_MJCF"])
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 320, in build_model
+    return PhysicalModel(mjcf_path, floating_base=floating_base, joint_names=joint_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 185, in __init__
+    visit(world.find("body"), 0, pin.SE3.Identity())
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 179, in visit
+    self.model.addFrame(pin.Frame(name, joint_id, transform, pin.FrameType.BODY))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Boost.Python.ArgumentError: Python argument types in
+    Frame.__init__(Frame, str, int, SE3, FrameType)
+did not match C++ signature:
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type, pinocchio::InertiaTpl<double, 0> inertia)
+    __init__(_object* self, pinocchio::FrameTpl<double, 0> other)
+    __init__(_object* self)
+
+======================================================================
+ERROR: test_fixed_mass_is_aggregated_once_and_armature_is_explicit (test_v16_model.SmallPhysicsFixture.test_fixed_mass_is_aggregated_once_and_armature_is_explicit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 64, in test_fixed_mass_is_aggregated_once_and_armature_is_explicit
+    model = self.build()
+            ^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 49, in build
+    return self.module.build_model(self.path, floating_base=floating, joint_names=("hinge",))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 320, in build_model
+    return PhysicalModel(mjcf_path, floating_base=floating_base, joint_names=joint_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 185, in __init__
+    visit(world.find("body"), 0, pin.SE3.Identity())
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 179, in visit
+    self.model.addFrame(pin.Frame(name, joint_id, transform, pin.FrameType.BODY))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Boost.Python.ArgumentError: Python argument types in
+    Frame.__init__(Frame, str, int, SE3, FrameType)
+did not match C++ signature:
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type, pinocchio::InertiaTpl<double, 0> inertia)
+    __init__(_object* self, pinocchio::FrameTpl<double, 0> other)
+    __init__(_object* self)
+
+======================================================================
+ERROR: test_floating_base_has_no_virtual_actuator (test_v16_model.SmallPhysicsFixture.test_floating_base_has_no_virtual_actuator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 72, in test_floating_base_has_no_virtual_actuator
+    model = self.build(True)
+            ^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 49, in build
+    return self.module.build_model(self.path, floating_base=floating, joint_names=("hinge",))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 320, in build_model
+    return PhysicalModel(mjcf_path, floating_base=floating_base, joint_names=joint_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 185, in __init__
+    visit(world.find("body"), 0, pin.SE3.Identity())
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 179, in visit
+    self.model.addFrame(pin.Frame(name, joint_id, transform, pin.FrameType.BODY))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Boost.Python.ArgumentError: Python argument types in
+    Frame.__init__(Frame, str, int, SE3, FrameType)
+did not match C++ signature:
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type, pinocchio::InertiaTpl<double, 0> inertia)
+    __init__(_object* self, pinocchio::FrameTpl<double, 0> other)
+    __init__(_object* self)
+
+======================================================================
+ERROR: test_offset_axis_and_fixed_member_kinematics (test_v16_model.SmallPhysicsFixture.test_offset_axis_and_fixed_member_kinematics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 53, in test_offset_axis_and_fixed_member_kinematics
+    model = self.build()
+            ^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 49, in build
+    return self.module.build_model(self.path, floating_base=floating, joint_names=("hinge",))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 320, in build_model
+    return PhysicalModel(mjcf_path, floating_base=floating_base, joint_names=joint_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 185, in __init__
+    visit(world.find("body"), 0, pin.SE3.Identity())
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 179, in visit
+    self.model.addFrame(pin.Frame(name, joint_id, transform, pin.FrameType.BODY))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Boost.Python.ArgumentError: Python argument types in
+    Frame.__init__(Frame, str, int, SE3, FrameType)
+did not match C++ signature:
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type, pinocchio::InertiaTpl<double, 0> inertia)
+    __init__(_object* self, pinocchio::FrameTpl<double, 0> other)
+    __init__(_object* self)
+
+======================================================================
+ERROR: test_rnea_aba_with_rotor_armature_and_damping (test_v16_model.SmallPhysicsFixture.test_rnea_aba_with_rotor_armature_and_damping)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 84, in test_rnea_aba_with_rotor_armature_and_damping
+    model = self.build(True)
+            ^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 49, in build
+    return self.module.build_model(self.path, floating_base=floating, joint_names=("hinge",))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 320, in build_model
+    return PhysicalModel(mjcf_path, floating_base=floating_base, joint_names=joint_names)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 185, in __init__
+    visit(world.find("body"), 0, pin.SE3.Identity())
+  File "/home/shanghun1404/v16_12dof_model/model/config/v16_physical_model.py", line 179, in visit
+    self.model.addFrame(pin.Frame(name, joint_id, transform, pin.FrameType.BODY))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Boost.Python.ArgumentError: Python argument types in
+    Frame.__init__(Frame, str, int, SE3, FrameType)
+did not match C++ signature:
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type)
+    __init__(_object*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > name, unsigned long parent_joint, unsigned long parent_frame, pinocchio::SE3Tpl<double, 0> placement, pinocchio::FrameType type, pinocchio::InertiaTpl<double, 0> inertia)
+    __init__(_object* self, pinocchio::FrameTpl<double, 0> other)
+    __init__(_object* self)
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.168s
+
+FAILED (errors=7)

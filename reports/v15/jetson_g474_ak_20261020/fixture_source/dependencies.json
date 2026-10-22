@@ -1,0 +1,14 @@
+{
+  "hal": {
+    "url": "https://github.com/STMicroelectronics/stm32g4xx-hal-driver",
+    "commit": "a6001282dfacfff57e9710250f15e4333b578865"
+  },
+  "device": {
+    "url": "https://github.com/STMicroelectronics/cmsis-device-g4",
+    "commit": "626ee412334a5ed2e5b320af5a8d77d69f03a558"
+  },
+  "CMSIS_Core": "Existing ST CMSIS core headers copied from the H533 fixture; archive is in the task vendor directory",
+  "compiler": "arm-none-eabi-gcc 13.2.1 on Jetson",
+  "backup_sha256": "06c9c130cd6f5ebc60d6265e0926ecd9369b326593a6c166a21c6739b024a35f",
+  "backup_path": "/home/scienceowl/Downloads/jetson_setup/g474_can_20261020/original_flash_512k.bin"
+}

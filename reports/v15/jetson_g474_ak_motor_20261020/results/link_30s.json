@@ -1,0 +1,11 @@
+{
+  "port": "/dev/serial/by-id/usb-STMicroelectronics_STLINK-V3_004F002D3235511137333439-if02",
+  "session": 2072618647,
+  "gate_test": false,
+  "capability": 1,
+  "disabled_commands": 6000,
+  "schedule_late_over_5ms": 0,
+  "feedback_frames": 0,
+  "armed_feedback": 0,
+  "fault_flags_seen": []
+}

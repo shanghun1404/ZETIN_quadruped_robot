@@ -1,0 +1,67 @@
+{
+  "candidate": {
+    "label": "g090_lpf25",
+    "guard_fraction": 0.9,
+    "cutoff_hz": 25.0
+  },
+  "manifest_sha256": "216b4f9ff3a5108f39364d3886a80cd8a938109d6e19e883b1aca37b6554d3b0",
+  "scenarios": {
+    "flat": {
+      "gates": {
+        "survival": true,
+        "progress": true,
+        "command_tracking": true,
+        "rough_corridor": true,
+        "rough_heading": true,
+        "rms_not_increased": true,
+        "power_not_increased": true,
+        "limit_demand_improved": true
+      },
+      "ratios_to_baseline": {
+        "rms": 0.9949585527895097,
+        "power": 0.9979291732735261,
+        "above80": 1.1517506819625574,
+        "peak_fraction": 0.9135666414094444,
+        "p99_fraction_mean": 0.9432660028167091
+      },
+      "pass": true,
+      "baseline_hashes": {
+        "main339_flat_seed42.json": "63a414245bed794980605ecbf25802741fd5a89d117b60c9c904b53fd3556e7e",
+        "main339_flat_seed42_trace_audit.npz": "af149a55a3d5e35986f14ac9b6c89fb831a13d55f2a12e311f282d9d9cfc73d0"
+      },
+      "candidate_hashes": {
+        "g090_lpf25_flat_seed42.json": "f460c559f64a684a890c3790c53f7f1bc63d235336e49cb43f1e94be13b803fa",
+        "g090_lpf25_flat_seed42_trace_audit.npz": "1e9038fcb8e1e0169c1724c07c9b7814d659066298ab8637a6174bf3ad51a0c7"
+      }
+    },
+    "rough": {
+      "gates": {
+        "survival": true,
+        "progress": true,
+        "command_tracking": true,
+        "rough_corridor": true,
+        "rough_heading": true,
+        "rms_not_increased": true,
+        "power_not_increased": false,
+        "limit_demand_improved": true
+      },
+      "ratios_to_baseline": {
+        "rms": 0.9663504589068598,
+        "power": 1.0079870366611907,
+        "above80": 1.0852935258156111,
+        "peak_fraction": 0.9236586127536072,
+        "p99_fraction_mean": 0.917554263622084
+      },
+      "pass": false,
+      "baseline_hashes": {
+        "main339_rough_seed42.json": "bd6c7b639ea413a3f80f3f506ea5858cb32403204e3d1eb8985802ab98d9117f",
+        "main339_rough_seed42_trace_audit.npz": "e4513d68317bfe7bbddef7ee7229272df6469b574346c7b0f99a4141361a745c"
+      },
+      "candidate_hashes": {
+        "g090_lpf25_rough_seed42.json": "f555eb65d14c2a7856ff8c1f3036ea0a43732e39e6a9277adc6c2e89d5eb1c09",
+        "g090_lpf25_rough_seed42_trace_audit.npz": "5a81993927530ac7cf279a10880ffc9d02ad0fc92cfb0476ce92e470a66915c1"
+      }
+    }
+  },
+  "all_gates_pass": false
+}

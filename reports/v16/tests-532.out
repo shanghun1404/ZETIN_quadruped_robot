@@ -1,0 +1,22 @@
+ead73ad8db7afcbf9c6d48e86601e6f2b4a0f6440ab3c50cbe2f2ccf455e2914  run_v16_physics.py
+18c92b194e968e6b53925c1ac3631de0609d0dffb089cc0a45883ba7c4f5eba4  v16_controller_math.py
+baaddfb7067578fab156b865d19d27ae7232a357703c69e9a12c5ac7d9a0fec9  v16_physical_model.py
+872faa21580d8cf29437c4743e03be06c812a14c07794eafa5bffbd47296842b  derive_v16_discrete.py
+79e66c61b44e1d1019a533d71df76a12f6be2b4b56fe07ce34003a39d0e0b693  tests/test_v16_controller.py
+3dcd03bc25ff35b5cb21f01989772ffa7ef84490cf1220a8f13b9532d00c5b60  tests/test_v16_crawl.py
+385dc1170cf75ce71ec96a03ad8cfbeb7d141fb80ce2f74edc05828e1bae4489  tests/test_v16_model.py
+........................................................................ [ 15%]
+........................................................................ [ 31%]
+........................................................................ [ 47%]
+........................................................................ [ 62%]
+...sss.................................................................. [ 78%]
+........................................................................ [ 94%]
+..........................                                               [100%]
+=============================== warnings summary ===============================
+tests/test_v12_training.py::test_compute_distillation_batch_supports_real_gradient_optimization
+  /home/shanghun1404/v16_12dof_model/test_suite/tests/test_v12_training.py:82: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+  Consider using tensor.detach() first. (Triggered internally at /__w/pytorch/pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:820.)
+    initial = float(compute_distillation_batch(model, actor, batch)["total"])
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+455 passed, 3 skipped, 1 warning in 2.55s

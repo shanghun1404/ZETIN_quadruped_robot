@@ -1,0 +1,2 @@
+{"pid": 90523, "tid": 90523, "generation": 1, "start_ns": 18702755105129, "end_ns": 18702758819600, "wall_ms": 3.714471, "thread_cpu_ms": 3.680608, "collected": 3}
+{"pid": 90523, "tid": 90523, "generation": 2, "start_ns": 18702823456230, "end_ns": 18702858274049, "wall_ms": 34.817819, "thread_cpu_ms": 34.2288, "collected": 0}

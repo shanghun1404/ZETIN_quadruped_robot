@@ -1,0 +1,177 @@
+{
+  "schema": 1,
+  "scenario": "flat",
+  "seed": 42,
+  "failure": null,
+  "completed": true,
+  "seconds_recorded": 28.0,
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "geometry": {},
+  "drive_gain_checks": [
+    {
+      "stamp_ns": 0,
+      "kp": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "kd": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    },
+    {
+      "stamp_ns": 8000000000,
+      "kp": [
+        [
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0
+        ]
+      ],
+      "kd": [
+        [
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ]
+      ]
+    }
+  ],
+  "reset_after_initialization": false,
+  "terminal_position": [
+    -4.286954879760742,
+    11.586339950561523,
+    0.44506195187568665
+  ],
+  "terminal_quaternion": [
+    0.9968891143798828,
+    -0.0022519216872751713,
+    0.03567260876297951,
+    0.07024501264095306
+  ],
+  "torque_semantics": "hybrid: feedforward command at zero gains; instantaneous implicit PD estimate when gains nonzero, not measured PhysX drive force",
+  "torque_rms": [
+    8.912371635437012,
+    11.2550630569458,
+    24.97245216369629,
+    9.173564910888672,
+    9.25246810913086,
+    20.437225341796875,
+    5.793647766113281,
+    11.698624610900879,
+    25.91805648803711,
+    8.189362525939941,
+    11.619514465332031,
+    25.6490421295166
+  ],
+  "torque_peak": [
+    24.552005767822266,
+    47.5200080871582,
+    47.52001953125,
+    24.552001953125,
+    35.35386657714844,
+    47.52001953125,
+    23.960956573486328,
+    38.494224548339844,
+    47.52001953125,
+    24.552001953125,
+    46.79527282714844,
+    47.52001953125
+  ],
+  "rated_exceed_fraction": [
+    0.26321428571428573,
+    0.11964285714285715,
+    0.4755357142857143,
+    0.29,
+    0.05267857142857143,
+    0.32625,
+    0.15107142857142858,
+    0.15642857142857142,
+    0.6185714285714285,
+    0.29928571428571427,
+    0.08160714285714285,
+    0.5644642857142858
+  ],
+  "mean_absolute_power": 109.56024932861328,
+  "min_interleg_gap_m": 0.04435784218021122,
+  "negative_gap_fraction": 0.0,
+  "contact_pair_force_max_N": 0.0,
+  "min_leg_trunk_proxy_gap_m": -0.02,
+  "trunk_proxy_overlap_fraction": 0.69,
+  "collision_scope": "8 thigh/calf capsules cross-leg pairs; adjacent same-leg and leg-ground filtered; no trunk collider in V14 asset",
+  "final_position": [
+    -4.285519599914551,
+    11.582515716552734,
+    0.44503262639045715
+  ],
+  "modes": [
+    "BLEND_WALK",
+    "BRAKE",
+    "RISE",
+    "SIT",
+    "STABILIZE",
+    "STAND",
+    "WALK"
+  ],
+  "compute_ms_p50_p99": [
+    0.2792435116134584,
+    70.10221242031548
+  ],
+  "demo_sequence_required": true,
+  "task_success": false
+}

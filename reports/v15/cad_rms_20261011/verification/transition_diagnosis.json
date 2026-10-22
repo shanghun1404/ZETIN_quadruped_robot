@@ -1,0 +1,21 @@
+{
+  "source_new": "suite_jobs/2340/results/sit_rise_walk_stop_sit",
+  "source_old": "../cad_finetune_20261011/round2/suite_jobs/2335/results/sit_rise_walk_stop_sit",
+  "policy_weight_zero_s": 18.3,
+  "new_support_feet_after_handover": 2,
+  "new_support_legs": [
+    "FL",
+    "RR"
+  ],
+  "new_missing_touchdown_legs": [
+    "FR",
+    "RL"
+  ],
+  "old_recovered_four_feet_s": 18.02,
+  "fall_s": 19.525,
+  "first_self_contact_s": 19.515,
+  "new_max_nonadjacent_contact_n": 1527.929931640625,
+  "deep_case_root_cause": "Same support loss precedes landing IK error; controller exit subsequently causes ROS2 timeout",
+  "hypothesis": "Forward/zero actor mean retention restores compatibility with frozen WBC handover",
+  "confirmed_fix": false
+}

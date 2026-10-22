@@ -1,0 +1,108 @@
+{
+  "schema": 2,
+  "generation": 2,
+  "best_score": -9698.549859523773,
+  "best_parameters": [
+    9.462856440652038,
+    1.0749609236189683,
+    70.0184085434888,
+    11.580356906992057,
+    57.059262876626676,
+    15.165973620125346,
+    1.1697275029323693,
+    0.1164844661991247,
+    0.06941101137923747,
+    0.8148211695862633,
+    0.9904238154451328,
+    0.13725643251224065
+  ],
+  "parameter_names": [
+    "joint_frequency_rad_s",
+    "joint_damping_ratio",
+    "body_position_gain",
+    "body_velocity_gain",
+    "body_attitude_gain",
+    "body_angular_gain",
+    "period_s",
+    "step_length_m",
+    "step_height_m",
+    "duty_factor",
+    "force_scale",
+    "posture_gain"
+  ],
+  "mean": [
+    12.361241785283418,
+    1.0357213330059492,
+    76.17637804654188,
+    10.271386441514895,
+    84.06678635012521,
+    10.468161462419324,
+    1.126302612509801,
+    0.09439592306498132,
+    0.03867499294355947,
+    0.7734418875802354,
+    0.9925707854617516,
+    0.21825400289300784
+  ],
+  "std": [
+    2.2980380711345596,
+    0.15599991708263392,
+    19.831896240147216,
+    2.868853507812622,
+    34.421588112536426,
+    2.802910349244987,
+    0.06611151621343125,
+    0.026688198978276657,
+    0.01703346124585039,
+    0.04109482629856292,
+    0.07748226636574757,
+    0.08739812603846622
+  ],
+  "training_seed": 51,
+  "rollout_seconds": 6.0,
+  "control_dt_s": 0.02,
+  "speed_command_m_s": 0.25,
+  "effort_fraction": 0.9,
+  "controller": "model",
+  "rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 171272246401982404805267867651516875282,
+      "inc": 33119895734852443892069156662266824349
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "resumed_checkpoint_sha256": null,
+  "selection_method": "CEM population training score; requires separate holdout evaluation",
+  "history": [
+    {
+      "generation": 0,
+      "score_max": -9698.571441173553,
+      "score_mean": -9791.486334325746,
+      "survived": 0,
+      "progress_best_m": 0.5714268684387207,
+      "power_best_w_per_joint": 4.409043312072754,
+      "seconds_elapsed": 7.005029790001572
+    },
+    {
+      "generation": 1,
+      "score_max": -9698.549859523773,
+      "score_mean": -9764.438100093976,
+      "survived": 0,
+      "progress_best_m": 0.5725059509277344,
+      "power_best_w_per_joint": 4.492125034332275,
+      "seconds_elapsed": 13.80524776999664
+    },
+    {
+      "generation": 2,
+      "score_max": -9700.533918142319,
+      "score_mean": -9739.198471750133,
+      "survived": 0,
+      "progress_best_m": 0.57330322265625,
+      "power_best_w_per_joint": 4.471221923828125,
+      "seconds_elapsed": 20.57156324099924
+    }
+  ],
+  "manifest_sha256": "9c3bc83fd92ec4ff3a2b4830fcc755c19d18f431fa00293be118e378a93e7a77"
+}

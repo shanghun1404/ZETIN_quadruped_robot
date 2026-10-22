@@ -1,0 +1,20 @@
+{
+  "SHA256SUMS": "b9aa21fa63e48481091fd8eacac58b66bbbcf006662d5d17b1ac4882b3203921",
+  "SHA256SUMS.before_serial_20261017": "e6229ef9255cc70cbe6c861839ada1d21ee552f808359b972736fe5d5749de9a",
+  "audit_hour.py": "d271a1fb37b256000b94d78f8452ac2b4011bb52e836b982dd4f17ee59764e1b",
+  "audited_result.json": "97315d2eab358c23395eedb9cf70e85c9444ac8d5d7fbf1c31cef60b3dbba13c",
+  "mcu-final.log": "d01c6b221e62708fed0347b2737cb88f5a24a9debb042807adca58f738e39904",
+  "nonblocking-native-tests.log": "da7bed0105f3c381a9c258d24b6e074515785f74a8715f17694f6999bd85127c",
+  "nonblocking-tests-final2.log": "823cf37f04d1f0aa3dd3ce92cc5bf891abeb33c9ebac7c18e37cd63cc7ae0571",
+  "plot_hour.py": "c2c5ba90a51b2a1afd769543e903e50c7f6584a0e5f98634f9cb2141410ddda0",
+  "report.html": "4709b86d343194beb1a8b4d6e0717bdbcddb4c42638863ce9570c61cc0f73192",
+  "ros_controller_benchmark.json": "aac6100beb95a46a126849be271fafa6384b84890fe739b121764cf282f53c1b",
+  "serial-hotfix-bundle-verification.log": "6035ff05a52e2be6250718c7f821f908dd4b2805ccd5dc3bbf5c026a5fd9d464",
+  "serial_hotfix_provenance.json": "0e1394a68c5950f8cf411644d7acf78b0071545cdf5508e9b107ca54ca9e4167",
+  "serial_nonblocking_hotfix.patch": "7d064f4a2c1598fa2bd133bc351b734fae1664508b420ee75aa809f8d8b7cf83",
+  "stress_result.json": "993944eb4b3f70c5049d8e8c81c6baaf6eac56938782db4f92399aea196982d1",
+  "stress_start.json": "a08f850fb9fcf176b916ec3719e173af3021cb20eaad5bcf93be5ca5a1ff96ff",
+  "timing_and_resources.png": "b6b2cb9377bff7a69d0ef2af0d789c0f1b9e8991659f71634869ba184dda7876",
+  "wbc_result.json": "12e69df87d42691472f5055d13049e79653b144a2c436ce465a57ed51e43264f",
+  "wbc_timing_audit.json": "64e164f11b95c37bc0c32db3f482d341c0a105f42ea5aece6b8ad1210c4bce98"
+}

@@ -1,0 +1,8 @@
+{
+  "target": "Jetson Orin Nano Super / Ubuntu24.04 / ROS2 Jazzy / NUCLEO-G474RE",
+  "serial_port": "/dev/ttyACM0",
+  "baud": 921600,
+  "calibration_verified": false,
+  "motors": [],
+  "notes": "Set stable /dev/serial/by-id path and twelve verified CAN bus/ID/direction/zero entries before enabling. MCU adapter independently gates real CAN output."
+}

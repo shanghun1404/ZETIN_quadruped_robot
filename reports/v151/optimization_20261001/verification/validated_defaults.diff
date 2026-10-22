@@ -1,0 +1,26 @@
+--- reports/v151/integration/625/source/ros2/v151_ros2_control/v151_ros2_control/controller_node.py
++++ ros2/v151_ros2_control/v151_ros2_control/controller_node.py
+@@ -37,8 +37,8 @@
+         self.output=dict(mode=self.initial,walk_weight=0.,height_fraction=0.,command=[0.,0.,0.])
+         self.nominal=np.tile([0.,-.55,1.1],4)
+         self.forward_shift=float(param('stand_forward_shift_m',.03))
+-        self.crouch_forward_shift=float(param('crouch_forward_shift_m',0.))
+-        self.crouch_shift_after_walk_only=bool(param('crouch_shift_after_walk_only',False))
++        self.crouch_forward_shift=float(param('crouch_forward_shift_m',.15))
++        self.crouch_shift_after_walk_only=bool(param('crouch_shift_after_walk_only',True))
+         if not np.isfinite(self.crouch_forward_shift):
+             raise ValueError('crouch_forward_shift_m must be finite')
+         self.stand_reference=self.standing.crouch_pose(0.,forward_shift_m=self.forward_shift)[0]
+--- reports/v151/integration/625/launcher.sbatch
++++ config/experiments/v151_20261001/ros2_eval.sbatch
+@@ -24,8 +24,8 @@
+ seed=${4:-42}
+ seconds=${5:-28}
+ forward_shift=${6:-0.03}
+-crouch_forward_shift=${7:-0.0}
+-crouch_shift_after_walk_only=${8:-false}
++crouch_forward_shift=${7:-0.15}
++crouch_shift_after_walk_only=${8:-true}
+ output=$root/evaluation_jobs/$SLURM_JOB_ID
+ mkdir -p "$output/source/config" "$output/source/ros2"
+ $python -c 'import json,os,sys; json.dump({k:os.environ.get(k) for k in ("RMW_IMPLEMENTATION","ROS_DOMAIN_ID","ROS_DISTRO","FASTDDS_BUILTIN_TRANSPORTS","SLURM_JOB_ID","SLURM_JOB_QOS")},open(sys.argv[1],"w"),indent=2)' "$output/runtime.json"

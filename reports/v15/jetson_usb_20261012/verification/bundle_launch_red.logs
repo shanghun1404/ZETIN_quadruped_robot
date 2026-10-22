@@ -1,0 +1,25 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________ test_run_rejects_modified_checkpoint_before_ros_launch ____________
+
+bundle_source = (PosixPath('/tmp/pytest-of-scienceowl/pytest-3/test_run_rejects_modified_chec0/source'), PosixPath('/tmp/pytest-of-sci...0/source/actor.pt'), PosixPath('/tmp/pytest-of-scienceowl/pytest-3/test_run_rejects_modified_chec0/source/student.pt'))
+tmp_path = PosixPath('/tmp/pytest-of-scienceowl/pytest-3/test_run_rejects_modified_chec0')
+
+    def test_run_rejects_modified_checkpoint_before_ros_launch(bundle_source, tmp_path):
+        module = load_builder()
+        archive = tmp_path / "portable.tar.gz"
+        build(module, bundle_source, archive)
+        bundle = extract(archive, tmp_path / "unpacked")
+        ros_setup = write_file(tmp_path, "jazzy/setup.bash", "true\n")
+        write_file(bundle, "workspace/install/setup.bash", "true\n")
+        (bundle / "checkpoints/model_15699.pt").write_text("wrong actor\n")
+        result = subprocess.run(["bash", str(bundle / "run.sh")], env=dict(os.environ, V15_ROS_SETUP=str(ros_setup)), capture_output=True, text=True)
+        assert result.returncode != 0
+>       assert "SHA256 mismatch: checkpoints/model_15699.pt" in result.stderr
+E       AssertionError: assert 'SHA256 mismatch: checkpoints/model_15699.pt' in '/tmp/pytest-of-scienceowl/pytest-3/test_run_rejects_modified_chec0/unpacked/v15_jetson_20261012/run.sh: line 16: exec: ros2: cannot execute: Is a directory\n'
+E        +  where '/tmp/pytest-of-scienceowl/pytest-3/test_run_rejects_modified_chec0/unpacked/v15_jetson_20261012/run.sh: line 16: exec: ros2: cannot execute: Is a directory\n' = CompletedProcess(args=['bash', '/tmp/pytest-of-scienceowl/pytest-3/test_run_rejects_modified_chec0/unpacked/v15_jetson...run_rejects_modified_chec0/unpacked/v15_jetson_20261012/run.sh: line 16: exec: ros2: cannot execute: Is a directory\n').stderr
+
+config/tests/test_v15_jetson_bundle.py:182: AssertionError
+=========================== short test summary info ============================
+FAILED config/tests/test_v15_jetson_bundle.py::test_run_rejects_modified_checkpoint_before_ros_launch
+1 failed, 8 deselected in 0.21s

@@ -1,0 +1,62 @@
+{
+  "evaluation_job": 542,
+  "verified_source_copies": [
+    {
+      "source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/v15_torque_capture.py",
+      "sha256": "042d40629c6a205ac392f47d6880fc79f19ab8d191ae6ae81c118b8b8b8f23de",
+      "verified_local_copy": "reports/v16/v15_torque/optimization/finetune536/eval_data/v15_torque_capture.py"
+    },
+    {
+      "source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/v15_torque_finetune_eval.sbatch",
+      "sha256": "e78bb726b043e8e34e91c26d2e59b6295e0718892efec68746cdb718238c0499",
+      "verified_local_copy": "reports/v16/v15_torque/optimization/finetune536/eval_data/v15_torque_finetune_eval.sbatch"
+    },
+    {
+      "source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/v15_torque_finetune_eval_capture.py",
+      "sha256": "a3ed3fad7091fd63f5c5bdd8a1947d26d8d6bec4db3b722bcdf5404cb4b3dda5",
+      "verified_local_copy": "reports/v16/v15_torque/optimization/finetune536/eval_data/v15_torque_finetune_eval_capture.py"
+    },
+    {
+      "source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/v15_torque_finetune_eval_manifest.json",
+      "sha256": "f54be770fe19dad77250c5b4d7c9b8aa38d507ff27848d461e2ab41d41c6686d",
+      "verified_local_copy": "reports/v16/v15_torque/optimization/finetune536/eval_data/v15_torque_finetune_eval_manifest.json"
+    },
+    {
+      "source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/v15_torque_finetune_eval_manifest.py",
+      "sha256": "9ffb26704efbe0efbe28e872d107dddcdf39174503060ab8a9865dc5bf9e49c2",
+      "verified_local_copy": "reports/v16/v15_torque/optimization/finetune536/eval_data/v15_torque_finetune_eval_manifest.py"
+    },
+    {
+      "source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/v15_torque_finetune_eval_manifest_template.json",
+      "sha256": "3e3f5324f858cf6c98a2c8f23099d29fdd4e1f0790a4df67f013238efe37e0cb",
+      "verified_local_copy": "reports/v16/v15_torque/optimization/finetune536/eval_data/v15_torque_finetune_eval_manifest_template.json"
+    },
+    {
+      "source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/v15_torque_finetune_eval_models.json",
+      "sha256": "22122fb6771002c539d352869c844e53304b15f687aafcdb97e0e2590c10243b",
+      "verified_local_copy": "reports/v16/v15_torque/optimization/finetune536/eval_data/v15_torque_finetune_eval_models.json"
+    },
+    {
+      "source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/training536_actual_contract.json",
+      "sha256": "d80a94140858b2f256db17f6ef61238907b01bde8f7686aad34c9b60a07d05b6",
+      "verified_local_copy": "reports/v16/v15_torque/optimization/finetune536/eval_data/training536_actual_contract.json"
+    },
+    {
+      "source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/training536_manifest.json",
+      "sha256": "849da80a0a5e063ceb1e96bd7e4fac768a75713bd6bc2e18f2ec4175873d7a78",
+      "verified_local_copy": "reports/v16/v15_torque/optimization/finetune536/eval_data/training536_manifest.json"
+    },
+    {
+      "source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/training536_run_completed.json",
+      "sha256": "55a469c1e1344cc0a1bb531451a968c2dfa10b9330ac49bb547ef49d0bdb19af",
+      "verified_local_copy": "reports/v16/v15_torque/optimization/finetune536/eval_data/training536_run_completed.json"
+    },
+    {
+      "source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/training536_source_sha256.txt",
+      "sha256": "6b0f0a02db5ff4741e8815acfde05203753910f5f2d00c4d1384efbb8c1735fa",
+      "verified_local_copy": "reports/v16/v15_torque/optimization/finetune536/eval_data/training536_source_sha256.txt"
+    }
+  ],
+  "independent_actor_bindings_verified": true,
+  "physics_results_complete": false
+}

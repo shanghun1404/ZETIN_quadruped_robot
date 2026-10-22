@@ -1,0 +1,61 @@
+{
+  "baseline": {
+    "guard_fraction": 0.99,
+    "cutoff_hz": 25.0,
+    "model": "339/model_11699",
+    "actor_sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33"
+  },
+  "candidates": [
+    {
+      "label": "pre339_g097_lpf23",
+      "guard_fraction": 0.97,
+      "cutoff_hz": 23.0,
+      "actor_sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33",
+      "role": "Frozen339 with actuation settings changed only"
+    },
+    {
+      "label": "adapt536_g097_lpf23",
+      "guard_fraction": 0.97,
+      "cutoff_hz": 23.0,
+      "actor_sha256": null,
+      "role": "536 model11949 trained from339 at the same actuation settings"
+    }
+  ],
+  "screening": {
+    "scenarios": [
+      "flat",
+      "rough"
+    ],
+    "seeds": [
+      42
+    ],
+    "num_envs": 32,
+    "seconds": 12.0,
+    "control_gate": {
+      "survival_at_least_baseline": true,
+      "progress_fraction_at_least": 0.9,
+      "absolute_command_speed_error_extra_allowance_m_s": 0.02,
+      "rough_corridor_kept_at_least_baseline": true,
+      "rough_mean_max_heading_error_extra_allowance_deg": 2.0
+    },
+    "torque_gate": {
+      "mean_joint_rms_ratio_at_most": 1.0,
+      "pooled_abs_power_ratio_at_most": 1.0,
+      "peak_or_p99_or_high_limit_occupancy_must_improve": true
+    }
+  },
+  "notes": [
+    "Gate values are experiment acceptance criteria, not motor specifications.",
+    "All control gates apply before torque ranking.",
+    "No retraining and no original config/evaluator/model changes.",
+    "RMS, saturation, power and slew are implicit actuator estimates; actual solver motor torque and thermal safety remain unknown."
+  ],
+  "comparison_design": {
+    "reference": "Original339 guard0.99 LPF25 from508 for every fixed acceptance gate",
+    "policy_adaptation_comparison": "pre339 and adapt536 share guard0.97 LPF23, actor differs",
+    "new_actor_hash_bound_from": "Verified536 run_completed + actual checkpoint bytes before evaluation",
+    "training_job": 536,
+    "expected_final_iteration": 11949,
+    "evaluation_submission_status": "Prepared only"
+  }
+}

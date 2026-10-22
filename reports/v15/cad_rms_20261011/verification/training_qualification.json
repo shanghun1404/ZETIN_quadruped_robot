@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "scalar_logs_finite": true,
+  "health_counters_checked": 600,
+  "nonfinite_and_divergence_maximum": 0,
+  "all_policy_parameters_finite": true,
+  "actor_changed_l2": 1.9100643396377563,
+  "preserved_tree_files": {
+    "assets": 4,
+    "ros2": 39,
+    "physical_model": 7
+  }
+}

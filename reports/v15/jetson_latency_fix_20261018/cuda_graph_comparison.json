@@ -1,0 +1,20 @@
+{
+  "max_action_error": 0.0,
+  "samples_compared": 32,
+  "device": "cuda:0",
+  "gc_enabled": true,
+  "eager": {
+    "mean_ms": 6.781147601,
+    "p99_ms": 6.989588819999999,
+    "max_ms": 9.806562,
+    "mean_thread_cpu_ms": 6.74493552,
+    "cuda_graph_enabled": false
+  },
+  "graph": {
+    "mean_ms": 2.1156762240000004,
+    "p99_ms": 2.74144473,
+    "max_ms": 2.975876,
+    "mean_thread_cpu_ms": 1.2357911680000002,
+    "cuda_graph_enabled": true
+  }
+}

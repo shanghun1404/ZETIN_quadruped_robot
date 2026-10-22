@@ -1,0 +1,14 @@
+[
+  "/opt/isaacsim-env/bin/python",
+  "-m",
+  "v15_cad_suite_controller",
+  "--ros-args",
+  "-r",
+  "__ns:=/v15cad/stairs_up_05cm",
+  "-p",
+  "actor_checkpoint:=/home/shanghun1404/v15_cad_20261011/train_jobs/2333/results/model_14699.pt",
+  "-p",
+  "student_checkpoint:=/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+  "-p",
+  "base_com_offset:=[0.010427819564938545, 0.015405300073325634, 0.06333552300930023]"
+]

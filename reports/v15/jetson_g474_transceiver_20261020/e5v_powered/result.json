@@ -1,0 +1,145 @@
+{
+  "recorded_utc": "2026-10-20T03:47:45.217189+00:00",
+  "physical_tx_rx_passed": true,
+  "normal_mode_delivery_verified": false,
+  "external_peer": false,
+  "part": "TJA1051T/3",
+  "user_confirmed_supplies": {
+    "e5v_v": 5,
+    "vio_v": 3.3
+  },
+  "firmware_version": 3,
+  "pin_map": {
+    "source": "User wiring diagram /tmp/codex-clipboard-Vv59Yl.png; ST UM2505 Table16 and STM32G474 datasheet AF table",
+    "capture_encoding": "low16 GPIOA IDR, high16 GPIOB IDR",
+    "can1": {
+      "tx": "PA12",
+      "tx_header": "CN10-12",
+      "rx": "PA11",
+      "rx_header": "CN10-14",
+      "af": 9
+    },
+    "can2": {
+      "tx": "PB13",
+      "tx_header": "CN10-30",
+      "rx": "PB12",
+      "rx_header": "CN10-16",
+      "af": 9
+    },
+    "can3": {
+      "tx": "PA15",
+      "tx_header": "CN7-17",
+      "rx": "PA8",
+      "rx_header": "CN10-23",
+      "af": 11
+    },
+    "power": {
+      "vio": "CN7-16 3V3",
+      "vcc_in_user_diagram": "CN7-6 E5V external supply input",
+      "board_5v": "CN7-18"
+    }
+  },
+  "modes": {
+    "mit": {
+      "physical_tx_frames": 24,
+      "physical_rx_frames": 24,
+      "physical_by_bus": {
+        "1": {
+          "tx_verified": 8,
+          "rx_verified": 8,
+          "rx_low_samples": 2580
+        },
+        "2": {
+          "tx_verified": 8,
+          "rx_verified": 8,
+          "rx_low_samples": 3207
+        },
+        "3": {
+          "tx_verified": 8,
+          "rx_verified": 8,
+          "rx_low_samples": 3180
+        }
+      },
+      "measured_seconds": 30.000074117,
+      "measured_commands": 6000,
+      "total_commands": 6400,
+      "final_ack": 6400,
+      "host_errors": 0,
+      "uart_errors": 0,
+      "loopback_can_errors": 0,
+      "virtual_angles_decoded": 76800,
+      "source_gaps": 0,
+      "host_schedule_late_over_5ms": 0,
+      "max_route_us": 1608.29375
+    },
+    "servo": {
+      "physical_tx_frames": 24,
+      "physical_rx_frames": 24,
+      "physical_by_bus": {
+        "1": {
+          "tx_verified": 8,
+          "rx_verified": 8,
+          "rx_low_samples": 2670
+        },
+        "2": {
+          "tx_verified": 8,
+          "rx_verified": 8,
+          "rx_low_samples": 2600
+        },
+        "3": {
+          "tx_verified": 8,
+          "rx_verified": 8,
+          "rx_low_samples": 2694
+        }
+      },
+      "measured_seconds": 30.000093025,
+      "measured_commands": 6000,
+      "total_commands": 6400,
+      "final_ack": 6400,
+      "host_errors": 0,
+      "uart_errors": 0,
+      "loopback_can_errors": 0,
+      "virtual_angles_decoded": 76800,
+      "source_gaps": 0,
+      "host_schedule_late_over_5ms": 3,
+      "max_route_us": 1684.8875
+    }
+  },
+  "normal_mode": {
+    "tx_prefixes": 12,
+    "rx_prefixes": 12,
+    "bus": [
+      {
+        "bus": 1,
+        "attempted": 4,
+        "completed": 0,
+        "lec": 3,
+        "error": "ACK error; no external peer",
+        "tec": 32
+      },
+      {
+        "bus": 2,
+        "attempted": 4,
+        "completed": 0,
+        "lec": 3,
+        "error": "ACK error; no external peer",
+        "tec": 32
+      },
+      {
+        "bus": 3,
+        "attempted": 4,
+        "completed": 0,
+        "lec": 3,
+        "error": "ACK error; no external peer",
+        "tec": 32
+      }
+    ]
+  },
+  "scope": "Physical transceiver self-echo and valid CAN prefixes confirmed. External ACK, motor response, and actual loaded angle tracking are untested. Continuous run counters use FDCAN external loopback with virtual AK replies.",
+  "sha256": {
+    "firmware/g474_can_fixture.c": "88099ad88607d60baf345cffb78ec8438b2fc76dbd3e86fe69dec09df744c9b5",
+    "firmware/g474_diag.h": "fc09a160289537d0555f095f618186ce012b091c5bf201307bd134be702244f4",
+    "build/g474_can_fixture.elf": "b635539ebce9328eab6bf1eff54d7ea5db1ab85afa9361b932957b5ca416bbe1",
+    "verify_capture.py": "7f7c398b5d7c5e320a7bc255c2514687ea89870c961b751c8081b1a652f2fb3e"
+  }
+}

@@ -1,0 +1,130 @@
+{
+  "job_id": "520",
+  "source_sha256": "8ef5712d8604110d1efc7ed92845bd83107e0ef42e1fa0f379448387c4793c6f",
+  "total_mass_kg": 45.451322469636764,
+  "checks": {
+    "fixed": {
+      "mass_symmetry_max_abs": 0.0,
+      "mass_eigenvalue_min": 0.02831430680526953,
+      "mass_eigenvalue_max": 0.22621492785693545,
+      "mass_condition_number": 7.989421369653129,
+      "raw_rnea_aba_max_abs": 1.3322676295501878e-14,
+      "armature_rnea_mass_solve_max_abs": 7.563394355258879e-15,
+      "foot_point_jacobian_fd_max_abs": 1.0028200492229189e-10,
+      "total_mass_error": 7.105427357601002e-15
+    },
+    "floating": {
+      "mass_symmetry_max_abs": 0.0,
+      "mass_eigenvalue_min": 0.0281796748753119,
+      "mass_eigenvalue_max": 45.53974130160825,
+      "mass_condition_number": 1616.0492093365256,
+      "raw_rnea_aba_max_abs": 2.7144952952085077e-14,
+      "armature_rnea_mass_solve_max_abs": 9.825473767932635e-15,
+      "foot_point_jacobian_fd_max_abs": 1.0028200492229189e-10,
+      "total_mass_error": 7.105427357601002e-15
+    },
+    "gravity_derivative_fd_vs_analytic_max_abs": 7.960219150504599e-10,
+    "gravity_derivative_symmetry_max_abs": 8.049116928532385e-10
+  },
+  "discretization": {
+    "T0.005": {
+      "period_s": 0.005,
+      "ode_vs_zoh_endpoint_max_abs": 2.123301534595612e-14,
+      "siso_vs_statespace_frequency_max_abs": 3.196681082381782e-14,
+      "siso_vs_statespace_frequency_max_relative": 1.7484040346948159e-12,
+      "scalar_difference_vs_statespace_response_max_abs": 8.909025218939437e-10,
+      "initial_condition_superposition_max_abs": 1.1796119636642288e-16,
+      "max_siso_denominator_degree": 6,
+      "continuous_eigenvalues_real_range": [
+        -52.81426842247321,
+        -0.15304029737407152
+      ],
+      "discrete_spectral_radius": 0.9992350912051264,
+      "polynomial_frequency_max_abs": 1.6239045003086438e-07,
+      "polynomial_frequency_max_relative": 9.750399751125987e-07
+    },
+    "T0.020": {
+      "period_s": 0.02,
+      "ode_vs_zoh_endpoint_max_abs": 2.0528717614709535e-14,
+      "siso_vs_statespace_frequency_max_abs": 1.1814913149962832e-14,
+      "siso_vs_statespace_frequency_max_relative": 6.921304189219731e-14,
+      "scalar_difference_vs_statespace_response_max_abs": 1.6975171268640565e-11,
+      "initial_condition_superposition_max_abs": 8.326672684688674e-17,
+      "max_siso_denominator_degree": 6,
+      "continuous_eigenvalues_real_range": [
+        -52.81426842247321,
+        -0.15304029737407152
+      ],
+      "discrete_spectral_radius": 0.996943873543488,
+      "polynomial_frequency_max_abs": 5.072301840202834e-10,
+      "polynomial_frequency_max_relative": 7.690930578868714e-10
+    }
+  },
+  "linearization_samples": {
+    "0.001": {
+      "max_joint_position_rad": 0.001,
+      "max_joint_velocity_rad_s": 0.001,
+      "sample_count": 30,
+      "torque_perturbation_max_Nm": 0.05,
+      "derivative_error_max_abs": 0.00026294409221022663
+    },
+    "0.01": {
+      "max_joint_position_rad": 0.01,
+      "max_joint_velocity_rad_s": 0.01,
+      "sample_count": 30,
+      "torque_perturbation_max_Nm": 0.05,
+      "derivative_error_max_abs": 0.003228248390576449
+    },
+    "0.05": {
+      "max_joint_position_rad": 0.05,
+      "max_joint_velocity_rad_s": 0.05,
+      "sample_count": 30,
+      "torque_perturbation_max_Nm": 0.05,
+      "derivative_error_max_abs": 0.06377533092532461
+    }
+  }
+}
+{
+  "slurm_job_id": "520",
+  "source_sha256": "8ef5712d8604110d1efc7ed92845bd83107e0ef42e1fa0f379448387c4793c6f",
+  "mujoco_version": "3.14.0",
+  "pinocchio_version": "2.7.0",
+  "source_body_count": 54,
+  "source_nq": 19,
+  "source_nv": 18,
+  "sample_count": 5,
+  "total_mass_kg": 45.45132246963676,
+  "total_mass_error": 7.105427357601002e-15,
+  "canonical_to_mujoco_v": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    15,
+    16,
+    17,
+    12,
+    13,
+    14
+  ],
+  "maximum_errors": {
+    "mass_max_abs": 1.4210854715202004e-14,
+    "bias_max_abs": 5.684341886080802e-14,
+    "fixed_mass_max_abs": 4.163336342344337e-16,
+    "fixed_gravity_max_abs": 1.1546319456101628e-14,
+    "body_position_max_abs": 4.440892098500626e-16,
+    "body_rotation_max_abs": 7.771561172376096e-16,
+    "point_jacobian_max_abs": 7.216449660063518e-16
+  },
+  "raw_bias_coordinate_difference_max_abs": 1.8016223709071821,
+  "conventions": "Base orientation identity; velocity values coincide, but acceleration coordinates differ: a_mj_linear=a_pin_linear+omega cross v_linear. Bias comparison subtracts M times this transport acceleration from Pinocchio bias. Joint canonical mappings explicit.",
+  "scope": "Source MJCF compiler comparison only; USD/PhysX comparison remains separate."
+}

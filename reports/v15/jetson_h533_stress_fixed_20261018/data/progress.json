@@ -1,0 +1,14 @@
+{
+  "elapsed_s": 3600.0,
+  "total_s": 3605.0,
+  "sensor_samples": 720001,
+  "command_publications": 719996,
+  "latest_mcu_ack": 719992,
+  "faults_during_stream": 0,
+  "planner_alive": true,
+  "command_alive": true,
+  "gateway_alive": true,
+  "wbc_alive": true,
+  "mode": null,
+  "updated_utc": "2026-10-17T16:24:51.521072+00:00"
+}

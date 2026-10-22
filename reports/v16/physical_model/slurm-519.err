@@ -1,0 +1,18 @@
+test_difference_equations_reproduce_mimo_input_response (test_v16_model.DiscreteAlgebra.test_difference_equations_reproduce_mimo_input_response) ... ok
+test_near_unit_poles_use_stable_modal_frequency_evaluation (test_v16_model.DiscreteAlgebra.test_near_unit_poles_use_stable_modal_frequency_evaluation) ... ok
+test_siso_channels_keep_cross_coupling_and_match_state_space (test_v16_model.DiscreteAlgebra.test_siso_channels_keep_cross_coupling_and_match_state_space) ... ok
+test_zoh_double_integrator_and_nonzero_initial_conditions (test_v16_model.DiscreteAlgebra.test_zoh_double_integrator_and_nonzero_initial_conditions) ... ok
+test_foot_point_jacobians_include_base_and_match_finite_difference (test_v16_model.RobotModel.test_foot_point_jacobians_include_base_and_match_finite_difference) ... ok
+test_joint_order_dimensions_total_mass_and_keyframe (test_v16_model.RobotModel.test_joint_order_dimensions_total_mass_and_keyframe) ... ok
+test_mass_spd_and_inverse_forward_roundtrip (test_v16_model.RobotModel.test_mass_spd_and_inverse_forward_roundtrip) ... ok
+test_velocity_constructor_composes_with_canonical_dynamics (test_v16_model.RobotModel.test_velocity_constructor_composes_with_canonical_dynamics) ... ok
+test_fixed_mass_is_aggregated_once_and_armature_is_explicit (test_v16_model.SmallPhysicsFixture.test_fixed_mass_is_aggregated_once_and_armature_is_explicit) ... ok
+test_floating_base_has_no_virtual_actuator (test_v16_model.SmallPhysicsFixture.test_floating_base_has_no_virtual_actuator) ... ok
+test_intrinsic_euler_is_not_extrinsic_xyz (test_v16_model.SmallPhysicsFixture.test_intrinsic_euler_is_not_extrinsic_xyz) ... ok
+test_offset_axis_and_fixed_member_kinematics (test_v16_model.SmallPhysicsFixture.test_offset_axis_and_fixed_member_kinematics) ... ok
+test_rnea_aba_with_rotor_armature_and_damping (test_v16_model.SmallPhysicsFixture.test_rnea_aba_with_rotor_armature_and_damping) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.194s
+
+OK

@@ -1,0 +1,7 @@
+Verified 92 payload SHA256 values.
+Parsed 52 Python files; shell syntax passed.
+CAD model: {'metadata': 'model/cad_model.json', 'path': 'model/quadruped_cad.xml', 'physical_body_count': 13, 'sha256': '914e645273bf5b89b9482007f42f489183f55a75d25f0ac8688aa0a728576678', 'source_total_mass_kg': 23.09449815750122}
+Deferred training imports: [{'function': 'make_v12_depth_camera_cfg', 'module': 'isaaclab', 'source': 'config/v12_camera.py'}, {'function': 'make_v13_depth_wrapper', 'module': 'isaaclab_rl', 'source': 'config/v13_depth_policy.py'}]
+Source repository HEAD: c87579975818119f582b70c332420e3e81d7b17e
+Actual-source repeat archive SHA256: ccdd021a4ff0fd0493f112532481b9b609736b9b847fe23ba1ac5374aa1e5b6e
+Archive size bytes: 14407820

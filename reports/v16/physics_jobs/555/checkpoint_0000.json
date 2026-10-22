@@ -1,0 +1,110 @@
+{
+  "schema": 2,
+  "generation": 0,
+  "best_score": 27.33177726905172,
+  "best_parameters": [
+    10.038816699948214,
+    1.0483070421041154,
+    84.34743608386259,
+    15.31242816474766,
+    26.488043312415325,
+    19.98388270670509,
+    3.4828111697323627,
+    0.14508735917538226,
+    0.017979652983714033,
+    0.816383620370224,
+    1.0,
+    0.1746923691649283
+  ],
+  "parameter_names": [
+    "joint_frequency_rad_s",
+    "joint_damping_ratio",
+    "body_position_gain",
+    "body_velocity_gain",
+    "body_attitude_gain",
+    "body_angular_gain",
+    "period_s",
+    "step_length_m",
+    "step_height_m",
+    "duty_factor",
+    "force_scale",
+    "posture_gain"
+  ],
+  "mean": [
+    11.982242328442672,
+    1.0088250123245253,
+    45.912882555101916,
+    13.678233777314762,
+    44.421794751187356,
+    14.9198701049556,
+    4.028759417301,
+    0.15554732240689567,
+    0.020368892518269965,
+    0.8217793375349173,
+    1.0,
+    0.11313054040203005
+  ],
+  "std": [
+    3.2986978186558367,
+    0.1755865961815028,
+    22.288673688520177,
+    3.02955219102952,
+    25.79879292760691,
+    4.240962023489575,
+    0.6896212483126858,
+    0.03211543842269259,
+    0.00443829874189197,
+    0.02258512823786236,
+    0.026800000000000008,
+    0.05714057729736053
+  ],
+  "training_seed": 51,
+  "rollout_seconds": 16.0,
+  "control_dt_s": 0.02,
+  "speed_command_m_s": 0.05,
+  "effort_fraction": 0.9,
+  "controller": "model",
+  "walk_axis_world": "y",
+  "contact_projection": true,
+  "gait_mode": "prepared_crawl",
+  "stance_point": "ground",
+  "joint_friction": 0.3,
+  "joint_dynamic_friction": null,
+  "joint_viscous_friction": null,
+  "controller_code_sha256": {
+    "run_v16_physics.py": "1b5fcd7c0eb632d5fbc754a8536c069ab8c17beec920c581dbedb02e065c4d34",
+    "v16_controller_math.py": "dce4085f0de3a6c72a5eb346c0c88fdc9b036a5f7ab5e2fc0ae329fd034aabaf",
+    "v16_crawl_math.py": "0f8cfd5574ecd129bafdaf7df8bb150878bf24434c38c04f75c0477e5725fa09",
+    "v16_force_qp.py": "d3d2e5f8d0391544afff7da9510eb43a1c0d216de0797c90a39785097c155f2e"
+  },
+  "force_allocator": "qp",
+  "rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 261391877014058921420680426369768863568,
+      "inc": 33119895734852443892069156662266824349
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "resumed_checkpoint_sha256": null,
+  "selection_method": "CEM population training score; requires separate holdout evaluation",
+  "history": [
+    {
+      "generation": 0,
+      "score_max": 27.33177726905172,
+      "score_mean": -4156.146618156631,
+      "survived": 40,
+      "progress_best_m": 0.21930837631225586,
+      "power_best_w_per_joint": 1.0953121185302734,
+      "seconds_elapsed": 34.09103196900105,
+      "completed_step_count_best": 3,
+      "liftoff_count_best": 3,
+      "winner_ended_alive": true,
+      "qp_infeasible_tick_fraction_best": 0.05000000074505806,
+      "qp_max_constraint_violation_best": 0.18923118710517883,
+      "qp_max_torque_violation_nm_best": 3.8828697204589844
+    }
+  ],
+  "manifest_sha256": "a42203ace5d5be857a07ca5965599841adada316d7bb6a4679f0414699cb616f"
+}

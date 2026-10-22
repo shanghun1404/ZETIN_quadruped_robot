@@ -1,0 +1,14 @@
+{
+  "candidate_sha256": "9a440065d0f93835abbf02278f79fff91aea95a18c3bf4020b83bb092f9e6db6",
+  "parent_actor_sha256": "07712abc8c261926744b57608e719603c35c5f18fc62228fac7130126ec6ec19",
+  "original_actor_sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33",
+  "original_actor_unchanged": true,
+  "actor_tensors": 8,
+  "actor_parameter_delta_l2": 1.4060084819793701,
+  "actor_parameter_max_abs_delta": 0.023769915103912354,
+  "all_policy_parameters_finite": true,
+  "std_min": 0.040640417486429214,
+  "std_max": 0.102597177028656,
+  "checkpoint_iteration": 15699,
+  "updates": 400
+}

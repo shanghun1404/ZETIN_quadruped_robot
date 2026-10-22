@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "posthoc": true,
+  "raw_verdict_modified": false,
+  "raw_task_success": true,
+  "raw_motion_success": true,
+  "raw_collision_checks_pass": true,
+  "raw_completed": true,
+  "raw_failure": null,
+  "raw_success_interpretation": "The raw non-demo task_success flag means completion plus collision checks; it does not establish stair ascent.",
+  "success_interpretation_override": "Use the separate posthoc directed-stair/full-flight verdicts below to assess ascent; original raw fields are preserved.",
+  "posthoc_directed_stair_task_success": false,
+  "posthoc_full_flight_task_success": false,
+  "collision_checks_pass": true,
+  "collision": {
+    "cross_leg_force_max_N": 0.0,
+    "cross_leg_capsule_minimum_m": 0.20498188370827783,
+    "same_leg_foot_box_minimum_m": 0.2838402915450138
+  },
+  "path": {
+    "per_environment": [
+      {
+        "env_id": 0,
+        "final_directed_progress_m": 0.8345410823822021,
+        "max_abs_cross_track_m": 0.10982859879732132,
+        "final_cross_track_m": 0.08661672472953796,
+        "max_abs_heading_error_deg": 10.471475456521658,
+        "final_heading_error_deg": 10.460592512966803,
+        "path_length_m": 1.0163251226853536,
+        "final_ground_change_m": 0.0,
+        "corridor_kept": true,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      }
+    ],
+    "directed_stair_success_count": 0,
+    "full_flight_success_count": 0,
+    "corridor_kept_count": 1,
+    "mean_final_directed_progress_m": 0.8345410823822021,
+    "mean_max_abs_cross_track_m": 0.10982859879732132,
+    "mean_max_abs_heading_error_deg": 10.471475456521658,
+    "criteria": {
+      "min_forward_m": 2.1,
+      "max_cross_track_m": 0.6,
+      "max_heading_error_deg": 60,
+      "ground_height_tolerance_m": 0.02,
+      "full_forward_m": 3.6
+    }
+  },
+  "step_height_m": 0.15714285714285717,
+  "full_rise_m": 1.1,
+  "terrain_center_xy_inferred_from_first_root_sample_m": [
+    0.0,
+    0.0
+  ],
+  "center_provenance": "guide_robot_cfg init_state XY=(0,0); evaluator reset XY range=(0,0); first recorded root pose precedes first physics step",
+  "ground_height_source": "analytically reconstructed inverted-pyramid terrain under recorded root XY; not measured ray/contact heights",
+  "final_geometry_derived_ground_rise_m": 0.0,
+  "maximum_geometry_derived_ground_rise_m": 0.0,
+  "final_root_height_change_m": -0.254888117313385,
+  "terrain_parameters": {
+    "size_m": [
+      8.0,
+      8.0
+    ],
+    "border_width_m": 1.0,
+    "step_width_m": 0.3,
+    "requested_platform_width_m": 3.0,
+    "generated_center_half_width_m": 1.2,
+    "rings": 6
+  },
+  "limitations": [
+    "Posthoc analysis; thresholds reuse existing v14_path_metrics.py but were not applied by the raw ROS2 evaluator.",
+    "Ground is reconstructed from the configured single-tile mesh and initial center assumption; actual terrain origins and ground rays were not recorded.",
+    "The geometry-derived ground height is under the root XY, not beneath each foot; this is not a measurement of foot support.",
+    "Same-leg negative gaps mean conservative foot-box proxy overlap, not confirmed physical mesh contact.",
+    "No new simulation, original result change, or claim beyond the existing directed/full-flight corridor contract."
+  ],
+  "input_sha256": {
+    "reports/v151/integration/602/result.json": "acccf825ee725d84ebbb0c49e3120f8f4e00a0dc3467f92a858c5ffc4f719d92",
+    "reports/v151/integration/602/result.npz": "5cad963e236145675cf19f5d6bb06a33de41bebbedc63d7aa9430eb54c584f54",
+    "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/analysis/stair_task.py": "420c50bbce47d1121a30984be0b6bdaf2d7a2dfbefaf11087f92abec09027e8b",
+    "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/config/v14_path_metrics.py": "4cc6c22046f8a386e8ee3c39e67998d1b943f2757234e57b9aa566309d473ca5",
+    "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/config/v14_eval_protocol.py": "4f817f1c83a84fed9d83cb6829aaee8391ee8f90ce83f3b900ba4ee527c4e67c",
+    "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/config/v9_env_cfg.py": "40cc6d6c05618a72f92cf48af509f48d29686cf9a45d5f04ff50a796e8cf0e10",
+    "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/config/guide_robot_cfg.py": "fb76a3c0dbaed535eb1c1b00c840d8b0111d8ea70eb168b692010c4ab4282657"
+  },
+  "installed_mesh_source": "/opt/isaaclab/source/isaaclab/isaaclab/terrains/trimesh/mesh_terrains.py:inverted_pyramid_stairs_terrain"
+}

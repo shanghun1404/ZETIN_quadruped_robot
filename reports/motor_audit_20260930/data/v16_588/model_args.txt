@@ -1,0 +1,8 @@
+--contact-projection
+--force-allocator
+wbc
+--wbc-iterations
+320
+--wbc-tracking-metric
+unscaled
+--smooth-com-reference

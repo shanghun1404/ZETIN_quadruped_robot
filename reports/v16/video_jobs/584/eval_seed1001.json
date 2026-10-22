@@ -1,0 +1,80 @@
+{
+  "seed": 1001,
+  "controller": "model",
+  "seconds": 24.0,
+  "speed_command_m_s": 0.05,
+  "walk_axis_world": "y",
+  "contact_projection": true,
+  "gait_mode": "prepared_crawl",
+  "liftoff_count": [
+    15
+  ],
+  "stance_point": "ground",
+  "base_acceleration_weight": 1000.0,
+  "smooth_com_reference": true,
+  "joint_friction": 0.3,
+  "joint_dynamic_friction": null,
+  "joint_viscous_friction": null,
+  "force_allocator": "wbc",
+  "wbc_iterations": 320,
+  "wbc_tracking_metric": "unscaled",
+  "qp_control_ticks": [
+    1200.0
+  ],
+  "qp_infeasible_tick_fraction": [
+    0.0
+  ],
+  "qp_max_constraint_violation": [
+    3.069145532208495e-05
+  ],
+  "qp_max_torque_violation_nm": [
+    0.0
+  ],
+  "qp_max_base_wrench_violation": [
+    3.069145532208495e-05
+  ],
+  "solver_numerical_failed_env_ids": [],
+  "completed_step_count": [
+    15
+  ],
+  "survived_envs": 1,
+  "num_envs": 1,
+  "failed_env_ids": [],
+  "failure_handling": "absorbing failure; metric masked and invalid environment quarantined; never revived",
+  "mean_base_force_residual_fraction_of_weight": [
+    8.894725169739104e-07
+  ],
+  "mean_base_moment_residual_fraction_of_weight_times_0_30m": [
+    1.2642653928196523e-06
+  ],
+  "mean_stance_acceleration_residual_m_s2": [
+    5.961421720712679e-07
+  ],
+  "mean_stance_point_speed_m_s": [
+    0.004375424701720476
+  ],
+  "scores": [
+    97.0682439793711
+  ],
+  "survival_fraction": [
+    1.0
+  ],
+  "progress_m": [
+    1.122319221496582
+  ],
+  "speed": [
+    0.04887775704264641
+  ],
+  "pressure": [
+    0.05911238491535187
+  ],
+  "saturation": [
+    0.0
+  ],
+  "power": [
+    0.7266173958778381
+  ],
+  "guard_fraction": [
+    0.0
+  ]
+}

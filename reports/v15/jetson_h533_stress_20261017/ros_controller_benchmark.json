@@ -1,0 +1,344 @@
+{
+  "recorded_utc": "2026-10-17T14:14:39.487900+00:00",
+  "device": "cuda",
+  "scenario": "walk",
+  "child": {
+    "torch": "2.14.1+cu132",
+    "cuda_runtime": "13.2",
+    "gpu": "Orin",
+    "compute_capability": [
+      8,
+      7
+    ],
+    "compiled_architectures": [
+      "sm_80",
+      "sm_90",
+      "sm_100",
+      "sm_110",
+      "sm_120"
+    ],
+    "cudnn": 92400,
+    "cpu_threads": 1,
+    "cudnn_benchmark": false,
+    "cudnn_allow_tf32": true,
+    "matmul_allow_tf32": false,
+    "worker_pid": 73167,
+    "actor_parameter_device": "cuda:0",
+    "student_parameter_device": "cuda:0",
+    "pre_stream_policy_warmup_steps": 100,
+    "pre_stream_policy_warmup_ms": 1356.576946
+  },
+  "method": "Actual C++/CUDA planner and independent command process; production device/backend parameters; no constructor override",
+  "sensors": "Synthetic depth, nominal joints, odometry and contacts over DDS; actual production USB gateway and H533, motors disabled; MCU feedback synthetic zeros",
+  "power_mode": "NV Power Mode: 25W\n1",
+  "requested_seconds": 3605.0,
+  "warmup_seconds": 5,
+  "continue_after_fault": true,
+  "live_startup": false,
+  "faults_during_stream": [
+    {
+      "reason": "planner result expired or stale",
+      "during_stream": true
+    },
+    {
+      "reason": "planner result expired or stale",
+      "during_stream": true,
+      "source": "usb_gateway"
+    }
+  ],
+  "first_command_source_ms": 20.0,
+  "published_total": 721000,
+  "measured_expected": 720000,
+  "measured_complete": 1111,
+  "missing": 718889,
+  "measured_command_hz": 200.0966129540869,
+  "all": {
+    "compute_ms": {
+      "samples": 1111,
+      "mean_ms": 1.5297824824322928,
+      "p50_ms": 1.458329001252423,
+      "p95_ms": 1.8410080001558526,
+      "p99_ms": 2.235251700403752,
+      "max_ms": 6.016520001139725,
+      "above_5ms": 3,
+      "above_20ms": 0
+    },
+    "command_latency_ms": {
+      "samples": 1111,
+      "mean_ms": 3.8297588532853286,
+      "p50_ms": 3.495645,
+      "p95_ms": 6.732964,
+      "p99_ms": 8.790814100000015,
+      "max_ms": 12.022511,
+      "above_5ms": 125,
+      "above_20ms": 0
+    },
+    "scheduled_to_command_ms": {
+      "samples": 1111,
+      "mean_ms": 4.294892358235824,
+      "p50_ms": 4.001707,
+      "p95_ms": 7.2049164999999995,
+      "p99_ms": 9.246778900000008,
+      "max_ms": 12.519052,
+      "above_5ms": 169,
+      "above_20ms": 0
+    },
+    "publisher_lateness_ms": {
+      "samples": 1111,
+      "mean_ms": 0.46513350495049505,
+      "p50_ms": 0.449498,
+      "p95_ms": 0.8131390000000001,
+      "p99_ms": 1.069951800000002,
+      "max_ms": 2.556607,
+      "above_5ms": 0,
+      "above_20ms": 0
+    }
+  },
+  "policy_ticks": {
+    "compute_ms": {
+      "samples": 278,
+      "mean_ms": 1.5311917337817085,
+      "p50_ms": 1.4584734999516513,
+      "p95_ms": 1.8687503993533026,
+      "p99_ms": 2.1685236305347657,
+      "max_ms": 5.727842999476707,
+      "above_5ms": 1,
+      "above_20ms": 0
+    },
+    "command_latency_ms": {
+      "samples": 278,
+      "mean_ms": 4.693770039568345,
+      "p50_ms": 3.9260355000000002,
+      "p95_ms": 8.281566149999998,
+      "p99_ms": 10.97625068000002,
+      "max_ms": 12.022511,
+      "above_5ms": 73,
+      "above_20ms": 0
+    },
+    "scheduled_to_command_ms": {
+      "samples": 278,
+      "mean_ms": 5.175616978417266,
+      "p50_ms": 4.4528859999999995,
+      "p95_ms": 8.717155749999996,
+      "p99_ms": 11.504157690000023,
+      "max_ms": 12.519052,
+      "above_5ms": 86,
+      "above_20ms": 0
+    },
+    "publisher_lateness_ms": {
+      "samples": 278,
+      "mean_ms": 0.4818469388489209,
+      "p50_ms": 0.48091649999999997,
+      "p95_ms": 0.83412995,
+      "p99_ms": 0.9785338100000011,
+      "max_ms": 1.094409,
+      "above_5ms": 0,
+      "above_20ms": 0
+    }
+  },
+  "non_policy_ticks": {
+    "compute_ms": {
+      "samples": 833,
+      "mean_ms": 1.5293121680563773,
+      "p50_ms": 1.458329001252423,
+      "p95_ms": 1.8343168005230837,
+      "p99_ms": 2.3918720802612277,
+      "max_ms": 6.016520001139725,
+      "above_5ms": 2,
+      "above_20ms": 0
+    },
+    "command_latency_ms": {
+      "samples": 833,
+      "mean_ms": 3.5414093817527013,
+      "p50_ms": 3.223895,
+      "p95_ms": 5.314945999999999,
+      "p99_ms": 7.686419399999992,
+      "max_ms": 11.37194,
+      "above_5ms": 52,
+      "above_20ms": 0
+    },
+    "scheduled_to_command_ms": {
+      "samples": 833,
+      "mean_ms": 4.000965054021608,
+      "p50_ms": 3.739549,
+      "p95_ms": 5.669008599999999,
+      "p99_ms": 8.19565475999999,
+      "max_ms": 11.624876,
+      "above_5ms": 83,
+      "above_20ms": 0
+    },
+    "publisher_lateness_ms": {
+      "samples": 833,
+      "mean_ms": 0.4595556722689076,
+      "p50_ms": 0.437131,
+      "p95_ms": 0.7986251999999999,
+      "p99_ms": 1.0744412399999999,
+      "max_ms": 2.556607,
+      "above_5ms": 0,
+      "above_20ms": 0
+    }
+  },
+  "by_mode": {
+    "WALK": {
+      "compute_ms": {
+        "samples": 1111,
+        "mean_ms": 1.5297824824322928,
+        "p50_ms": 1.458329001252423,
+        "p95_ms": 1.8410080001558526,
+        "p99_ms": 2.235251700403752,
+        "max_ms": 6.016520001139725,
+        "above_5ms": 3,
+        "above_20ms": 0
+      },
+      "command_latency_ms": {
+        "samples": 1111,
+        "mean_ms": 3.8297588532853286,
+        "p50_ms": 3.495645,
+        "p95_ms": 6.732964,
+        "p99_ms": 8.790814100000015,
+        "max_ms": 12.022511,
+        "above_5ms": 125,
+        "above_20ms": 0
+      },
+      "scheduled_to_command_ms": {
+        "samples": 1111,
+        "mean_ms": 4.294892358235824,
+        "p50_ms": 4.001707,
+        "p95_ms": 7.2049164999999995,
+        "p99_ms": 9.246778900000008,
+        "max_ms": 12.519052,
+        "above_5ms": 169,
+        "above_20ms": 0
+      },
+      "publisher_lateness_ms": {
+        "samples": 1111,
+        "mean_ms": 0.46513350495049505,
+        "p50_ms": 0.449498,
+        "p95_ms": 0.8131390000000001,
+        "p99_ms": 1.069951800000002,
+        "max_ms": 2.556607,
+        "above_5ms": 0,
+        "above_20ms": 0
+      }
+    }
+  },
+  "command_interval_ms": {
+    "samples": 1110,
+    "mean_ms": 4.9975858423423425,
+    "p50_ms": 4.9433810000000005,
+    "p95_ms": 8.062021749999998,
+    "p99_ms": 10.417602220000008,
+    "max_ms": 14.62518,
+    "above_5ms": 531,
+    "above_20ms": 0
+  },
+  "planner_compute_ms": {
+    "samples": 179979,
+    "mean_ms": 11.293867503945481,
+    "p50_ms": 11.013788000127533,
+    "p95_ms": 12.889923398688552,
+    "p99_ms": 14.864098520265545,
+    "max_ms": 29.510397000194644,
+    "above_5ms": 179979,
+    "above_20ms": 12
+  },
+  "planner_expected_samples": 180000,
+  "planner_samples_complete": false,
+  "planner_measured_samples": 179979,
+  "planner_first_measured_source_s": 5.0,
+  "planner_last_measured_source_s": 3604.98,
+  "planner_by_mode": {
+    "WALK": {
+      "samples": 179979,
+      "mean_ms": 11.293867503945481,
+      "p50_ms": 11.013788000127533,
+      "p95_ms": 12.889923398688552,
+      "p99_ms": 14.864098520265545,
+      "max_ms": 29.510397000194644,
+      "above_5ms": 179979,
+      "above_20ms": 12
+    }
+  },
+  "plan_age_ms": {
+    "samples": 1111,
+    "mean_ms": 24.648964896489648,
+    "p50_ms": 25.0,
+    "p95_ms": 35.0,
+    "p99_ms": 35.0,
+    "max_ms": 50.0,
+    "above_5ms": 1111,
+    "above_20ms": 673
+  },
+  "physical_gateway": {
+    "scheduler": "SCHED_OTHER",
+    "configuration": "/home/scienceowl/robot_dog/h533_link_20261017/h533_gateway_config.json",
+    "motors_enabled": false,
+    "controller_consumes_synthetic_nominal_joints": true,
+    "mcu_feedback_is_synthetic_zero": true,
+    "raw_feedback_samples": 1111,
+    "expected_raw_feedback_samples": 720000,
+    "last_feedback_before_end_ms": 3594443.811506,
+    "raw_feedback_hz": 199.94132954048882,
+    "missing_feedback_ticks": 0,
+    "status_messages": 108,
+    "any_armed": false,
+    "any_mcu_fault": false,
+    "gateway_faults_during_stream": [
+      {
+        "reason": "planner result expired or stale",
+        "during_stream": true,
+        "source": "usb_gateway"
+      }
+    ],
+    "observed_command_publications": 2107,
+    "last_observed_cumulative_ack": 2095
+  },
+  "continuous_wbc_enabled": true,
+  "elapsed_stream_s": 3616.645836792,
+  "gateway_ack_fraction": 0.9943046986236355,
+  "integration_checks_passed": false,
+  "by_mode_policy_ticks": {
+    "WALK": {
+      "compute_ms": {
+        "samples": 278,
+        "mean_ms": 1.5311917337817085,
+        "p50_ms": 1.4584734999516513,
+        "p95_ms": 1.8687503993533026,
+        "p99_ms": 2.1685236305347657,
+        "max_ms": 5.727842999476707,
+        "above_5ms": 1,
+        "above_20ms": 0
+      },
+      "command_latency_ms": {
+        "samples": 278,
+        "mean_ms": 4.693770039568345,
+        "p50_ms": 3.9260355000000002,
+        "p95_ms": 8.281566149999998,
+        "p99_ms": 10.97625068000002,
+        "max_ms": 12.022511,
+        "above_5ms": 73,
+        "above_20ms": 0
+      },
+      "scheduled_to_command_ms": {
+        "samples": 278,
+        "mean_ms": 5.175616978417266,
+        "p50_ms": 4.4528859999999995,
+        "p95_ms": 8.717155749999996,
+        "p99_ms": 11.504157690000023,
+        "max_ms": 12.519052,
+        "above_5ms": 86,
+        "above_20ms": 0
+      },
+      "publisher_lateness_ms": {
+        "samples": 278,
+        "mean_ms": 0.4818469388489209,
+        "p50_ms": 0.48091649999999997,
+        "p95_ms": 0.83412995,
+        "p99_ms": 0.9785338100000011,
+        "max_ms": 1.094409,
+        "above_5ms": 0,
+        "above_20ms": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "recorded_utc": "2026-10-20T03:36:41.414826+00:00",
+  "firmware_version": 3,
+  "current_jetson_task": "/home/scienceowl/robot_dog/g474_transceiver_20261020",
+  "part": "TJA1051T/3",
+  "reported_vcc_v": 5,
+  "reported_vio_v": 3.3,
+  "external_peer": false,
+  "pinmap": {
+    "source": "User wiring diagram /tmp/codex-clipboard-Vv59Yl.png; ST UM2505 Table16 and STM32G474 datasheet AF table",
+    "capture_encoding": "low16 GPIOA IDR, high16 GPIOB IDR",
+    "can1": {
+      "tx": "PA12",
+      "tx_header": "CN10-12",
+      "rx": "PA11",
+      "rx_header": "CN10-14",
+      "af": 9
+    },
+    "can2": {
+      "tx": "PB13",
+      "tx_header": "CN10-30",
+      "rx": "PB12",
+      "rx_header": "CN10-16",
+      "af": 9
+    },
+    "can3": {
+      "tx": "PA15",
+      "tx_header": "CN7-17",
+      "rx": "PA8",
+      "rx_header": "CN10-23",
+      "af": 11
+    },
+    "power": {
+      "vio": "CN7-16 3V3",
+      "vcc_in_user_diagram": "CN7-6 E5V external supply input",
+      "board_5v": "CN7-18"
+    }
+  },
+  "sources_sha256": {
+    "firmware/g474_can_fixture.c": "88099ad88607d60baf345cffb78ec8438b2fc76dbd3e86fe69dec09df744c9b5",
+    "firmware/g474_diag.h": "fc09a160289537d0555f095f618186ce012b091c5bf201307bd134be702244f4",
+    "g474_control.py": "214808fe94a167f88eeba312324f4372b40291cf59bceceee9237f7b015551f3",
+    "Makefile": "babf90b8be12061bfb133ef2559aefb21712ff63737a91c52a1b9d6f94bec481",
+    "verify_capture.py": "d5b4e1e143111e52f1f57814e78806d5520fd9711cc705638a162f484c0e99a4",
+    "build/g474_can_fixture.elf": "b635539ebce9328eab6bf1eff54d7ea5db1ab85afa9361b932957b5ca416bbe1"
+  },
+  "tests": {
+    "mit": {
+      "passed": false,
+      "tx_verified": 24,
+      "rx_verified": 0,
+      "per_bus": {
+        "1": {
+          "tx_verified": 8,
+          "rx_verified": 0,
+          "rx_low_samples": 0
+        },
+        "2": {
+          "tx_verified": 8,
+          "rx_verified": 0,
+          "rx_low_samples": 0
+        },
+        "3": {
+          "tx_verified": 8,
+          "rx_verified": 0,
+          "rx_low_samples": 0
+        }
+      }
+    },
+    "servo": {
+      "passed": false,
+      "tx_verified": 24,
+      "rx_verified": 0,
+      "per_bus": {
+        "1": {
+          "tx_verified": 8,
+          "rx_verified": 0,
+          "rx_low_samples": 0
+        },
+        "2": {
+          "tx_verified": 8,
+          "rx_verified": 0,
+          "rx_low_samples": 0
+        },
+        "3": {
+          "tx_verified": 8,
+          "rx_verified": 0,
+          "rx_low_samples": 0
+        }
+      }
+    }
+  },
+  "normal_mode": [
+    {
+      "bus": 1,
+      "attempted": 4,
+      "completed": 0,
+      "lec": 5,
+      "tec": 160
+    },
+    {
+      "bus": 2,
+      "attempted": 4,
+      "completed": 0,
+      "lec": 5,
+      "tec": 160
+    },
+    {
+      "bus": 3,
+      "attempted": 4,
+      "completed": 0,
+      "lec": 5,
+      "tec": 160
+    }
+  ],
+  "physical_rx_verified": false,
+  "pending": "Confirm carrier VCC: schematic uses CN7-6 E5V external supply input. Board 5V is CN7-18. Actual transceiver VCC has not been measured."
+}

@@ -1,0 +1,14 @@
+{
+  "write_calls": 4999,
+  "command_write_calls": 4996,
+  "os_write_calls": 4999,
+  "select_calls": 0,
+  "os_write_errors": 0,
+  "partial_writes": 0,
+  "slow_or_failed_writes": 0,
+  "logging_overflows": 0,
+  "recorded_writes": 4999,
+  "recorded_slow_writes": 0,
+  "recorded_slow_events": 0,
+  "buffer_overflows": 0
+}

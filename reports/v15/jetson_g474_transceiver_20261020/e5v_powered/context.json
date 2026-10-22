@@ -1,0 +1,13 @@
+{
+  "started_utc": "2026-10-20T03:43:43.292117+00:00",
+  "part": "TJA1051T/3",
+  "user_confirmed_e5v_supply_v": 5,
+  "user_reported_vio_v": 3.3,
+  "channels": [
+    1,
+    2,
+    3
+  ],
+  "external_peer": false,
+  "firmware": 3
+}

@@ -1,0 +1,8 @@
+{
+  "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp",
+  "ROS_DOMAIN_ID": "95",
+  "ROS_DISTRO": "jazzy",
+  "FASTDDS_BUILTIN_TRANSPORTS": null,
+  "SLURM_JOB_ID": "625",
+  "SLURM_JOB_QOS": "admin"
+}

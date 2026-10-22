@@ -1,0 +1,831 @@
+{
+  "job_id": 2481,
+  "result": {
+    "schema": 2,
+    "case": "dynamic_sit",
+    "seed": 42,
+    "seconds_requested": 14.0,
+    "seconds_recorded": 14.0,
+    "completed": true,
+    "failure": null,
+    "reset_during_trial": false,
+    "metadata": {
+      "base_com_offset": [
+        0.010427819564938545,
+        0.015405300073325634,
+        0.06333552300930023
+      ],
+      "initial_joint_canonical_rad": [
+        0.0,
+        -0.55,
+        1.1,
+        0.0,
+        -0.55,
+        1.1,
+        0.0,
+        -0.55,
+        1.1,
+        0.0,
+        -0.55,
+        1.1
+      ],
+      "initial_root_world_m": [
+        0.0,
+        0.0,
+        0.46688541769981384
+      ],
+      "physical_joint_names": [
+        "FL_hip_roll",
+        "FR_hip_roll",
+        "FL_hip_pitch",
+        "FR_hip_pitch",
+        "BR_hip_roll",
+        "BL_hip_roll",
+        "BR_hip_pitch",
+        "BL_hip_pitch",
+        "FL_knee",
+        "FR_knee",
+        "BR_knee",
+        "BL_knee"
+      ],
+      "physical_sign": [
+        -1.0,
+        -1.0,
+        -1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        -1.0,
+        1.0
+      ],
+      "canonical_joint_order": [
+        "FL_HAA",
+        "FL_HFE",
+        "FL_KFE",
+        "FR_HAA",
+        "FR_HFE",
+        "FR_KFE",
+        "RL_HAA",
+        "RL_HFE",
+        "RL_KFE",
+        "RR_HAA",
+        "RR_HFE",
+        "RR_KFE"
+      ],
+      "pair_order": [
+        {
+          "body": "base",
+          "targets": [
+            "FL_thigh",
+            "FL_shank",
+            "FR_thigh",
+            "FR_shank",
+            "BL_thigh",
+            "BL_shank",
+            "BR_thigh",
+            "BR_shank"
+          ]
+        },
+        {
+          "body": "FL_hip",
+          "targets": [
+            "FL_shank",
+            "FR_hip",
+            "FR_thigh",
+            "FR_shank",
+            "BL_hip",
+            "BL_thigh",
+            "BL_shank",
+            "BR_hip",
+            "BR_thigh",
+            "BR_shank"
+          ]
+        },
+        {
+          "body": "FL_thigh",
+          "targets": [
+            "base",
+            "FR_hip",
+            "FR_thigh",
+            "FR_shank",
+            "BL_hip",
+            "BL_thigh",
+            "BL_shank",
+            "BR_hip",
+            "BR_thigh",
+            "BR_shank"
+          ]
+        },
+        {
+          "body": "FL_shank",
+          "targets": [
+            "base",
+            "FL_hip",
+            "FR_hip",
+            "FR_thigh",
+            "FR_shank",
+            "BL_hip",
+            "BL_thigh",
+            "BL_shank",
+            "BR_hip",
+            "BR_thigh",
+            "BR_shank"
+          ]
+        },
+        {
+          "body": "FR_hip",
+          "targets": [
+            "FL_hip",
+            "FL_thigh",
+            "FL_shank",
+            "FR_shank",
+            "BL_hip",
+            "BL_thigh",
+            "BL_shank",
+            "BR_hip",
+            "BR_thigh",
+            "BR_shank"
+          ]
+        },
+        {
+          "body": "FR_thigh",
+          "targets": [
+            "base",
+            "FL_hip",
+            "FL_thigh",
+            "FL_shank",
+            "BL_hip",
+            "BL_thigh",
+            "BL_shank",
+            "BR_hip",
+            "BR_thigh",
+            "BR_shank"
+          ]
+        },
+        {
+          "body": "FR_shank",
+          "targets": [
+            "base",
+            "FL_hip",
+            "FL_thigh",
+            "FL_shank",
+            "FR_hip",
+            "BL_hip",
+            "BL_thigh",
+            "BL_shank",
+            "BR_hip",
+            "BR_thigh",
+            "BR_shank"
+          ]
+        },
+        {
+          "body": "BL_hip",
+          "targets": [
+            "FL_hip",
+            "FL_thigh",
+            "FL_shank",
+            "FR_hip",
+            "FR_thigh",
+            "FR_shank",
+            "BL_shank",
+            "BR_hip",
+            "BR_thigh",
+            "BR_shank"
+          ]
+        },
+        {
+          "body": "BL_thigh",
+          "targets": [
+            "base",
+            "FL_hip",
+            "FL_thigh",
+            "FL_shank",
+            "FR_hip",
+            "FR_thigh",
+            "FR_shank",
+            "BR_hip",
+            "BR_thigh",
+            "BR_shank"
+          ]
+        },
+        {
+          "body": "BL_shank",
+          "targets": [
+            "base",
+            "FL_hip",
+            "FL_thigh",
+            "FL_shank",
+            "FR_hip",
+            "FR_thigh",
+            "FR_shank",
+            "BL_hip",
+            "BR_hip",
+            "BR_thigh",
+            "BR_shank"
+          ]
+        },
+        {
+          "body": "BR_hip",
+          "targets": [
+            "FL_hip",
+            "FL_thigh",
+            "FL_shank",
+            "FR_hip",
+            "FR_thigh",
+            "FR_shank",
+            "BL_hip",
+            "BL_thigh",
+            "BL_shank",
+            "BR_shank"
+          ]
+        },
+        {
+          "body": "BR_thigh",
+          "targets": [
+            "base",
+            "FL_hip",
+            "FL_thigh",
+            "FL_shank",
+            "FR_hip",
+            "FR_thigh",
+            "FR_shank",
+            "BL_hip",
+            "BL_thigh",
+            "BL_shank"
+          ]
+        },
+        {
+          "body": "BR_shank",
+          "targets": [
+            "base",
+            "FL_hip",
+            "FL_thigh",
+            "FL_shank",
+            "FR_hip",
+            "FR_thigh",
+            "FR_shank",
+            "BL_hip",
+            "BL_thigh",
+            "BL_shank",
+            "BR_hip"
+          ]
+        }
+      ],
+      "actual_mass_kg": 23.094497680664062
+    },
+    "drive_gain_checks": [
+      {
+        "stamp_ns": 0,
+        "kp": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ],
+        "kd": [
+          [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ]
+        ]
+      }
+    ],
+    "drive_limit_checks": [
+      {
+        "stamp_ns": 0,
+        "mode": "STAND",
+        "drive_limit": [
+          23.353059768676758,
+          23.195011138916016,
+          45.11036682128906,
+          45.18471908569336,
+          22.436187744140625,
+          22.746994018554688,
+          45.73112487792969,
+          45.660362243652344,
+          40.135475158691406,
+          39.62371826171875,
+          37.778350830078125,
+          38.28807067871094
+        ],
+        "feedforward": [
+          1.446940302848816,
+          -1.6049895286560059,
+          2.889631748199463,
+          -2.815281867980957,
+          2.3638129234313965,
+          -2.0530052185058594,
+          -2.2688753604888916,
+          2.3396358489990234,
+          -7.8645243644714355,
+          8.37628173828125,
+          10.221647262573242,
+          -9.711929321289062
+        ]
+      },
+      {
+        "stamp_ns": 2000000000,
+        "mode": "LOWER",
+        "drive_limit": [
+          24.748231887817383,
+          24.535287857055664,
+          44.72382736206055,
+          45.31401062011719,
+          24.504064559936523,
+          24.799049377441406,
+          45.970306396484375,
+          45.92548370361328,
+          40.176422119140625,
+          39.769561767578125,
+          38.22420883178711,
+          38.388771057128906
+        ],
+        "feedforward": [
+          -0.05176851153373718,
+          -0.2647112011909485,
+          3.276172399520874,
+          -2.6859898567199707,
+          0.29593637585639954,
+          0.000950037210714072,
+          -2.0296952724456787,
+          2.074514627456665,
+          -7.823577404022217,
+          8.230439186096191,
+          9.775790214538574,
+          -9.611228942871094
+        ]
+      },
+      {
+        "stamp_ns": 4000000000,
+        "mode": "SETTLE_SIT",
+        "drive_limit": [
+          24.591806411743164,
+          24.367385864257812,
+          44.10000991821289,
+          45.21070098876953,
+          24.361385345458984,
+          24.311676025390625,
+          46.11717224121094,
+          45.82374954223633,
+          36.370540618896484,
+          35.43113708496094,
+          32.93806457519531,
+          33.49114990234375
+        ],
+        "feedforward": [
+          0.2081933319568634,
+          -0.43261390924453735,
+          3.8999900817871094,
+          -2.7892980575561523,
+          0.43861472606658936,
+          -0.48832428455352783,
+          -1.8828294277191162,
+          2.1762492656707764,
+          -11.6294584274292,
+          12.568862915039062,
+          15.061936378479004,
+          -14.508852005004883
+        ]
+      },
+      {
+        "stamp_ns": 4020000000,
+        "mode": "SIT",
+        "drive_limit": [
+          24.59765625,
+          24.37038803100586,
+          44.09027099609375,
+          45.20659637451172,
+          24.36820411682129,
+          24.311954498291016,
+          46.11431121826172,
+          45.81834030151367,
+          36.37646484375,
+          35.436065673828125,
+          32.934452056884766,
+          33.48798370361328
+        ],
+        "feedforward": [
+          0.20234414935112,
+          -0.4296111464500427,
+          3.9097297191619873,
+          -2.7934021949768066,
+          0.4317965805530548,
+          -0.4880460798740387,
+          -1.8856885433197021,
+          2.1816580295562744,
+          -11.623537063598633,
+          12.563936233520508,
+          15.065547943115234,
+          -14.512015342712402
+        ]
+      },
+      {
+        "stamp_ns": 8000000000,
+        "mode": "RISE",
+        "drive_limit": [
+          24.686702728271484,
+          24.51878547668457,
+          43.65327835083008,
+          44.94595718383789,
+          24.539140701293945,
+          24.493202209472656,
+          46.115760803222656,
+          45.73680114746094,
+          36.358726501464844,
+          35.40919494628906,
+          32.77092361450195,
+          33.31377029418945
+        ],
+        "feedforward": [
+          0.11329743266105652,
+          -0.2812153697013855,
+          4.346721172332764,
+          -3.0540411472320557,
+          0.2608587443828583,
+          -0.30679789185523987,
+          -1.8842387199401855,
+          2.263197898864746,
+          -11.641275405883789,
+          12.590804100036621,
+          15.229077339172363,
+          -14.68622875213623
+        ]
+      },
+      {
+        "stamp_ns": 10000000000,
+        "mode": "STABILIZE",
+        "drive_limit": [
+          24.787843704223633,
+          24.687448501586914,
+          44.315372467041016,
+          44.90861511230469,
+          24.612476348876953,
+          24.516584396362305,
+          45.867698669433594,
+          45.8693962097168,
+          39.97114944458008,
+          39.37158966064453,
+          38.009117126464844,
+          38.16093063354492
+        ],
+        "feedforward": [
+          -0.012156719341874123,
+          -0.11255145817995071,
+          3.6846258640289307,
+          -3.0913848876953125,
+          0.18752345442771912,
+          0.28341564536094666,
+          -2.132303237915039,
+          2.1306040287017822,
+          -8.028850555419922,
+          8.628410339355469,
+          9.990884780883789,
+          -9.839068412780762
+        ]
+      },
+      {
+        "stamp_ns": 10420000000,
+        "mode": "STAND",
+        "drive_limit": [
+          24.7884578704834,
+          24.611778259277344,
+          44.36111831665039,
+          44.898353576660156,
+          24.49346923828125,
+          24.68556022644043,
+          45.79054260253906,
+          45.819793701171875,
+          39.842613220214844,
+          39.22554397583008,
+          37.85137939453125,
+          38.00733184814453
+        ],
+        "feedforward": [
+          0.011542405933141708,
+          -0.18822135031223297,
+          3.6388821601867676,
+          -3.1016476154327393,
+          0.3065313994884491,
+          0.11443977802991867,
+          -2.209456205368042,
+          2.180205821990967,
+          -8.15738582611084,
+          8.774456977844238,
+          10.148621559143066,
+          -9.992669105529785
+        ]
+      }
+    ],
+    "transport_retry_count": 0,
+    "torque_semantics": "Pre-step implicit PD clipping plus separately applied feedforward estimate; not a measured PhysX drive moment.",
+    "collision_scope": "All 66 nonadjacent real rigid-body pairs, 132 directed filters; original 67 CAD convex hulls. Joint-connected pairs are excluded by PhysX.",
+    "cad_source_unchanged": true,
+    "video": [
+      {
+        "env_id": 0,
+        "path": "/home/shanghun1404/v15_cad_20261011/dynamic_sit_jobs/2481/results/dynamic_sit/video/env_00.mp4",
+        "frames": 350,
+        "fps": 25.0,
+        "duration_s": 14.0,
+        "view": "side",
+        "resolution": [
+          960,
+          640
+        ],
+        "stops_before_first_auto_reset": true,
+        "peers_hidden_only_during_observer_render": true
+      }
+    ],
+    "motion_verdict": {
+      "motion_success": true,
+      "reasons": [],
+      "modes_seen": [
+        "STAND",
+        "LOWER",
+        "SETTLE_SIT",
+        "SIT",
+        "RISE",
+        "STABILIZE"
+      ],
+      "metrics": {
+        "seated": {
+          "max_height_error_m": 0.0004093945026397705,
+          "max_speed_m_s": 0.0023469235748052597,
+          "max_angular_speed_rad_s": 0.005435108207166195,
+          "four_foot_support_fraction": 1.0,
+          "pitch_deg_range": [
+            -0.18860921263694763,
+            -0.1735868752002716
+          ],
+          "median_rear_minus_front_knee_rad": -0.007976353168487549,
+          "median_knee_flexion_rad": [
+            1.9443210363388062,
+            1.945618748664856,
+            1.9357877969741821,
+            1.9381844997406006
+          ]
+        },
+        "standing": {
+          "max_height_error_m": 0.005783200263977051,
+          "max_speed_m_s": 0.0008941363776102662,
+          "max_angular_speed_rad_s": 0.0036153304390609264,
+          "four_foot_support_fraction": 1.0,
+          "pitch_deg_range": [
+            -0.277030348777771,
+            -0.2262716442346573
+          ],
+          "median_rear_minus_front_knee_rad": -0.015489339828491211
+        }
+      }
+    },
+    "motion_success": true,
+    "torque_rms_nm": [
+      0.20123212039470673,
+      3.824737787246704,
+      9.763729095458984,
+      0.34167954325675964,
+      2.959644079208374,
+      10.498099327087402,
+      0.3452876806259155,
+      2.19846510887146,
+      12.198960304260254,
+      0.4365406930446625,
+      2.0547046661376953,
+      12.565406799316406
+    ],
+    "torque_peak_nm": [
+      1.446940302848816,
+      4.742244243621826,
+      11.88986873626709,
+      1.772332787513733,
+      4.424802303314209,
+      12.809043884277344,
+      2.0530052185058594,
+      2.6827831268310547,
+      15.059571266174316,
+      2.3638129234313965,
+      2.5874199867248535,
+      15.584369659423828
+    ],
+    "ideal_current_rms_a": [
+      0.1636033499143957,
+      2.656067907810211,
+      6.780367427402073,
+      0.2777882465502111,
+      2.0553083883391485,
+      7.290346754921807,
+      0.28072169156578497,
+      1.526711881160736,
+      8.471500211291843,
+      0.35491113255663614,
+      1.4268782403733995,
+      8.725976943969727
+    ],
+    "ideal_current_peak_a": [
+      1.176374229958387,
+      3.2932251691818237,
+      8.256853289074368,
+      1.4409209654583195,
+      3.072779377301534,
+      8.89516936408149,
+      1.6691099337446011,
+      1.8630438380771215,
+      10.458035601509943,
+      1.9217991247409727,
+      1.7968194352255928,
+      10.822478930155437
+    ],
+    "rated_torque_nm": [
+      8.3,
+      18.0,
+      18.0,
+      8.3,
+      18.0,
+      18.0,
+      8.3,
+      18.0,
+      18.0,
+      8.3,
+      18.0,
+      18.0
+    ],
+    "simulator_peak_torque_nm": [
+      24.8,
+      48.0,
+      48.0,
+      24.8,
+      48.0,
+      48.0,
+      24.8,
+      48.0,
+      48.0,
+      24.8,
+      48.0,
+      48.0
+    ],
+    "motor_datasheet_peak_torque_nm": [
+      24.8,
+      53.0,
+      53.0,
+      24.8,
+      53.0,
+      53.0,
+      24.8,
+      53.0,
+      53.0,
+      24.8,
+      53.0,
+      53.0
+    ],
+    "rated_exceed_fraction": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "rms_exceeds_rated": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "simulator_peak_exceeded": false,
+    "motor_datasheet_peak_exceeded": false,
+    "velocity_guard_exceed_frames": 0,
+    "current_semantics": "Ideal motor phase current |tau|/(Kt*gear), efficiency=1; not battery current or a measured drive moment.",
+    "max_nonadjacent_contact_force_n": 0.0,
+    "self_contact_frames": 0,
+    "collision_checks_pass": true,
+    "pd_vs_status_max_error_nm": 4.7681478498873275e-07,
+    "torque_transport_integrity_pass": true,
+    "torso_min_ground_clearance_m": 0.28720802068710327,
+    "max_abs_tilt_deg": 0.4044516980648041,
+    "compute_ms_p50_p99": [
+      0.2433079935144633,
+      75.79640289128291
+    ],
+    "contact_pairs_over_1n": {},
+    "task_success": true
+  },
+  "source_sha256_count": 322,
+  "all_saved_arrays_finite": true,
+  "command_state_timestamps_valid": true,
+  "recorded_steps": 2800,
+  "usb": {
+    "frames": 5600,
+    "tx_bytes": 1254400,
+    "rx_bytes": 1254400,
+    "max_roundtrip_ms": 1.7620850121602416,
+    "transport": "Linux PTY through native G474 C codec; actual USB/CAN/Jetson untested"
+  },
+  "requested_parameters": {
+    "sit_style": "deep_crouch",
+    "height_drop_m": 0.18,
+    "posture_transition_s": 2.0
+  },
+  "measured": {
+    "standing_height_m": 0.46275943517684937,
+    "crouched_height_m": 0.28721120953559875,
+    "height_drop_m": 0.1755482256412506,
+    "median_knee_degrees": [
+      111.40138244628906,
+      111.47573852539062,
+      110.91246795654297,
+      111.04978942871094
+    ]
+  },
+  "rated_rms_exceed_count": 0,
+  "collision_pairs": {},
+  "scope": "14s stand -> deep crouch -> stand via native ROS2 and Python/C USB codec emulator, authentic Isaac CAD physics; no hardware/Jetson timing claim",
+  "unresolved": "Existing stop-to-stand robustness and 50Hz WBC realtime performance remain outside this isolated posture trial.",
+  "max_nonfoot_net_contact_force_n": 0.0,
+  "bundle": {
+    "archive": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v15/dynamic_sit_20261012/v15_jetson_deep_crouch_20261012.tar.gz",
+    "config_modules": [
+      "v12_camera",
+      "v12_training",
+      "v12_vision_student",
+      "v13_depth_policy",
+      "v13_torque_mdp",
+      "v16_controller_math",
+      "v16_force_qp",
+      "v16_physical_model",
+      "v16_wbc_qp"
+    ],
+    "file_count": 96,
+    "sha256": "69d322941d79fe12b46ce6819089f35b21e2e78b0c7bc8170b2125bd1fbd7941"
+  },
+  "software_tests": {
+    "local_passed": 135,
+    "local_skipped": 2,
+    "native_bundle_passed": 14,
+    "native_bundle_payload_hashes_verified": 95
+  },
+  "attempts": [
+    {
+      "job": 2477,
+      "state": "CANCELLED",
+      "reason": "User clarified level deep crouch rather than pitched dog-like sitting"
+    },
+    {
+      "job": 2478,
+      "state": "CANCELLED",
+      "reason": "Corrected a proposed knee threshold to the authored CAD deep-crouch geometry"
+    },
+    {
+      "job": 2480,
+      "state": "FAILED",
+      "recorded_s": 0.835,
+      "max_nonadjacent_contact_force_n": 1099.1578369140625,
+      "reason": "Initial STAND lost balance while using only measured diagonal two-foot support; full evidence retained"
+    },
+    {
+      "job": 2481,
+      "state": "COMPLETED",
+      "recorded_s": 14.0,
+      "reason": "Restored existing four-foot standing assumption before walking; retained actual readiness gates; deep crouch passed"
+    }
+  ],
+  "controller_current_matches_physics_snapshot": true,
+  "checkpoints_verified": true
+}

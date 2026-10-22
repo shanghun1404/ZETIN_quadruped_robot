@@ -1,0 +1,24 @@
+{
+  "read_only_cpu_source_inspection": true,
+  "tiled_camera": {
+    "path": "/opt/isaaclab/source/isaaclab/isaaclab/sensors/camera/tiled_camera.py",
+    "sha256": "f3e9205a16a3ba335f9376a57cf4bf0473ecced928d9ac12d9ddeae83961d506",
+    "line142_to147": "        carb_settings_iface = carb.settings.get_settings()\n        if not carb_settings_iface.get(\"/isaaclab/cameras_enabled\"):\n            raise RuntimeError(\n                \"A camera was spawned without the --enable_cameras flag. Please use --enable_cameras to enable\"\n                \" rendering.\"\n            )"
+  },
+  "rsl_learn_iteration_and_save_lines": [
+    "start_iter = self.current_learning_iteration",
+    "tot_iter = start_iter + num_learning_iterations",
+    "for it in range(start_iter, tot_iter):",
+    "self.current_learning_iteration = it",
+    "self.save(os.path.join(self.log_dir, f\"model_{it}.pt\"))",
+    "self.save(os.path.join(self.log_dir, f\"model_{self.current_learning_iteration}.pt\"))"
+  ],
+  "rsl_save_source": "    def save(self, path: str, infos: dict | None = None) -> None:\n        # Save model\n        saved_dict = {\n            \"model_state_dict\": self.alg.policy.state_dict(),\n            \"optimizer_state_dict\": self.alg.optimizer.state_dict(),\n            \"iter\": self.current_learning_iteration,\n            \"infos\": infos,\n        }\n        # Save RND model if used\n        if hasattr(self.alg, \"rnd\") and self.alg.rnd:\n            saved_dict[\"rnd_state_dict\"] = self.alg.rnd.state_dict()\n            saved_dict[\"rnd_optimizer_state_dict\"] = self.alg.rnd_optimizer.state_dict()\n        torch.save(saved_dict, path)\n\n        # Upload model to external logging service\n        if self.logger_type in [\"neptune\", \"wandb\"] and not self.disable_logs:\n            self.writer.save_model(path, self.current_learning_iteration)\n",
+  "expected_iteration_numbers": {
+    "loaded": 11699,
+    "existing_resume_incremented_start": 11700,
+    "last_after250": 11949,
+    "last_after500": 12199
+  },
+  "simulation_or_training_executed": false
+}

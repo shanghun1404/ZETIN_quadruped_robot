@@ -1,0 +1,144 @@
+FFFFFFF                                                                  [100%]
+=================================== FAILURES ===================================
+________ test_bundle_copies_transitive_config_dependency_and_checksums _________
+
+bundle_source = (PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_bundle_copies_transitive_0/source'), PosixPath('/tmp/pytest-of-sci...0/source/actor.pt'), PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_bundle_copies_transitive_0/source/student.pt'))
+tmp_path = PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_bundle_copies_transitive_0')
+
+    def test_bundle_copies_transitive_config_dependency_and_checksums(bundle_source, tmp_path):
+>       module = load_builder()
+
+config/tests/test_v15_jetson_bundle.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_builder():
+>       assert BUILDER.is_file(), "the portable bundle builder is not implemented"
+E       AssertionError: the portable bundle builder is not implemented
+E       assert False
+E        +  where False = <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')>()
+E        +    where <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')> = PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py').is_file
+
+config/tests/test_v15_jetson_bundle.py:20: AssertionError
+____ test_unresolved_local_import_aborts_instead_of_shipping_partial_bundle ____
+
+bundle_source = (PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_unresolved_local_import_a0/source'), PosixPath('/tmp/pytest-of-sci...0/source/actor.pt'), PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_unresolved_local_import_a0/source/student.pt'))
+tmp_path = PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_unresolved_local_import_a0')
+
+    def test_unresolved_local_import_aborts_instead_of_shipping_partial_bundle(bundle_source, tmp_path):
+>       module = load_builder()
+
+config/tests/test_v15_jetson_bundle.py:88: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_builder():
+>       assert BUILDER.is_file(), "the portable bundle builder is not implemented"
+E       AssertionError: the portable bundle builder is not implemented
+E       assert False
+E        +  where False = <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')>()
+E        +    where <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')> = PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py').is_file
+
+config/tests/test_v15_jetson_bundle.py:20: AssertionError
+______________ test_wrong_checkpoint_hash_keeps_previous_archive _______________
+
+bundle_source = (PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_wrong_checkpoint_hash_kee0/source'), PosixPath('/tmp/pytest-of-sci...0/source/actor.pt'), PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_wrong_checkpoint_hash_kee0/source/student.pt'))
+tmp_path = PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_wrong_checkpoint_hash_kee0')
+
+    def test_wrong_checkpoint_hash_keeps_previous_archive(bundle_source, tmp_path):
+>       module = load_builder()
+
+config/tests/test_v15_jetson_bundle.py:97: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_builder():
+>       assert BUILDER.is_file(), "the portable bundle builder is not implemented"
+E       AssertionError: the portable bundle builder is not implemented
+E       assert False
+E        +  where False = <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')>()
+E        +    where <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')> = PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py').is_file
+
+config/tests/test_v15_jetson_bundle.py:20: AssertionError
+______________ test_missing_ros_package_is_reported_before_build _______________
+
+bundle_source = (PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_missing_ros_package_is_re0/source'), PosixPath('/tmp/pytest-of-sci...0/source/actor.pt'), PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_missing_ros_package_is_re0/source/student.pt'))
+tmp_path = PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_missing_ros_package_is_re0')
+
+    def test_missing_ros_package_is_reported_before_build(bundle_source, tmp_path):
+>       module = load_builder()
+
+config/tests/test_v15_jetson_bundle.py:107: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_builder():
+>       assert BUILDER.is_file(), "the portable bundle builder is not implemented"
+E       AssertionError: the portable bundle builder is not implemented
+E       assert False
+E        +  where False = <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')>()
+E        +    where <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')> = PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py').is_file
+
+config/tests/test_v15_jetson_bundle.py:20: AssertionError
+____________________ test_archive_bytes_ignore_source_mtime ____________________
+
+bundle_source = (PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_archive_bytes_ignore_sour0/source'), PosixPath('/tmp/pytest-of-sci...0/source/actor.pt'), PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_archive_bytes_ignore_sour0/source/student.pt'))
+tmp_path = PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_archive_bytes_ignore_sour0')
+
+    def test_archive_bytes_ignore_source_mtime(bundle_source, tmp_path):
+>       module = load_builder()
+
+config/tests/test_v15_jetson_bundle.py:114: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_builder():
+>       assert BUILDER.is_file(), "the portable bundle builder is not implemented"
+E       AssertionError: the portable bundle builder is not implemented
+E       assert False
+E        +  where False = <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')>()
+E        +    where <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')> = PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py').is_file
+
+config/tests/test_v15_jetson_bundle.py:20: AssertionError
+___________ test_run_script_derives_absolute_paths_after_relocation ____________
+
+bundle_source = (PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_run_script_derives_absolu0/source'), PosixPath('/tmp/pytest-of-sci...0/source/actor.pt'), PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_run_script_derives_absolu0/source/student.pt'))
+tmp_path = PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_run_script_derives_absolu0')
+
+    def test_run_script_derives_absolute_paths_after_relocation(bundle_source, tmp_path):
+>       module = load_builder()
+
+config/tests/test_v15_jetson_bundle.py:125: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_builder():
+>       assert BUILDER.is_file(), "the portable bundle builder is not implemented"
+E       AssertionError: the portable bundle builder is not implemented
+E       assert False
+E        +  where False = <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')>()
+E        +    where <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')> = PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py').is_file
+
+config/tests/test_v15_jetson_bundle.py:20: AssertionError
+________________ test_bundle_verifier_rejects_modified_payload _________________
+
+bundle_source = (PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_bundle_verifier_rejects_m0/source'), PosixPath('/tmp/pytest-of-sci...0/source/actor.pt'), PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_bundle_verifier_rejects_m0/source/student.pt'))
+tmp_path = PosixPath('/tmp/pytest-of-scienceowl/pytest-0/test_bundle_verifier_rejects_m0')
+
+    def test_bundle_verifier_rejects_modified_payload(bundle_source, tmp_path):
+>       module = load_builder()
+
+config/tests/test_v15_jetson_bundle.py:147: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def load_builder():
+>       assert BUILDER.is_file(), "the portable bundle builder is not implemented"
+E       AssertionError: the portable bundle builder is not implemented
+E       assert False
+E        +  where False = <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')>()
+E        +    where <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py')> = PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/build_bundle.py').is_file
+
+config/tests/test_v15_jetson_bundle.py:20: AssertionError
+=========================== short test summary info ============================
+FAILED config/tests/test_v15_jetson_bundle.py::test_bundle_copies_transitive_config_dependency_and_checksums
+FAILED config/tests/test_v15_jetson_bundle.py::test_unresolved_local_import_aborts_instead_of_shipping_partial_bundle
+FAILED config/tests/test_v15_jetson_bundle.py::test_wrong_checkpoint_hash_keeps_previous_archive
+FAILED config/tests/test_v15_jetson_bundle.py::test_missing_ros_package_is_reported_before_build
+FAILED config/tests/test_v15_jetson_bundle.py::test_archive_bytes_ignore_source_mtime
+FAILED config/tests/test_v15_jetson_bundle.py::test_run_script_derives_absolute_paths_after_relocation
+FAILED config/tests/test_v15_jetson_bundle.py::test_bundle_verifier_rejects_modified_payload
+7 failed in 0.32s

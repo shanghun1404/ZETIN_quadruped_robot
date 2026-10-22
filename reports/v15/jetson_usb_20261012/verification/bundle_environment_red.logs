@@ -1,0 +1,18 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+________ test_environment_checker_records_bsp_and_rejects_wrong_target _________
+
+tmp_path = PosixPath('/tmp/pytest-of-scienceowl/pytest-1/test_environment_checker_recor0')
+
+    def test_environment_checker_records_bsp_and_rejects_wrong_target(tmp_path):
+        path = REPOSITORY / "deploy/jetson_v15/check_env.py"
+>       assert path.is_file(), "target environment checker is not implemented"
+E       AssertionError: target environment checker is not implemented
+E       assert False
+E        +  where False = <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/check_env.py')>()
+E        +    where <bound method Path.is_file of PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/check_env.py')> = PosixPath('/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/deploy/jetson_v15/check_env.py').is_file
+
+config/tests/test_v15_jetson_bundle.py:159: AssertionError
+=========================== short test summary info ============================
+FAILED config/tests/test_v15_jetson_bundle.py::test_environment_checker_records_bsp_and_rejects_wrong_target
+1 failed, 7 deselected in 0.08s

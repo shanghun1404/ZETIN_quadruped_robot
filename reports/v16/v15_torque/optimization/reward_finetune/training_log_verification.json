@@ -1,0 +1,56 @@
+{
+  "job": 556,
+  "log_sha256": "cb5b1f6fb3398393918434334f417c3470f1ee603afc9f173d7a7aadf8fb2836",
+  "reported_numeric_series": {
+    "Mean reward": {
+      "count": 250,
+      "min": 2.45,
+      "max": 335.01,
+      "last": 302.35,
+      "all_finite": true
+    },
+    "Mean value_function loss": {
+      "count": 250,
+      "min": 0.3999,
+      "max": 2.0606,
+      "last": 1.3995,
+      "all_finite": true
+    },
+    "Mean surrogate loss": {
+      "count": 250,
+      "min": -0.0185,
+      "max": -0.0111,
+      "last": -0.015,
+      "all_finite": true
+    },
+    "Mean entropy loss": {
+      "count": 250,
+      "min": -7.4646,
+      "max": -7.1995,
+      "last": -7.4328,
+      "all_finite": true
+    },
+    "Mean action noise std": {
+      "count": 250,
+      "min": 0.13,
+      "max": 0.13,
+      "last": 0.13,
+      "all_finite": true
+    },
+    "Episode_Termination/physics_diverged": {
+      "count": 250,
+      "min": 0.0,
+      "max": 0.0,
+      "last": 0.0,
+      "all_finite": true
+    },
+    "Diagnostics/nonfinite_steps": {
+      "count": 250,
+      "min": 0.0,
+      "max": 0.0,
+      "last": 0.0,
+      "all_finite": true
+    }
+  },
+  "behavior_and_torque_gates_evaluated_by_training_log": false
+}

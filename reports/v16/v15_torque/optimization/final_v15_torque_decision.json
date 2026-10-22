@@ -1,0 +1,186 @@
+{
+  "retained_selected_policy": "Original339 model11699",
+  "retained_selected_actor_sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33",
+  "retained_guard_fraction": 0.99,
+  "retained_cutoff_hz": 25.0,
+  "original339_preserved": true,
+  "all8_experimental_candidates_completed": true,
+  "all8_experimental_candidates_failed_unchanged_gate": true,
+  "optimization_candidate": null,
+  "training536_adopted": false,
+  "training556_adopted": false,
+  "holdout_submitted": false,
+  "further_V15_GPU_jobs_authorized": false,
+  "control_gate": {
+    "survival_at_least_baseline": true,
+    "progress_fraction_at_least": 0.9,
+    "absolute_command_speed_error_extra_allowance_m_s": 0.02,
+    "rough_corridor_kept_at_least_baseline": true,
+    "rough_mean_max_heading_error_extra_allowance_deg": 2.0
+  },
+  "torque_gate": {
+    "mean_joint_rms_ratio_at_most": 1.0,
+    "pooled_abs_power_ratio_at_most": 1.0,
+    "peak_or_p99_or_high_limit_occupancy_must_improve": true
+  },
+  "source_summary_sha256": {
+    "optimization/final_candidate_summary.json": "696846ac0fcc4731492f3012c4ba117db5c771d48f9b98ebc335236b93091089",
+    "optimization/finetune536/evaluation/screening_summary.json": "c82e9812eaca9f01fea51222f78ca99a7177409dac7fed2b44429cba67f08193",
+    "optimization/reward_finetune/evaluation/screening_summary.json": "f2fa7980d588bea1a23b1cb8a947f3e250210e3a2f9f88ba4186632f36b355c8"
+  },
+  "candidate_failures": {
+    "g095_lpf15": {
+      "all_gates_pass": false,
+      "by_terrain": {
+        "flat": {
+          "control": [],
+          "torque": []
+        },
+        "rough": {
+          "control": [
+            "command_tracking"
+          ],
+          "torque": []
+        }
+      }
+    },
+    "g090_lpf25": {
+      "all_gates_pass": false,
+      "by_terrain": {
+        "flat": {
+          "control": [],
+          "torque": []
+        },
+        "rough": {
+          "control": [],
+          "torque": [
+            "power_not_increased"
+          ]
+        }
+      }
+    },
+    "g090_lpf10": {
+      "all_gates_pass": false,
+      "by_terrain": {
+        "flat": {
+          "control": [],
+          "torque": []
+        },
+        "rough": {
+          "control": [
+            "progress",
+            "command_tracking"
+          ],
+          "torque": []
+        }
+      }
+    },
+    "g095_lpf20": {
+      "all_gates_pass": false,
+      "by_terrain": {
+        "flat": {
+          "control": [],
+          "torque": []
+        },
+        "rough": {
+          "control": [
+            "command_tracking",
+            "rough_corridor"
+          ],
+          "torque": []
+        }
+      }
+    },
+    "g097_lpf20": {
+      "all_gates_pass": false,
+      "by_terrain": {
+        "flat": {
+          "control": [],
+          "torque": []
+        },
+        "rough": {
+          "control": [
+            "command_tracking",
+            "rough_corridor"
+          ],
+          "torque": []
+        }
+      }
+    },
+    "pre339_g097_lpf23": {
+      "all_gates_pass": false,
+      "by_terrain": {
+        "flat": {
+          "control": [],
+          "torque": []
+        },
+        "rough": {
+          "control": [
+            "survival",
+            "rough_corridor"
+          ],
+          "torque": [
+            "power_not_increased"
+          ]
+        }
+      }
+    },
+    "adapt536_g097_lpf23": {
+      "all_gates_pass": false,
+      "by_terrain": {
+        "flat": {
+          "control": [],
+          "torque": []
+        },
+        "rough": {
+          "control": [],
+          "torque": [
+            "power_not_increased"
+          ]
+        }
+      }
+    },
+    "adapt_torque1p25_g099_lpf25": {
+      "all_gates_pass": false,
+      "by_terrain": {
+        "flat": {
+          "control": [],
+          "torque": [
+            "rms_not_increased",
+            "power_not_increased",
+            "limit_demand_improved"
+          ]
+        },
+        "rough": {
+          "control": [],
+          "torque": [
+            "rms_not_increased",
+            "power_not_increased",
+            "limit_demand_improved"
+          ]
+        }
+      }
+    }
+  },
+  "raw_data_SHA_verified_count": 92,
+  "actual_solver_motor_torque_recorded": false,
+  "motor_thermal_safety_proven": false,
+  "units": {
+    "torque": "N m",
+    "mechanical_power": "W per joint, mean abs(estimated torque * angular velocity)",
+    "slew": "N m/s"
+  },
+  "configured_effort_limits_nm": {
+    "HAA": 24.8,
+    "HFE_KFE": 48.0
+  },
+  "limits_are_continuous_motor_ratings": false,
+  "limitations": [
+    "ImplicitActuator computed/applied torque are PD estimates before/after clipping, not measured PhysX motor torque.",
+    "A12s single-seed screen does not establish continuous operation, thermal safety, or holdout generalization.",
+    "Motor continuous rating, current/torque constants, resistance, cooling and gear efficiency are unavailable.",
+    "Different policies/failures change the alive sample population; joint averages do not imply every joint improved.",
+    "Training randomized gains240-360/6.4-9.6 differ from nominal guard300/8; evaluation actual gains300/8 match nominal.",
+    "Baseline508 is reused with source/metadata/gain/delay checks; different physical GPUs do not imply bitwise identical simulation."
+  ]
+}

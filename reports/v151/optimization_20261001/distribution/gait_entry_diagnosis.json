@@ -1,0 +1,38 @@
+{
+  "jobs": [
+    601,
+    621,
+    622
+  ],
+  "findings": {
+    "same_actor_model_initial_pose_hashes": true,
+    "job622_transport_retries": 0,
+    "all_status_timestamps_complete_and_sequential": true,
+    "job621_to622_controller_changes": "cached transport replay and publication order; no gait calculation change",
+    "walk_9_to17": {
+      "601": {
+        "delta_y_m": 3.97955,
+        "max_joint_target_span_rad": 0.59444,
+        "joint_velocity_rms_rad_s": 1.40826,
+        "four_foot_support_fraction": 0.0,
+        "policy_compute_median_ms": 3.769
+      },
+      "622": {
+        "delta_y_m": -0.00682,
+        "max_joint_target_span_rad": 0.01311,
+        "joint_velocity_rms_rad_s": 0.04432,
+        "four_foot_support_fraction": 1.0,
+        "policy_compute_median_ms": 3.925,
+        "changed_adjacent_target_frames": 1599
+      }
+    },
+    "walk_motor_settings": "KP300 KD8 feedforward0 in all three runs"
+  },
+  "interpretation": "622 settles into a stationary posture while commands continue updating. Consistent with policy entry-state dependence; causality not established because depth/raw policy outputs were not recorded.",
+  "fallback": {
+    "parameter": "crouch_shift_after_walk_only",
+    "default": false,
+    "behavior": "When enabled, suppress crouch offset and early contact-consistent IK until measured_support is latched after walking. Preserve the original initial SIT/rise calculation path.",
+    "verification": "65 scoped package tests passed in4.76s with actual DDS on isolated ROS domain94; exact pre-latch torque/WBC-vector parity at5 input states, post-latch +.12m reference shift."
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "utc": "2026-10-17T16:26:31.495498+00:00",
+  "memory_available_mb": 4667.734375,
+  "swap_used_mb": 10.25,
+  "process_rss_mb": 1101.2578125,
+  "processes": {
+    "91354": {
+      "ppid": 91318,
+      "name": "python",
+      "rss_kb": 1127688
+    }
+  },
+  "temperatures_c": {
+    "cpu-thermal": 50.437,
+    "soc2-thermal": 49.593,
+    "soc0-thermal": 49.5,
+    "gpu-thermal": 49.281,
+    "tj-thermal": 50.437,
+    "soc1-thermal": 50.375
+  },
+  "load_average": [
+    2.40478515625,
+    3.9931640625,
+    4.40966796875
+  ]
+}

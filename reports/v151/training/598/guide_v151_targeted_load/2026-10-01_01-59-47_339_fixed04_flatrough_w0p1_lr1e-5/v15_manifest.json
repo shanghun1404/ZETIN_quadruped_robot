@@ -1,0 +1,125 @@
+{
+  "schema": 1,
+  "prepared_motor_adaptation": true,
+  "targeted_scope": {
+    "terrain_proportions": {
+      "flat": 0.5,
+      "random_rough": 0.5
+    },
+    "difficulty": 0.4444444444444444,
+    "rough_noise_range": [
+      0.02,
+      0.1
+    ],
+    "flat_geometry": "zero-height copy of rough heightfield",
+    "stairs_validated": false,
+    "command_body_xyz": [
+      0.0,
+      0.4,
+      0.0
+    ],
+    "lane_yaw_feedback": false,
+    "actuator_randomization": "inherited V15 startup gains0.8-1.2",
+    "other_events": "inherited V15",
+    "teacher_loss_added": false,
+    "checkpoint_updates": [
+      25,
+      50,
+      100
+    ]
+  },
+  "base_overlay_sha256": "d7e5c58debf0e4df03b9f90bd61c3b6a0d8b48d99227b5968e44bfb6252b9581",
+  "original_trainer_sha256": "3da8cdcefa600f851795d3d48cdd30a6172b55070556ff8d888971057a1391d2",
+  "overlay_sha256": "ea650a2d3d962fb5feb89b0f31bb2d5f7b61f55bf9e5dc7d850aad791b0181c3",
+  "training_math_sha256": "2d82c3ba78281cf08ebb288a39b1dd9fd1de0e872d00553d74afe2125aac4187",
+  "loaded_source_hashes": {
+    "v15_env_cfg": "9d7630498116cff12bde9f05f38a7957ea8dd176a2a42d00aaaa73bb1d1e8672",
+    "v14_leg_env_cfg": "2cc074a3419189b1b95378d025106c0a189a68d4a58710967071f8520d60a3c4",
+    "v13_torque_actions": "909f240bd141f5d9e0e676f75227a89aa17b98ac8722d2949ae0c3b767173066",
+    "v13_torque_mdp": "b156a82fa97f5d5bc2590dd0ca63ed5256605b1548f4d4d1caf20c79f0f98297",
+    "v15_math": "36d64aca24c0eb339d0dcfcef74670e2e71fcc737129ccda6f848e183471e2d3",
+    "v8_env_cfg": "750a8a006c9749c49f1868437cc7bfbb88d2912b155c630452e5340dd190c351",
+    "isaaclab_tasks.manager_based.locomotion.velocity.config.spot.mdp.rewards": "a757a62b1f7bb06f4c5bc5c6380c411588c15ca089c03000f9c259754cc515c4"
+  },
+  "reward_changes": true,
+  "torque_reward_contract": {
+    "weights_before": {
+      "air_time": 5.0,
+      "base_angular_velocity": 5.0,
+      "base_linear_velocity": 5.0,
+      "foot_clearance": 0.5,
+      "gait": 10.0,
+      "action_smoothness": -1.0,
+      "air_time_variance": -1.0,
+      "base_motion": -2.0,
+      "base_orientation": -3.0,
+      "foot_slip": -0.5,
+      "joint_acc": -0.0001,
+      "joint_pos": -0.7,
+      "joint_torques": -0.0005,
+      "joint_vel": -0.01,
+      "duty_floor": -3.0
+    },
+    "weights_after": {
+      "air_time": 5.0,
+      "base_angular_velocity": 5.0,
+      "base_linear_velocity": 5.0,
+      "foot_clearance": 0.5,
+      "gait": 10.0,
+      "action_smoothness": -1.0,
+      "air_time_variance": -1.0,
+      "base_motion": -2.0,
+      "base_orientation": -3.0,
+      "foot_slip": -0.5,
+      "joint_acc": -0.0001,
+      "joint_pos": -0.7,
+      "joint_torques": -0.0005,
+      "joint_vel": -0.01,
+      "duty_floor": -3.0,
+      "rated_motor_load": -0.1
+    },
+    "rated_motor_load_weight": -0.1,
+    "ratings_nm": {
+      "HAA": 8.3,
+      "HFE": 18.0,
+      "KFE": 18.0
+    },
+    "semantics": "mean_j((estimated_applied_torque_j / rated_torque_j)^2), integrated by reward manager dt",
+    "original_joint_torques_weight": -0.0005,
+    "thermal_model": false
+  },
+  "actual_solver_motor_torque_recorded": false,
+  "motor_thermal_safety_proven": false,
+  "initial_checkpoint": "/home/shanghun1404/v15_large_scale/locomotion_jobs/339/guide_v15_physx_pd/2026-09-27_12-47-59_v14_m5700_physx_pd_lane_stairs/model_11699.pt",
+  "initial_checkpoint_sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33",
+  "resume": true,
+  "frozen_v12_student": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+  "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+  "usd_path": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+  "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+  "num_envs": 512,
+  "seed": 47,
+  "terrain_rows": 1,
+  "terrain_columns": 128,
+  "terrain_proportions": {
+    "flat": 0.5,
+    "random_rough": 0.5
+  },
+  "joint_drive": "physx_implicit_pd",
+  "pd_gain_scale_range": [
+    0.8,
+    1.2
+  ],
+  "max_action_delay_steps": 3,
+  "action_lpf_hz": 25.0,
+  "effort_guard_fraction": 0.99,
+  "lane_heading_command": true,
+  "base_angular_velocity_reward": {
+    "weight": 5.0,
+    "std": 2.0
+  },
+  "learning_rate": 1e-05,
+  "learning_rate_schedule": "fixed",
+  "control_dt_s": 0.02,
+  "physics_dt_s": 0.005
+}

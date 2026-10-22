@@ -1,0 +1,64 @@
+{
+  "source": "frozen controller helpers and final training checkpoints",
+  "simulation_run": false,
+  "renderer_sha256": "f761d6965dff3b1cb51b43a2ffd278ab2ae180a1e71e2605bc74eeb98fc7fc35",
+  "verified_gain_records": [
+    {
+      "job": 571,
+      "T": 0.02,
+      "kp": 319.3053895829523,
+      "kd": 27.46804014004609,
+      "alpha": 0.5292431012446664,
+      "omega_n": 21.060426005508205,
+      "zeta": 0.7888719686985833,
+      "checkpoint_sha256": "6e5ba40c1a8024a9bcb0e2327ef3826448e7e04eafaf0598047c260b1e1c3f16",
+      "controller_math_sha256": "568bcdad6b446087e9ef10a7d4cfc5042035be867e2e27f73ba95b382ef8b5e2",
+      "maximum_frequency_identity_error": 1.6392246515987586e-15,
+      "homogeneous_feedback_poles": [
+        [
+          0.6764900421785419,
+          0.30109721498935643
+        ],
+        [
+          0.6764900421785419,
+          -0.30109721498935643
+        ]
+      ],
+      "interpretation": "ideal compensated joint axis; fixed reference input; no clipping/contact-QP modification"
+    },
+    {
+      "job": 577,
+      "T": 0.02,
+      "kp": 289.332263114293,
+      "kd": 27.17309739122501,
+      "alpha": 0.6475011562403925,
+      "omega_n": 20.034413434662945,
+      "zeta": 0.8295043811501048,
+      "checkpoint_sha256": "b1436c732f5f0ed9fef5eef9241f121b800c2bd678a1690c2162c0b1c93bbc95",
+      "controller_math_sha256": "968f44085399dbaab77242fa11f03c9203e2261be6cb3f8f9a55806db34130e9",
+      "maximum_frequency_identity_error": 1.537180356616848e-15,
+      "homogeneous_feedback_poles": [
+        [
+          0.6806015022859051,
+          0.29774938264479783
+        ],
+        [
+          0.6806015022859051,
+          -0.29774938264479783
+        ]
+      ],
+      "interpretation": "ideal compensated joint axis; fixed reference input; no clipping/contact-QP modification"
+    }
+  ],
+  "saved_source_model_identities": {
+    "tensors_sha256": "f9a2a69e24c3d5351ecc5b58b973c4a417171a9e1355480c08703c0b03433155",
+    "maximum_transfer_identity_error": 1.1257486627375627e-15,
+    "maximum_initial_condition_identity_error": 4.470280076681873e-18,
+    "maximum_virtual_feedback_identity_error": 1.1368683772161603e-13,
+    "scope": "saved fixed-base source nominal matrices; no new physical model calculation"
+  },
+  "main_diagram_scope": "actual WBC/controller/plant feedback first; floating-base force map second; fixed-base ideal equivalent third",
+  "s_domain_scope": "ideal compensated joint axis; continuous-time equivalent",
+  "z_domain_scope": "ideal acceleration-ZOH channel; measured velocity feedback; clipping inactive",
+  "nonlinear_scope": "actual sampled WBC operator; finite numerical optimization; no global rational transfer function"
+}

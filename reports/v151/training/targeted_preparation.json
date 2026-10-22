@@ -1,0 +1,73 @@
+{
+  "status": "prepared_by_training_agent; parent reports training598 submitted",
+  "source_sha256": {
+    "config/train_v151_targeted.py": "ea650a2d3d962fb5feb89b0f31bb2d5f7b61f55bf9e5dc7d850aad791b0181c3",
+    "config/experiments/v151_20261001/train_targeted.sbatch": "5d191af56da831e45789f105a46758eab6a7c6c6117e73c042dac4917cfd17af",
+    "config/experiments/v151_20261001/compare_targeted.sbatch": "9f40a40c893c3638d8345b574475413b80b63d128f84c9e3a33e706fb1b18476",
+    "reports/v151/analysis/targeted_compare.py": "ea49272a17957ff969a85a0570334358eab9ef37e9f6ea9895b82e4e046634fc"
+  },
+  "initial_policy": "original339_model11699",
+  "learning_rate": 1e-05,
+  "rated_squared_load_weight": -0.1,
+  "num_envs": 512,
+  "checkpoint_updates": [
+    25,
+    50,
+    100
+  ],
+  "max_updates": 100,
+  "seed": 47,
+  "command_body_xyyaw": [
+    0.0,
+    0.4,
+    0.0
+  ],
+  "terrain": "50%zero-height flat heightfield,50%inherited random_rough; fixed level4 difficulty; no terrain curriculum",
+  "inherited": "original locomotion rewards,implicitPD,gainrandomization,LPF25Hz,guard.99,delay0-3,other events,optimizer state",
+  "changed": "added rated load weight from-.02to-.1,restrictterrain+command,100updates",
+  "teacher_anchor_loss": false,
+  "stairs_validated": false,
+  "motivation": {
+    "pilot589_last50_mean_logged_rewards": {
+      "original_L2_torque": -0.02947,
+      "new_rated": -0.03346,
+      "linear_velocity": 3.09407,
+      "gait": 7.313806,
+      "smoothness": -0.997106
+    },
+    "original_torque_semantics": "-.0005*L2norm(estimated_applied_torque), not sum(torque squared)",
+    "hypothetical_same_trace_new_rated_contribution": -0.1673,
+    "candidate250_flat": {
+      "mean_joint_rms_ratio": 1.36242820640851,
+      "power_ratio": 1.6354778663607905,
+      "command_mae": 0.30892458158610064
+    },
+    "candidate500_rough": "Parent reported survival failure,actualcrosslegcontact217.992N,mincapsulegap-.0086965m; excluded",
+    "runtime_review": "Frozen594 already applies COMvelocity correction; both train/ROS235dims,samefrozenV12depthstudentandnormalization. No demonstratedactorloadmismatch."
+  },
+  "comparison": {
+    "source": "frozen592 walking evaluator/controller",
+    "seed": 42,
+    "baseline_reuse": "592 flat+rough original339",
+    "order": "candidate25flat; roughonlyifpass; candidate50flat; roughonlyifpass; candidate100flat; roughonlyifpass",
+    "gate_source": "592/source/reports/v151/analysis/compare_ros2.py reused withoutchanges",
+    "self_collision": {
+      "max_contact_force_N": 1.0,
+      "min_capsule_gap_m": -0.002
+    },
+    "trunk_proxy": "reportonly",
+    "adoption_requires_heldout": true
+  },
+  "verification": {
+    "local_training_tests": 15,
+    "remote_training_tests": 15,
+    "local_analysis_tests": 6,
+    "overlay_ast": "passed",
+    "remote_source_checks": "5filesSHAverified",
+    "shell_syntax": "train+comparison passed",
+    "frozen592_collision_fixture": "highforceandgapfailuresbothrejected",
+    "runtime_scope_validation": "Actual instantiated command class/values/ranges and terrain classes/noise/proportions/origins/levels checked after env creation and saved in finetune_actual_contract.json.actual_targeted_scope.",
+    "reinforcement_deployment_state": "598 pending; 597 running; five source SHA checks passed"
+  },
+  "static_pose_report": "reports/v151/static_pose_search.json"
+}

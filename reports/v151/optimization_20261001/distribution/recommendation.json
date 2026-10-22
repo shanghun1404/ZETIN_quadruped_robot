@@ -1,0 +1,81 @@
+{
+  "recommendation": "Keep production QP objective unchanged for first physical posture candidate. Prefer contact-consistent body shift geometry.",
+  "reason": "At fixed generalized acceleration, stronger rated-torque objective hardly helps standing knees and increases the already-high RL knee in poststop/crouch. Large unrestricted savings come from acceleration tracking error.",
+  "strongest_fixed_acceleration_knee_rms_nm": {
+    "first_stand": [
+      16.094991969647676,
+      16.447465159707566,
+      17.17273979430552,
+      17.167043646331337
+    ],
+    "poststop_stand": [
+      15.48947069530131,
+      16.822128153081454,
+      18.774882513639184,
+      15.26738369698937
+    ],
+    "final_crouch": [
+      19.991852500019807,
+      24.71582466677684,
+      28.96188988129707,
+      24.737616346947288
+    ]
+  },
+  "baseline_fixed_acceleration_knee_rms_nm": {
+    "first_stand": [
+      16.116700670671403,
+      16.418674649500595,
+      17.14946714362139,
+      17.197357995102493
+    ],
+    "poststop_stand": [
+      15.82202125439723,
+      16.552749107189424,
+      18.317285843962967,
+      15.81437376757382
+    ],
+    "final_crouch": [
+      20.421037852340653,
+      24.29163824080318,
+      28.487190300242037,
+      25.36099912833346
+    ]
+  },
+  "static_stand_rated01": {
+    "knee_nm": [
+      15.400937411576438,
+      15.532314313485303,
+      15.80377420861681,
+      15.788493230472637
+    ],
+    "base_tracking_error_rms": [
+      0.001012695388315024,
+      0.16482126424631854,
+      0.08836680155790883,
+      0.011670237351903676,
+      0.00011206050456997657,
+      0.0001868576057992543
+    ]
+  },
+  "reject_weights": [
+    1.0,
+    10.0
+  ],
+  "potential_future_minimal_change": "If separately explored, add optional torque_objective_scale to solve_wbc_qp (default hard limits). Use it ONLY in H/q torque regularizer; keep limits and torque bounds unchanged. Add controller opt-in rated scale [8.3,18,18]*4 and regularization .01 first. Reset warm state on objective changes.",
+  "required_tests": [
+    "Default scale gives same acceleration/force/torque as current solver.",
+    "Changing objective scale does not change hard limit, velocity, or slew constraint matrix/bounds.",
+    "Rated weights .01 preserve static base tracking error <.1 in real-model standing/crouch.",
+    "Asymmetric fixed-acceleration contact test quantifies normalized torque cost and preserves base/contact equations.",
+    "All input scales must be finite and positive with scalar or12/batched shape validation.",
+    "NumPy/Torch parity and cold/warm reset behavior if solver API modified."
+  ],
+  "caveats": [
+    "62 offline states; no rollout or hardware validation.",
+    "All ADMM candidates feasible in these samples, but rated10 had zero converged samples at320 iterations. Feasibility alone does not preserve body support behavior.",
+    "Cold ADMM can differ by several Nm from equality-optimal forces even when reported converged; use exact optimum to assess objective benefit and closed-loop warmed solver for deployment.",
+    "Pinocchio dynamic torque recomputation using logged acceleration/forces matches six representative601 samples within1.5e-11Nm.",
+    "Actual root-origin body linear velocity reconstructed from R.T@world_velocity; result.npz velocity stores COM velocity and is not the WBC input."
+  ],
+  "source_files_unchanged": true
+}

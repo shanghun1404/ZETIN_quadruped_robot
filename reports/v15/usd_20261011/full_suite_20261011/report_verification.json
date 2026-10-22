@@ -1,0 +1,8 @@
+{
+  "expected_cases": 15,
+  "physical_attempts": 17,
+  "trace_checks_pass": true,
+  "motor_csv_rows": 180,
+  "missing_local_links": [],
+  "repeat_attempts_preserved": true
+}

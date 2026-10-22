@@ -1,0 +1,90 @@
+{
+  "schema": 2,
+  "generation": 0,
+  "best_score": -9698.571441173553,
+  "best_parameters": [
+    9.462856440652038,
+    1.0749609236189683,
+    70.0184085434888,
+    11.580356906992057,
+    57.059262876626676,
+    15.165973620125346,
+    1.1697275029323693,
+    0.1164844661991247,
+    0.06941101137923747,
+    0.8148211695862633,
+    0.9904238154451328,
+    0.13725643251224065
+  ],
+  "parameter_names": [
+    "joint_frequency_rad_s",
+    "joint_damping_ratio",
+    "body_position_gain",
+    "body_velocity_gain",
+    "body_attitude_gain",
+    "body_angular_gain",
+    "period_s",
+    "step_length_m",
+    "step_height_m",
+    "duty_factor",
+    "force_scale",
+    "posture_gain"
+  ],
+  "mean": [
+    13.379899192766848,
+    1.0032373343947159,
+    67.41134901250547,
+    9.31565892670946,
+    70.6134041564359,
+    10.308669426827345,
+    1.0297425085177279,
+    0.12054696520502448,
+    0.045822924408883296,
+    0.7300869903887764,
+    0.9870445084057322,
+    0.23969283559434695
+  ],
+  "std": [
+    3.13328644653515,
+    0.16159570239536653,
+    27.847472426914806,
+    3.8061454730751128,
+    32.95529753068044,
+    3.5522573034536213,
+    0.09151640753985432,
+    0.04017567238023171,
+    0.0214253826222356,
+    0.05616947652128411,
+    0.0775930649105957,
+    0.09935659822130119
+  ],
+  "training_seed": 51,
+  "rollout_seconds": 6.0,
+  "control_dt_s": 0.02,
+  "speed_command_m_s": 0.25,
+  "effort_fraction": 0.9,
+  "controller": "model",
+  "rng_state": {
+    "bit_generator": "PCG64",
+    "state": {
+      "state": 261391877014058921420680426369768863568,
+      "inc": 33119895734852443892069156662266824349
+    },
+    "has_uint32": 0,
+    "uinteger": 0
+  },
+  "resumed_checkpoint_sha256": null,
+  "selection_method": "CEM population training score; requires separate holdout evaluation",
+  "history": [
+    {
+      "generation": 0,
+      "score_max": -9698.571441173553,
+      "score_mean": -9791.486334325746,
+      "survived": 0,
+      "progress_best_m": 0.5714268684387207,
+      "power_best_w_per_joint": 4.409043312072754,
+      "seconds_elapsed": 7.005029790001572
+    }
+  ],
+  "manifest_sha256": "9c3bc83fd92ec4ff3a2b4830fcc755c19d18f431fa00293be118e378a93e7a77"
+}

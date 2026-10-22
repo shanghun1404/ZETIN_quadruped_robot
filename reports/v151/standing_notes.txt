@@ -1,0 +1,81 @@
+V15.1 standing/rise core — numerical implementation record (2026-10-01)
+
+API
+  StandingController(model_path, dt=.02)
+  compute(q12,dq12,base_pos3,quat_wxyz4,lin_vel_b3,ang_vel_b3,
+          height=None,joint_reference=None) -> (torque12, diagnostics)
+  initialize(q12,base_pos3,quat_wxyz4): relatch after walking, no state reset.
+  crouch_pose(height_drop=.10) -> (q12, actor_root_height)
+  nominal_joint_position, nominal_height, model.source_path are public.
+  Canonical joint order FL FR RL RR x HAA HFE KFE. Base pose is actor
+  root origin, not root COM. Linear velocity is AT THAT ORIGIN in body axes.
+  height is absolute world actor-root Z. A crouch hold MUST pass its height
+  and joint reference; the default requests the nominal stand.
+
+Model and controller
+  Imports only NumPy and existing simulator-free v16_physical_model,
+  v16_controller_math, v16_wbc_qp (install or expose config on PYTHONPATH).
+  All M/h/J come from the external MJCF via Pinocchio, never PhysX.
+  V16 30-variable WBC, 320 iterations, all four contacts enabled.
+  Accepted V16 metric wbc_acceleration_weights(1000,'unscaled') preserved:
+  solver diagonal [3.6]*3 + [40]*3 + [1]*12.
+  V16 gains from provided checkpoint summary: joint frequency20.0344,
+  damping ratio.8295, position33.0577, velocity19.5438,
+  attitude32.1831, angular12.6411, posture.6475.
+  Model viscous damping explicitly excluded; rotor diagonal .02 included.
+  Bounds .9*[24.8,48,48] per leg, no-load speed50rad/s, slew2500Nm/s.
+  Returned command is additionally guarded; diagnostics distinguish raw QP
+  requested torque from actual commanded torque and report guard_delta_nm.
+  feasible/converged refer to the raw QP; guard clipping is NOT relabeled
+  feasible. Parent must retain/log this distinction.
+
+Coordinate handling
+  WBC unknown base acceleration uses Pinocchio body-local free-flyer tangent.
+  Root linear acceleration includes -omega_body cross linear_velocity_body.
+  Desired upright attitude preserves initial yaw. Material contact forces
+  and Jacobian output rows use world axes. Root-origin J/M/h all agree.
+  Jdot*v computed with central differences along Pinocchio integrate,
+  including body-axis transport and native/canonical joint permutations.
+  Initial yaw and support anchors are latched from measured state.
+
+Intentional adaptations and remaining physical risks
+  V16 originally used PhysX root-COM world coordinates and a quaternion-vector
+  orientation error; this controller uses root-origin body coordinates and
+  the rotation logarithm, retaining the gains. They agree locally, not at
+  large tilt. This controller is for supported crouch/rise, not recovery.
+  Posture term now follows the requested rise reference, so holding crouch
+  does not fight a separate permanent nominal-standing posture target.
+  Foot COM projections to nominal z=0 define fixed material contact points.
+  They are a model approximation, not measured contact patches or a proven
+  match to the simulator's convex collision geometry. Crouch IK preserves
+  these four points exactly while lowering actor root from .464 to .364m.
+  Actual all-four support MUST be monitored in ROS/bridge. The pure core
+  has no contact-sensor argument and cannot distinguish lifted feet.
+  Friction coefficient .6 uses the original world-axis pyramid. General
+  yaw rotation of that conservative square changes its orientation; the
+  invariance regression uses90degrees, where the pyramid is invariant.
+  No dry-friction compensation is inferred from the PhysX .3 coefficient.
+  No collision, dynamic rise, hardware torque, or timing validation claimed.
+  NumPy320 iterations took approximately.25s locally: lockstep verification,
+  not a 50Hz wall-clock performance claim. Implicit PD conversion still
+  requires the parent's physical integration experiment.
+
+Validation
+  Test-first initial run: six expected failures (missing standing module).
+  Initial physical tests then passed; added independent inverse dynamics,
+  contact-trajectory second derivatives, overspeed guard, and reinitializing
+  anchors to test concrete frame/friction/damping/inertia integration risks.
+  Weight regression failed with previous default metric (all12 torques,
+  max difference1.40073Nm) and passed after accepted1000/unscaled correction.
+  Final standing tests11pass. Combined V16+standing result in
+  standing_tests.log; optional Torch comparison skipped locally.
+  Pinocchio3.9.0 under /tmp/v151-model-env/bin/python. Upstream binary wheel
+  needed cmeel-urdfdom4.0.1 and cmeel-tinyxml2 10.0.0 (newest deps mismatched
+  liburdfdom_sensor.so.4.0). Pinocchio emits a dependency deprecation warning
+  about hppfcl→coal. This is not a controller warning.
+  Full bare pytest attempted:37collection errors (Torch/config import path).
+  Full pytest with config+ROS paths:26collection errors, details and every
+  failing module recorded in standing_full_suite_with_path.log. Thus the
+  full project suite is NOT reported as passing. Parent should run its
+  complete suite in the prepared Torch/ROS environment on ws1.
+  All executed checks here are CPU algebra/kinematics; no simulator/GPU job.

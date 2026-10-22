@@ -1,0 +1,34 @@
+{
+  "training_completed": true,
+  "checkpoint": "/home/shanghun1404/v151_ros2/targeted_training_jobs/598/guide_v151_targeted_load/2026-10-01_01-59-47_339_fixed04_flatrough_w0p1_lr1e-5/model_11799.pt",
+  "checkpoint_sha256": "2e70d100c26856e2673002bee4c1b01357081e354963b88d2900eeb5935206a4",
+  "last_learning_iteration": 11799,
+  "pilot_checkpoints": [
+    {
+      "updates": 25,
+      "iteration": 11724,
+      "path": "/home/shanghun1404/v151_ros2/targeted_training_jobs/598/guide_v151_targeted_load/2026-10-01_01-59-47_339_fixed04_flatrough_w0p1_lr1e-5/pilot_update_0025.pt",
+      "sha256": "bb9f8dcc5fb88e56a33f83b7bced3b5f50f774a3a5e158736f01580146549f71"
+    },
+    {
+      "updates": 50,
+      "iteration": 11749,
+      "path": "/home/shanghun1404/v151_ros2/targeted_training_jobs/598/guide_v151_targeted_load/2026-10-01_01-59-47_339_fixed04_flatrough_w0p1_lr1e-5/pilot_update_0050.pt",
+      "sha256": "4652eda812bad428d7abe591f81a40433339c4c5088013d3b1e6aa96fc3c2faf"
+    },
+    {
+      "updates": 100,
+      "iteration": 11799,
+      "path": "/home/shanghun1404/v151_ros2/targeted_training_jobs/598/guide_v151_targeted_load/2026-10-01_01-59-47_339_fixed04_flatrough_w0p1_lr1e-5/pilot_update_0100.pt",
+      "sha256": "be59c031fbcebf0650a0f6e9171b0469a92c5a8c542d8ffa3ad03ad2561da310"
+    }
+  ],
+  "policy_std_min_max": [
+    0.11467437446117401,
+    0.14129935204982758
+  ],
+  "nonfinite_steps": 0,
+  "actual_contract_sha256": "9235c5609ca368aa19a197c277102817518f98f8ed1e357c9754672e6e9e8b70",
+  "behavior_and_torque_gates_evaluated": false,
+  "motor_thermal_safety_proven": false
+}

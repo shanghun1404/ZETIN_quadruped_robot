@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "scenario": "flat",
+  "seed": 42,
+  "failure": null,
+  "completed": true,
+  "seconds_recorded": 14.0,
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "geometry": {},
+  "reset_after_initialization": false,
+  "terminal_position": [
+    -0.8336501121520996,
+    6.633521556854248,
+    0.5251332521438599
+  ],
+  "terminal_quaternion": [
+    0.9597060680389404,
+    0.0018815017538145185,
+    0.007661120034754276,
+    0.2808946967124939
+  ],
+  "torque_semantics": "implicit PD estimate, not measured PhysX drive force",
+  "torque_rms": [
+    9.998793601989746,
+    9.603798866271973,
+    21.75311851501465,
+    11.074881553649902,
+    8.997298240661621,
+    12.018391609191895,
+    6.856434345245361,
+    12.476715087890625,
+    21.348716735839844,
+    9.603684425354004,
+    9.205401420593262,
+    18.42603874206543
+  ],
+  "torque_peak": [
+    24.552000045776367,
+    47.52000427246094,
+    47.5200080871582,
+    24.552001953125,
+    47.52000427246094,
+    47.519996643066406,
+    24.552000045776367,
+    47.52000427246094,
+    47.52000427246094,
+    24.552001953125,
+    34.0095100402832,
+    47.52001190185547
+  ],
+  "rated_exceed_fraction": [
+    0.3460714285714286,
+    0.10642857142857143,
+    0.44,
+    0.4546428571428571,
+    0.004642857142857143,
+    0.10178571428571428,
+    0.2082142857142857,
+    0.185,
+    0.46535714285714286,
+    0.33785714285714286,
+    0.04214285714285714,
+    0.28964285714285715
+  ],
+  "mean_absolute_power": 105.16082763671875,
+  "min_interleg_gap_m": 0.12069842272740111,
+  "negative_gap_fraction": 0.0,
+  "contact_pair_force_max_N": 0.0,
+  "min_leg_trunk_proxy_gap_m": -0.0059857961465933,
+  "trunk_proxy_overlap_fraction": 0.15142857142857144,
+  "collision_scope": "8 thigh/calf capsules cross-leg pairs; adjacent same-leg and leg-ground filtered; no trunk collider in V14 asset",
+  "final_position": [
+    -0.833027720451355,
+    6.631250858306885,
+    0.5251238346099854
+  ],
+  "modes": [
+    "WALK"
+  ],
+  "compute_ms_p50_p99": [
+    0.26893598260357976,
+    4.0626881894422695
+  ],
+  "demo_sequence_required": false,
+  "task_success": true
+}

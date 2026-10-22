@@ -1,0 +1,284 @@
+{
+  "selected_candidate": "posture03_15_afterwalk625",
+  "run": 625,
+  "accepted": true,
+  "baseline": 601,
+  "scope": "flat seed42 28s one complete sequence",
+  "change_percent": {
+    "rated_normalized_rms": -2.937498522496762,
+    "mean_joint_rms_nm": -1.919091962621422,
+    "ideal_current_squared_integral_a2_s": -7.246177973837453,
+    "final_crouch_max_rated_rms": -30.108268044997434
+  },
+  "parameters": {
+    "stand_forward_shift_m": 0.03,
+    "crouch_forward_shift_m": 0.15,
+    "crouch_shift_after_walk_only": true,
+    "height_drop": 0.1,
+    "speed": 0.4
+  },
+  "prelower_record_equality": "verification/physical_prelower_parity.json",
+  "gates": {
+    "accepted": true,
+    "failed_gates": [],
+    "gates": {
+      "same_demo_scope": {
+        "passed": true,
+        "actual": null,
+        "limit": null
+      },
+      "full_duration": {
+        "passed": true,
+        "actual": 28.0,
+        "limit": 28.0
+      },
+      "task_motion_success": {
+        "passed": true,
+        "actual": null,
+        "limit": null
+      },
+      "complete_motion_sequence": {
+        "passed": true,
+        "actual": null,
+        "limit": null
+      },
+      "finite_no_reset": {
+        "passed": true,
+        "actual": null,
+        "limit": null
+      },
+      "collision": {
+        "passed": true,
+        "actual": {
+          "min_crossleg_gap_m": 0.12016006323101747,
+          "max_crossleg_force_n": 0.0,
+          "min_sameleg_proxy_gap_m": 0.26880101516149296,
+          "min_trunk_proxy_gap_m": -0.008301128843129372,
+          "trunk_overlap_fraction": 0.6916071428571429,
+          "passed": true
+        },
+        "limit": null
+      },
+      "final_height": {
+        "passed": true,
+        "actual": 0.0017897486686706543,
+        "limit": 0.01
+      },
+      "forward_progress": {
+        "passed": true,
+        "actual": 4.79572868347168,
+        "limit": 4.194426441192627
+      },
+      "final_sit_window": {
+        "passed": true,
+        "actual": null,
+        "limit": null
+      },
+      "final_crouch_rms": {
+        "passed": true,
+        "actual": 1.1057446719396877,
+        "limit": 1.423874007567055
+      },
+      "initial_stand_rms": {
+        "passed": true,
+        "actual": 0.9550650944383295,
+        "limit": 0.9550650944383295
+      },
+      "poststop_stand_rms": {
+        "passed": true,
+        "actual": 1.0030241314534531,
+        "limit": 1.0030241314534531
+      },
+      "walk_rms": {
+        "passed": true,
+        "actual": 12.804449711861771,
+        "limit": 12.804449711861771
+      },
+      "walk_command_mae": {
+        "passed": true,
+        "actual": 0.1072781395537572,
+        "limit": 0.1272781395537572
+      },
+      "full_rated_normalized_rms": {
+        "passed": true,
+        "actual": 0.762490783808035,
+        "limit": 0.7855667968589931
+      },
+      "peak_limits": {
+        "passed": true,
+        "actual": [
+          24.552001953125,
+          28.14488410949707,
+          47.5200080871582,
+          24.552001953125,
+          34.52696228027344,
+          39.80135726928711,
+          24.49005699157715,
+          42.31785583496094,
+          47.52000427246094,
+          24.552001953125,
+          44.34140396118164,
+          47.5200080871582
+        ],
+        "limit": [
+          24.8001,
+          48.0001,
+          48.0001,
+          24.8001,
+          48.0001,
+          48.0001,
+          24.8001,
+          48.0001,
+          48.0001,
+          24.8001,
+          48.0001,
+          48.0001
+        ]
+      }
+    }
+  },
+  "collision": {
+    "min_crossleg_gap_m": 0.12016006323101747,
+    "max_crossleg_force_n": 0.0,
+    "min_sameleg_proxy_gap_m": 0.26880101516149296,
+    "min_trunk_proxy_gap_m": -0.008301128843129372,
+    "trunk_overlap_fraction": 0.6916071428571429,
+    "passed": true
+  },
+  "final_crouch": {
+    "samples": 300,
+    "duration_s": 1.5,
+    "joints": [
+      {
+        "joint": "FL_HAA",
+        "rms_nm": 0.55446019866764,
+        "peak_nm": 0.5877675414085388,
+        "rms_over_rated": 0.06680243357441444,
+        "rated_nm": 8.3,
+        "ideal_current_rms_a": 0.45078064932328454,
+        "ideal_current_peak_a": 0.4778597897630397,
+        "rated_exceed_seconds": 0.0
+      },
+      {
+        "joint": "FL_HFE",
+        "rms_nm": 11.991520777763169,
+        "peak_nm": 12.133761405944824,
+        "rms_over_rated": 0.6661955987646205,
+        "rated_nm": 18.0,
+        "ideal_current_rms_a": 8.327444984557756,
+        "ideal_current_peak_a": 8.426223198572796,
+        "rated_exceed_seconds": 0.0
+      },
+      {
+        "joint": "FL_KFE",
+        "rms_nm": 19.90340409491438,
+        "peak_nm": 19.973670959472656,
+        "rms_over_rated": 1.1057446719396877,
+        "rated_nm": 18.0,
+        "ideal_current_rms_a": 13.821808399246096,
+        "ideal_current_peak_a": 13.870604832967123,
+        "rated_exceed_seconds": 1.5
+      },
+      {
+        "joint": "FR_HAA",
+        "rms_nm": 0.1552097426818702,
+        "peak_nm": 0.1866559386253357,
+        "rms_over_rated": 0.018699968997815685,
+        "rated_nm": 8.3,
+        "ideal_current_rms_a": 0.12618678266818717,
+        "ideal_current_peak_a": 0.15175279563035424,
+        "rated_exceed_seconds": 0.0
+      },
+      {
+        "joint": "FR_HFE",
+        "rms_nm": 13.417695470130052,
+        "peak_nm": 13.505963325500488,
+        "rms_over_rated": 0.7454275261183363,
+        "rated_nm": 18.0,
+        "ideal_current_rms_a": 9.317844076479203,
+        "ideal_current_peak_a": 9.379141198264229,
+        "rated_exceed_seconds": 0.0
+      },
+      {
+        "joint": "FR_KFE",
+        "rms_nm": 18.934000372086743,
+        "peak_nm": 18.986413955688477,
+        "rms_over_rated": 1.0518889095603745,
+        "rated_nm": 18.0,
+        "ideal_current_rms_a": 13.148611369504684,
+        "ideal_current_peak_a": 13.18500969145033,
+        "rated_exceed_seconds": 1.5
+      },
+      {
+        "joint": "RL_HAA",
+        "rms_nm": 0.026414636701276733,
+        "peak_nm": 0.04988592118024826,
+        "rms_over_rated": 0.0031824863495514134,
+        "rated_nm": 8.3,
+        "ideal_current_rms_a": 0.021475314391281898,
+        "ideal_current_peak_a": 0.0405576594961368,
+        "rated_exceed_seconds": 0.0
+      },
+      {
+        "joint": "RL_HFE",
+        "rms_nm": 6.4564841966629265,
+        "peak_nm": 6.517806529998779,
+        "rms_over_rated": 0.3586935664812737,
+        "rated_nm": 18.0,
+        "ideal_current_rms_a": 4.4836695810159215,
+        "ideal_current_peak_a": 4.5262545347213745,
+        "rated_exceed_seconds": 0.0
+      },
+      {
+        "joint": "RL_KFE",
+        "rms_nm": 9.638038627390769,
+        "peak_nm": 10.068204879760742,
+        "rms_over_rated": 0.5354465904105983,
+        "rated_nm": 18.0,
+        "ideal_current_rms_a": 6.693082380132479,
+        "ideal_current_peak_a": 6.991808944278294,
+        "rated_exceed_seconds": 0.0
+      },
+      {
+        "joint": "RR_HAA",
+        "rms_nm": 0.15609146982642907,
+        "peak_nm": 0.17893876135349274,
+        "rms_over_rated": 0.018806201183907117,
+        "rated_nm": 8.3,
+        "ideal_current_rms_a": 0.1269036340052269,
+        "ideal_current_peak_a": 0.14547866776706728,
+        "rated_exceed_seconds": 0.0
+      },
+      {
+        "joint": "RR_HFE",
+        "rms_nm": 6.3508751455728865,
+        "peak_nm": 6.487704277038574,
+        "rms_over_rated": 0.3528263969762715,
+        "rated_nm": 18.0,
+        "ideal_current_rms_a": 4.410329962203393,
+        "ideal_current_peak_a": 4.505350192387899,
+        "rated_exceed_seconds": 0.0
+      },
+      {
+        "joint": "RR_KFE",
+        "rms_nm": 9.877614567589116,
+        "peak_nm": 9.972187042236328,
+        "rms_over_rated": 0.548756364866062,
+        "rated_nm": 18.0,
+        "ideal_current_rms_a": 6.8594545608257755,
+        "ideal_current_peak_a": 6.9251298904418945,
+        "rated_exceed_seconds": 0.0
+      }
+    ],
+    "max_joint_rms_over_rated": 1.1057446719396877,
+    "mean_joint_rms_nm": 8.121817441665605,
+    "rated_normalized_rms": 0.589829108420635,
+    "ideal_current_squared_integral_a2_s": 977.604585753062,
+    "absolute_mechanical_work_j": 6.6520404661986605,
+    "mean_absolute_mechanical_power_w": 4.43469364413244,
+    "body_y_command_mae_m_s": 0.001973462248030652,
+    "height_mean_m": 0.361270923713843
+  },
+  "policy_tick_compute_p99_ms": 87.3216654342832,
+  "transport_retry_count": 0
+}

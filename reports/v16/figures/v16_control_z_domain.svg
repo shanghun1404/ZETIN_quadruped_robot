@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="956.88pt" height="596.52pt" viewBox="0 0 956.88 596.52" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-09-30T20:13:52.349647</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.6.3, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 596.52 
+L 956.88 596.52 
+L 956.88 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 101.448 170.748 
+L 284.4 170.748 
+L 284.4 109.764 
+L 101.448 109.764 
+z
+" clip-path="url(#p4d0860bb27)" style="fill: #ffffff; stroke: #000000; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 353.7 153.0072 
+C 357.081658 153.0072 360.325267 151.663653 362.71646 149.27246 
+C 365.107653 146.881267 366.4512 143.637658 366.4512 140.256 
+C 366.4512 136.874342 365.107653 133.630733 362.71646 131.23954 
+C 360.325267 128.848347 357.081658 127.5048 353.7 127.5048 
+C 350.318342 127.5048 347.074733 128.848347 344.68354 131.23954 
+C 342.292347 133.630733 340.9488 136.874342 340.9488 140.256 
+C 340.9488 143.637658 342.292347 146.881267 344.68354 149.27246 
+C 347.074733 151.663653 350.318342 153.0072 353.7 153.0072 
+z
+" clip-path="url(#p4d0860bb27)" style="fill: #ffffff; stroke: #000000; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 450.72 242.82 
+L 694.656 242.82 
+L 694.656 109.764 
+L 450.72 109.764 
+z
+" clip-path="url(#p4d0860bb27)" style="fill: #ffffff; stroke: #000000; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 78.500834 140.256 
+Q 88.975801 140.256 97.88552 140.256 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 92.68552 137.656 
+L 97.88552 140.256 
+L 92.68552 142.856 
+L 92.68552 137.656 
+z
+" clip-path="url(#p4d0860bb27)" style="stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 286.398398 140.256 
+Q 312.673087 140.256 337.382528 140.256 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 332.182528 137.656 
+L 337.382528 140.256 
+L 332.182528 142.856 
+L 332.182528 137.656 
+z
+" clip-path="url(#p4d0860bb27)" style="stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 368.449395 140.256 
+Q 408.584184 140.256 447.153725 140.256 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 441.953725 137.656 
+L 447.153725 140.256 
+L 441.953725 142.856 
+L 441.953725 137.656 
+z
+" clip-path="url(#p4d0860bb27)" style="stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 696.656919 140.256 
+Q 780.58928 140.256 862.956394 140.256 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 857.756394 137.656 
+L 862.956394 140.256 
+L 857.756394 142.856 
+L 857.756394 137.656 
+z
+" clip-path="url(#p4d0860bb27)" style="stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 696.656919 212.328 
+Q 780.58928 212.328 862.956394 212.328 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 857.756394 209.728 
+L 862.956394 212.328 
+L 857.756394 214.928 
+L 857.756394 209.728 
+z
+" clip-path="url(#p4d0860bb27)" style="stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 766.728 142.86168 
+C 767.419034 142.86168 768.081859 142.587129 768.570494 142.098494 
+C 769.059129 141.609859 769.33368 140.947034 769.33368 140.256 
+C 769.33368 139.564966 769.059129 138.902141 768.570494 138.413506 
+C 768.081859 137.924871 767.419034 137.65032 766.728 137.65032 
+C 766.036966 137.65032 765.374141 137.924871 764.885506 138.413506 
+C 764.396871 138.902141 764.12232 139.564966 764.12232 140.256 
+C 764.12232 140.947034 764.396871 141.609859 764.885506 142.098494 
+C 765.374141 142.587129 766.036966 142.86168 766.728 142.86168 
+z
+" clip-path="url(#p4d0860bb27)" style="stroke: #000000; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 838.8 214.93368 
+C 839.491034 214.93368 840.153859 214.659129 840.642494 214.170494 
+C 841.131129 213.681859 841.40568 213.019034 841.40568 212.328 
+C 841.40568 211.636966 841.131129 210.974141 840.642494 210.485506 
+C 840.153859 209.996871 839.491034 209.72232 838.8 209.72232 
+C 838.108966 209.72232 837.446141 209.996871 836.957506 210.485506 
+C 836.468871 210.974141 836.19432 211.636966 836.19432 212.328 
+C 836.19432 213.019034 836.468871 213.681859 836.957506 214.170494 
+C 837.446141 214.659129 838.108966 214.93368 838.8 214.93368 
+z
+" clip-path="url(#p4d0860bb27)" style="stroke: #000000; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 470.124 325.98 
+L 694.656 325.98 
+L 694.656 276.084 
+L 470.124 276.084 
+z
+" clip-path="url(#p4d0860bb27)" style="fill: #ffffff; stroke: #000000; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 764.726489 301.032 
+Q 730.689869 301.032 698.218496 301.032 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 703.418496 303.632 
+L 698.218496 301.032 
+L 703.418496 298.432 
+L 703.418496 303.632 
+z
+" clip-path="url(#p4d0860bb27)" style="stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 353.7 299.03081 
+Q 353.7 227.019442 353.7 156.57332 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 351.1 161.77332 
+L 353.7 156.57332 
+L 356.3 161.77332 
+L 351.1 161.77332 
+z
+" clip-path="url(#p4d0860bb27)" style="stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 470.124 411.912 
+L 694.656 411.912 
+L 694.656 362.016 
+L 470.124 362.016 
+z
+" clip-path="url(#p4d0860bb27)" style="fill: #ffffff; stroke: #000000; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 836.798489 386.964 
+Q 766.727118 386.964 698.220994 386.964 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 703.420994 389.564 
+L 698.220994 386.964 
+L 703.420994 384.364 
+L 703.420994 389.564 
+z
+" clip-path="url(#p4d0860bb27)" style="stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 311.011674 169.629793 
+Q 326.25887 159.381677 340.206988 150.006713 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+    <path d="M 334.440868 150.749587 
+L 340.206988 150.006713 
+L 337.341615 155.065334 
+L 334.440868 150.749587 
+z
+" clip-path="url(#p4d0860bb27)" style="stroke: #000000; stroke-width: 1.4; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 766.728 140.256 
+L 766.728 301.032 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_2">
+    <path d="M 470.124 301.032 
+L 353.7 301.032 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_3">
+    <path d="M 838.8 212.328 
+L 838.8 386.964 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_4">
+    <path d="M 470.124 386.964 
+L 309.348 386.964 
+L 309.348 170.748 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_5">
+    <path d="M 766.728 217.872 
+L 766.728 206.784 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #ffffff; stroke-width: 4; stroke-linecap: square"/>
+   </g>
+   <g id="line2d_6">
+    <path d="M 758.9664 212.328 
+L 774.4896 212.328 
+" clip-path="url(#p4d0860bb27)" style="fill: none; stroke: #000000; stroke-width: 1.4; stroke-linecap: square"/>
+   </g>
+   <g id="text_1">
+    <text style="font: 700 21px 'DejaVu Serif'; text-anchor: start" x="32.148" y="34.92" transform="rotate(-0 32.148 34.92)">V16  |  z-domain feedback: ideal acceleration-ZOH channel</text>
+   </g>
+   <g id="text_2">
+    <text style="font: 11px 'DejaVu Serif'; text-anchor: start" x="32.148" y="65.412" transform="rotate(-0 32.148 65.412)">T = 0.020 s. Ideal acceleration hold after compensation; actual V16 holds torque. Measured velocity is a separate feedback.</text>
+   </g>
+   <g id="text_3">
+    <!-- $R(z)$ -->
+    <g transform="translate(29.376 145.222875)">
+     <text>
+      <tspan style="font: italic 18px 'STIXGeneral'" x="0 16.991989" y="-0.828125">Rz</tspan>
+      <tspan style="font: 18px 'STIXGeneral'" x="10.998001 23.993988" y="-0.828125">()</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_4">
+    <!-- $F_r(z)=K_p+K_d\frac{1-z^{-1}}{T}$ -->
+    <g transform="translate(119.664 145.836)">
+     <text>
+      <tspan style="font: italic 18px 'STIXGeneral'" x="0 22.687138 53.211528 89.890071" y="-0.7689062500000006">FzKK</tspan>
+      <tspan style="font: italic 12.6px 'STIXGeneral'" x="10.998001 65.217525 101.896068 122.989818 127.5597" y="1.6123437500000009 1.6123437500000009 1.6123437500000009 6.276406250000001 -8.590781250000001">rpdTz</tspan>
+      <tspan style="font: 18px 'STIXGeneral'" x="16.69315 29.689137 38.282326 74.960869" y="-0.7689062500000006">()=+</tspan>
+      <tspan style="font: 12.6px 'STIXGeneral'" x="108.989818 117.109258" y="-8.590781250000001">1−</tspan>
+      <tspan style="font: 8.82px 'STIXGeneral'" x="133.204521 139.246222" y="-13.035781250000001">−1</tspan>
+     </text>
+     <rect x="108.989818" y="-4.073594" width="35.222029" height="1.125"/>
+    </g>
+   </g>
+   <g id="text_5">
+    <!-- $\Sigma$ -->
+    <g transform="translate(348.345 144.946937)">
+     <text>
+      <tspan style="font: 17px 'STIXGeneral'" x="0" y="-0.75">Σ</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_6">
+    <!-- $G_q(z)=\frac{T^2(z+1)}{2(z-1)^2}$ -->
+    <g transform="translate(509.108 162.212)">
+     <text>
+      <tspan style="font: italic 22px 'STIXGeneral'" x="0 31.880319" y="-0.24156250000000412">Gz</tspan>
+      <tspan style="font: italic 15.4px 'STIXGeneral'" x="15.884003 69.18793 83.016133 90.583123" y="2.669374999999995 -11.2775 11.043437499999996 -11.2775">qTzz</tspan>
+      <tspan style="font: 22px 'STIXGeneral'" x="24.554315 40.438318 50.941122" y="-0.24156250000000412">()=</tspan>
+      <tspan style="font: 10.78px 'STIXGeneral'" x="79.385702 117.069187" y="-16.71125 5.6096875">22</tspan>
+      <tspan style="font: 15.4px 'STIXGeneral'" x="70.18793 77.88793 85.45492 91.230493 98.797483 104.003258 111.570248 111.703258 119.270248" y="11.043437499999996 11.043437499999996 -11.2775 11.043437499999996 -11.2775 11.043437499999996 -11.2775 11.043437499999996 -11.2775">2((−+11))</tspan>
+     </text>
+     <rect x="69.18793" y="-4.054063" width="55.210521" height="1.375"/>
+    </g>
+    <!-- $G_v(z)=\frac{T}{z-1}$ -->
+    <g transform="translate(522.748 204.012)">
+     <text>
+      <tspan style="font: italic 22px 'STIXGeneral'" x="0 31.017923" y="-0.6359375000000043">Gz</tspan>
+      <tspan style="font: italic 15.4px 'STIXGeneral'" x="15.884003 68.325534 78.325534" y="2.274999999999995 8.339062499999997 -8.9484375">vzT</tspan>
+      <tspan style="font: 22px 'STIXGeneral'" x="23.691919 39.575922 50.078726" y="-0.6359375000000043">()=</tspan>
+      <tspan style="font: 15.4px 'STIXGeneral'" x="76.539893 89.312659" y="8.339062499999997">−1</tspan>
+     </text>
+     <rect x="68.325534" y="-4.448438" width="28.687125" height="1.375"/>
+    </g>
+   </g>
+   <g id="text_7">
+    <text style="font: 16px 'DejaVu Serif'; text-anchor: start" x="326.5344" y="129.168" transform="rotate(-0 326.5344 129.168)">+</text>
+   </g>
+   <g id="text_8">
+    <!-- $A(z)$ -->
+    <g transform="translate(403.596 125.8416)">
+     <text>
+      <tspan style="font: italic 16px 'STIXGeneral'" x="0 15.103989" y="-0.1875">Az</tspan>
+      <tspan style="font: 16px 'STIXGeneral'" x="9.776001 21.327988" y="-0.1875">()</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_9">
+    <!-- $Y(z)$ -->
+    <g transform="translate(874.836 145.222875)">
+     <text>
+      <tspan style="font: italic 18px 'STIXGeneral'" x="0 16.001984" y="-0.828125">Yz</tspan>
+      <tspan style="font: 18px 'STIXGeneral'" x="10.007996 23.003983" y="-0.828125">()</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_10">
+    <!-- $V(z)$ -->
+    <g transform="translate(874.836 217.294875)">
+     <text>
+      <tspan style="font: italic 18px 'STIXGeneral'" x="0 16.991989" y="-0.828125">Vz</tspan>
+      <tspan style="font: 18px 'STIXGeneral'" x="10.998001 23.993988" y="-0.828125">()</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_11">
+    <!-- $(1+\alpha)K_p$ -->
+    <g transform="translate(544.79 305.110125)">
+     <text>
+      <tspan style="font: 20px 'STIXGeneral'" x="0 6.660004 19.548004 47.175995" y="-0.484375">(1+)</tspan>
+      <tspan style="font: italic 20px 'STIXGeneral'" x="36.136002 53.835999" y="-0.484375">αK</tspan>
+      <tspan style="font: italic 14px 'STIXGeneral'" x="67.175995" y="2.1593750000000007">p</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_12">
+    <text style="font: 19px 'DejaVu Serif'; text-anchor: start" x="369.7776" y="166.8672" transform="rotate(-0 369.7776 166.8672)">−</text>
+   </g>
+   <g id="text_13">
+    <!-- $K_d$ -->
+    <g transform="translate(571.69 392.48275)">
+     <text>
+      <tspan style="font: italic 20px 'STIXGeneral'" x="0" y="-0.9375">K</tspan>
+      <tspan style="font: italic 14px 'STIXGeneral'" x="13.339996" y="1.7062500000000007">d</tspan>
+     </text>
+    </g>
+   </g>
+   <g id="text_14">
+    <text style="font: 19px 'DejaVu Serif'; text-anchor: start" x="313.7832" y="180.1728" transform="rotate(-0 313.7832 180.1728)">−</text>
+   </g>
+   <g id="text_15">
+    <!-- $\frac{Y(z)}{R(z)}=\frac{G_q(z)F_r(z)}{1+(1+\alpha)K_pG_q(z)+K_dG_v(z)}$ -->
+    <g transform="translate(34.92 457.9272)">
+     <text>
+      <tspan style="font: italic 17.5px 'STIXGeneral'" x="0 0 15.557494 16.519994 114.035486 121.624986 129.522986 146.984674 148.141671 159.619665 173.501358 181.677092 203.177851 221.74754 246.421223" y="-13.387187500000005 9.354999999999997 -13.387187500000005 9.354999999999997 9.354999999999997 -15.165625 9.354999999999997 -15.165625 9.354999999999997 -15.165625 9.354999999999997 -15.165625 9.354999999999997 9.354999999999997 9.354999999999997">YRzzαGKzGFzzKGz</tspan>
+      <tspan style="font: 17.5px 'STIXGeneral'" x="9.729996 10.692496 22.364987 23.327487 56.624986 67.901987 82.416487 88.243985 99.520985 123.695488 141.157176 153.792167 167.673861 175.849594 180.308852 188.484585 188.66335 240.593726 253.228717" y="-13.387187500000005 9.354999999999997 -13.387187500000005 9.354999999999997 9.354999999999997 9.354999999999997 9.354999999999997 9.354999999999997 9.354999999999997 9.354999999999997 -15.165625 -15.165625 9.354999999999997 -15.165625 9.354999999999997 -15.165625 9.354999999999997 9.354999999999997 9.354999999999997">(())1+(1+)()(())+()</tspan>
+      <tspan style="font: 25px 'STIXGeneral'" x="35.889986" y="-0.8387500000000045">=</tspan>
+      <tspan style="font: italic 12.25px 'STIXGeneral'" x="134.259988 141.195488 160.776673 170.312161 214.850353 234.382543" y="-12.8490625 11.6715625 11.6715625 -12.8490625 11.6715625 11.6715625">qpqrdv</tspan>
+     </text>
+     <rect x="0" y="-5.041875" width="29.154985" height="1.5625"/>
+     <rect x="56.624986" y="-5.041875" width="202.431229" height="1.5625"/>
+    </g>
+   </g>
+   <g id="text_16">
+    <!-- $D_{\rm cl}(z)=(z-1)^2+K_dT(z-1)+\frac{1}{2}(1+\alpha)K_pT^2(z+1)$ -->
+    <g transform="translate(34.92 505.0512)">
+     <text>
+      <tspan style="font: italic 21px 'STIXGeneral'" x="0 33.694937 76.29971 151.46211 173.74565 192.414641 306.893952 325.478943 347.821294 376.999181" y="-0.12031250000000071">DzzKTzαKTz</tspan>
+      <tspan style="font: 14.7px 'STIXGeneral'" x="15.161987 21.68878 122.735768 258.976192 258.976192 361.729633" y="2.6593750000000007 2.6593750000000007 -7.532812500000002 -8.0578125 8.446874999999999 -7.532812500000002">cl2122</tspan>
+      <tspan style="font: 21px 'STIXGeneral'" x="26.701941 41.863928 51.889322 69.306714 87.501099 104.918491 115.418475 134.044718 185.421645 203.61603 221.033422 231.533406 241.5588 268.951181 275.944178 289.47656 318.485947 370.006184 388.200569 405.617961 416.117946" y="-0.12031250000000071">()=(−1)+(−1)+(1+)(+1)</tspan>
+      <tspan style="font: italic 14.7px 'STIXGeneral'" x="165.469098 339.485932" y="2.6593750000000007">dp</tspan>
+     </text>
+     <rect x="258.976192" y="-3.807813" width="7.349989" height="1.3125"/>
+    </g>
+   </g>
+   <g id="text_17">
+    <text style="font: 11px 'DejaVu Serif'" transform="translate(34.92 536.531206)">Contact QP / 571: Kp = 319.305 s^-2, Kd = 27.468 s^-1, alpha = 0.529243</text>
+    <text style="font: 11px 'DejaVu Serif'" transform="translate(34.92 548.8488)">Whole-body QP / 577: Kp = 289.332 s^-2, Kd = 27.173 s^-1, alpha = 0.647501</text>
+   </g>
+   <g id="text_18">
+    <text style="font: 10px 'DejaVu Serif'; text-anchor: start" x="34.92" y="584.8848" transform="rotate(-0 34.92 584.8848)">Dcl is the homogeneous feedback characteristic; Fr adds reference memory z^-1. Reference velocity / acceleration clipping and QP changes are inactive.</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="p4d0860bb27">
+   <rect x="7.2" y="7.2" width="942.48" height="582.12"/>
+  </clipPath>
+ </defs>
+</svg>

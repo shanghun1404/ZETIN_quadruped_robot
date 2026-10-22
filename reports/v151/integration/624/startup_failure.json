@@ -1,0 +1,12 @@
+{
+  "schema": 1,
+  "evidence_origin": "posthoc_slurm_log_and_sacct",
+  "completed": false,
+  "task_success": false,
+  "failure": "Isaac startup failed before physics: viewport set_camera_view accessed invalid null prim; Slurm FAILED 1:0",
+  "seconds_recorded": 0,
+  "scenario": "flat",
+  "demo_sequence_required": true,
+  "log_sha256": "f692b21ea5fd91e79cf1e5b03e6240b575a0068527803262c8ee7c369d49ab98",
+  "root_cause_confirmed": false
+}

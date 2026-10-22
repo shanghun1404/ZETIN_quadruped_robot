@@ -1,0 +1,43 @@
+{
+  "kind": "CUDA Graph inference and bounded benchmark recording",
+  "recorded_date_kst": "2026-10-18",
+  "baseline_manifest_sha256": "b9aa21fa63e48481091fd8eacac58b66bbbcf006662d5d17b1ac4882b3203921",
+  "files": {
+    "workspace/src/v14_ros2_control/v14_ros2_control/policy.py": {
+      "source": "ros2/v14_ros2_control/v14_ros2_control/policy.py",
+      "before_sha256": "9ef3449812cd72dbca50e254efb23a5f398a3084cf78dbcd8eabb0c9b36b8275",
+      "after_sha256": "e43accc64c8a21d5dd76c517c554fc7051092f495c7036c701d9791f05dcbbe4"
+    },
+    "workspace/src/v151_ros2_control/v151_ros2_control/policy_process.py": {
+      "source": "ros2/v151_ros2_control/v151_ros2_control/policy_process.py",
+      "before_sha256": "7fdc39a63fd027f932cbac5f72b7298c5486d4405c6c15e69a5591609e6404ba",
+      "after_sha256": "45f754bd8288a00a630d7ed4b734a1d6e64ed2589a20fdd91a7843040867a32e"
+    },
+    "build_bundle.py": {
+      "source": "deploy/jetson_v15/build_bundle.py",
+      "before_sha256": "7888a0eb25ffef25b53e059841327ad1785e3a4c9320870d659c965237af010f",
+      "after_sha256": "b0844ff4a9b9566ddeec58a1947f417a624c8f6110b2a2d1c286c17df349cc54"
+    },
+    "timing_records.py": {
+      "source": "deploy/jetson_v15/timing_records.py",
+      "before_sha256": null,
+      "after_sha256": "2bb0fea405a253554a238f1665cb552d4290d222521668b3a4cc364b6ee35be5"
+    },
+    "workspace/src/v14_ros2_control/test/test_policy_cuda_graph.py": {
+      "source": "ros2/v14_ros2_control/test/test_policy_cuda_graph.py",
+      "before_sha256": null,
+      "after_sha256": "d11d65eb852ec86b276e99a6329b9d911a6076e8c7317a4920faf65c3191c270"
+    }
+  },
+  "invariants": [
+    "Same trained checkpoints, FP32 math, observation order and action finite check",
+    "50ms freshness guard unchanged",
+    "No motor actuation; fixture apply_calls=0"
+  ],
+  "validations": [
+    "3 CUDA policy tests passed on Jetson",
+    "227 distinct ROS tests passed across complete and environment-specific runs",
+    "32 trained-checkpoint cases max action error 0",
+    "300s measured AI+WBC+H533 run: zero stream faults; strict integration false (59997/60000 feedback arrival count); WBC 4/15000 above20ms"
+  ]
+}

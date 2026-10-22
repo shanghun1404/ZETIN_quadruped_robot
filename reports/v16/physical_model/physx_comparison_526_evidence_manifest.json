@@ -1,0 +1,82 @@
+{
+  "status": "actual snapshot comparison completed",
+  "slurm_job_id": 526,
+  "slurm_state": "COMPLETED",
+  "exit_code": "0:0",
+  "cpu_count": 2,
+  "memory": "2G",
+  "gpu_requested": false,
+  "probe_job_id": 521,
+  "physical_calculations": "HPC CPU Slurm only",
+  "local_algebra_tests": 6,
+  "independent_result_review": "No remaining Critical/Important within declared root actor correspondence and single-snapshot scope",
+  "physx_armature_in_exported_mass_declared": "unknown; both source rigid and source armature-inclusive references retained",
+  "source_sha256": "8ef5712d8604110d1efc7ed92845bd83107e0ef42e1fa0f379448387c4793c6f",
+  "usd_top_level_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+  "files": {
+    "reports/v16/physical_model/physx_comparison_521_nominal.npz": {
+      "sha256": "592628934257fac8856485172102c669eaa7fd5aa0bfbdcc68246286aea438dd",
+      "bytes": 13182
+    },
+    "reports/v16/physical_model/physx_comparison_521_probe_manifest.json": {
+      "sha256": "480a80d60bffb110ef0afb544351690fbb2ca187936b05db3bcd5ccac8e76e94",
+      "bytes": 4229
+    },
+    "config/experiments/v16_20260929/v16_compare_physx.py": {
+      "sha256": "d580efdffb3b5ef1560f8a454e5f74c7bee0f6c4af32dd0e3b608bd87722c223",
+      "bytes": 24012
+    },
+    "config/v16_physical_model.py": {
+      "sha256": "baaddfb7067578fab156b865d19d27ae7232a357703c69e9a12c5ac7d9a0fec9",
+      "bytes": 19769
+    },
+    "reports/v16/physical_model/physx_comparison_521_jacobian_validation.json": {
+      "sha256": "f26c15d26a72a44cb6c1deb8fdbba312f43416782adb6468b2f3345f7d854033",
+      "bytes": 455
+    },
+    "reports/v16/physical_model/physx_comparison_526.json": {
+      "sha256": "55cbfbd14b8c2fb0867ed8f989bf590e80db4888fe96509af6fe8572a8a2145f",
+      "bytes": 42362
+    },
+    "reports/v16/physical_model/physx_comparison_526.npz": {
+      "sha256": "08fdd142330bec9404b240aa09479d0fcc22ca9a1135bb9c270a34ece5ceee73",
+      "bytes": 26278
+    },
+    "reports/v16/physical_model/physx_comparison_526_bodies.csv": {
+      "sha256": "1c3e37340403dae063355f825ccfa8088d14785fb829d1458229a58e5f335c99",
+      "bytes": 7683
+    },
+    "reports/v16/physical_model/physx_comparison-526.out": {
+      "sha256": "132b6a64a0776db116d64fde5eadb42312c528b6edef193aa7fb11f2c6f2c412",
+      "bytes": 4987
+    },
+    "reports/v16/physical_model/physx_comparison-526.err": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    "reports/v16/physical_model/physx_comparison_526_accounting.csv": {
+      "sha256": "afec1f638d15b324b448c06cebd4c0174bbebe54c3a3722d4167daef649dd2ce",
+      "bytes": 313
+    },
+    "reports/v16/physical_model/physx_comparison_526_verification.md": {
+      "sha256": "b4b0da9978e788832c75c76dadabd836b0b8dce45e7c430152f5368d3b1fe7e8",
+      "bytes": 9686
+    },
+    "reports/v16/physical_model/physx_comparison_526_review.md": {
+      "sha256": "5568ef72dcac4ba59b0012adac66b93bb33823776a69a01461a9d6112a4627ce",
+      "bytes": 1265
+    },
+    "reports/v16/physical_model/physx_comparison_test.py": {
+      "sha256": "0db183de25a1e7b0126cf8d30d44e160ed06f019844cf811ff069a4cac442ab0",
+      "bytes": 3480
+    },
+    "reports/v16/physical_model/physx_comparison_algebra.log": {
+      "sha256": "e1042e26168c400fd3ee2fcd484d3a8de6e84064382d0838fe25f957b84b0eef",
+      "bytes": 1126
+    },
+    "reports/v16/physical_model/physx_comparison.sbatch": {
+      "sha256": "024834ef9b9829f9c3a2ae4ce8035704c295e18556ec325563dc7a4e695894b8",
+      "bytes": 919
+    }
+  }
+}

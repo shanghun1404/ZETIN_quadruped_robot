@@ -1,0 +1,15 @@
+{
+  "files": [
+    "ros2/v151_ros2_control/v151_ros2_control/motion.py",
+    "ros2/v151_ros2_control/v151_ros2_control/controller_node.py"
+  ],
+  "blocking_findings": [],
+  "checks": [
+    "IK applies forward offset in target pose, returned goal excludes it, compute applies it once.",
+    "BLEND_STAND overrides offset with (1-weight)*stand shift and reaches same fully-standing target.",
+    "Initial nonzero-crouch branch assumes all-four support as existing startup; after walking uses measured support.",
+    "One-second quintic startup starts with zero slope; unchanged10cm height drop.",
+    "Non-SIT initial mode now computes crouch reference through IK instead of nominal stand pose."
+  ],
+  "residual": "Validate contact-consistent IK across selected height/shift trajectory and physical startup/postwalk settling. Scalar offset tests alone do not establish coupled geometry feasibility."
+}

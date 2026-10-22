@@ -1,0 +1,146 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>V13–V16 모터 부하 비교</title>
+<style>body{font-family:Arial,'Noto Sans CJK KR',sans-serif;max-width:1450px;margin:40px auto;padding:0 24px;line-height:1.6;color:#183044}h1,h2{color:#102f48}table{border-collapse:collapse;width:100%;font-size:13px;margin:20px 0}td,th{padding:8px 9px;border-bottom:1px solid #dce4ea;text-align:right}th{background:#edf3f7;position:sticky;top:0}td:first-child,th:first-child{text-align:left}.note{background:#edf4fa;padding:18px;border-left:4px solid #367aac}.bad{color:#af3929;font-weight:bold}img{width:100%}small{color:#506473}a{color:#226fad}</style>
+<h1>V13–V16: 평지·계단 모터별 전류 및 토크</h1>
+<p>새 Isaac Sim / PhysX 실행 · ws1 · Slurm admin QoS · 200 Hz 계측 · 조건당 8환경</p>
+<div class="note"><b>전류는 환산 추정치입니다.</b> Iτ = |τ| / (Kt × 감속비), 기어 효율 η=1 기준.
+HAA는 1.23 N·m/A, HFE/KFE는 1.44 N·m/A를 사용합니다. η=.85를 가정하면 표의 전류가 17.65% 증가합니다.
+이 수치는 배터리 전류가 아닙니다. 제조사 ADC 전류와 Kt의 전류 정의가 확인되지 않아 <b>전류 정격 초과는 확정하지 않습니다.</b>
+V15 토크는 IsaacLab implicit PD 추정치이고, V13/V14/V16은 시뮬레이션에 입력한 explicit 토크입니다.</div>
+<p><b>판정:</b> 이번 유효 표본에서는 시뮬레이터 최대값과 실제 모터의 카탈로그 피크 토크 초과는 없었습니다. 다만 정격 토크를 넘는 순간은 V16 평지에도 있으며, RMS가 정격 이하라는 사실이 순간 정격 초과가 없음을 뜻하지 않습니다.</p><h2>모터 기준</h2><table><tr><th>관절 / 모터</th><th>정격 Nm</th><th>피크 Nm</th><th>시뮬레이터 한도 Nm</th><th>제조사 정격/피크 ADC</th></tr>
+<tr><td>HAA · AK70-10 KV100</td><td>8.3</td><td>24.8</td><td>24.8</td><td>7.2 / 23.2</td></tr>
+<tr><td>HFE/KFE · AK10-9 KV60 V3.0</td><td>18</td><td>53</td><td>48</td><td>10.7 / 31.9</td></tr></table>
+<p>사용자가 모터 모델과 AK10-9 V3.0을 확인했습니다. 기존 시뮬레이터의 48 Nm 제한은 유지했습니다.
+정격 초과 시간과 RMS는 부하 지표입니다. 짧은 피크가 정격보다 높다는 사실만으로 고장을 뜻하지 않으며, 온도와 연속 운전 가능 시간은 이 시험으로 판정하지 않습니다.</p>
+<h2>실행 조건과 주행 결과</h2><table><tr><th>방식</th><th>지형</th><th>명령 m/s</th><th>기간 s</th><th>생존</th><th>평균 진행 m</th><th>계단 통과</th></tr>
+<tr><td>V13</td><td>flat</td><td>0.40</td><td>12</td><td>8/8</td><td>8.025</td><td>—</td></tr>
+<tr><td>V14</td><td>flat</td><td>0.40</td><td>12</td><td>8/8</td><td>8.341</td><td>—</td></tr>
+<tr><td>V15</td><td>flat</td><td>0.40</td><td>12</td><td>8/8</td><td>5.921</td><td>—</td></tr>
+<tr><td>V16</td><td>flat</td><td>0.05</td><td>32</td><td>8/8</td><td>1.551</td><td>—</td></tr>
+<tr><td>V13</td><td>stairs_up</td><td>0.50</td><td>12</td><td>5/8</td><td>1.781</td><td>0</td></tr>
+<tr><td>V14</td><td>stairs_up</td><td>0.50</td><td>12</td><td>4/8</td><td>1.404</td><td>0</td></tr>
+<tr><td>V15</td><td>stairs_up</td><td>0.50</td><td>12</td><td>8/8</td><td>0.834</td><td>0</td></tr>
+</table><h2>부하 요약</h2><table><tr><th>방식/지형</th><th>모터별 등가전류 RMS 범위 A</th><th>최대 토크 Nm</th><th>RMS가 정격보다 높은 모터</th><th>피크 한계 초과</th></tr>
+<tr><td>V13 / flat</td><td>5.32–21.21</td><td>47.57</td><td>8/12</td><td>없음</td></tr>
+<tr><td>V14 / flat</td><td>5.27–20.68</td><td>47.56</td><td>8/12</td><td>없음</td></tr>
+<tr><td>V15 / flat</td><td>5.35–14.96</td><td>47.54</td><td>6/12</td><td>없음</td></tr>
+<tr><td>V16 / flat</td><td>3.32–11.35</td><td>33.56</td><td>0/12</td><td>없음</td></tr>
+<tr><td>V13 / stairs_up</td><td>10.56–23.30</td><td>47.65</td><td>10/12</td><td>없음</td></tr>
+<tr><td>V14 / stairs_up</td><td>10.95–22.68</td><td>47.63</td><td>12/12</td><td>없음</td></tr>
+<tr><td>V15 / stairs_up</td><td>4.05–11.65</td><td>47.59</td><td>4/12</td><td>없음</td></tr>
+</table><p>V13: 선택된 V11 actor4999 + V12 depth + V13 LPF/guard. V14: 선택된 actor5700 + 다리 충돌 모델. V15: 선택된 actor11699 + implicit PD. V16: 작업577의 frozen WBC/CEM 제어기.</p>
+<p>V13~V15는 flat 0.4m/s, stairs 0.5m/s, 12초, seed42입니다. V16은 검증된 0.05m/s, 32초, seed1001을 유지합니다.
+따라서 동일 작업량에 대한 전력 효율 순위로 해석할 수 없습니다. 평지 RL은 2초 preroll을 제외하며, V16의 초기 1초 기립은 포함합니다.
+CSV에는 전체 구간(all)과 초기 2초 제외(after2s)를 모두 기록했습니다.</p>
+<p>계단은 V13~V15의 기존 fixed_v2 지형이며 단높이 15.714cm입니다. V16은 사용자가 계단을 걷지 못한다고 알려주어 계단 평가를 제외했습니다. V16 계단 토크·전류 결과는 없습니다.</p>
+<h2>평지: 모터별 결과</h2><img src="figures/flat_comparison.png">
+<p>FL 앞왼쪽 · FR 앞오른쪽 · RL 뒤왼쪽 · RR 뒤오른쪽. HAA 좌우 벌림 · HFE 엉덩이 굽힘 · KFE 무릎.<br>전류와 토크는 첫 실패 이전의 유효 표본만 집계하며, 음의 토크도 절댓값/RMS에 포함합니다.</p>
+<h3>V13</h3><table><tr><th>모터</th><th>전류 평균 |A|</th><th>전류 RMS A</th><th>전류 피크 A</th><th>토크 RMS Nm</th><th>토크 피크 Nm</th><th>정격 초과 %</th><th>최장 연속 초과 s</th><th>RMS &gt; 정격</th><th>시뮬/모터 피크 초과</th></tr>
+<tr><td>FL_HAA</td><td>8.20</td><td>10.56</td><td>19.96</td><td>12.99</td><td>24.55</td><td>52.40</td><td>0.335</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FL_HFE</td><td>7.19</td><td>10.22</td><td>33.00</td><td>14.72</td><td>47.53</td><td>17.60</td><td>0.070</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FL_KFE</td><td>15.44</td><td>21.21</td><td>33.01</td><td>30.54</td><td>47.53</td><td>45.30</td><td>0.325</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HAA</td><td>6.77</td><td>8.91</td><td>19.96</td><td>10.96</td><td>24.56</td><td>45.52</td><td>0.305</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HFE</td><td>6.71</td><td>8.93</td><td>31.08</td><td>12.87</td><td>44.76</td><td>12.73</td><td>0.100</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FR_KFE</td><td>13.56</td><td>17.65</td><td>33.04</td><td>25.42</td><td>47.57</td><td>53.69</td><td>0.375</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HAA</td><td>7.86</td><td>10.08</td><td>19.96</td><td>12.40</td><td>24.55</td><td>46.30</td><td>0.375</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HFE</td><td>3.79</td><td>5.32</td><td>18.35</td><td>7.65</td><td>26.42</td><td>5.70</td><td>0.050</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RL_KFE</td><td>14.02</td><td>18.46</td><td>33.01</td><td>26.58</td><td>47.53</td><td>52.38</td><td>0.370</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HAA</td><td>8.50</td><td>10.79</td><td>19.93</td><td>13.27</td><td>24.51</td><td>51.97</td><td>0.265</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HFE</td><td>7.18</td><td>11.13</td><td>33.00</td><td>16.02</td><td>47.52</td><td>14.84</td><td>0.105</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RR_KFE</td><td>12.84</td><td>18.80</td><td>33.03</td><td>27.07</td><td>47.56</td><td>43.97</td><td>0.310</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+</table>
+<h3>V14</h3><table><tr><th>모터</th><th>전류 평균 |A|</th><th>전류 RMS A</th><th>전류 피크 A</th><th>토크 RMS Nm</th><th>토크 피크 Nm</th><th>정격 초과 %</th><th>최장 연속 초과 s</th><th>RMS &gt; 정격</th><th>시뮬/모터 피크 초과</th></tr>
+<tr><td>FL_HAA</td><td>6.73</td><td>9.33</td><td>19.96</td><td>11.48</td><td>24.55</td><td>41.18</td><td>0.355</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FL_HFE</td><td>6.11</td><td>8.96</td><td>33.01</td><td>12.90</td><td>47.54</td><td>12.15</td><td>0.080</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FL_KFE</td><td>14.69</td><td>20.68</td><td>33.01</td><td>29.77</td><td>47.54</td><td>43.73</td><td>0.320</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HAA</td><td>6.62</td><td>8.91</td><td>19.96</td><td>10.96</td><td>24.56</td><td>33.10</td><td>0.190</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HFE</td><td>8.43</td><td>10.14</td><td>22.82</td><td>14.60</td><td>32.86</td><td>32.60</td><td>0.210</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FR_KFE</td><td>12.01</td><td>15.39</td><td>33.02</td><td>22.16</td><td>47.54</td><td>54.48</td><td>0.390</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HAA</td><td>6.35</td><td>7.95</td><td>19.57</td><td>9.78</td><td>24.08</td><td>36.33</td><td>0.210</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HFE</td><td>4.48</td><td>5.27</td><td>17.34</td><td>7.59</td><td>24.97</td><td>0.38</td><td>0.015</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RL_KFE</td><td>13.62</td><td>17.97</td><td>33.02</td><td>25.87</td><td>47.54</td><td>52.85</td><td>0.385</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HAA</td><td>6.75</td><td>8.69</td><td>18.06</td><td>10.69</td><td>22.21</td><td>43.42</td><td>0.260</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HFE</td><td>6.45</td><td>8.76</td><td>27.82</td><td>12.61</td><td>40.07</td><td>12.96</td><td>0.095</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RR_KFE</td><td>12.28</td><td>17.94</td><td>33.03</td><td>25.83</td><td>47.56</td><td>42.79</td><td>0.300</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+</table>
+<h3>V15</h3><table><tr><th>모터</th><th>전류 평균 |A|</th><th>전류 RMS A</th><th>전류 피크 A</th><th>토크 RMS Nm</th><th>토크 피크 Nm</th><th>정격 초과 %</th><th>최장 연속 초과 s</th><th>RMS &gt; 정격</th><th>시뮬/모터 피크 초과</th></tr>
+<tr><td>FL_HAA</td><td>5.72</td><td>8.11</td><td>19.97</td><td>9.97</td><td>24.56</td><td>34.76</td><td>0.095</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FL_HFE</td><td>4.62</td><td>6.48</td><td>21.67</td><td>9.34</td><td>31.20</td><td>10.06</td><td>0.070</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FL_KFE</td><td>10.97</td><td>14.96</td><td>33.01</td><td>21.55</td><td>47.53</td><td>44.43</td><td>0.285</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HAA</td><td>6.80</td><td>8.88</td><td>19.96</td><td>10.93</td><td>24.55</td><td>45.46</td><td>0.170</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HFE</td><td>5.11</td><td>6.10</td><td>13.21</td><td>8.78</td><td>19.02</td><td>0.10</td><td>0.015</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FR_KFE</td><td>6.41</td><td>8.02</td><td>30.71</td><td>11.55</td><td>44.22</td><td>9.57</td><td>0.070</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HAA</td><td>4.14</td><td>5.35</td><td>13.33</td><td>6.58</td><td>16.40</td><td>20.43</td><td>0.140</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HFE</td><td>6.67</td><td>8.46</td><td>19.05</td><td>12.18</td><td>27.44</td><td>18.35</td><td>0.125</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RL_KFE</td><td>11.35</td><td>14.88</td><td>33.01</td><td>21.43</td><td>47.53</td><td>47.90</td><td>0.320</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HAA</td><td>5.83</td><td>7.89</td><td>19.96</td><td>9.70</td><td>24.55</td><td>34.37</td><td>0.100</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HFE</td><td>5.46</td><td>6.29</td><td>22.09</td><td>9.06</td><td>31.81</td><td>3.69</td><td>0.030</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RR_KFE</td><td>9.03</td><td>12.65</td><td>33.02</td><td>18.22</td><td>47.54</td><td>28.66</td><td>0.135</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+</table>
+<h3>V16</h3><table><tr><th>모터</th><th>전류 평균 |A|</th><th>전류 RMS A</th><th>전류 피크 A</th><th>토크 RMS Nm</th><th>토크 피크 Nm</th><th>정격 초과 %</th><th>최장 연속 초과 s</th><th>RMS &gt; 정격</th><th>시뮬/모터 피크 초과</th></tr>
+<tr><td>FL_HAA</td><td>3.65</td><td>4.17</td><td>12.14</td><td>5.13</td><td>14.93</td><td>6.46</td><td>0.240</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FL_HFE</td><td>6.36</td><td>8.11</td><td>23.31</td><td>11.68</td><td>33.56</td><td>12.86</td><td>0.760</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FL_KFE</td><td>9.56</td><td>11.02</td><td>20.98</td><td>15.87</td><td>30.21</td><td>31.80</td><td>1.540</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HAA</td><td>3.57</td><td>4.05</td><td>11.97</td><td>4.98</td><td>14.73</td><td>5.97</td><td>0.200</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HFE</td><td>6.13</td><td>7.76</td><td>21.17</td><td>11.17</td><td>30.49</td><td>12.30</td><td>0.760</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FR_KFE</td><td>9.90</td><td>11.35</td><td>21.78</td><td>16.35</td><td>31.36</td><td>33.06</td><td>1.560</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HAA</td><td>2.78</td><td>3.39</td><td>9.97</td><td>4.17</td><td>12.26</td><td>1.66</td><td>0.260</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HFE</td><td>3.63</td><td>4.35</td><td>11.22</td><td>6.26</td><td>16.16</td><td>0.00</td><td>0.000</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RL_KFE</td><td>8.92</td><td>10.33</td><td>21.02</td><td>14.88</td><td>30.27</td><td>31.05</td><td>1.300</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HAA</td><td>2.74</td><td>3.32</td><td>7.97</td><td>4.09</td><td>9.81</td><td>0.53</td><td>0.100</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HFE</td><td>3.54</td><td>4.26</td><td>11.32</td><td>6.13</td><td>16.30</td><td>0.00</td><td>0.000</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RR_KFE</td><td>9.04</td><td>10.43</td><td>20.94</td><td>15.02</td><td>30.15</td><td>33.59</td><td>1.700</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+</table>
+<details><summary>12개 관절 토크 시계열 보기 · 환경0 예시</summary><img src="figures/flat_traces.png"></details>
+<h2>계단 상승: 모터별 결과</h2><img src="figures/stairs_up_comparison.png">
+<p>FL 앞왼쪽 · FR 앞오른쪽 · RL 뒤왼쪽 · RR 뒤오른쪽. HAA 좌우 벌림 · HFE 엉덩이 굽힘 · KFE 무릎.<br>전류와 토크는 첫 실패 이전의 유효 표본만 집계하며, 음의 토크도 절댓값/RMS에 포함합니다.</p>
+<h3>V13</h3><table><tr><th>모터</th><th>전류 평균 |A|</th><th>전류 RMS A</th><th>전류 피크 A</th><th>토크 RMS Nm</th><th>토크 피크 Nm</th><th>정격 초과 %</th><th>최장 연속 초과 s</th><th>RMS &gt; 정격</th><th>시뮬/모터 피크 초과</th></tr>
+<tr><td>FL_HAA</td><td>9.40</td><td>11.88</td><td>19.99</td><td>14.61</td><td>24.59</td><td>52.86</td><td>0.715</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FL_HFE</td><td>13.51</td><td>17.32</td><td>33.04</td><td>24.95</td><td>47.58</td><td>44.74</td><td>0.455</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FL_KFE</td><td>18.15</td><td>23.30</td><td>33.07</td><td>33.56</td><td>47.62</td><td>54.69</td><td>0.465</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HAA</td><td>8.52</td><td>10.95</td><td>19.98</td><td>13.47</td><td>24.58</td><td>48.14</td><td>0.445</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HFE</td><td>16.28</td><td>20.12</td><td>33.03</td><td>28.98</td><td>47.56</td><td>53.03</td><td>0.470</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_KFE</td><td>15.29</td><td>20.75</td><td>33.04</td><td>29.88</td><td>47.58</td><td>48.53</td><td>0.415</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HAA</td><td>9.16</td><td>11.63</td><td>19.97</td><td>14.30</td><td>24.57</td><td>52.55</td><td>0.455</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HFE</td><td>9.26</td><td>12.13</td><td>33.02</td><td>17.47</td><td>47.55</td><td>26.77</td><td>0.220</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RL_KFE</td><td>14.35</td><td>19.42</td><td>33.09</td><td>27.96</td><td>47.65</td><td>48.85</td><td>0.525</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HAA</td><td>8.26</td><td>10.56</td><td>19.99</td><td>12.99</td><td>24.58</td><td>48.45</td><td>0.485</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HFE</td><td>8.81</td><td>11.91</td><td>33.03</td><td>17.15</td><td>47.57</td><td>23.78</td><td>0.170</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RR_KFE</td><td>16.30</td><td>21.79</td><td>33.05</td><td>31.37</td><td>47.60</td><td>50.08</td><td>0.470</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+</table>
+<h3>V14</h3><table><tr><th>모터</th><th>전류 평균 |A|</th><th>전류 RMS A</th><th>전류 피크 A</th><th>토크 RMS Nm</th><th>토크 피크 Nm</th><th>정격 초과 %</th><th>최장 연속 초과 s</th><th>RMS &gt; 정격</th><th>시뮬/모터 피크 초과</th></tr>
+<tr><td>FL_HAA</td><td>9.73</td><td>12.09</td><td>19.99</td><td>14.87</td><td>24.58</td><td>55.48</td><td>0.315</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FL_HFE</td><td>15.81</td><td>19.32</td><td>33.04</td><td>27.82</td><td>47.58</td><td>54.20</td><td>0.480</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FL_KFE</td><td>17.35</td><td>22.68</td><td>33.07</td><td>32.67</td><td>47.63</td><td>52.27</td><td>0.925</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HAA</td><td>9.13</td><td>11.47</td><td>19.98</td><td>14.11</td><td>24.58</td><td>53.10</td><td>0.745</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HFE</td><td>14.35</td><td>18.31</td><td>33.03</td><td>26.37</td><td>47.56</td><td>46.11</td><td>1.490</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_KFE</td><td>15.48</td><td>20.63</td><td>33.03</td><td>29.71</td><td>47.57</td><td>49.50</td><td>0.635</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HAA</td><td>9.57</td><td>12.07</td><td>19.97</td><td>14.84</td><td>24.57</td><td>52.41</td><td>0.410</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HFE</td><td>11.22</td><td>14.48</td><td>33.02</td><td>20.85</td><td>47.55</td><td>34.79</td><td>1.160</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RL_KFE</td><td>12.58</td><td>17.81</td><td>33.05</td><td>25.65</td><td>47.59</td><td>41.37</td><td>0.390</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HAA</td><td>8.64</td><td>10.95</td><td>19.98</td><td>13.47</td><td>24.57</td><td>50.60</td><td>0.860</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HFE</td><td>10.46</td><td>13.93</td><td>33.03</td><td>20.06</td><td>47.56</td><td>30.43</td><td>0.835</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RR_KFE</td><td>16.75</td><td>21.36</td><td>33.05</td><td>30.76</td><td>47.60</td><td>53.58</td><td>1.235</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+</table>
+<h3>V15</h3><table><tr><th>모터</th><th>전류 평균 |A|</th><th>전류 RMS A</th><th>전류 피크 A</th><th>토크 RMS Nm</th><th>토크 피크 Nm</th><th>정격 초과 %</th><th>최장 연속 초과 s</th><th>RMS &gt; 정격</th><th>시뮬/모터 피크 초과</th></tr>
+<tr><td>FL_HAA</td><td>8.97</td><td>11.10</td><td>19.97</td><td>13.65</td><td>24.56</td><td>54.54</td><td>0.345</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FL_HFE</td><td>5.42</td><td>6.82</td><td>33.02</td><td>9.82</td><td>47.55</td><td>6.71</td><td>0.190</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FL_KFE</td><td>7.41</td><td>9.41</td><td>33.01</td><td>13.55</td><td>47.54</td><td>20.16</td><td>0.335</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HAA</td><td>5.77</td><td>8.01</td><td>19.97</td><td>9.85</td><td>24.56</td><td>32.22</td><td>0.250</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>FR_HFE</td><td>4.12</td><td>5.98</td><td>33.03</td><td>8.62</td><td>47.56</td><td>4.84</td><td>0.150</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>FR_KFE</td><td>7.74</td><td>10.71</td><td>33.04</td><td>15.42</td><td>47.58</td><td>33.30</td><td>0.365</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HAA</td><td>6.37</td><td>8.68</td><td>19.97</td><td>10.67</td><td>24.56</td><td>32.82</td><td>0.345</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RL_HFE</td><td>4.28</td><td>6.26</td><td>33.03</td><td>9.02</td><td>47.57</td><td>6.34</td><td>0.105</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RL_KFE</td><td>5.66</td><td>8.24</td><td>33.05</td><td>11.87</td><td>47.59</td><td>15.18</td><td>0.280</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HAA</td><td>6.12</td><td>7.69</td><td>19.96</td><td>9.46</td><td>24.55</td><td>41.54</td><td>0.325</td><td class='bad'>예</td><td>없음 / 없음</td></tr>
+<tr><td>RR_HFE</td><td>3.04</td><td>4.05</td><td>28.94</td><td>5.84</td><td>41.67</td><td>1.00</td><td>0.035</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+<tr><td>RR_KFE</td><td>9.01</td><td>11.65</td><td>33.03</td><td>16.78</td><td>47.56</td><td>39.59</td><td>0.370</td><td class=''>아니오</td><td>없음 / 없음</td></tr>
+</table>
+<h3>V16</h3><p>계단: 사용자 요청으로 미실행.</p>
+<details><summary>12개 관절 토크 시계열 보기 · 환경0 예시</summary><img src="figures/stairs_up_traces.png"></details>
+<h2>해석 범위와 재현</h2><p>모든 조건은 원본 모델의 서로 다른 actuator와 마찰·제어 구조를 보존했습니다. 각 조건8환경, 단일 시드의 부하 측정이며 통계적 성능 보증은 아닙니다.
+요구 토크(computed/requested)는 V13~V15에서 위치 목표 가드 이후, V16에서 토크 가드 이전이므로 동일한 정책 원요구량으로 비교하지 않습니다.
+PhysX의 관절 반력 전체를 모터 토크라고 해석하지 않았습니다. V13~V15 생존 마스크의 종료 경계는 정책 주기20ms 해상도이며, V16 추가 계측은5ms입니다. 넘어짐을 일으킨 마지막 입력까지 포함하고 이후의 자동 리셋 데이터는 제외합니다.</p>
+<p>전류 환산은 권선 저항, 드라이버 손실, 역기전력, 회생 제동, 무부하 전류 및 온도를 포함하지 않습니다.
+제조사 정격/피크 토크÷전류와 Kt×감속비가 일치하지 않아 전류 수치의 정의·보정은 실기에서 추가 확인해야 합니다.</p>
+<p><a href="per_motor.csv">모터별 CSV (전체 구간 + 유효 표본이 있는 초기2초 제외 구간)</a> · <a href="summary.json">결과 JSON</a> · <a href="specs/motors.json">환산 가정과 모터 사양</a> · <a href="source/analyze.py">분석 코드</a></p>
+<p>제조사 출처: <a href="https://www.cubemars.com/product/ak70-10-kv100-robotic-actuator.html">AK70-10</a> · <a href="https://img.cubemars.com/products/cubemars-product-parameter/AK10-9-V3.0-KV60.pdf">AK10-9 V3.0 PDF</a></p></html>

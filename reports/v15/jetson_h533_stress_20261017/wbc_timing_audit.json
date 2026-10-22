@@ -1,0 +1,12 @@
+{
+  "csv_rows": 180250,
+  "measured_rows": 180000,
+  "step_and_grid_and_duration_checks": true,
+  "actual_last_compute_vs_end_ms": -10.027177,
+  "raw_report_vs_end_ms": 25.006351,
+  "post_compute_reporting_time_ms": 35.033528,
+  "raw_report_passed": false,
+  "above_20ms": 8,
+  "completed": true,
+  "explanation": "Raw completion timestamp was captured after CSV close and array conversion. Actual last completion is reconstructed from the captured final start plus measured duration; raw files and their verdicts are preserved."
+}

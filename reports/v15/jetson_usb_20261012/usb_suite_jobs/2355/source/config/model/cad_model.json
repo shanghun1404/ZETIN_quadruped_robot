@@ -1,0 +1,362 @@
+{
+  "schema": 1,
+  "source_usd_root_sha256": "2a41b7f8ad3822b7929ec94a0399dc5cbcdd2e95e309c348d562013b9ba7df78",
+  "source_audit_sha256": "75360c72915e3d560b44657376f80cc63bd122154577fb4dee80c182d3aebe1f",
+  "source_total_mass_kg": 23.09449815750122,
+  "physical_body_count": 13,
+  "canonical_joint_names": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "canonical_nominal_q": [
+    0.0,
+    -0.55,
+    1.1,
+    0.0,
+    -0.55,
+    1.1,
+    0.0,
+    -0.55,
+    1.1,
+    0.0,
+    -0.55,
+    1.1
+  ],
+  "nominal_root_height_m": 0.4608854063842892,
+  "base_com_local_m": [
+    0.010427819564938545,
+    0.015405300073325634,
+    0.06333552300930023
+  ],
+  "effort_limits_Nm": [
+    24.8,
+    48.0,
+    48.0,
+    24.8,
+    48.0,
+    48.0,
+    24.8,
+    48.0,
+    48.0,
+    24.8,
+    48.0,
+    48.0
+  ],
+  "rotor_armature_kg_m2": 0.02,
+  "viscous_damping": 0.0,
+  "runtime_position_pd": {
+    "stiffness_Nm_per_rad": 300.0,
+    "damping_Nm_s_per_rad": 8.0
+  },
+  "runtime_joint_friction": 0.3,
+  "wbc_friction_coefficient": 0.3,
+  "dynamics_mjcf_sha256": "914e645273bf5b89b9482007f42f489183f55a75d25f0ac8688aa0a728576678",
+  "model_scope": "CAD-authored inertias and anchors, dynamics only; source USD remains collision authority",
+  "contact_scope": "massless kinematic foot frames at tennis mesh AABB centers; fixed material points projected to nominal ground",
+  "joint_mapping": [
+    {
+      "canonical": "FL_HAA",
+      "native": "FL_hip_roll",
+      "native_sign": -1,
+      "axis_cosine": -0.9999999999999994,
+      "native_default_rad": 0,
+      "pivot_delta_root_m": [
+        -9.170564613247834e-09,
+        -0.025124996900558194,
+        1.490116130486996e-08
+      ],
+      "joint_axis_line_offset_m": 1.706195255207009e-08,
+      "pivot_delta_world_m": [
+        -9.170564613247834e-09,
+        -0.025124996900558194,
+        -0.5519999712705611
+      ]
+    },
+    {
+      "canonical": "FL_HFE",
+      "native": "FL_hip_pitch",
+      "native_sign": -1,
+      "axis_cosine": -1.0,
+      "native_default_rad": 0.55,
+      "pivot_delta_root_m": [
+        0.030850671231754445,
+        -2.869205267819197e-08,
+        1.4901161193847656e-08
+      ],
+      "joint_axis_line_offset_m": 3.233076709945675e-08,
+      "pivot_delta_world_m": [
+        0.030850671231754445,
+        -2.869205267819197e-08,
+        -0.5519999712705612
+      ]
+    },
+    {
+      "canonical": "FL_KFE",
+      "native": "FL_knee",
+      "native_sign": 1,
+      "axis_cosine": 1.0,
+      "native_default_rad": 1.1,
+      "pivot_delta_root_m": [
+        -0.02343714333347513,
+        -0.0011676379048219387,
+        -0.0005729208069222835
+      ],
+      "joint_axis_line_offset_m": 0.0013006215928475918,
+      "pivot_delta_world_m": [
+        -0.02343714333347513,
+        -0.0011676379048219387,
+        -0.5525729069786447
+      ]
+    },
+    {
+      "canonical": "FR_HAA",
+      "native": "FR_hip_roll",
+      "native_sign": -1,
+      "axis_cosine": -0.9999999999999963,
+      "native_default_rad": 0,
+      "pivot_delta_root_m": [
+        7.45058058304604e-09,
+        -0.021624892950057817,
+        1.9294146169634985e-08
+      ],
+      "joint_axis_line_offset_m": 1.8931396246318117e-08,
+      "pivot_delta_world_m": [
+        7.45058058304604e-09,
+        -0.021624892950057817,
+        -0.5519999668775762
+      ]
+    },
+    {
+      "canonical": "FR_HFE",
+      "native": "FR_hip_pitch",
+      "native_sign": 1,
+      "axis_cosine": 0.9999999999999962,
+      "native_default_rad": -0.55,
+      "pivot_delta_root_m": [
+        -0.03085064142942423,
+        0.0035001050607670336,
+        1.4901161082825354e-08
+      ],
+      "joint_axis_line_offset_m": 0.0035001023637500654,
+      "pivot_delta_world_m": [
+        -0.03085064142942423,
+        0.0035001050607670336,
+        -0.5519999712705613
+      ]
+    },
+    {
+      "canonical": "FR_KFE",
+      "native": "FR_knee",
+      "native_sign": -1,
+      "axis_cosine": -1.0,
+      "native_default_rad": -1.1,
+      "pivot_delta_root_m": [
+        0.0234373733401311,
+        0.0046673715114591285,
+        -0.0005729794502244978
+      ],
+      "joint_axis_line_offset_m": 0.004702410262446097,
+      "pivot_delta_world_m": [
+        0.0234373733401311,
+        0.0046673715114591285,
+        -0.5525729656219469
+      ]
+    },
+    {
+      "canonical": "RL_HAA",
+      "native": "BL_hip_roll",
+      "native_sign": 1,
+      "axis_cosine": 0.9999999999999994,
+      "native_default_rad": 0,
+      "pivot_delta_root_m": [
+        1.3181175137488843e-08,
+        0.025125056505203747,
+        1.4901161193847656e-08
+      ],
+      "joint_axis_line_offset_m": 2.0474350702609225e-08,
+      "pivot_delta_world_m": [
+        1.3181175137488843e-08,
+        0.025125056505203747,
+        -0.5519999712705612
+      ]
+    },
+    {
+      "canonical": "RL_HFE",
+      "native": "BL_hip_pitch",
+      "native_sign": -1,
+      "axis_cosine": -0.9999999999999962,
+      "native_default_rad": 0.55,
+      "pivot_delta_root_m": [
+        0.030850693583488464,
+        3.904104232455019e-06,
+        1.4901161193847656e-08
+      ],
+      "joint_axis_line_offset_m": 3.90682970376705e-06,
+      "pivot_delta_world_m": [
+        0.030850693583488464,
+        3.904104232455019e-06,
+        -0.5519999712705612
+      ]
+    },
+    {
+      "canonical": "RL_KFE",
+      "native": "BL_knee",
+      "native_sign": 1,
+      "axis_cosine": 0.9999999999999656,
+      "native_default_rad": 1.1,
+      "pivot_delta_root_m": [
+        -0.02343717025178968,
+        -0.001163857967572457,
+        -0.0005729208069105152
+      ],
+      "joint_axis_line_offset_m": 0.001297234723471234,
+      "pivot_delta_world_m": [
+        -0.02343717025178968,
+        -0.001163857967572457,
+        -0.5525729069786329
+      ]
+    },
+    {
+      "canonical": "RR_HAA",
+      "native": "BR_hip_roll",
+      "native_sign": 1,
+      "axis_cosine": 0.9999999999999994,
+      "native_default_rad": 0,
+      "pivot_delta_root_m": [
+        2.063175573441267e-08,
+        0.02512505650520397,
+        1.4901161193847656e-08
+      ],
+      "joint_axis_line_offset_m": 2.615224490222345e-08,
+      "pivot_delta_world_m": [
+        2.063175573441267e-08,
+        0.02512505650520397,
+        -0.5519999712705612
+      ]
+    },
+    {
+      "canonical": "RR_HFE",
+      "native": "BR_hip_pitch",
+      "native_sign": 1,
+      "axis_cosine": 0.999999761581428,
+      "native_default_rad": -0.55,
+      "pivot_delta_root_m": [
+        -0.030850668142090754,
+        -8.859192056454024e-06,
+        1.4900976674780964e-08
+      ],
+      "joint_axis_line_offset_m": 1.2444251616379755e-05,
+      "pivot_delta_world_m": [
+        -0.030850668142090754,
+        -8.859192056454024e-06,
+        -0.5519999712707457
+      ]
+    },
+    {
+      "canonical": "RR_KFE",
+      "native": "BR_knee",
+      "native_sign": -1,
+      "axis_cosine": -0.9999999999999656,
+      "native_default_rad": -1.1,
+      "pivot_delta_root_m": [
+        0.02343737622423611,
+        0.00116726810296508,
+        -0.000573038093506395
+      ],
+      "joint_axis_line_offset_m": 0.0013003357761471536,
+      "pivot_delta_world_m": [
+        0.02343737622423611,
+        0.00116726810296508,
+        -0.5525730242652288
+      ]
+    }
+  ],
+  "foot_frames": {
+    "FL_foot": {
+      "parent_body": "FL_shank",
+      "center_body_m": [
+        -0.1698809874060661,
+        0.3148474678802505,
+        -0.5275214767456016
+      ],
+      "collider": "/quadruped/FL_shank/tennis_3",
+      "audited_nominal_center_root_m": [
+        -0.16988098740607477,
+        0.3266422341961812,
+        -0.43873935455585256
+      ],
+      "audited_nominal_min_root_m": [
+        -0.18986598521500803,
+        0.3042139895922671,
+        -0.46088539742474355
+      ]
+    },
+    "FR_foot": {
+      "parent_body": "FR_shank",
+      "center_body_m": [
+        0.16981900209388479,
+        0.31516051162026326,
+        -0.5275214767456109
+      ],
+      "collider": "/quadruped/FR_shank/tennis_1",
+      "audited_nominal_center_root_m": [
+        0.1698190020938836,
+        0.326909111661024,
+        -0.43858931399062073
+      ],
+      "audited_nominal_min_root_m": [
+        0.1498340042849502,
+        0.3044808670571094,
+        -0.4607353568595118
+      ]
+    },
+    "RL_foot": {
+      "parent_body": "BL_shank",
+      "center_body_m": [
+        -0.16988099040606686,
+        -0.31515653620974726,
+        -0.5275214778456006
+      ],
+      "collider": "/quadruped/BL_shank/tennis_4",
+      "audited_nominal_center_root_m": [
+        -0.169880990406076,
+        -0.30336176705553003,
+        -0.4387393635153982
+      ],
+      "audited_nominal_min_root_m": [
+        -0.1898659882150092,
+        -0.3257900116594441,
+        -0.4608854063842892
+      ]
+    },
+    "RR_foot": {
+      "parent_body": "BR_shank",
+      "center_body_m": [
+        0.16981899479391876,
+        -0.3148474962097425,
+        -0.5275214767456025
+      ],
+      "collider": "/quadruped/BR_shank/tennis_2",
+      "audited_nominal_center_root_m": [
+        0.16981899479391474,
+        -0.30309889239715687,
+        -0.4385893273588514
+      ],
+      "audited_nominal_min_root_m": [
+        0.1498339969849815,
+        -0.32552713700107094,
+        -0.46073537022774247
+      ]
+    }
+  }
+}

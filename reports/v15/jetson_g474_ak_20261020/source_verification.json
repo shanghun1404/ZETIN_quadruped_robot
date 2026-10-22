@@ -1,0 +1,55 @@
+{
+  "passed": true,
+  "files": {
+    "build/g474_can_fixture.elf": {
+      "expected": "70d4308c1909c55ab9abb4cf5237a11a4db3c4ced3bb6fb94814e36a214280c8",
+      "actual": "70d4308c1909c55ab9abb4cf5237a11a4db3c4ced3bb6fb94814e36a214280c8",
+      "matched": true
+    },
+    "build/g474_can_fixture.bin": {
+      "expected": "12281533fd15e790fcb59d78ba5923b48a2de492d972c8b513cbcb0d71af9a2f",
+      "actual": "12281533fd15e790fcb59d78ba5923b48a2de492d972c8b513cbcb0d71af9a2f",
+      "matched": true
+    },
+    "ak_stress.py": {
+      "expected": "2748db49f6430d7a9bdbf472960c7f60e827b193b6d188a8083ea2cc7ff40aca",
+      "actual": "2748db49f6430d7a9bdbf472960c7f60e827b193b6d188a8083ea2cc7ff40aca",
+      "matched": true
+    },
+    "g474_control.py": {
+      "expected": "9b12a93bb7ee857e3c64054ee72080410a343345bb2ba18c8e77df79b7ff2b2f",
+      "actual": "9b12a93bb7ee857e3c64054ee72080410a343345bb2ba18c8e77df79b7ff2b2f",
+      "matched": true
+    },
+    "run_modes.py": {
+      "expected": "97a1c3cd6fd512330716e6e9e9d205fb4ed14239f1cdf23d85655e54c17c2578",
+      "actual": "97a1c3cd6fd512330716e6e9e9d205fb4ed14239f1cdf23d85655e54c17c2578",
+      "matched": true
+    },
+    "firmware/g474_can_fixture.c": {
+      "expected": "d8da984be2bc6b96c9a1af15c8bd7cccad803d001641983146b3e2d2beaa0602",
+      "actual": "d8da984be2bc6b96c9a1af15c8bd7cccad803d001641983146b3e2d2beaa0602",
+      "matched": true
+    },
+    "firmware/g474_diag.h": {
+      "expected": "89d840db4077c37f9032cf9ad144f097055e84a6b4a3005c9ff00be078b8c497",
+      "actual": "89d840db4077c37f9032cf9ad144f097055e84a6b4a3005c9ff00be078b8c497",
+      "matched": true
+    },
+    "core/src/qd_protocol.c": {
+      "expected": "277a856b3554015d9e52bc69d29eaf02b28e11343be9f1ad5be80fe3f21e2492",
+      "actual": "277a856b3554015d9e52bc69d29eaf02b28e11343be9f1ad5be80fe3f21e2492",
+      "matched": true
+    },
+    "core/examples/qd_ak_virtual.c": {
+      "expected": "e18007bef0dc68a2d8b69264c7e3965eee1c30c000c237f1d7e679b59a28c286",
+      "actual": "e18007bef0dc68a2d8b69264c7e3965eee1c30c000c237f1d7e679b59a28c286",
+      "matched": true
+    },
+    "original_flash_512k.bin": {
+      "expected": "06c9c130cd6f5ebc60d6265e0926ecd9369b326593a6c166a21c6739b024a35f",
+      "actual": "06c9c130cd6f5ebc60d6265e0926ecd9369b326593a6c166a21c6739b024a35f",
+      "matched": true
+    }
+  }
+}

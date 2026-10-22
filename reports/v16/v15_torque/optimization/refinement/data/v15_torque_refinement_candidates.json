@@ -1,0 +1,55 @@
+{
+  "baseline": {
+    "guard_fraction": 0.99,
+    "cutoff_hz": 25.0,
+    "model": "339/model_11699",
+    "actor_sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33"
+  },
+  "candidates": [
+    {
+      "label": "g095_lpf20",
+      "guard_fraction": 0.95,
+      "cutoff_hz": 20.0
+    },
+    {
+      "label": "g097_lpf20",
+      "guard_fraction": 0.97,
+      "cutoff_hz": 20.0
+    }
+  ],
+  "screening": {
+    "scenarios": [
+      "flat",
+      "rough"
+    ],
+    "seeds": [
+      42
+    ],
+    "num_envs": 32,
+    "seconds": 12.0,
+    "control_gate": {
+      "survival_at_least_baseline": true,
+      "progress_fraction_at_least": 0.9,
+      "absolute_command_speed_error_extra_allowance_m_s": 0.02,
+      "rough_corridor_kept_at_least_baseline": true,
+      "rough_mean_max_heading_error_extra_allowance_deg": 2.0
+    },
+    "torque_gate": {
+      "mean_joint_rms_ratio_at_most": 1.0,
+      "pooled_abs_power_ratio_at_most": 1.0,
+      "peak_or_p99_or_high_limit_occupancy_must_improve": true
+    }
+  },
+  "notes": [
+    "Gate values are experiment acceptance criteria, not motor specifications.",
+    "All control gates apply before torque ranking.",
+    "No retraining and no original config/evaluator/model changes.",
+    "RMS, saturation, power and slew are implicit actuator estimates; actual solver motor torque and thermal safety remain unknown."
+  ],
+  "sequential_policy": {
+    "first": "g095_lpf20",
+    "second_if_first_fails_any_original_gate": "g097_lpf20",
+    "stop_after_first_pass": true,
+    "hypothesis": "20 Hz is an intermediate LPF setting; outcomes are not predicted observations."
+  }
+}

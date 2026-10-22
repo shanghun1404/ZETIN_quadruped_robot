@@ -1,0 +1,14 @@
+[
+  {
+    "updates": 250,
+    "iteration": 11949,
+    "path": "/home/shanghun1404/v151_ros2/training_jobs/589/guide_v151_rated_load/2026-10-01_00-50-04_339_rated_squared_w0p02_lr1e-5/pilot_update_0250.pt",
+    "sha256": "7b18f1a4f9373c827a83f8ab1eb0a7d8afe0aa5555c3f2b50f98845cadd2e2c2"
+  },
+  {
+    "updates": 500,
+    "iteration": 12199,
+    "path": "/home/shanghun1404/v151_ros2/training_jobs/589/guide_v151_rated_load/2026-10-01_00-50-04_339_rated_squared_w0p02_lr1e-5/pilot_update_0500.pt",
+    "sha256": "9295d2b3529b630ba294017b8dc5404988651ab92a12938d0defff5e1a81931e"
+  }
+]

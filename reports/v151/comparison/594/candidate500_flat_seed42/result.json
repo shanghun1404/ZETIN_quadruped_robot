@@ -1,0 +1,99 @@
+{
+  "schema": 1,
+  "scenario": "flat",
+  "seed": 42,
+  "failure": null,
+  "completed": true,
+  "seconds_recorded": 14.0,
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "geometry": {},
+  "reset_after_initialization": false,
+  "terminal_position": [
+    -0.309335857629776,
+    8.20902156829834,
+    0.4510137438774109
+  ],
+  "terminal_quaternion": [
+    0.9937021732330322,
+    0.003752805758267641,
+    0.021748999133706093,
+    -0.10985806584358215
+  ],
+  "torque_semantics": "implicit PD estimate, not measured PhysX drive force",
+  "torque_rms": [
+    11.055474281311035,
+    11.511950492858887,
+    26.808992385864258,
+    9.990385055541992,
+    11.626396179199219,
+    22.360271453857422,
+    7.340301513671875,
+    11.986808776855469,
+    27.96095085144043,
+    10.069549560546875,
+    13.531415939331055,
+    26.084854125976562
+  ],
+  "torque_peak": [
+    24.552003860473633,
+    47.52000045776367,
+    47.5200080871582,
+    24.552001953125,
+    47.52000045776367,
+    47.52001953125,
+    24.552000045776367,
+    34.26034164428711,
+    47.52001190185547,
+    24.552001953125,
+    47.52000427246094,
+    47.52001953125
+  ],
+  "rated_exceed_fraction": [
+    0.36142857142857143,
+    0.11392857142857143,
+    0.49892857142857144,
+    0.32392857142857145,
+    0.12071428571428572,
+    0.38142857142857145,
+    0.2621428571428571,
+    0.14142857142857143,
+    0.49,
+    0.4282142857142857,
+    0.115,
+    0.4135714285714286
+  ],
+  "mean_absolute_power": 140.31817626953125,
+  "min_interleg_gap_m": 0.04817012901959051,
+  "negative_gap_fraction": 0.0,
+  "contact_pair_force_max_N": 0.0,
+  "min_leg_trunk_proxy_gap_m": -0.02,
+  "trunk_proxy_overlap_fraction": 0.7282142857142857,
+  "collision_scope": "8 thigh/calf capsules cross-leg pairs; adjacent same-leg and leg-ground filtered; no trunk collider in V14 asset",
+  "final_position": [
+    -0.30951473116874695,
+    8.205187797546387,
+    0.4506995975971222
+  ],
+  "modes": [
+    "WALK"
+  ],
+  "compute_ms_p50_p99": [
+    0.26578950928524137,
+    4.064592361100947
+  ],
+  "demo_sequence_required": false,
+  "task_success": true
+}

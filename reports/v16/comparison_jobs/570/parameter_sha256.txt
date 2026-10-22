@@ -1,0 +1,1 @@
+02b1642b1dc4c8f1242b4689cf22d4ddb4f82e37dc919021a6e5cc86d5fa5115  /home/shanghun1404/v16_12dof_model/comparison_jobs/570/initial_parameters.json

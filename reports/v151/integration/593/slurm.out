@@ -1,0 +1,219 @@
+[INFO][AppLauncher]: Using device: cuda:0
+[INFO][AppLauncher]: Loading experience file: /opt/isaaclab/apps/isaaclab.python.headless.rendering.kit
+Loading user config located at: '/opt/isaacsim-env/lib/python3.11/site-packages/isaacsim/kit/data/Kit/Isaac-Sim/5.1/user.config.json'
+[Info] [carb] Logging to file: /opt/isaacsim-env/lib/python3.11/site-packages/isaacsim/kit/logs/Kit/Isaac-Sim/5.1/kit_20261001_012109.log
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: .drjit] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/.drjit' or '/home/shanghun1404/.drjit/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: .config] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/.config' or '/home/shanghun1404/.config/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: .cache] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/.cache' or '/home/shanghun1404/.cache/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: .local] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/.local' or '/home/shanghun1404/.local/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: .nv] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/.nv' or '/home/shanghun1404/.nv/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: .nvidia-omniverse] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/.nvidia-omniverse' or '/home/shanghun1404/.nvidia-omniverse/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: .pytest_cache] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/.pytest_cache' or '/home/shanghun1404/.pytest_cache/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: .ros] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/.ros' or '/home/shanghun1404/.ros/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: .ssh] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/.ssh' or '/home/shanghun1404/.ssh/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: datasets] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/datasets' or '/home/shanghun1404/datasets/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: furina-tts] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/furina-tts' or '/home/shanghun1404/furina-tts/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: icra27_c3_video_candidates_20260923] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/icra27_c3_video_candidates_20260923' or '/home/shanghun1404/icra27_c3_video_candidates_20260923/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: motor_audit_20260930] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/motor_audit_20260930' or '/home/shanghun1404/motor_audit_20260930/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: shield_rt_venv] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/shield_rt_venv' or '/home/shanghun1404/shield_rt_venv/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: shield_twin] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/shield_twin' or '/home/shanghun1404/shield_twin/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: shield_twin_venv] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/shield_twin_venv' or '/home/shanghun1404/shield_twin_venv/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: snap] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/snap' or '/home/shanghun1404/snap/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: torque_diagnostics_20260922] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/torque_diagnostics_20260922' or '/home/shanghun1404/torque_diagnostics_20260922/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: v14_leg_collision] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/v14_leg_collision' or '/home/shanghun1404/v14_leg_collision/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: v15_large_scale] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/v15_large_scale' or '/home/shanghun1404/v15_large_scale/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: v16_12dof_model] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/v16_12dof_model' or '/home/shanghun1404/v16_12dof_model/config'
+2026-09-30T16:21:09Z [9ms] [Warning] [omni.ext.plugin] [ext: v151_ros2] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/v151_ros2' or '/home/shanghun1404/v151_ros2/config'
+2026-09-30T16:21:09Z [12ms] [Warning] [omni.ext.plugin] [ext: v13_torque] Extensions config 'extension.toml' doesn't exist '/home/shanghun1404/v13_torque' or '/home/shanghun1404/v13_torque/config'
+2026-09-30T16:21:09Z [113ms] [Error] [omni.datastore] Failed to acquire exclusive lock to data store (256>=256)
+2026-09-30T16:21:09Z [113ms] [Error] [omni.datastore] Failed to create local file data store at '/opt/isaacsim-env/lib/python3.11/site-packages/isaacsim/kit/cache/DerivedDataCache'
+2026-09-30T16:21:09Z [124ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-09-30T16:21:09Z [124ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-09-30T16:21:09Z [138ms] [Warning] [omni.platforminfo.plugin] failed to open the default display.  Can't verify X Server version.
+2026-09-30T16:21:09Z [142ms] [Warning] [carb.cudainterop.plugin] CUDA_VISIBLE_DEVICES environment variable is set.
+2026-09-30T16:21:09Z [142ms] [Warning] [carb.cudainterop.plugin] Note CUDA device enumeration and Omniverse device enumeration are different.
+2026-09-30T16:21:09Z [142ms] [Warning] [carb.cudainterop.plugin] Setting CUDA_VISIBLE_DEVICES can lead to undesired behavior or crashes.
+
+|---------------------------------------------------------------------------------------------|
+| Driver Version: 580.178.04    | Graphics API: Vulkan
+|=============================================================================================|
+| GPU | Name                             | Active | LDA | GPU Memory | Vendor-ID | LUID       |
+|     |                                  |        |     |            | Device-ID | UUID       |
+|     |                                  |        |     |            | Bus-ID    |            |
+|---------------------------------------------------------------------------------------------|
+| 0   | NVIDIA GeForce RTX 5070 Ti       | Yes: 0 |     | 16549   MB | 10de      | 0          |
+|     |                                  |        |     |            | 2c05      | 319cc44a.. |
+|     |                                  |        |     |            | 1         |            |
+|=============================================================================================|
+| OS: 24.04.5 LTS (Noble Numbat) ubuntu, Version: 24.04.5, Kernel: 7.0.0-31-generic
+| Processor: AMD Ryzen 9 7900X 12-Core Processor
+| Cores: 12 | Logical Cores: 24
+|---------------------------------------------------------------------------------------------|
+| Total Memory (MB): 62882 | Free Memory: 25577
+| Total Page/Swap (MB): 32767 | Free Page/Swap: 32227
+|---------------------------------------------------------------------------------------------|
+2026-09-30T16:21:11Z [2,072ms] [Warning] [gpu.foundation.plugin] PCIe link width current (8) and maximum (16) for device 0 don't match.
+2026-09-30T16:21:11Z [2,072ms] [Warning] [gpu.foundation.plugin] IOMMU is enabled.
+2026-09-30T16:21:11Z [2,505ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-09-30T16:21:11Z [2,505ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-09-30T16:21:11Z [2,622ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-09-30T16:21:11Z [2,622ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-09-30T16:21:11Z [2,629ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-09-30T16:21:11Z [2,629ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-09-30T16:21:11Z [2,635ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-09-30T16:21:11Z [2,635ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-09-30T16:21:11Z [2,637ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-09-30T16:21:11Z [2,637ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-09-30T16:21:11Z [2,637ms] [Warning] [carb.windowing-glfw.plugin] GLFW initialization failed.
+2026-09-30T16:21:11Z [2,637ms] [Warning] [carb] Failed to startup plugin carb.windowing-glfw.plugin (interfaces: [carb::windowing::IGLContext v1.0],[carb::windowing::IWindowing v1.5]) (impl: carb.windowing-glfw.plugin)
+2026-09-30T16:21:12Z [2,794ms] [Warning] [omni.log] Source: omni.hydra was already registered.
+2026-09-30T16:21:12Z [2,985ms] [Warning] [carb] Acquiring non optional plugin interface which is not listed as dependency: [omni::physx::IPhysxBenchmarks v1.0] (plugin: <default plugin>), by client: omni.physics.physx.plugin. Add it to CARB_PLUGIN_IMPL_DEPS() macro of a client.
+2026-09-30T16:21:12Z [2,992ms] [Warning] [omni.isaac.dynamic_control] omni.isaac.dynamic_control is deprecated as of Isaac Sim 4.5. No action is needed from end-users.
+/opt/isaacsim-env/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+2026-09-30T16:21:13Z [4,236ms] [Warning] [pxr.Semantics] pxr.Semantics is deprecated - please use Semantics instead
+2026-09-30T16:21:13Z [4,309ms] [Warning] [omni.graph.core.plugin] Found duplicate of category 'Replicator' - was 'Annotators', adding 'Fabric Reader'
+2026-09-30T16:21:13Z [4,309ms] [Warning] [omni.graph.core.plugin] Category 'Replicator' not accepted on node type 'omni.replicator.core.FabricReader' in extension 'omni.replicator.core'
+2026-09-30T16:21:13Z [4,310ms] [Warning] [omni.replicator.core.scripts.extension] No material configuration file, adding configuration to material settings directly.
+/opt/isaacsim-env/lib/python3.11/site-packages/torch/jit/_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+2026-09-30T16:21:14Z [5,389ms] [Warning] [omni.kvdb.plugin] Disabling key-value database because another kit process is locking it
+2026-09-30T16:21:31Z [22,270ms] [Warning] [omni.fabric.plugin] Warning: attribute viewportHandle not found for bucket id 7
+
+
+[36m======================================================================================[0m
+[36m[1m[INFO][IsaacLab]: Logging to file: /tmp/isaaclab/logs/isaaclab_2026-10-01_01-25-20.log[0m
+[36m======================================================================================[0m
+
+[33m01:25:20 [simulation_context.py] WARNING: The `enable_external_forces_every_iteration` parameter in the PhysxCfg is set to False. If you are experiencing noisy velocities, consider enabling this flag. You may need to slightly increase the number of velocity iterations (setting it to 1 or 2 rather than 0), together with this flag, to improve the accuracy of velocity updates.[0m
+[INFO]: Base environment:
+	Environment device    : cuda:0
+	Environment seed      : 42
+	Physics step-size     : 0.005
+	Rendering step-size   : 0.02
+	Environment step-size : 0.02
+[33m01:25:21 [terrain_importer.py] WARNING: Visual material specified for ground plane but no diffuse color found. Using default color: (0.0, 0.0, 0.0)[0m
+[INFO]: Time taken for scene creation : 0.913150 seconds
+[INFO]: Scene manager:  <class InteractiveScene>
+	Number of environments: 1
+	Environment spacing   : 12.0
+	Source prim name      : /World/envs/env_0
+	Global prim paths     : ['/World/ground']
+	Replicate physics     : False
+[INFO]: Starting the simulation. This may take a few seconds. Please wait...
+2026-09-30T16:25:22Z [253,459ms] [Warning] [omni.fabric.plugin] getAttributeCount called on non-existent path /World/envs/env_0/Robot/base/body_right/visuals/body_right
+2026-09-30T16:25:22Z [253,459ms] [Warning] [omni.fabric.plugin] getTypes called on non-existent path /World/envs/env_0/Robot/base/body_right/visuals/body_right
+2026-09-30T16:25:28Z [259,365ms] [Warning] [rtx.postprocessing.plugin] DLSS increasing input dimensions: Render resolution of (49, 49) is below minimal input resolution of 300.
+[INFO]: Time taken for simulation start : 6.994462 seconds
+[INFO] Command Manager:  <CommandManager> contains 1 active terms.
++------------------------------------------------+
+|              Active Command Terms              |
++-------+---------------+------------------------+
+| Index | Name          |          Type          |
++-------+---------------+------------------------+
+|   0   | base_velocity | UniformVelocityCommand |
++-------+---------------+------------------------+
+
+[INFO] Event Manager:  <EventManager> contains 3 active terms.
++--------------------------------------+
+| Active Event Terms in Mode: 'startup' |
++----------+---------------------------+
+|  Index   | Name                      |
++----------+---------------------------+
+|    0     | physics_material          |
+|    1     | add_base_mass             |
++----------+---------------------------+
++-------------------------------------+
+| Active Event Terms in Mode: 'reset' |
++---------+---------------------------+
+|  Index  | Name                      |
++---------+---------------------------+
+|    0    | reset_base                |
+|    1    | reset_robot_joints        |
++---------+---------------------------+
++----------------------------------------+
+| Active Event Terms in Mode: 'prestartup' |
++----------+-----------------------------+
+|  Index   | Name                        |
++----------+-----------------------------+
+|    0     | v14_ground_filter           |
++----------+-----------------------------+
+
+[INFO] Recorder Manager:  <RecorderManager> contains 0 active terms.
++---------------------+
+| Active Recorder Terms |
++-----------+---------+
+|   Index   | Name    |
++-----------+---------+
++-----------+---------+
+
+[INFO] Action Manager:  <ActionManager> contains 1 active terms.
++------------------------------------+
+|  Active Action Terms (shape: 12)   |
++--------+-------------+-------------+
+| Index  | Name        |   Dimension |
++--------+-------------+-------------+
+|   0    | joint_pos   |          12 |
++--------+-------------+-------------+
+
+[INFO] Observation Manager: <ObservationManager> contains 1 groups.
++----------------------------------------------------------+
+| Active Observation Terms in Group: 'policy' (shape: (235,)) |
++-----------+--------------------------------+-------------+
+|   Index   | Name                           |    Shape    |
++-----------+--------------------------------+-------------+
+|     0     | base_lin_vel                   |     (3,)    |
+|     1     | base_ang_vel                   |     (3,)    |
+|     2     | projected_gravity              |     (3,)    |
+|     3     | velocity_commands              |     (3,)    |
+|     4     | joint_pos                      |    (12,)    |
+|     5     | joint_vel                      |    (12,)    |
+|     6     | actions                        |    (12,)    |
+|     7     | height_scan                    |    (187,)   |
++-----------+--------------------------------+-------------+
+
+[INFO] Termination Manager:  <TerminationManager> contains 2 active terms.
++------------------------------+
+|   Active Termination Terms   |
++-------+-----------+----------+
+| Index | Name      | Time Out |
++-------+-----------+----------+
+|   0   | time_out  |   True   |
+|   1   | base_tilt |  False   |
++-------+-----------+----------+
+
+[INFO] Reward Manager:  <RewardManager> contains 15 active terms.
++-----------------------------------------+
+|           Active Reward Terms           |
++-------+-----------------------+---------+
+| Index | Name                  |  Weight |
++-------+-----------------------+---------+
+|   0   | air_time              |     5.0 |
+|   1   | base_angular_velocity |     5.0 |
+|   2   | base_linear_velocity  |     5.0 |
+|   3   | foot_clearance        |     0.5 |
+|   4   | gait                  |    10.0 |
+|   5   | action_smoothness     |    -1.0 |
+|   6   | air_time_variance     |    -1.0 |
+|   7   | base_motion           |    -2.0 |
+|   8   | base_orientation      |    -3.0 |
+|   9   | foot_slip             |    -0.5 |
+|   10  | joint_acc             | -0.0001 |
+|   11  | joint_pos             |    -0.7 |
+|   12  | joint_torques         | -0.0005 |
+|   13  | joint_vel             |   -0.01 |
+|   14  | duty_floor            |    -3.0 |
++-------+-----------------------+---------+
+
+[INFO] Curriculum Manager:  <CurriculumManager> contains 0 active terms.
++----------------------+
+| Active Curriculum Terms |
++-----------+----------+
+|   Index   | Name     |
++-----------+----------+
++-----------+----------+
+
+[INFO]: Completed setting up the environment...
+2026-09-30T16:25:32Z [262,891ms] [Warning] [omni.syntheticdata.plugin] OgnSdPostRenderVarToHost : rendervar copy from texture directly to host buffer is counter-performant. Please use copy from texture to device buffer first.
+2026-09-30T16:25:36Z [267,455ms] [Warning] [carb] Client gpu.foundation.plugin has acquired [gpu::unstable::IMemoryBudgetManagerFactory v0.1] 100 times. Consider accessing this interface with carb::getCachedInterface() (Performance warning)
+{"schema": 1, "scenario": "flat", "seed": 42, "failure": null, "completed": true, "seconds_recorded": 28.0, "joint_order": ["FL_HAA", "FL_HFE", "FL_KFE", "FR_HAA", "FR_HFE", "FR_KFE", "RL_HAA", "RL_HFE", "RL_KFE", "RR_HAA", "RR_HFE", "RR_KFE"], "geometry": {}, "drive_gain_checks": [{"stamp_ns": 0, "kp": [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]], "kd": [[0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]]}, {"stamp_ns": 8000000000, "kp": [[300.0, 300.0, 300.0, 300.0, 300.0, 300.0, 300.0, 300.0, 300.0, 300.0, 300.0, 300.0]], "kd": [[8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0, 8.0]]}], "reset_after_initialization": false, "terminal_position": [-4.286954879760742, 11.586339950561523, 0.44506195187568665], "terminal_quaternion": [0.9968891143798828, -0.0022519216872751713, 0.03567260876297951, 0.07024501264095306], "torque_semantics": "hybrid: feedforward command at zero gains; instantaneous implicit PD estimate when gains nonzero, not measured PhysX drive force", "torque_rms": [8.912371635437012, 11.2550630569458, 24.97245216369629, 9.173564910888672, 9.25246810913086, 20.437225341796875, 5.793647766113281, 11.698624610900879, 25.91805648803711, 8.189362525939941, 11.619514465332031, 25.6490421295166], "torque_peak": [24.552005767822266, 47.5200080871582, 47.52001953125, 24.552001953125, 35.35386657714844, 47.52001953125, 23.960956573486328, 38.494224548339844, 47.52001953125, 24.552001953125, 46.79527282714844, 47.52001953125], "rated_exceed_fraction": [0.26321428571428573, 0.11964285714285715, 0.4755357142857143, 0.29, 0.05267857142857143, 0.32625, 0.15107142857142858, 0.15642857142857142, 0.6185714285714285, 0.29928571428571427, 0.08160714285714285, 0.5644642857142858], "mean_absolute_power": 109.56024932861328, "min_interleg_gap_m": 0.04435784218021122, "negative_gap_fraction": 0.0, "contact_pair_force_max_N": 0.0, "min_leg_trunk_proxy_gap_m": -0.02, "trunk_proxy_overlap_fraction": 0.69, "collision_scope": "8 thigh/calf capsules cross-leg pairs; adjacent same-leg and leg-ground filtered; no trunk collider in V14 asset", "final_position": [-4.285519599914551, 11.582515716552734, 0.44503262639045715], "modes": ["BLEND_WALK", "BRAKE", "RISE", "SIT", "STABILIZE", "STAND", "WALK"], "compute_ms_p50_p99": [0.2792435116134584, 70.10221242031548], "demo_sequence_required": true, "task_success": false}

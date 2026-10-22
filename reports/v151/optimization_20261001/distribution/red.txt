@@ -1,0 +1,115 @@
+F
+=================================== FAILURES ===================================
+__ test_sensor_stamp_drives_one_command_and_exposes_wbc_diagnostics[0.0-SIT] ___
+
+initial_mode = 'SIT', crouch_shift = 0.0
+
+    @pytest.mark.skipif(not os.environ.get('V151_ACTOR'), reason='requires explicit checkpoint/runtime paths')
+    @pytest.mark.parametrize('initial_mode',['SIT','STAND'])
+    @pytest.mark.parametrize('crouch_shift',[0.,.12])
+    def test_sensor_stamp_drives_one_command_and_exposes_wbc_diagnostics(initial_mode,crouch_shift):
+        import rclpy
+        from rclpy.executors import SingleThreadedExecutor
+        from sensor_msgs.msg import JointState, Image
+        from nav_msgs.msg import Odometry
+        from std_msgs.msg import String
+        from v14_ros2_control import contract
+        from v151_ros2_control.controller_node import ControllerNode
+        rclpy.init(args=['--ros-args','-p','actor_checkpoint:='+os.environ['V151_ACTOR'],
+            '-p','student_checkpoint:='+os.environ['V151_STUDENT'],'-p','model_path:='+os.environ['V151_MODEL'],
+            '-p','initial_mode:='+initial_mode,'-p','crouch_forward_shift_m:='+str(crouch_shift)])
+        ctl=ControllerNode();tester=rclpy.create_node('v151_test_sensors')
+        executor=SingleThreadedExecutor();executor.add_node(ctl);executor.add_node(tester)
+        qos=contract.lockstep_qos();received=[];statuses=[]
+        pubs=[tester.create_publisher(typ,topic,qos) for typ,topic in
+            [(JointState,'joint_states'),(Odometry,'odom'),(Image,'depth/image'),(JointState,'foot_contacts')]]
+        tester.create_subscription(JointState,'joint_command',received.append,qos)
+        tester.create_subscription(String,'status',statuses.append,qos)
+        try:
+            deadline=time.monotonic()+10
+            while any(p.get_subscription_count()<1 for p in pubs):
+                executor.spin_once(timeout_sec=.01)
+                assert time.monotonic()<deadline
+            state=JointState();state.name=list(contract.JOINT_NAMES)
+            state.position=[contract.joint_default(n) for n in contract.JOINT_NAMES];state.velocity=[0.]*12
+            odom=Odometry();odom.pose.pose.position.z=.464;odom.pose.pose.orientation.w=1.
+            image=Image();image.height=84;image.width=84;image.encoding='32FC1';image.step=84*4
+            image.data=array.array('B',np.full((84,84),2.,dtype='<f4').tobytes())
+            contacts=JointState();contacts.name=['FL_foot','FR_foot','RL_foot','RR_foot'];contacts.effort=[111.]*4
+            # A retry while the image is still missing must not process the stamp.
+            for index in (0,1,3,0): pubs[index].publish([state,odom,image,contacts][index])
+            for _ in range(12): executor.spin_once(timeout_sec=.005)
+            assert not received and not statuses
+            pubs[2].publish(image)
+            while not received or not statuses:
+                executor.spin_once(timeout_sec=.01)
+                assert time.monotonic()<deadline
+            assert len(received)==1
+            assert tuple(received[0].name)==contract.JOINT_NAMES
+            assert np.isfinite(received[0].position).all()
+            status=json.loads(statuses[0].data)
+            assert status['support_feet']==4
+            assert status['crouch_forward_shift_m']==crouch_shift
+            assert status['wbc']['finite']
+            assert status['wbc']['feasible']
+            if initial_mode=='STAND':
+                assert np.max(np.abs(ctl.crouch-ctl.nominal))>.2
+                low=ctl.standing.contact_positions(ctl.crouch,[0.,0.,ctl.stand_height-ctl.drop],[1.,0.,0.,0.])
+                high=ctl.standing.contact_positions(ctl.nominal,[0.,0.,ctl.stand_height],[1.,0.,0.,0.])
+                np.testing.assert_allclose(low,high,atol=2e-6)
+            from rclpy.serialization import serialize_message
+            # Simulate lost outputs by requesting the same completed stamp again.
+            # Any accidental rerun of a stateful controller stage fails the test.
+            def replay_without_computing():
+                expected_command=serialize_message(received[-1]); expected_status=statuses[-1].data
+                command_count,status_count=len(received),len(statuses)
+                last=ctl.last; warm=ctl.standing._warm; output=ctl.output.copy()
+                with patch.object(ctl.policy,'step',side_effect=AssertionError('policy rerun')), \
+                     patch.object(ctl.standing,'compute',side_effect=AssertionError('WBC rerun')), \
+                     patch.object(ctl.filter,'step',side_effect=AssertionError('filter rerun')), \
+                     patch.object(ctl.supervisor,'step',side_effect=AssertionError('supervisor rerun')):
+                    pubs[0].publish(state)
+                    replay_deadline=time.monotonic()+2
+                    while len(received)==command_count or len(statuses)==status_count:
+                        executor.spin_once(timeout_sec=.01)
+                        assert time.monotonic()<replay_deadline, 'duplicate did not replay cached outputs'
+                assert serialize_message(received[-1])==expected_command
+                assert statuses[-1].data==expected_status
+                assert ctl.last==last and ctl.standing._warm is warm and ctl.output==output
+>           replay_without_computing()
+
+/tmp/v151_retry_review/ros2/v151_ros2_control/test/test_ros_transport.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+    def replay_without_computing():
+        expected_command=serialize_message(received[-1]); expected_status=statuses[-1].data
+        command_count,status_count=len(received),len(statuses)
+        last=ctl.last; warm=ctl.standing._warm; output=ctl.output.copy()
+        with patch.object(ctl.policy,'step',side_effect=AssertionError('policy rerun')), \
+             patch.object(ctl.standing,'compute',side_effect=AssertionError('WBC rerun')), \
+             patch.object(ctl.filter,'step',side_effect=AssertionError('filter rerun')), \
+             patch.object(ctl.supervisor,'step',side_effect=AssertionError('supervisor rerun')):
+            pubs[0].publish(state)
+            replay_deadline=time.monotonic()+2
+            while len(received)==command_count or len(statuses)==status_count:
+                executor.spin_once(timeout_sec=.01)
+>               assert time.monotonic()<replay_deadline, 'duplicate did not replay cached outputs'
+E               AssertionError: duplicate did not replay cached outputs
+E               assert 312024.072579718 < 312024.062515194
+E                +  where 312024.072579718 = <built-in function monotonic>()
+E                +    where <built-in function monotonic> = time.monotonic
+
+/tmp/v151_retry_review/ros2/v151_ros2_control/test/test_ros_transport.py:78: AssertionError
+----------------------------- Captured stderr call -----------------------------
+[INFO] [1790827170.443783624] [v151_controller]: V15.1 ROS2 controller ready; +y forward; lockstep 200/50 Hz
+[INFO] [1790827170.449506049] [v151_controller]: Initial input received: JointState; state/odom/image/contact=1/0/0/0
+[INFO] [1790827170.450035374] [v151_controller]: Initial input received: Odometry; state/odom/image/contact=1/1/0/0
+[INFO] [1790827170.450420591] [v151_controller]: Initial input received: JointState; state/odom/image/contact=1/1/0/1
+[INFO] [1790827170.451408541] [v151_controller]: Initial input received: JointState; state/odom/image/contact=1/1/0/1
+[INFO] [1790827170.495517747] [v151_controller]: Initial input received: Image; state/odom/image/contact=1/1/1/1
+[INFO] [1790827170.495757794] [v151_controller]: Initial synchronized sensor set ready
+[INFO] [1790827170.555725286] [v151_controller]: Initial command and status published
+=========================== short test summary info ============================
+FAILED ../../tmp/v151_retry_review/ros2/v151_ros2_control/test/test_ros_transport.py::test_sensor_stamp_drives_one_command_and_exposes_wbc_diagnostics[0.0-SIT]
+!!!!!!!!!!!!!!!!!!!!!!!!!! stopping after 1 failures !!!!!!!!!!!!!!!!!!!!!!!!!!!
+1 failed in 3.07s

@@ -1,0 +1,28 @@
+{
+  "training_completed": true,
+  "checkpoint": "/home/shanghun1404/v151_ros2/training_jobs/589/guide_v151_rated_load/2026-10-01_00-50-04_339_rated_squared_w0p02_lr1e-5/model_12199.pt",
+  "checkpoint_sha256": "511e01492d15999a64403d4be8fdc714c4d2288073918203afe402a4a495d387",
+  "last_learning_iteration": 12199,
+  "pilot_checkpoints": [
+    {
+      "updates": 250,
+      "iteration": 11949,
+      "path": "/home/shanghun1404/v151_ros2/training_jobs/589/guide_v151_rated_load/2026-10-01_00-50-04_339_rated_squared_w0p02_lr1e-5/pilot_update_0250.pt",
+      "sha256": "7b18f1a4f9373c827a83f8ab1eb0a7d8afe0aa5555c3f2b50f98845cadd2e2c2"
+    },
+    {
+      "updates": 500,
+      "iteration": 12199,
+      "path": "/home/shanghun1404/v151_ros2/training_jobs/589/guide_v151_rated_load/2026-10-01_00-50-04_339_rated_squared_w0p02_lr1e-5/pilot_update_0500.pt",
+      "sha256": "9295d2b3529b630ba294017b8dc5404988651ab92a12938d0defff5e1a81931e"
+    }
+  ],
+  "policy_std_min_max": [
+    0.11540988832712173,
+    0.13908366858959198
+  ],
+  "nonfinite_steps": 0,
+  "actual_contract_sha256": "a098526fc1471ce955e8e0a8a4b588c50159f05102cfa161402a6bca04eb81c3",
+  "behavior_and_torque_gates_evaluated": false,
+  "motor_thermal_safety_proven": false
+}

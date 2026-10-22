@@ -1,0 +1,4 @@
+--contact-projection
+--force-allocator
+qp
+--smooth-com-reference

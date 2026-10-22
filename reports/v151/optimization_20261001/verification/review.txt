@@ -1,0 +1,8 @@
+Independent audit_review agent, 2026-10-01
+No serious correctness or provenance blockers found.
+Bridge retransmits identical cached input objects with blocked physics. Controller caches complete reply before initial publish and replays last stamp without recomputation. Stale replies discarded.
+Posture offset/IK goal consistent. Actor/model/crouch input hashes match601 and621. Frozen comparator rejects621 solely WALK RMS; no gate weakened.
+Independent rerun: 2 bridge retry tests and12 comparator tests passed.
+No mutations/deployment/jobs by reviewer.
+
+Follow-up audit: after_walk_only effective shift gates both new prewalk paths; BLEND_STAND original offset retained. Eighth shell arg typed ROS boolean and status agree; runtime.json captures RMW/domain. Bash/Python syntax checks passed. DDS sample parity is not a claim of physical replay equality. No blocker.

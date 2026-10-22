@@ -1,0 +1,326 @@
+{
+  "name": "v15_quadruped_20261011",
+  "selected_usd": "assets/quadruped_20261011/quadruped_robot.usda",
+  "validated_job": 2280,
+  "validation": "flat14s pass; speed MAE close to0.15m/s gate",
+  "actor": "V15 adopted job339 model_11699.pt",
+  "actor_sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33",
+  "student": "V12 DAgger best.pt",
+  "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+  "asset_sha256": {
+    "assets/quadruped_20261011/README_isaac.md": "a07b8747935e227daa0bd40d6f40dee71efeb452bb9b4ccd6aea6b8064d699b1",
+    "assets/quadruped_20261011/quadruped_meshes.usda": "62e4b3d87963a1e077c460fdd5f3970fe6026e0cd2e9a39861a473977f427961",
+    "assets/quadruped_20261011/quadruped_robot.usda": "2a41b7f8ad3822b7929ec94a0399dc5cbcdd2e95e309c348d562013b9ba7df78",
+    "assets/quadruped_20261011/quadruped_scene.usda": "5e8687d163e58eed04a82c915e4ef9c7bbe3ed76fdcf2226299ba148a628ab2a"
+  },
+  "base_com_offset_m": [
+    0.010427819564938545,
+    0.015405300073325634,
+    0.06333552300930023
+  ],
+  "joint_mapping": {
+    "base_com_offset": [
+      0.010427819564938545,
+      0.015405300073325634,
+      0.06333552300930023
+    ],
+    "physical_joint_names": [
+      "FL_hip_roll",
+      "FR_hip_roll",
+      "FL_hip_pitch",
+      "FR_hip_pitch",
+      "BR_hip_roll",
+      "BL_hip_roll",
+      "BR_hip_pitch",
+      "BL_hip_pitch",
+      "FL_knee",
+      "FR_knee",
+      "BR_knee",
+      "BL_knee"
+    ],
+    "sign": [
+      -1.0,
+      -1.0,
+      -1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      -1.0,
+      1.0,
+      -1.0,
+      -1.0,
+      1.0
+    ],
+    "expected_policy_joint_order": [
+      "FL_HAA",
+      "FR_HAA",
+      "FL_HFE",
+      "FR_HFE",
+      "RR_HAA",
+      "RL_HAA",
+      "RR_HFE",
+      "RL_HFE",
+      "FL_KFE",
+      "FR_KFE",
+      "RR_KFE",
+      "RL_KFE"
+    ],
+    "physics_dt_s": 0.005,
+    "camera_prim_path": "/World/envs/env_0/Robot/base/front_depth",
+    "pair_order": [
+      {
+        "body": "base",
+        "targets": [
+          "FL_thigh",
+          "FL_shank",
+          "FR_thigh",
+          "FR_shank",
+          "BL_thigh",
+          "BL_shank",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "FL_hip",
+        "targets": [
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "FL_thigh",
+        "targets": [
+          "base",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "FL_shank",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "FR_hip",
+        "targets": [
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "FR_thigh",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "FR_shank",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "BL_hip",
+        "targets": [
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "BL_thigh",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "BL_shank",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "BR_hip",
+        "targets": [
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "BR_thigh",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank"
+        ]
+      },
+      {
+        "body": "BR_shank",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip"
+        ]
+      }
+    ],
+    "initial_joint_position_physical_rad": [
+      -0.0,
+      -0.0,
+      0.0,
+      0.0,
+      0.550000011920929,
+      -0.550000011920929,
+      -0.550000011920929,
+      0.550000011920929,
+      1.100000023841858,
+      -1.100000023841858,
+      -1.100000023841858,
+      1.100000023841858
+    ],
+    "articulation_joint_order": [
+      "FL_hip_roll",
+      "FR_hip_roll",
+      "BR_hip_roll",
+      "BL_hip_roll",
+      "FL_hip_pitch",
+      "FR_hip_pitch",
+      "BR_hip_pitch",
+      "BL_hip_pitch",
+      "FL_knee",
+      "FR_knee",
+      "BR_knee",
+      "BL_knee"
+    ],
+    "initial_root_position_m": [
+      -9.313225746154785e-10,
+      0.0,
+      0.4699999690055847
+    ]
+  },
+  "ros2_node": "v151_ros2_control.v15_walk_node",
+  "ros2_launch": "v15_cad.launch.py",
+  "namespace": "/v15cad",
+  "isaac_evaluator": "config/evaluate_v15_cad_ros2.py",
+  "slurm_launcher": "config/experiments/v15_cad_20261011/eval.sbatch",
+  "remote_root": "/home/shanghun1404/v15_cad_20261011",
+  "qos": "admin",
+  "gres": "shard:1",
+  "physics_hz": 200,
+  "policy_hz": 50,
+  "depth_camera": "V15 runtime-mounted84x84, real Isaac rendered depth",
+  "scope": [
+    "flat locomotion from standing pose",
+    "13bodies and67convexHull self contacts"
+  ],
+  "validation_data": "runs/2280/result.json",
+  "video": "runs/2280/video/env_00.mp4",
+  "source_archive": "runs/2280/source",
+  "source_checksums": "runs/2280/source.sha256",
+  "startup_module_fix_note": "runs/2280/startup_transport_fix/note.json",
+  "measured_forward_speed_mean_after2s_m_s": 0.5471958518028259,
+  "motor_current_model": "ideal phase estimate abs(tau)/(Kt*gear), eta=1; HAA1.23Nm/A, HFE/KFE1.44Nm/A; not battery current"
+}

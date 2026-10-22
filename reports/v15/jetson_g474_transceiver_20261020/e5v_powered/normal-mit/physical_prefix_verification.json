@@ -1,0 +1,344 @@
+{
+  "passed": true,
+  "tx_frames": 12,
+  "rx_frames": 12,
+  "scope": "Normal CAN mode prefix through CRC; no external ACK",
+  "frames": [
+    {
+      "leg": 0,
+      "bus": 1,
+      "tx": {
+        "id": 1,
+        "extended": false,
+        "dlc": 8,
+        "payload_hex": "8019800000000800",
+        "crc": 14739,
+        "crc_computed": 14739,
+        "crc_valid": true,
+        "sof_cycle": 1152.0,
+        "bit_count": 112,
+        "stuffed_bit_count": 13
+      },
+      "rx": {
+        "id": 1,
+        "extended": false,
+        "dlc": 8,
+        "payload_hex": "8019800000000800",
+        "crc": 14739,
+        "crc_computed": 14739,
+        "crc_valid": true,
+        "sof_cycle": 1152.0,
+        "bit_count": 112,
+        "stuffed_bit_count": 13
+      }
+    },
+    {
+      "leg": 0,
+      "bus": 2,
+      "tx": {
+        "id": 2049,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "0000008033800800",
+        "crc": 19797,
+        "crc_computed": 19797,
+        "crc_valid": true,
+        "sof_cycle": 1152.0,
+        "bit_count": 134,
+        "stuffed_bit_count": 15
+      },
+      "rx": {
+        "id": 2049,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "0000008033800800",
+        "crc": 19797,
+        "crc_computed": 19797,
+        "crc_valid": true,
+        "sof_cycle": 1152.0,
+        "bit_count": 134,
+        "stuffed_bit_count": 15
+      }
+    },
+    {
+      "leg": 0,
+      "bus": 3,
+      "tx": {
+        "id": 2049,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "000000804d800800",
+        "crc": 18601,
+        "crc_computed": 18601,
+        "crc_valid": true,
+        "sof_cycle": 1112.0,
+        "bit_count": 134,
+        "stuffed_bit_count": 15
+      },
+      "rx": {
+        "id": 2049,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "000000804d800800",
+        "crc": 18601,
+        "crc_computed": 18601,
+        "crc_valid": true,
+        "sof_cycle": 1152.0,
+        "bit_count": 134,
+        "stuffed_bit_count": 15
+      }
+    },
+    {
+      "leg": 1,
+      "bus": 1,
+      "tx": {
+        "id": 2,
+        "extended": false,
+        "dlc": 8,
+        "payload_hex": "8068800000000800",
+        "crc": 18582,
+        "crc_computed": 18582,
+        "crc_valid": true,
+        "sof_cycle": 1188.0,
+        "bit_count": 111,
+        "stuffed_bit_count": 12
+      },
+      "rx": {
+        "id": 2,
+        "extended": false,
+        "dlc": 8,
+        "payload_hex": "8068800000000800",
+        "crc": 18582,
+        "crc_computed": 18582,
+        "crc_valid": true,
+        "sof_cycle": 1188.0,
+        "bit_count": 111,
+        "stuffed_bit_count": 12
+      }
+    },
+    {
+      "leg": 1,
+      "bus": 2,
+      "tx": {
+        "id": 2050,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "0000008081800800",
+        "crc": 13875,
+        "crc_computed": 13875,
+        "crc_valid": true,
+        "sof_cycle": 1188.0,
+        "bit_count": 134,
+        "stuffed_bit_count": 15
+      },
+      "rx": {
+        "id": 2050,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "0000008081800800",
+        "crc": 13875,
+        "crc_computed": 13875,
+        "crc_valid": true,
+        "sof_cycle": 1188.0,
+        "bit_count": 134,
+        "stuffed_bit_count": 15
+      }
+    },
+    {
+      "leg": 1,
+      "bus": 3,
+      "tx": {
+        "id": 2050,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "000000809c800800",
+        "crc": 1472,
+        "crc_computed": 1472,
+        "crc_valid": true,
+        "sof_cycle": 1188.0,
+        "bit_count": 135,
+        "stuffed_bit_count": 16
+      },
+      "rx": {
+        "id": 2050,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "000000809c800800",
+        "crc": 1472,
+        "crc_computed": 1472,
+        "crc_valid": true,
+        "sof_cycle": 1188.0,
+        "bit_count": 135,
+        "stuffed_bit_count": 16
+      }
+    },
+    {
+      "leg": 2,
+      "bus": 1,
+      "tx": {
+        "id": 3,
+        "extended": false,
+        "dlc": 8,
+        "payload_hex": "80b6800000000800",
+        "crc": 25426,
+        "crc_computed": 25426,
+        "crc_valid": true,
+        "sof_cycle": 1148.0,
+        "bit_count": 111,
+        "stuffed_bit_count": 12
+      },
+      "rx": {
+        "id": 3,
+        "extended": false,
+        "dlc": 8,
+        "payload_hex": "80b6800000000800",
+        "crc": 25426,
+        "crc_computed": 25426,
+        "crc_valid": true,
+        "sof_cycle": 1148.0,
+        "bit_count": 111,
+        "stuffed_bit_count": 12
+      }
+    },
+    {
+      "leg": 2,
+      "bus": 2,
+      "tx": {
+        "id": 2051,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "00000080d0800800",
+        "crc": 24216,
+        "crc_computed": 24216,
+        "crc_valid": true,
+        "sof_cycle": 1148.0,
+        "bit_count": 133,
+        "stuffed_bit_count": 14
+      },
+      "rx": {
+        "id": 2051,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "00000080d0800800",
+        "crc": 24216,
+        "crc_computed": 24216,
+        "crc_valid": true,
+        "sof_cycle": 1148.0,
+        "bit_count": 133,
+        "stuffed_bit_count": 14
+      }
+    },
+    {
+      "leg": 2,
+      "bus": 3,
+      "tx": {
+        "id": 2051,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "00000080ea800800",
+        "crc": 14718,
+        "crc_computed": 14718,
+        "crc_valid": true,
+        "sof_cycle": 1148.0,
+        "bit_count": 134,
+        "stuffed_bit_count": 15
+      },
+      "rx": {
+        "id": 2051,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "00000080ea800800",
+        "crc": 14718,
+        "crc_computed": 14718,
+        "crc_valid": true,
+        "sof_cycle": 1148.0,
+        "bit_count": 134,
+        "stuffed_bit_count": 15
+      }
+    },
+    {
+      "leg": 3,
+      "bus": 1,
+      "tx": {
+        "id": 4,
+        "extended": false,
+        "dlc": 8,
+        "payload_hex": "8105800000000800",
+        "crc": 32292,
+        "crc_computed": 32292,
+        "crc_valid": true,
+        "sof_cycle": 1148.0,
+        "bit_count": 113,
+        "stuffed_bit_count": 14
+      },
+      "rx": {
+        "id": 4,
+        "extended": false,
+        "dlc": 8,
+        "payload_hex": "8105800000000800",
+        "crc": 32292,
+        "crc_computed": 32292,
+        "crc_valid": true,
+        "sof_cycle": 1148.0,
+        "bit_count": 113,
+        "stuffed_bit_count": 14
+      }
+    },
+    {
+      "leg": 3,
+      "bus": 2,
+      "tx": {
+        "id": 2052,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "000000811e800800",
+        "crc": 22134,
+        "crc_computed": 22134,
+        "crc_valid": true,
+        "sof_cycle": 1148.0,
+        "bit_count": 134,
+        "stuffed_bit_count": 15
+      },
+      "rx": {
+        "id": 2052,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "000000811e800800",
+        "crc": 22134,
+        "crc_computed": 22134,
+        "crc_valid": true,
+        "sof_cycle": 1148.0,
+        "bit_count": 134,
+        "stuffed_bit_count": 15
+      }
+    },
+    {
+      "leg": 3,
+      "bus": 3,
+      "tx": {
+        "id": 2052,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "0000008138800800",
+        "crc": 7323,
+        "crc_computed": 7323,
+        "crc_valid": true,
+        "sof_cycle": 1148.0,
+        "bit_count": 134,
+        "stuffed_bit_count": 15
+      },
+      "rx": {
+        "id": 2052,
+        "extended": true,
+        "dlc": 8,
+        "payload_hex": "0000008138800800",
+        "crc": 7323,
+        "crc_computed": 7323,
+        "crc_valid": true,
+        "sof_cycle": 1148.0,
+        "bit_count": 134,
+        "stuffed_bit_count": 15
+      }
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "completed": true,
+  "adopted": false,
+  "training_state": "COMPLETED",
+  "parent_training_job": 2338,
+  "parent_checkpoint_sha256": "07712abc8c261926744b57608e719603c35c5f18fc62228fac7130126ec6ec19",
+  "retention_teacher_job": 2333,
+  "retention_teacher_sha256": "b04417c29f30e47020195b070d059984a37531ed163c65b237c05b90539da5df",
+  "retention_weight": 5,
+  "requested_updates": 400,
+  "scope": "All nine unchanged non-stair ROS2 cases, motion/collision/drive/transport and rated RMS required",
+  "training_job": 2341,
+  "evaluation_jobs": [
+    2342,
+    2343
+  ],
+  "actual_preflight_passed": true,
+  "preflight_steps": 100,
+  "actual_terrain_columns": {
+    "flat": 116,
+    "rough": 12
+  },
+  "actual_teacher_checked": true,
+  "evaluation_state": "COMPLETED",
+  "completed_updates": 400,
+  "training_policy_samples": 1228800,
+  "checkpoint": "model_15699.pt",
+  "candidate_checkpoint_sha256": "9a440065d0f93835abbf02278f79fff91aea95a18c3bf4020b83bb092f9e6db6",
+  "resume_remote_root": "/home/shanghun1404/v15_cad_20261011",
+  "remaining_evaluation_jobs": [],
+  "completed_evaluation_jobs": [
+    2342,
+    2343
+  ],
+  "observed_completed_case_count": 9,
+  "observed_motion_pass_count": 9,
+  "observed_rated_exceed_case_count": 0,
+  "optimization_goal_met": true,
+  "candidate_rated_rms_exceed_count": 0,
+  "all_trace_checks_pass": true,
+  "max_self_contact_force_n": 0.0,
+  "report": "report.html"
+}

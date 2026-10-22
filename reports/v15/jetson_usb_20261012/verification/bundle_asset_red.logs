@@ -1,0 +1,17 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+____________ test_missing_hardware_launch_is_reported_before_build _____________
+
+bundle_source = (PosixPath('/tmp/pytest-of-scienceowl/pytest-5/test_missing_hardware_launch_i0/source'), PosixPath('/tmp/pytest-of-sci...0/source/actor.pt'), PosixPath('/tmp/pytest-of-scienceowl/pytest-5/test_missing_hardware_launch_i0/source/student.pt'))
+tmp_path = PosixPath('/tmp/pytest-of-scienceowl/pytest-5/test_missing_hardware_launch_i0')
+
+    def test_missing_hardware_launch_is_reported_before_build(bundle_source, tmp_path):
+        module = load_builder()
+        (bundle_source[0] / "ros2/v15_hardware_bridge/launch/hardware.launch.py").unlink()
+>       with pytest.raises(module.BundleError, match="hardware.launch.py"):
+E       Failed: DID NOT RAISE <class 'v15_bundle_builder.BundleError'>
+
+config/tests/test_v15_jetson_bundle.py:117: Failed
+=========================== short test summary info ============================
+FAILED config/tests/test_v15_jetson_bundle.py::test_missing_hardware_launch_is_reported_before_build
+1 failed, 9 deselected in 0.17s

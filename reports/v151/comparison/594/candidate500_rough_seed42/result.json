@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "scenario": "rough",
+  "seed": 42,
+  "failure": "RuntimeError(\"Robot terminated before reset; terms=['base_tilt']\")",
+  "completed": false,
+  "seconds_recorded": 6.48,
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "geometry": {
+    "difficulty": 0.4444444444444444,
+    "unique_tiles": 1
+  },
+  "reset_after_initialization": false,
+  "terminal_position": [
+    -0.0871596559882164,
+    3.000380277633667,
+    0.45785626769065857
+  ],
+  "terminal_quaternion": [
+    0.8074297308921814,
+    -0.022000890225172043,
+    -0.5034337043762207,
+    -0.30680203437805176
+  ],
+  "torque_semantics": "implicit PD estimate, not measured PhysX drive force",
+  "torque_rms": [
+    15.817304611206055,
+    19.401403427124023,
+    27.867212295532227,
+    12.916679382324219,
+    18.123472213745117,
+    24.64451026916504,
+    13.160258293151855,
+    18.526851654052734,
+    31.67300796508789,
+    14.741783142089844,
+    21.05487823486328,
+    30.923656463623047
+  ],
+  "torque_peak": [
+    24.552017211914062,
+    47.52001190185547,
+    47.520015716552734,
+    24.552005767822266,
+    47.5200080871582,
+    47.520015716552734,
+    24.55200958251953,
+    47.52000427246094,
+    47.52001953125,
+    24.55200958251953,
+    47.5200080871582,
+    47.52001953125
+  ],
+  "rated_exceed_fraction": [
+    0.6080246913580247,
+    0.2654320987654321,
+    0.47530864197530864,
+    0.4513888888888889,
+    0.25540123456790126,
+    0.4050925925925926,
+    0.4722222222222222,
+    0.30709876543209874,
+    0.5679012345679012,
+    0.5509259259259259,
+    0.30941358024691357,
+    0.5177469135802469
+  ],
+  "mean_absolute_power": 282.3486022949219,
+  "min_interleg_gap_m": -0.008696525877403771,
+  "negative_gap_fraction": 0.043209876543209874,
+  "contact_pair_force_max_N": 217.9922637939453,
+  "min_leg_trunk_proxy_gap_m": -0.02,
+  "trunk_proxy_overlap_fraction": 0.9251543209876543,
+  "collision_scope": "8 thigh/calf capsules cross-leg pairs; adjacent same-leg and leg-ground filtered; no trunk collider in V14 asset",
+  "final_position": [
+    -0.08604859560728073,
+    3.0002894401550293,
+    0.4596002995967865
+  ],
+  "modes": [
+    "WALK"
+  ],
+  "compute_ms_p50_p99": [
+    0.27415502700023353,
+    4.0773974964395165
+  ],
+  "demo_sequence_required": false,
+  "task_success": false
+}

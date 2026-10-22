@@ -1,0 +1,24 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Jetson CUDA·WBC 지연 수정 후 검증</title><style>
+body{font:16px/1.7 system-ui,sans-serif;max-width:1060px;margin:40px auto;padding:0 22px;color:#182634}
+h1{font-size:28px}h2{font-size:21px;margin-top:32px}table{border-collapse:collapse;width:100%;font-size:14px}th,td{border-bottom:1px solid #ccd4dc;padding:9px;text-align:left}td{font-variant-numeric:tabular-nums}.notice{background:#fff1e5;border-left:5px solid #c66b11;padding:14px 18px}img{width:100%;height:auto}code{font-size:13px}a{color:#175d96}
+</style><h1>Jetson CUDA·WBC 지연 수정 후 5분 검증</h1>
+<p>2026-10-17 23:59:07 – 2026-10-18 00:04:07 KST. 5초 예열 + 300초 측정. Orin Nano Super 25W, 일반 스케줄러·기본 CPU 배치. 실제 H533 USB 게이트웨이와 가상 센서 사용, 모터 비활성.</p>
+<p class="notice"><strong>운용 중 보호 정지 0건. 엄격한 통합 판정은 미통과.</strong><br>
+명령 60,000개·계획 15,000개가 완전하지만, 피드백 수신 구간에 잡힌 표본은 59,997/60,000개로 기존 허용치 ±2개를 넘었다. WBC도 15,000회 중 4회가 20ms를 초과했다. 수정 후 1시간 연속 검증이나 실모터 검증을 완료한 결과는 아니다.</p>
+<h2>변경과 검증</h2><p>CUDA 정책의 고정 크기 연산을 CUDA Graph로 재실행한다. 학습 체크포인트·관측 순서·FP32 계산·비유한 출력 검사는 유지했다. 별도 실제 학습 모델 32개 입력 비교에서 eager/graph 행동 출력 최대 차이 0이었다. CPU 경로, 반복 입력·리셋·출력 보존, 비유한 출력 거부를 실제 Jetson에서 시험했다.</p>
+<p>벤치마크의 CSV·JSONL 파일 기록과 진행 표시를 주기 경로에서 옮겼다. 표본은 고정 크기 숫자 배열에 보관하고 종료 시 저장한다. 자동 GC는 활성 상태로 유지하며 준비된 힙은 예열 후 freeze한다. 측정 중 기록된 1ms 이상 GC pause는 없었다. 별도 호스트 1시간 분량 저장 실험은 메모리 구조 검사이며 실제 1시간 운용이 아니다.</p>
+<p>후속 기록 저장 검사에서는 자식 종료 상태·시간 초과·필수 파일·행 수를 확인한 후 결과를 생성한다. 실패 시 성공 판정을 취소하고 부모도 실패한다. 첫 정책 worker dump 대기만 늘리고, 시간 초과 시 프로세스 그룹을 정리한다. 이 종료 경로 수정은 아래 5분 실행 이후 적용했으며 별도 짧은 실기 시험 결과는 <a href="cleanup_smoke/diagnostic_cleanup_result.json">cleanup audit</a>에 기록했다.</p>
+<h2>5분 측정값</h2><table><tr><th>구간</th><th>표본</th><th>평균 ms</th><th>p99 ms</th><th>최대 ms</th><th>20ms 초과</th></tr><tr><th>ROS 계획 계산</th><td>15,000</td><td>7.733</td><td>10.658</td><td>15.854</td><td>0</td></tr><tr><th>CUDA 정책 worker</th><td>15,000</td><td>5.292</td><td>7.055</td><td>13.188</td><td>0</td></tr><tr><th>C++ WBC</th><td>15,000</td><td>11.267</td><td>14.144</td><td>26.483</td><td>4</td></tr></table>
+<img src="timing.png" alt="300초 동안 ROS 계획과 C++ WBC 계산 시간; WBC 4개 표본이 20ms 초과">
+<p>측정 명령 60,000/60,000개, 평균 200.002Hz. 명령 계산 평균 1.464ms, 명령 도착 간격 최대 14.583ms. 사용 계획의 최대 source age는 35ms로, 기존 50ms 보호 조건을 유지했다. 기록의 receipt/source age 보호 조건을 완화하지 않았다.</p>
+<p>예열을 포함한 H533 명령 60,997개를 모두 수신·수락했다. UART 오류·수신 오버플로·송신 오류·missed tick·motor apply는 모두 0이다. 피드백 source tick은 연속이며 수신 속도는 199.991Hz다. 59,997개라는 수신 창 표본 수에 대해서는 원본 실패 판정을 유지했다. 보드와 호스트 시간 기준 차이가 원인 후보이나, 이 로그만으로 클럭 오차를 확정하지 않는다.</p>
+<p>센서 발행을 종료한 후 마지막 계획이 50ms를 넘으면서 STOP이 발생했다. 측정 중 fault 0건과 구분해 원본 로그에 보존했다. 원시 데이터 전체 연속성·행 수·유한값·STM 카운터를 독립 감사했고, 제어 관련 자식 프로세스가 종료됐음을 원격으로 확인했다.</p>
+<h2>독립 정책 비교: 부하 없는 1,000회</h2><table><tr><th>실행</th><th>평균 ms</th><th>p99 ms</th><th>최대 ms</th><th>평균 thread CPU ms</th></tr><tr><th>eager</th><td>6.781</td><td>6.990</td><td>9.807</td><td>6.745</td></tr><tr><th>graph</th><td>2.116</td><td>2.741</td><td>2.976</td><td>1.236</td></tr></table>
+<p>위 수치는 실제 ROS·WBC 동시 실행 시간과 별개인 정책 단독 비교다. 실제 부하 조건에서는 위 5분 표의 worker/계획 측정값을 사용한다.</p>
+<h2>근거 파일</h2><ul>
+<li><a href="data/independent_audit.json">독립 감사 결과</a> · <a href="data/ros_controller_benchmark.json">원본 통합 실패 판정</a> · <a href="data/wbc_result.json">WBC 원본</a> · <a href="data/mcu-final.log">STM 카운터</a></li>
+<li><a href="data/ros_samples.csv">명령 CSV</a> · <a href="data/planner_samples.json">계획 표본</a> · <a href="data/policy_worker_timing.csv">정책 worker CSV</a> · <a href="data/wbc_samples.csv">WBC CSV</a> · <a href="data/gateway_writes.csv">USB 쓰기 CSV</a></li>
+<li><a href="cuda_graph_comparison.json">학습 모델 동등성·정책 비교</a> · <a href="ros-regression-final.log">Jetson ROS·제어 회귀 227 passed</a> · <a href="host-logging-regression.log">호스트 기록·종료 경로 시험 19 passed</a> · 고정 버퍼·번들 호스트 시험 16 passed</li>
+<li><a href="latency_fix_provenance.json">변경 파일 SHA·이력</a> · <a href="latency_fix.patch">소스 수정 diff</a> · <a href="bundle-verification.log">배포 번들 113개 SHA 검증</a> · <a href="SHA256SUMS">보고서 전체 파일 SHA</a> · <a href="../jetson_h533_stress_20261017/report.html">보존한 이전 1시간 실패 보고서</a></li>
+</ul><p>가상 nominal 관절·깊이·접촉 정보를 입력하고 MCU 피드백은 0값 fixture를 쓴다. WBC는 별도 프로세스로 연속 계산한 부하 시험이다. 실제 센서 기반 폐루프 제어, 모터 구동 및 G474 검증을 의미하지 않는다.</p></html>

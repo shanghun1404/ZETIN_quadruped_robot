@@ -1,0 +1,325 @@
+{
+  "variant": "v13",
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "actuation": {
+    "peak_applied_nm": [
+      24.584747314453125,
+      47.577762603759766,
+      47.62767028808594,
+      24.576980590820312,
+      47.560394287109375,
+      47.56610870361328,
+      24.56923484802246,
+      47.54935073852539,
+      47.5943603515625,
+      24.57453155517578,
+      47.56318664550781,
+      47.59687805175781
+    ],
+    "peak_requested_nm": [
+      24.584747314453125,
+      47.577762603759766,
+      47.62767028808594,
+      24.576980590820312,
+      47.560394287109375,
+      47.56610870361328,
+      24.56923484802246,
+      47.54935073852539,
+      47.5943603515625,
+      24.57453155517578,
+      47.56318664550781,
+      47.59687805175781
+    ],
+    "p99_applied_nm": 47.53105163574219,
+    "p99_requested_nm": 47.53105163574219,
+    "applied_saturation_fraction": 0.09295821189880371,
+    "over_limit_request_fraction": 0.0,
+    "mean_joint_power_w": 26.545536041259766,
+    "sampled_physics_steps": 16208,
+    "p99_applied_torque_slew_nm_s": 7305.74072265625
+  },
+  "mean_forward_speed_m_s": 0.26924731699347143,
+  "mean_directed_progress_m": 1.4042530059814453,
+  "survived_envs": 4,
+  "initial_envs": 8,
+  "metadata": {
+    "actor_checkpoint": "/home/shanghun1404/v14_leg_collision/pilot_jobs/110/guide_v14_interleg_collision/2026-09-24_22-59-31_v11_actor_v12_depth_guard_099/model_5700.pt",
+    "actor_sha256": "009cb093951868dfc042b0bac4bc0939d921857311b5988e046667457b2d27bd",
+    "student_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+    "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+    "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+    "seed": 42,
+    "warmup_s": 0.0,
+    "measured_s": 12.0,
+    "control_dt_s": 0.02,
+    "physics_dt_s": 0.005,
+    "command_forward_m_s": 0.5,
+    "effort_guard_fraction": 0.99,
+    "control": "isaaclab",
+    "joint_drive": "dcmotor",
+    "ros2_namespace": null,
+    "scenario": "stairs_up",
+    "protocol": "fixed_v2",
+    "heading_control": true,
+    "geometry": {
+      "difficulty": 0.7142857142857143,
+      "unique_tiles": 8,
+      "step_height_m": 0.15714285714285717,
+      "full_rise_m": 1.1,
+      "unique_origins": 8,
+      "origin_z_m": [
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858,
+        -1.100000023841858
+      ]
+    },
+    "terrain_level": 5,
+    "self_collisions_enabled": true,
+    "measure_leg_clearance": true,
+    "leg_capsule_radius_m": 0.02,
+    "leg_terrain_filtered": true
+  },
+  "interleg_clearance": {
+    "measured_env_frames": 4048,
+    "minimum_gap_m": -0.01327834013408765,
+    "negative_gap_frame_fraction": 0.0066699604743083,
+    "gap_below_minus_2mm_frame_fraction": 0.002717391304347826
+  },
+  "stairs": {
+    "step_height_m": 0.15714285714285717,
+    "traversed_count": 2,
+    "traversal_rate": 0.25,
+    "mean_vertical_after_approach_m": 0.2543133497238159
+  },
+  "per_environment": [
+    {
+      "env_id": 0,
+      "survived": true,
+      "first_termination_s": null,
+      "first_termination_terms": [],
+      "directed_progress_m": -1.2849884033203125,
+      "max_radial_progress_m": 1.776218295097351,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 1,
+      "survived": true,
+      "first_termination_s": null,
+      "first_termination_terms": [],
+      "directed_progress_m": 1.8939933776855469,
+      "max_radial_progress_m": 2.7791731357574463,
+      "vertical_after_approach_m": 0.19444097578525543,
+      "traversed": false
+    },
+    {
+      "env_id": 2,
+      "survived": false,
+      "first_termination_s": 6.0200000000000005,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 1.3625307083129883,
+      "max_radial_progress_m": 1.8104579448699951,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 3,
+      "survived": false,
+      "first_termination_s": 8.540000000000001,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 0.9725868701934814,
+      "max_radial_progress_m": 2.8944637775421143,
+      "vertical_after_approach_m": 0.2912512719631195,
+      "traversed": false
+    },
+    {
+      "env_id": 4,
+      "survived": true,
+      "first_termination_s": null,
+      "first_termination_terms": [],
+      "directed_progress_m": 2.4361624717712402,
+      "max_radial_progress_m": 3.7063148021698,
+      "vertical_after_approach_m": 0.562387228012085,
+      "traversed": true
+    },
+    {
+      "env_id": 5,
+      "survived": false,
+      "first_termination_s": 8.18,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 1.1844329833984375,
+      "max_radial_progress_m": 1.982831597328186,
+      "vertical_after_approach_m": 0.0,
+      "traversed": false
+    },
+    {
+      "env_id": 6,
+      "survived": true,
+      "first_termination_s": null,
+      "first_termination_terms": [],
+      "directed_progress_m": 2.9038562774658203,
+      "max_radial_progress_m": 4.131078243255615,
+      "vertical_after_approach_m": 0.6958379149436951,
+      "traversed": true
+    },
+    {
+      "env_id": 7,
+      "survived": false,
+      "first_termination_s": 10.3,
+      "first_termination_terms": [
+        "base_tilt"
+      ],
+      "directed_progress_m": 1.7654495239257812,
+      "max_radial_progress_m": 2.9101858139038086,
+      "vertical_after_approach_m": 0.29058951139450073,
+      "traversed": false
+    }
+  ],
+  "path": {
+    "per_environment": [
+      {
+        "env_id": 0,
+        "final_directed_progress_m": -1.2849884033203125,
+        "max_abs_cross_track_m": 1.2262773513793945,
+        "final_cross_track_m": -1.2262773513793945,
+        "max_abs_heading_error_deg": 158.2041015625,
+        "final_heading_error_deg": 155.10134887695312,
+        "path_length_m": 5.052018165588379,
+        "final_ground_change_m": 0.15714263916015625,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 1,
+        "final_directed_progress_m": 1.8939933776855469,
+        "max_abs_cross_track_m": 1.9628454446792603,
+        "final_cross_track_m": -1.9463014602661133,
+        "max_abs_heading_error_deg": 59.14292526245117,
+        "final_heading_error_deg": 44.09786605834961,
+        "path_length_m": 4.266741752624512,
+        "final_ground_change_m": 0.47142791748046875,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 2,
+        "final_directed_progress_m": 1.3625307083129883,
+        "max_abs_cross_track_m": 1.2914152145385742,
+        "final_cross_track_m": -0.7928479313850403,
+        "max_abs_heading_error_deg": 63.788970947265625,
+        "final_heading_error_deg": 29.841350555419922,
+        "path_length_m": 2.678402900695801,
+        "final_ground_change_m": 0.15714073181152344,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 3,
+        "final_directed_progress_m": 0.9725868701934814,
+        "max_abs_cross_track_m": 2.056576728820801,
+        "final_cross_track_m": -1.8539791107177734,
+        "max_abs_heading_error_deg": 67.01801300048828,
+        "final_heading_error_deg": 5.8456926345825195,
+        "path_length_m": 4.531742095947266,
+        "final_ground_change_m": 0.4714317321777344,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 4,
+        "final_directed_progress_m": 2.4361624717712402,
+        "max_abs_cross_track_m": 2.5490403175354004,
+        "final_cross_track_m": -2.391871452331543,
+        "max_abs_heading_error_deg": 56.96485137939453,
+        "final_heading_error_deg": 3.527061700820923,
+        "path_length_m": 5.52198600769043,
+        "final_ground_change_m": 0.7857151031494141,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 5,
+        "final_directed_progress_m": 1.1844329833984375,
+        "max_abs_cross_track_m": 1.3617323637008667,
+        "final_cross_track_m": -0.6938008069992065,
+        "max_abs_heading_error_deg": 64.29915618896484,
+        "final_heading_error_deg": 8.270299911499023,
+        "path_length_m": 3.2067465782165527,
+        "final_ground_change_m": -1.9073486328125e-06,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 6,
+        "final_directed_progress_m": 2.9038562774658203,
+        "max_abs_cross_track_m": 2.9382693767547607,
+        "final_cross_track_m": -2.9382693767547607,
+        "max_abs_heading_error_deg": 56.13679885864258,
+        "final_heading_error_deg": 46.131675720214844,
+        "path_length_m": 5.159780502319336,
+        "final_ground_change_m": 0.9428577423095703,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      },
+      {
+        "env_id": 7,
+        "final_directed_progress_m": 1.7654495239257812,
+        "max_abs_cross_track_m": 2.1952946186065674,
+        "final_cross_track_m": -1.512407660484314,
+        "max_abs_heading_error_deg": 64.87761688232422,
+        "final_heading_error_deg": 60.967830657958984,
+        "path_length_m": 4.657395362854004,
+        "final_ground_change_m": 0.3142852783203125,
+        "corridor_kept": false,
+        "directed_stair_success": false,
+        "full_flight_success": false
+      }
+    ],
+    "directed_stair_success_count": 0,
+    "full_flight_success_count": 0,
+    "corridor_kept_count": 0,
+    "mean_final_directed_progress_m": 1.404252976179123,
+    "mean_max_abs_cross_track_m": 1.9476814270019531,
+    "mean_max_abs_heading_error_deg": 73.8040542602539,
+    "criteria": {
+      "min_forward_m": 2.1,
+      "max_cross_track_m": 0.6,
+      "max_heading_error_deg": 60,
+      "ground_height_tolerance_m": 0.02,
+      "full_forward_m": 3.6
+    }
+  },
+  "trajectory_path": "/home/shanghun1404/motor_audit_20260930/rl_586/V14_stairs_up_seed42_trajectory.npz",
+  "trace_path": "/home/shanghun1404/motor_audit_20260930/rl_586/V14_stairs_up_seed42.npz"
+}

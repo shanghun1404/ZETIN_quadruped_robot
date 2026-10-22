@@ -1,0 +1,111 @@
+{
+  "algorithm_learning_rate_before": 3.375e-05,
+  "schedule_before": "fixed",
+  "optimizer_group_lr_before": [
+    3.3750000000000014e-05
+  ],
+  "algorithm_learning_rate_after": 3.375e-05,
+  "schedule_after": "fixed",
+  "optimizer_group_lr_after": [
+    3.375e-05
+  ],
+  "algorithm_optimizer_lr_match": true,
+  "restored_optimizer_state_entries": 17,
+  "resume_optimizer": true,
+  "torque_reward_contract": {
+    "weights_before": {
+      "air_time": 5.0,
+      "base_angular_velocity": 5.0,
+      "base_linear_velocity": 5.0,
+      "foot_clearance": 0.5,
+      "gait": 10.0,
+      "action_smoothness": -1.0,
+      "air_time_variance": -1.0,
+      "base_motion": -2.0,
+      "base_orientation": -3.0,
+      "foot_slip": -0.5,
+      "joint_acc": -0.0001,
+      "joint_pos": -0.7,
+      "joint_torques": -0.0005,
+      "joint_vel": -0.01,
+      "duty_floor": -3.0
+    },
+    "weights_after": {
+      "air_time": 5.0,
+      "base_angular_velocity": 5.0,
+      "base_linear_velocity": 5.0,
+      "foot_clearance": 0.5,
+      "gait": 10.0,
+      "action_smoothness": -1.0,
+      "air_time_variance": -1.0,
+      "base_motion": -2.0,
+      "base_orientation": -3.0,
+      "foot_slip": -0.5,
+      "joint_acc": -0.0001,
+      "joint_pos": -0.7,
+      "joint_torques": -0.000625,
+      "joint_vel": -0.01,
+      "duty_floor": -3.0
+    },
+    "torque_reward_multiplier": 1.25,
+    "joint_torques_weight_before": -0.0005,
+    "joint_torques_weight_after": -0.000625,
+    "joint_torques_semantics": "L2 norm over12 estimated applied torques; not torque squared or |torque x velocity|"
+  },
+  "actual_reward_weights": {
+    "air_time": 5.0,
+    "base_angular_velocity": 5.0,
+    "base_linear_velocity": 5.0,
+    "foot_clearance": 0.5,
+    "gait": 10.0,
+    "action_smoothness": -1.0,
+    "air_time_variance": -1.0,
+    "base_motion": -2.0,
+    "base_orientation": -3.0,
+    "foot_slip": -0.5,
+    "joint_acc": -0.0001,
+    "joint_pos": -0.7,
+    "joint_torques": -0.000625,
+    "joint_vel": -0.01,
+    "duty_floor": -3.0
+  },
+  "actual_joint_torques_weight": -0.000625,
+  "actual_joint_torques_function": "isaaclab_tasks.manager_based.locomotion.velocity.config.spot.mdp.rewards.joint_torques_penalty",
+  "starting_learning_iteration": 11700,
+  "num_learning_iterations": 250,
+  "num_envs": 512,
+  "seed": 47,
+  "actual_cutoff_hz": 25.0,
+  "actual_lpf_alpha": 0.43990084648844263,
+  "actual_guard_fraction": 0.99,
+  "max_delay_steps": 3,
+  "physics_dt_s": 0.005,
+  "control_dt_s": 0.02,
+  "rollout_steps_per_env": 24,
+  "episode_length_s": 20.0,
+  "gain_scale_range": [
+    0.8,
+    1.2
+  ],
+  "actual_stiffness_min_max": [
+    240.0181427001953,
+    359.9831848144531
+  ],
+  "actual_damping_min_max": [
+    6.400013446807861,
+    9.598834037780762
+  ],
+  "finite_wrapper": "FiniteV13DepthPolicyWrapper",
+  "physics_diverged_termination": true,
+  "torque_pressure_reward_enabled": false,
+  "joint_power_reward_enabled": false,
+  "loaded_source_hashes": {
+    "v15_env_cfg": "9d7630498116cff12bde9f05f38a7957ea8dd176a2a42d00aaaa73bb1d1e8672",
+    "v14_leg_env_cfg": "2cc074a3419189b1b95378d025106c0a189a68d4a58710967071f8520d60a3c4",
+    "v13_torque_actions": "909f240bd141f5d9e0e676f75227a89aa17b98ac8722d2949ae0c3b767173066",
+    "v13_torque_mdp": "b156a82fa97f5d5bc2590dd0ca63ed5256605b1548f4d4d1caf20c79f0f98297",
+    "v15_math": "36d64aca24c0eb339d0dcfcef74670e2e71fcc737129ccda6f848e183471e2d3",
+    "v8_env_cfg": "750a8a006c9749c49f1868437cc7bfbb88d2912b155c630452e5340dd190c351",
+    "isaaclab_tasks.manager_based.locomotion.velocity.config.spot.mdp.rewards": "a757a62b1f7bb06f4c5bc5c6380c411588c15ca089c03000f9c259754cc515c4"
+  }
+}

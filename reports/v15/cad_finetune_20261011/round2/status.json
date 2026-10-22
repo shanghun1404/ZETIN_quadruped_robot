@@ -1,0 +1,44 @@
+{
+  "training_state": "COMPLETED",
+  "requested_updates": 1000,
+  "completed": true,
+  "adopted": false,
+  "parent_training_job": 2330,
+  "training_job": 2333,
+  "evaluation_jobs": [
+    2334,
+    2335
+  ],
+  "evaluation_dependency": "afterok:2333",
+  "profile": "targeted",
+  "parent_checkpoint_sha256": "1a3ac12414ffbcb69ed68245f6df90e3dd7971258c4bf576ccc434fa7d7b4357",
+  "preflight_passed": true,
+  "preflight_steps": 100,
+  "nonfinite_steps": 0,
+  "last_observed_iteration": 14699,
+  "last_observed_completed_updates": 1000,
+  "training_completed": true,
+  "candidate_checkpoint": "train_jobs/2333/results/model_14699.pt",
+  "candidate_sha256": "b04417c29f30e47020195b070d059984a37531ed163c65b237c05b90539da5df",
+  "evaluation_state": "COMPLETED",
+  "all_policy_parameters_finite": true,
+  "original_actor_unchanged": true,
+  "training_scalar_values_finite": true,
+  "physics_divergence_max": 0,
+  "tested_cases": 15,
+  "passed_cases": 12,
+  "failed_cases": [
+    "yaw",
+    "stairs_up_157mm",
+    "stairs_down_157mm"
+  ],
+  "telemetry_integrity_passed_cases": 15,
+  "nonadjacent_contact_max_n": 0.0,
+  "rated_rms_exceed_cases": [
+    "stairs_up_157mm",
+    "stairs_down_157mm",
+    "reverse",
+    "yaw"
+  ],
+  "overview": "../overview.html"
+}

@@ -1,0 +1,52 @@
+{
+  "schema": 1,
+  "prepared_motor_adaptation": true,
+  "original_trainer_sha256": "3da8cdcefa600f851795d3d48cdd30a6172b55070556ff8d888971057a1391d2",
+  "overlay_sha256": "3b3e003e44ab542c7796c55e8bf1f1a9e68b3d29d86e58af554b07189b280aeb",
+  "loaded_source_hashes": {
+    "v15_env_cfg": "9d7630498116cff12bde9f05f38a7957ea8dd176a2a42d00aaaa73bb1d1e8672",
+    "v14_leg_env_cfg": "2cc074a3419189b1b95378d025106c0a189a68d4a58710967071f8520d60a3c4",
+    "v13_torque_actions": "909f240bd141f5d9e0e676f75227a89aa17b98ac8722d2949ae0c3b767173066",
+    "v13_torque_mdp": "b156a82fa97f5d5bc2590dd0ca63ed5256605b1548f4d4d1caf20c79f0f98297",
+    "v15_math": "36d64aca24c0eb339d0dcfcef74670e2e71fcc737129ccda6f848e183471e2d3"
+  },
+  "reward_changes": false,
+  "actual_solver_motor_torque_recorded": false,
+  "motor_thermal_safety_proven": false,
+  "initial_checkpoint": "/home/shanghun1404/v15_large_scale/locomotion_jobs/339/guide_v15_physx_pd/2026-09-27_12-47-59_v14_m5700_physx_pd_lane_stairs/model_11699.pt",
+  "initial_checkpoint_sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33",
+  "resume": true,
+  "frozen_v12_student": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+  "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+  "usd_path": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+  "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+  "num_envs": 512,
+  "seed": 47,
+  "terrain_rows": 10,
+  "terrain_columns": 128,
+  "terrain_proportions": {
+    "pyramid_stairs": 0.25,
+    "pyramid_stairs_inv": 0.45,
+    "boxes": 0.1,
+    "random_rough": 0.1,
+    "hf_pyramid_slope": 0.05,
+    "hf_pyramid_slope_inv": 0.05
+  },
+  "joint_drive": "physx_implicit_pd",
+  "pd_gain_scale_range": [
+    0.8,
+    1.2
+  ],
+  "max_action_delay_steps": 3,
+  "action_lpf_hz": 23.0,
+  "effort_guard_fraction": 0.97,
+  "lane_heading_command": true,
+  "base_angular_velocity_reward": {
+    "weight": 5.0,
+    "std": 2.0
+  },
+  "learning_rate": 3.375e-05,
+  "learning_rate_schedule": "fixed",
+  "control_dt_s": 0.02,
+  "physics_dt_s": 0.005
+}

@@ -1,0 +1,132 @@
+{
+  "seed": 51,
+  "controller": "model",
+  "seconds": 5.0,
+  "speed_command_m_s": 0.0,
+  "walk_axis_world": "y",
+  "contact_projection": true,
+  "gait_mode": "prepared_crawl",
+  "liftoff_count": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "stance_point": "ground",
+  "joint_friction": 0.0,
+  "joint_dynamic_friction": 0.0,
+  "joint_viscous_friction": 0.0,
+  "force_allocator": "qp",
+  "qp_control_ticks": [
+    250.0,
+    250.0,
+    250.0,
+    250.0
+  ],
+  "qp_infeasible_tick_fraction": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "qp_max_constraint_violation": [
+    0.00014863867545500398,
+    0.00016270388732664287,
+    0.0003669917059596628,
+    0.00021144785569049418
+  ],
+  "qp_max_torque_violation_nm": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "qp_max_base_wrench_violation": [
+    0.00014863867545500398,
+    0.00016270388732664287,
+    0.0003669917059596628,
+    0.00021144785569049418
+  ],
+  "completed_step_count": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "survived_envs": 4,
+  "num_envs": 4,
+  "failed_env_ids": [],
+  "failure_handling": "absorbing failure; metric masked and invalid environment quarantined; never revived",
+  "mean_base_force_residual_fraction_of_weight": [
+    2.2769484075979562e-06,
+    2.982278374474845e-06,
+    3.530371941451449e-06,
+    2.3138316009863047e-06
+  ],
+  "mean_base_moment_residual_fraction_of_weight_times_0_30m": [
+    2.7957507882092614e-06,
+    3.5972805108031025e-06,
+    4.326273028709693e-06,
+    2.9215882477728883e-06
+  ],
+  "mean_stance_acceleration_residual_m_s2": [
+    8.491620974382386e-06,
+    8.43152156448923e-06,
+    8.5284609667724e-06,
+    8.466167855658568e-06
+  ],
+  "mean_stance_point_speed_m_s": [
+    0.0012358047533780336,
+    0.0013709617778658867,
+    0.0012470607180148363,
+    0.0013734698295593262
+  ],
+  "scores": [
+    -2.5257641931253603,
+    -2.5609872828455993,
+    -2.570983883561712,
+    -2.5781420939914823
+  ],
+  "survival_fraction": [
+    1.0,
+    1.0,
+    1.0,
+    1.0
+  ],
+  "progress_m": [
+    -0.0020933151245117188,
+    -0.0021287202835083008,
+    -0.002138495445251465,
+    -0.0021458864212036133
+  ],
+  "speed": [
+    2.1723590180044994e-05,
+    1.1996413377346471e-05,
+    1.8010161511483602e-05,
+    9.381505151395686e-06
+  ],
+  "pressure": [
+    0.053846921771764755,
+    0.053836639970541,
+    0.053866904228925705,
+    0.05384926497936249
+  ],
+  "saturation": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "power": [
+    0.040879469364881516,
+    0.048559486865997314,
+    0.04051598533987999,
+    0.047204311937093735
+  ],
+  "guard_fraction": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ]
+}

@@ -1,0 +1,940 @@
+{
+  "report_schema": 1,
+  "source": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/integration/602",
+  "run": "602",
+  "scenario": "stairs_up",
+  "seed": 42,
+  "raw_task_success": true,
+  "task_success": false,
+  "completed": true,
+  "failure": null,
+  "data_valid": true,
+  "first_excluded_sample": null,
+  "samples_recorded": 2800,
+  "samples_used": 2800,
+  "seconds_used": 14.0,
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "torque_semantics": "hybrid: feedforward command at zero gains; drive-cap-aware instantaneous implicit PD estimate when gains nonzero, not measured PhysX drive force",
+  "stand_forward_shift_m": 0.03,
+  "stand_forward_shift_values_m": [
+    0.03
+  ],
+  "stand_forward_shift_recorded_fraction": 1.0,
+  "same_leg_thigh_foot_evidence": {
+    "geometry": [
+      {
+        "center_local_m": [
+          0.1798692178328798,
+          0.30990000861594424,
+          -0.5425212965203308
+        ],
+        "half_extents_m": [
+          0.019985238070829858,
+          0.01998809909391497,
+          0.022521271821656086
+        ],
+        "leg": "FL",
+        "collider_path": "/World/envs/env_0/Robot/base/FL_foot/collisions/foot/foot",
+        "mesh_point_count": 20094,
+        "mesh_to_foot_transform": [
+          [
+            0.0010000000474974513,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0010000000474974513,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0010000000474974513,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "mesh_points_bounds": [
+          [
+            159.88397216796875,
+            289.9118957519531,
+            -565.0425415039062
+          ],
+          [
+            199.8544464111328,
+            329.8880920410156,
+            -520.0
+          ]
+        ],
+        "collision_approximation": "convexHull",
+        "proxy": "foot_actor_frame_AABB_of_convex_hull_vertices",
+        "actual_contact_measured": false,
+        "physical_pair_filtered": true,
+        "interpretation": "Positive gap separates modeled geometry; negative gap is possible proxy overlap, not confirmed mesh collision. Contact offsets and solver tolerances excluded."
+      },
+      {
+        "center_local_m": [
+          0.1798692178328798,
+          0.30990000861594424,
+          -0.5425212965203308
+        ],
+        "half_extents_m": [
+          0.019985238070829858,
+          0.01998809909391497,
+          0.022521271821656086
+        ],
+        "leg": "FR",
+        "collider_path": "/World/envs/env_0/Robot/base/FR_foot/collisions/foot/foot",
+        "mesh_point_count": 20094,
+        "mesh_to_foot_transform": [
+          [
+            0.0010000000474974513,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0010000000474974513,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0010000000474974513,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "mesh_points_bounds": [
+          [
+            159.88397216796875,
+            289.9118957519531,
+            -565.0425415039062
+          ],
+          [
+            199.8544464111328,
+            329.8880920410156,
+            -520.0
+          ]
+        ],
+        "collision_approximation": "convexHull",
+        "proxy": "foot_actor_frame_AABB_of_convex_hull_vertices",
+        "actual_contact_measured": false,
+        "physical_pair_filtered": true,
+        "interpretation": "Positive gap separates modeled geometry; negative gap is possible proxy overlap, not confirmed mesh collision. Contact offsets and solver tolerances excluded."
+      },
+      {
+        "center_local_m": [
+          0.1798692178328798,
+          0.30990000861594424,
+          -0.5425212965203308
+        ],
+        "half_extents_m": [
+          0.019985238070829858,
+          0.01998809909391497,
+          0.022521271821656086
+        ],
+        "leg": "RL",
+        "collider_path": "/World/envs/env_0/Robot/base/RL_foot/collisions/foot/foot",
+        "mesh_point_count": 20094,
+        "mesh_to_foot_transform": [
+          [
+            0.0010000000474974513,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0010000000474974513,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0010000000474974513,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "mesh_points_bounds": [
+          [
+            159.88397216796875,
+            289.9118957519531,
+            -565.0425415039062
+          ],
+          [
+            199.8544464111328,
+            329.8880920410156,
+            -520.0
+          ]
+        ],
+        "collision_approximation": "convexHull",
+        "proxy": "foot_actor_frame_AABB_of_convex_hull_vertices",
+        "actual_contact_measured": false,
+        "physical_pair_filtered": true,
+        "interpretation": "Positive gap separates modeled geometry; negative gap is possible proxy overlap, not confirmed mesh collision. Contact offsets and solver tolerances excluded."
+      },
+      {
+        "center_local_m": [
+          0.1798692178328798,
+          0.30990000861594424,
+          -0.5425212965203308
+        ],
+        "half_extents_m": [
+          0.019985238070829858,
+          0.01998809909391497,
+          0.022521271821656086
+        ],
+        "leg": "RR",
+        "collider_path": "/World/envs/env_0/Robot/base/RR_foot/collisions/foot/foot",
+        "mesh_point_count": 20094,
+        "mesh_to_foot_transform": [
+          [
+            0.0010000000474974513,
+            0.0,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0010000000474974513,
+            0.0,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0010000000474974513,
+            0.0
+          ],
+          [
+            0.0,
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "mesh_points_bounds": [
+          [
+            159.88397216796875,
+            289.9118957519531,
+            -565.0425415039062
+          ],
+          [
+            199.8544464111328,
+            329.8880920410156,
+            -520.0
+          ]
+        ],
+        "collision_approximation": "convexHull",
+        "proxy": "foot_actor_frame_AABB_of_convex_hull_vertices",
+        "actual_contact_measured": false,
+        "physical_pair_filtered": true,
+        "interpretation": "Positive gap separates modeled geometry; negative gap is possible proxy overlap, not confirmed mesh collision. Contact offsets and solver tolerances excluded."
+      }
+    ],
+    "pair_order": [
+      "FL_thigh_profile--FL_foot",
+      "FR_thigh_profile--FR_foot",
+      "RL_thigh_profile--RL_foot",
+      "RR_thigh_profile--RR_foot"
+    ],
+    "gate_applied": true,
+    "physical_pairs_filtered": true,
+    "source_summary": {
+      "min_same_leg_thigh_foot_gap_m": 0.2838402915450138,
+      "same_leg_thigh_foot_proxy_overlap_fraction": 0.0,
+      "same_leg_thigh_foot_per_pair_minimum_m": {
+        "FL_thigh_profile--FL_foot": 0.285924572990322,
+        "FR_thigh_profile--FR_foot": 0.28388712986967646,
+        "RL_thigh_profile--RL_foot": 0.28592469010184757,
+        "RR_thigh_profile--RR_foot": 0.2838402915450138
+      }
+    }
+  },
+  "current_model": {
+    "formula": "abs(torque)/(Kt*gear), efficiency=1",
+    "nm_per_a": [
+      1.23,
+      1.44,
+      1.44,
+      1.23,
+      1.44,
+      1.44,
+      1.23,
+      1.44,
+      1.44,
+      1.23,
+      1.44,
+      1.44
+    ],
+    "not_battery_current": true,
+    "thermal_safety_validated": false,
+    "specification_source": "reports/motor_audit_20260930/specs/motors.json"
+  },
+  "collision_scope": "24 cross-leg thigh/calf capsule gaps and 12 contact channels covering 54 unique cross-leg thigh/calf/foot pairs. Four same-leg thigh-foot gaps are separate enclosing-box proxies; those physical pairs remain filtered. Same-leg thigh-calf/calf-foot and leg-ground contacts excluded; no trunk collider, only eight capsule-trunk box proxy checks.",
+  "source_sha256": {
+    "metadata": "acccf825ee725d84ebbb0c49e3120f8f4e00a0dc3467f92a858c5ffc4f719d92",
+    "status": "a3d35c3c465bfadb9c87f7125db489c66c76e61e5ce7ebd30c426ff8c89db6bd",
+    "arrays": "5cad963e236145675cf19f5d6bb06a33de41bebbedc63d7aa9430eb54c584f54"
+  },
+  "modes": {
+    "ALL": {
+      "samples": 2800,
+      "duration_s": 14.0,
+      "joints": [
+        {
+          "joint": "FL_HAA",
+          "torque_rms_nm": 9.364186119466812,
+          "torque_peak_nm": 24.552003860473633,
+          "rated_torque_nm": 8.3,
+          "rated_exceed_fraction": 0.17107142857142857,
+          "rated_exceed_s": 2.395,
+          "rated_exceed_longest_s": 0.3,
+          "ideal_current_rms_a": 7.613159446720985,
+          "ideal_current_peak_a": 19.96097874835255
+        },
+        {
+          "joint": "FL_HFE",
+          "torque_rms_nm": 6.804940567469675,
+          "torque_peak_nm": 47.52000045776367,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.032857142857142856,
+          "rated_exceed_s": 0.46,
+          "rated_exceed_longest_s": 0.165,
+          "ideal_current_rms_a": 4.725653171853941,
+          "ideal_current_peak_a": 33.00000031789144
+        },
+        {
+          "joint": "FL_KFE",
+          "torque_rms_nm": 12.922940968216196,
+          "torque_peak_nm": 47.52000427246094,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.10357142857142858,
+          "rated_exceed_s": 1.45,
+          "rated_exceed_longest_s": 0.3,
+          "ideal_current_rms_a": 8.974264561261247,
+          "ideal_current_peak_a": 33.00000296698676
+        },
+        {
+          "joint": "FR_HAA",
+          "torque_rms_nm": 6.652207886849883,
+          "torque_peak_nm": 24.552001953125,
+          "rated_torque_nm": 8.3,
+          "rated_exceed_fraction": 0.08892857142857143,
+          "rated_exceed_s": 1.245,
+          "rated_exceed_longest_s": 0.14,
+          "ideal_current_rms_a": 5.408299094999905,
+          "ideal_current_peak_a": 19.9609771976626
+        },
+        {
+          "joint": "FR_HFE",
+          "torque_rms_nm": 5.289710967168267,
+          "torque_peak_nm": 47.519996643066406,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.012142857142857143,
+          "rated_exceed_s": 0.17,
+          "rated_exceed_longest_s": 0.085,
+          "ideal_current_rms_a": 3.673410393866852,
+          "ideal_current_peak_a": 32.99999766879612
+        },
+        {
+          "joint": "FR_KFE",
+          "torque_rms_nm": 12.167507503104002,
+          "torque_peak_nm": 47.519996643066406,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.11321428571428571,
+          "rated_exceed_s": 1.585,
+          "rated_exceed_longest_s": 0.295,
+          "ideal_current_rms_a": 8.449657988266669,
+          "ideal_current_peak_a": 32.99999766879612
+        },
+        {
+          "joint": "RL_HAA",
+          "torque_rms_nm": 5.711202393513106,
+          "torque_peak_nm": 24.552001953125,
+          "rated_torque_nm": 8.3,
+          "rated_exceed_fraction": 0.11,
+          "rated_exceed_s": 1.54,
+          "rated_exceed_longest_s": 0.23500000000000001,
+          "ideal_current_rms_a": 4.64325397846594,
+          "ideal_current_peak_a": 19.9609771976626
+        },
+        {
+          "joint": "RL_HFE",
+          "torque_rms_nm": 5.21620088347153,
+          "torque_peak_nm": 47.52000427246094,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.0125,
+          "rated_exceed_s": 0.17500000000000002,
+          "rated_exceed_longest_s": 0.065,
+          "ideal_current_rms_a": 3.622361724633007,
+          "ideal_current_peak_a": 33.00000296698676
+        },
+        {
+          "joint": "RL_KFE",
+          "torque_rms_nm": 10.360725303551535,
+          "torque_peak_nm": 47.519996643066406,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.025357142857142856,
+          "rated_exceed_s": 0.355,
+          "rated_exceed_longest_s": 0.06,
+          "ideal_current_rms_a": 7.194948127466343,
+          "ideal_current_peak_a": 32.99999766879612
+        },
+        {
+          "joint": "RR_HAA",
+          "torque_rms_nm": 4.222376568795013,
+          "torque_peak_nm": 20.867904663085938,
+          "rated_torque_nm": 8.3,
+          "rated_exceed_fraction": 0.10035714285714285,
+          "rated_exceed_s": 1.405,
+          "rated_exceed_longest_s": 0.23,
+          "ideal_current_rms_a": 3.432826478695133,
+          "ideal_current_peak_a": 16.965776148850356
+        },
+        {
+          "joint": "RR_HFE",
+          "torque_rms_nm": 3.4547375083368865,
+          "torque_peak_nm": 35.2479248046875,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.003928571428571429,
+          "rated_exceed_s": 0.055,
+          "rated_exceed_longest_s": 0.035,
+          "ideal_current_rms_a": 2.3991232696783937,
+          "ideal_current_peak_a": 24.477725558810764
+        },
+        {
+          "joint": "RR_KFE",
+          "torque_rms_nm": 14.799904159209513,
+          "torque_peak_nm": 43.84587478637695,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.09678571428571428,
+          "rated_exceed_s": 1.355,
+          "rated_exceed_longest_s": 0.23,
+          "ideal_current_rms_a": 10.277711221673274,
+          "ideal_current_peak_a": 30.44852415720622
+        }
+      ],
+      "same_leg_thigh_foot_proxy": {
+        "available": true,
+        "minimum_gap_m": 0.2838402915450138,
+        "overlap_fraction": 0.0,
+        "per_pair_minimum_m": {
+          "FL_thigh_profile--FL_foot": 0.285924572990322,
+          "FR_thigh_profile--FR_foot": 0.28388712986967646,
+          "RL_thigh_profile--RL_foot": 0.28592469010184757,
+          "RR_thigh_profile--RR_foot": 0.2838402915450138
+        },
+        "actual_contact_measured": false,
+        "physical_pairs_filtered": true
+      },
+      "height_mean_m": -0.5830400543447052,
+      "height_min_m": -0.5926772952079773,
+      "speed_mean_m_s": 0.09930802962720216,
+      "speed_max_m_s": 2.0529571180678574,
+      "maximum_tilt_deg": 4.185181066742253,
+      "mean_absolute_mechanical_power_w": 22.8053618405197,
+      "support_count_fraction": {
+        "0": 0.015714285714285715,
+        "1": 0.005714285714285714,
+        "2": 0.26142857142857145,
+        "3": 0.02857142857142857,
+        "4": 0.6885714285714286
+      },
+      "policy_compute_ms_p50_p99": [
+        3.801065991865471,
+        4.934631834039465
+      ],
+      "wbc": {
+        "active_policy_ticks": 0,
+        "feasible_fraction": null,
+        "converged_fraction": null
+      },
+      "collision": {
+        "minimum_crossleg_capsule_gap_m": 0.20498188370827783,
+        "crossleg_capsule_overlap_fraction": 0.0,
+        "maximum_crossleg_contact_force_n": 0.0,
+        "crossleg_contact_over_1n_fraction": 0.0,
+        "minimum_trunk_proxy_gap_m": -0.0059857830663663705,
+        "trunk_proxy_overlap_fraction": 0.004642857142857143,
+        "trunk_actual_collider_present": false,
+        "scope": "Trunk proxy overlap is geometric only; contact channels cover filtered cross-leg pairs, not all possible pairs"
+      }
+    },
+    "WALK": {
+      "samples": 2800,
+      "duration_s": 14.0,
+      "joints": [
+        {
+          "joint": "FL_HAA",
+          "torque_rms_nm": 9.364186119466812,
+          "torque_peak_nm": 24.552003860473633,
+          "rated_torque_nm": 8.3,
+          "rated_exceed_fraction": 0.17107142857142857,
+          "rated_exceed_s": 2.395,
+          "rated_exceed_longest_s": 0.3,
+          "ideal_current_rms_a": 7.613159446720985,
+          "ideal_current_peak_a": 19.96097874835255
+        },
+        {
+          "joint": "FL_HFE",
+          "torque_rms_nm": 6.804940567469675,
+          "torque_peak_nm": 47.52000045776367,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.032857142857142856,
+          "rated_exceed_s": 0.46,
+          "rated_exceed_longest_s": 0.165,
+          "ideal_current_rms_a": 4.725653171853941,
+          "ideal_current_peak_a": 33.00000031789144
+        },
+        {
+          "joint": "FL_KFE",
+          "torque_rms_nm": 12.922940968216196,
+          "torque_peak_nm": 47.52000427246094,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.10357142857142858,
+          "rated_exceed_s": 1.45,
+          "rated_exceed_longest_s": 0.3,
+          "ideal_current_rms_a": 8.974264561261247,
+          "ideal_current_peak_a": 33.00000296698676
+        },
+        {
+          "joint": "FR_HAA",
+          "torque_rms_nm": 6.652207886849883,
+          "torque_peak_nm": 24.552001953125,
+          "rated_torque_nm": 8.3,
+          "rated_exceed_fraction": 0.08892857142857143,
+          "rated_exceed_s": 1.245,
+          "rated_exceed_longest_s": 0.14,
+          "ideal_current_rms_a": 5.408299094999905,
+          "ideal_current_peak_a": 19.9609771976626
+        },
+        {
+          "joint": "FR_HFE",
+          "torque_rms_nm": 5.289710967168267,
+          "torque_peak_nm": 47.519996643066406,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.012142857142857143,
+          "rated_exceed_s": 0.17,
+          "rated_exceed_longest_s": 0.085,
+          "ideal_current_rms_a": 3.673410393866852,
+          "ideal_current_peak_a": 32.99999766879612
+        },
+        {
+          "joint": "FR_KFE",
+          "torque_rms_nm": 12.167507503104002,
+          "torque_peak_nm": 47.519996643066406,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.11321428571428571,
+          "rated_exceed_s": 1.585,
+          "rated_exceed_longest_s": 0.295,
+          "ideal_current_rms_a": 8.449657988266669,
+          "ideal_current_peak_a": 32.99999766879612
+        },
+        {
+          "joint": "RL_HAA",
+          "torque_rms_nm": 5.711202393513106,
+          "torque_peak_nm": 24.552001953125,
+          "rated_torque_nm": 8.3,
+          "rated_exceed_fraction": 0.11,
+          "rated_exceed_s": 1.54,
+          "rated_exceed_longest_s": 0.23500000000000001,
+          "ideal_current_rms_a": 4.64325397846594,
+          "ideal_current_peak_a": 19.9609771976626
+        },
+        {
+          "joint": "RL_HFE",
+          "torque_rms_nm": 5.21620088347153,
+          "torque_peak_nm": 47.52000427246094,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.0125,
+          "rated_exceed_s": 0.17500000000000002,
+          "rated_exceed_longest_s": 0.065,
+          "ideal_current_rms_a": 3.622361724633007,
+          "ideal_current_peak_a": 33.00000296698676
+        },
+        {
+          "joint": "RL_KFE",
+          "torque_rms_nm": 10.360725303551535,
+          "torque_peak_nm": 47.519996643066406,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.025357142857142856,
+          "rated_exceed_s": 0.355,
+          "rated_exceed_longest_s": 0.06,
+          "ideal_current_rms_a": 7.194948127466343,
+          "ideal_current_peak_a": 32.99999766879612
+        },
+        {
+          "joint": "RR_HAA",
+          "torque_rms_nm": 4.222376568795013,
+          "torque_peak_nm": 20.867904663085938,
+          "rated_torque_nm": 8.3,
+          "rated_exceed_fraction": 0.10035714285714285,
+          "rated_exceed_s": 1.405,
+          "rated_exceed_longest_s": 0.23,
+          "ideal_current_rms_a": 3.432826478695133,
+          "ideal_current_peak_a": 16.965776148850356
+        },
+        {
+          "joint": "RR_HFE",
+          "torque_rms_nm": 3.4547375083368865,
+          "torque_peak_nm": 35.2479248046875,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.003928571428571429,
+          "rated_exceed_s": 0.055,
+          "rated_exceed_longest_s": 0.035,
+          "ideal_current_rms_a": 2.3991232696783937,
+          "ideal_current_peak_a": 24.477725558810764
+        },
+        {
+          "joint": "RR_KFE",
+          "torque_rms_nm": 14.799904159209513,
+          "torque_peak_nm": 43.84587478637695,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.09678571428571428,
+          "rated_exceed_s": 1.355,
+          "rated_exceed_longest_s": 0.23,
+          "ideal_current_rms_a": 10.277711221673274,
+          "ideal_current_peak_a": 30.44852415720622
+        }
+      ],
+      "same_leg_thigh_foot_proxy": {
+        "available": true,
+        "minimum_gap_m": 0.2838402915450138,
+        "overlap_fraction": 0.0,
+        "per_pair_minimum_m": {
+          "FL_thigh_profile--FL_foot": 0.285924572990322,
+          "FR_thigh_profile--FR_foot": 0.28388712986967646,
+          "RL_thigh_profile--RL_foot": 0.28592469010184757,
+          "RR_thigh_profile--RR_foot": 0.2838402915450138
+        },
+        "actual_contact_measured": false,
+        "physical_pairs_filtered": true
+      },
+      "height_mean_m": -0.5830400543447052,
+      "height_min_m": -0.5926772952079773,
+      "speed_mean_m_s": 0.09930802962720216,
+      "speed_max_m_s": 2.0529571180678574,
+      "maximum_tilt_deg": 4.185181066742253,
+      "mean_absolute_mechanical_power_w": 22.8053618405197,
+      "support_count_fraction": {
+        "0": 0.015714285714285715,
+        "1": 0.005714285714285714,
+        "2": 0.26142857142857145,
+        "3": 0.02857142857142857,
+        "4": 0.6885714285714286
+      },
+      "policy_compute_ms_p50_p99": [
+        3.801065991865471,
+        4.934631834039465
+      ],
+      "wbc": {
+        "active_policy_ticks": 0,
+        "feasible_fraction": null,
+        "converged_fraction": null
+      },
+      "collision": {
+        "minimum_crossleg_capsule_gap_m": 0.20498188370827783,
+        "crossleg_capsule_overlap_fraction": 0.0,
+        "maximum_crossleg_contact_force_n": 0.0,
+        "crossleg_contact_over_1n_fraction": 0.0,
+        "minimum_trunk_proxy_gap_m": -0.0059857830663663705,
+        "trunk_proxy_overlap_fraction": 0.004642857142857143,
+        "trunk_actual_collider_present": false,
+        "scope": "Trunk proxy overlap is geometric only; contact channels cover filtered cross-leg pairs, not all possible pairs"
+      }
+    }
+  },
+  "timeline": [
+    {
+      "segment_index": 1,
+      "mode": "WALK",
+      "mode_occurrence": 1,
+      "start_s": 0.0,
+      "end_s": 14.0,
+      "samples": 2800,
+      "duration_s": 14.0,
+      "joints": [
+        {
+          "joint": "FL_HAA",
+          "torque_rms_nm": 9.364186119466812,
+          "torque_peak_nm": 24.552003860473633,
+          "rated_torque_nm": 8.3,
+          "rated_exceed_fraction": 0.17107142857142857,
+          "rated_exceed_s": 2.395,
+          "rated_exceed_longest_s": 0.3,
+          "ideal_current_rms_a": 7.613159446720985,
+          "ideal_current_peak_a": 19.96097874835255
+        },
+        {
+          "joint": "FL_HFE",
+          "torque_rms_nm": 6.804940567469675,
+          "torque_peak_nm": 47.52000045776367,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.032857142857142856,
+          "rated_exceed_s": 0.46,
+          "rated_exceed_longest_s": 0.165,
+          "ideal_current_rms_a": 4.725653171853941,
+          "ideal_current_peak_a": 33.00000031789144
+        },
+        {
+          "joint": "FL_KFE",
+          "torque_rms_nm": 12.922940968216196,
+          "torque_peak_nm": 47.52000427246094,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.10357142857142858,
+          "rated_exceed_s": 1.45,
+          "rated_exceed_longest_s": 0.3,
+          "ideal_current_rms_a": 8.974264561261247,
+          "ideal_current_peak_a": 33.00000296698676
+        },
+        {
+          "joint": "FR_HAA",
+          "torque_rms_nm": 6.652207886849883,
+          "torque_peak_nm": 24.552001953125,
+          "rated_torque_nm": 8.3,
+          "rated_exceed_fraction": 0.08892857142857143,
+          "rated_exceed_s": 1.245,
+          "rated_exceed_longest_s": 0.14,
+          "ideal_current_rms_a": 5.408299094999905,
+          "ideal_current_peak_a": 19.9609771976626
+        },
+        {
+          "joint": "FR_HFE",
+          "torque_rms_nm": 5.289710967168267,
+          "torque_peak_nm": 47.519996643066406,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.012142857142857143,
+          "rated_exceed_s": 0.17,
+          "rated_exceed_longest_s": 0.085,
+          "ideal_current_rms_a": 3.673410393866852,
+          "ideal_current_peak_a": 32.99999766879612
+        },
+        {
+          "joint": "FR_KFE",
+          "torque_rms_nm": 12.167507503104002,
+          "torque_peak_nm": 47.519996643066406,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.11321428571428571,
+          "rated_exceed_s": 1.585,
+          "rated_exceed_longest_s": 0.295,
+          "ideal_current_rms_a": 8.449657988266669,
+          "ideal_current_peak_a": 32.99999766879612
+        },
+        {
+          "joint": "RL_HAA",
+          "torque_rms_nm": 5.711202393513106,
+          "torque_peak_nm": 24.552001953125,
+          "rated_torque_nm": 8.3,
+          "rated_exceed_fraction": 0.11,
+          "rated_exceed_s": 1.54,
+          "rated_exceed_longest_s": 0.23500000000000001,
+          "ideal_current_rms_a": 4.64325397846594,
+          "ideal_current_peak_a": 19.9609771976626
+        },
+        {
+          "joint": "RL_HFE",
+          "torque_rms_nm": 5.21620088347153,
+          "torque_peak_nm": 47.52000427246094,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.0125,
+          "rated_exceed_s": 0.17500000000000002,
+          "rated_exceed_longest_s": 0.065,
+          "ideal_current_rms_a": 3.622361724633007,
+          "ideal_current_peak_a": 33.00000296698676
+        },
+        {
+          "joint": "RL_KFE",
+          "torque_rms_nm": 10.360725303551535,
+          "torque_peak_nm": 47.519996643066406,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.025357142857142856,
+          "rated_exceed_s": 0.355,
+          "rated_exceed_longest_s": 0.06,
+          "ideal_current_rms_a": 7.194948127466343,
+          "ideal_current_peak_a": 32.99999766879612
+        },
+        {
+          "joint": "RR_HAA",
+          "torque_rms_nm": 4.222376568795013,
+          "torque_peak_nm": 20.867904663085938,
+          "rated_torque_nm": 8.3,
+          "rated_exceed_fraction": 0.10035714285714285,
+          "rated_exceed_s": 1.405,
+          "rated_exceed_longest_s": 0.23,
+          "ideal_current_rms_a": 3.432826478695133,
+          "ideal_current_peak_a": 16.965776148850356
+        },
+        {
+          "joint": "RR_HFE",
+          "torque_rms_nm": 3.4547375083368865,
+          "torque_peak_nm": 35.2479248046875,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.003928571428571429,
+          "rated_exceed_s": 0.055,
+          "rated_exceed_longest_s": 0.035,
+          "ideal_current_rms_a": 2.3991232696783937,
+          "ideal_current_peak_a": 24.477725558810764
+        },
+        {
+          "joint": "RR_KFE",
+          "torque_rms_nm": 14.799904159209513,
+          "torque_peak_nm": 43.84587478637695,
+          "rated_torque_nm": 18.0,
+          "rated_exceed_fraction": 0.09678571428571428,
+          "rated_exceed_s": 1.355,
+          "rated_exceed_longest_s": 0.23,
+          "ideal_current_rms_a": 10.277711221673274,
+          "ideal_current_peak_a": 30.44852415720622
+        }
+      ],
+      "same_leg_thigh_foot_proxy": {
+        "available": true,
+        "minimum_gap_m": 0.2838402915450138,
+        "overlap_fraction": 0.0,
+        "per_pair_minimum_m": {
+          "FL_thigh_profile--FL_foot": 0.285924572990322,
+          "FR_thigh_profile--FR_foot": 0.28388712986967646,
+          "RL_thigh_profile--RL_foot": 0.28592469010184757,
+          "RR_thigh_profile--RR_foot": 0.2838402915450138
+        },
+        "actual_contact_measured": false,
+        "physical_pairs_filtered": true
+      },
+      "height_mean_m": -0.5830400543447052,
+      "height_min_m": -0.5926772952079773,
+      "speed_mean_m_s": 0.09930802962720216,
+      "speed_max_m_s": 2.0529571180678574,
+      "maximum_tilt_deg": 4.185181066742253,
+      "mean_absolute_mechanical_power_w": 22.8053618405197,
+      "support_count_fraction": {
+        "0": 0.015714285714285715,
+        "1": 0.005714285714285714,
+        "2": 0.26142857142857145,
+        "3": 0.02857142857142857,
+        "4": 0.6885714285714286
+      },
+      "policy_compute_ms_p50_p99": [
+        3.801065991865471,
+        4.934631834039465
+      ],
+      "wbc": {
+        "active_policy_ticks": 0,
+        "feasible_fraction": null,
+        "converged_fraction": null
+      },
+      "collision": {
+        "minimum_crossleg_capsule_gap_m": 0.20498188370827783,
+        "crossleg_capsule_overlap_fraction": 0.0,
+        "maximum_crossleg_contact_force_n": 0.0,
+        "crossleg_contact_over_1n_fraction": 0.0,
+        "minimum_trunk_proxy_gap_m": -0.0059857830663663705,
+        "trunk_proxy_overlap_fraction": 0.004642857142857143,
+        "trunk_actual_collider_present": false,
+        "scope": "Trunk proxy overlap is geometric only; contact channels cover filtered cross-leg pairs, not all possible pairs"
+      }
+    }
+  ],
+  "actuation_checks": {
+    "drive_gain_getters": {
+      "available": true,
+      "count": 1,
+      "passed": true,
+      "max_error": 0.0
+    },
+    "drive_limit_getters": {
+      "available": true,
+      "count": 1,
+      "passed": true,
+      "max_error_nm": 7.629394538355427e-07,
+      "max_budget_excess_nm": 0.0,
+      "joint_order": [
+        "FL_HAA",
+        "FR_HAA",
+        "FL_HFE",
+        "FR_HFE",
+        "RR_HAA",
+        "RL_HAA",
+        "RR_HFE",
+        "RL_HFE",
+        "FL_KFE",
+        "FR_KFE",
+        "RR_KFE",
+        "RL_KFE"
+      ]
+    },
+    "drive_gain_arrays": {
+      "available": true,
+      "passed": true,
+      "max_error": 0.0,
+      "semantics": "IsaacLab state buffers; getter evidence listed separately"
+    },
+    "drive_budget_arrays": {
+      "available": true,
+      "passed": true,
+      "max_budget_excess_nm": 0.0,
+      "minimum_drive_limit_nm": 24.799999237060547,
+      "semantics": "IsaacLab state buffers; getter evidence listed separately"
+    },
+    "command_schema_versions": [
+      2
+    ]
+  },
+  "lockstep_only": true,
+  "task_verdict": "failed",
+  "stair_assessment": {
+    "available": true,
+    "source": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/analysis/stair_602.json",
+    "source_sha256": "b5907b893e145e36dd7cda3a2b806349ba170025f824f0d6f4abe970b95a8097",
+    "provenance_matches": true,
+    "limitations": [
+      "Posthoc analysis; thresholds reuse existing v14_path_metrics.py but were not applied by the raw ROS2 evaluator.",
+      "Ground is reconstructed from the configured single-tile mesh and initial center assumption; actual terrain origins and ground rays were not recorded.",
+      "The geometry-derived ground height is under the root XY, not beneath each foot; this is not a measurement of foot support.",
+      "Same-leg negative gaps mean conservative foot-box proxy overlap, not confirmed physical mesh contact.",
+      "No new simulation, original result change, or claim beyond the existing directed/full-flight corridor contract."
+    ],
+    "directed_stair_task_success": false,
+    "full_flight_task_success": false,
+    "final_geometry_derived_ground_rise_m": 0.0,
+    "ground_height_source": "analytically reconstructed inverted-pyramid terrain under recorded root XY; not measured ray/contact heights",
+    "center_provenance": "guide_robot_cfg init_state XY=(0,0); evaluator reset XY range=(0,0); first recorded root pose precedes first physics step"
+  },
+  "task_interpretation": "사후 계단 방향 진행 및 전체 계단 완주 기준을 모두 적용한 판정입니다. 원 평가기 플래그는 별도로 보존합니다."
+}

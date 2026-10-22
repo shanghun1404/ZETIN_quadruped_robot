@@ -1,0 +1,467 @@
+{
+  "all_manifested_92_raw_SHA_match_local": true,
+  "manifest_count": 7,
+  "files": [
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_flat_seed42.json",
+      "local": "data/main339_flat_seed42.json",
+      "sha256": "63a414245bed794980605ecbf25802741fd5a89d117b60c9c904b53fd3556e7e"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_rough_seed42.json",
+      "local": "data/main339_rough_seed42.json",
+      "sha256": "bd6c7b639ea413a3f80f3f506ea5858cb32403204e3d1eb8985802ab98d9117f"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_stairs_up_seed42.json",
+      "local": "data/main339_stairs_up_seed42.json",
+      "sha256": "434d8b39ded6cb048b761203cf28a10ff2656eca17bc7a537a3a52df23fc540d"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_flat_seed42_trace.npz",
+      "local": "data/main339_flat_seed42_trace.npz",
+      "sha256": "58d3db395058dd10a52a4fe604da65701145dfc3933aff38f1dcc781622a44f6"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_flat_seed42_trace_audit.npz",
+      "local": "data/main339_flat_seed42_trace_audit.npz",
+      "sha256": "af149a55a3d5e35986f14ac9b6c89fb831a13d55f2a12e311f282d9d9cfc73d0"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_flat_seed42_trajectory.npz",
+      "local": "data/main339_flat_seed42_trajectory.npz",
+      "sha256": "cbd8393176b3d52304c44a80f3246e2609ef436db8d5f4533572e6ae3a1fa209"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_rough_seed42_trace.npz",
+      "local": "data/main339_rough_seed42_trace.npz",
+      "sha256": "497cc26c5e73359e8309479ea0400cf0d34ffd2c86e12ccd296ee81807479c7d"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_rough_seed42_trace_audit.npz",
+      "local": "data/main339_rough_seed42_trace_audit.npz",
+      "sha256": "e4513d68317bfe7bbddef7ee7229272df6469b574346c7b0f99a4141361a745c"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_rough_seed42_trajectory.npz",
+      "local": "data/main339_rough_seed42_trajectory.npz",
+      "sha256": "a8fc7fba631906dd815d15d3b99ef984415eb751c5a7083e22e4dc024ef979c9"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_stairs_up_seed42_trace.npz",
+      "local": "data/main339_stairs_up_seed42_trace.npz",
+      "sha256": "1ac68e60a6da26cda29bd71bb2289472256c6620e6e0416a2581a51e44a7473d"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_stairs_up_seed42_trace_audit.npz",
+      "local": "data/main339_stairs_up_seed42_trace_audit.npz",
+      "sha256": "185bfc357e665e91199af031cd88b33a564d7b6173ac95e5f189bfc4efb0beaa"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_stairs_up_seed42_trajectory.npz",
+      "local": "data/main339_stairs_up_seed42_trajectory.npz",
+      "sha256": "d01f5c79099856c93b4858dcca000ffa656ba11e54346ead457c1c0f32e85172"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g095_lpf15_flat_seed42.json",
+      "local": "optimization/data/g095_lpf15_flat_seed42.json",
+      "sha256": "7dcdfcf7dfd4728226e793b193463d2d7bb9299e72187148b2f60019e6f590da"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g095_lpf15_flat_seed42_trace.npz",
+      "local": "optimization/data/g095_lpf15_flat_seed42_trace.npz",
+      "sha256": "715924cbdbe11636aeb04fa17f67559575c1090e39813b98c0f67e6b4d95ff1b"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g095_lpf15_flat_seed42_trace_audit.npz",
+      "local": "optimization/data/g095_lpf15_flat_seed42_trace_audit.npz",
+      "sha256": "b5672a757e22bf53f375a80e852992622d4bfe3b82b8cac0df6dd6499841a89a"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g095_lpf15_flat_seed42_trajectory.npz",
+      "local": "optimization/data/g095_lpf15_flat_seed42_trajectory.npz",
+      "sha256": "8966d24da27e94c5a1a4acb242f265490b608806759ef29df3d2f2b18f2bd1b2"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g095_lpf15_rough_seed42.json",
+      "local": "optimization/data/g095_lpf15_rough_seed42.json",
+      "sha256": "49f1d3fc460eba600b86ba6c97bdb76ff89e17ed36e0b9ab17133058eba445da"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g095_lpf15_rough_seed42_trace.npz",
+      "local": "optimization/data/g095_lpf15_rough_seed42_trace.npz",
+      "sha256": "8ac56b692233f4a2a6b46e0979b7b73b699f6f94747479fea389f203e7c14e13"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g095_lpf15_rough_seed42_trace_audit.npz",
+      "local": "optimization/data/g095_lpf15_rough_seed42_trace_audit.npz",
+      "sha256": "0439355b4b1cda7077b5f0699e7b1a9df2599004b834a038e0badbc6a034b558"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g095_lpf15_rough_seed42_trajectory.npz",
+      "local": "optimization/data/g095_lpf15_rough_seed42_trajectory.npz",
+      "sha256": "2a6e7cd6babbf408dd48086a714999f05109cd400e2ee3fb184420480ad2e24f"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf25_flat_seed42.json",
+      "local": "optimization/data/g090_lpf25_flat_seed42.json",
+      "sha256": "f460c559f64a684a890c3790c53f7f1bc63d235336e49cb43f1e94be13b803fa"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf25_flat_seed42_trace.npz",
+      "local": "optimization/data/g090_lpf25_flat_seed42_trace.npz",
+      "sha256": "754e006a9ac57464cb96e1d04d492d32243ac61d96599fe43b483d493f671c3a"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf25_flat_seed42_trace_audit.npz",
+      "local": "optimization/data/g090_lpf25_flat_seed42_trace_audit.npz",
+      "sha256": "1e9038fcb8e1e0169c1724c07c9b7814d659066298ab8637a6174bf3ad51a0c7"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf25_flat_seed42_trajectory.npz",
+      "local": "optimization/data/g090_lpf25_flat_seed42_trajectory.npz",
+      "sha256": "9ad6eae7389b0c7226086e587bc96bca319cdc95c4fe81b0bcd6a8b6a239746a"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf25_rough_seed42.json",
+      "local": "optimization/data/g090_lpf25_rough_seed42.json",
+      "sha256": "f555eb65d14c2a7856ff8c1f3036ea0a43732e39e6a9277adc6c2e89d5eb1c09"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf25_rough_seed42_trace.npz",
+      "local": "optimization/data/g090_lpf25_rough_seed42_trace.npz",
+      "sha256": "d857627b0a289b22d8bfc58405928cb2e411aad56fb4c32db4c4068e1f7a41d4"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf25_rough_seed42_trace_audit.npz",
+      "local": "optimization/data/g090_lpf25_rough_seed42_trace_audit.npz",
+      "sha256": "5a81993927530ac7cf279a10880ffc9d02ad0fc92cfb0476ce92e470a66915c1"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf25_rough_seed42_trajectory.npz",
+      "local": "optimization/data/g090_lpf25_rough_seed42_trajectory.npz",
+      "sha256": "8dd1ef79edead53ad6b706ddb7c325cf19016886b88775887d1dee8e17e30360"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf10_flat_seed42.json",
+      "local": "optimization/data/g090_lpf10_flat_seed42.json",
+      "sha256": "993080e8f9cae813c3cf2de7fe872f41a4b5ac05dc99b7534d4854c2811a1a6c"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf10_flat_seed42_trace.npz",
+      "local": "optimization/data/g090_lpf10_flat_seed42_trace.npz",
+      "sha256": "1f7555fffa2f5f705ea05918edc704fa4a50cd59185aef84b695f802b700873d"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf10_flat_seed42_trace_audit.npz",
+      "local": "optimization/data/g090_lpf10_flat_seed42_trace_audit.npz",
+      "sha256": "40dd636a9f69b2d7cf641ef839338d4d8b34af22b3cb4b0614f6ac744825803a"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf10_flat_seed42_trajectory.npz",
+      "local": "optimization/data/g090_lpf10_flat_seed42_trajectory.npz",
+      "sha256": "3c218ef7598eccf464a7bedd77230b0773466df3289a16d4a9b86c1a0fc35880"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf10_rough_seed42.json",
+      "local": "optimization/data/g090_lpf10_rough_seed42.json",
+      "sha256": "4da5a217cf40b2282aa68445863d59c226650f41efda60bdae65f72362c041ef"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf10_rough_seed42_trace.npz",
+      "local": "optimization/data/g090_lpf10_rough_seed42_trace.npz",
+      "sha256": "f4b1e854189ddbdc6644d72013befead0c2d8f0a18af76aefbf619c77c9a947d"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf10_rough_seed42_trace_audit.npz",
+      "local": "optimization/data/g090_lpf10_rough_seed42_trace_audit.npz",
+      "sha256": "f3d7e4b55c6e01e29cb00bf6e5924a8132acce523fb899353a04185f62091c95"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_sweep_516/g090_lpf10_rough_seed42_trajectory.npz",
+      "local": "optimization/data/g090_lpf10_rough_seed42_trajectory.npz",
+      "sha256": "8102ce98616be59d3c4e68c63ff6f128c6d7ced602587872d4c56e67c011da75"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_536/guide_v15_torque_finetune/2026-09-29_02-14-34_339_g097_lpf23_lr3p375e-5/run_completed.json",
+      "local": "optimization/finetune536/data/run_completed.json",
+      "sha256": "55a469c1e1344cc0a1bb531451a968c2dfa10b9330ac49bb547ef49d0bdb19af"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_536/guide_v15_torque_finetune/2026-09-29_02-14-34_339_g097_lpf23_lr3p375e-5/finetune_actual_contract.json",
+      "local": "optimization/finetune536/data/finetune_actual_contract.json",
+      "sha256": "d80a94140858b2f256db17f6ef61238907b01bde8f7686aad34c9b60a07d05b6"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_536/guide_v15_torque_finetune/2026-09-29_02-14-34_339_g097_lpf23_lr3p375e-5/v15_manifest.json",
+      "local": "optimization/finetune536/data/v15_manifest.json",
+      "sha256": "849da80a0a5e063ceb1e96bd7e4fac768a75713bd6bc2e18f2ec4175873d7a78"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_536/guide_v15_torque_finetune/2026-09-29_02-14-34_339_g097_lpf23_lr3p375e-5/model_11700.pt",
+      "local": "optimization/finetune536/data/model_11700.pt",
+      "sha256": "b7c6bc3d566e0a2515aec3876277901fdff889c3641b5bce8437b3b0e65f3ad1"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_536/guide_v15_torque_finetune/2026-09-29_02-14-34_339_g097_lpf23_lr3p375e-5/model_11800.pt",
+      "local": "optimization/finetune536/data/model_11800.pt",
+      "sha256": "c7da59073380439d3c55768a812a270d866247e615fa5ee355772105ef9fbb5c"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_536/guide_v15_torque_finetune/2026-09-29_02-14-34_339_g097_lpf23_lr3p375e-5/model_11900.pt",
+      "local": "optimization/finetune536/data/model_11900.pt",
+      "sha256": "85aa957cd488eafd505910a961b9c813e461b700c8b3ec8601abe819ecd40679"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_536/guide_v15_torque_finetune/2026-09-29_02-14-34_339_g097_lpf23_lr3p375e-5/model_11949.pt",
+      "local": "optimization/finetune536/data/model_11949.pt",
+      "sha256": "06ca0ec3fadd743c1033a75ccf133193e3ad0432f3112b79698467ac0efd4e7a"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/pre339_g097_lpf23_flat_seed42.json",
+      "local": "optimization/finetune536/eval_data/pre339_g097_lpf23_flat_seed42.json",
+      "sha256": "72321c7327a77cea565138289005fca9118c123679a3102cd43e6d329740a3b9"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/pre339_g097_lpf23_flat_seed42_trace.npz",
+      "local": "optimization/finetune536/eval_data/pre339_g097_lpf23_flat_seed42_trace.npz",
+      "sha256": "254b78b2b4da0d38e9288c6ace3aa4d9c3f1cf1630b9e25a61dc0bb235e61576"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/pre339_g097_lpf23_flat_seed42_trace_audit.npz",
+      "local": "optimization/finetune536/eval_data/pre339_g097_lpf23_flat_seed42_trace_audit.npz",
+      "sha256": "ba67cf71c415f146e260ad2a60f5b90743baad72ab751dbcd7ac127a77a69bee"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/pre339_g097_lpf23_flat_seed42_trajectory.npz",
+      "local": "optimization/finetune536/eval_data/pre339_g097_lpf23_flat_seed42_trajectory.npz",
+      "sha256": "c4f437098eef6f8096a97f4f25a0fc372ea49491d3dd8086ba4ad7005d722a15"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/pre339_g097_lpf23_rough_seed42.json",
+      "local": "optimization/finetune536/eval_data/pre339_g097_lpf23_rough_seed42.json",
+      "sha256": "58d2f0e196458661ec3acf78aa429dfb1dd57167622aebba56a7b2c091b1a641"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/pre339_g097_lpf23_rough_seed42_trace.npz",
+      "local": "optimization/finetune536/eval_data/pre339_g097_lpf23_rough_seed42_trace.npz",
+      "sha256": "f27a0320996102176bbffca0f01f9d22ec8b276b1df30c750753c9d0ec3829dd"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/pre339_g097_lpf23_rough_seed42_trace_audit.npz",
+      "local": "optimization/finetune536/eval_data/pre339_g097_lpf23_rough_seed42_trace_audit.npz",
+      "sha256": "fd3184b54617e8192c27dc19ae2ae7598845961823a0ccfbc1f6398ed4a4e92f"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/pre339_g097_lpf23_rough_seed42_trajectory.npz",
+      "local": "optimization/finetune536/eval_data/pre339_g097_lpf23_rough_seed42_trajectory.npz",
+      "sha256": "880f4dd08c762a126953184d7443e335b4df134ea07c0d6cce8a7aa400b0bbe5"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/adapt536_g097_lpf23_flat_seed42.json",
+      "local": "optimization/finetune536/eval_data/adapt536_g097_lpf23_flat_seed42.json",
+      "sha256": "588a73aa453f1b53550b1a300a61d4055d8a33ebe9efe06a7d054d7f195b59e3"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/adapt536_g097_lpf23_flat_seed42_trace.npz",
+      "local": "optimization/finetune536/eval_data/adapt536_g097_lpf23_flat_seed42_trace.npz",
+      "sha256": "49e89d0e5cd21d91824c816e45cc6d1c1a40e2114bdf8b5f2047ec8bfe29658a"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/adapt536_g097_lpf23_flat_seed42_trace_audit.npz",
+      "local": "optimization/finetune536/eval_data/adapt536_g097_lpf23_flat_seed42_trace_audit.npz",
+      "sha256": "aa0f9428b053da2e3319c4ade77054c7749d2a8c41f2c411f341961d0fa75bff"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/adapt536_g097_lpf23_flat_seed42_trajectory.npz",
+      "local": "optimization/finetune536/eval_data/adapt536_g097_lpf23_flat_seed42_trajectory.npz",
+      "sha256": "be5e75066b41f837e9f29d41f7601fd2ef937ca99aa744b1060c5cc82515c451"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/adapt536_g097_lpf23_rough_seed42.json",
+      "local": "optimization/finetune536/eval_data/adapt536_g097_lpf23_rough_seed42.json",
+      "sha256": "21319b2e2c52b3660060020aec35b62dbc4fd53d6f4ac45be33d243f48c9a9c1"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/adapt536_g097_lpf23_rough_seed42_trace.npz",
+      "local": "optimization/finetune536/eval_data/adapt536_g097_lpf23_rough_seed42_trace.npz",
+      "sha256": "5b8fd6a141b469836079352d137b495193e60703f976673ae26b2e5c9bbbef22"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/adapt536_g097_lpf23_rough_seed42_trace_audit.npz",
+      "local": "optimization/finetune536/eval_data/adapt536_g097_lpf23_rough_seed42_trace_audit.npz",
+      "sha256": "937f42891d79e6288898b85a8e21015ddf8e89e42f19957162ea89acd0a4aca3"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_eval_542/adapt536_g097_lpf23_rough_seed42_trajectory.npz",
+      "local": "optimization/finetune536/eval_data/adapt536_g097_lpf23_rough_seed42_trajectory.npz",
+      "sha256": "cd7fb217e91cd3a5c9fece6087625c5c7b967416fd26ef3ec2e18eee50319b2e"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g095_lpf20_flat_seed42.json",
+      "local": "optimization/refinement/data/g095_lpf20_flat_seed42.json",
+      "sha256": "0ac5b8885e2df9dc03911051d803e1b58a8e7246a4bfc4ef2a1317ad5a40ad0d"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g095_lpf20_flat_seed42_trace.npz",
+      "local": "optimization/refinement/data/g095_lpf20_flat_seed42_trace.npz",
+      "sha256": "aeffa13c68ea36d11797b4efd1b51e7e7df75ec5b6319a7f791d4a85a8ff0c0c"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g095_lpf20_flat_seed42_trace_audit.npz",
+      "local": "optimization/refinement/data/g095_lpf20_flat_seed42_trace_audit.npz",
+      "sha256": "ab39bcaebf45117da2f93a8b9e163572d20286fa5725645337342a26617a1d57"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g095_lpf20_flat_seed42_trajectory.npz",
+      "local": "optimization/refinement/data/g095_lpf20_flat_seed42_trajectory.npz",
+      "sha256": "a74db0f43429ad7c1fa79679ae157c8bb15b94006be7af3f050ee2aff115b81d"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g095_lpf20_rough_seed42.json",
+      "local": "optimization/refinement/data/g095_lpf20_rough_seed42.json",
+      "sha256": "24eda876f91d7f8697030117d424fcf999c08c226ed96b71be23bfed2e5f147f"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g095_lpf20_rough_seed42_trace.npz",
+      "local": "optimization/refinement/data/g095_lpf20_rough_seed42_trace.npz",
+      "sha256": "c6030fefb1f2c317ac33ed05fd48cf3c7039122c3d69c5ebba94b8672e2a1ef5"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g095_lpf20_rough_seed42_trace_audit.npz",
+      "local": "optimization/refinement/data/g095_lpf20_rough_seed42_trace_audit.npz",
+      "sha256": "99d542b3234243025869766608c37c62a00e88f5ab4eb035d371c53706e254cf"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g095_lpf20_rough_seed42_trajectory.npz",
+      "local": "optimization/refinement/data/g095_lpf20_rough_seed42_trajectory.npz",
+      "sha256": "99cb4f5ba3d3ff5f45f4496c6ac2602ddccbd79d08f86d1f52000c40c98698ea"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g095_lpf20_gate.json",
+      "local": "optimization/refinement/data/g095_lpf20_gate.json",
+      "sha256": "52bc07acb41faebb2f81ecc3cf15b052d310c8759f077a14e3c2aeda6ae88370"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g097_lpf20_flat_seed42.json",
+      "local": "optimization/refinement/data/g097_lpf20_flat_seed42.json",
+      "sha256": "45d4fe9e4c9299b7cc039aca757aac34391883226c245f64524cd00af20ed801"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g097_lpf20_flat_seed42_trace.npz",
+      "local": "optimization/refinement/data/g097_lpf20_flat_seed42_trace.npz",
+      "sha256": "754b4ea817b2ae3c860b24033b11202610c0128c2afb74c82ca8c42d3fc28ee6"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g097_lpf20_flat_seed42_trace_audit.npz",
+      "local": "optimization/refinement/data/g097_lpf20_flat_seed42_trace_audit.npz",
+      "sha256": "1b3d7721b42ae93cb952ba54ab0dcbce5d77fbd0fce0f7d7186a52b396644f25"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g097_lpf20_flat_seed42_trajectory.npz",
+      "local": "optimization/refinement/data/g097_lpf20_flat_seed42_trajectory.npz",
+      "sha256": "76bf9d9be980f536caa5d2070c9f0d5fa4df0fad861d0e10806332828c7b645a"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g097_lpf20_rough_seed42.json",
+      "local": "optimization/refinement/data/g097_lpf20_rough_seed42.json",
+      "sha256": "a92aa4c702834d5343b070be6f99dc64ee9a8c3f236e247ba1e41e6d9b70b0e7"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g097_lpf20_rough_seed42_trace.npz",
+      "local": "optimization/refinement/data/g097_lpf20_rough_seed42_trace.npz",
+      "sha256": "c52a87613f33e4bdf2cadaa0d83dcc677e1e4320ae46b284df18acab841f1ec6"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g097_lpf20_rough_seed42_trace_audit.npz",
+      "local": "optimization/refinement/data/g097_lpf20_rough_seed42_trace_audit.npz",
+      "sha256": "9287997ae9142ed0e93a948873f02d0662c9c4ad946251ed7da5ac13e4ca85c6"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g097_lpf20_rough_seed42_trajectory.npz",
+      "local": "optimization/refinement/data/g097_lpf20_rough_seed42_trajectory.npz",
+      "sha256": "360ab76cf9ae63299088a3c14bba3c3cc5ddfd4316475021b0e9f57b9f67e500"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_refinement_525/g097_lpf20_gate.json",
+      "local": "optimization/refinement/data/g097_lpf20_gate.json",
+      "sha256": "a0867dd6042854b6a9fb78c98461f0c59e71c9e846ccf3196d9fbd8fa26c4dff"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_finetune_556/guide_v15_torque_reward_finetune/2026-09-29_03-05-52_339_g099_lpf25_torque1p25_lr3p375e-5/run_completed.json",
+      "local": "optimization/reward_finetune/data/run_completed.json",
+      "sha256": "f0be35a5b30bd226648cafeb833a01f4605d96d213817a707cdb46ceaf338870"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_finetune_556/guide_v15_torque_reward_finetune/2026-09-29_03-05-52_339_g099_lpf25_torque1p25_lr3p375e-5/finetune_actual_contract.json",
+      "local": "optimization/reward_finetune/data/finetune_actual_contract.json",
+      "sha256": "fb9f72d20d4f7be9c54d036a3923a97354719ce215e113093f820dec814dccec"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_finetune_556/guide_v15_torque_reward_finetune/2026-09-29_03-05-52_339_g099_lpf25_torque1p25_lr3p375e-5/v15_manifest.json",
+      "local": "optimization/reward_finetune/data/v15_manifest.json",
+      "sha256": "1628f97f3c2c9b56e6bd7e3bdbe7285bb22a1c43734fcc89421321ed1b1e866c"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_finetune_556/guide_v15_torque_reward_finetune/2026-09-29_03-05-52_339_g099_lpf25_torque1p25_lr3p375e-5/model_11700.pt",
+      "local": "optimization/reward_finetune/data/model_11700.pt",
+      "sha256": "404b9cdba43a3c64302bc16aad042cf4462680a0ac5b61d9e4231326004f2673"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_finetune_556/guide_v15_torque_reward_finetune/2026-09-29_03-05-52_339_g099_lpf25_torque1p25_lr3p375e-5/model_11800.pt",
+      "local": "optimization/reward_finetune/data/model_11800.pt",
+      "sha256": "34fd300fb32ba70f598539204455a7380f73b5b3cb3309101cf88494bbf4ed4b"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_finetune_556/guide_v15_torque_reward_finetune/2026-09-29_03-05-52_339_g099_lpf25_torque1p25_lr3p375e-5/model_11900.pt",
+      "local": "optimization/reward_finetune/data/model_11900.pt",
+      "sha256": "564ed8f2583def7327480f0a1cf210ce7279ef80e42ca4bd07346e120187a03b"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_finetune_556/guide_v15_torque_reward_finetune/2026-09-29_03-05-52_339_g099_lpf25_torque1p25_lr3p375e-5/model_11949.pt",
+      "local": "optimization/reward_finetune/data/model_11949.pt",
+      "sha256": "3bd366c775e6bc347bec28fb6716ad54708ddc80633643090734261cb2f93a1e"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_eval_562/adapt_torque1p25_g099_lpf25_flat_seed42.json",
+      "local": "optimization/reward_finetune/eval_data/adapt_torque1p25_g099_lpf25_flat_seed42.json",
+      "sha256": "14d6549ec71444fec8706f5ae799ee751b6888b2b51161bbf0de04f1afdcdd74"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_eval_562/adapt_torque1p25_g099_lpf25_flat_seed42_trace.npz",
+      "local": "optimization/reward_finetune/eval_data/adapt_torque1p25_g099_lpf25_flat_seed42_trace.npz",
+      "sha256": "1ec97d6da829a7162861cf942e113b043e45532ac420d2340d5a506307b537d5"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_eval_562/adapt_torque1p25_g099_lpf25_flat_seed42_trace_audit.npz",
+      "local": "optimization/reward_finetune/eval_data/adapt_torque1p25_g099_lpf25_flat_seed42_trace_audit.npz",
+      "sha256": "93cbf80aaedc1c65a78a634f7ecdb3a333c800a742bbdbc3f4dc4c64febce17f"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_eval_562/adapt_torque1p25_g099_lpf25_flat_seed42_trajectory.npz",
+      "local": "optimization/reward_finetune/eval_data/adapt_torque1p25_g099_lpf25_flat_seed42_trajectory.npz",
+      "sha256": "1c649c0d2917bfd7293a489b392418ed7028af2eec92c61fa16344284a3bb502"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_eval_562/adapt_torque1p25_g099_lpf25_rough_seed42.json",
+      "local": "optimization/reward_finetune/eval_data/adapt_torque1p25_g099_lpf25_rough_seed42.json",
+      "sha256": "e0aa774d964f51d6fc467366d5dc49cc2dafc816edb62c297a637f6b190bfad4"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_eval_562/adapt_torque1p25_g099_lpf25_rough_seed42_trace.npz",
+      "local": "optimization/reward_finetune/eval_data/adapt_torque1p25_g099_lpf25_rough_seed42_trace.npz",
+      "sha256": "3951bab555e73fc744a6322dde6f1729d9725058960eb3e715dcfebbd6f7f86c"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_eval_562/adapt_torque1p25_g099_lpf25_rough_seed42_trace_audit.npz",
+      "local": "optimization/reward_finetune/eval_data/adapt_torque1p25_g099_lpf25_rough_seed42_trace_audit.npz",
+      "sha256": "a0ea41dcccd95e5d255e8fa3a7dc77200a2efdde8435bd46d133ca11bc9d41b5"
+    },
+    {
+      "hpc_source": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_reward_eval_562/adapt_torque1p25_g099_lpf25_rough_seed42_trajectory.npz",
+      "local": "optimization/reward_finetune/eval_data/adapt_torque1p25_g099_lpf25_rough_seed42_trajectory.npz",
+      "sha256": "9f958babb38dfd94a66bc6efc8a63e758232de98c5a198ee63ac44e1b083ef21"
+    }
+  ],
+  "additional_reused508_19_hashes": "Verified onHPC in eval562 source_sha256.txt; already stored baseline data/source"
+}

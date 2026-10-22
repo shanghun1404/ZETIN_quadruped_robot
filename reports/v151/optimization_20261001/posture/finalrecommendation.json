@@ -1,0 +1,192 @@
+{
+  "candidate": {
+    "stand_forward_shift_m": 0.09,
+    "crouch_forward_shift_m": 0.15,
+    "crouch_depth_m": 0.1,
+    "forward_shift_formula_m": ".15-.06*height_fraction",
+    "wbc_force_allocation": "unchanged production standing WBC"
+  },
+  "physics_simulation_performed": false,
+  "physical_success_claimed": false,
+  "joint_hardware_limits_verified": false,
+  "support_cases": [
+    {
+      "name": "nominal",
+      "endpoints": [
+        {
+          "context": "nominal",
+          "height_m": 0.464,
+          "baseline_shift_m": 0.03,
+          "candidate_shift_m": 0.09,
+          "baseline_wbc_max_rated_fraction": 0.9436114665022113,
+          "candidate_wbc_max_rated_fraction": 0.7529616031874604,
+          "max_rated_fraction_reduction_percent": 20.204275815071824,
+          "candidate_wbc_torque_nm": [
+            -2.9426511862938516,
+            6.294376573625141,
+            -13.553308857374287,
+            2.929613310300047,
+            6.439311381036855,
+            -13.52541040408351,
+            -1.6202436970114213,
+            3.337236819498671,
+            -10.48504901241815,
+            1.6305785094050695,
+            3.3608745682766865,
+            -10.628908105816842
+          ],
+          "candidate_lp_max_rated_fraction": 0.6691678372299384,
+          "candidate_min_normal_force_N": 95.8065437871322,
+          "candidate_minimum_gaps_m": {
+            "interleg": 0.299702091756567,
+            "trunk_proxy": -0.0068000050664202664,
+            "same_leg_thigh_foot": 0.284711649267491
+          }
+        },
+        {
+          "context": "nominal",
+          "height_m": 0.364,
+          "baseline_shift_m": 0.0,
+          "candidate_shift_m": 0.15,
+          "baseline_wbc_max_rated_fraction": 1.6035815031378164,
+          "candidate_wbc_max_rated_fraction": 0.9723876681342271,
+          "max_rated_fraction_reduction_percent": 39.36150633868609,
+          "candidate_wbc_torque_nm": [
+            -3.905092126671106,
+            14.519834580766405,
+            -17.502978026416088,
+            3.8899154720699416,
+            14.667680993618855,
+            -17.36289535940282,
+            -0.9978084519553798,
+            5.463340730796111,
+            -9.74865828464246,
+            1.0106722812981874,
+            5.502237456856257,
+            -9.829139225933375
+          ],
+          "candidate_lp_max_rated_fraction": 0.903300681995208,
+          "candidate_min_normal_force_N": 79.2244477105766,
+          "candidate_minimum_gaps_m": {
+            "interleg": 0.2997020307832778,
+            "trunk_proxy": -0.0068000050664546,
+            "same_leg_thigh_foot": 0.2717237738829952
+          }
+        }
+      ],
+      "path_samples": 21,
+      "ik_and_wbc_all_feasible": true,
+      "path_min_wbc_normal_force_N": 79.2244477105766,
+      "path_min_wbc_friction_pyramid_margin_N": 29.93188042721949,
+      "path_minimum_gaps_m": {
+        "interleg": 0.2997020307832778,
+        "trunk_proxy": -0.006800005066793274,
+        "same_leg_thigh_foot": 0.2717237738829952
+      },
+      "path_wbc_rated_fraction_range": [
+        0.7529616031874732,
+        0.9723876681342271
+      ],
+      "path_static_lp_rated_fraction_range": [
+        0.6691678372299379,
+        0.903300681995208
+      ]
+    },
+    {
+      "name": "601_final",
+      "endpoints": [
+        {
+          "context": "601_final",
+          "height_m": 0.464,
+          "baseline_shift_m": 0.03,
+          "candidate_shift_m": 0.09,
+          "baseline_wbc_max_rated_fraction": 0.9609262698331593,
+          "candidate_wbc_max_rated_fraction": 0.8921609343248053,
+          "max_rated_fraction_reduction_percent": 7.15615106664671,
+          "candidate_wbc_torque_nm": [
+            -4.53065141840213,
+            2.0569534573584956,
+            -16.058896817846495,
+            2.661859590965645,
+            7.828901773899082,
+            -12.097287401464174,
+            0.5007133024708801,
+            4.627606176824131,
+            -9.355442286698832,
+            0.9238323294791413,
+            4.048749188082459,
+            -10.031176605230712
+          ],
+          "candidate_lp_max_rated_fraction": 0.6514772192309867,
+          "candidate_min_normal_force_N": 95.81602642034275,
+          "candidate_minimum_gaps_m": {
+            "interleg": 0.2499880680935103,
+            "trunk_proxy": -0.007210397895933184,
+            "same_leg_thigh_foot": 0.2854705446467478
+          }
+        },
+        {
+          "context": "601_final",
+          "height_m": 0.364,
+          "baseline_shift_m": 0.0,
+          "candidate_shift_m": 0.15,
+          "baseline_wbc_max_rated_fraction": 1.5469365460887468,
+          "candidate_wbc_max_rated_fraction": 1.1999379094378186,
+          "max_rated_fraction_reduction_percent": 22.431342612486247,
+          "candidate_wbc_torque_nm": [
+            -5.833783815088395,
+            8.70341775349237,
+            -21.598882369880737,
+            3.5668957002569357,
+            16.32450804675809,
+            -15.59411879078376,
+            0.9323741458052646,
+            6.320249173979023,
+            -8.556126404059718,
+            0.38494400265367856,
+            6.562348714929977,
+            -9.820774454031556
+          ],
+          "candidate_lp_max_rated_fraction": 0.9014922533415771,
+          "candidate_min_normal_force_N": 78.20290758964694,
+          "candidate_minimum_gaps_m": {
+            "interleg": 0.25089657257563625,
+            "trunk_proxy": -0.007302886681643439,
+            "same_leg_thigh_foot": 0.2725773883439161
+          }
+        }
+      ],
+      "path_samples": 21,
+      "ik_and_wbc_all_feasible": true,
+      "path_min_wbc_normal_force_N": 78.20290758964694,
+      "path_min_wbc_friction_pyramid_margin_N": 30.257043226782613,
+      "path_minimum_gaps_m": {
+        "interleg": 0.24998806809351073,
+        "trunk_proxy": -0.007302886681643439,
+        "same_leg_thigh_foot": 0.2725773883439161
+      },
+      "path_wbc_rated_fraction_range": [
+        0.8921609343248176,
+        1.1999379094378186
+      ],
+      "path_static_lp_rated_fraction_range": [
+        0.6514772192309863,
+        0.9014922533415771
+      ]
+    }
+  ],
+  "risks": [
+    "Current WBC final601 crouch still reaches 21.60Nm FL_KFE (1.200 times 18Nm rated).",
+    "Static LP lower bound 0.9015 does not establish production WBC allocation or physical feasibility.",
+    "Every scanned pose has existing trunk-proxy overlap; strict nonnegative-all-proxy requirement has no candidate.",
+    "Large initial 15cm forward shift requires a validated transition; static samples cannot establish dynamic safety.",
+    "Stand 9cm is at the requested search boundary; policy handover may change and requires full 28s physical validation.",
+    "Motor hardware joint limits and thermal endurance are not validated.",
+    "Static601 baseline is a rest-state model counterfactual; it is not the recorded physical torque."
+  ],
+  "evidence": [
+    "search.json",
+    "schedules.json",
+    "summary.json"
+  ]
+}

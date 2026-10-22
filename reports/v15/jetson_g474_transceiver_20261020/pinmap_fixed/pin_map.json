@@ -1,0 +1,30 @@
+{
+  "source": "User wiring diagram /tmp/codex-clipboard-Vv59Yl.png; ST UM2505 Table16 and STM32G474 datasheet AF table",
+  "capture_encoding": "low16 GPIOA IDR, high16 GPIOB IDR",
+  "can1": {
+    "tx": "PA12",
+    "tx_header": "CN10-12",
+    "rx": "PA11",
+    "rx_header": "CN10-14",
+    "af": 9
+  },
+  "can2": {
+    "tx": "PB13",
+    "tx_header": "CN10-30",
+    "rx": "PB12",
+    "rx_header": "CN10-16",
+    "af": 9
+  },
+  "can3": {
+    "tx": "PA15",
+    "tx_header": "CN7-17",
+    "rx": "PA8",
+    "rx_header": "CN10-23",
+    "af": 11
+  },
+  "power": {
+    "vio": "CN7-16 3V3",
+    "vcc_in_user_diagram": "CN7-6 E5V external supply input",
+    "board_5v": "CN7-18"
+  }
+}

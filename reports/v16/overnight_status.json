@@ -1,0 +1,626 @@
+{
+  "updated_utc": "2026-09-29T01:23:47.444918+00:00",
+  "updated_kst": "2026-09-29T10:23:47.445114+09:00",
+  "jobs": {
+    "563": {
+      "state": "COMPLETED",
+      "elapsed": "00:14:12",
+      "exit_code": "0:0",
+      "source_and_manifest_verified": true,
+      "generations_completed": 24,
+      "best_parameters_qualified": null,
+      "latest_training": {
+        "generation": 23,
+        "score_max": 95.25577809413275,
+        "score_mean": 93.12353002572976,
+        "survived": 128,
+        "progress_best_m": 0.7190289497375488,
+        "power_best_w_per_joint": 0.7153373956680298,
+        "seconds_elapsed": 840.0679796129989,
+        "completed_step_count_best": 9,
+        "liftoff_count_best": 9,
+        "winner_ended_alive": true,
+        "qp_infeasible_tick_fraction_best": 0.0062500000931322575,
+        "qp_max_constraint_violation_best": 0.002827659947797656,
+        "qp_max_torque_violation_nm_best": 0.0
+      }
+    },
+    "568": {
+      "state": "COMPLETED",
+      "elapsed": "00:07:32",
+      "exit_code": "0:0",
+      "source_and_manifest_verified": true,
+      "generations_completed": 12,
+      "best_parameters_qualified": true,
+      "latest_training": {
+        "generation": 11,
+        "score_max": 99.50549214929342,
+        "score_mean": 98.98827738925273,
+        "survived": 512,
+        "progress_best_m": 0.7508201599121094,
+        "power_best_w_per_joint": 0.71201953291893,
+        "seconds_elapsed": 438.0880169690063,
+        "completed_step_count_best": 9,
+        "liftoff_count_best": 10,
+        "winner_ended_alive": true,
+        "unique_candidates": 128,
+        "candidate_repeats": 4,
+        "qualified_candidates": 128,
+        "elite_count": 26,
+        "updated_from_qualified": true,
+        "best_parameters_qualified": true,
+        "qp_infeasible_tick_fraction_best": 0.009999999776482582,
+        "qp_max_constraint_violation_best": 0.003996479324996471,
+        "qp_max_torque_violation_nm_best": 0.0
+      }
+    },
+    "570": {
+      "state": "COMPLETED",
+      "elapsed": "00:02:05",
+      "exit_code": "0:0"
+    },
+    "571": {
+      "state": "COMPLETED",
+      "elapsed": "02:03:27",
+      "exit_code": "0:0",
+      "source_and_manifest_verified": true,
+      "generations_completed": 212,
+      "best_parameters_qualified": true,
+      "latest_training": {
+        "generation": 211,
+        "score_max": 99.51602638065815,
+        "score_mean": 91.64196563651691,
+        "survived": 512,
+        "progress_best_m": 0.7506556510925293,
+        "power_best_w_per_joint": 0.6937496364116669,
+        "seconds_elapsed": 7393.474308806006,
+        "completed_step_count_best": 9,
+        "liftoff_count_best": 10,
+        "winner_ended_alive": true,
+        "unique_candidates": 128,
+        "candidate_repeats": 4,
+        "qualified_candidates": 113,
+        "elite_count": 26,
+        "updated_from_qualified": true,
+        "best_parameters_qualified": true,
+        "qp_infeasible_tick_fraction_best": 0.012500000186264515,
+        "qp_max_constraint_violation_best": 0.004270308651030064,
+        "qp_max_torque_violation_nm_best": 0.0
+      }
+    },
+    "582": {
+      "state": "COMPLETED",
+      "elapsed": "00:02:23",
+      "exit_code": "0:0",
+      "evaluation_rows": [
+        {
+          "run": "model_seed1001",
+          "seed": 1001,
+          "controller": "model",
+          "seconds": 12.0,
+          "survived": 32,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": 0.05469525989610702,
+          "mean_progress_m": 0.59899259544909,
+          "mean_power_w_per_joint": 0.7360834889113903,
+          "mean_guard_fraction": 0.0,
+          "source_and_conditions_verified": true,
+          "mean_completed_steps": 7.0,
+          "mean_qp_infeasible_tick_fraction": 0.011510416690725833,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": true,
+            "mean_speed_error_at_most_0_05_m_s": true,
+            "mean_progress_75_to_125_percent_of_command": true,
+            "finite_metrics": true
+          },
+          "gates_passed": true
+        },
+        {
+          "run": "model_seed1002",
+          "seed": 1002,
+          "controller": "model",
+          "seconds": 12.0,
+          "survived": 32,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": 0.05415470618754625,
+          "mean_progress_m": 0.5931402780115604,
+          "mean_power_w_per_joint": 0.7325363270938396,
+          "mean_guard_fraction": 0.0,
+          "source_and_conditions_verified": true,
+          "mean_completed_steps": 7.0,
+          "mean_qp_infeasible_tick_fraction": 0.01156250003259629,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": true,
+            "mean_speed_error_at_most_0_05_m_s": true,
+            "mean_progress_75_to_125_percent_of_command": true,
+            "finite_metrics": true
+          },
+          "gates_passed": true
+        },
+        {
+          "run": "model_seed1003",
+          "seed": 1003,
+          "controller": "model",
+          "seconds": 12.0,
+          "survived": 32,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": 0.05435157334432006,
+          "mean_progress_m": 0.5952571500092745,
+          "mean_power_w_per_joint": 0.7338804043829441,
+          "mean_guard_fraction": 0.0,
+          "source_and_conditions_verified": true,
+          "mean_completed_steps": 7.0,
+          "mean_qp_infeasible_tick_fraction": 0.011093750013969839,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": true,
+            "mean_speed_error_at_most_0_05_m_s": true,
+            "mean_progress_75_to_125_percent_of_command": true,
+            "finite_metrics": true
+          },
+          "gates_passed": true
+        },
+        {
+          "run": "pd_default_seed1001",
+          "seed": 1001,
+          "controller": "pd",
+          "seconds": 12.0,
+          "survived": 0,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": -0.012351317243883386,
+          "mean_progress_m": -0.20494392327964306,
+          "mean_power_w_per_joint": 0.42631254997104406,
+          "mean_guard_fraction": 4.4981060909776716e-05,
+          "source_and_conditions_verified": null,
+          "mean_completed_steps": 0.0,
+          "mean_qp_infeasible_tick_fraction": 0.0,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": false,
+            "mean_speed_error_at_most_0_05_m_s": false,
+            "mean_progress_75_to_125_percent_of_command": false,
+            "finite_metrics": true
+          },
+          "gates_passed": false
+        }
+      ],
+      "source_and_conditions_verified": true,
+      "walking_criteria_passed": true
+    },
+    "573": {
+      "state": "COMPLETED",
+      "elapsed": "00:05:16",
+      "exit_code": "0:0",
+      "evaluation_rows": [
+        {
+          "run": "model_seed1001",
+          "seed": 1001,
+          "controller": "model",
+          "seconds": 32.0,
+          "survived": 32,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": 0.04981091804802418,
+          "mean_progress_m": 1.5433404855430126,
+          "mean_power_w_per_joint": 0.6676772125065327,
+          "mean_guard_fraction": 0.0,
+          "source_and_conditions_verified": true,
+          "mean_completed_steps": 20.0,
+          "mean_qp_infeasible_tick_fraction": 0.008691406255820766,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": true,
+            "mean_speed_error_at_most_0_05_m_s": true,
+            "mean_progress_75_to_125_percent_of_command": true,
+            "finite_metrics": true
+          },
+          "gates_passed": true
+        },
+        {
+          "run": "model_seed1002",
+          "seed": 1002,
+          "controller": "model",
+          "seconds": 32.0,
+          "survived": 32,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": 0.049812306300736964,
+          "mean_progress_m": 1.5434819012880325,
+          "mean_power_w_per_joint": 0.6671639457345009,
+          "mean_guard_fraction": 0.0,
+          "source_and_conditions_verified": true,
+          "mean_completed_steps": 20.0,
+          "mean_qp_infeasible_tick_fraction": 0.00871093750174623,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": true,
+            "mean_speed_error_at_most_0_05_m_s": true,
+            "mean_progress_75_to_125_percent_of_command": true,
+            "finite_metrics": true
+          },
+          "gates_passed": true
+        },
+        {
+          "run": "model_seed1003",
+          "seed": 1003,
+          "controller": "model",
+          "seconds": 32.0,
+          "survived": 32,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": 0.04981679446063936,
+          "mean_progress_m": 1.5435795783996582,
+          "mean_power_w_per_joint": 0.6673401575535536,
+          "mean_guard_fraction": 0.0,
+          "source_and_conditions_verified": true,
+          "mean_completed_steps": 20.03125,
+          "mean_qp_infeasible_tick_fraction": 0.008535156201105565,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": true,
+            "mean_speed_error_at_most_0_05_m_s": true,
+            "mean_progress_75_to_125_percent_of_command": true,
+            "finite_metrics": true
+          },
+          "gates_passed": true
+        },
+        {
+          "run": "pd_default_seed1001",
+          "seed": 1001,
+          "controller": "pd",
+          "seconds": 32.0,
+          "survived": 0,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": -0.004382725644973107,
+          "mean_progress_m": -0.20494392327964306,
+          "mean_power_w_per_joint": 0.15127219958230853,
+          "mean_guard_fraction": 1.5961022484134446e-05,
+          "source_and_conditions_verified": null,
+          "mean_completed_steps": 0.0,
+          "mean_qp_infeasible_tick_fraction": 0.0,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": false,
+            "mean_speed_error_at_most_0_05_m_s": false,
+            "mean_progress_75_to_125_percent_of_command": false,
+            "finite_metrics": true
+          },
+          "gates_passed": false
+        }
+      ],
+      "source_and_conditions_verified": true,
+      "walking_criteria_passed": true
+    },
+    "583": {
+      "state": "COMPLETED",
+      "elapsed": "00:05:58",
+      "exit_code": "0:0",
+      "videos": [
+        "video_jobs/583/video_seed1001/env_00.mp4"
+      ],
+      "source_and_parameters_verified": true,
+      "video_metadata": [
+        {
+          "programs": [],
+          "streams": [
+            {
+              "width": 960,
+              "height": 640,
+              "nb_frames": "600"
+            }
+          ],
+          "format": {
+            "duration": "24.000000"
+          }
+        }
+      ]
+    },
+    "575": {
+      "state": "COMPLETED",
+      "elapsed": "00:01:18",
+      "exit_code": "0:0"
+    },
+    "576": {
+      "state": "COMPLETED",
+      "elapsed": "00:09:46",
+      "exit_code": "0:0",
+      "source_and_manifest_verified": true,
+      "generations_completed": 8,
+      "best_parameters_qualified": true,
+      "latest_training": {
+        "generation": 7,
+        "score_max": 99.44984539449214,
+        "score_mean": -52.13059783007085,
+        "survived": 510,
+        "progress_best_m": 0.7518711090087891,
+        "power_best_w_per_joint": 0.7333395183086395,
+        "seconds_elapsed": 571.0873822669964,
+        "completed_step_count_best": 9,
+        "liftoff_count_best": 10,
+        "winner_ended_alive": true,
+        "unique_candidates": 128,
+        "candidate_repeats": 4,
+        "qualified_candidates": 124,
+        "elite_count": 26,
+        "updated_from_qualified": true,
+        "best_parameters_qualified": true,
+        "qp_infeasible_tick_fraction_best": 0.0,
+        "qp_max_constraint_violation_best": 2.6645870093489066e-05,
+        "qp_max_torque_violation_nm_best": 0.0
+      }
+    },
+    "577": {
+      "state": "COMPLETED",
+      "elapsed": "02:19:26",
+      "exit_code": "0:0",
+      "source_and_manifest_verified": true,
+      "generations_completed": 128,
+      "best_parameters_qualified": true,
+      "latest_training": {
+        "generation": 127,
+        "score_max": 99.49278432279826,
+        "score_mean": 87.90955266719742,
+        "survived": 512,
+        "progress_best_m": 0.7526111602783203,
+        "power_best_w_per_joint": 0.7380222827196121,
+        "seconds_elapsed": 8351.438648309995,
+        "completed_step_count_best": 9,
+        "liftoff_count_best": 10,
+        "winner_ended_alive": true,
+        "unique_candidates": 128,
+        "candidate_repeats": 4,
+        "qualified_candidates": 109,
+        "elite_count": 26,
+        "updated_from_qualified": true,
+        "best_parameters_qualified": true,
+        "qp_infeasible_tick_fraction_best": 0.0,
+        "qp_max_constraint_violation_best": 3.11125440930482e-05,
+        "qp_max_torque_violation_nm_best": 0.0
+      }
+    },
+    "578": {
+      "state": "COMPLETED",
+      "elapsed": "00:03:28",
+      "exit_code": "0:0",
+      "evaluation_rows": [
+        {
+          "run": "model_seed1001",
+          "seed": 1001,
+          "controller": "model",
+          "seconds": 12.0,
+          "survived": 32,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": 0.053744741599075496,
+          "mean_progress_m": 0.5881223157048225,
+          "mean_power_w_per_joint": 0.7660181038081646,
+          "mean_guard_fraction": 0.0,
+          "source_and_conditions_verified": true,
+          "mean_completed_steps": 7.0,
+          "mean_qp_infeasible_tick_fraction": 0.0,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": true,
+            "mean_speed_error_at_most_0_05_m_s": true,
+            "mean_progress_75_to_125_percent_of_command": true,
+            "finite_metrics": true
+          },
+          "gates_passed": true
+        },
+        {
+          "run": "model_seed1002",
+          "seed": 1002,
+          "controller": "model",
+          "seconds": 12.0,
+          "survived": 32,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": 0.05409040942322463,
+          "mean_progress_m": 0.5920392144471407,
+          "mean_power_w_per_joint": 0.770424123853445,
+          "mean_guard_fraction": 0.0,
+          "source_and_conditions_verified": true,
+          "mean_completed_steps": 7.0,
+          "mean_qp_infeasible_tick_fraction": 0.0,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": true,
+            "mean_speed_error_at_most_0_05_m_s": true,
+            "mean_progress_75_to_125_percent_of_command": true,
+            "finite_metrics": true
+          },
+          "gates_passed": true
+        },
+        {
+          "run": "model_seed1003",
+          "seed": 1003,
+          "controller": "model",
+          "seconds": 12.0,
+          "survived": 32,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": 0.05359478760510683,
+          "mean_progress_m": 0.5865454692393541,
+          "mean_power_w_per_joint": 0.7644535917788744,
+          "mean_guard_fraction": 0.0,
+          "source_and_conditions_verified": true,
+          "mean_completed_steps": 7.0,
+          "mean_qp_infeasible_tick_fraction": 0.0,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": true,
+            "mean_speed_error_at_most_0_05_m_s": true,
+            "mean_progress_75_to_125_percent_of_command": true,
+            "finite_metrics": true
+          },
+          "gates_passed": true
+        },
+        {
+          "run": "pd_default_seed1001",
+          "seed": 1001,
+          "controller": "pd",
+          "seconds": 12.0,
+          "survived": 0,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": -0.012351317243883386,
+          "mean_progress_m": -0.20494392327964306,
+          "mean_power_w_per_joint": 0.42631254997104406,
+          "mean_guard_fraction": 4.4981060909776716e-05,
+          "source_and_conditions_verified": null,
+          "mean_completed_steps": 0.0,
+          "mean_qp_infeasible_tick_fraction": 0.0,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": false,
+            "mean_speed_error_at_most_0_05_m_s": false,
+            "mean_progress_75_to_125_percent_of_command": false,
+            "finite_metrics": true
+          },
+          "gates_passed": false
+        }
+      ],
+      "source_and_conditions_verified": true,
+      "walking_criteria_passed": true
+    },
+    "579": {
+      "state": "COMPLETED",
+      "elapsed": "00:08:33",
+      "exit_code": "0:0",
+      "evaluation_rows": [
+        {
+          "run": "model_seed1001",
+          "seed": 1001,
+          "controller": "model",
+          "seconds": 32.0,
+          "survived": 32,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": 0.050029016681946814,
+          "mean_progress_m": 1.5496332719922066,
+          "mean_power_w_per_joint": 0.734433326870203,
+          "mean_guard_fraction": 0.0,
+          "source_and_conditions_verified": true,
+          "mean_completed_steps": 20.09375,
+          "mean_qp_infeasible_tick_fraction": 0.0,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": true,
+            "mean_speed_error_at_most_0_05_m_s": true,
+            "mean_progress_75_to_125_percent_of_command": true,
+            "finite_metrics": true
+          },
+          "gates_passed": true
+        },
+        {
+          "run": "model_seed1002",
+          "seed": 1002,
+          "controller": "model",
+          "seconds": 32.0,
+          "survived": 32,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": 0.050043317140080035,
+          "mean_progress_m": 1.5501997917890549,
+          "mean_power_w_per_joint": 0.7346061747521162,
+          "mean_guard_fraction": 0.0,
+          "source_and_conditions_verified": true,
+          "mean_completed_steps": 20.03125,
+          "mean_qp_infeasible_tick_fraction": 0.0,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": true,
+            "mean_speed_error_at_most_0_05_m_s": true,
+            "mean_progress_75_to_125_percent_of_command": true,
+            "finite_metrics": true
+          },
+          "gates_passed": true
+        },
+        {
+          "run": "model_seed1003",
+          "seed": 1003,
+          "controller": "model",
+          "seconds": 32.0,
+          "survived": 32,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": 0.05001970077864826,
+          "mean_progress_m": 1.5494095273315907,
+          "mean_power_w_per_joint": 0.7340179160237312,
+          "mean_guard_fraction": 0.0,
+          "source_and_conditions_verified": true,
+          "mean_completed_steps": 20.03125,
+          "mean_qp_infeasible_tick_fraction": 0.0,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": true,
+            "mean_speed_error_at_most_0_05_m_s": true,
+            "mean_progress_75_to_125_percent_of_command": true,
+            "finite_metrics": true
+          },
+          "gates_passed": true
+        },
+        {
+          "run": "pd_default_seed1001",
+          "seed": 1001,
+          "controller": "pd",
+          "seconds": 32.0,
+          "survived": 0,
+          "num_envs": 32,
+          "speed_command_m_s": 0.05,
+          "mean_speed_m_s": -0.004382725644973107,
+          "mean_progress_m": -0.20494392327964306,
+          "mean_power_w_per_joint": 0.15127219958230853,
+          "mean_guard_fraction": 1.5961022484134446e-05,
+          "source_and_conditions_verified": null,
+          "mean_completed_steps": 0.0,
+          "mean_qp_infeasible_tick_fraction": 0.0,
+          "max_qp_torque_violation_nm": 0.0,
+          "gates": {
+            "survival_at_least_95_percent": false,
+            "mean_speed_error_at_most_0_05_m_s": false,
+            "mean_progress_75_to_125_percent_of_command": false,
+            "finite_metrics": true
+          },
+          "gates_passed": false
+        }
+      ],
+      "source_and_conditions_verified": true,
+      "walking_criteria_passed": true
+    },
+    "584": {
+      "state": "COMPLETED",
+      "elapsed": "00:06:46",
+      "exit_code": "0:0",
+      "videos": [
+        "video_jobs/584/video_seed1001/env_00.mp4"
+      ],
+      "source_and_parameters_verified": true,
+      "video_metadata": [
+        {
+          "programs": [],
+          "streams": [
+            {
+              "width": 960,
+              "height": 640,
+              "nb_frames": "600"
+            }
+          ],
+          "format": {
+            "duration": "24.000000"
+          }
+        }
+      ]
+    }
+  },
+  "walking_criteria_passed": true,
+  "wbc_walking_criteria_passed": true,
+  "errors": []
+}

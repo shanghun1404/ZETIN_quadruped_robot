@@ -1,0 +1,14 @@
+{
+  "checkpoint_sha256": "06ca0ec3fadd743c1033a75ccf133193e3ad0432f3112b79698467ac0efd4e7a",
+  "iteration": 11949,
+  "policy_all_finite": true,
+  "optimizer_tensors_all_finite": true,
+  "optimizer_lr_groups": [
+    3.375e-05
+  ],
+  "std_min_max": [
+    0.11347510665655136,
+    0.14186418056488037
+  ],
+  "training_or_simulation_executed_by_inspection": false
+}

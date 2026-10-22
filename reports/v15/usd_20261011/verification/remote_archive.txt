@@ -1,0 +1,9 @@
+2278|CANCELLED by 2002|0:0|00:02:40|billing=4,cpu=4,gres/shard=1,mem=16G,node=1
+2278.batch|CANCELLED|0:15|00:02:40|cpu=4,gres/shard=1,mem=16G,node=1
+2279|FAILED|1:0|00:04:40|billing=4,cpu=4,gres/shard=1,mem=16G,node=1
+2279.batch|FAILED|1:0|00:04:40|cpu=4,gres/shard=1,mem=16G,node=1
+2280|COMPLETED|0:0|00:05:58|billing=4,cpu=4,gres/shard=1,mem=16G,node=1
+2280.batch|COMPLETED|0:0|00:05:58|cpu=4,gres/shard=1,mem=16G,node=1
+Source/checkpoint hashes verified
+fixed physics index spelling True
+mapped commands are native lists True

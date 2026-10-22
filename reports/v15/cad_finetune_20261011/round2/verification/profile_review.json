@@ -1,0 +1,17 @@
+{
+  "reviewer": "cad_finetune_review",
+  "critical_issues": 0,
+  "terrain_columns": {
+    "flat": 52,
+    "rough": 12,
+    "stairs_up": 32,
+    "stairs_down": 32
+  },
+  "verified": [
+    "128column generator/mask consistency",
+    "Rough coordinate transforms and exact box heights",
+    "RewardManager progress/std API",
+    "Launcher resume/profile/exploration args",
+    "Job-local source snapshot includes dependencies"
+  ]
+}

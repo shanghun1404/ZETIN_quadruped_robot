@@ -1,0 +1,2 @@
+{"pid": 87631, "tid": 87631, "generation": 1, "start_ns": 17786297885421, "end_ns": 17786301443126, "wall_ms": 3.557705, "thread_cpu_ms": 3.526656, "collected": 20}
+{"pid": 87631, "tid": 87631, "generation": 2, "start_ns": 17787634370487, "end_ns": 17787778736259, "wall_ms": 144.365772, "thread_cpu_ms": 143.863072, "collected": 27}

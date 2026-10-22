@@ -1,0 +1,1309 @@
+{
+  "schema_version": 1,
+  "slurm_job_id": "526",
+  "probe_dir": "/home/shanghun1404/v16_12dof_model/physics_jobs/521",
+  "probe_npz_sha256": "592628934257fac8856485172102c669eaa7fd5aa0bfbdcc68246286aea438dd",
+  "probe_manifest_sha256": "480a80d60bffb110ef0afb544351690fbb2ca187936b05db3bcd5ccac8e76e94",
+  "comparison_code_sha256": "d580efdffb3b5ef1560f8a454e5f74c7bee0f6c4af32dd0e3b608bd87722c223",
+  "source_sha256": "8ef5712d8604110d1efc7ed92845bd83107e0ef42e1fa0f379448387c4793c6f",
+  "source_code_sha256": "baaddfb7067578fab156b865d19d27ae7232a357703c69e9a12c5ac7d9a0fec9",
+  "usd_path": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+  "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+  "sdk_contract_reference": "https://docs.omniverse.nvidia.com/kit/docs/omni_physics/107.3/extensions/runtime/source/omni.physics.tensors/docs/api/python.html",
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "canonical_to_probe_joint_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "source_total_mass_kg": 45.451322469636764,
+  "physx_total_mass_kg": 45.45132318139076,
+  "total_mass_difference_kg": 7.117539979617504e-07,
+  "source_body_count": 54,
+  "physx_body_count": 54,
+  "unmatched_physx_bodies": [],
+  "source_gravity_world": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "comparison_gravity_world": [
+    0.0,
+    0.0,
+    -9.81
+  ],
+  "coordinate_conditions": {
+    "root_input": "PhysX root COM world linear/angular",
+    "source_input": "Pin actor/body-local linear/angular",
+    "actor_twist_origin": "exported actor world twist",
+    "root_actor_gauge": "Source base actor pose is assigned the measured PhysX root actor pose; common base actor coordinates are the declared correspondence, not fitted from dynamics",
+    "bias_transport": "Tdot v linear = R*(omega cross v_actor + omega cross (omega cross r_actor_COM)); h_Pin=T^T*(h_PX+M_PX*Tdot v)",
+    "inertia_reference": "link COM",
+    "inertia_axes": "actor",
+    "inertia_packing": "column-major9",
+    "jacobian_link_origin": "com",
+    "jacobian_rows": "world linear, angular",
+    "jacobian_point": "Same measured PhysX world COM/actor point represented in the source actor frame; same-local-coordinate comparison retained only as raw diagnostic",
+    "source_armature_removed_for_rigid_mode": true,
+    "source_damping_removed_from_bias": true,
+    "source_contact_and_friction_included": false,
+    "physx_armature_in_mass": "unknown",
+    "physx_bias_excludes": [
+      "contact",
+      "joint friction",
+      "damping"
+    ]
+  },
+  "measured_physx_joint_armature": [
+    0.019999999552965164,
+    0.019999999552965164,
+    0.019999999552965164,
+    0.019999999552965164,
+    0.019999999552965164,
+    0.019999999552965164,
+    0.019999999552965164,
+    0.019999999552965164,
+    0.019999999552965164,
+    0.019999999552965164,
+    0.019999999552965164,
+    0.019999999552965164
+  ],
+  "measured_physx_joint_damping": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "measured_physx_joint_friction": [
+    0.30000001192092896,
+    0.30000001192092896,
+    0.30000001192092896,
+    0.30000001192092896,
+    0.30000001192092896,
+    0.30000001192092896,
+    0.30000001192092896,
+    0.30000001192092896,
+    0.30000001192092896,
+    0.30000001192092896,
+    0.30000001192092896,
+    0.30000001192092896
+  ],
+  "source_joint_armature": [
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.02,
+    0.02
+  ],
+  "source_joint_damping": [
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5,
+    1.5
+  ],
+  "root_twist_consistency": {
+    "shape": [
+      6
+    ],
+    "max_abs": 4.3643708091956057e-10,
+    "frobenius": 5.267638643719683e-10,
+    "relative_frobenius": 1.6254382015930444e-08
+  },
+  "body_com_pose_consistency": {
+    "shape": [
+      54,
+      3
+    ],
+    "max_abs": 1.7473391134004146e-07,
+    "frobenius": 5.932470976499937e-07,
+    "relative_frobenius": 3.5814544996944584e-08
+  },
+  "body_com_rotation_consistency": {
+    "shape": [
+      54,
+      3,
+      3
+    ],
+    "max_abs": 3.2581788572683124e-07,
+    "frobenius": 1.4493558665110665e-06,
+    "relative_frobenius": 1.1387214790301979e-07
+  },
+  "source_vs_measured_actor_twist_max_abs": 3.822776484946333e-08,
+  "source_vs_measured_com_twist_max_abs": 3.981544632360168e-08,
+  "dynamics": {
+    "M_raw_vs_source_rigid": {
+      "shape": [
+        18,
+        18
+      ],
+      "max_abs": 3.7242919001790296e-06,
+      "frobenius": 1.0524857109584344e-05,
+      "relative_frobenius": 1.3316068604332532e-07
+    },
+    "M_raw_vs_source_with_armature": {
+      "shape": [
+        18,
+        18
+      ],
+      "max_abs": 0.020000291543209175,
+      "frobenius": 0.06928239206384414,
+      "relative_frobenius": 0.0008765575248411761
+    },
+    "gravity": {
+      "shape": [
+        18
+      ],
+      "max_abs": 4.130118095102553e-05,
+      "frobenius": 5.334311496672196e-05,
+      "relative_frobenius": 1.1957943005885636e-07
+    },
+    "coriolis_with_transport": {
+      "shape": [
+        18
+      ],
+      "max_abs": 3.7029881366085204e-09,
+      "frobenius": 4.288364885267493e-09,
+      "relative_frobenius": 3.445038216095538e-07
+    },
+    "bias_with_transport": {
+      "shape": [
+        18
+      ],
+      "max_abs": 4.130210179886795e-05,
+      "frobenius": 4.910985494587676e-05,
+      "relative_frobenius": 1.1009235846188379e-07
+    },
+    "bias_without_transport": {
+      "shape": [
+        18
+      ],
+      "max_abs": 0.014739651777688323,
+      "frobenius": 0.015452865002999302,
+      "relative_frobenius": 3.4641567462339524e-05
+    },
+    "h_vs_exported_gravity_plus_coriolis": {
+      "shape": [
+        18
+      ],
+      "max_abs": 8.750241249799728e-06,
+      "frobenius": 8.75527619000179e-06,
+      "relative_frobenius": 1.9626662981668536e-08
+    },
+    "M_blocks_rigid": {
+      "base_translation": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 1.9932538677380762e-06,
+        "frobenius": 3.452416971305523e-06,
+        "relative_frobenius": 4.385469463665544e-08
+      },
+      "base_rotation": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 5.311755431946846e-07,
+        "frobenius": 9.257511800376358e-07,
+        "relative_frobenius": 1.617519132533619e-07
+      },
+      "joint_block": {
+        "shape": [
+          12,
+          12
+        ],
+        "max_abs": 2.9154320918545196e-07,
+        "frobenius": 5.716884471070366e-07,
+        "relative_frobenius": 1.0881896655436703e-06
+      }
+    },
+    "M_base_joint_coupling_rigid": {
+      "shape": [
+        6,
+        12
+      ],
+      "max_abs": 1.5292774222519512e-06,
+      "frobenius": 2.7311504936192756e-06,
+      "relative_frobenius": 1.4531169778551113e-06
+    },
+    "M_blocks_source_armature": {
+      "base_translation": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 1.9932538677380762e-06,
+        "frobenius": 3.452416971305523e-06,
+        "relative_frobenius": 4.385469463665544e-08
+      },
+      "base_rotation": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 5.311755431946846e-07,
+        "frobenius": 9.257511800376358e-07,
+        "relative_frobenius": 1.617519132533619e-07
+      },
+      "joint_block": {
+        "shape": [
+          12,
+          12
+        ],
+        "max_abs": 0.020000291543209175,
+        "frobenius": 0.06928239126677443,
+        "relative_frobenius": 0.11860496566293902
+      }
+    },
+    "M_base_joint_coupling_source_armature": {
+      "shape": [
+        6,
+        12
+      ],
+      "max_abs": 1.5292774222519512e-06,
+      "frobenius": 2.7311504936192756e-06,
+      "relative_frobenius": 1.4531169778551113e-06
+    }
+  },
+  "jacobian": {
+    "shape": [
+      4,
+      6,
+      18
+    ],
+    "max_abs": 6.357587063465786e-07,
+    "frobenius": 1.9160456828539247e-06,
+    "relative_frobenius": 2.996940674330805e-07
+  },
+  "jacobian_same_local_coordinates_raw": {
+    "shape": [
+      4,
+      6,
+      18
+    ],
+    "max_abs": 4.851754961121557e-07,
+    "frobenius": 1.6907203824770521e-06,
+    "relative_frobenius": 2.6445030971674173e-07
+  },
+  "jacobian_base_coordinate_hypotheses": {
+    "root_com_world_to_link_com": {
+      "shape": [
+        4,
+        6,
+        6
+      ],
+      "max_abs": 2.699974439579478e-07,
+      "frobenius": 6.668230431644984e-07,
+      "relative_frobenius": 1.2953633749770333e-07
+    },
+    "root_com_world_to_link_actor": {
+      "shape": [
+        4,
+        6,
+        6
+      ],
+      "max_abs": 0.6165626347064972,
+      "frobenius": 1.8451964732634314,
+      "relative_frobenius": 0.34796774473608694
+    },
+    "root_actor_world_to_link_com": {
+      "shape": [
+        4,
+        6,
+        6
+      ],
+      "max_abs": 0.006448266468375485,
+      "frobenius": 0.01824955765876698,
+      "relative_frobenius": 0.0035480976600972634
+    },
+    "root_actor_world_to_link_actor": {
+      "shape": [
+        4,
+        6,
+        6
+      ],
+      "max_abs": 0.623010903596878,
+      "frobenius": 1.8546472320153116,
+      "relative_frobenius": 0.34980926573668436
+    }
+  },
+  "clusters": [
+    {
+      "source_pin_joint": 1,
+      "source_joint_name": "root",
+      "physx_members": [
+        "base",
+        "body_front",
+        "body_right",
+        "FL_haa_motor",
+        "FR_haa_motor",
+        "body_head",
+        "body_left",
+        "body_back",
+        "RR_haa_motor",
+        "RL_haa_motor"
+      ],
+      "source_fixed_members": [
+        "base",
+        "body_front",
+        "FL_haa_motor",
+        "FR_haa_motor",
+        "body_right",
+        "body_head",
+        "body_left",
+        "body_back",
+        "RR_haa_motor",
+        "RL_haa_motor"
+      ],
+      "physx_mass_kg": 22.084000825881958,
+      "source_mass_kg": 22.084000000000003,
+      "mass_difference_kg": 8.25881954824581e-07,
+      "com_world_error_m": 7.024779224984457e-08,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 5.086698452499896e-08,
+        "frobenius": 1.1919465819919086e-07,
+        "relative_frobenius": 8.759831593321546e-08
+      }
+    },
+    {
+      "source_pin_joint": 2,
+      "source_joint_name": "FL_HAA",
+      "physx_members": [
+        "FL_hip",
+        "FL_hfe_motor"
+      ],
+      "source_fixed_members": [
+        "FL_hip",
+        "FL_hfe_motor"
+      ],
+      "physx_mass_kg": 1.2143641710281372,
+      "source_mass_kg": 1.2143642407769781,
+      "mass_difference_kg": -6.974884092514344e-08,
+      "com_world_error_m": 8.179572352773334e-08,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 1.101834427082865e-09,
+        "frobenius": 1.6009639997626755e-09,
+        "relative_frobenius": 1.0814144316210942e-06
+      }
+    },
+    {
+      "source_pin_joint": 3,
+      "source_joint_name": "FL_HFE",
+      "physx_members": [
+        "FL_thigh",
+        "FL_thigh_cover",
+        "FL_thigh_compro1",
+        "FL_thigh_profile",
+        "FL_thigh_compro2"
+      ],
+      "source_fixed_members": [
+        "FL_thigh",
+        "FL_thigh_cover",
+        "FL_thigh_compro1",
+        "FL_thigh_profile",
+        "FL_thigh_compro2"
+      ],
+      "physx_mass_kg": 2.740221284329891,
+      "source_mass_kg": 2.7402212253113665,
+      "mass_difference_kg": 5.9018524734000266e-08,
+      "com_world_error_m": 2.9667615164541417e-07,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 1.085549537413466e-08,
+        "frobenius": 1.5564650971464326e-08,
+        "relative_frobenius": 6.263697318434025e-07
+      }
+    },
+    {
+      "source_pin_joint": 4,
+      "source_joint_name": "FL_KFE",
+      "physx_members": [
+        "FL_calf",
+        "FL_knee_bracket",
+        "FL_calf_profile",
+        "FL_foot"
+      ],
+      "source_fixed_members": [
+        "FL_calf",
+        "FL_knee_bracket",
+        "FL_calf_profile",
+        "FL_foot"
+      ],
+      "physx_mass_kg": 1.8872451335191727,
+      "source_mass_kg": 1.8872451513208457,
+      "mass_difference_kg": -1.780167302456448e-08,
+      "com_world_error_m": 2.798948824933589e-07,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 5.620036628781189e-09,
+        "frobenius": 6.5267371926934864e-09,
+        "relative_frobenius": 5.356925301300381e-07
+      }
+    },
+    {
+      "source_pin_joint": 5,
+      "source_joint_name": "FR_HAA",
+      "physx_members": [
+        "FR_hip",
+        "FR_hfe_motor"
+      ],
+      "source_fixed_members": [
+        "FR_hip",
+        "FR_hfe_motor"
+      ],
+      "physx_mass_kg": 1.2143641710281372,
+      "source_mass_kg": 1.2143642407769781,
+      "mass_difference_kg": -6.974884092514344e-08,
+      "com_world_error_m": 4.580217694005739e-08,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 4.1098601847059865e-09,
+        "frobenius": 5.854407932598691e-09,
+        "relative_frobenius": 3.954518170207337e-06
+      }
+    },
+    {
+      "source_pin_joint": 6,
+      "source_joint_name": "FR_HFE",
+      "physx_members": [
+        "FR_thigh",
+        "FR_thigh_cover",
+        "FR_thigh_compro1",
+        "FR_thigh_profile",
+        "FR_thigh_compro2"
+      ],
+      "source_fixed_members": [
+        "FR_thigh",
+        "FR_thigh_cover",
+        "FR_thigh_compro1",
+        "FR_thigh_profile",
+        "FR_thigh_compro2"
+      ],
+      "physx_mass_kg": 2.740221284329891,
+      "source_mass_kg": 2.7402212253113665,
+      "mass_difference_kg": 5.9018524734000266e-08,
+      "com_world_error_m": 7.895041420624693e-08,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 1.3247089001265644e-08,
+        "frobenius": 2.0293315648407847e-08,
+        "relative_frobenius": 8.166658364448622e-07
+      }
+    },
+    {
+      "source_pin_joint": 7,
+      "source_joint_name": "FR_KFE",
+      "physx_members": [
+        "FR_calf",
+        "FR_knee_bracket",
+        "FR_calf_profile",
+        "FR_foot"
+      ],
+      "source_fixed_members": [
+        "FR_calf",
+        "FR_knee_bracket",
+        "FR_calf_profile",
+        "FR_foot"
+      ],
+      "physx_mass_kg": 1.8872451335191727,
+      "source_mass_kg": 1.8872451513208457,
+      "mass_difference_kg": -1.780167302456448e-08,
+      "com_world_error_m": 1.9443794396778458e-07,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 2.916996509789993e-09,
+        "frobenius": 4.848086917006931e-09,
+        "relative_frobenius": 3.9791431781416075e-07
+      }
+    },
+    {
+      "source_pin_joint": 8,
+      "source_joint_name": "RR_HAA",
+      "physx_members": [
+        "RR_hip",
+        "RR_hfe_motor"
+      ],
+      "source_fixed_members": [
+        "RR_hip",
+        "RR_hfe_motor"
+      ],
+      "physx_mass_kg": 1.2143641710281372,
+      "source_mass_kg": 1.2143642407769781,
+      "mass_difference_kg": -6.974884092514344e-08,
+      "com_world_error_m": 8.726366274025565e-08,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 8.52042005526632e-10,
+        "frobenius": 1.5417812114171993e-09,
+        "relative_frobenius": 1.0414378166378809e-06
+      }
+    },
+    {
+      "source_pin_joint": 9,
+      "source_joint_name": "RR_HFE",
+      "physx_members": [
+        "RR_thigh",
+        "RR_thigh_cover",
+        "RR_thigh_compro1",
+        "RR_thigh_profile",
+        "RR_thigh_compro2"
+      ],
+      "source_fixed_members": [
+        "RR_thigh",
+        "RR_thigh_cover",
+        "RR_thigh_compro1",
+        "RR_thigh_profile",
+        "RR_thigh_compro2"
+      ],
+      "physx_mass_kg": 2.740221284329891,
+      "source_mass_kg": 2.7402212253113665,
+      "mass_difference_kg": 5.9018524734000266e-08,
+      "com_world_error_m": 3.8422861559084254e-08,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 2.187336621550795e-08,
+        "frobenius": 4.272908858454419e-08,
+        "relative_frobenius": 1.719550755720314e-06
+      }
+    },
+    {
+      "source_pin_joint": 10,
+      "source_joint_name": "RR_KFE",
+      "physx_members": [
+        "RR_calf",
+        "RR_knee_bracket",
+        "RR_calf_profile",
+        "RR_foot"
+      ],
+      "source_fixed_members": [
+        "RR_calf",
+        "RR_knee_bracket",
+        "RR_calf_profile",
+        "RR_foot"
+      ],
+      "physx_mass_kg": 1.8872451335191727,
+      "source_mass_kg": 1.8872451513208457,
+      "mass_difference_kg": -1.780167302456448e-08,
+      "com_world_error_m": 1.762088159829034e-07,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 3.807057410640247e-09,
+        "frobenius": 7.447546216585916e-09,
+        "relative_frobenius": 6.112717142816547e-07
+      }
+    },
+    {
+      "source_pin_joint": 11,
+      "source_joint_name": "RL_HAA",
+      "physx_members": [
+        "RL_hip",
+        "RL_hfe_motor"
+      ],
+      "source_fixed_members": [
+        "RL_hip",
+        "RL_hfe_motor"
+      ],
+      "physx_mass_kg": 1.2143641710281372,
+      "source_mass_kg": 1.2143642407769781,
+      "mass_difference_kg": -6.974884092514344e-08,
+      "com_world_error_m": 5.103169020692633e-08,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 1.4629846753532252e-09,
+        "frobenius": 2.0872384833040433e-09,
+        "relative_frobenius": 1.46304808187486e-06
+      }
+    },
+    {
+      "source_pin_joint": 12,
+      "source_joint_name": "RL_HFE",
+      "physx_members": [
+        "RL_thigh",
+        "RL_thigh_cover",
+        "RL_thigh_compro1",
+        "RL_thigh_profile",
+        "RL_thigh_compro2"
+      ],
+      "source_fixed_members": [
+        "RL_thigh",
+        "RL_thigh_cover",
+        "RL_thigh_compro1",
+        "RL_thigh_profile",
+        "RL_thigh_compro2"
+      ],
+      "physx_mass_kg": 2.740221284329891,
+      "source_mass_kg": 2.7402212253113665,
+      "mass_difference_kg": 5.9018524734000266e-08,
+      "com_world_error_m": 2.0444200349301056e-07,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 1.834275875634006e-08,
+        "frobenius": 3.348565186579567e-08,
+        "relative_frobenius": 1.3475662781152893e-06
+      }
+    },
+    {
+      "source_pin_joint": 13,
+      "source_joint_name": "RL_KFE",
+      "physx_members": [
+        "RL_calf",
+        "RL_knee_bracket",
+        "RL_calf_profile",
+        "RL_foot"
+      ],
+      "source_fixed_members": [
+        "RL_calf",
+        "RL_knee_bracket",
+        "RL_calf_profile",
+        "RL_foot"
+      ],
+      "physx_mass_kg": 1.8872451335191727,
+      "source_mass_kg": 1.8872451513208457,
+      "mass_difference_kg": -1.780167302456448e-08,
+      "com_world_error_m": 2.9559522696231966e-07,
+      "inertia_com_world": {
+        "shape": [
+          3,
+          3
+        ],
+        "max_abs": 8.605711112008542e-09,
+        "frobenius": 1.4690799162359664e-08,
+        "relative_frobenius": 1.2057711442290594e-06
+      }
+    }
+  ],
+  "body_rows": [
+    {
+      "body": "base",
+      "source_pin_joint": 1,
+      "physx_mass_kg": 5.345043182373047,
+      "source_individual_mass_kg": 5.345043,
+      "actor_position_error_m": 0.0,
+      "actor_rotation_matrix_error": 0.0,
+      "individual_com_world_error_m": 9.4692698127119e-11,
+      "individual_inertia_world_max_abs": 2.4838301970753207e-09
+    },
+    {
+      "body": "body_front",
+      "source_pin_joint": 1,
+      "physx_mass_kg": 1.6932450532913208,
+      "source_individual_mass_kg": 1.693245,
+      "actor_position_error_m": 2.9802322387695312e-08,
+      "actor_rotation_matrix_error": 0.0,
+      "individual_com_world_error_m": 2.689212719175771e-08,
+      "individual_inertia_world_max_abs": 4.4121515468953376e-10
+    },
+    {
+      "body": "body_right",
+      "source_pin_joint": 1,
+      "physx_mass_kg": 4.2851881980896,
+      "source_individual_mass_kg": 4.285188,
+      "actor_position_error_m": 1.1920928955078125e-07,
+      "actor_rotation_matrix_error": 1.3061616042225888e-09,
+      "individual_com_world_error_m": 1.1578427772107602e-07,
+      "individual_inertia_world_max_abs": 1.748859104755418e-08
+    },
+    {
+      "body": "FL_haa_motor",
+      "source_pin_joint": 1,
+      "physx_mass_kg": 0.5210000276565552,
+      "source_individual_mass_kg": 0.521,
+      "actor_position_error_m": 5.277532122427431e-08,
+      "actor_rotation_matrix_error": 7.622361734849203e-08,
+      "individual_com_world_error_m": 5.3073184957952435e-08,
+      "individual_inertia_world_max_abs": 3.73905528934515e-11
+    },
+    {
+      "body": "FR_haa_motor",
+      "source_pin_joint": 1,
+      "physx_mass_kg": 0.5210000276565552,
+      "source_individual_mass_kg": 0.521,
+      "actor_position_error_m": 8.950390539830266e-08,
+      "actor_rotation_matrix_error": 1.8061009210727438e-07,
+      "individual_com_world_error_m": 8.902404702304523e-08,
+      "individual_inertia_world_max_abs": 3.77898487784363e-11
+    },
+    {
+      "body": "body_head",
+      "source_pin_joint": 1,
+      "physx_mass_kg": 2.6980910301208496,
+      "source_individual_mass_kg": 2.698091,
+      "actor_position_error_m": 1.1920928955078125e-07,
+      "actor_rotation_matrix_error": 1.3061616042225888e-09,
+      "individual_com_world_error_m": 1.1907787689224847e-07,
+      "individual_inertia_world_max_abs": 2.366681933763104e-09
+    },
+    {
+      "body": "FL_hip",
+      "source_pin_joint": 2,
+      "physx_mass_kg": 0.2543642520904541,
+      "source_individual_mass_kg": 0.2543642407769781,
+      "actor_position_error_m": 1.0482133872002919e-07,
+      "actor_rotation_matrix_error": 2.278966156257084e-07,
+      "individual_com_world_error_m": 8.697348219399714e-08,
+      "individual_inertia_world_max_abs": 2.3178780808745094e-11
+    },
+    {
+      "body": "FR_hip",
+      "source_pin_joint": 5,
+      "physx_mass_kg": 0.2543642520904541,
+      "source_individual_mass_kg": 0.2543642407769781,
+      "actor_position_error_m": 1.640736533303766e-07,
+      "actor_rotation_matrix_error": 2.7321821044132277e-07,
+      "individual_com_world_error_m": 1.5464813918342202e-07,
+      "individual_inertia_world_max_abs": 2.7811549420279368e-11
+    },
+    {
+      "body": "body_left",
+      "source_pin_joint": 1,
+      "physx_mass_kg": 4.2851881980896,
+      "source_individual_mass_kg": 4.285188,
+      "actor_position_error_m": 1.1920928955078125e-07,
+      "actor_rotation_matrix_error": 2.237832932849848e-09,
+      "individual_com_world_error_m": 1.2236098934081951e-07,
+      "individual_inertia_world_max_abs": 1.7489288156591343e-08
+    },
+    {
+      "body": "body_back",
+      "source_pin_joint": 1,
+      "physx_mass_kg": 1.6932450532913208,
+      "source_individual_mass_kg": 1.693245,
+      "actor_position_error_m": 1.1920928955078125e-07,
+      "actor_rotation_matrix_error": 1.3061616042225888e-09,
+      "individual_com_world_error_m": 1.1908921093706226e-07,
+      "individual_inertia_world_max_abs": 4.4076958749528217e-10
+    },
+    {
+      "body": "FL_hfe_motor",
+      "source_pin_joint": 2,
+      "physx_mass_kg": 0.9599999189376831,
+      "source_individual_mass_kg": 0.96,
+      "actor_position_error_m": 9.396485811663524e-08,
+      "actor_rotation_matrix_error": 2.278300581977366e-07,
+      "individual_com_world_error_m": 8.443905108457272e-08,
+      "individual_inertia_world_max_abs": 5.0939686980799756e-11
+    },
+    {
+      "body": "FR_hfe_motor",
+      "source_pin_joint": 5,
+      "physx_mass_kg": 0.9599999189376831,
+      "source_individual_mass_kg": 0.96,
+      "actor_position_error_m": 3.939907156080835e-08,
+      "actor_rotation_matrix_error": 2.7290129936581586e-07,
+      "individual_com_world_error_m": 3.916049640118047e-08,
+      "individual_inertia_world_max_abs": 6.327019428200689e-11
+    },
+    {
+      "body": "RR_haa_motor",
+      "source_pin_joint": 1,
+      "physx_mass_kg": 0.5210000276565552,
+      "source_individual_mass_kg": 0.521,
+      "actor_position_error_m": 6.060020618647854e-08,
+      "actor_rotation_matrix_error": 6.740466250432231e-08,
+      "individual_com_world_error_m": 6.092769977428247e-08,
+      "individual_inertia_world_max_abs": 3.8015607209482966e-11
+    },
+    {
+      "body": "RL_haa_motor",
+      "source_pin_joint": 1,
+      "physx_mass_kg": 0.5210000276565552,
+      "source_individual_mass_kg": 0.521,
+      "actor_position_error_m": 5.6038527374013825e-08,
+      "actor_rotation_matrix_error": 6.740466358678976e-08,
+      "individual_com_world_error_m": 5.650261192258199e-08,
+      "individual_inertia_world_max_abs": 3.8015607209482966e-11
+    },
+    {
+      "body": "FL_thigh",
+      "source_pin_joint": 3,
+      "physx_mass_kg": 1.4434282779693604,
+      "source_individual_mass_kg": 1.4434282543384378,
+      "actor_position_error_m": 2.2387251941147213e-07,
+      "actor_rotation_matrix_error": 2.2914172532507993e-07,
+      "individual_com_world_error_m": 2.5829056871096157e-07,
+      "individual_inertia_world_max_abs": 1.6521745361657838e-10
+    },
+    {
+      "body": "FR_thigh",
+      "source_pin_joint": 6,
+      "physx_mass_kg": 1.4434282779693604,
+      "source_individual_mass_kg": 1.4434282543384378,
+      "actor_position_error_m": 1.931351625295008e-07,
+      "actor_rotation_matrix_error": 2.5303078587946004e-07,
+      "individual_com_world_error_m": 6.423466214489082e-08,
+      "individual_inertia_world_max_abs": 1.6261531956015233e-10
+    },
+    {
+      "body": "RR_hip",
+      "source_pin_joint": 8,
+      "physx_mass_kg": 0.2543642520904541,
+      "source_individual_mass_kg": 0.2543642407769781,
+      "actor_position_error_m": 1.6545913594789852e-07,
+      "actor_rotation_matrix_error": 5.768716957420261e-08,
+      "individual_com_world_error_m": 1.466911427883133e-07,
+      "individual_inertia_world_max_abs": 9.632420024368454e-12
+    },
+    {
+      "body": "RL_hip",
+      "source_pin_joint": 11,
+      "physx_mass_kg": 0.2543642520904541,
+      "source_individual_mass_kg": 0.2543642407769781,
+      "actor_position_error_m": 9.682809887223698e-08,
+      "actor_rotation_matrix_error": 1.2463284262097252e-07,
+      "individual_com_world_error_m": 1.0152799512219701e-07,
+      "individual_inertia_world_max_abs": 1.2672063883664461e-11
+    },
+    {
+      "body": "FL_thigh_cover",
+      "source_pin_joint": 3,
+      "physx_mass_kg": 0.8939970135688782,
+      "source_individual_mass_kg": 0.893996971126719,
+      "actor_position_error_m": 2.715163112121388e-07,
+      "actor_rotation_matrix_error": 2.2859668981876913e-07,
+      "individual_com_world_error_m": 3.1874386785535336e-07,
+      "individual_inertia_world_max_abs": 8.917385395766715e-11
+    },
+    {
+      "body": "FR_thigh_cover",
+      "source_pin_joint": 6,
+      "physx_mass_kg": 0.8939970135688782,
+      "source_individual_mass_kg": 0.893996971126719,
+      "actor_position_error_m": 1.9313516153030008e-07,
+      "actor_rotation_matrix_error": 2.5303078587946004e-07,
+      "individual_com_world_error_m": 1.320213187661068e-07,
+      "individual_inertia_world_max_abs": 8.958626710625796e-11
+    },
+    {
+      "body": "RR_hfe_motor",
+      "source_pin_joint": 8,
+      "physx_mass_kg": 0.9599999189376831,
+      "source_individual_mass_kg": 0.96,
+      "actor_position_error_m": 7.917182709427095e-08,
+      "actor_rotation_matrix_error": 1.3664305212562726e-07,
+      "individual_com_world_error_m": 8.485309277439512e-08,
+      "individual_inertia_world_max_abs": 3.708916518092159e-11
+    },
+    {
+      "body": "RL_hfe_motor",
+      "source_pin_joint": 11,
+      "physx_mass_kg": 0.9599999189376831,
+      "source_individual_mass_kg": 0.96,
+      "actor_position_error_m": 5.747955533763616e-08,
+      "actor_rotation_matrix_error": 1.24364572194266e-07,
+      "individual_com_world_error_m": 5.891603294116976e-08,
+      "individual_inertia_world_max_abs": 3.7248265425835966e-11
+    },
+    {
+      "body": "FL_thigh_compro1",
+      "source_pin_joint": 3,
+      "physx_mass_kg": 0.1521385908126831,
+      "source_individual_mass_kg": 0.15213859388007747,
+      "actor_position_error_m": 2.7160423743399775e-07,
+      "actor_rotation_matrix_error": 2.5145513487916105e-07,
+      "individual_com_world_error_m": 3.1711038284143456e-07,
+      "individual_inertia_world_max_abs": 7.132728589825921e-12
+    },
+    {
+      "body": "FR_thigh_compro1",
+      "source_pin_joint": 6,
+      "physx_mass_kg": 0.1521385908126831,
+      "source_individual_mass_kg": 0.15213859388007747,
+      "actor_position_error_m": 1.1317310821823412e-07,
+      "actor_rotation_matrix_error": 2.526833201565992e-07,
+      "individual_com_world_error_m": 4.6207480508542176e-08,
+      "individual_inertia_world_max_abs": 7.1420837883604395e-12
+    },
+    {
+      "body": "RR_thigh",
+      "source_pin_joint": 9,
+      "physx_mass_kg": 1.4434282779693604,
+      "source_individual_mass_kg": 1.4434282543384378,
+      "actor_position_error_m": 1.2966910079015292e-07,
+      "actor_rotation_matrix_error": 2.7049141820834066e-07,
+      "individual_com_world_error_m": 7.093188680862283e-08,
+      "individual_inertia_world_max_abs": 1.5294306890675873e-10
+    },
+    {
+      "body": "RL_thigh",
+      "source_pin_joint": 12,
+      "physx_mass_kg": 1.4434282779693604,
+      "source_individual_mass_kg": 1.4434282543384378,
+      "actor_position_error_m": 2.710019419982501e-07,
+      "actor_rotation_matrix_error": 1.839631484368276e-07,
+      "individual_com_world_error_m": 2.0349846741041233e-07,
+      "individual_inertia_world_max_abs": 9.669884640486619e-11
+    },
+    {
+      "body": "FL_thigh_profile",
+      "source_pin_joint": 3,
+      "physx_mass_kg": 0.09851881116628647,
+      "source_individual_mass_kg": 0.09851881208605477,
+      "actor_position_error_m": 4.730675363662229e-07,
+      "actor_rotation_matrix_error": 2.974683368881653e-07,
+      "individual_com_world_error_m": 4.0052604405316217e-07,
+      "individual_inertia_world_max_abs": 9.658636581310636e-11
+    },
+    {
+      "body": "FR_thigh_profile",
+      "source_pin_joint": 6,
+      "physx_mass_kg": 0.09851881116628647,
+      "source_individual_mass_kg": 0.09851881208605477,
+      "actor_position_error_m": 1.7175010524894674e-07,
+      "actor_rotation_matrix_error": 2.3647971242324317e-07,
+      "individual_com_world_error_m": 1.9177137278170164e-07,
+      "individual_inertia_world_max_abs": 1.1802953956536154e-10
+    },
+    {
+      "body": "RR_thigh_cover",
+      "source_pin_joint": 9,
+      "physx_mass_kg": 0.8939970135688782,
+      "source_individual_mass_kg": 0.893996971126719,
+      "actor_position_error_m": 1.2966910611922344e-07,
+      "actor_rotation_matrix_error": 2.7049141809731836e-07,
+      "individual_com_world_error_m": 6.352406733967086e-08,
+      "individual_inertia_world_max_abs": 8.351385655838487e-11
+    },
+    {
+      "body": "RL_thigh_cover",
+      "source_pin_joint": 12,
+      "physx_mass_kg": 0.8939970135688782,
+      "source_individual_mass_kg": 0.893996971126719,
+      "actor_position_error_m": 2.7100193811246953e-07,
+      "actor_rotation_matrix_error": 1.839631484368276e-07,
+      "individual_com_world_error_m": 1.9940240503224516e-07,
+      "individual_inertia_world_max_abs": 5.291594159834245e-11
+    },
+    {
+      "body": "FL_thigh_compro2",
+      "source_pin_joint": 3,
+      "physx_mass_kg": 0.1521385908126831,
+      "source_individual_mass_kg": 0.15213859388007747,
+      "actor_position_error_m": 3.2950030803835517e-07,
+      "actor_rotation_matrix_error": 2.9854019199630766e-07,
+      "individual_com_world_error_m": 4.3036310892752283e-07,
+      "individual_inertia_world_max_abs": 4.043561445149935e-12
+    },
+    {
+      "body": "FR_thigh_compro2",
+      "source_pin_joint": 6,
+      "physx_mass_kg": 0.1521385908126831,
+      "source_individual_mass_kg": 0.15213859388007747,
+      "actor_position_error_m": 2.6862322871634703e-07,
+      "actor_rotation_matrix_error": 3.2015128675726146e-07,
+      "individual_com_world_error_m": 3.125482972432536e-07,
+      "individual_inertia_world_max_abs": 4.90269071068178e-12
+    },
+    {
+      "body": "RR_thigh_compro1",
+      "source_pin_joint": 9,
+      "physx_mass_kg": 0.1521385908126831,
+      "source_individual_mass_kg": 0.15213859388007747,
+      "actor_position_error_m": 1.8946607704961593e-07,
+      "actor_rotation_matrix_error": 3.195497591240021e-07,
+      "individual_com_world_error_m": 8.18204911601228e-08,
+      "individual_inertia_world_max_abs": 5.7350983906573685e-12
+    },
+    {
+      "body": "RL_thigh_compro1",
+      "source_pin_joint": 12,
+      "physx_mass_kg": 0.1521385908126831,
+      "source_individual_mass_kg": 0.15213859388007747,
+      "actor_position_error_m": 1.6788949674939602e-07,
+      "actor_rotation_matrix_error": 2.6169966220544044e-07,
+      "individual_com_world_error_m": 1.654863259759054e-07,
+      "individual_inertia_world_max_abs": 4.532595829155779e-12
+    },
+    {
+      "body": "FL_calf",
+      "source_pin_joint": 4,
+      "physx_mass_kg": 0.9599999189376831,
+      "source_individual_mass_kg": 0.96,
+      "actor_position_error_m": 3.190444182177288e-07,
+      "actor_rotation_matrix_error": 2.732298577390324e-07,
+      "individual_com_world_error_m": 3.20377526064064e-07,
+      "individual_inertia_world_max_abs": 5.157553350878361e-11
+    },
+    {
+      "body": "FR_calf",
+      "source_pin_joint": 7,
+      "physx_mass_kg": 0.9599999189376831,
+      "source_individual_mass_kg": 0.96,
+      "actor_position_error_m": 2.0848292114905576e-07,
+      "actor_rotation_matrix_error": 3.323814369831507e-07,
+      "individual_com_world_error_m": 2.1039144115775343e-07,
+      "individual_inertia_world_max_abs": 6.982511376491616e-11
+    },
+    {
+      "body": "RR_thigh_profile",
+      "source_pin_joint": 9,
+      "physx_mass_kg": 0.09851881116628647,
+      "source_individual_mass_kg": 0.09851881208605477,
+      "actor_position_error_m": 8.180965571646936e-08,
+      "actor_rotation_matrix_error": 3.3026809403893104e-07,
+      "individual_com_world_error_m": 1.2404626370532412e-07,
+      "individual_inertia_world_max_abs": 1.0104631099406604e-10
+    },
+    {
+      "body": "RL_thigh_profile",
+      "source_pin_joint": 12,
+      "physx_mass_kg": 0.09851881116628647,
+      "source_individual_mass_kg": 0.09851881208605477,
+      "actor_position_error_m": 1.4605157205860309e-07,
+      "actor_rotation_matrix_error": 2.584127236316888e-07,
+      "individual_com_world_error_m": 1.789628753523509e-07,
+      "individual_inertia_world_max_abs": 5.017283563981713e-11
+    },
+    {
+      "body": "FL_knee_bracket",
+      "source_pin_joint": 4,
+      "physx_mass_kg": 0.7986269593238831,
+      "source_individual_mass_kg": 0.798626897722497,
+      "actor_position_error_m": 2.453689142978277e-07,
+      "actor_rotation_matrix_error": 3.176403271520911e-07,
+      "individual_com_world_error_m": 2.631151113652308e-07,
+      "individual_inertia_world_max_abs": 3.329129047088819e-10
+    },
+    {
+      "body": "FR_knee_bracket",
+      "source_pin_joint": 7,
+      "physx_mass_kg": 0.7986269593238831,
+      "source_individual_mass_kg": 0.798626897722497,
+      "actor_position_error_m": 2.668243574421858e-07,
+      "actor_rotation_matrix_error": 3.3398044158722273e-07,
+      "individual_com_world_error_m": 1.6250714818255574e-07,
+      "individual_inertia_world_max_abs": 3.214431728605638e-10
+    },
+    {
+      "body": "RR_thigh_compro2",
+      "source_pin_joint": 9,
+      "physx_mass_kg": 0.1521385908126831,
+      "source_individual_mass_kg": 0.15213859388007747,
+      "actor_position_error_m": 3.898137421742831e-07,
+      "actor_rotation_matrix_error": 3.373610854902776e-07,
+      "individual_com_world_error_m": 5.024882945292575e-07,
+      "individual_inertia_world_max_abs": 2.7922189401927405e-12
+    },
+    {
+      "body": "RL_thigh_compro2",
+      "source_pin_joint": 12,
+      "physx_mass_kg": 0.1521385908126831,
+      "source_individual_mass_kg": 0.15213859388007747,
+      "actor_position_error_m": 3.395804176742345e-07,
+      "actor_rotation_matrix_error": 2.4992150543176606e-07,
+      "individual_com_world_error_m": 2.8529333512272714e-07,
+      "individual_inertia_world_max_abs": 2.9326030138144784e-12
+    },
+    {
+      "body": "FL_calf_profile",
+      "source_pin_joint": 4,
+      "physx_mass_kg": 0.09851881116628647,
+      "source_individual_mass_kg": 0.09851881208605477,
+      "actor_position_error_m": 2.9991892519509733e-07,
+      "actor_rotation_matrix_error": 3.7195974023074285e-07,
+      "individual_com_world_error_m": 1.82850200008966e-07,
+      "individual_inertia_world_max_abs": 2.3631916391754666e-10
+    },
+    {
+      "body": "FR_calf_profile",
+      "source_pin_joint": 7,
+      "physx_mass_kg": 0.09851881116628647,
+      "source_individual_mass_kg": 0.09851881208605477,
+      "actor_position_error_m": 2.774696696850043e-07,
+      "actor_rotation_matrix_error": 2.369072072214845e-07,
+      "individual_com_world_error_m": 2.6017433363278997e-07,
+      "individual_inertia_world_max_abs": 4.825621233901393e-11
+    },
+    {
+      "body": "RR_calf",
+      "source_pin_joint": 10,
+      "physx_mass_kg": 0.9599999189376831,
+      "source_individual_mass_kg": 0.96,
+      "actor_position_error_m": 1.1349010964334383e-07,
+      "actor_rotation_matrix_error": 3.352921376226486e-07,
+      "individual_com_world_error_m": 1.1041788794408092e-07,
+      "individual_inertia_world_max_abs": 7.59741140608662e-11
+    },
+    {
+      "body": "RL_calf",
+      "source_pin_joint": 13,
+      "physx_mass_kg": 0.9599999189376831,
+      "source_individual_mass_kg": 0.96,
+      "actor_position_error_m": 5.457675138487161e-07,
+      "actor_rotation_matrix_error": 2.9227744696193325e-07,
+      "individual_com_world_error_m": 5.350095539924382e-07,
+      "individual_inertia_world_max_abs": 5.580648930218249e-11
+    },
+    {
+      "body": "FL_foot",
+      "source_pin_joint": 4,
+      "physx_mass_kg": 0.030099444091320038,
+      "source_individual_mass_kg": 0.030099441512294156,
+      "actor_position_error_m": 4.955065294742766e-07,
+      "actor_rotation_matrix_error": 3.4821412642216387e-07,
+      "individual_com_world_error_m": 3.4424676043087743e-07,
+      "individual_inertia_world_max_abs": 4.145921624469661e-13
+    },
+    {
+      "body": "FR_foot",
+      "source_pin_joint": 7,
+      "physx_mass_kg": 0.030099444091320038,
+      "source_individual_mass_kg": 0.030099441512294156,
+      "actor_position_error_m": 4.10158339736455e-07,
+      "actor_rotation_matrix_error": 2.545302425754209e-07,
+      "individual_com_world_error_m": 2.928408564528695e-07,
+      "individual_inertia_world_max_abs": 4.4834617213219876e-13
+    },
+    {
+      "body": "RR_knee_bracket",
+      "source_pin_joint": 10,
+      "physx_mass_kg": 0.7986269593238831,
+      "source_individual_mass_kg": 0.798626897722497,
+      "actor_position_error_m": 2.467468345201951e-07,
+      "actor_rotation_matrix_error": 3.3486071157845347e-07,
+      "individual_com_world_error_m": 3.7599517410669137e-07,
+      "individual_inertia_world_max_abs": 3.3692677337340826e-10
+    },
+    {
+      "body": "RL_knee_bracket",
+      "source_pin_joint": 13,
+      "physx_mass_kg": 0.7986269593238831,
+      "source_individual_mass_kg": 0.798626897722497,
+      "actor_position_error_m": 1.8001098964215423e-07,
+      "actor_rotation_matrix_error": 2.912423737681108e-07,
+      "individual_com_world_error_m": 1.6492707111126492e-07,
+      "individual_inertia_world_max_abs": 3.3095701222965457e-10
+    },
+    {
+      "body": "RR_calf_profile",
+      "source_pin_joint": 10,
+      "physx_mass_kg": 0.09851881116628647,
+      "source_individual_mass_kg": 0.09851881208605477,
+      "actor_position_error_m": 2.1777346392859442e-07,
+      "actor_rotation_matrix_error": 2.8859272570161756e-07,
+      "individual_com_world_error_m": 1.970691279051806e-07,
+      "individual_inertia_world_max_abs": 1.789230839497561e-10
+    },
+    {
+      "body": "RL_calf_profile",
+      "source_pin_joint": 13,
+      "physx_mass_kg": 0.09851881116628647,
+      "source_individual_mass_kg": 0.09851881208605477,
+      "actor_position_error_m": 2.583706195657953e-07,
+      "actor_rotation_matrix_error": 2.7296814604158004e-07,
+      "individual_com_world_error_m": 1.8786832378658858e-07,
+      "individual_inertia_world_max_abs": 1.2729869263740368e-10
+    },
+    {
+      "body": "RR_foot",
+      "source_pin_joint": 10,
+      "physx_mass_kg": 0.030099444091320038,
+      "source_individual_mass_kg": 0.030099441512294156,
+      "actor_position_error_m": 3.5321906999286057e-07,
+      "actor_rotation_matrix_error": 2.6768299231458986e-07,
+      "individual_com_world_error_m": 3.4104392021561125e-07,
+      "individual_inertia_world_max_abs": 3.9471834783718403e-13
+    },
+    {
+      "body": "RL_foot",
+      "source_pin_joint": 13,
+      "physx_mass_kg": 0.030099444091320038,
+      "source_individual_mass_kg": 0.030099441512294156,
+      "actor_position_error_m": 3.6530390934430557e-07,
+      "actor_rotation_matrix_error": 2.5934975510580327e-07,
+      "individual_com_world_error_m": 2.757322810076346e-07,
+      "individual_inertia_world_max_abs": 4.0124323405933e-13
+    }
+  ],
+  "interpretation": "Measured differences are retained. This report does not presume the converted USD matches the source MJCF.",
+  "limitations": [
+    "One settled snapshot; neither global dynamics equality nor walking stability is established.",
+    "If the USD root actor frame was reauthored relative to the source base actor, an additional independently measured root gauge transform is required before attributing all residuals to physical parameters.",
+    "Individual body mass/COM/inertia may differ when fixed members are merged; movable-joint cluster aggregates are the appropriate additional comparison.",
+    "Root COM-world coordinate basis is tested with the measured base Jacobian block; actor/world alternative hypotheses are reported rather than selected silently.",
+    "Armature is removed from PhysX mass only when inclusion is explicitly declared and measured armature values exist."
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "status": "prepared; actual snapshot model comparison not executed",
+  "local_algebra_tests": 6,
+  "independent_review": "No remaining Critical/Important within declared root actor correspondence after same-world-point correction",
+  "files": {
+    "config/experiments/v16_20260929/v16_compare_physx.py": {
+      "sha256": "d580efdffb3b5ef1560f8a454e5f74c7bee0f6c4af32dd0e3b608bd87722c223",
+      "bytes": 24012
+    },
+    "reports/v16/physical_model/physx_comparison_preparation.md": {
+      "sha256": "fe75d9f77b6aaba097a345e2c8ce93da31087dd591c0d6ca4c61f2a87741fa0a",
+      "bytes": 4961
+    },
+    "reports/v16/physical_model/physx_comparison_test.py": {
+      "sha256": "0db183de25a1e7b0126cf8d30d44e160ed06f019844cf811ff069a4cac442ab0",
+      "bytes": 3480
+    },
+    "reports/v16/physical_model/physx_comparison.sbatch": {
+      "sha256": "024834ef9b9829f9c3a2ae4ce8035704c295e18556ec325563dc7a4e695894b8",
+      "bytes": 919
+    },
+    "reports/v16/physical_model/physx_comparison_algebra.log": {
+      "sha256": "e1042e26168c400fd3ee2fcd484d3a8de6e84064382d0838fe25f957b84b0eef",
+      "bytes": 1126
+    }
+  }
+}

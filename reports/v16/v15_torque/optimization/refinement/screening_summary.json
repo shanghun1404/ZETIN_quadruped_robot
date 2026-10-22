@@ -1,0 +1,320 @@
+{
+  "manifest_sha256": "e28113591232dbab782bdf10e703a704fed30fb99cdf430eca307e0792a841e0",
+  "control_gate": {
+    "survival_at_least_baseline": true,
+    "progress_fraction_at_least": 0.9,
+    "absolute_command_speed_error_extra_allowance_m_s": 0.02,
+    "rough_corridor_kept_at_least_baseline": true,
+    "rough_mean_max_heading_error_extra_allowance_deg": 2.0
+  },
+  "torque_gate": {
+    "mean_joint_rms_ratio_at_most": 1.0,
+    "pooled_abs_power_ratio_at_most": 1.0,
+    "peak_or_p99_or_high_limit_occupancy_must_improve": true
+  },
+  "score_weights": {
+    "rms": 0.4,
+    "abs_power": 0.25,
+    "above80": 0.25,
+    "p99_slew": 0.1
+  },
+  "torque_semantics": "Implicit PD estimates, not actual solver motor torque or thermal validation",
+  "candidates": {
+    "g095_lpf20": {
+      "config": {
+        "label": "g095_lpf20",
+        "guard_fraction": 0.95,
+        "cutoff_hz": 20.0
+      },
+      "comparisons": {
+        "flat": {
+          "control_gates": {
+            "survival": true,
+            "progress": true,
+            "command_tracking": true,
+            "rough_corridor": true,
+            "rough_heading": true
+          },
+          "torque_gates": {
+            "rms_not_increased": true,
+            "power_not_increased": true,
+            "limit_demand_improved": true
+          },
+          "control_pass": true,
+          "torque_pass": true,
+          "ratios_to_baseline": {
+            "rms": 0.9925181498649108,
+            "power": 0.971774064536944,
+            "above80": 1.0103135159373715,
+            "slew": 0.8970150580969085,
+            "peak_fraction": 0.9610977820244775,
+            "p99_fraction_mean": 0.976691780977586
+          },
+          "ranking_score": 0.982230660874234,
+          "survived_envs": 32,
+          "mean_progress_m": 5.837859630584717,
+          "mean_forward_speed_m_s": 0.4858574105302493,
+          "absolute_command_error_m_s": 0.08585741053024926,
+          "corridor_kept_envs": 32,
+          "mean_max_heading_error_deg": 26.93948119878769,
+          "rms_mean_joint_nm": 12.433401420774123,
+          "pooled_p99_estimated_nm": 44.693602676391606,
+          "max_estimated_limit_fraction": 0.9522993564605713,
+          "above80_fraction": 0.03520442708333334,
+          "saturation99_fraction": 0.0,
+          "mean_abs_joint_power_w": 8.284217834472656,
+          "p99_torque_slew_nm_s": 2489.6937744140578,
+          "worst_joint_rms_ratio": 1.0131338217460646,
+          "worst_joint_rms_ratio_joint": "RL_HFE",
+          "per_joint_rms_ratios": {
+            "FL_HAA": 0.9782682368014989,
+            "FL_HFE": 0.9742930953742581,
+            "FL_KFE": 0.9891684339823081,
+            "FR_HAA": 0.9997178906700727,
+            "FR_HFE": 1.0080926306358866,
+            "FR_KFE": 0.9951212539274628,
+            "RL_HAA": 1.0090990077906685,
+            "RL_HFE": 1.0131338217460646,
+            "RL_KFE": 1.0042134551217048,
+            "RR_HAA": 0.9928079500525823,
+            "RR_HFE": 1.0086306307123634,
+            "RR_KFE": 0.9582649465660925
+          },
+          "baseline_estimated_abs_mechanical_energy_per_m_j_m": 207.47882665429364,
+          "estimated_abs_mechanical_energy_per_m_j_m": 203.74772306415835
+        },
+        "rough": {
+          "control_gates": {
+            "survival": true,
+            "progress": true,
+            "command_tracking": false,
+            "rough_corridor": false,
+            "rough_heading": true
+          },
+          "torque_gates": {
+            "rms_not_increased": true,
+            "power_not_increased": true,
+            "limit_demand_improved": true
+          },
+          "control_pass": false,
+          "torque_pass": true,
+          "ratios_to_baseline": {
+            "rms": 0.987768400520232,
+            "power": 0.9528136533926206,
+            "above80": 1.0503652539549169,
+            "slew": 0.886189696410337,
+            "peak_fraction": 0.9673846339316002,
+            "p99_fraction_mean": 0.965659256160123
+          },
+          "ranking_score": 0.9845210566860109,
+          "survived_envs": 32,
+          "mean_progress_m": 3.4627161026000977,
+          "mean_forward_speed_m_s": 0.2890184477654596,
+          "absolute_command_error_m_s": 0.2109815522345404,
+          "corridor_kept_envs": 31,
+          "mean_max_heading_error_deg": 10.962006099522114,
+          "rms_mean_joint_nm": 18.041830076520913,
+          "pooled_p99_estimated_nm": 45.620330810546875,
+          "max_estimated_limit_fraction": 0.9591337839762369,
+          "above80_fraction": 0.14507421875,
+          "saturation99_fraction": 0.0,
+          "mean_abs_joint_power_w": 11.783923149108887,
+          "p99_torque_slew_nm_s": 3247.986584472656,
+          "worst_joint_rms_ratio": 1.0996651314949712,
+          "worst_joint_rms_ratio_joint": "RR_HAA",
+          "per_joint_rms_ratios": {
+            "FL_HAA": 1.0183380113660785,
+            "FL_HFE": 1.0833855455654124,
+            "FL_KFE": 0.9489051375471942,
+            "FR_HAA": 1.014489815074278,
+            "FR_HFE": 1.0613059834286513,
+            "FR_KFE": 0.9711679664301902,
+            "RL_HAA": 1.0368872673457608,
+            "RL_HFE": 0.8952068001268849,
+            "RL_KFE": 0.9204792164146229,
+            "RR_HAA": 1.0996651314949712,
+            "RR_HFE": 0.9884255104467448,
+            "RR_KFE": 0.9340359882174075
+          },
+          "baseline_estimated_abs_mechanical_energy_per_m_j_m": 473.503226100091,
+          "estimated_abs_mechanical_energy_per_m_j_m": 492.3729665283272
+        }
+      },
+      "all_gates_pass": false,
+      "actual_settings_verified": {
+        "cutoff_hz": 20.0,
+        "guard_fraction": 0.95,
+        "physx_kp_nm_rad": 300.0,
+        "physx_kd_nm_s_rad": 8.0,
+        "guard_velocity_limit_rad_s": 50.0,
+        "actual_solver_motor_torque_recorded": false
+      },
+      "mean_ranking_score": 0.9833758587801225,
+      "data_hashes": {
+        "flat": {
+          "g095_lpf20_flat_seed42.json": "0ac5b8885e2df9dc03911051d803e1b58a8e7246a4bfc4ef2a1317ad5a40ad0d",
+          "g095_lpf20_flat_seed42_trace_audit.npz": "ab39bcaebf45117da2f93a8b9e163572d20286fa5725645337342a26617a1d57"
+        },
+        "rough": {
+          "g095_lpf20_rough_seed42.json": "24eda876f91d7f8697030117d424fcf999c08c226ed96b71be23bfed2e5f147f",
+          "g095_lpf20_rough_seed42_trace_audit.npz": "99d542b3234243025869766608c37c62a00e88f5ab4eb035d371c53706e254cf"
+        }
+      }
+    },
+    "g097_lpf20": {
+      "config": {
+        "label": "g097_lpf20",
+        "guard_fraction": 0.97,
+        "cutoff_hz": 20.0
+      },
+      "comparisons": {
+        "flat": {
+          "control_gates": {
+            "survival": true,
+            "progress": true,
+            "command_tracking": true,
+            "rough_corridor": true,
+            "rough_heading": true
+          },
+          "torque_gates": {
+            "rms_not_increased": true,
+            "power_not_increased": true,
+            "limit_demand_improved": true
+          },
+          "control_pass": true,
+          "torque_pass": true,
+          "ratios_to_baseline": {
+            "rms": 0.9933826014230426,
+            "power": 0.9730451321867846,
+            "above80": 0.9927880124061134,
+            "slew": 0.89052514355566,
+            "peak_fraction": 0.9815023130530431,
+            "p99_fraction_mean": 0.9885984784135273
+          },
+          "ranking_score": 0.9778638410730076,
+          "survived_envs": 32,
+          "mean_progress_m": 5.8503875732421875,
+          "mean_forward_speed_m_s": 0.487238710274299,
+          "absolute_command_error_m_s": 0.08723871027429897,
+          "corridor_kept_envs": 32,
+          "mean_max_heading_error_deg": 26.79504519701004,
+          "rms_mean_joint_nm": 12.4442305156703,
+          "pooled_p99_estimated_nm": 45.48697265625,
+          "max_estimated_limit_fraction": 0.9725170930226644,
+          "above80_fraction": 0.03459375,
+          "saturation99_fraction": 0.0,
+          "mean_abs_joint_power_w": 8.295053482055664,
+          "p99_torque_slew_nm_s": 2471.680810546867,
+          "worst_joint_rms_ratio": 1.0134111337723044,
+          "worst_joint_rms_ratio_joint": "RL_HFE",
+          "per_joint_rms_ratios": {
+            "FL_HAA": 0.9858300151384803,
+            "FL_HFE": 0.9768868777713242,
+            "FL_KFE": 0.9882565652910131,
+            "FR_HAA": 1.0070325195312135,
+            "FR_HFE": 1.0046336120494372,
+            "FR_KFE": 0.9969320496281129,
+            "RL_HAA": 1.009141678973634,
+            "RL_HFE": 1.0134111337723044,
+            "RL_KFE": 1.0011522280713887,
+            "RR_HAA": 0.9988863496346087,
+            "RR_HFE": 1.006009027950082,
+            "RR_KFE": 0.9586534759701935
+          },
+          "baseline_estimated_abs_mechanical_energy_per_m_j_m": 207.47882665429364,
+          "estimated_abs_mechanical_energy_per_m_j_m": 203.59899429072198
+        },
+        "rough": {
+          "control_gates": {
+            "survival": true,
+            "progress": true,
+            "command_tracking": false,
+            "rough_corridor": false,
+            "rough_heading": true
+          },
+          "torque_gates": {
+            "rms_not_increased": true,
+            "power_not_increased": true,
+            "limit_demand_improved": true
+          },
+          "control_pass": false,
+          "torque_pass": true,
+          "ratios_to_baseline": {
+            "rms": 0.9844720038776137,
+            "power": 0.9697463746882389,
+            "above80": 0.999658587097867,
+            "slew": 0.906005579582944,
+            "peak_fraction": 0.9834882384739738,
+            "p99_fraction_mean": 0.9853374379284586
+          },
+          "ranking_score": 0.9767405999558663,
+          "survived_envs": 31,
+          "mean_progress_m": 3.4419212341308594,
+          "mean_forward_speed_m_s": 0.29318758045122706,
+          "absolute_command_error_m_s": 0.20681241954877294,
+          "corridor_kept_envs": 31,
+          "mean_max_heading_error_deg": 11.414631053805351,
+          "rms_mean_joint_nm": 17.981620590107287,
+          "pooled_p99_estimated_nm": 46.57190704345703,
+          "max_estimated_limit_fraction": 0.975100040435791,
+          "above80_fraction": 0.1380707215836526,
+          "saturation99_fraction": 0.0,
+          "mean_abs_joint_power_w": 11.993338584899902,
+          "p99_torque_slew_nm_s": 3320.6140625000053,
+          "worst_joint_rms_ratio": 1.1011140467856186,
+          "worst_joint_rms_ratio_joint": "FL_HFE",
+          "per_joint_rms_ratios": {
+            "FL_HAA": 1.0209049129784242,
+            "FL_HFE": 1.1011140467856186,
+            "FL_KFE": 0.9570558606978519,
+            "FR_HAA": 0.992422460852216,
+            "FR_HFE": 1.0044208941235344,
+            "FR_KFE": 0.9832583201615758,
+            "RL_HAA": 1.0646760710188037,
+            "RL_HFE": 0.9037103102653191,
+            "RL_KFE": 0.9581614678111745,
+            "RR_HAA": 1.0666134195697208,
+            "RR_HFE": 0.9744339520156937,
+            "RR_KFE": 0.9028232352214598
+          },
+          "baseline_estimated_abs_mechanical_energy_per_m_j_m": 473.503226100091,
+          "estimated_abs_mechanical_energy_per_m_j_m": 494.0587796707006
+        }
+      },
+      "all_gates_pass": false,
+      "actual_settings_verified": {
+        "cutoff_hz": 20.0,
+        "guard_fraction": 0.97,
+        "physx_kp_nm_rad": 300.0,
+        "physx_kd_nm_s_rad": 8.0,
+        "guard_velocity_limit_rad_s": 50.0,
+        "actual_solver_motor_torque_recorded": false
+      },
+      "mean_ranking_score": 0.9773022205144369,
+      "data_hashes": {
+        "flat": {
+          "g097_lpf20_flat_seed42.json": "45d4fe9e4c9299b7cc039aca757aac34391883226c245f64524cd00af20ed801",
+          "g097_lpf20_flat_seed42_trace_audit.npz": "1b3d7721b42ae93cb952ba54ab0dcbce5d77fbd0fce0f7d7186a52b396644f25"
+        },
+        "rough": {
+          "g097_lpf20_rough_seed42.json": "a92aa4c702834d5343b070be6f99dc64ee9a8c3f236e247ba1e41e6d9b70b0e7",
+          "g097_lpf20_rough_seed42_trace_audit.npz": "9287997ae9142ed0e93a948873f02d0662c9c4ad946251ed7da5ac13e4ca85c6"
+        }
+      }
+    }
+  },
+  "sequential_policy": {
+    "first": "g095_lpf20",
+    "second_if_first_fails_any_original_gate": "g097_lpf20",
+    "stop_after_first_pass": true,
+    "hypothesis": "20 Hz is an intermediate LPF setting; outcomes are not predicted observations."
+  },
+  "omitted_optional_candidates": [],
+  "complete_candidates": [
+    "g095_lpf20",
+    "g097_lpf20"
+  ],
+  "all_candidates_complete": true,
+  "screening_selected_candidate": null,
+  "selection_is_provisional_pending_holdout": false
+}

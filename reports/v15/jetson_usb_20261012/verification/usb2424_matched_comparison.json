@@ -1,0 +1,261 @@
+{
+  "baseline_job": 2343,
+  "usb_job": 2424,
+  "common_source_files": 281,
+  "different_source_files": [],
+  "checkpoint_hashes_match": true,
+  "all_pass": true,
+  "cases": [
+    {
+      "case": "rough",
+      "task_success": true,
+      "seconds_recorded": 24.0,
+      "origin_world_m": [
+        0.0,
+        0,
+        0
+      ],
+      "self_contact_force_n": 0.0,
+      "rated_rms_exceed_joint_count": 0,
+      "simulator_peak_exceeded": false,
+      "torque_transport_integrity_pass": true,
+      "telemetry_differences": {},
+      "torque_rms_nm": [
+        4.971017360687256,
+        9.243659973144531,
+        13.829479217529297,
+        4.753508567810059,
+        5.436368465423584,
+        10.266746520996094,
+        4.085961818695068,
+        6.600149154663086,
+        12.025622367858887,
+        3.8974690437316895,
+        6.054692268371582,
+        13.966011047363281
+      ],
+      "estimated_phase_rms_current_a": [
+        4.0414775290140295,
+        6.4192083146837025,
+        9.603805012173122,
+        3.8646411120406983,
+        3.775255878766378,
+        7.129685084025065,
+        3.3219201778008687,
+        4.583436912960477,
+        8.351126644346449,
+        3.1686740192940563,
+        4.204647408591376,
+        9.698618782891169
+      ],
+      "transport": {
+        "frames": 9600,
+        "tx_bytes": 2150400,
+        "rx_bytes": 2150400,
+        "max_roundtrip_ms": 3.6850679898634553,
+        "transport": "Linux PTY through native G474 C codec; actual USB/CAN/Jetson untested"
+      },
+      "compute_ms_p50_p99": [
+        0.2677440061233938,
+        4.6084835723741
+      ],
+      "physical_state_contact_fields_bit_identical": true,
+      "applied_command_torque_fields_bit_identical": true,
+      "kp_kd_bit_identical_after_physical_float32_cast": true
+    },
+    {
+      "case": "standing_hold",
+      "task_success": true,
+      "seconds_recorded": 12.0,
+      "origin_world_m": [
+        30.0,
+        0,
+        0
+      ],
+      "self_contact_force_n": 0.0,
+      "rated_rms_exceed_joint_count": 0,
+      "simulator_peak_exceeded": false,
+      "torque_transport_integrity_pass": true,
+      "telemetry_differences": {},
+      "torque_rms_nm": [
+        0.1994631141424179,
+        3.1756553649902344,
+        7.92597770690918,
+        0.3303491175174713,
+        2.6735754013061523,
+        8.345342636108398,
+        0.2586899399757385,
+        2.1248152256011963,
+        9.581263542175293,
+        0.423446387052536,
+        2.0267293453216553,
+        9.75528621673584
+      ],
+      "estimated_phase_rms_current_a": [
+        0.16216513344912026,
+        2.205316225687663,
+        5.504151185353598,
+        0.2685765183068872,
+        1.8566495842403836,
+        5.795376830630833,
+        0.21031702437051913,
+        1.4755661288897197,
+        6.653655237621732,
+        0.34426535532726504,
+        1.4074509342511496,
+        6.774504317177667
+      ],
+      "transport": {
+        "frames": 4800,
+        "tx_bytes": 1075200,
+        "rx_bytes": 1075200,
+        "max_roundtrip_ms": 2.5795160327106714,
+        "transport": "Linux PTY through native G474 C codec; actual USB/CAN/Jetson untested"
+      },
+      "compute_ms_p50_p99": [
+        0.3256920026615262,
+        95.55435998714529
+      ],
+      "physical_state_contact_fields_bit_identical": true,
+      "applied_command_torque_fields_bit_identical": true,
+      "kp_kd_bit_identical_after_physical_float32_cast": true
+    },
+    {
+      "case": "sit_rise_walk_stop_sit",
+      "task_success": true,
+      "seconds_recorded": 30.0,
+      "origin_world_m": [
+        60.0,
+        0,
+        0
+      ],
+      "self_contact_force_n": 0.0,
+      "rated_rms_exceed_joint_count": 0,
+      "simulator_peak_exceeded": false,
+      "torque_transport_integrity_pass": true,
+      "telemetry_differences": {
+        "kp": {
+          "max_abs_error": 1.5226874950258207e-05,
+          "changed_samples": 388
+        },
+        "kd": {
+          "max_abs_error": 2.3717270369871812e-07,
+          "changed_samples": 388
+        }
+      },
+      "torque_rms_nm": [
+        2.9031949043273926,
+        6.0950469970703125,
+        10.897390365600586,
+        3.033336639404297,
+        3.940398931503296,
+        9.893904685974121,
+        2.5416762828826904,
+        3.848276376724243,
+        11.337636947631836,
+        2.347837448120117,
+        3.832106828689575,
+        12.346022605895996
+      ],
+      "estimated_phase_rms_current_a": [
+        2.3603210604287743,
+        4.232671525743273,
+        7.56763219833374,
+        2.4661273491091844,
+        2.736388146877289,
+        6.870767143037584,
+        2.0664034820184476,
+        2.672414150502947,
+        7.873358991410997,
+        1.9088109334309895,
+        2.661185297701094,
+        8.573626809649998
+      ],
+      "transport": {
+        "frames": 12000,
+        "tx_bytes": 2688000,
+        "rx_bytes": 2688000,
+        "max_roundtrip_ms": 3.0094579560682178,
+        "transport": "Linux PTY through native G474 C codec; actual USB/CAN/Jetson untested"
+      },
+      "compute_ms_p50_p99": [
+        0.280412525171414,
+        87.10792988596957
+      ],
+      "physical_state_contact_fields_bit_identical": true,
+      "applied_command_torque_fields_bit_identical": true,
+      "kp_kd_bit_identical_after_physical_float32_cast": true
+    },
+    {
+      "case": "deep_crouch_rise_walk_stop_sit",
+      "task_success": true,
+      "seconds_recorded": 30.0,
+      "origin_world_m": [
+        90.0,
+        0,
+        0
+      ],
+      "self_contact_force_n": 0.0,
+      "rated_rms_exceed_joint_count": 0,
+      "simulator_peak_exceeded": false,
+      "torque_transport_integrity_pass": true,
+      "telemetry_differences": {
+        "kp": {
+          "max_abs_error": 1.5226874950258207e-05,
+          "changed_samples": 388
+        },
+        "kd": {
+          "max_abs_error": 2.3717270369871812e-07,
+          "changed_samples": 388
+        }
+      },
+      "torque_rms_nm": [
+        2.957198143005371,
+        6.112068176269531,
+        11.216328620910645,
+        3.002009153366089,
+        3.917670488357544,
+        10.206866264343262,
+        2.5409038066864014,
+        3.9791853427886963,
+        11.845819473266602,
+        2.355890989303589,
+        3.759169101715088,
+        13.03363037109375
+      ],
+      "estimated_phase_rms_current_a": [
+        2.404226132524692,
+        4.244491789076063,
+        7.789117097854614,
+        2.440657848265113,
+        2.72060450580385,
+        7.088101572460599,
+        2.0657754525905703,
+        2.7633231547143726,
+        8.226263523101807,
+        1.9153585278890968,
+        2.6105340984132557,
+        9.051132202148438
+      ],
+      "transport": {
+        "frames": 12000,
+        "tx_bytes": 2688000,
+        "rx_bytes": 2688000,
+        "max_roundtrip_ms": 3.8380310288630426,
+        "transport": "Linux PTY through native G474 C codec; actual USB/CAN/Jetson untested"
+      },
+      "compute_ms_p50_p99": [
+        0.2790949947666377,
+        100.50730597460642
+      ],
+      "physical_state_contact_fields_bit_identical": true,
+      "applied_command_torque_fields_bit_identical": true,
+      "kp_kd_bit_identical_after_physical_float32_cast": true
+    }
+  ],
+  "source_same": true,
+  "physical_telemetry_identical": false,
+  "conclusion": "Matched original case order/origins/history passed all four cases. This does not erase failure2355 under a different layout or establish robustness at arbitrary origins/history.",
+  "all_physical_state_and_applied_command_fields_bit_identical": true,
+  "reported_gain_only_difference_matches_float32_serialization": true
+}

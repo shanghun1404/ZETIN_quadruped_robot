@@ -1,0 +1,625 @@
+{
+  "bundle": "v15_jetson_20261012",
+  "checkpoints": {
+    "actor": {
+      "path": "checkpoints/model_15699.pt",
+      "sha256": "9a440065d0f93835abbf02278f79fff91aea95a18c3bf4020b83bb092f9e6db6",
+      "source": "reports/v15/cad_rms_20261011/round2/train_jobs/2341/results/model_15699.pt"
+    },
+    "student": {
+      "path": "checkpoints/v12_student_best.pt",
+      "sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+      "source": "frozen V12 DAgger best.pt"
+    }
+  },
+  "config_modules": [
+    "v12_camera",
+    "v12_training",
+    "v12_vision_student",
+    "v13_depth_policy",
+    "v13_torque_mdp",
+    "v16_controller_math",
+    "v16_force_qp",
+    "v16_physical_model",
+    "v16_wbc_qp"
+  ],
+  "default_enable_motors": false,
+  "deferred_training_imports": [
+    {
+      "function": "make_v12_depth_camera_cfg",
+      "module": "isaaclab",
+      "source": "config/v12_camera.py"
+    },
+    {
+      "function": "make_v13_depth_wrapper",
+      "module": "isaaclab_rl",
+      "source": "config/v13_depth_policy.py"
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "f54bbf87e4e853bee00eae478e38d7b4f61599c64a6eb9656e45b502d090fa9b",
+      "size_bytes": 9197,
+      "source": "deploy/jetson_v15/README.md"
+    },
+    {
+      "path": "build.sh",
+      "sha256": "13833317bce392ad05a96d3c9538dbdc94e8c8c44dbdd0c809adbcafe9898405",
+      "size_bytes": 961,
+      "source": "deploy/jetson_v15/build.sh"
+    },
+    {
+      "path": "build_bundle.py",
+      "sha256": "94fa63ef70f4a4fcde4bc1d0608665032dac496d73007b38f7bd2a09ecfc2ae7",
+      "size_bytes": 13254,
+      "source": "deploy/jetson_v15/build_bundle.py"
+    },
+    {
+      "path": "check_env.py",
+      "sha256": "c7efa380f27734afda86cfea62608943673e3ccc275c9cf75e15e6948d652209",
+      "size_bytes": 2315,
+      "source": "deploy/jetson_v15/check_env.py"
+    },
+    {
+      "path": "checkpoints/model_15699.pt",
+      "sha256": "9a440065d0f93835abbf02278f79fff91aea95a18c3bf4020b83bb092f9e6db6",
+      "size_bytes": 6882559,
+      "source": "trusted V15 actor model_15699.pt"
+    },
+    {
+      "path": "checkpoints/v12_student_best.pt",
+      "sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+      "size_bytes": 7021669,
+      "source": "trusted frozen V12 DAgger best.pt"
+    },
+    {
+      "path": "evidence/docs/superpowers/plans/2026-10-12-v15-jetson-usb.md",
+      "sha256": "e64de440b23ab60490c50b8e9465daf6360814263bd16b8d9ece17a87701beb0",
+      "size_bytes": 8312,
+      "source": "docs/superpowers/plans/2026-10-12-v15-jetson-usb.md"
+    },
+    {
+      "path": "evidence/docs/superpowers/specs/2026-10-12-v15-jetson-usb-design.md",
+      "sha256": "2fb8d6eca69158896fea23adf9b591537ea9af0558c5fd52424a8a8d7ec483cc",
+      "size_bytes": 8180,
+      "source": "docs/superpowers/specs/2026-10-12-v15-jetson-usb-design.md"
+    },
+    {
+      "path": "evidence/reports/v15/cad_rms_20261011/round2/motor_comparison.csv",
+      "sha256": "ac2537eeae1fe87d05ae17013d799167f694a3f9661da6d81ba45d64745781bc",
+      "size_bytes": 14599,
+      "source": "reports/v15/cad_rms_20261011/round2/motor_comparison.csv"
+    },
+    {
+      "path": "evidence/reports/v15/cad_rms_20261011/round2/summary.json",
+      "sha256": "32695ef405fef1f2775ba6293f460966c3c7e3634fb3b2623720dda79b389595",
+      "size_bytes": 163718,
+      "source": "reports/v15/cad_rms_20261011/round2/summary.json"
+    },
+    {
+      "path": "firmware/stm32g474_usb/.gitignore",
+      "sha256": "c7cd0fc55d4b88bc4ed87b1cdc33670d9046174ab762188a0f2ce10290bb56e0",
+      "size_bytes": 20,
+      "source": "firmware/stm32g474_usb/.gitignore"
+    },
+    {
+      "path": "firmware/stm32g474_usb/Makefile",
+      "sha256": "8031f568f2a2536818bc97d0d884c2797736f90ad0a9467292d255c9e2f117ae",
+      "size_bytes": 1129,
+      "source": "firmware/stm32g474_usb/Makefile"
+    },
+    {
+      "path": "firmware/stm32g474_usb/README.md",
+      "sha256": "4ed381da2afca9f652a798a332b828266103371ed9294463cff6b2a2624dd0ef",
+      "size_bytes": 14182,
+      "source": "firmware/stm32g474_usb/README.md"
+    },
+    {
+      "path": "firmware/stm32g474_usb/examples/board_hooks_disabled.c",
+      "sha256": "6e1a65e60f1a4c1efaf208a9a87d74ee1dc3bfe3fdfe804e2adb91c0d273087d",
+      "size_bytes": 671,
+      "source": "firmware/stm32g474_usb/examples/board_hooks_disabled.c"
+    },
+    {
+      "path": "firmware/stm32g474_usb/examples/g474_hal_port.c",
+      "sha256": "11d3385a2ff1ed9a85001f04702afa80a4c8ae0e917a90026b9f0f1407aa1a0c",
+      "size_bytes": 6732,
+      "source": "firmware/stm32g474_usb/examples/g474_hal_port.c"
+    },
+    {
+      "path": "firmware/stm32g474_usb/examples/qd_g474_port.h",
+      "sha256": "a2ae1f942e6fbc0cdd959db0178619d844601e013a46670ee5497adc87a10898",
+      "size_bytes": 756,
+      "source": "firmware/stm32g474_usb/examples/qd_g474_port.h"
+    },
+    {
+      "path": "firmware/stm32g474_usb/include/qd_protocol.h",
+      "sha256": "61496e41571f5e25cab57835df2ae87f1632eae447ac5ded2685d01694097171",
+      "size_bytes": 4837,
+      "source": "firmware/stm32g474_usb/include/qd_protocol.h"
+    },
+    {
+      "path": "firmware/stm32g474_usb/src/qd_controller.c",
+      "sha256": "2e380d1359ea96d377206ef6b9bc3a6a4dff7fcf65ad04ab752e4343ab056c23",
+      "size_bytes": 8308,
+      "source": "firmware/stm32g474_usb/src/qd_controller.c"
+    },
+    {
+      "path": "firmware/stm32g474_usb/src/qd_protocol.c",
+      "sha256": "b3bc21c514be3bb9c66b5a10fed4652ef3df89c05cdc46af702566c9c807b0df",
+      "size_bytes": 8425,
+      "source": "firmware/stm32g474_usb/src/qd_protocol.c"
+    },
+    {
+      "path": "firmware/stm32g474_usb/tests/hal_stub/main.h",
+      "sha256": "28d070146089a783f9110cc07afd8df396dbf457914d1a32059d9feb4349d439",
+      "size_bytes": 926,
+      "source": "firmware/stm32g474_usb/tests/hal_stub/main.h"
+    },
+    {
+      "path": "firmware/stm32g474_usb/tests/test_cross_language.py",
+      "sha256": "e023c8d2417302d1b65bc5c06fb96e7e394ac0369f3f8ee5595930b27b502354",
+      "size_bytes": 5776,
+      "source": "firmware/stm32g474_usb/tests/test_cross_language.py"
+    },
+    {
+      "path": "firmware/stm32g474_usb/tests/test_emulator.py",
+      "sha256": "fd93a82784b6daa198fee82991c06d8940d194848636169450a9ef30685d0f40",
+      "size_bytes": 6625,
+      "source": "firmware/stm32g474_usb/tests/test_emulator.py"
+    },
+    {
+      "path": "firmware/stm32g474_usb/tests/test_g474_port.c",
+      "sha256": "2c9a03b249e1e73984226f4d1377680bc0fd9db0de488a7a9ffaac6d3915f08b",
+      "size_bytes": 5497,
+      "source": "firmware/stm32g474_usb/tests/test_g474_port.c"
+    },
+    {
+      "path": "firmware/stm32g474_usb/tests/test_protocol.c",
+      "sha256": "5a3e75c2dde3310fa68fa56e61b7f7697a35d2c0930f914d5b19b6b12e88fb73",
+      "size_bytes": 16894,
+      "source": "firmware/stm32g474_usb/tests/test_protocol.c"
+    },
+    {
+      "path": "firmware/stm32g474_usb/tools/qd_emulator.c",
+      "sha256": "dc7b331f25e33a873e13356a4624955c195419113b3d33122ff8a866961a675a",
+      "size_bytes": 5665,
+      "source": "firmware/stm32g474_usb/tools/qd_emulator.c"
+    },
+    {
+      "path": "model/README.md",
+      "sha256": "af7b5da940ab6179c1235b1b093646a1ae8e4b2c3af62c3977d90c7171e51e3d",
+      "size_bytes": 4590,
+      "source": "config/experiments/v15_cad_20261011/model/README.md"
+    },
+    {
+      "path": "model/cad_model.json",
+      "sha256": "2107f3f0e6c27aefa13813bbbeb374af461b3c488d25ea57af8789890418e28e",
+      "size_bytes": 9316,
+      "source": "config/experiments/v15_cad_20261011/model/cad_model.json"
+    },
+    {
+      "path": "model/collision_hulls.npz",
+      "sha256": "25b71bbc630f696d812c785df69e4928356e52974f08fccb87ea91c1657acb8d",
+      "size_bytes": 1389268,
+      "source": "config/experiments/v15_cad_20261011/model/collision_hulls.npz"
+    },
+    {
+      "path": "model/cpu_model_tests.log",
+      "sha256": "6b1d4c3470174cd27d668dd6bf7345f370c10242a286f647af26749cb2fa0513",
+      "size_bytes": 712,
+      "source": "config/experiments/v15_cad_20261011/model/cpu_model_tests.log"
+    },
+    {
+      "path": "model/crouch.json",
+      "sha256": "027222dda5b34890502565f5abb86f77a8925b6830f87cc09915461fc4208b3d",
+      "size_bytes": 16390,
+      "source": "config/experiments/v15_cad_20261011/model/crouch.json"
+    },
+    {
+      "path": "model/quadruped_cad.xml",
+      "sha256": "914e645273bf5b89b9482007f42f489183f55a75d25f0ac8688aa0a728576678",
+      "size_bytes": 9055,
+      "source": "config/experiments/v15_cad_20261011/model/quadruped_cad.xml"
+    },
+    {
+      "path": "model/verification.json",
+      "sha256": "277224dcc952590f10ca057a4c4867a834dbe57055c26bb00cfadb291d1ac6a2",
+      "size_bytes": 39231,
+      "source": "config/experiments/v15_cad_20261011/model/verification.json"
+    },
+    {
+      "path": "run.sh",
+      "sha256": "15b80911ff4ded9dff37313b21e7583ec728a9f83590bc68c6872ee9e3ca3677",
+      "size_bytes": 1385,
+      "source": "deploy/jetson_v15/run.sh"
+    },
+    {
+      "path": "runtime/config/v12_camera.py",
+      "sha256": "12e51983601bff698366453ebc42751369a732f2d28b0591e2d228340a65bd7a",
+      "size_bytes": 2552,
+      "source": "config/v12_camera.py"
+    },
+    {
+      "path": "runtime/config/v12_training.py",
+      "sha256": "cf888e7764de765b530d47bfa67dca3df6d2a5165c0e5659052fd65ac7b75c15",
+      "size_bytes": 3991,
+      "source": "config/v12_training.py"
+    },
+    {
+      "path": "runtime/config/v12_vision_student.py",
+      "sha256": "d7dd5c7f08ac5393dd553325c47688320eab812a475429cc4a12fca41fb5c4de",
+      "size_bytes": 6087,
+      "source": "config/v12_vision_student.py"
+    },
+    {
+      "path": "runtime/config/v13_depth_policy.py",
+      "sha256": "4272100bb7700d3317960996ca85a7d4292cfad0ec17959e955f309761d82f77",
+      "size_bytes": 2553,
+      "source": "config/v13_depth_policy.py"
+    },
+    {
+      "path": "runtime/config/v13_torque_mdp.py",
+      "sha256": "b156a82fa97f5d5bc2590dd0ca63ed5256605b1548f4d4d1caf20c79f0f98297",
+      "size_bytes": 5461,
+      "source": "config/v13_torque_mdp.py"
+    },
+    {
+      "path": "runtime/config/v16_controller_math.py",
+      "sha256": "968f44085399dbaab77242fa11f03c9203e2261be6cb3f8f9a55806db34130e9",
+      "size_bytes": 10898,
+      "source": "config/v16_controller_math.py"
+    },
+    {
+      "path": "runtime/config/v16_force_qp.py",
+      "sha256": "d3d2e5f8d0391544afff7da9510eb43a1c0d216de0797c90a39785097c155f2e",
+      "size_bytes": 14294,
+      "source": "config/v16_force_qp.py"
+    },
+    {
+      "path": "runtime/config/v16_physical_model.py",
+      "sha256": "baaddfb7067578fab156b865d19d27ae7232a357703c69e9a12c5ac7d9a0fec9",
+      "size_bytes": 19769,
+      "source": "config/v16_physical_model.py"
+    },
+    {
+      "path": "runtime/config/v16_wbc_qp.py",
+      "sha256": "bb40774b551439f27b868e64350a347b31f851f211c9da096792f2e940ff05ad",
+      "size_bytes": 17321,
+      "source": "config/v16_wbc_qp.py"
+    },
+    {
+      "path": "verify_bundle.py",
+      "sha256": "b0a7e2f4c865eb85943d7539b6a7311e28b128ec6d2b5d22317e59ec4a1389ce",
+      "size_bytes": 1408,
+      "source": "deploy/jetson_v15/verify_bundle.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/launch/v14_ros2_control.launch.py",
+      "sha256": "ac6a629e1964e203b776440115253136433b68e9d5bf27e72b0b5a1fa399450a",
+      "size_bytes": 1830,
+      "source": "ros2/v14_ros2_control/launch/v14_ros2_control.launch.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/package.xml",
+      "sha256": "058048d4eb5f52a559a13538dce3009d6cc81c50bdaa980a6a8c354e292adba3",
+      "size_bytes": 780,
+      "source": "ros2/v14_ros2_control/package.xml"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/resource/v14_ros2_control",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "source": "ros2/v14_ros2_control/resource/v14_ros2_control"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/setup.cfg",
+      "sha256": "17048b287dc9a7e4677d1ab4a964e6f65d17fe4ebcfac1f00005d2a9a7f2d9a0",
+      "size_bytes": 101,
+      "source": "ros2/v14_ros2_control/setup.cfg"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/setup.py",
+      "sha256": "e7ba59d6216a2f08205a77579e8b38c4ded97a6691035b48a000fc9cf9c8fda5",
+      "size_bytes": 818,
+      "source": "ros2/v14_ros2_control/setup.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/test/conftest.py",
+      "sha256": "b37a5a9224d4ae05d9b9271e8c309be566ef1f5981ef50c6645e6b8d37779842",
+      "size_bytes": 356,
+      "source": "ros2/v14_ros2_control/test/conftest.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/test/test_contract.py",
+      "sha256": "6676762c6a4a9cd9e169f3c549ff80480fe5518639d3c975c03ef79d44abcd32",
+      "size_bytes": 1439,
+      "source": "ros2/v14_ros2_control/test/test_contract.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/test/test_joint_command.py",
+      "sha256": "9033c5532afd6d034272374b2d20558bd794196ecde6a19f871460f38f043788",
+      "size_bytes": 3910,
+      "source": "ros2/v14_ros2_control/test/test_joint_command.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/test/test_lockstep_nodes.py",
+      "sha256": "4742e70e9bc25f9e3cdd04af25d7cf20761109a574a522aa24a80bf77c80127e",
+      "size_bytes": 4731,
+      "source": "ros2/v14_ros2_control/test/test_lockstep_nodes.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/test/test_policy.py",
+      "sha256": "2f353c794cfe3049e035255e85fb5cf255c419c2b2e425e39b1bc962eb9ed89a",
+      "size_bytes": 4313,
+      "source": "ros2/v14_ros2_control/test/test_policy.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/v14_ros2_control/__init__.py",
+      "sha256": "0d77c21c34d203b881085a96e959aec75c38b53b23028ab8601ba08083cc6a43",
+      "size_bytes": 74,
+      "source": "ros2/v14_ros2_control/v14_ros2_control/__init__.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/v14_ros2_control/contract.py",
+      "sha256": "3cc7e691ff24a308bd5166c65334773d5f12431bb602e5cb68d1dbbaa3e75036",
+      "size_bytes": 3383,
+      "source": "ros2/v14_ros2_control/v14_ros2_control/contract.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/v14_ros2_control/joint_command.py",
+      "sha256": "d7cd63f00a045d82f30c75fb9ecdf2f2a13bf17698b229148eeefe33dfe3be23",
+      "size_bytes": 3520,
+      "source": "ros2/v14_ros2_control/v14_ros2_control/joint_command.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/v14_ros2_control/joint_command_node.py",
+      "sha256": "475c0d5001f82e7be7ca915210b3b204b797f038b2c373049c6cc7ab0db948d6",
+      "size_bytes": 2614,
+      "source": "ros2/v14_ros2_control/v14_ros2_control/joint_command_node.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/v14_ros2_control/policy.py",
+      "sha256": "688c182a067b282bd1d95fc04f8cb57594e6ad1cecf5be53fd9458a62a3bd97d",
+      "size_bytes": 4198,
+      "source": "ros2/v14_ros2_control/v14_ros2_control/policy.py"
+    },
+    {
+      "path": "workspace/src/v14_ros2_control/v14_ros2_control/policy_node.py",
+      "sha256": "8ee356f18fb09987b6bc320c9252d17eb9577463caf1f7ff9f44442fe68099c1",
+      "size_bytes": 4841,
+      "source": "ros2/v14_ros2_control/v14_ros2_control/policy_node.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/README.md",
+      "sha256": "68157674aaf971e13506798ca3ca56ce7dfd9a6d279b9e7652cb5a07140233e8",
+      "size_bytes": 8764,
+      "source": "ros2/v151_ros2_control/README.md"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/launch/v151.launch.py",
+      "sha256": "a82e2dcc1469cacd367a7358b7276bc6eca437f0bf253f6e3810f0cdc589651d",
+      "size_bytes": 522,
+      "source": "ros2/v151_ros2_control/launch/v151.launch.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/launch/v15_cad.launch.py",
+      "sha256": "0bdcd70932d645a412937075819893fa8abbc987826e2052281172862f6f2165",
+      "size_bytes": 907,
+      "source": "ros2/v151_ros2_control/launch/v15_cad.launch.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/package.xml",
+      "sha256": "18fd2b6431d84c950803001d2591a649d050b0b867ef365c37b42f65ce025722",
+      "size_bytes": 616,
+      "source": "ros2/v151_ros2_control/package.xml"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/resource/v151_ros2_control",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "source": "ros2/v151_ros2_control/resource/v151_ros2_control"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/setup.cfg",
+      "sha256": "a6da04a24220ebedc9edcbd413ca9a1f12c70f4e188ce24c4d464940fe10de98",
+      "size_bytes": 103,
+      "source": "ros2/v151_ros2_control/setup.cfg"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/setup.py",
+      "sha256": "e9ef02c1c94be642e2253fb879e2686ab5e895b5fdce50720091a613b535a273",
+      "size_bytes": 564,
+      "source": "ros2/v151_ros2_control/setup.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/test/test_dynamic_sit.py",
+      "sha256": "1d3ad572ef696148d641edd23377db0720edc97a616ea8b6bed81f9d5cf61aa7",
+      "size_bytes": 3907,
+      "source": "ros2/v151_ros2_control/test/test_dynamic_sit.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/test/test_motion.py",
+      "sha256": "184304764d233ead0b9aecb33744c26782ca50bbf204c65413834583786882b6",
+      "size_bytes": 5759,
+      "source": "ros2/v151_ros2_control/test/test_motion.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/test/test_ros_transport.py",
+      "sha256": "71369e5156d34d70c616e9c15559d380cb776c6e3d0a87d51aff7cd8014a6837",
+      "size_bytes": 12932,
+      "source": "ros2/v151_ros2_control/test/test_ros_transport.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/test/test_standing.py",
+      "sha256": "fc09ccaeac30ad9b95e60d452eee9a78d6bf45b20a7bf04832d676169d02071c",
+      "size_bytes": 22501,
+      "source": "ros2/v151_ros2_control/test/test_standing.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/test/test_v15_walk_transport.py",
+      "sha256": "fd0052b898560d9240816db763e9c9fd9ed53d1641a3d4e83a04e984ccfd7263",
+      "size_bytes": 7286,
+      "source": "ros2/v151_ros2_control/test/test_v15_walk_transport.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/v151_ros2_control/__init__.py",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size_bytes": 0,
+      "source": "ros2/v151_ros2_control/v151_ros2_control/__init__.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/v151_ros2_control/cad_standing.py",
+      "sha256": "caf98adec4572aaa790f4c32a81f74942731fb21aac3c5f0979a7114fbda65de",
+      "size_bytes": 3855,
+      "source": "ros2/v151_ros2_control/v151_ros2_control/cad_standing.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/v151_ros2_control/controller_node.py",
+      "sha256": "fab39809229c9c84b99fce60c17797283fc9d7f0e839ea16196aecf2491e94d2",
+      "size_bytes": 13778,
+      "source": "ros2/v151_ros2_control/v151_ros2_control/controller_node.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/v151_ros2_control/motion.py",
+      "sha256": "c2353c5b2adadf98e6adbe14aa5a120418ddf21c41d9ba08328e35b1b919318a",
+      "size_bytes": 7138,
+      "source": "ros2/v151_ros2_control/v151_ros2_control/motion.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/v151_ros2_control/standing.py",
+      "sha256": "00e8c18c5f38840c91e5e53ec953d84289b44dbae31713f3fadaec3f416c1a66",
+      "size_bytes": 18025,
+      "source": "ros2/v151_ros2_control/v151_ros2_control/standing.py"
+    },
+    {
+      "path": "workspace/src/v151_ros2_control/v151_ros2_control/v15_walk_node.py",
+      "sha256": "f813c321fba9c6477ad13980dd7544c7feeb6a3d7a487844a33482888313ed28",
+      "size_bytes": 5749,
+      "source": "ros2/v151_ros2_control/v151_ros2_control/v15_walk_node.py"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/README.md",
+      "sha256": "5874c8703fd440e1074686802af8aa9ef4bcaf3c74281c86bf5e22523a0a03b8",
+      "size_bytes": 4278,
+      "source": "ros2/v15_hardware_bridge/README.md"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/config/hardware.json",
+      "sha256": "6ccb222ffb50b278659d0f597fa4471ee8435e1defa560565a4d577e73d6593d",
+      "size_bytes": 352,
+      "source": "ros2/v15_hardware_bridge/config/hardware.json"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/launch/hardware.launch.py",
+      "sha256": "f4a94537291dce845936d4faa06c9c6d1cdca9c2abd5259b552e9e395c225e45",
+      "size_bytes": 2328,
+      "source": "ros2/v15_hardware_bridge/launch/hardware.launch.py"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/package.xml",
+      "sha256": "cf0ae38b50f9bf0e907ea92eddb9369079e473cda4d918c798bc4040a6e1a65b",
+      "size_bytes": 751,
+      "source": "ros2/v15_hardware_bridge/package.xml"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/resource/v15_hardware_bridge",
+      "sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "size_bytes": 1,
+      "source": "ros2/v15_hardware_bridge/resource/v15_hardware_bridge"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/setup.cfg",
+      "sha256": "5ec92bb9717370458e3b12690d795d9a10375f576adbe5cef15ae6ca45c32ac0",
+      "size_bytes": 107,
+      "source": "ros2/v15_hardware_bridge/setup.cfg"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/setup.py",
+      "sha256": "9995f46af22673314e8d908ac88f9c8aee2d648c983ff13437902b252f400d65",
+      "size_bytes": 746,
+      "source": "ros2/v15_hardware_bridge/setup.py"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/test/test_core.py",
+      "sha256": "37989476e9ce70853ed6051a72d2f95bbbf6988a61305868ced01a7632dceb34",
+      "size_bytes": 5791,
+      "source": "ros2/v15_hardware_bridge/test/test_core.py"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/test/test_protocol.py",
+      "sha256": "f325bd41df4134120181a03167aa9e2f1d009ac3a97b1b9b6d2fd2b1dbbfd39c",
+      "size_bytes": 14154,
+      "source": "ros2/v15_hardware_bridge/test/test_protocol.py"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/test/test_ros_gateway.py",
+      "sha256": "1dfdd15dcc7b8955af59c5dadd5f3e913d6b9fa380c59b66e6ebd0a24278a119",
+      "size_bytes": 6486,
+      "source": "ros2/v15_hardware_bridge/test/test_ros_gateway.py"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/test/test_sensor_node.py",
+      "sha256": "9cca30b49dc63605e24fd51aee1a691208df1c39365e9d59b562c9420a3175a1",
+      "size_bytes": 3294,
+      "source": "ros2/v15_hardware_bridge/test/test_sensor_node.py"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/v15_hardware_bridge/__init__.py",
+      "sha256": "02b947c7aea6c73102f20837fc11ebfaa81f35e86138595e042bab17c766a2a4",
+      "size_bytes": 63,
+      "source": "ros2/v15_hardware_bridge/v15_hardware_bridge/__init__.py"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/v15_hardware_bridge/cad_controller.py",
+      "sha256": "bfd40e3808a0263cedf4073433ab3601c49e31254e9f70c84f3e60243cf36efa",
+      "size_bytes": 1246,
+      "source": "ros2/v15_hardware_bridge/v15_hardware_bridge/cad_controller.py"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/v15_hardware_bridge/core.py",
+      "sha256": "04ec06c3cad5dddd256401f5f21533e804e64964104fa3c97ef9e132f3ea0c27",
+      "size_bytes": 6836,
+      "source": "ros2/v15_hardware_bridge/v15_hardware_bridge/core.py"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/v15_hardware_bridge/protocol.py",
+      "sha256": "223ddf6c0d9bb0789202fa76270c705d3d59dd71b3f8b39ccb0309dff40279c8",
+      "size_bytes": 9600,
+      "source": "ros2/v15_hardware_bridge/v15_hardware_bridge/protocol.py"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/v15_hardware_bridge/sensor_sync.py",
+      "sha256": "76c11d3152ee03d1b472d2752820bb7bc6edf1097edba706326d5d6f370f00ee",
+      "size_bytes": 4201,
+      "source": "ros2/v15_hardware_bridge/v15_hardware_bridge/sensor_sync.py"
+    },
+    {
+      "path": "workspace/src/v15_hardware_bridge/v15_hardware_bridge/usb_gateway.py",
+      "sha256": "56540e4dcfe14574be6723b7a937b138bc1aa037864c1c5a14048a098e0017c0",
+      "size_bytes": 6093,
+      "source": "ros2/v15_hardware_bridge/v15_hardware_bridge/usb_gateway.py"
+    }
+  ],
+  "physical_model": {
+    "metadata": "model/cad_model.json",
+    "path": "model/quadruped_cad.xml",
+    "physical_body_count": 13,
+    "sha256": "914e645273bf5b89b9482007f42f489183f55a75d25f0ac8688aa0a728576678",
+    "source_total_mass_kg": 23.09449815750122
+  },
+  "schema": 1,
+  "simulation_report": "evidence/reports/v15/cad_rms_20261011/round2/summary.json",
+  "source_repository": {
+    "head": "c87579975818119f582b70c332420e3e81d7b17e",
+    "snapshot": "working tree files identified by the per-file SHA256 values"
+  },
+  "target": {
+    "architecture": "aarch64",
+    "board": "NUCLEO-G474RE (MB1367)",
+    "ros": "jazzy",
+    "ubuntu": "24.04"
+  },
+  "validation_scope": "software preparation; Jetson timing, real MCU USB, motor CAN and sensor drivers require hardware validation"
+}

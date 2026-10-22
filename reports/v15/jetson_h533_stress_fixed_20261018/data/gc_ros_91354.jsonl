@@ -1,0 +1,5 @@
+{"pid": 91354, "tid": 91354, "generation": 1, "start_ns": 19325780163839, "end_ns": 19325783005485, "wall_ms": 2.841646, "thread_cpu_ms": 2.839808, "collected": 3}
+{"pid": 91354, "tid": 91354, "generation": 1, "start_ns": 19325954891529, "end_ns": 19325957361906, "wall_ms": 2.470377, "thread_cpu_ms": 2.449856, "collected": 0}
+{"pid": 91354, "tid": 91354, "generation": 1, "start_ns": 19326219254607, "end_ns": 19326221127629, "wall_ms": 1.873022, "thread_cpu_ms": 1.849216, "collected": 0}
+{"pid": 91354, "tid": 91354, "generation": 1, "start_ns": 19335747539390, "end_ns": 19335750455693, "wall_ms": 2.916303, "thread_cpu_ms": 2.891456, "collected": 0}
+{"pid": 91354, "tid": 91354, "generation": 2, "start_ns": 19337301130429, "end_ns": 19337338041850, "wall_ms": 36.911421, "thread_cpu_ms": 33.873728, "collected": 0}

@@ -1,0 +1,70 @@
+{
+  "usb_job": 2355,
+  "direct_job": 2432,
+  "common_source_files": 284,
+  "byte_different_source_files": [],
+  "checkpoint_hashes_match": true,
+  "cases": [
+    {
+      "case": "flat_14s",
+      "origin_world_m": [
+        0.0,
+        0,
+        0
+      ],
+      "task_success": true,
+      "seconds_recorded": 14.0,
+      "failure": null,
+      "self_contact_force_n": 0.0,
+      "rated_rms_exceed_joints": 0,
+      "simulator_peak_exceeded": false,
+      "physical_state_contacts_and_applied_commands_bit_identical": true,
+      "gains_identical_after_physical_float32_cast": true,
+      "telemetry_sha256_usb": "43676ed127c0b9f17bedf5156a9f008952aab46269ee00c744dfa0b7c595819a",
+      "telemetry_sha256_direct": "43676ed127c0b9f17bedf5156a9f008952aab46269ee00c744dfa0b7c595819a"
+    },
+    {
+      "case": "sit_rise_walk_stop_sit",
+      "origin_world_m": [
+        30.0,
+        0,
+        0
+      ],
+      "task_success": false,
+      "seconds_recorded": 19.04,
+      "failure": "RuntimeError('Trunk below 0.20m above local ground')",
+      "self_contact_force_n": 375.5765686035156,
+      "rated_rms_exceed_joints": 0,
+      "simulator_peak_exceeded": false,
+      "physical_state_contacts_and_applied_commands_bit_identical": true,
+      "gains_identical_after_physical_float32_cast": true,
+      "telemetry_sha256_usb": "a3bfb6676f2c558798ac190a3104cda7b6a3f852f682cceea9e85ff02ee77b53",
+      "telemetry_sha256_direct": "e76d957481fd18e6b15e078c851807e2c35a5c901f3790fa8cabe54ac8bc6135"
+    },
+    {
+      "case": "deep_crouch_rise_walk_stop_sit",
+      "origin_world_m": [
+        60.0,
+        0,
+        0
+      ],
+      "task_success": true,
+      "seconds_recorded": 30.0,
+      "failure": null,
+      "self_contact_force_n": 0.0,
+      "rated_rms_exceed_joints": 0,
+      "simulator_peak_exceeded": false,
+      "physical_state_contacts_and_applied_commands_bit_identical": true,
+      "gains_identical_after_physical_float32_cast": true,
+      "telemetry_sha256_usb": "6145663b473e03f653eaacd39f87ff281c4478d48dad2be153bc4105f619b27c",
+      "telemetry_sha256_direct": "0a5362aa2754393d8528589fcb299e2756efe6ec494a6efb42ebe8825dad9421"
+    }
+  ],
+  "established": "For identical failed layout0/30/60m and preceding-case history, original direct ROS2 and USB codec paths produce identical physical states, contacts and applied torque/target/maxForce, including the19.04s failure. The codec insertion does not introduce that failure in this controlled comparison.",
+  "not_established": [
+    "World origin versus prior scene/reset history has been individually isolated.",
+    "The stop→stand controller is robust across layouts.",
+    "A particular controller change has corrected the failure.",
+    "Real Jetson/MCU/CAN execution or20ms control readiness."
+  ]
+}

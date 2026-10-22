@@ -1,0 +1,7 @@
+{"topic": "odom", "first": {"stamp": 0, "frame": "world"}}
+{"topic": "depth/image", "first": {"stamp": 0, "frame": "front_depth"}}
+{"topic": "foot_contacts", "first": {"stamp": 0, "frame": "world"}}
+{"topic": "joint_states", "first": {"stamp": 0, "frame": ""}}
+{"topic": "joint_command", "first": {"stamp": 0, "frame": ""}}
+{"topic": "status", "first": {"stamp_ns": 0, "mode": "SIT", "support_feet": 0}}
+{"seen": ["depth/image", "foot_contacts", "joint_command", "joint_states", "odom", "status"], "publisher_counts": [1, 1, 1, 1, 1, 1]}

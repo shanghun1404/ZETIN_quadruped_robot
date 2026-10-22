@@ -1,0 +1,34 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><title>V15 새 CAD USD 검증</title>
+    <style>body{font:16px/1.6 sans-serif;max-width:1000px;margin:30px auto;padding:0 18px;color:#192633;background:#f9fafc}
+    h1,h2{line-height:1.3} table{border-collapse:collapse;width:100%;background:white;margin:16px 0}th,td{padding:7px;border:1px solid #d5dce5;text-align:left}
+    pre{overflow:auto;padding:16px;background:#eef1f5} .state{font-size:24px;color:#146b40}</style>
+    <h1>최신 채택 V15 × 새 CAD USD</h1><p class="state">보행·자가 접촉 종합: 통과</p>
+    <p>Slurm 2280 · ws1 · compute/admin · ROS2 Jazzy · Isaac Sim · 명령 +Y 0.4 m/s · 물리 200 Hz / 정책 50 Hz</p>
+    <p>USD: quadruped_20261011/quadruped_robot.usda. 새 질량 23.094 kg, 기존 질량 45.451 kg.
+    정책은 기존 채택 V15 job339/model_11699, depth 학생은 V12 best.pt를 사용했다.</p>
+    <table><tr><th>측정</th><th>결과</th><th>사전에 지정한 기준</th></tr>
+    <tr><td>기록 물리 구간</td><td>14.0000 s</td><td>요청 14 s 전부 완료</td></tr>
+    <tr><td>전방 진행</td><td>7.3109 m</td><td>14 s에서 ≥ 3.6 m</td></tr>
+    <tr><td>속도 MAE (첫 2 s 이후)</td><td>0.1499 m/s</td><td>≤ 0.15 m/s</td></tr>
+    <tr><td>몸통 최저 높이</td><td>0.4683 m</td><td>≥ 0.20 m, 기울기 ≤ 60°</td></tr>
+    <tr><td>비인접 쌍 최대 접촉</td><td>0.0000 N</td><td>≤ 1 N</td></tr></table>
+    <p>실행 오류: None</p><video controls preload="metadata" src="runs/2280/video/env_00.mp4" style="width:100%"></video><img src="telemetry.png" alt="보행 속도, 자세, 자가 접촉, 무릎 토크" style="width:100%">
+    <p>속도 오차 0.1499 m/s는 0.1500 m/s 기준에 가깝다. 측정한 첫 2 s 이후 평균 전방 속도는
+    0.5472 m/s로 0.4 m/s 명령보다 빠르다. 이 실행만으로 속도 추종의 충분한 여유를 확인한 것은 아니다.</p>
+    <h2>자가 충돌 범위</h2><p>trunk: 0.000 N · cross_leg: 0.000 N · same_leg_nonadjacent: 0.000 N</p>
+    <p>CAD 원본의 67개 convexHull을 사용하고 self-collision을 켰다. 13개 rigid body 중 비인접 66쌍을 양방향 접촉 센서로 확인했다.
+    PhysX가 기본적으로 제외하는 직접 연결 관절 12쌍은 이 판정에 포함되지 않는다. 접촉력 1 N 이하 판정은 이 실행 구간의 관측 결과다.</p>
+    <h2>관절 토크·전류</h2><table><tr><th>관절</th><th>토크 RMS (Nm)</th><th>토크 피크 (Nm)</th><th>추정 전류 RMS (A)</th></tr><tr><td>FL_HAA</td><td>8.22</td><td>24.55</td><td>6.69</td></tr><tr><td>FL_HFE</td><td>9.59</td><td>47.52</td><td>6.66</td></tr><tr><td>FL_KFE</td><td>11.48</td><td>47.52</td><td>7.98</td></tr><tr><td>FR_HAA</td><td>8.54</td><td>24.55</td><td>6.95</td></tr><tr><td>FR_HFE</td><td>9.70</td><td>43.16</td><td>6.74</td></tr><tr><td>FR_KFE</td><td>4.97</td><td>47.52</td><td>3.45</td></tr><tr><td>RL_HAA</td><td>5.81</td><td>24.55</td><td>4.73</td></tr><tr><td>RL_HFE</td><td>11.67</td><td>46.33</td><td>8.10</td></tr><tr><td>RL_KFE</td><td>10.60</td><td>47.52</td><td>7.36</td></tr><tr><td>RR_HAA</td><td>8.47</td><td>24.55</td><td>6.88</td></tr><tr><td>RR_HFE</td><td>9.04</td><td>43.64</td><td>6.28</td></tr><tr><td>RR_KFE</td><td>9.94</td><td>47.52</td><td>6.90</td></tr></table>
+    <p>통계는 실제 기록 구간 전체의 값이다. 토크는 명령 적용 직전의 cap 제한 implicit PD 추정치이며 PhysX에서 측정한 구동 토크가 아니다.
+    전류는 τ/(Kt×감속비), 효율 1 가정으로 HAA 1.23, HFE/KFE 1.44 Nm/A를 사용했다. 배터리 입력 전류와 다르다.</p>
+    <h2>USD 연결</h2><table><tr><th>다리</th><th>CAD 다리</th><th>HAA 부호</th><th>HFE 부호</th><th>KFE 부호</th></tr><tr><td>FL</td><td>FL</td><td>-1</td><td>-1</td><td>+1</td></tr><tr><td>FR</td><td>FR</td><td>-1</td><td>+1</td><td>-1</td></tr><tr><td>RL</td><td>BL</td><td>+1</td><td>-1</td><td>+1</td></tr><tr><td>RR</td><td>BR</td><td>+1</td><td>+1</td><td>-1</td></tr></table><p>관절 위치·속도·토크 모두 같은 부호로 변환한다. 새 base COM을 USD에서 읽어 원점 속도를 COM 속도로 보정한다.
+    모델 질량·관성·충돌 형상을 원본대로 사용했고, 구동기 설정은 V15의 Kp 300/Kd 8, HAA 24.8/HFE·KFE 48 Nm, armature 0.02, friction 0.3을 적용했다.
+    카메라는 V15의 84×84 depth 장착 위치와 방향으로 런타임에 추가했다.</p>
+    <h2>재실행</h2><pre>ssh -o ClearAllForwardings=yes ws1
+    sbatch --partition=compute --qos=admin /home/shanghun1404/v15_cad_20261011/config/experiments/v15_cad_20261011/eval.sbatch 14 42</pre>
+    <p>ROS2 패키지 빌드 후: <code>ros2 launch v151_ros2_control v15_cad.launch.py actor_checkpoint:=... student_checkpoint:=...</code>
+    Isaac 센서/브리지 namespace는 /v15cad, 걷기 명령은 /v15cad/cmd_vel의 linear.y이다.</p>
+    <p><a href="summary.json">요약 JSON</a> · <a href="profile.json">프로파일·해시</a> · <a href="runs/2280/result.json">원본 결과</a> ·
+    <a href="runs/2280/result.npz">원본 시계열</a> · <a href="audit/usd_cpu_audit.json">USD 비교</a> ·
+    <a href="verification/walk_green.txt">실제 DDS 정책 동등성</a> · <a href="verification/command_types_green.txt">매핑·명령 자료형 테스트</a></p>
+    <p>검증 범위는 선 자세에서 시작한 평지 V15 보행이다. 새 USD의 앉았다 일어서기, 계단, 실물 구동 결과는 이 보고서에 포함되지 않는다.</p></html>

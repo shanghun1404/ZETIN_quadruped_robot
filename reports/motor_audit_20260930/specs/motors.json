@@ -1,0 +1,10 @@
+{
+  "retrieved_date": "2026-09-30",
+  "user_confirmed": {"HAA":"AK70-10", "HFE":"AK10-9 KV60 V3.0", "KFE":"AK10-9 KV60 V3.0"},
+  "HAA": {"model":"AK70-10 KV100", "rated_torque_nm":8.3, "peak_torque_nm":24.8, "sim_limit_nm":24.8, "motor_kt_nm_per_a":0.123, "gear_ratio":10, "rated_current_datasheet_adc":7.2, "peak_current_datasheet_adc":23.2, "source":"https://www.cubemars.com/product/ak70-10-kv100-robotic-actuator.html"},
+  "HFE_KFE": {"model":"AK10-9 KV60 V3.0", "rated_torque_nm":18, "peak_torque_nm":53, "sim_limit_nm":48, "motor_kt_nm_per_a":0.16, "gear_ratio":9, "rated_current_datasheet_adc":10.7, "peak_current_datasheet_adc":31.9, "source":"https://img.cubemars.com/products/cubemars-product-parameter/AK10-9-V3.0-KV60.pdf"},
+  "current_model": "I_tau_ideal=abs(joint output torque)/(motor Kt * gear ratio), eta=1, same torque-current convention as manufacturer Kt. Not DC bus/battery current; no winding, inverter, thermal or regenerative model.",
+  "current_limit_verdict":"undetermined: manufacturer ADC rated/peak current cannot be directly equated to torque-producing current without a documented current convention and drive mapping. Nominal/peak torque-current pairs are not consistent with the listed Kt*gear ratio, especially AK10-9 V3.0.",
+  "efficiency_sensitivity":"For constant eta=0.85, multiply current estimates by 1/0.85=1.17647. This is sensitivity, not measured efficiency.",
+  "thermal_verdict":"Rated-torque exceedance and short-window RMS are screening metrics, not a temperature or continuous-duty safety certificate."
+}

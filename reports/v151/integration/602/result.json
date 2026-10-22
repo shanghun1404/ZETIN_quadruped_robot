@@ -1,0 +1,428 @@
+{
+  "schema": 1,
+  "scenario": "stairs_up",
+  "seed": 42,
+  "failure": null,
+  "completed": true,
+  "seconds_recorded": 14.0,
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "geometry": {
+    "difficulty": 0.7142857142857143,
+    "unique_tiles": 1,
+    "step_height_m": 0.15714285714285717,
+    "full_rise_m": 1.1
+  },
+  "command_schema": 2,
+  "drive_gain_checks": [
+    {
+      "stamp_ns": 0,
+      "kp": [
+        [
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0,
+          300.0
+        ]
+      ],
+      "kd": [
+        [
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0,
+          8.0
+        ]
+      ]
+    }
+  ],
+  "drive_limit_checks": [
+    {
+      "stamp_ns": 0,
+      "mode": "WALK",
+      "drive_limit": [
+        24.799999237060547,
+        24.799999237060547,
+        48.0,
+        48.0,
+        24.799999237060547,
+        24.799999237060547,
+        48.0,
+        48.0,
+        48.0,
+        48.0,
+        48.0,
+        48.0
+      ],
+      "feedforward": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ],
+  "reset_after_initialization": false,
+  "terminal_position": [
+    0.0866178497672081,
+    0.8345422744750977,
+    -0.5898878574371338
+  ],
+  "terminal_quaternion": [
+    0.9957895874977112,
+    -0.003814786672592163,
+    -0.008530136197805405,
+    0.0911908745765686
+  ],
+  "torque_semantics": "hybrid: feedforward command at zero gains; drive-cap-aware instantaneous implicit PD estimate when gains nonzero, not measured PhysX drive force",
+  "torque_rms": [
+    9.364188194274902,
+    6.804940700531006,
+    12.922940254211426,
+    6.652205467224121,
+    5.289708137512207,
+    12.167508125305176,
+    5.71119499206543,
+    5.216190814971924,
+    10.360718727111816,
+    4.222378253936768,
+    3.4547321796417236,
+    14.799906730651855
+  ],
+  "torque_peak": [
+    24.552003860473633,
+    47.52000045776367,
+    47.52000427246094,
+    24.552001953125,
+    47.519996643066406,
+    47.519996643066406,
+    24.552001953125,
+    47.52000427246094,
+    47.519996643066406,
+    20.867904663085938,
+    35.2479248046875,
+    43.84587478637695
+  ],
+  "rated_exceed_fraction": [
+    0.17107142857142857,
+    0.032857142857142856,
+    0.10357142857142858,
+    0.08892857142857143,
+    0.012142857142857143,
+    0.11321428571428571,
+    0.11,
+    0.0125,
+    0.025357142857142856,
+    0.10035714285714285,
+    0.003928571428571429,
+    0.09678571428571428
+  ],
+  "mean_absolute_power": 22.805360794067383,
+  "min_interleg_gap_m": 0.20498188370827783,
+  "negative_gap_fraction": 0.0,
+  "contact_pair_force_max_N": 0.0,
+  "min_leg_trunk_proxy_gap_m": -0.0059857830663663705,
+  "trunk_proxy_overlap_fraction": 0.004642857142857143,
+  "min_same_leg_thigh_foot_gap_m": 0.2838402915450138,
+  "same_leg_thigh_foot_proxy_overlap_fraction": 0.0,
+  "same_leg_thigh_foot_per_pair_minimum_m": {
+    "FL_thigh_profile--FL_foot": 0.285924572990322,
+    "FR_thigh_profile--FR_foot": 0.28388712986967646,
+    "RL_thigh_profile--RL_foot": 0.28592469010184757,
+    "RR_thigh_profile--RR_foot": 0.2838402915450138
+  },
+  "same_leg_thigh_foot_geometry": [
+    {
+      "center_local_m": [
+        0.1798692178328798,
+        0.30990000861594424,
+        -0.5425212965203308
+      ],
+      "half_extents_m": [
+        0.019985238070829858,
+        0.01998809909391497,
+        0.022521271821656086
+      ],
+      "leg": "FL",
+      "collider_path": "/World/envs/env_0/Robot/base/FL_foot/collisions/foot/foot",
+      "mesh_point_count": 20094,
+      "mesh_to_foot_transform": [
+        [
+          0.0010000000474974513,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0010000000474974513,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0010000000474974513,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_points_bounds": [
+        [
+          159.88397216796875,
+          289.9118957519531,
+          -565.0425415039062
+        ],
+        [
+          199.8544464111328,
+          329.8880920410156,
+          -520.0
+        ]
+      ],
+      "collision_approximation": "convexHull",
+      "proxy": "foot_actor_frame_AABB_of_convex_hull_vertices",
+      "actual_contact_measured": false,
+      "physical_pair_filtered": true,
+      "interpretation": "Positive gap separates modeled geometry; negative gap is possible proxy overlap, not confirmed mesh collision. Contact offsets and solver tolerances excluded."
+    },
+    {
+      "center_local_m": [
+        0.1798692178328798,
+        0.30990000861594424,
+        -0.5425212965203308
+      ],
+      "half_extents_m": [
+        0.019985238070829858,
+        0.01998809909391497,
+        0.022521271821656086
+      ],
+      "leg": "FR",
+      "collider_path": "/World/envs/env_0/Robot/base/FR_foot/collisions/foot/foot",
+      "mesh_point_count": 20094,
+      "mesh_to_foot_transform": [
+        [
+          0.0010000000474974513,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0010000000474974513,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0010000000474974513,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_points_bounds": [
+        [
+          159.88397216796875,
+          289.9118957519531,
+          -565.0425415039062
+        ],
+        [
+          199.8544464111328,
+          329.8880920410156,
+          -520.0
+        ]
+      ],
+      "collision_approximation": "convexHull",
+      "proxy": "foot_actor_frame_AABB_of_convex_hull_vertices",
+      "actual_contact_measured": false,
+      "physical_pair_filtered": true,
+      "interpretation": "Positive gap separates modeled geometry; negative gap is possible proxy overlap, not confirmed mesh collision. Contact offsets and solver tolerances excluded."
+    },
+    {
+      "center_local_m": [
+        0.1798692178328798,
+        0.30990000861594424,
+        -0.5425212965203308
+      ],
+      "half_extents_m": [
+        0.019985238070829858,
+        0.01998809909391497,
+        0.022521271821656086
+      ],
+      "leg": "RL",
+      "collider_path": "/World/envs/env_0/Robot/base/RL_foot/collisions/foot/foot",
+      "mesh_point_count": 20094,
+      "mesh_to_foot_transform": [
+        [
+          0.0010000000474974513,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0010000000474974513,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0010000000474974513,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_points_bounds": [
+        [
+          159.88397216796875,
+          289.9118957519531,
+          -565.0425415039062
+        ],
+        [
+          199.8544464111328,
+          329.8880920410156,
+          -520.0
+        ]
+      ],
+      "collision_approximation": "convexHull",
+      "proxy": "foot_actor_frame_AABB_of_convex_hull_vertices",
+      "actual_contact_measured": false,
+      "physical_pair_filtered": true,
+      "interpretation": "Positive gap separates modeled geometry; negative gap is possible proxy overlap, not confirmed mesh collision. Contact offsets and solver tolerances excluded."
+    },
+    {
+      "center_local_m": [
+        0.1798692178328798,
+        0.30990000861594424,
+        -0.5425212965203308
+      ],
+      "half_extents_m": [
+        0.019985238070829858,
+        0.01998809909391497,
+        0.022521271821656086
+      ],
+      "leg": "RR",
+      "collider_path": "/World/envs/env_0/Robot/base/RR_foot/collisions/foot/foot",
+      "mesh_point_count": 20094,
+      "mesh_to_foot_transform": [
+        [
+          0.0010000000474974513,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0010000000474974513,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0010000000474974513,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_points_bounds": [
+        [
+          159.88397216796875,
+          289.9118957519531,
+          -565.0425415039062
+        ],
+        [
+          199.8544464111328,
+          329.8880920410156,
+          -520.0
+        ]
+      ],
+      "collision_approximation": "convexHull",
+      "proxy": "foot_actor_frame_AABB_of_convex_hull_vertices",
+      "actual_contact_measured": false,
+      "physical_pair_filtered": true,
+      "interpretation": "Positive gap separates modeled geometry; negative gap is possible proxy overlap, not confirmed mesh collision. Contact offsets and solver tolerances excluded."
+    }
+  ],
+  "same_leg_thigh_foot_pair_order": [
+    "FL_thigh_profile--FL_foot",
+    "FR_thigh_profile--FR_foot",
+    "RL_thigh_profile--RL_foot",
+    "RR_thigh_profile--RR_foot"
+  ],
+  "same_leg_thigh_foot_gate_applied": true,
+  "collision_scope": "24 cross-leg thigh/calf capsule gaps and 12 contact channels covering 54 unique cross-leg thigh/calf/foot pairs. Four same-leg thigh-foot gaps are separate enclosing-box proxies; those physical pairs remain filtered. Same-leg thigh-calf/calf-foot and leg-ground contacts excluded; no trunk collider, only eight capsule-trunk box proxy checks.",
+  "final_position": [
+    0.08661672472953796,
+    0.8345410823822021,
+    -0.5898881554603577
+  ],
+  "modes": [
+    "WALK"
+  ],
+  "compute_ms_p50_p99": [
+    0.2966425090562552,
+    4.8301260836888105
+  ],
+  "demo_sequence_required": false,
+  "task_success": true,
+  "motion_success": true,
+  "collision_checks_pass": true,
+  "collision_gate_semantics": "cross-leg force<=1N, capsule gap>=-2mm, same-leg conservative foot-box gap>=0; trunk proxy reported separately"
+}

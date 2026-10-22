@@ -1,0 +1,11 @@
+{
+  "job": 2424,
+  "source_hashes_verified": 317,
+  "physics_command_steps_verified": 19200,
+  "step_period_ns": 5000000,
+  "status_command_stamp_match": true,
+  "finite_all_arrays": true,
+  "resets_during_trial": false,
+  "transport_retries": 0,
+  "scope": "Frozen source hashes and exact recorded command/physics/ROS status grids, not real hardware timing"
+}

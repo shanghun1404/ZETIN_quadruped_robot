@@ -1,0 +1,13 @@
+{
+  "host_only": true,
+  "samples": 721000,
+  "populate_seconds": 4.548251396001433,
+  "gc_collect_ms": [
+    5.111791,
+    3.712059,
+    4.408343,
+    5.012584,
+    4.906865
+  ],
+  "retained_times_exact": true
+}

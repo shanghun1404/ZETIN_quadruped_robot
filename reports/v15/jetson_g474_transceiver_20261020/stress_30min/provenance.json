@@ -1,0 +1,16 @@
+{
+  "host": "jetson",
+  "sha256": {
+    "build/g474_can_fixture.elf": "b635539ebce9328eab6bf1eff54d7ea5db1ab85afa9361b932957b5ca416bbe1",
+    "build/g474_can_fixture.bin": "93cd9a8c5749c7141d4b193808c45eb6c6fb0e464c1c8ae94a458a72b03e0897",
+    "firmware/g474_can_fixture.c": "88099ad88607d60baf345cffb78ec8438b2fc76dbd3e86fe69dec09df744c9b5",
+    "firmware/g474_diag.h": "fc09a160289537d0555f095f618186ce012b091c5bf201307bd134be702244f4",
+    "core/src/qd_protocol.c": "277a856b3554015d9e52bc69d29eaf02b28e11343be9f1ad5be80fe3f21e2492",
+    "core/examples/qd_ak_virtual.c": "e18007bef0dc68a2d8b69264c7e3965eee1c30c000c237f1d7e679b59a28c286",
+    "ak_stress.py": "2748db49f6430d7a9bdbf472960c7f60e827b193b6d188a8083ea2cc7ff40aca",
+    "g474_control.py": "214808fe94a167f88eeba312324f4372b40291cf59bceceee9237f7b015551f3",
+    "verify_capture.py": "7f7c398b5d7c5e320a7bc255c2514687ea89870c961b751c8081b1a652f2fb3e",
+    "run_stress_30min.py": "0126d6d816c830349ddb9e22ed616d8667b88295d8ecb25c6dd45f9833142f19",
+    "pin_map.json": "02d7599bcf79521939b61bf414de9ddaf39c401d1e88a19a4d150ce48da8f865"
+  }
+}

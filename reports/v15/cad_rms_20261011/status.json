@@ -1,0 +1,49 @@
+{
+  "completed": true,
+  "adopted": false,
+  "training_state": "COMPLETED",
+  "parent_training_job": 2333,
+  "parent_checkpoint_sha256": "b04417c29f30e47020195b070d059984a37531ed163c65b237c05b90539da5df",
+  "requested_updates": 600,
+  "scope": "Nine unchanged non-stair ROS2 cases; rated RMS must be within all12joints",
+  "training_job": 2338,
+  "evaluation_jobs": [
+    2339,
+    2340
+  ],
+  "actual_preflight_passed": true,
+  "preflight_physics_steps": 100,
+  "actual_terrain_columns": {
+    "flat": 116,
+    "rough": 12
+  },
+  "actual_learning_rate": 3e-05,
+  "evaluation_state": "COMPLETED",
+  "checkpoint": "model_15299.pt",
+  "candidate_checkpoint_sha256": "07712abc8c261926744b57608e719603c35c5f18fc62228fac7130126ec6ec19",
+  "completed_updates": 600,
+  "training_policy_samples": 1843200,
+  "all_scalar_values_finite": true,
+  "nonfinite_events": 0,
+  "physics_divergence_events": 0,
+  "optimization_goal_met": false,
+  "candidate_motion_pass_count": 7,
+  "candidate_rated_rms_exceed_count": 0,
+  "transition_failure_cases": [
+    "sit_rise_walk_stop_sit",
+    "deep_crouch_rise_walk_stop_sit"
+  ],
+  "follow_up_state": "COMPLETED",
+  "follow_up_training_job": 2341,
+  "follow_up_evaluation_jobs": [
+    2342,
+    2343
+  ],
+  "follow_up_report": "round2/report.html",
+  "follow_up_optimization_goal_met": true,
+  "latest_report": "round2/report.html",
+  "latest_checkpoint": "round2/train_jobs/2341/results/model_15699.pt",
+  "latest_motion_pass_count": 9,
+  "latest_rated_rms_exceed_count": 0,
+  "latest_checkpoint_sha256": "9a440065d0f93835abbf02278f79fff91aea95a18c3bf4020b83bb092f9e6db6"
+}

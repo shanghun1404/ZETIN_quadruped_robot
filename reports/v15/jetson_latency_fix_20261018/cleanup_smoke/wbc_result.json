@@ -1,0 +1,16 @@
+{
+  "backend": "cpp",
+  "target_hz": 50,
+  "requested_samples": 1250,
+  "passed": true,
+  "completed_samples": 1250,
+  "measured_samples": 1000,
+  "last_completion_relative_to_end_ms": -9.210892,
+  "elapsed_s": 24.990887158,
+  "mean_ms": 11.000863003,
+  "p99_ms": 13.66337813,
+  "max_ms": 15.450952,
+  "above_20ms": 0,
+  "scheduling_lateness_p99_ms": 0.08329355000000001,
+  "scheduling_lateness_max_ms": 0.760122
+}

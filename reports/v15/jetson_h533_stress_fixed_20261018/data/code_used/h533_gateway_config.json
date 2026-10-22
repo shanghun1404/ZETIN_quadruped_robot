@@ -1,0 +1,8 @@
+{
+  "target": "NUCLEO-H533RE diagnostic transport fixture, synthetic zero feedback",
+  "serial_port": "/dev/serial/by-id/usb-STMicroelectronics_STLINK-V3_003B00283433511930343835-if01",
+  "baud": 921600,
+  "calibration_verified": false,
+  "motors": [],
+  "notes": "Transport fixture only. All motor output callbacks permanently unavailable."
+}

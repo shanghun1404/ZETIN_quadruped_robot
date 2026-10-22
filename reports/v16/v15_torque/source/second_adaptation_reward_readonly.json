@@ -1,0 +1,94 @@
+{
+  "inspection_is_read_only": true,
+  "no_training_or_simulation_executed": true,
+  "source_evidence": {
+    "/home/projects/legacy/quadruped_training_smooth_v11/v8_env_cfg.py": {
+      "sha256": "750a8a006c9749c49f1868437cc7bfbb88d2912b155c630452e5340dd190c351",
+      "hits": [
+        {
+          "line": 128,
+          "context": "    \"joint_acc\": -1.0e-4,\n    \"joint_pos\": -0.7,\n    \"joint_torques\": -5.0e-4,\n    \"joint_vel\": -1.0e-2,\n}\n\n\n@configclass\nclass V8ActionsCfg:\n    joint_pos = mdp.JointPositionActionCfg(\n        asset_name=\"robot\", joint_names=[\".*\"], scale=0.2, use_default_offset=True"
+        },
+        {
+          "line": 323,
+          "context": "        },\n    )\n    joint_torques = RewardTermCfg(\n        func=spot_mdp.joint_torques_penalty,\n        weight=-5.0e-4,\n        params={\"asset_cfg\": SceneEntityCfg(\"robot\", joint_names=\".*\")},\n    )\n    joint_vel = RewardTermCfg(\n        func=spot_mdp.joint_velocity_penalty,\n        weight=-1.0e-2,\n        params={\"asset_cfg\": SceneEntityCfg(\"robot\", joint_names=HIP_JOINTS)},"
+        },
+        {
+          "line": 324,
+          "context": "    )\n    joint_torques = RewardTermCfg(\n        func=spot_mdp.joint_torques_penalty,\n        weight=-5.0e-4,\n        params={\"asset_cfg\": SceneEntityCfg(\"robot\", joint_names=\".*\")},\n    )\n    joint_vel = RewardTermCfg(\n        func=spot_mdp.joint_velocity_penalty,\n        weight=-1.0e-2,\n        params={\"asset_cfg\": SceneEntityCfg(\"robot\", joint_names=HIP_JOINTS)},\n    )"
+        }
+      ],
+      "joint_torques_penalty_definition": []
+    },
+    "/home/projects/legacy/quadruped_training_smooth_v11/v10_2_flat_env_cfg.py": {
+      "sha256": "2f73585816da24495d72bf3e0109b2b29b093a5871d010664cfe7866b63979d1",
+      "hits": [],
+      "joint_torques_penalty_definition": []
+    },
+    "/home/projects/legacy/quadruped_training_smooth_v11/v10_3_flat_env_cfg.py": {
+      "sha256": "c6fcb08bef82dca34d717fb422d993afa1c0119133e559fcde1a581ecbd33191",
+      "hits": [],
+      "joint_torques_penalty_definition": []
+    },
+    "/home/projects/legacy/quadruped_training_smooth_v11/v10_4_terrain_env_cfg.py": {
+      "sha256": "21368271cf6864e9221f9bd1f0679f215aa833cca94527cbf7c6be1048b674c1",
+      "hits": [],
+      "joint_torques_penalty_definition": []
+    },
+    "/home/projects/legacy/quadruped_training_smooth_v11/v11_terrain_env_cfg.py": {
+      "sha256": "5c52f63234c2646d5debbfe6d33bf53624042172fd088c270e89f4b81e7af724",
+      "hits": [],
+      "joint_torques_penalty_definition": []
+    },
+    "/home/shanghun1404/v14_leg_collision/config/v14_leg_env_cfg.py": {
+      "sha256": "2cc074a3419189b1b95378d025106c0a189a68d4a58710967071f8520d60a3c4",
+      "hits": [
+        {
+          "line": 19,
+          "context": "    \"action_smoothness\": V11_REWARD_WEIGHTS[\"action_smoothness\"],\n    \"torque_pressure\": 0.0,\n    \"joint_power\": 0.0,\n}\n\n\n@configclass\nclass GuideV14LegEnvCfg(GuideV13TorqueEnvCfg):\n    \"\"\"Train around inter-leg contacts while preserving the torque request guard.\"\"\"\n\n    def __post_init__(self):"
+        },
+        {
+          "line": 37,
+          "context": "        self.rewards.action_smoothness.weight = V11_REWARD_WEIGHTS[\"action_smoothness\"]\n        self.rewards.torque_pressure = None\n        self.rewards.joint_power = None\n\n\n@configclass\nclass GuideV14StairEnvCfg(GuideV14LegEnvCfg):\n    \"\"\"Concentrate later PPO updates on stair ascent and descent.\"\"\"\n\n    def __post_init__(self):\n        super().__post_init__()"
+        }
+      ],
+      "joint_torques_penalty_definition": []
+    },
+    "/home/shanghun1404/v15_large_scale/config/v15_env_cfg.py": {
+      "sha256": "9d7630498116cff12bde9f05f38a7957ea8dd176a2a42d00aaaa73bb1d1e8672",
+      "hits": [],
+      "joint_torques_penalty_definition": []
+    },
+    "/opt/isaaclab/source/isaaclab_tasks/isaaclab_tasks/manager_based/locomotion/velocity/config/spot/mdp/rewards.py": {
+      "sha256": "a757a62b1f7bb06f4c5bc5c6380c411588c15ca089c03000f9c259754cc515c4",
+      "hits": [
+        {
+          "line": 273,
+          "context": "\n\ndef joint_torques_penalty(env: ManagerBasedRLEnv, asset_cfg: SceneEntityCfg) -> torch.Tensor:\n    \"\"\"Penalize joint torques on the articulation.\"\"\"\n    # extract the used quantities (to enable type-hinting)\n    asset: Articulation = env.scene[asset_cfg.name]\n    return torch.linalg.norm((asset.data.applied_torque), dim=1)\n\n\ndef joint_velocity_penalty(env: ManagerBasedRLEnv, asset_cfg: SceneEntityCfg) -> torch.Tensor:\n    \"\"\"Penalize joint velocities on the articulation.\"\"\""
+        }
+      ],
+      "joint_torques_penalty_definition": [
+        "def joint_torques_penalty(env: ManagerBasedRLEnv, asset_cfg: SceneEntityCfg) -> torch.Tensor:\n    \"\"\"Penalize joint torques on the articulation.\"\"\"\n    # extract the used quantities (to enable type-hinting)\n    asset: Articulation = env.scene[asset_cfg.name]\n    return torch.linalg.norm((asset.data.applied_torque), dim=1)"
+      ]
+    },
+    "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_536/guide_v15_torque_finetune/2026-09-29_02-14-34_339_g097_lpf23_lr3p375e-5/params/env.yaml": {
+      "sha256": "092fc4584e0c0fa69d3ac5ae628bec292658b158978c681dc209d5e1261fbc77",
+      "hits": [
+        {
+          "line": 1295,
+          "context": "      velocity_threshold: 0.5\n    weight: -0.7\n  joint_torques:\n    func: isaaclab_tasks.manager_based.locomotion.velocity.config.spot.mdp.rewards:joint_torques_penalty\n    params:\n      asset_cfg:\n        name: robot\n        joint_names: .*\n        joint_ids: !!python/object/apply:builtins.slice\n        - null\n        - null"
+        },
+        {
+          "line": 1296,
+          "context": "    weight: -0.7\n  joint_torques:\n    func: isaaclab_tasks.manager_based.locomotion.velocity.config.spot.mdp.rewards:joint_torques_penalty\n    params:\n      asset_cfg:\n        name: robot\n        joint_names: .*\n        joint_ids: !!python/object/apply:builtins.slice\n        - null\n        - null\n        - null"
+        }
+      ],
+      "joint_torques_penalty_definition": []
+    }
+  },
+  "actual536_joint_torques_reward_weight": -0.0005,
+  "actual536_joint_torques_block": "  joint_torques:\n    func: isaaclab_tasks.manager_based.locomotion.velocity.config.spot.mdp.rewards:joint_torques_penalty\n    params:\n      asset_cfg:\n        name: robot\n        joint_names: .*\n        joint_ids: !!python/object/apply:builtins.slice\n        - null\n        - null\n        - null\n        fixed_tendon_names: null\n        fixed_tendon_ids: !!python/object/apply:builtins.slice\n        - null\n        - null\n        - null\n        body_names: null\n        body_ids: !!python/object/apply:builtins.slice\n        - null\n        - null\n        - null\n        object_collection_names: null\n        object_collection_ids: !!python/object/apply:builtins.slice\n        - null\n        - null\n        - null\n        preserve_order: false\n    weight: -0.0005",
+  "actual536_env_yaml_sha256": "092fc4584e0c0fa69d3ac5ae628bec292658b158978c681dc209d5e1261fbc77",
+  "proposed_first_candidate_multiplier": 1.25,
+  "proposed_first_candidate_weight": -0.000625
+}

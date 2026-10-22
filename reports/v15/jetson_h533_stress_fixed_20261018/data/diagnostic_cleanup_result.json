@@ -1,0 +1,102 @@
+{
+  "passed": true,
+  "children": {
+    "wbc": {
+      "pid": 91358,
+      "signal_sent": false,
+      "timed_out": false,
+      "killed": false,
+      "group_killed": false,
+      "exitcode": 0
+    },
+    "gateway": {
+      "pid": 91359,
+      "signal_sent": true,
+      "timed_out": false,
+      "killed": false,
+      "group_killed": false,
+      "exitcode": -2
+    },
+    "planner": {
+      "pid": 91360,
+      "signal_sent": true,
+      "timed_out": false,
+      "killed": false,
+      "group_killed": false,
+      "exitcode": 0
+    },
+    "command": {
+      "pid": 91361,
+      "signal_sent": true,
+      "timed_out": false,
+      "killed": false,
+      "group_killed": false,
+      "exitcode": 0
+    }
+  },
+  "artifacts": {
+    "ros_samples.csv": {
+      "passed": true,
+      "records": 721000
+    },
+    "planner_trace.jsonl": {
+      "passed": true,
+      "records": 180249
+    },
+    "policy_worker_timing.csv": {
+      "passed": true,
+      "records": 180349
+    },
+    "policy_worker_result.json": {
+      "passed": true
+    },
+    "planner_cleanup_result.json": {
+      "passed": true
+    },
+    "gateway_trace_metrics.json": {
+      "passed": true
+    },
+    "gateway_writes.csv": {
+      "passed": true,
+      "records": 720999,
+      "filtered_records": 720996
+    },
+    "serial_syscalls_slow.jsonl": {
+      "passed": true,
+      "records": 28
+    },
+    "gc_gateway.jsonl": {
+      "passed": true,
+      "records": 2
+    },
+    "gc_policy.jsonl": {
+      "passed": true,
+      "records": 2
+    },
+    "gc_child_91360.jsonl": {
+      "passed": true,
+      "records": 35
+    },
+    "gc_command_child_91361.jsonl": {
+      "passed": true,
+      "records": 34
+    },
+    "gc_ros_91354.jsonl": {
+      "passed": true,
+      "records": 5
+    },
+    "wbc_samples.csv": {
+      "passed": true,
+      "records": 180250
+    },
+    "wbc_result.json": {
+      "passed": true
+    },
+    "gc_wbc.jsonl": {
+      "passed": true,
+      "records": 3
+    }
+  },
+  "errors": [],
+  "primary_error": null
+}

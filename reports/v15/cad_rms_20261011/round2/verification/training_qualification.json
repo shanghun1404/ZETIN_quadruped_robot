@@ -1,0 +1,46 @@
+{
+  "passed": true,
+  "source_integrity": {
+    "files": 287,
+    "passed": true,
+    "failures": []
+  },
+  "physical_identity": {
+    "assets": {
+      "files": 4,
+      "unchanged": true
+    },
+    "ros2": {
+      "files": 39,
+      "unchanged": true
+    },
+    "config/model": {
+      "files": 7,
+      "unchanged": true
+    }
+  },
+  "health_counter_count": 400,
+  "nonfinite_and_divergence_maximum": 0,
+  "retention_loss": {
+    "count": 400,
+    "first": 0.00891245249658823,
+    "last": 0.0014341783244162798,
+    "first_step": 15300,
+    "last_step": 15699,
+    "minimum": 0.001073487219400704,
+    "maximum": 0.00891245249658823,
+    "first50_mean": 0.005095740519464016,
+    "last50_mean": 0.0014648971054702998
+  },
+  "retention_eligible_fraction": {
+    "count": 400,
+    "first": 0.40625,
+    "last": 0.3779296875,
+    "first_step": 15300,
+    "last_step": 15699,
+    "minimum": 0.2639974057674408,
+    "maximum": 0.4446614682674408,
+    "first50_mean": 0.41304036855697635,
+    "last50_mean": 0.37349610328674315
+  }
+}

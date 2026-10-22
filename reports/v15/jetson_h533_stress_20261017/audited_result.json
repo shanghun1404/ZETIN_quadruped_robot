@@ -1,0 +1,153 @@
+{
+  "execution_duration_completed": true,
+  "measured_duration_s": 3600,
+  "integration_passed": false,
+  "compute_stability_checks_passed": false,
+  "ai": {
+    "samples": 179979,
+    "mean_ms": 11.293867503945481,
+    "p50_ms": 11.013788000127533,
+    "p95_ms": 12.889923398688552,
+    "p99_ms": 14.864098520265545,
+    "max_ms": 29.510397000194644,
+    "above_5ms": 179979,
+    "above_20ms": 12,
+    "expected_samples": 180000,
+    "missed_source_cycles": 21,
+    "first_source_s": 5.0,
+    "last_source_s": 3604.98,
+    "max_completion_gap_ms": 152.610862,
+    "max_source_gap_ms": 60.0,
+    "max_observed_plan_arrival_gap_ms": 152.720465,
+    "longest_gap_overlapping_producer_gc": [
+      {
+        "pid": 73122,
+        "tid": 73122,
+        "generation": 2,
+        "start_ns": 15042282934284,
+        "end_ns": 15042414229595,
+        "wall_ms": 131.295311,
+        "thread_cpu_ms": 130.891136,
+        "collected": 33
+      }
+    ],
+    "cuda_devices": {
+      "actor_parameter_device": "cuda:0",
+      "student_parameter_device": "cuda:0"
+    }
+  },
+  "wbc": {
+    "backend": "cpp",
+    "target_hz": 50,
+    "requested_samples": 180250,
+    "passed": false,
+    "completed_samples": 180250,
+    "measured_samples": 180000,
+    "last_completion_relative_to_end_ms": 25.006351,
+    "elapsed_s": 3605.025033264,
+    "mean_ms": 11.050874405944443,
+    "p99_ms": 13.873582170000002,
+    "max_ms": 25.702651,
+    "above_20ms": 8,
+    "scheduling_lateness_p99_ms": 0.10067037000000034,
+    "scheduling_lateness_max_ms": 26.242135,
+    "timing_audit": {
+      "csv_rows": 180250,
+      "measured_rows": 180000,
+      "step_and_grid_and_duration_checks": true,
+      "actual_last_compute_vs_end_ms": -10.027177,
+      "raw_report_vs_end_ms": 25.006351,
+      "post_compute_reporting_time_ms": 35.033528,
+      "raw_report_passed": false,
+      "above_20ms": 8,
+      "completed": true,
+      "explanation": "Raw completion timestamp was captured after CSV close and array conversion. Actual last completion is reconstructed from the captured final start plus measured duration; raw files and their verdicts are preserved."
+    }
+  },
+  "first_command_fault_trace": {
+    "reason": "planner result expired or stale",
+    "stamp": 10555000000,
+    "last_plan": 10500000000,
+    "receipt_age_ms": 32.167818,
+    "pending": [
+      10360000000,
+      10380000000,
+      10400000000,
+      10420000000,
+      10440000000,
+      10460000000,
+      10480000000,
+      10500000000
+    ]
+  },
+  "os": {
+    "samples": 719,
+    "min_memory_available_mb": 3807.01171875,
+    "peak_process_rss_mb": 3306.65625,
+    "max_temperatures_c": {
+      "soc2-thermal": 51.406,
+      "tj-thermal": 52.406,
+      "soc1-thermal": 51.968,
+      "cpu-thermal": 52.718,
+      "gpu-thermal": 51.25,
+      "soc0-thermal": 51.25
+    }
+  },
+  "mcu_diagnostics": {
+    "magic": 1211446065,
+    "version": 1,
+    "clock_hz": 250000000,
+    "boot_stage": 3,
+    "rx_bytes": 564748,
+    "rx_overflows": 0,
+    "uart_errors": 0,
+    "tx_errors": 0,
+    "frames_received": 2110,
+    "commands_received": 2107,
+    "commands_accepted": 2107,
+    "feedback_sent": 727237,
+    "missed_ticks": 0,
+    "max_rx_depth": 409,
+    "session": 2253908763,
+    "apply_calls": 0,
+    "ready_checks": 0,
+    "last_uart_error": 0,
+    "parse_calls": 87908,
+    "parse_cycles_mod32": 1163022573,
+    "max_parse_cycles": 273556,
+    "tx_cycles_mod32": 2640499950,
+    "max_tx_cycles": 488435,
+    "consumed_bytes": 564748,
+    "max_tick_lateness_ms": 1,
+    "icache_enabled": 1
+  },
+  "original_checks": {
+    "process_exited_successfully": true,
+    "controller_integration_passed": false,
+    "measured_hour_commands_complete": false,
+    "continuous_wbc_completed": false,
+    "mcu_counters_available": true,
+    "mcu_received_every_observed_command": true,
+    "mcu_accepted_every_observed_command": true,
+    "no_mcu_io_errors": true,
+    "motor_apply_never_called": true,
+    "no_mcu_missed_ticks": true
+  },
+  "scope": "Synthetic sensors; production CUDA AI and command pipeline, separate continuous production C++ CAD WBC, real H533 UART, permanently disabled motor outputs.",
+  "post_fault_scope": "After a latched command fault, the production command/gateway paths stop sending commands. Only synthetic sensors, the CUDA planner and independent continuous C++ WBC keep running. This is not a successful hour of STM command transmission.",
+  "gc_configuration": "Warmup then collect+freeze of prepared heaps; automatic collection of new objects remains enabled.",
+  "caveats": [
+    "The full hour of compute load completed, but the original100ms gap stability criterion failed and integrated control failed.",
+    "At source time10.555s (including5s warmup), the command pipeline latched a50ms plan freshness fault. Commands stopped; AI/WBC continued.",
+    "Inputs and MCU feedback are synthetic. No actual robot motion, sensors or G474 motor/CAN behavior tested.",
+    "Output arrays and lists are retained for logging; memory growth includes measurement storage."
+  ],
+  "raw_sha256": {
+    "stress_start.json": "a08f850fb9fcf176b916ec3719e173af3021cb20eaad5bcf93be5ca5a1ff96ff",
+    "wbc_samples.csv": "b7857333dcf9af8f47040da874826997f4c956241da2f606abe65172e8a7a7b7",
+    "wbc_result.json": "12e69df87d42691472f5055d13049e79653b144a2c436ce465a57ed51e43264f",
+    "stress_result.json": "993944eb4b3f70c5049d8e8c81c6baaf6eac56938782db4f92399aea196982d1",
+    "ros_controller_benchmark.json": "aac6100beb95a46a126849be271fafa6384b84890fe739b121764cf282f53c1b",
+    "planner_trace.jsonl": "a580475c829e965e9720c40289a7a1e0f768f5996f7838714e1c0e5063f9f156"
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "attempts": [
+    {
+      "job": 616,
+      "kind": "startup_failure",
+      "physics_samples": 0,
+      "result": "../integration/616/result.json",
+      "failure": "TimeoutError('V15.1 command missing at 0.000s')",
+      "result_sha256": "18fddbad3b4f20a44393581b776bdfc583f0d8cd3df8205c0b1c403fecbd6645",
+      "root_cause_confirmed": false,
+      "followup_job": 617
+    },
+    {
+      "job": 617,
+      "kind": "startup_failure",
+      "physics_samples": 0,
+      "failure": "TimeoutError('V15.1 command missing at 0.000s; command_received=False, status_received=False; sensor_readers=[1, 1, 1, 1]')",
+      "result": "../integration/617/result.json",
+      "result_sha256": "cf2a87950daec2419177749e23c9de04afc5495650e0addd54800e1385a8b41a",
+      "root_cause_confirmed": false,
+      "observed": "All four sensor subscriber counts1, no controller ingress callbacks, no command/status; discovery works but payload delivery failed",
+      "followup_job": 618,
+      "followup_transport": "FASTDDS_BUILTIN_TRANSPORTS=UDPv4"
+    },
+    {
+      "job": 618,
+      "kind": "transport_timeout",
+      "physics_samples": 0,
+      "result": "../integration/618/result.json",
+      "failure": "TimeoutError('V15.1 command missing at 0.000s; command_received=False, status_received=False; sensor_readers=[1, 1, 1, 1]')",
+      "root_cause_confirmed": false,
+      "result_sha256": "cf2a87950daec2419177749e23c9de04afc5495650e0addd54800e1385a8b41a",
+      "stand_forward_shift_m": 0.09,
+      "crouch_forward_shift_m": 0.15,
+      "rmw": "rmw_fastrtps_cpp"
+    },
+    {
+      "job": 620,
+      "kind": "transport_timeout",
+      "physics_samples": 381,
+      "result": "../integration/620/result.json",
+      "failure": "TimeoutError('V15.1 command missing at 1.905s; command_received=False, status_received=False; sensor_readers=[1, 1, 1, 1]')",
+      "root_cause_confirmed": false,
+      "result_sha256": "0d806185ac2a0d0cc380b0eba6cb0080bc02c742f08f2c2c430672c9b1a2142b",
+      "stand_forward_shift_m": 0.09,
+      "crouch_forward_shift_m": 0.15,
+      "rmw": "rmw_fastrtps_cpp"
+    },
+    {
+      "job": 621,
+      "kind": "complete_candidate_rejected_walk_rms",
+      "physics_samples": 5600,
+      "result": "../integration/621/result.json",
+      "failure": null,
+      "root_cause_confirmed": null,
+      "result_sha256": "8fd65e6247d9b9b679e4e47ed04b89d94c9205eba9af45bb5c162c42f4cd9886",
+      "stand_forward_shift_m": 0.09,
+      "crouch_forward_shift_m": 0.15,
+      "rmw": "rmw_cyclonedds_cpp"
+    },
+    {
+      "job": 622,
+      "kind": "complete_candidate_rejected_locomotion",
+      "physics_samples": 5600,
+      "stand_forward_shift_m": 0.06,
+      "crouch_forward_shift_m": 0.12,
+      "rmw": "rmw_cyclonedds_cpp",
+      "transport_retry_count": 0,
+      "result": "../integration/622/result.json",
+      "result_sha256": "43635ccb46e6a01ec76f991e8650e37940d666c4bad2ae904eab2674720b3f67",
+      "failed_gates": [
+        "task_motion_success",
+        "forward_progress",
+        "walk_command_mae",
+        "full_rated_normalized_rms"
+      ]
+    },
+    {
+      "job": 623,
+      "kind": "complete_candidate_rejected_torque",
+      "physics_samples": 5600,
+      "stand_forward_shift_m": 0.03,
+      "crouch_forward_shift_m": 0.15,
+      "rmw": "rmw_cyclonedds_cpp",
+      "transport_retry_count": 0,
+      "result": "../integration/623/result.json",
+      "result_sha256": "b12d938c6503240754e8b9bef877e7907e20bded45eebf6fecb978a2850e2bcf",
+      "failed_gates": [
+        "poststop_stand_rms",
+        "walk_rms"
+      ]
+    },
+    {
+      "job": 624,
+      "kind": "isaac_startup_failure",
+      "physics_samples": 0,
+      "result": "../integration/624/startup_failure.json",
+      "schema": 1,
+      "evidence_origin": "posthoc_slurm_log_and_sacct",
+      "completed": false,
+      "task_success": false,
+      "failure": "Isaac startup failed before physics: viewport set_camera_view accessed invalid null prim; Slurm FAILED 1:0",
+      "seconds_recorded": 0,
+      "scenario": "flat",
+      "demo_sequence_required": true,
+      "log_sha256": "f692b21ea5fd91e79cf1e5b03e6240b575a0068527803262c8ee7c369d49ab98",
+      "root_cause_confirmed": false
+    },
+    {
+      "job": 625,
+      "kind": "complete_candidate_accepted",
+      "physics_samples": 5600,
+      "result": "../integration/625/result.json",
+      "result_sha256": "6816eaf812bdb681a7df86ee6f6305d1f01b754ee06a356a371ae71584b82608",
+      "parameters": {
+        "stand_forward_shift_m": 0.03,
+        "crouch_forward_shift_m": 0.15,
+        "crouch_shift_after_walk_only": true,
+        "height_drop": 0.1,
+        "speed": 0.4
+      },
+      "transport_retry_count": 0,
+      "all_frozen_gates_pass": true
+    }
+  ],
+  "probe": "verification/startup_probe.txt",
+  "transport_reference": "https://fast-dds.docs.eprosima.com/en/2.14.x/fastdds/env_vars/env_vars.html",
+  "minimal_kit_probe_job": 619,
+  "minimal_kit_probe": "transport_619",
+  "candidate621_verdict": "Rejected unchanged gate: WALK mean joint RMS12.9323Nm > baseline12.80445Nm; complete motion/collision/other torque gates passed.",
+  "followup": {
+    "job": 625,
+    "stand_forward_shift_m": 0.03,
+    "crouch_forward_shift_m": 0.15,
+    "crouch_shift_after_walk_only": true,
+    "rmw": "rmw_cyclonedds_cpp",
+    "status": "completed_all_gates_pass"
+  },
+  "selected_job": 625
+}

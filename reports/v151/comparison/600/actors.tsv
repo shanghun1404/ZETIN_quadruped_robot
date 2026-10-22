@@ -1,0 +1,4 @@
+baseline339	/home/shanghun1404/v15_large_scale/locomotion_jobs/339/guide_v15_physx_pd/2026-09-27_12-47-59_v14_m5700_physx_pd_lane_stairs/model_11699.pt
+candidate25	/home/shanghun1404/v151_ros2/targeted_training_jobs/598/guide_v151_targeted_load/2026-10-01_01-59-47_339_fixed04_flatrough_w0p1_lr1e-5/pilot_update_0025.pt
+candidate50	/home/shanghun1404/v151_ros2/targeted_training_jobs/598/guide_v151_targeted_load/2026-10-01_01-59-47_339_fixed04_flatrough_w0p1_lr1e-5/pilot_update_0050.pt
+candidate100	/home/shanghun1404/v151_ros2/targeted_training_jobs/598/guide_v151_targeted_load/2026-10-01_01-59-47_339_fixed04_flatrough_w0p1_lr1e-5/pilot_update_0100.pt

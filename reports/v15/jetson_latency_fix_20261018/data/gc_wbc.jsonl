@@ -1,0 +1,3 @@
+{"pid": 87588, "tid": 87588, "generation": 0, "start_ns": 17782538283438, "end_ns": 17782540161429, "wall_ms": 1.877991, "thread_cpu_ms": 1.80496, "collected": 0}
+{"pid": 87588, "tid": 87588, "generation": 1, "start_ns": 17782558604719, "end_ns": 17782564412262, "wall_ms": 5.807543, "thread_cpu_ms": 5.41472, "collected": 14}
+{"pid": 87588, "tid": 87588, "generation": 2, "start_ns": 17782816591446, "end_ns": 17782992348647, "wall_ms": 175.757201, "thread_cpu_ms": 161.892, "collected": 114}

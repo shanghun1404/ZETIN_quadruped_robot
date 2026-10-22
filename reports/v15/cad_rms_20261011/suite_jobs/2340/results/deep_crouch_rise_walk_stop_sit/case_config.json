@@ -1,0 +1,11 @@
+{
+  "name": "deep_crouch_rise_walk_stop_sit",
+  "duration_s": 30.0,
+  "lane_origin_world_m": [
+    90.0,
+    0,
+    0
+  ],
+  "seed": 42,
+  "reset_policy": "Explicit initialization once; no resets during this trial."
+}

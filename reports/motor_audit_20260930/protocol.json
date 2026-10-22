@@ -1,0 +1,26 @@
+{
+  "original_v16_source_sha256": "832ba596b48d953f4db2cff8b083226548494d3b26853312a937b4b2724c9023",
+  "v16_training_job": 577,
+  "v16_checkpoint_sha256": "b1436c732f5f0ed9fef5eef9241f121b800c2bd678a1690c2162c0b1c93bbc95",
+  "v16_checkpoint_controller_sources_verified": 7,
+  "rl_job": 586,
+  "v16_job": 588,
+  "qos": "admin",
+  "host": "ws1",
+  "user": "shanghun1404",
+  "git_mutations": "none",
+  "num_envs_per_condition": 8,
+  "new_simulations": true,
+  "rl_seconds": 12,
+  "v16_seconds": 32,
+  "rl_seed": 42,
+  "v16_seed": 1001,
+  "time_step_s": 0.005,
+  "scope": "load audit of selected original controllers, flat and stairs-up; no controller training/tuning",
+  "v16_stairs": "skipped at explicit user request before execution",
+  "expected_conditions": 7,
+  "cancelled_job": {
+    "job": 587,
+    "reason": "User requested V16 stairs skipped, cancelled before start"
+  }
+}

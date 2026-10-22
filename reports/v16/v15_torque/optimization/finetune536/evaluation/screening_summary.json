@@ -1,0 +1,320 @@
+{
+  "manifest_sha256": "f54be770fe19dad77250c5b4d7c9b8aa38d507ff27848d461e2ab41d41c6686d",
+  "control_gate": {
+    "survival_at_least_baseline": true,
+    "progress_fraction_at_least": 0.9,
+    "absolute_command_speed_error_extra_allowance_m_s": 0.02,
+    "rough_corridor_kept_at_least_baseline": true,
+    "rough_mean_max_heading_error_extra_allowance_deg": 2.0
+  },
+  "torque_gate": {
+    "mean_joint_rms_ratio_at_most": 1.0,
+    "pooled_abs_power_ratio_at_most": 1.0,
+    "peak_or_p99_or_high_limit_occupancy_must_improve": true
+  },
+  "score_weights": {
+    "rms": 0.4,
+    "abs_power": 0.25,
+    "above80": 0.25,
+    "p99_slew": 0.1
+  },
+  "torque_semantics": "Implicit PD estimates, not actual solver motor torque or thermal validation",
+  "candidates": {
+    "pre339_g097_lpf23": {
+      "config": {
+        "label": "pre339_g097_lpf23",
+        "guard_fraction": 0.97,
+        "cutoff_hz": 23.0,
+        "actor_sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33",
+        "role": "Frozen339 with actuation settings changed only"
+      },
+      "comparisons": {
+        "flat": {
+          "control_gates": {
+            "survival": true,
+            "progress": true,
+            "command_tracking": true,
+            "rough_corridor": true,
+            "rough_heading": true
+          },
+          "torque_gates": {
+            "rms_not_increased": true,
+            "power_not_increased": true,
+            "limit_demand_improved": true
+          },
+          "control_pass": true,
+          "torque_pass": true,
+          "ratios_to_baseline": {
+            "rms": 0.995102757462281,
+            "power": 0.9924211388775093,
+            "above80": 1.0299316169051977,
+            "slew": 0.9753896882468962,
+            "peak_fraction": 0.9805423140283617,
+            "p99_fraction_mean": 0.9847085815071014
+          },
+          "ranking_score": 1.001168260755279,
+          "survived_envs": 32,
+          "mean_progress_m": 5.867825984954834,
+          "mean_forward_speed_m_s": 0.4887467476228873,
+          "absolute_command_error_m_s": 0.08874674762288726,
+          "corridor_kept_envs": 32,
+          "mean_max_heading_error_deg": 27.317843914031982,
+          "rms_mean_joint_nm": 12.465779129713411,
+          "pooled_p99_estimated_nm": 45.535930747985844,
+          "max_estimated_limit_fraction": 0.9715658823649088,
+          "above80_fraction": 0.03588802083333333,
+          "saturation99_fraction": 0.0,
+          "mean_abs_joint_power_w": 8.460230827331543,
+          "p99_torque_slew_nm_s": 2707.2250488281247,
+          "worst_joint_rms_ratio": 1.011404278848846,
+          "worst_joint_rms_ratio_joint": "RL_HAA",
+          "per_joint_rms_ratios": {
+            "FL_HAA": 0.9996424705697956,
+            "FL_HFE": 0.9855904394388579,
+            "FL_KFE": 0.9872663772270127,
+            "FR_HAA": 0.9963340783408285,
+            "FR_HFE": 0.9894669064667129,
+            "FR_KFE": 1.0083963708587607,
+            "RL_HAA": 1.011404278848846,
+            "RL_HFE": 0.9974664346942504,
+            "RL_KFE": 0.9979558233836634,
+            "RR_HAA": 0.9942348796511024,
+            "RR_HFE": 0.9837596474275471,
+            "RR_KFE": 0.9953969598934048
+          },
+          "baseline_estimated_abs_mechanical_energy_per_m_j_m": 207.47882665429364,
+          "estimated_abs_mechanical_energy_per_m_j_m": 206.85413835497516
+        },
+        "rough": {
+          "control_gates": {
+            "survival": false,
+            "progress": true,
+            "command_tracking": true,
+            "rough_corridor": false,
+            "rough_heading": true
+          },
+          "torque_gates": {
+            "rms_not_increased": true,
+            "power_not_increased": false,
+            "limit_demand_improved": true
+          },
+          "control_pass": false,
+          "torque_pass": false,
+          "ratios_to_baseline": {
+            "rms": 0.973081889970581,
+            "power": 1.0475934172839172,
+            "above80": 0.9675290863276251,
+            "slew": 0.9853583710310182,
+            "peak_fraction": 0.9828508700519305,
+            "p99_fraction_mean": 0.9837973455844209
+          },
+          "ranking_score": 0.9915492189942197,
+          "survived_envs": 30,
+          "mean_progress_m": 3.972031593322754,
+          "mean_forward_speed_m_s": 0.33484258878859985,
+          "absolute_command_error_m_s": 0.16515741121140015,
+          "corridor_kept_envs": 29,
+          "mean_max_heading_error_deg": 9.465504944324493,
+          "rms_mean_joint_nm": 17.773577389338087,
+          "pooled_p99_estimated_nm": 46.57178497314453,
+          "max_estimated_limit_fraction": 0.9744681081464214,
+          "above80_fraction": 0.13363306315433976,
+          "saturation99_fraction": 0.0,
+          "mean_abs_joint_power_w": 12.956111907958984,
+          "p99_torque_slew_nm_s": 3611.4511181640564,
+          "worst_joint_rms_ratio": 1.0787915147654545,
+          "worst_joint_rms_ratio_joint": "RL_HAA",
+          "per_joint_rms_ratios": {
+            "FL_HAA": 1.0248752554961342,
+            "FL_HFE": 1.015984348041483,
+            "FL_KFE": 0.9469725980110779,
+            "FR_HAA": 0.9550788045804981,
+            "FR_HFE": 0.9103330178154475,
+            "FR_KFE": 0.9832586750877217,
+            "RL_HAA": 1.0787915147654545,
+            "RL_HFE": 0.9655092240312985,
+            "RL_KFE": 1.0126000271448266,
+            "RR_HAA": 0.9630073772923462,
+            "RR_HFE": 0.9550650171472498,
+            "RR_KFE": 0.9345804412868897
+          },
+          "baseline_estimated_abs_mechanical_energy_per_m_j_m": 473.503226100091,
+          "estimated_abs_mechanical_energy_per_m_j_m": 462.8818043989198
+        }
+      },
+      "all_gates_pass": false,
+      "actual_settings_verified": {
+        "cutoff_hz": 23.0,
+        "guard_fraction": 0.97,
+        "actor_sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33",
+        "physx_kp_nm_rad": 300.0,
+        "physx_kd_nm_s_rad": 8.0,
+        "guard_velocity_limit_rad_s": 50.0,
+        "actual_solver_motor_torque_recorded": false
+      },
+      "mean_ranking_score": 0.9963587398747493,
+      "data_hashes": {
+        "flat": {
+          "pre339_g097_lpf23_flat_seed42.json": "72321c7327a77cea565138289005fca9118c123679a3102cd43e6d329740a3b9",
+          "pre339_g097_lpf23_flat_seed42_trace_audit.npz": "ba67cf71c415f146e260ad2a60f5b90743baad72ab751dbcd7ac127a77a69bee"
+        },
+        "rough": {
+          "pre339_g097_lpf23_rough_seed42.json": "58d2f0e196458661ec3acf78aa429dfb1dd57167622aebba56a7b2c091b1a641",
+          "pre339_g097_lpf23_rough_seed42_trace_audit.npz": "fd3184b54617e8192c27dc19ae2ae7598845961823a0ccfbc1f6398ed4a4e92f"
+        }
+      }
+    },
+    "adapt536_g097_lpf23": {
+      "config": {
+        "label": "adapt536_g097_lpf23",
+        "guard_fraction": 0.97,
+        "cutoff_hz": 23.0,
+        "actor_sha256": "06ca0ec3fadd743c1033a75ccf133193e3ad0432f3112b79698467ac0efd4e7a",
+        "role": "536 model11949 trained from339 at the same actuation settings"
+      },
+      "comparisons": {
+        "flat": {
+          "control_gates": {
+            "survival": true,
+            "progress": true,
+            "command_tracking": true,
+            "rough_corridor": true,
+            "rough_heading": true
+          },
+          "torque_gates": {
+            "rms_not_increased": true,
+            "power_not_increased": true,
+            "limit_demand_improved": true
+          },
+          "control_pass": true,
+          "torque_pass": true,
+          "ratios_to_baseline": {
+            "rms": 0.9000060463077824,
+            "power": 0.946885660517766,
+            "above80": 0.7517656290871044,
+            "slew": 1.0277635381146015,
+            "peak_fraction": 0.9825527055024731,
+            "p99_fraction_mean": 0.9939928786126049
+          },
+          "ranking_score": 0.8874415947357908,
+          "survived_envs": 32,
+          "mean_progress_m": 5.322419166564941,
+          "mean_forward_speed_m_s": 0.43695271740357083,
+          "absolute_command_error_m_s": 0.03695271740357081,
+          "corridor_kept_envs": 32,
+          "mean_max_heading_error_deg": 17.291496366262436,
+          "rms_mean_joint_nm": 11.274490503162632,
+          "pooled_p99_estimated_nm": 40.73739330291748,
+          "max_estimated_limit_fraction": 0.9735578695933024,
+          "above80_fraction": 0.0261953125,
+          "saturation99_fraction": 0.0,
+          "mean_abs_joint_power_w": 8.07204818725586,
+          "p99_torque_slew_nm_s": 2852.5903320312473,
+          "worst_joint_rms_ratio": 1.1785813025264649,
+          "worst_joint_rms_ratio_joint": "RL_HAA",
+          "per_joint_rms_ratios": {
+            "FL_HAA": 0.8951650578798493,
+            "FL_HFE": 0.7262339210236193,
+            "FL_KFE": 0.8734245315693866,
+            "FR_HAA": 0.8285756638779052,
+            "FR_HFE": 1.0999936784061484,
+            "FR_KFE": 1.1602862597197081,
+            "RL_HAA": 1.1785813025264649,
+            "RL_HFE": 0.8245170069506608,
+            "RL_KFE": 0.8769986347771416,
+            "RR_HAA": 0.87279929828183,
+            "RR_HFE": 0.7492789002592133,
+            "RR_KFE": 0.867775593629792
+          },
+          "baseline_estimated_abs_mechanical_energy_per_m_j_m": 207.47882665429364,
+          "estimated_abs_mechanical_energy_per_m_j_m": 219.32684639795906
+        },
+        "rough": {
+          "control_gates": {
+            "survival": true,
+            "progress": true,
+            "command_tracking": true,
+            "rough_corridor": true,
+            "rough_heading": true
+          },
+          "torque_gates": {
+            "rms_not_increased": true,
+            "power_not_increased": false,
+            "limit_demand_improved": true
+          },
+          "control_pass": true,
+          "torque_pass": false,
+          "ratios_to_baseline": {
+            "rms": 0.9739927312439606,
+            "power": 1.0180701904279554,
+            "above80": 0.9739001492148113,
+            "slew": 1.0180939874281547,
+            "peak_fraction": 0.9835861897375292,
+            "p99_fraction_mean": 0.9781185083030615
+          },
+          "ranking_score": 0.9893990761510914,
+          "survived_envs": 32,
+          "mean_progress_m": 3.9312803745269775,
+          "mean_forward_speed_m_s": 0.32864219047129156,
+          "absolute_command_error_m_s": 0.17135780952870844,
+          "corridor_kept_envs": 32,
+          "mean_max_heading_error_deg": 6.973376996815205,
+          "rms_mean_joint_nm": 17.79021412672748,
+          "pooled_p99_estimated_nm": 46.57039260864258,
+          "max_estimated_limit_fraction": 0.9751971562703451,
+          "above80_fraction": 0.13451302083333333,
+          "saturation99_fraction": 0.0,
+          "mean_abs_joint_power_w": 12.590983390808105,
+          "p99_torque_slew_nm_s": 3731.4308959960817,
+          "worst_joint_rms_ratio": 1.057974220258812,
+          "worst_joint_rms_ratio_joint": "RL_HAA",
+          "per_joint_rms_ratios": {
+            "FL_HAA": 0.9873285165916316,
+            "FL_HFE": 1.0274094416100996,
+            "FL_KFE": 0.9506606957257098,
+            "FR_HAA": 0.9626730651878298,
+            "FR_HFE": 0.9635336802048402,
+            "FR_KFE": 1.0016351378774437,
+            "RL_HAA": 1.057974220258812,
+            "RL_HFE": 0.9137130750818987,
+            "RL_KFE": 0.9785492300108976,
+            "RR_HAA": 1.0324965401124986,
+            "RR_HFE": 0.9889474511841918,
+            "RR_KFE": 0.9039158933705403
+          },
+          "baseline_estimated_abs_mechanical_energy_per_m_j_m": 473.503226100091,
+          "estimated_abs_mechanical_energy_per_m_j_m": 457.33735969800443
+        }
+      },
+      "all_gates_pass": false,
+      "actual_settings_verified": {
+        "cutoff_hz": 23.0,
+        "guard_fraction": 0.97,
+        "actor_sha256": "06ca0ec3fadd743c1033a75ccf133193e3ad0432f3112b79698467ac0efd4e7a",
+        "physx_kp_nm_rad": 300.0,
+        "physx_kd_nm_s_rad": 8.0,
+        "guard_velocity_limit_rad_s": 50.0,
+        "actual_solver_motor_torque_recorded": false
+      },
+      "mean_ranking_score": 0.9384203354434411,
+      "data_hashes": {
+        "flat": {
+          "adapt536_g097_lpf23_flat_seed42.json": "588a73aa453f1b53550b1a300a61d4055d8a33ebe9efe06a7d054d7f195b59e3",
+          "adapt536_g097_lpf23_flat_seed42_trace_audit.npz": "aa0f9428b053da2e3319c4ade77054c7749d2a8c41f2c411f341961d0fa75bff"
+        },
+        "rough": {
+          "adapt536_g097_lpf23_rough_seed42.json": "21319b2e2c52b3660060020aec35b62dbc4fd53d6f4ac45be33d243f48c9a9c1",
+          "adapt536_g097_lpf23_rough_seed42_trace_audit.npz": "937f42891d79e6288898b85a8e21015ddf8e89e42f19957162ea89acd0a4aca3"
+        }
+      }
+    }
+  },
+  "sequential_policy": null,
+  "complete_candidates": [
+    "pre339_g097_lpf23",
+    "adapt536_g097_lpf23"
+  ],
+  "all_candidates_complete": true,
+  "screening_selected_candidate": null,
+  "selection_is_provisional_pending_holdout": false
+}

@@ -1,0 +1,31 @@
+{
+  "seeds": [
+    43,
+    44
+  ],
+  "scenarios": [
+    "flat",
+    "rough"
+  ],
+  "fresh_physics_trace_for_baseline_and_candidate": true,
+  "allocations": "One seed, four sequential evaluations per GPU1/16G/40-minute job; two jobs chained sequentially",
+  "control_gate": {
+    "survival_at_least_baseline": true,
+    "progress_fraction_at_least": 0.9,
+    "absolute_command_speed_error_extra_allowance_m_s": 0.02,
+    "rough_corridor_kept_at_least_baseline": true,
+    "rough_mean_max_heading_error_extra_allowance_deg": 2.0
+  },
+  "original_after2s_torque_gate": {
+    "mean_joint_rms_ratio_at_most": 1.0,
+    "pooled_abs_power_ratio_at_most": 1.0,
+    "peak_or_p99_or_high_limit_occupancy_must_improve": true
+  },
+  "extra_holdout_full0_to12s_gates": {
+    "power_ratio_at_most": 1.0,
+    "p99_or_normalized_peak_ratio_strictly_below": 0.99,
+    "p99_slew_ratio_at_most": 1.05
+  },
+  "reason_for_fresh_flat_baseline": "Existing flat seed43/44 JSON has no RMS; recording a fresh baseline retains original torque gates in all holdout cases.",
+  "motor_thermal_safety_proven": false
+}

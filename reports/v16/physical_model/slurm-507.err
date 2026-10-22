@@ -1,0 +1,125 @@
+test_siso_channels_keep_cross_coupling_and_match_state_space (test_v16_model.DiscreteAlgebra.test_siso_channels_keep_cross_coupling_and_match_state_space) ... FAIL
+test_zoh_double_integrator_and_nonzero_initial_conditions (test_v16_model.DiscreteAlgebra.test_zoh_double_integrator_and_nonzero_initial_conditions) ... FAIL
+test_foot_point_jacobians_include_base_and_match_finite_difference (test_v16_model.RobotModel.test_foot_point_jacobians_include_base_and_match_finite_difference) ... FAIL
+test_joint_order_dimensions_total_mass_and_keyframe (test_v16_model.RobotModel.test_joint_order_dimensions_total_mass_and_keyframe) ... FAIL
+test_mass_spd_and_inverse_forward_roundtrip (test_v16_model.RobotModel.test_mass_spd_and_inverse_forward_roundtrip) ... FAIL
+test_fixed_mass_is_aggregated_once_and_armature_is_explicit (test_v16_model.SmallPhysicsFixture.test_fixed_mass_is_aggregated_once_and_armature_is_explicit) ... FAIL
+test_floating_base_has_no_virtual_actuator (test_v16_model.SmallPhysicsFixture.test_floating_base_has_no_virtual_actuator) ... FAIL
+test_intrinsic_euler_is_not_extrinsic_xyz (test_v16_model.SmallPhysicsFixture.test_intrinsic_euler_is_not_extrinsic_xyz) ... FAIL
+test_offset_axis_and_fixed_member_kinematics (test_v16_model.SmallPhysicsFixture.test_offset_axis_and_fixed_member_kinematics) ... FAIL
+test_rnea_aba_with_rotor_armature_and_damping (test_v16_model.SmallPhysicsFixture.test_rnea_aba_with_rotor_armature_and_damping) ... FAIL
+
+======================================================================
+FAIL: test_siso_channels_keep_cross_coupling_and_match_state_space (test_v16_model.DiscreteAlgebra.test_siso_channels_keep_cross_coupling_and_match_state_space)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 104, in test_siso_channels_keep_cross_coupling_and_match_state_space
+    module = load_module("derive_v16_discrete")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 20, in load_module
+    raise AssertionError(f"Required V16 implementation is missing: {path.name}")
+AssertionError: Required V16 implementation is missing: derive_v16_discrete.py
+
+======================================================================
+FAIL: test_zoh_double_integrator_and_nonzero_initial_conditions (test_v16_model.DiscreteAlgebra.test_zoh_double_integrator_and_nonzero_initial_conditions)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 93, in test_zoh_double_integrator_and_nonzero_initial_conditions
+    module = load_module("derive_v16_discrete")
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 20, in load_module
+    raise AssertionError(f"Required V16 implementation is missing: {path.name}")
+AssertionError: Required V16 implementation is missing: derive_v16_discrete.py
+
+======================================================================
+FAIL: test_foot_point_jacobians_include_base_and_match_finite_difference (test_v16_model.RobotModel.test_foot_point_jacobians_include_base_and_match_finite_difference)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 122, in setUp
+    self.module = load_module("v16_physical_model")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 20, in load_module
+    raise AssertionError(f"Required V16 implementation is missing: {path.name}")
+AssertionError: Required V16 implementation is missing: v16_physical_model.py
+
+======================================================================
+FAIL: test_joint_order_dimensions_total_mass_and_keyframe (test_v16_model.RobotModel.test_joint_order_dimensions_total_mass_and_keyframe)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 122, in setUp
+    self.module = load_module("v16_physical_model")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 20, in load_module
+    raise AssertionError(f"Required V16 implementation is missing: {path.name}")
+AssertionError: Required V16 implementation is missing: v16_physical_model.py
+
+======================================================================
+FAIL: test_mass_spd_and_inverse_forward_roundtrip (test_v16_model.RobotModel.test_mass_spd_and_inverse_forward_roundtrip)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 122, in setUp
+    self.module = load_module("v16_physical_model")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 20, in load_module
+    raise AssertionError(f"Required V16 implementation is missing: {path.name}")
+AssertionError: Required V16 implementation is missing: v16_physical_model.py
+
+======================================================================
+FAIL: test_fixed_mass_is_aggregated_once_and_armature_is_explicit (test_v16_model.SmallPhysicsFixture.test_fixed_mass_is_aggregated_once_and_armature_is_explicit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 42, in setUp
+    self.module = load_module("v16_physical_model")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 20, in load_module
+    raise AssertionError(f"Required V16 implementation is missing: {path.name}")
+AssertionError: Required V16 implementation is missing: v16_physical_model.py
+
+======================================================================
+FAIL: test_floating_base_has_no_virtual_actuator (test_v16_model.SmallPhysicsFixture.test_floating_base_has_no_virtual_actuator)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 42, in setUp
+    self.module = load_module("v16_physical_model")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 20, in load_module
+    raise AssertionError(f"Required V16 implementation is missing: {path.name}")
+AssertionError: Required V16 implementation is missing: v16_physical_model.py
+
+======================================================================
+FAIL: test_intrinsic_euler_is_not_extrinsic_xyz (test_v16_model.SmallPhysicsFixture.test_intrinsic_euler_is_not_extrinsic_xyz)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 42, in setUp
+    self.module = load_module("v16_physical_model")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 20, in load_module
+    raise AssertionError(f"Required V16 implementation is missing: {path.name}")
+AssertionError: Required V16 implementation is missing: v16_physical_model.py
+
+======================================================================
+FAIL: test_offset_axis_and_fixed_member_kinematics (test_v16_model.SmallPhysicsFixture.test_offset_axis_and_fixed_member_kinematics)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 42, in setUp
+    self.module = load_module("v16_physical_model")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 20, in load_module
+    raise AssertionError(f"Required V16 implementation is missing: {path.name}")
+AssertionError: Required V16 implementation is missing: v16_physical_model.py
+
+======================================================================
+FAIL: test_rnea_aba_with_rotor_armature_and_damping (test_v16_model.SmallPhysicsFixture.test_rnea_aba_with_rotor_armature_and_damping)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 42, in setUp
+    self.module = load_module("v16_physical_model")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/shanghun1404/v16_12dof_model/model/config/tests/test_v16_model.py", line 20, in load_module
+    raise AssertionError(f"Required V16 implementation is missing: {path.name}")
+AssertionError: Required V16 implementation is missing: v16_physical_model.py
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.001s
+
+FAILED (failures=10)

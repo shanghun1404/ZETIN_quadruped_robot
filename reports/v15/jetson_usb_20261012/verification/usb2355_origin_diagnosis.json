@@ -1,0 +1,368 @@
+{
+  "schema": 1,
+  "purpose": "Read-only diagnosis of USB2355 failure versus frozen baseline2343; evidence does not establish a unique physical root cause.",
+  "baseline_job": 2343,
+  "usb_job": 2355,
+  "case": "sit_rise_walk_stop_sit",
+  "source_comparison": {
+    "common_noncache_files": 281,
+    "byte_different_common_files": [],
+    "checkpoints_equal": true,
+    "notes": "All 281 shared archived source files are byte-identical, including the controller, motion conversion, bridge, CAD assets/model and evaluator."
+  },
+  "layouts": {
+    "baseline": [
+      {
+        "case": "rough",
+        "lane_origin_world_m": [
+          0.0,
+          0,
+          0
+        ]
+      },
+      {
+        "case": "standing_hold",
+        "lane_origin_world_m": [
+          30.0,
+          0,
+          0
+        ]
+      },
+      {
+        "case": "sit_rise_walk_stop_sit",
+        "lane_origin_world_m": [
+          60.0,
+          0,
+          0
+        ]
+      },
+      {
+        "case": "deep_crouch_rise_walk_stop_sit",
+        "lane_origin_world_m": [
+          90.0,
+          0,
+          0
+        ]
+      }
+    ],
+    "usb": [
+      {
+        "case": "flat_14s",
+        "lane_origin_world_m": [
+          0.0,
+          0,
+          0
+        ]
+      },
+      {
+        "case": "sit_rise_walk_stop_sit",
+        "lane_origin_world_m": [
+          30.0,
+          0,
+          0
+        ]
+      },
+      {
+        "case": "deep_crouch_rise_walk_stop_sit",
+        "lane_origin_world_m": [
+          60.0,
+          0,
+          0
+        ]
+      }
+    ],
+    "origin_selection_source": "config/evaluate_v15_cad_suite.py:279 trial(..., i*30., ...); case ordering determines lane origin and prior scene/reset history."
+  },
+  "failure": {
+    "seconds_recorded": 19.04,
+    "failure": "RuntimeError('Trunk below 0.20m above local ground')",
+    "max_nonadjacent_contact_force_n": 375.5765686035156,
+    "first_contact_record_index": 3784,
+    "first_contact_state_time_s": 18.925,
+    "last_controller_mode": "STABILIZE",
+    "torque_transport_integrity_pass": true,
+    "reset_during_trial": false
+  },
+  "first_bit_differences": {
+    "joint_position": {
+      "record_index": 0,
+      "command_stamp_ns": 0,
+      "state_stamp_ns": 5000000,
+      "max_abs_difference_at_first": 1.1088559404015541e-08
+    },
+    "joint_velocity": {
+      "record_index": 0,
+      "command_stamp_ns": 0,
+      "state_stamp_ns": 5000000,
+      "max_abs_difference_at_first": 2.2239983081817627e-06
+    },
+    "position_target": {
+      "record_index": 1,
+      "command_stamp_ns": 5000000,
+      "state_stamp_ns": 10000000,
+      "max_abs_difference_at_first": 1.1088559404015541e-08
+    },
+    "feedforward_torque": {
+      "record_index": 4,
+      "command_stamp_ns": 20000000,
+      "state_stamp_ns": 25000000,
+      "max_abs_difference_at_first": 1.6954420804977417
+    },
+    "drive_limits": {
+      "record_index": 4,
+      "command_stamp_ns": 20000000,
+      "state_stamp_ns": 25000000,
+      "max_abs_difference_at_first": 1.6954421997070312
+    },
+    "estimated_torque": {
+      "record_index": 4,
+      "command_stamp_ns": 20000000,
+      "state_stamp_ns": 25000000,
+      "max_abs_difference_at_first": 1.6954420804977417
+    },
+    "kp": {
+      "record_index": 1404,
+      "command_stamp_ns": 7020000000,
+      "state_stamp_ns": 7025000000,
+      "max_abs_difference_at_first": 3.870836949582124e-10
+    },
+    "kd": {
+      "record_index": 1404,
+      "command_stamp_ns": 7020000000,
+      "state_stamp_ns": 7025000000,
+      "max_abs_difference_at_first": 2.2274058248880624e-11
+    },
+    "shank_support_force": {
+      "record_index": 1,
+      "command_stamp_ns": 5000000,
+      "state_stamp_ns": 10000000,
+      "max_abs_difference_at_first": 0.9358978271484375
+    },
+    "nonadjacent_pair_force_n": {
+      "record_index": 3784,
+      "command_stamp_ns": 18920000000,
+      "state_stamp_ns": 18925000000,
+      "max_abs_difference_at_first": 375.5765686035156
+    }
+  },
+  "initial_four_command_samples": {
+    "sample_count": 4,
+    "kp_and_kd_both_zero": true,
+    "feedforward_torque_bit_identical": true,
+    "drive_limits_bit_identical": true,
+    "estimated_torque_bit_identical": true,
+    "initial_position_target_bit_identical": true,
+    "position_target_note": "Subsequent position targets differ with the already divergent q, but kp=kd=0, so those target differences do not drive initial physical divergence.",
+    "initial_policy_support_feet": {
+      "baseline": 4,
+      "usb": 2
+    }
+  },
+  "command_rounding_replay": {
+    "scope": "CPU Python USB pack/unpack of all recorded baseline applied buffers; no new Isaac/MCU/Jetson experiment.",
+    "ticks_checked": 6000,
+    "mismatch_ticks": [],
+    "fields": [
+      "position_target float32",
+      "feedforward_torque float32",
+      "kp float32",
+      "kd float32",
+      "drive_force_budget-derived maxForce float32"
+    ],
+    "conclusion": "No applied buffer change from wire rounding in any of the 6000 baseline ticks. Original V151Ros2Action already computes drive_force_budget from the float32 feedforward tensor, so the proposed full precision versus rounded feedforward maxForce explanation is unsupported."
+  },
+  "handover_observations": [
+    {
+      "command_time_s": 17.3,
+      "baseline": {
+        "mode": "BLEND_STAND",
+        "support_feet": 4,
+        "stance_mask": null,
+        "root_height_m": 0.48652806878089905
+      },
+      "usb": {
+        "mode": "BLEND_STAND",
+        "support_feet": 2,
+        "stance_mask": null,
+        "root_height_m": 0.48944541811943054
+      }
+    },
+    {
+      "command_time_s": 17.8,
+      "baseline": {
+        "mode": "BLEND_STAND",
+        "support_feet": 2,
+        "stance_mask": [
+          false,
+          true,
+          true,
+          false
+        ],
+        "root_height_m": 0.4873296022415161
+      },
+      "usb": {
+        "mode": "BLEND_STAND",
+        "support_feet": 2,
+        "stance_mask": [
+          false,
+          true,
+          true,
+          false
+        ],
+        "root_height_m": 0.4913814663887024
+      }
+    },
+    {
+      "command_time_s": 18.0,
+      "baseline": {
+        "mode": "BLEND_STAND",
+        "support_feet": 4,
+        "stance_mask": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "root_height_m": 0.47517356276512146
+      },
+      "usb": {
+        "mode": "BLEND_STAND",
+        "support_feet": 2,
+        "stance_mask": [
+          true,
+          false,
+          false,
+          true
+        ],
+        "root_height_m": 0.4777183532714844
+      }
+    },
+    {
+      "command_time_s": 18.3,
+      "baseline": {
+        "mode": "STABILIZE",
+        "support_feet": 4,
+        "stance_mask": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "root_height_m": 0.4689265489578247
+      },
+      "usb": {
+        "mode": "STABILIZE",
+        "support_feet": 2,
+        "stance_mask": [
+          true,
+          false,
+          false,
+          true
+        ],
+        "root_height_m": 0.4697553515434265
+      }
+    },
+    {
+      "command_time_s": 18.5,
+      "baseline": {
+        "mode": "STABILIZE",
+        "support_feet": 4,
+        "stance_mask": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "root_height_m": 0.46702465415000916
+      },
+      "usb": {
+        "mode": "STABILIZE",
+        "support_feet": 2,
+        "stance_mask": [
+          true,
+          false,
+          false,
+          true
+        ],
+        "root_height_m": 0.46473491191864014
+      }
+    },
+    {
+      "command_time_s": 18.8,
+      "baseline": {
+        "mode": "STAND",
+        "support_feet": 4,
+        "stance_mask": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "root_height_m": 0.46671104431152344
+      },
+      "usb": {
+        "mode": "STABILIZE",
+        "support_feet": 2,
+        "stance_mask": [
+          true,
+          false,
+          false,
+          true
+        ],
+        "root_height_m": 0.4194026589393616
+      }
+    },
+    {
+      "command_time_s": 19.0,
+      "baseline": {
+        "mode": "STAND",
+        "support_feet": 4,
+        "stance_mask": [
+          true,
+          true,
+          true,
+          true
+        ],
+        "root_height_m": 0.4666444659233093
+      },
+      "usb": {
+        "mode": "STABILIZE",
+        "support_feet": 3,
+        "stance_mask": [
+          true,
+          false,
+          true,
+          true
+        ],
+        "root_height_m": 0.21174553036689758
+      }
+    }
+  ],
+  "established": [
+    "The failure is real under unchanged physical gates.",
+    "The first physical differences precede the first torque command differences and the first nonzero gain rounding difference.",
+    "The comparison changed lane origin and case history in addition to the adapter.",
+    "No CRC/session transport error or command/state timestamp gap is evidenced by these telemetry arrays.",
+    "At 18.00s baseline has four supported feet, USB has two; at 18.30s both enter STABILIZE, with USB still on one diagonal pair."
+  ],
+  "not_established": [
+    "Lane origin is the unique cause.",
+    "Physical nondeterminism versus scene/reset history versus origin precision has been isolated.",
+    "All nine motions are robust across initial conditions or repeats.",
+    "A controller or USB transport software change is warranted by this comparison."
+  ],
+  "proposed_minimal_next_experiment": {
+    "action": "Run USB adapter once with exact original2343 full case order under normal available Slurm resources; compare against frozen2343 baseline before proposing any controller/software fix.",
+    "cases": "rough,standing_hold,sit_rise_walk_stop_sit,deep_crouch_rise_walk_stop_sit",
+    "expected_origins_m": [
+      0,
+      30,
+      60,
+      90
+    ],
+    "retain": "Same seed42, CAD/actor/student/controller source, physics/render settings, full duration, self-contact/height/torque gates and case reset behavior.",
+    "purpose": "Control both world origins and the preceding-case/reset sequence without changing the frozen controller.",
+    "caveat": "Different simulator executions can remain nondeterministic. A pass would support origin/history sensitivity, but would not identify a unique cause or prove general hardware/physical robustness.",
+    "fallback": "If it still diverges, use a matched direct/USB pair with identical case layout/history and record per-tick actual PhysX command/gain/maxForce buffers plus pre-step contact state."
+  }
+}

@@ -1,0 +1,16 @@
+--speed
+0.05
+--walk-axis
+y
+--control-decimation
+4
+--effort-fraction
+0.9
+--gait-mode
+prepared_crawl
+--stance-point
+ground
+--joint-friction
+0.3
+--base-acceleration-weight
+1000.0

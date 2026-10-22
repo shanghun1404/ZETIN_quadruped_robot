@@ -1,0 +1,754 @@
+[
+  {
+    "schema": 1,
+    "scope": "offline model reconstruction; not measured PhysX body poses",
+    "original_input": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/integration/597/result.npz",
+    "original_npz_sha256": "9b6dbf0ddc76fd3ce5d42e1c0e3ea829dc49d619bdddf2f0b76538ba5dc9a64f",
+    "original_result_sha256": "dfabbab1acedde16e4e73f1508dab1e85248cefaa2607f5aaaf59c65215b3dbe",
+    "original_completed": false,
+    "original_failure": "RuntimeError(\"Robot terminated before reset; terms=['base_tilt']\")",
+    "original_verdict_modified": false,
+    "new_physics_simulation_performed": false,
+    "model_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v16/physical_model/v16_model_source_quadruped.xml",
+    "model_sha256": "8ef5712d8604110d1efc7ed92845bd83107e0ef42e1fa0f379448387c4793c6f",
+    "foot_evidence_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/geometry/foot_collider_evidence.json",
+    "foot_evidence_sha256": "dd5a4745acb0689dec433b84a5ebc4af22a2e7ef1fc3a620d8b1d0ae7a67ee55",
+    "foot_usd_source": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+    "foot_usd_source_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+    "validation_reference": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/integration/597/result.npz",
+    "validation_tolerance_m": 1e-05,
+    "validation": {
+      "cross_leg_gap": {
+        "max_absolute_error_m": 2.6473464708187677e-06,
+        "rms_error_m": 3.953402762278683e-07,
+        "worst_array_index": [
+          3418,
+          19
+        ]
+      },
+      "trunk_gap": {
+        "max_absolute_error_m": 1.4755123756426958e-06,
+        "rms_error_m": 2.875704763514419e-07,
+        "worst_array_index": [
+          4099,
+          0
+        ]
+      },
+      "foot_com_position": {
+        "max_absolute_error_m": 2.1071496760782793e-06,
+        "rms_error_m": 2.997712016181242e-07,
+        "worst_array_index": [
+          3719,
+          2,
+          1
+        ],
+        "max_euclidean_error_m": 2.1114125963325957e-06
+      }
+    },
+    "reconstruction_validated": true,
+    "direct_foot_com_validation_available": true,
+    "body_order": [
+      "base",
+      "FL_thigh_profile",
+      "FL_calf_profile",
+      "FR_thigh_profile",
+      "FR_calf_profile",
+      "RL_thigh_profile",
+      "RL_calf_profile",
+      "RR_thigh_profile",
+      "RR_calf_profile",
+      "FL_foot",
+      "FR_foot",
+      "RL_foot",
+      "RR_foot"
+    ],
+    "joint_order": [
+      "FL_HAA",
+      "FL_HFE",
+      "FL_KFE",
+      "FR_HAA",
+      "FR_HFE",
+      "FR_KFE",
+      "RL_HAA",
+      "RL_HFE",
+      "RL_KFE",
+      "RR_HAA",
+      "RR_HFE",
+      "RR_KFE"
+    ],
+    "pair_order": [
+      "FL_thigh_profile--FL_foot",
+      "FR_thigh_profile--FR_foot",
+      "RL_thigh_profile--RL_foot",
+      "RR_thigh_profile--RR_foot"
+    ],
+    "samples": 4148,
+    "sample_period_s": 0.005,
+    "time_semantics": "inferred sample_index * 0.005 s; source NPZ has no explicit timestamps",
+    "frame_scope": "all recorded samples, including terminal/falling trajectory; no stable-window exclusion",
+    "minimum_same_leg_thigh_foot_gap_m": 0.2272371252969692,
+    "per_pair_minimum_gap_m": {
+      "FL_thigh_profile--FL_foot": 0.27105590501804516,
+      "FR_thigh_profile--FR_foot": 0.2272371252969692,
+      "RL_thigh_profile--RL_foot": 0.2711523537758699,
+      "RR_thigh_profile--RR_foot": 0.26887687176511843
+    },
+    "proxy_overlap_sample_fraction": 0.0,
+    "minimum_sample_index": 4126,
+    "minimum_inferred_time_s": 20.63,
+    "minimum_pair": "FR_thigh_profile--FR_foot",
+    "reconstructed_geometry_clear": true,
+    "actual_same_leg_contact_measured": false,
+    "same_leg_physical_pairs_filtered": true,
+    "limitations": [
+      "Forward kinematics reconstructs rigid body poses from logged actor root pose and joint angles; it cannot recover independent PhysX constraint drift.",
+      "Runs without foot COM telemetry transfer the COM validation from 597; their existing cross-leg and trunk gaps are separately validated on every sample.",
+      "Thigh capsule versus enclosing foot convex-hull AABB is conservative. Negative gap is possible proxy overlap, not confirmed mesh collision or penetration depth.",
+      "Only the four same-leg thigh-profile to foot pairs are covered here; contact offsets, CAD-wide collisions and body-ground contact are excluded.",
+      "This adds retrospective geometry evidence, not a new physical validation or change to original task success."
+    ],
+    "implementation_sha256": {
+      "reports/v151/analysis/reconstruct_collision.py": "0181e627e1fc99b5aa8c6b043ced6ca5db3a1d5b21587a878bdf3797e9436947",
+      "config/v16_physical_model.py": "baaddfb7067578fab156b865d19d27ae7232a357703c69e9a12c5ac7d9a0fec9",
+      "config/v151_collision.py": "bc355c684e0643dffbae2212ed3f979a032c09adc6f4f7b30f6d4fd953a5ed3a",
+      "config/v14_clearance.py": "c9842c5d146a26877e9bdd38714cad67b175e0c5b4f37f85fff9800f06e6c02c",
+      "config/v14_usd_plan.py": "e0f872d76113a3d699ca41b90ca8053b29ec16b79b0bb55a87fc6f6b20b16b4f"
+    }
+  },
+  {
+    "schema": 1,
+    "scope": "offline model reconstruction; not measured PhysX body poses",
+    "original_input": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/comparison/594/baseline339_flat_seed42/result.npz",
+    "original_npz_sha256": "fcafa78d5979373f34c72eecac2f789afe19adecb4138be4ddb047f412fcd739",
+    "original_result_sha256": "d5e0e1986c92a78eb0db2f835b4c88053c93bb865f8c9cb332599b14daa31b17",
+    "original_completed": true,
+    "original_failure": null,
+    "original_verdict_modified": false,
+    "new_physics_simulation_performed": false,
+    "model_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v16/physical_model/v16_model_source_quadruped.xml",
+    "model_sha256": "8ef5712d8604110d1efc7ed92845bd83107e0ef42e1fa0f379448387c4793c6f",
+    "foot_evidence_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/geometry/foot_collider_evidence.json",
+    "foot_evidence_sha256": "dd5a4745acb0689dec433b84a5ebc4af22a2e7ef1fc3a620d8b1d0ae7a67ee55",
+    "foot_usd_source": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+    "foot_usd_source_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+    "validation_reference": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/integration/597/result.npz",
+    "validation_tolerance_m": 1e-05,
+    "validation": {
+      "cross_leg_gap": {
+        "max_absolute_error_m": 2.931069042144685e-06,
+        "rms_error_m": 4.860592847336558e-07,
+        "worst_array_index": [
+          2769,
+          17
+        ]
+      },
+      "trunk_gap": {
+        "max_absolute_error_m": 1.5119034240118623e-06,
+        "rms_error_m": 3.39787982885525e-07,
+        "worst_array_index": [
+          2313,
+          2
+        ]
+      }
+    },
+    "reconstruction_validated": true,
+    "direct_foot_com_validation_available": false,
+    "body_order": [
+      "base",
+      "FL_thigh_profile",
+      "FL_calf_profile",
+      "FR_thigh_profile",
+      "FR_calf_profile",
+      "RL_thigh_profile",
+      "RL_calf_profile",
+      "RR_thigh_profile",
+      "RR_calf_profile",
+      "FL_foot",
+      "FR_foot",
+      "RL_foot",
+      "RR_foot"
+    ],
+    "joint_order": [
+      "FL_HAA",
+      "FL_HFE",
+      "FL_KFE",
+      "FR_HAA",
+      "FR_HFE",
+      "FR_KFE",
+      "RL_HAA",
+      "RL_HFE",
+      "RL_KFE",
+      "RR_HAA",
+      "RR_HFE",
+      "RR_KFE"
+    ],
+    "pair_order": [
+      "FL_thigh_profile--FL_foot",
+      "FR_thigh_profile--FR_foot",
+      "RL_thigh_profile--RL_foot",
+      "RR_thigh_profile--RR_foot"
+    ],
+    "samples": 2800,
+    "sample_period_s": 0.005,
+    "time_semantics": "inferred sample_index * 0.005 s; source NPZ has no explicit timestamps",
+    "frame_scope": "all recorded samples, including terminal/falling trajectory; no stable-window exclusion",
+    "minimum_same_leg_thigh_foot_gap_m": 0.2838401872632145,
+    "per_pair_minimum_gap_m": {
+      "FL_thigh_profile--FL_foot": 0.28592428806760073,
+      "FR_thigh_profile--FR_foot": 0.28388714450351793,
+      "RL_thigh_profile--RL_foot": 0.2859242880676009,
+      "RR_thigh_profile--RR_foot": 0.2838401872632145
+    },
+    "proxy_overlap_sample_fraction": 0.0,
+    "minimum_sample_index": 0,
+    "minimum_inferred_time_s": 0.0,
+    "minimum_pair": "RR_thigh_profile--RR_foot",
+    "reconstructed_geometry_clear": true,
+    "actual_same_leg_contact_measured": false,
+    "same_leg_physical_pairs_filtered": true,
+    "limitations": [
+      "Forward kinematics reconstructs rigid body poses from logged actor root pose and joint angles; it cannot recover independent PhysX constraint drift.",
+      "Runs without foot COM telemetry transfer the COM validation from 597; their existing cross-leg and trunk gaps are separately validated on every sample.",
+      "Thigh capsule versus enclosing foot convex-hull AABB is conservative. Negative gap is possible proxy overlap, not confirmed mesh collision or penetration depth.",
+      "Only the four same-leg thigh-profile to foot pairs are covered here; contact offsets, CAD-wide collisions and body-ground contact are excluded.",
+      "This adds retrospective geometry evidence, not a new physical validation or change to original task success."
+    ],
+    "implementation_sha256": {
+      "reports/v151/analysis/reconstruct_collision.py": "0181e627e1fc99b5aa8c6b043ced6ca5db3a1d5b21587a878bdf3797e9436947",
+      "config/v16_physical_model.py": "baaddfb7067578fab156b865d19d27ae7232a357703c69e9a12c5ac7d9a0fec9",
+      "config/v151_collision.py": "bc355c684e0643dffbae2212ed3f979a032c09adc6f4f7b30f6d4fd953a5ed3a",
+      "config/v14_clearance.py": "c9842c5d146a26877e9bdd38714cad67b175e0c5b4f37f85fff9800f06e6c02c",
+      "config/v14_usd_plan.py": "e0f872d76113a3d699ca41b90ca8053b29ec16b79b0bb55a87fc6f6b20b16b4f"
+    }
+  },
+  {
+    "schema": 1,
+    "scope": "offline model reconstruction; not measured PhysX body poses",
+    "original_input": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/comparison/594/baseline339_rough_seed42/result.npz",
+    "original_npz_sha256": "035c042bd214390e4ee7bc706c9d4422cde980e165f654fcd0f493ecf0728a09",
+    "original_result_sha256": "fdcd7940c88ae0cfa2cef4eaaf380b42c89d6c3a8f39a03a8b7ce8b16ae5976c",
+    "original_completed": true,
+    "original_failure": null,
+    "original_verdict_modified": false,
+    "new_physics_simulation_performed": false,
+    "model_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v16/physical_model/v16_model_source_quadruped.xml",
+    "model_sha256": "8ef5712d8604110d1efc7ed92845bd83107e0ef42e1fa0f379448387c4793c6f",
+    "foot_evidence_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/geometry/foot_collider_evidence.json",
+    "foot_evidence_sha256": "dd5a4745acb0689dec433b84a5ebc4af22a2e7ef1fc3a620d8b1d0ae7a67ee55",
+    "foot_usd_source": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+    "foot_usd_source_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+    "validation_reference": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/integration/597/result.npz",
+    "validation_tolerance_m": 1e-05,
+    "validation": {
+      "cross_leg_gap": {
+        "max_absolute_error_m": 4.56984828617335e-06,
+        "rms_error_m": 5.25124214297629e-07,
+        "worst_array_index": [
+          2707,
+          11
+        ]
+      },
+      "trunk_gap": {
+        "max_absolute_error_m": 3.0608063514014905e-06,
+        "rms_error_m": 4.0285481977744506e-07,
+        "worst_array_index": [
+          2707,
+          6
+        ]
+      }
+    },
+    "reconstruction_validated": true,
+    "direct_foot_com_validation_available": false,
+    "body_order": [
+      "base",
+      "FL_thigh_profile",
+      "FL_calf_profile",
+      "FR_thigh_profile",
+      "FR_calf_profile",
+      "RL_thigh_profile",
+      "RL_calf_profile",
+      "RR_thigh_profile",
+      "RR_calf_profile",
+      "FL_foot",
+      "FR_foot",
+      "RL_foot",
+      "RR_foot"
+    ],
+    "joint_order": [
+      "FL_HAA",
+      "FL_HFE",
+      "FL_KFE",
+      "FR_HAA",
+      "FR_HFE",
+      "FR_KFE",
+      "RL_HAA",
+      "RL_HFE",
+      "RL_KFE",
+      "RR_HAA",
+      "RR_HFE",
+      "RR_KFE"
+    ],
+    "pair_order": [
+      "FL_thigh_profile--FL_foot",
+      "FR_thigh_profile--FR_foot",
+      "RL_thigh_profile--RL_foot",
+      "RR_thigh_profile--RR_foot"
+    ],
+    "samples": 2800,
+    "sample_period_s": 0.005,
+    "time_semantics": "inferred sample_index * 0.005 s; source NPZ has no explicit timestamps",
+    "frame_scope": "all recorded samples, including terminal/falling trajectory; no stable-window exclusion",
+    "minimum_same_leg_thigh_foot_gap_m": 0.2665506725729259,
+    "per_pair_minimum_gap_m": {
+      "FL_thigh_profile--FL_foot": 0.26894953764436935,
+      "FR_thigh_profile--FR_foot": 0.2686645478305487,
+      "RL_thigh_profile--RL_foot": 0.2672616998480225,
+      "RR_thigh_profile--RR_foot": 0.2665506725729259
+    },
+    "proxy_overlap_sample_fraction": 0.0,
+    "minimum_sample_index": 1028,
+    "minimum_inferred_time_s": 5.14,
+    "minimum_pair": "RR_thigh_profile--RR_foot",
+    "reconstructed_geometry_clear": true,
+    "actual_same_leg_contact_measured": false,
+    "same_leg_physical_pairs_filtered": true,
+    "limitations": [
+      "Forward kinematics reconstructs rigid body poses from logged actor root pose and joint angles; it cannot recover independent PhysX constraint drift.",
+      "Runs without foot COM telemetry transfer the COM validation from 597; their existing cross-leg and trunk gaps are separately validated on every sample.",
+      "Thigh capsule versus enclosing foot convex-hull AABB is conservative. Negative gap is possible proxy overlap, not confirmed mesh collision or penetration depth.",
+      "Only the four same-leg thigh-profile to foot pairs are covered here; contact offsets, CAD-wide collisions and body-ground contact are excluded.",
+      "This adds retrospective geometry evidence, not a new physical validation or change to original task success."
+    ],
+    "implementation_sha256": {
+      "reports/v151/analysis/reconstruct_collision.py": "0181e627e1fc99b5aa8c6b043ced6ca5db3a1d5b21587a878bdf3797e9436947",
+      "config/v16_physical_model.py": "baaddfb7067578fab156b865d19d27ae7232a357703c69e9a12c5ac7d9a0fec9",
+      "config/v151_collision.py": "bc355c684e0643dffbae2212ed3f979a032c09adc6f4f7b30f6d4fd953a5ed3a",
+      "config/v14_clearance.py": "c9842c5d146a26877e9bdd38714cad67b175e0c5b4f37f85fff9800f06e6c02c",
+      "config/v14_usd_plan.py": "e0f872d76113a3d699ca41b90ca8053b29ec16b79b0bb55a87fc6f6b20b16b4f"
+    }
+  },
+  {
+    "schema": 1,
+    "scope": "offline model reconstruction; not measured PhysX body poses",
+    "original_input": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/comparison/594/candidate250_flat_seed42/result.npz",
+    "original_npz_sha256": "0fe68782d5a7c23fb47f36605e61478da48b0906844e4a73fc35ae76a3e3edd0",
+    "original_result_sha256": "77b9109a4f9236dcaf0af699965164b6aec329d8138a5738615bf429f2279131",
+    "original_completed": true,
+    "original_failure": null,
+    "original_verdict_modified": false,
+    "new_physics_simulation_performed": false,
+    "model_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v16/physical_model/v16_model_source_quadruped.xml",
+    "model_sha256": "8ef5712d8604110d1efc7ed92845bd83107e0ef42e1fa0f379448387c4793c6f",
+    "foot_evidence_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/geometry/foot_collider_evidence.json",
+    "foot_evidence_sha256": "dd5a4745acb0689dec433b84a5ebc4af22a2e7ef1fc3a620d8b1d0ae7a67ee55",
+    "foot_usd_source": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+    "foot_usd_source_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+    "validation_reference": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/integration/597/result.npz",
+    "validation_tolerance_m": 1e-05,
+    "validation": {
+      "cross_leg_gap": {
+        "max_absolute_error_m": 5.430263406991376e-06,
+        "rms_error_m": 5.581062289667844e-07,
+        "worst_array_index": [
+          2651,
+          19
+        ]
+      },
+      "trunk_gap": {
+        "max_absolute_error_m": 3.3881987852035778e-06,
+        "rms_error_m": 4.1701749359028024e-07,
+        "worst_array_index": [
+          2553,
+          6
+        ]
+      }
+    },
+    "reconstruction_validated": true,
+    "direct_foot_com_validation_available": false,
+    "body_order": [
+      "base",
+      "FL_thigh_profile",
+      "FL_calf_profile",
+      "FR_thigh_profile",
+      "FR_calf_profile",
+      "RL_thigh_profile",
+      "RL_calf_profile",
+      "RR_thigh_profile",
+      "RR_calf_profile",
+      "FL_foot",
+      "FR_foot",
+      "RL_foot",
+      "RR_foot"
+    ],
+    "joint_order": [
+      "FL_HAA",
+      "FL_HFE",
+      "FL_KFE",
+      "FR_HAA",
+      "FR_HFE",
+      "FR_KFE",
+      "RL_HAA",
+      "RL_HFE",
+      "RL_KFE",
+      "RR_HAA",
+      "RR_HFE",
+      "RR_KFE"
+    ],
+    "pair_order": [
+      "FL_thigh_profile--FL_foot",
+      "FR_thigh_profile--FR_foot",
+      "RL_thigh_profile--RL_foot",
+      "RR_thigh_profile--RR_foot"
+    ],
+    "samples": 2800,
+    "sample_period_s": 0.005,
+    "time_semantics": "inferred sample_index * 0.005 s; source NPZ has no explicit timestamps",
+    "frame_scope": "all recorded samples, including terminal/falling trajectory; no stable-window exclusion",
+    "minimum_same_leg_thigh_foot_gap_m": 0.2731280164692474,
+    "per_pair_minimum_gap_m": {
+      "FL_thigh_profile--FL_foot": 0.2741492195728519,
+      "FR_thigh_profile--FR_foot": 0.274054538423658,
+      "RL_thigh_profile--RL_foot": 0.2731280164692474,
+      "RR_thigh_profile--RR_foot": 0.2731565141235123
+    },
+    "proxy_overlap_sample_fraction": 0.0,
+    "minimum_sample_index": 1491,
+    "minimum_inferred_time_s": 7.455,
+    "minimum_pair": "RL_thigh_profile--RL_foot",
+    "reconstructed_geometry_clear": true,
+    "actual_same_leg_contact_measured": false,
+    "same_leg_physical_pairs_filtered": true,
+    "limitations": [
+      "Forward kinematics reconstructs rigid body poses from logged actor root pose and joint angles; it cannot recover independent PhysX constraint drift.",
+      "Runs without foot COM telemetry transfer the COM validation from 597; their existing cross-leg and trunk gaps are separately validated on every sample.",
+      "Thigh capsule versus enclosing foot convex-hull AABB is conservative. Negative gap is possible proxy overlap, not confirmed mesh collision or penetration depth.",
+      "Only the four same-leg thigh-profile to foot pairs are covered here; contact offsets, CAD-wide collisions and body-ground contact are excluded.",
+      "This adds retrospective geometry evidence, not a new physical validation or change to original task success."
+    ],
+    "implementation_sha256": {
+      "reports/v151/analysis/reconstruct_collision.py": "0181e627e1fc99b5aa8c6b043ced6ca5db3a1d5b21587a878bdf3797e9436947",
+      "config/v16_physical_model.py": "baaddfb7067578fab156b865d19d27ae7232a357703c69e9a12c5ac7d9a0fec9",
+      "config/v151_collision.py": "bc355c684e0643dffbae2212ed3f979a032c09adc6f4f7b30f6d4fd953a5ed3a",
+      "config/v14_clearance.py": "c9842c5d146a26877e9bdd38714cad67b175e0c5b4f37f85fff9800f06e6c02c",
+      "config/v14_usd_plan.py": "e0f872d76113a3d699ca41b90ca8053b29ec16b79b0bb55a87fc6f6b20b16b4f"
+    }
+  },
+  {
+    "schema": 1,
+    "scope": "offline model reconstruction; not measured PhysX body poses",
+    "original_input": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/comparison/594/candidate250_rough_seed42/result.npz",
+    "original_npz_sha256": "a0ded9d6239ab6183ce2531eeeb49627b79541dff5fb7def9c7112529f0ad52e",
+    "original_result_sha256": "c918ca48bf8172d170b35035265dd85751f77130fc33bd357687330cb2f6a041",
+    "original_completed": true,
+    "original_failure": null,
+    "original_verdict_modified": false,
+    "new_physics_simulation_performed": false,
+    "model_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v16/physical_model/v16_model_source_quadruped.xml",
+    "model_sha256": "8ef5712d8604110d1efc7ed92845bd83107e0ef42e1fa0f379448387c4793c6f",
+    "foot_evidence_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/geometry/foot_collider_evidence.json",
+    "foot_evidence_sha256": "dd5a4745acb0689dec433b84a5ebc4af22a2e7ef1fc3a620d8b1d0ae7a67ee55",
+    "foot_usd_source": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+    "foot_usd_source_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+    "validation_reference": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/integration/597/result.npz",
+    "validation_tolerance_m": 1e-05,
+    "validation": {
+      "cross_leg_gap": {
+        "max_absolute_error_m": 5.004983687884046e-06,
+        "rms_error_m": 5.370312145028886e-07,
+        "worst_array_index": [
+          2694,
+          17
+        ]
+      },
+      "trunk_gap": {
+        "max_absolute_error_m": 2.9810083927717113e-06,
+        "rms_error_m": 4.088418455332397e-07,
+        "worst_array_index": [
+          2562,
+          4
+        ]
+      }
+    },
+    "reconstruction_validated": true,
+    "direct_foot_com_validation_available": false,
+    "body_order": [
+      "base",
+      "FL_thigh_profile",
+      "FL_calf_profile",
+      "FR_thigh_profile",
+      "FR_calf_profile",
+      "RL_thigh_profile",
+      "RL_calf_profile",
+      "RR_thigh_profile",
+      "RR_calf_profile",
+      "FL_foot",
+      "FR_foot",
+      "RL_foot",
+      "RR_foot"
+    ],
+    "joint_order": [
+      "FL_HAA",
+      "FL_HFE",
+      "FL_KFE",
+      "FR_HAA",
+      "FR_HFE",
+      "FR_KFE",
+      "RL_HAA",
+      "RL_HFE",
+      "RL_KFE",
+      "RR_HAA",
+      "RR_HFE",
+      "RR_KFE"
+    ],
+    "pair_order": [
+      "FL_thigh_profile--FL_foot",
+      "FR_thigh_profile--FR_foot",
+      "RL_thigh_profile--RL_foot",
+      "RR_thigh_profile--RR_foot"
+    ],
+    "samples": 2800,
+    "sample_period_s": 0.005,
+    "time_semantics": "inferred sample_index * 0.005 s; source NPZ has no explicit timestamps",
+    "frame_scope": "all recorded samples, including terminal/falling trajectory; no stable-window exclusion",
+    "minimum_same_leg_thigh_foot_gap_m": 0.26739925153635574,
+    "per_pair_minimum_gap_m": {
+      "FL_thigh_profile--FL_foot": 0.2707079238581153,
+      "FR_thigh_profile--FR_foot": 0.26988637435723195,
+      "RL_thigh_profile--RL_foot": 0.26739925153635574,
+      "RR_thigh_profile--RR_foot": 0.2682935222587963
+    },
+    "proxy_overlap_sample_fraction": 0.0,
+    "minimum_sample_index": 744,
+    "minimum_inferred_time_s": 3.72,
+    "minimum_pair": "RL_thigh_profile--RL_foot",
+    "reconstructed_geometry_clear": true,
+    "actual_same_leg_contact_measured": false,
+    "same_leg_physical_pairs_filtered": true,
+    "limitations": [
+      "Forward kinematics reconstructs rigid body poses from logged actor root pose and joint angles; it cannot recover independent PhysX constraint drift.",
+      "Runs without foot COM telemetry transfer the COM validation from 597; their existing cross-leg and trunk gaps are separately validated on every sample.",
+      "Thigh capsule versus enclosing foot convex-hull AABB is conservative. Negative gap is possible proxy overlap, not confirmed mesh collision or penetration depth.",
+      "Only the four same-leg thigh-profile to foot pairs are covered here; contact offsets, CAD-wide collisions and body-ground contact are excluded.",
+      "This adds retrospective geometry evidence, not a new physical validation or change to original task success."
+    ],
+    "implementation_sha256": {
+      "reports/v151/analysis/reconstruct_collision.py": "0181e627e1fc99b5aa8c6b043ced6ca5db3a1d5b21587a878bdf3797e9436947",
+      "config/v16_physical_model.py": "baaddfb7067578fab156b865d19d27ae7232a357703c69e9a12c5ac7d9a0fec9",
+      "config/v151_collision.py": "bc355c684e0643dffbae2212ed3f979a032c09adc6f4f7b30f6d4fd953a5ed3a",
+      "config/v14_clearance.py": "c9842c5d146a26877e9bdd38714cad67b175e0c5b4f37f85fff9800f06e6c02c",
+      "config/v14_usd_plan.py": "e0f872d76113a3d699ca41b90ca8053b29ec16b79b0bb55a87fc6f6b20b16b4f"
+    }
+  },
+  {
+    "schema": 1,
+    "scope": "offline model reconstruction; not measured PhysX body poses",
+    "original_input": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/comparison/594/candidate500_flat_seed42/result.npz",
+    "original_npz_sha256": "ed8a51825eb4f563c70e2a78d1cfdc3c73b983f0b704619700cae8603139cd2f",
+    "original_result_sha256": "a934496df33c5f1afd5c1d74a48368a072974518715992ecf368c7207d501f53",
+    "original_completed": true,
+    "original_failure": null,
+    "original_verdict_modified": false,
+    "new_physics_simulation_performed": false,
+    "model_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v16/physical_model/v16_model_source_quadruped.xml",
+    "model_sha256": "8ef5712d8604110d1efc7ed92845bd83107e0ef42e1fa0f379448387c4793c6f",
+    "foot_evidence_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/geometry/foot_collider_evidence.json",
+    "foot_evidence_sha256": "dd5a4745acb0689dec433b84a5ebc4af22a2e7ef1fc3a620d8b1d0ae7a67ee55",
+    "foot_usd_source": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+    "foot_usd_source_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+    "validation_reference": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/integration/597/result.npz",
+    "validation_tolerance_m": 1e-05,
+    "validation": {
+      "cross_leg_gap": {
+        "max_absolute_error_m": 3.116216499177149e-06,
+        "rms_error_m": 4.491277783915475e-07,
+        "worst_array_index": [
+          2679,
+          8
+        ]
+      },
+      "trunk_gap": {
+        "max_absolute_error_m": 1.8529763304402092e-06,
+        "rms_error_m": 3.4426949074769367e-07,
+        "worst_array_index": [
+          2751,
+          0
+        ]
+      }
+    },
+    "reconstruction_validated": true,
+    "direct_foot_com_validation_available": false,
+    "body_order": [
+      "base",
+      "FL_thigh_profile",
+      "FL_calf_profile",
+      "FR_thigh_profile",
+      "FR_calf_profile",
+      "RL_thigh_profile",
+      "RL_calf_profile",
+      "RR_thigh_profile",
+      "RR_calf_profile",
+      "FL_foot",
+      "FR_foot",
+      "RL_foot",
+      "RR_foot"
+    ],
+    "joint_order": [
+      "FL_HAA",
+      "FL_HFE",
+      "FL_KFE",
+      "FR_HAA",
+      "FR_HFE",
+      "FR_KFE",
+      "RL_HAA",
+      "RL_HFE",
+      "RL_KFE",
+      "RR_HAA",
+      "RR_HFE",
+      "RR_KFE"
+    ],
+    "pair_order": [
+      "FL_thigh_profile--FL_foot",
+      "FR_thigh_profile--FR_foot",
+      "RL_thigh_profile--RL_foot",
+      "RR_thigh_profile--RR_foot"
+    ],
+    "samples": 2800,
+    "sample_period_s": 0.005,
+    "time_semantics": "inferred sample_index * 0.005 s; source NPZ has no explicit timestamps",
+    "frame_scope": "all recorded samples, including terminal/falling trajectory; no stable-window exclusion",
+    "minimum_same_leg_thigh_foot_gap_m": 0.2730901740482442,
+    "per_pair_minimum_gap_m": {
+      "FL_thigh_profile--FL_foot": 0.2765153656586646,
+      "FR_thigh_profile--FR_foot": 0.2736447993383503,
+      "RL_thigh_profile--RL_foot": 0.2730901740482442,
+      "RR_thigh_profile--RR_foot": 0.27341131814881703
+    },
+    "proxy_overlap_sample_fraction": 0.0,
+    "minimum_sample_index": 1925,
+    "minimum_inferred_time_s": 9.625,
+    "minimum_pair": "RL_thigh_profile--RL_foot",
+    "reconstructed_geometry_clear": true,
+    "actual_same_leg_contact_measured": false,
+    "same_leg_physical_pairs_filtered": true,
+    "limitations": [
+      "Forward kinematics reconstructs rigid body poses from logged actor root pose and joint angles; it cannot recover independent PhysX constraint drift.",
+      "Runs without foot COM telemetry transfer the COM validation from 597; their existing cross-leg and trunk gaps are separately validated on every sample.",
+      "Thigh capsule versus enclosing foot convex-hull AABB is conservative. Negative gap is possible proxy overlap, not confirmed mesh collision or penetration depth.",
+      "Only the four same-leg thigh-profile to foot pairs are covered here; contact offsets, CAD-wide collisions and body-ground contact are excluded.",
+      "This adds retrospective geometry evidence, not a new physical validation or change to original task success."
+    ],
+    "implementation_sha256": {
+      "reports/v151/analysis/reconstruct_collision.py": "0181e627e1fc99b5aa8c6b043ced6ca5db3a1d5b21587a878bdf3797e9436947",
+      "config/v16_physical_model.py": "baaddfb7067578fab156b865d19d27ae7232a357703c69e9a12c5ac7d9a0fec9",
+      "config/v151_collision.py": "bc355c684e0643dffbae2212ed3f979a032c09adc6f4f7b30f6d4fd953a5ed3a",
+      "config/v14_clearance.py": "c9842c5d146a26877e9bdd38714cad67b175e0c5b4f37f85fff9800f06e6c02c",
+      "config/v14_usd_plan.py": "e0f872d76113a3d699ca41b90ca8053b29ec16b79b0bb55a87fc6f6b20b16b4f"
+    }
+  },
+  {
+    "schema": 1,
+    "scope": "offline model reconstruction; not measured PhysX body poses",
+    "original_input": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/comparison/594/candidate500_rough_seed42/result.npz",
+    "original_npz_sha256": "2807bfb6c9ec2a343641fc2917a3abeea87bf27af3bc1af5a5a2170174faea20",
+    "original_result_sha256": "38433eca538bb38b96ecf4c40446aee456686c906c7d29185746c45e791ff8ce",
+    "original_completed": false,
+    "original_failure": "RuntimeError(\"Robot terminated before reset; terms=['base_tilt']\")",
+    "original_verdict_modified": false,
+    "new_physics_simulation_performed": false,
+    "model_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v16/physical_model/v16_model_source_quadruped.xml",
+    "model_sha256": "8ef5712d8604110d1efc7ed92845bd83107e0ef42e1fa0f379448387c4793c6f",
+    "foot_evidence_path": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/geometry/foot_collider_evidence.json",
+    "foot_evidence_sha256": "dd5a4745acb0689dec433b84a5ebc4af22a2e7ef1fc3a620d8b1d0ae7a67ee55",
+    "foot_usd_source": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+    "foot_usd_source_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+    "validation_reference": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v151/integration/597/result.npz",
+    "validation_tolerance_m": 1e-05,
+    "validation": {
+      "cross_leg_gap": {
+        "max_absolute_error_m": 1.590353922220622e-06,
+        "rms_error_m": 3.2686911866998717e-07,
+        "worst_array_index": [
+          995,
+          17
+        ]
+      },
+      "trunk_gap": {
+        "max_absolute_error_m": 1.102325794699599e-06,
+        "rms_error_m": 2.8450007986968426e-07,
+        "worst_array_index": [
+          1105,
+          7
+        ]
+      }
+    },
+    "reconstruction_validated": true,
+    "direct_foot_com_validation_available": false,
+    "body_order": [
+      "base",
+      "FL_thigh_profile",
+      "FL_calf_profile",
+      "FR_thigh_profile",
+      "FR_calf_profile",
+      "RL_thigh_profile",
+      "RL_calf_profile",
+      "RR_thigh_profile",
+      "RR_calf_profile",
+      "FL_foot",
+      "FR_foot",
+      "RL_foot",
+      "RR_foot"
+    ],
+    "joint_order": [
+      "FL_HAA",
+      "FL_HFE",
+      "FL_KFE",
+      "FR_HAA",
+      "FR_HFE",
+      "FR_KFE",
+      "RL_HAA",
+      "RL_HFE",
+      "RL_KFE",
+      "RR_HAA",
+      "RR_HFE",
+      "RR_KFE"
+    ],
+    "pair_order": [
+      "FL_thigh_profile--FL_foot",
+      "FR_thigh_profile--FR_foot",
+      "RL_thigh_profile--RL_foot",
+      "RR_thigh_profile--RR_foot"
+    ],
+    "samples": 1296,
+    "sample_period_s": 0.005,
+    "time_semantics": "inferred sample_index * 0.005 s; source NPZ has no explicit timestamps",
+    "frame_scope": "all recorded samples, including terminal/falling trajectory; no stable-window exclusion",
+    "minimum_same_leg_thigh_foot_gap_m": 0.2688857868525353,
+    "per_pair_minimum_gap_m": {
+      "FL_thigh_profile--FL_foot": 0.2733785097532172,
+      "FR_thigh_profile--FR_foot": 0.2688857868525353,
+      "RL_thigh_profile--RL_foot": 0.26932152921682945,
+      "RR_thigh_profile--RR_foot": 0.26902287876361064
+    },
+    "proxy_overlap_sample_fraction": 0.0,
+    "minimum_sample_index": 827,
+    "minimum_inferred_time_s": 4.135,
+    "minimum_pair": "FR_thigh_profile--FR_foot",
+    "reconstructed_geometry_clear": true,
+    "actual_same_leg_contact_measured": false,
+    "same_leg_physical_pairs_filtered": true,
+    "limitations": [
+      "Forward kinematics reconstructs rigid body poses from logged actor root pose and joint angles; it cannot recover independent PhysX constraint drift.",
+      "Runs without foot COM telemetry transfer the COM validation from 597; their existing cross-leg and trunk gaps are separately validated on every sample.",
+      "Thigh capsule versus enclosing foot convex-hull AABB is conservative. Negative gap is possible proxy overlap, not confirmed mesh collision or penetration depth.",
+      "Only the four same-leg thigh-profile to foot pairs are covered here; contact offsets, CAD-wide collisions and body-ground contact are excluded.",
+      "This adds retrospective geometry evidence, not a new physical validation or change to original task success."
+    ],
+    "implementation_sha256": {
+      "reports/v151/analysis/reconstruct_collision.py": "0181e627e1fc99b5aa8c6b043ced6ca5db3a1d5b21587a878bdf3797e9436947",
+      "config/v16_physical_model.py": "baaddfb7067578fab156b865d19d27ae7232a357703c69e9a12c5ac7d9a0fec9",
+      "config/v151_collision.py": "bc355c684e0643dffbae2212ed3f979a032c09adc6f4f7b30f6d4fd953a5ed3a",
+      "config/v14_clearance.py": "c9842c5d146a26877e9bdd38714cad67b175e0c5b4f37f85fff9800f06e6c02c",
+      "config/v14_usd_plan.py": "e0f872d76113a3d699ca41b90ca8053b29ec16b79b0bb55a87fc6f6b20b16b4f"
+    }
+  }
+]

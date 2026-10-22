@@ -1,0 +1,16 @@
+{
+  "archive": "/home/scienceowl/Desktop/robot_prama/robot_dog_code/robot_dog_v13_torque/reports/v15/jetson_usb_20261012/v15_jetson_20261012.tar.gz",
+  "config_modules": [
+    "v12_camera",
+    "v12_training",
+    "v12_vision_student",
+    "v13_depth_policy",
+    "v13_torque_mdp",
+    "v16_controller_math",
+    "v16_force_qp",
+    "v16_physical_model",
+    "v16_wbc_qp"
+  ],
+  "file_count": 93,
+  "sha256": "ccdd021a4ff0fd0493f112532481b9b609736b9b847fe23ba1ac5374aa1e5b6e"
+}

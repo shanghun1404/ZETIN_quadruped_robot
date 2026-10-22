@@ -1,0 +1,3 @@
+{"pid": 91358, "tid": 91358, "generation": 0, "start_ns": 19330209453488, "end_ns": 19330211541458, "wall_ms": 2.08797, "thread_cpu_ms": 1.950624, "collected": 0}
+{"pid": 91358, "tid": 91358, "generation": 1, "start_ns": 19330230009120, "end_ns": 19330236191781, "wall_ms": 6.182661, "thread_cpu_ms": 5.701152, "collected": 14}
+{"pid": 91358, "tid": 91358, "generation": 2, "start_ns": 19330490358343, "end_ns": 19330641877049, "wall_ms": 151.518706, "thread_cpu_ms": 145.65008, "collected": 114}

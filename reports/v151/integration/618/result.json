@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "completed": false,
+  "task_success": false,
+  "motion_success": false,
+  "collision_checks_pass": false,
+  "failure": "TimeoutError('V15.1 command missing at 0.000s; command_received=False, status_received=False; sensor_readers=[1, 1, 1, 1]')",
+  "seconds_recorded": 0
+}

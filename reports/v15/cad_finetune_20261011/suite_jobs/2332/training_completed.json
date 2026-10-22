@@ -1,0 +1,7 @@
+{
+  "training_completed": true,
+  "updates": 2000,
+  "checkpoint": "/home/shanghun1404/v15_cad_20261011/train_jobs/2330/results/model_13699.pt",
+  "checkpoint_sha256": "1a3ac12414ffbcb69ed68245f6df90e3dd7971258c4bf576ccc434fa7d7b4357",
+  "last_iteration": 13699
+}

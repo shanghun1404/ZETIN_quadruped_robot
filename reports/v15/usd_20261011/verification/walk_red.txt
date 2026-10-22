@@ -1,0 +1,24 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+___ test_walk_matches_released_policy_and_replays_without_advancing_control ____
+
+    @pytest.mark.skipif(not os.environ.get('V151_ACTOR'), reason='requires explicit checkpoint/runtime paths')
+    def test_walk_matches_released_policy_and_replays_without_advancing_control():
+        import rclpy
+        from rclpy.executors import SingleThreadedExecutor
+        from rclpy.parameter import Parameter
+        from sensor_msgs.msg import JointState, Image
+        from nav_msgs.msg import Odometry
+        from geometry_msgs.msg import Twist
+        from std_msgs.msg import String
+        from v14_ros2_control import contract
+        from v14_ros2_control.policy import V14DepthPolicy
+        from v14_ros2_control.joint_command import JointCommandFilter
+        from v151_ros2_control.motion import CANONICAL, hybrid_motor_command
+>       from v151_ros2_control.v15_walk_node import V15WalkNode
+E       ModuleNotFoundError: No module named 'v151_ros2_control.v15_walk_node'
+
+/tmp/v15_cad_node_test/test/test_v15_walk_transport.py:27: ModuleNotFoundError
+=========================== short test summary info ============================
+FAILED ../../tmp/v15_cad_node_test/test/test_v15_walk_transport.py::test_walk_matches_released_policy_and_replays_without_advancing_control
+1 failed in 0.90s

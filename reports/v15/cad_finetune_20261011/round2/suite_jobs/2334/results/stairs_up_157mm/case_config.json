@@ -1,0 +1,133 @@
+{
+  "name": "stairs_up_157mm",
+  "description": "Four 15.7 cm risers up, +Y corridor",
+  "duration_s": 24.0,
+  "terrain": {
+    "kind": "stairs_up",
+    "length_m": 10.0,
+    "width_m": 2.0,
+    "initial_support_back_m": 2.0,
+    "start_flat_m": 2.0,
+    "step_width_m": 0.3,
+    "step_height_m": 0.157,
+    "riser_count": 4,
+    "top_plateau_m": 3.0,
+    "rough_end_y_m": 6.0,
+    "rough_seed": 42,
+    "rough_max_height_m": 0.035,
+    "full_rise_m": 0.628,
+    "last_riser_y_m": 2.9,
+    "required_finish_y_m": 3.9,
+    "spawn_ground_height_m": 0.0,
+    "cuboids": [
+      {
+        "name": "tread_1",
+        "center": [
+          0.0,
+          2.15,
+          0.0785
+        ],
+        "size": [
+          2.0,
+          0.2999999999999998,
+          0.157
+        ]
+      },
+      {
+        "name": "tread_2",
+        "center": [
+          0.0,
+          2.4499999999999997,
+          0.157
+        ],
+        "size": [
+          2.0,
+          0.2999999999999998,
+          0.314
+        ]
+      },
+      {
+        "name": "tread_3",
+        "center": [
+          0.0,
+          2.75,
+          0.2355
+        ],
+        "size": [
+          2.0,
+          0.2999999999999998,
+          0.471
+        ]
+      },
+      {
+        "name": "tread_4",
+        "center": [
+          0.0,
+          3.05,
+          0.314
+        ],
+        "size": [
+          2.0,
+          0.2999999999999998,
+          0.628
+        ]
+      },
+      {
+        "name": "top_plateau",
+        "center": [
+          0.0,
+          4.7,
+          0.314
+        ],
+        "size": [
+          2.0,
+          3.0,
+          0.628
+        ]
+      },
+      {
+        "name": "top_continuation",
+        "center": [
+          0.0,
+          8.1,
+          0.314
+        ],
+        "size": [
+          2.0,
+          3.8,
+          0.628
+        ]
+      }
+    ]
+  },
+  "commands": [
+    {
+      "start_s": 0.0,
+      "end_s": 24.0,
+      "velocity": [
+        0.0,
+        0.4,
+        0.0
+      ]
+    }
+  ],
+  "command_frame": "physical body (vx_right, vy_forward, yaw_rate)",
+  "quaternion_order": "wxyz",
+  "criteria": {
+    "settle_s": 2.0,
+    "max_velocity_mae_m_s": 0.15,
+    "min_torso_height_above_ground_m": 0.2,
+    "max_tilt_deg": 60.0,
+    "max_corridor_abs_x_m": 0.7,
+    "ground_change_tolerance_m": 0.02,
+    "max_settled_stop_speed_m_s": 0.1,
+    "max_settled_stop_drift_m": 0.2,
+    "max_yaw_rate_mae_rad_s": 0.15,
+    "max_final_yaw_error_rad": 0.6
+  },
+  "lane_origin_world_m": [
+    120.0,
+    0,
+    0
+  ]
+}

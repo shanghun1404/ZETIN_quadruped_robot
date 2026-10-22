@@ -1,0 +1,102 @@
+{
+  "schema": 1,
+  "scenario": "rough",
+  "seed": 42,
+  "failure": null,
+  "completed": true,
+  "seconds_recorded": 14.0,
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "geometry": {
+    "difficulty": 0.4444444444444444,
+    "unique_tiles": 1
+  },
+  "reset_after_initialization": false,
+  "terminal_position": [
+    -1.099894642829895,
+    9.273213386535645,
+    0.44868218898773193
+  ],
+  "terminal_quaternion": [
+    0.9998270273208618,
+    -0.0006571727572008967,
+    0.0129068773239851,
+    -0.013370269909501076
+  ],
+  "torque_semantics": "implicit PD estimate, not measured PhysX drive force",
+  "torque_rms": [
+    12.092979431152344,
+    16.624338150024414,
+    30.2081241607666,
+    11.01628303527832,
+    15.72518253326416,
+    23.941137313842773,
+    8.44058895111084,
+    15.876914024353027,
+    30.06884765625,
+    9.81700325012207,
+    17.054718017578125,
+    32.00400924682617
+  ],
+  "torque_peak": [
+    24.552005767822266,
+    47.52001190185547,
+    47.52001953125,
+    24.552003860473633,
+    47.5200080871582,
+    47.52001953125,
+    24.552001953125,
+    47.52000427246094,
+    47.52001953125,
+    24.552001953125,
+    47.5200080871582,
+    47.52001953125
+  ],
+  "rated_exceed_fraction": [
+    0.43714285714285717,
+    0.23,
+    0.5367857142857143,
+    0.37607142857142856,
+    0.19285714285714287,
+    0.4325,
+    0.2646428571428571,
+    0.27785714285714286,
+    0.46964285714285714,
+    0.45107142857142857,
+    0.21428571428571427,
+    0.5025
+  ],
+  "mean_absolute_power": 207.64039611816406,
+  "min_interleg_gap_m": 0.021876421088630596,
+  "negative_gap_fraction": 0.0,
+  "contact_pair_force_max_N": 0.0,
+  "min_leg_trunk_proxy_gap_m": -0.02,
+  "trunk_proxy_overlap_fraction": 0.9757142857142858,
+  "collision_scope": "8 thigh/calf capsules cross-leg pairs; adjacent same-leg and leg-ground filtered; no trunk collider in V14 asset",
+  "final_position": [
+    -1.0991649627685547,
+    9.269204139709473,
+    0.4483468532562256
+  ],
+  "modes": [
+    "WALK"
+  ],
+  "compute_ms_p50_p99": [
+    0.2716509916353971,
+    4.077944443561137
+  ],
+  "demo_sequence_required": false,
+  "task_success": true
+}

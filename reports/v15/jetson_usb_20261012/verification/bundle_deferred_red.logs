@@ -1,0 +1,48 @@
+F                                                                        [100%]
+=================================== FAILURES ===================================
+__ test_training_only_simulator_import_does_not_require_simulator_at_runtime ___
+
+bundle_source = (PosixPath('/tmp/pytest-of-scienceowl/pytest-7/test_training_only_simulator_i0/source'), PosixPath('/tmp/pytest-of-sci...0/source/actor.pt'), PosixPath('/tmp/pytest-of-scienceowl/pytest-7/test_training_only_simulator_i0/source/student.pt'))
+tmp_path = PosixPath('/tmp/pytest-of-scienceowl/pytest-7/test_training_only_simulator_i0')
+
+    def test_training_only_simulator_import_does_not_require_simulator_at_runtime(bundle_source, tmp_path):
+        module = load_builder()
+        write_file(bundle_source[0], "config/v12_camera.py", "def training_camera():\n    import isaaclab.sim\n    return isaaclab.sim\n")
+        archive = tmp_path / "portable.tar.gz"
+>       build(module, bundle_source, archive)
+
+config/tests/test_v15_jetson_bundle.py:101: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+config/tests/test_v15_jetson_bundle.py:64: in build
+    return module.build_bundle(root, output, actor_checkpoint=actor, student_checkpoint=student,
+deploy/jetson_v15/build_bundle.py:145: in build_bundle
+    closure = config_closure(repository, package_files)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+
+repository = PosixPath('/tmp/pytest-of-scienceowl/pytest-7/test_training_only_simulator_i0/source')
+package_files = [PosixPath('/tmp/pytest-of-scienceowl/pytest-7/test_training_only_simulator_i0/source/ros2/v14_ros2_control/package.xm...est-of-scienceowl/pytest-7/test_training_only_simulator_i0/source/ros2/v15_hardware_bridge/config/hardware.json'), ...]
+
+    def config_closure(repository, package_files):
+        """Resolve local imports transitively and reject undeclared dependencies."""
+        config = repository / "config"
+        pending = set(CONFIG_SEEDS)
+        seen = set()
+        dependencies = set()
+        ignored = EXTERNAL_MODULES | set(sys.stdlib_module_names) | set(PACKAGES)
+        for path in package_files:
+            if path.suffix == ".py" and not {"test", "tests"} & set(path.parts):
+                dependencies.update(import_roots(path))
+        while pending or dependencies:
+            for name in sorted(dependencies):
+                if name in ignored:
+                    continue
+                if (config / f"{name}.py").is_file():
+                    pending.add(name)
+                else:
+>                   raise BundleError(f"unresolved runtime import: {name}; add the pure module or declare its external dependency")
+E                   v15_bundle_builder.BundleError: unresolved runtime import: isaaclab; add the pure module or declare its external dependency
+
+deploy/jetson_v15/build_bundle.py:99: BundleError
+=========================== short test summary info ============================
+FAILED config/tests/test_v15_jetson_bundle.py::test_training_only_simulator_import_does_not_require_simulator_at_runtime
+1 failed, 10 deselected in 0.14s

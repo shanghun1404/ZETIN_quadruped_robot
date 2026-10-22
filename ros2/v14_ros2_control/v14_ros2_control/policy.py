@@ -53,15 +53,56 @@ def projected_gravity(quat_wxyz: torch.Tensor) -> torch.Tensor:
 
 
 class V14DepthPolicy:
-    def __init__(self, actor_checkpoint, student_checkpoint, *, device: str = "cpu"):
+    def __init__(self, actor_checkpoint, student_checkpoint, *, device: str = "cpu", cuda_graph: bool = True):
         self.device = torch.device(device)
         self.actor = load_actor(actor_checkpoint).to(self.device)
         self.student = load_frozen_v12_student(student_checkpoint, str(self.device))
         self.default_pos = torch.tensor([contract.joint_default(n) for n in contract.JOINT_NAMES])
         self.last_action = torch.zeros(len(contract.JOINT_NAMES))
+        self._graph = None
+        if self.device.type == 'cuda':
+            if cuda_graph:
+                self._capture_cuda_graph()
+            # Exercise the complete CPU-input/CUDA/CPU-output path before
+            # accepting sensors, then discard all synthetic recurrent state.
+            for _ in range(3):
+                self.step(joint_pos=self.default_pos,joint_vel=torch.zeros(12),
+                    lin_vel_b=torch.zeros(3),ang_vel_b=torch.zeros(3),
+                    quat_wxyz=[1.,0.,0.,0.],command=[0.,0.,0.],
+                    depth_m=torch.full(DEPTH_SHAPE,2.))
+            torch.cuda.synchronize(self.device)
+            self.reset()
+
+    @property
+    def cuda_graph_enabled(self) -> bool:
+        return getattr(self, '_graph', None) is not None
+
+    def _forward(self, depth, teacher):
+        scan = self.student(normalize_depth(depth))
+        observation = compose_depth_policy_observation(teacher, scan)
+        return self.actor(observation)[0]
+
+    @torch.inference_mode()
+    def _capture_cuda_graph(self):
+        # Fixed 84x84 inputs permit replaying the same math with one GPU launch.
+        # Keep input/output storage alive for the entire graph lifetime.
+        with torch.cuda.device(self.device):
+            self._graph_depth = torch.full((1, 1, *DEPTH_SHAPE), 2., device=self.device)
+            self._graph_teacher = torch.zeros((1, 235), device=self.device)
+            warmup = torch.cuda.Stream(device=self.device)
+            warmup.wait_stream(torch.cuda.current_stream(self.device))
+            with torch.cuda.stream(warmup):
+                for _ in range(3):
+                    self._forward(self._graph_depth, self._graph_teacher)
+            torch.cuda.current_stream(self.device).wait_stream(warmup)
+            graph = torch.cuda.CUDAGraph()
+            with torch.cuda.graph(graph):
+                self._graph_action = self._forward(self._graph_depth, self._graph_teacher)
+            torch.cuda.synchronize(self.device)
+            self._graph = graph
 
     def reset(self) -> None:
-        self.last_action.zero_()
+        self.last_action = torch.zeros_like(self.last_action)
 
     @torch.inference_mode()
     def step(self, *, joint_pos, joint_vel, lin_vel_b, ang_vel_b, quat_wxyz, command, depth_m):
@@ -77,11 +118,15 @@ class V14DepthPolicy:
         ))
         if proprioception.shape != (48,):
             raise ValueError("proprioception must have 48 values")
-        pixels = normalize_depth(depth[None, None].to(self.device))
-        scan = self.student(pixels)
-        teacher = torch.cat((proprioception.to(self.device), torch.zeros(187, device=self.device)))
-        observation = compose_depth_policy_observation(teacher[None], scan)
-        action = self.actor(observation)[0].cpu()
+        if self.cuda_graph_enabled:
+            with torch.cuda.device(self.device):
+                self._graph_depth.copy_(depth[None, None])
+                self._graph_teacher[0, :48].copy_(proprioception)
+                self._graph.replay()
+                action = self._graph_action.cpu()
+        else:
+            teacher = torch.cat((proprioception.to(self.device), torch.zeros(187, device=self.device)))
+            action = self._forward(depth[None, None].to(self.device), teacher[None]).cpu()
         if not bool(torch.isfinite(action).all()):
             raise RuntimeError("non-finite policy action")
         self.last_action = action.clone()

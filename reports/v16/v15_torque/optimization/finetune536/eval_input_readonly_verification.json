@@ -1,0 +1,20 @@
+{
+  "read_only_actual536_binding_passed": true,
+  "models": [
+    {
+      "label": "pre339_g097_lpf23",
+      "actor_sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33"
+    },
+    {
+      "label": "adapt536_g097_lpf23",
+      "actor_sha256": "06ca0ec3fadd743c1033a75ccf133193e3ad0432f3112b79698467ac0efd4e7a"
+    }
+  ],
+  "training536_inputs": {
+    "checkpoint_sha256": "06ca0ec3fadd743c1033a75ccf133193e3ad0432f3112b79698467ac0efd4e7a",
+    "run_completed_sha256": "55a469c1e1344cc0a1bb531451a968c2dfa10b9330ac49bb547ef49d0bdb19af",
+    "actual_contract_sha256": "d80a94140858b2f256db17f6ef61238907b01bde8f7686aad34c9b60a07d05b6",
+    "training_manifest_sha256": "849da80a0a5e063ceb1e96bd7e4fac768a75713bd6bc2e18f2ec4175873d7a78",
+    "training_overlay_sha256": "3b3e003e44ab542c7796c55e8bf1f1a9e68b3d29d86e58af554b07189b280aeb"
+  }
+}

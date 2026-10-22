@@ -1,0 +1,32 @@
+{
+  "read_only_cpu_checkpoint_inspection": true,
+  "checkpoint": "/home/shanghun1404/v15_large_scale/locomotion_jobs/339/guide_v15_physx_pd/2026-09-27_12-47-59_v14_m5700_physx_pd_lane_stairs/model_11699.pt",
+  "sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33",
+  "iteration": 11699,
+  "optimizer_groups": [
+    {
+      "lr": 0.000033750000000000014,
+      "eps": 1e-8
+    }
+  ],
+  "action_std_min_max": [
+    0.11752395331859589,
+    0.1422816514968872
+  ],
+  "runner_load_source": "    def load(self, path: str, load_optimizer: bool = True, map_location: str | None = None) -> dict:\n        loaded_dict = torch.load(path, weights_only=False, map_location=map_location)\n        # Load model\n        resumed_training = self.alg.policy.load_state_dict(loaded_dict[\"model_state_dict\"])\n        # Load RND model if used\n        if hasattr(self.alg, \"rnd\") and self.alg.rnd:\n            self.alg.rnd.load_state_dict(loaded_dict[\"rnd_state_dict\"])\n        # Load optimizer if used\n        if load_optimizer and resumed_training:\n            # Algorithm optimizer\n            self.alg.optimizer.load_state_dict(loaded_dict[\"optimizer_state_dict\"])\n            # RND optimizer if used\n            if hasattr(self.alg, \"rnd\") and self.alg.rnd:\n                self.alg.rnd_optimizer.load_state_dict(loaded_dict[\"rnd_optimizer_state_dict\"])\n        # Load current learning iteration\n        if resumed_training:\n            self.current_learning_iteration = loaded_dict[\"iter\"]\n        return loaded_dict[\"infos\"]\n",
+  "ppo_adaptive_lr_source": "            # Compute KL divergence and adapt the learning rate\n            if self.desired_kl is not None and self.schedule == \"adaptive\":\n                with torch.inference_mode():\n                    kl = torch.sum(\n                        torch.log(sigma_batch / old_sigma_batch + 1.0e-5)\n                        + (torch.square(old_sigma_batch) + torch.square(old_mu_batch - mu_batch))\n                        / (2.0 * torch.square(sigma_batch))\n                        - 0.5,\n                        axis=-1,\n                    )\n                    kl_mean = torch.mean(kl)\n\n                    # Reduce the KL divergence across all GPUs\n                    if self.is_multi_gpu:\n                        torch.distributed.all_reduce(kl_mean, op=torch.distributed.ReduceOp.SUM)\n                        kl_mean /= self.gpu_world_size\n\n                    # Update the learning rate only on the main process\n                    # TODO: Is this needed? If KL-divergence is the \"same\" across all GPUs,\n                    #       then the learning rate should be the same across all GPUs.\n                    if self.gpu_global_rank == 0:\n                        if kl_mean > self.desired_kl * 2.0:\n                            self.learning_rate = max(1e-5, self.learning_rate / 1.5)\n                        elif kl_mean < self.desired_kl / 2.0 and kl_mean > 0.0:\n                            self.learning_rate = min(1e-2, self.learning_rate * 1.5)\n\n                    # Update the learning rate for all GPUs\n                    if self.is_multi_gpu:\n                        lr_tensor = torch.tensor(self.learning_rate, device=self.device)\n                        torch.distributed.broadcast(lr_tensor, src=0)\n                        self.learning_rate = lr_tensor.item()\n\n                    # Update the learning rate for all parameter groups\n                    for param_group in self.optimizer.param_groups:\n                        param_group[\"lr\"] = self.learning_rate\n",
+  "ppo_constructor_lr_lines": [
+    "self.learning_rate = learning_rate"
+  ],
+  "installed_sources": {
+    "OnPolicyRunner": {
+      "path": "/opt/isaacsim-env/lib/python3.11/site-packages/rsl_rl/runners/on_policy_runner.py",
+      "sha256": "6ffaee7e154a49ae55eebf53a7b1549f0461a1742d92dd34af5bb4b785d19cf2"
+    },
+    "PPO": {
+      "path": "/opt/isaacsim-env/lib/python3.11/site-packages/rsl_rl/algorithms/ppo.py",
+      "sha256": "4373ac1b2f9fdf14d9da57516968fc95d8f605d2967fee01dc61bf0d09423478"
+    }
+  },
+  "training_or_simulation_executed": false
+}

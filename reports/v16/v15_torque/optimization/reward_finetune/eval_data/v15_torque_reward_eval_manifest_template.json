@@ -1,0 +1,173 @@
+{
+  "baseline": {
+    "guard_fraction": 0.99,
+    "cutoff_hz": 25.0,
+    "model": "339/model_11699",
+    "actor_sha256": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33"
+  },
+  "candidates": [
+    {
+      "label": "adapt_torque1p25_g099_lpf25",
+      "guard_fraction": 0.99,
+      "cutoff_hz": 25.0,
+      "actor_sha256": null,
+      "role": "Separately stored model11949 resumed from339; torque L2 reward multiplier1.25 only"
+    }
+  ],
+  "screening": {
+    "scenarios": [
+      "flat",
+      "rough"
+    ],
+    "seeds": [
+      42
+    ],
+    "num_envs": 32,
+    "seconds": 12.0,
+    "control_gate": {
+      "survival_at_least_baseline": true,
+      "progress_fraction_at_least": 0.9,
+      "absolute_command_speed_error_extra_allowance_m_s": 0.02,
+      "rough_corridor_kept_at_least_baseline": true,
+      "rough_mean_max_heading_error_extra_allowance_deg": 2.0
+    },
+    "torque_gate": {
+      "mean_joint_rms_ratio_at_most": 1.0,
+      "pooled_abs_power_ratio_at_most": 1.0,
+      "peak_or_p99_or_high_limit_occupancy_must_improve": true
+    }
+  },
+  "notes": [
+    "Gate values are experiment acceptance criteria, not motor specifications.",
+    "All control gates apply before torque ranking.",
+    "Training uses separate checkpoint and reward overlay; original configs/evaluator/model stay unchanged.",
+    "RMS, saturation, power and slew are implicit actuator estimates; actual solver motor torque and thermal safety remain unknown."
+  ],
+  "comparison_design": {
+    "reference": "Reuse verified actual508 frozen339 guard0.99 LPF25 traces; all fixed acceptance gates unchanged",
+    "policy_adaptation_comparison": "Only the new torque reward actor is re-evaluated; original508 is reused after source/data/physical contract checks",
+    "new_actor_hash_bound_from": "Verified reward pilot run_completed and actual checkpoint bytes before evaluation",
+    "training_job": null,
+    "expected_final_iteration": 11949,
+    "evaluation_submission_status": "Prepared only"
+  },
+  "baseline_reuse": {
+    "job": 508,
+    "fresh_reference_physics_run": false,
+    "artifact_sha256": {
+      "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_flat_seed42.json": "63a414245bed794980605ecbf25802741fd5a89d117b60c9c904b53fd3556e7e",
+      "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_flat_seed42_trace.npz": "58d3db395058dd10a52a4fe604da65701145dfc3933aff38f1dcc781622a44f6",
+      "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_flat_seed42_trace_audit.npz": "af149a55a3d5e35986f14ac9b6c89fb831a13d55f2a12e311f282d9d9cfc73d0",
+      "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_flat_seed42_trajectory.npz": "cbd8393176b3d52304c44a80f3246e2609ef436db8d5f4533572e6ae3a1fa209",
+      "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_rough_seed42.json": "bd6c7b639ea413a3f80f3f506ea5858cb32403204e3d1eb8985802ab98d9117f",
+      "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_rough_seed42_trace.npz": "497cc26c5e73359e8309479ea0400cf0d34ffd2c86e12ccd296ee81807479c7d",
+      "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_rough_seed42_trace_audit.npz": "e4513d68317bfe7bbddef7ee7229272df6469b574346c7b0f99a4141361a745c",
+      "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/main339_rough_seed42_trajectory.npz": "a8fc7fba631906dd815d15d3b99ef984415eb751c5a7083e22e4dc024ef979c9"
+    },
+    "immutable_source_sha256": {
+      "/home/shanghun1404/v15_large_scale/locomotion_jobs/339/guide_v15_physx_pd/2026-09-27_12-47-59_v14_m5700_physx_pd_lane_stairs/model_11699.pt": "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33",
+      "/home/shanghun1404/v15_large_scale/config/evaluate_v13_torque.py": "3b50b31cb90b16b83f1eb2b0efa5a79ff4aa3775492f52143f079c702f005264",
+      "/home/shanghun1404/v15_large_scale/config/v15_env_cfg.py": "9d7630498116cff12bde9f05f38a7957ea8dd176a2a42d00aaaa73bb1d1e8672",
+      "/opt/isaaclab/source/isaaclab/isaaclab/actuators/actuator_pd.py": "105f0341f972102f6bd5b0c544bc7c0510662241389a9decd24406bb2371d27e",
+      "/opt/isaaclab/source/isaaclab/isaaclab/assets/articulation/articulation.py": "fb179aacdd848906367d01105020e1d36412bd0f1da7187be09f0781ff589309",
+      "/home/shanghun1404/v13_torque/config/v13_torque_actions.py": "909f240bd141f5d9e0e676f75227a89aa17b98ac8722d2949ae0c3b767173066",
+      "/home/shanghun1404/v13_torque/config/v13_torque_mdp.py": "b156a82fa97f5d5bc2590dd0ca63ed5256605b1548f4d4d1caf20c79f0f98297",
+      "/home/shanghun1404/v14_leg_collision/config/v14_ros2_bridge.py": "fb8fb1aad16a66bc98098eab2d4de117adc2b258e2a1c8f32ea5a783025c1198",
+      "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_508/v15_torque_capture.py": "042d40629c6a205ac392f47d6880fc79f19ab8d191ae6ae81c118b8b8b8f23de",
+      "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+      "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad"
+    },
+    "metadata_by_scenario": {
+      "flat": {
+        "student_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+        "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+        "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+        "seed": 42,
+        "warmup_s": 2.0,
+        "measured_s": 12.0,
+        "control_dt_s": 0.02,
+        "physics_dt_s": 0.005,
+        "command_forward_m_s": 0.4,
+        "effort_guard_fraction": 0.99,
+        "control": "isaaclab",
+        "joint_drive": "physx",
+        "ros2_namespace": null,
+        "scenario": "flat",
+        "protocol": "fixed_v2",
+        "heading_control": false,
+        "geometry": {},
+        "terrain_level": null,
+        "self_collisions_enabled": true,
+        "measure_leg_clearance": true,
+        "leg_capsule_radius_m": 0.02,
+        "leg_terrain_filtered": true
+      },
+      "rough": {
+        "student_checkpoint": "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+        "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+        "usd_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+        "seed": 42,
+        "warmup_s": 0.0,
+        "measured_s": 12.0,
+        "control_dt_s": 0.02,
+        "physics_dt_s": 0.005,
+        "command_forward_m_s": 0.5,
+        "effort_guard_fraction": 0.99,
+        "control": "isaaclab",
+        "joint_drive": "physx",
+        "ros2_namespace": null,
+        "scenario": "rough",
+        "protocol": "fixed_v2",
+        "heading_control": true,
+        "geometry": {
+          "difficulty": 0.4444444444444444,
+          "unique_tiles": 32,
+          "unique_origins": 32,
+          "origin_z_m": [
+            0.10000000149011612,
+            0.35499998927116394,
+            0.9100000262260437,
+            0.10000000149011612,
+            0.9100000262260437,
+            -0.9100000262260437,
+            0.10000000149011612,
+            0.11666666716337204,
+            0.11666666716337204,
+            0.35499998927116394,
+            0.10000000149011612,
+            -0.35499998927116394,
+            0.10000000149011612,
+            0.11666666716337204,
+            0.9100000262260437,
+            0.10000000149011612,
+            -0.9100000262260437,
+            0.11666666716337204,
+            0.9100000262260437,
+            -0.9100000262260437,
+            0.11666666716337204,
+            0.10000000149011612,
+            0.35499998927116394,
+            -0.9100000262260437,
+            0.10000000149011612,
+            0.9100000262260437,
+            0.10000000149011612,
+            0.10000000149011612,
+            0.11666666716337204,
+            0.9100000262260437,
+            0.10000000149011612,
+            0.11666666716337204
+          ]
+        },
+        "terrain_level": 4,
+        "self_collisions_enabled": true,
+        "measure_leg_clearance": true,
+        "leg_capsule_radius_m": 0.02,
+        "leg_terrain_filtered": true
+      }
+    },
+    "verified_delay_steps": 0,
+    "verified_physx_kp": 300.0,
+    "verified_physx_kd": 8.0,
+    "verified_filter_recurrence_max_abs_error_rad": 1.1874362826347351e-07
+  }
+}

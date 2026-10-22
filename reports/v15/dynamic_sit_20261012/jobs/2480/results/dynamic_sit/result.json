@@ -1,0 +1,529 @@
+{
+  "schema": 2,
+  "case": "dynamic_sit",
+  "seed": 42,
+  "seconds_requested": 14.0,
+  "seconds_recorded": 0.835,
+  "completed": false,
+  "failure": "RuntimeError('Trunk below 0.20m above local ground')",
+  "reset_during_trial": false,
+  "metadata": {
+    "base_com_offset": [
+      0.010427819564938545,
+      0.015405300073325634,
+      0.06333552300930023
+    ],
+    "initial_joint_canonical_rad": [
+      0.0,
+      -0.55,
+      1.1,
+      0.0,
+      -0.55,
+      1.1,
+      0.0,
+      -0.55,
+      1.1,
+      0.0,
+      -0.55,
+      1.1
+    ],
+    "initial_root_world_m": [
+      0.0,
+      0.0,
+      0.46688541769981384
+    ],
+    "physical_joint_names": [
+      "FL_hip_roll",
+      "FR_hip_roll",
+      "FL_hip_pitch",
+      "FR_hip_pitch",
+      "BR_hip_roll",
+      "BL_hip_roll",
+      "BR_hip_pitch",
+      "BL_hip_pitch",
+      "FL_knee",
+      "FR_knee",
+      "BR_knee",
+      "BL_knee"
+    ],
+    "physical_sign": [
+      -1.0,
+      -1.0,
+      -1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      -1.0,
+      1.0,
+      -1.0,
+      -1.0,
+      1.0
+    ],
+    "canonical_joint_order": [
+      "FL_HAA",
+      "FL_HFE",
+      "FL_KFE",
+      "FR_HAA",
+      "FR_HFE",
+      "FR_KFE",
+      "RL_HAA",
+      "RL_HFE",
+      "RL_KFE",
+      "RR_HAA",
+      "RR_HFE",
+      "RR_KFE"
+    ],
+    "pair_order": [
+      {
+        "body": "base",
+        "targets": [
+          "FL_thigh",
+          "FL_shank",
+          "FR_thigh",
+          "FR_shank",
+          "BL_thigh",
+          "BL_shank",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "FL_hip",
+        "targets": [
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "FL_thigh",
+        "targets": [
+          "base",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "FL_shank",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "FR_hip",
+        "targets": [
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "FR_thigh",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "FR_shank",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "BL_hip",
+        "targets": [
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "BL_thigh",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "BL_shank",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BR_hip",
+          "BR_thigh",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "BR_hip",
+        "targets": [
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_shank"
+        ]
+      },
+      {
+        "body": "BR_thigh",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank"
+        ]
+      },
+      {
+        "body": "BR_shank",
+        "targets": [
+          "base",
+          "FL_hip",
+          "FL_thigh",
+          "FL_shank",
+          "FR_hip",
+          "FR_thigh",
+          "FR_shank",
+          "BL_hip",
+          "BL_thigh",
+          "BL_shank",
+          "BR_hip"
+        ]
+      }
+    ],
+    "actual_mass_kg": 23.094497680664062
+  },
+  "drive_gain_checks": [
+    {
+      "stamp_ns": 0,
+      "kp": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "kd": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ]
+    }
+  ],
+  "drive_limit_checks": [
+    {
+      "stamp_ns": 0,
+      "mode": "STAND",
+      "drive_limit": [
+        21.208974838256836,
+        21.12270164489746,
+        44.03965377807617,
+        43.96892547607422,
+        23.341882705688477,
+        23.319625854492188,
+        47.324188232421875,
+        47.301292419433594,
+        47.818016052246094,
+        47.83050537109375,
+        47.8284912109375,
+        47.833396911621094
+      ],
+      "feedforward": [
+        3.59102463722229,
+        -3.6772990226745605,
+        -3.960347890853882,
+        4.031073093414307,
+        1.458116888999939,
+        -1.4803740978240967,
+        -0.6758115887641907,
+        0.698708176612854,
+        -0.1819821447134018,
+        0.16949352622032166,
+        0.17150892317295074,
+        -0.16660499572753906
+      ]
+    }
+  ],
+  "transport_retry_count": 0,
+  "torque_semantics": "Pre-step implicit PD clipping plus separately applied feedforward estimate; not a measured PhysX drive moment.",
+  "collision_scope": "All 66 nonadjacent real rigid-body pairs, 132 directed filters; original 67 CAD convex hulls. Joint-connected pairs are excluded by PhysX.",
+  "cad_source_unchanged": true,
+  "video": [
+    {
+      "env_id": 0,
+      "path": "/home/shanghun1404/v15_cad_20261011/dynamic_sit_jobs/2480/results/dynamic_sit/video/env_00.mp4",
+      "frames": 21,
+      "fps": 25.0,
+      "duration_s": 0.84,
+      "view": "side",
+      "resolution": [
+        960,
+        640
+      ],
+      "stops_before_first_auto_reset": true,
+      "peers_hidden_only_during_observer_render": true
+    }
+  ],
+  "motion_verdict": {
+    "motion_success": false,
+    "reasons": [
+      "did_not_complete_requested_duration",
+      "missing_modes:LOWER,SETTLE_SIT,SIT,RISE,STABILIZE",
+      "missing_seated_hold_samples",
+      "missing_standing_hold_samples"
+    ],
+    "modes_seen": [
+      "STAND"
+    ],
+    "metrics": {}
+  },
+  "motion_success": false,
+  "torque_rms_nm": [
+    7.488419532775879,
+    6.089109420776367,
+    15.025593757629395,
+    4.137121677398682,
+    8.504488945007324,
+    1.508344292640686,
+    6.035424709320068,
+    11.246942520141602,
+    7.181647777557373,
+    5.965140342712402,
+    6.671985626220703,
+    17.96809196472168
+  ],
+  "torque_peak_nm": [
+    21.145891189575195,
+    28.68050765991211,
+    33.437095642089844,
+    15.016928672790527,
+    37.189842224121094,
+    8.026338577270508,
+    22.31999969482422,
+    43.20000076293945,
+    43.20000076293945,
+    22.319345474243164,
+    30.839977264404297,
+    39.12902069091797
+  ],
+  "ideal_current_rms_a": [
+    6.088145961606406,
+    4.2285482088724775,
+    10.434440109464857,
+    3.363513558860717,
+    5.905895100699531,
+    1.0474613143338098,
+    4.906849357170787,
+    7.810376750098334,
+    4.9872554010815096,
+    4.84970759570114,
+    4.633323351542155,
+    12.477841642167833
+  ],
+  "ideal_current_peak_a": [
+    17.191781454939182,
+    19.9170192082723,
+    23.220205307006836,
+    12.208885099829697,
+    25.826279322306316,
+    5.5738462342156305,
+    18.146341215304243,
+    30.000000529819065,
+    30.000000529819065,
+    18.14580932865298,
+    21.41665087805854,
+    27.172931035359703
+  ],
+  "rated_torque_nm": [
+    8.3,
+    18.0,
+    18.0,
+    8.3,
+    18.0,
+    18.0,
+    8.3,
+    18.0,
+    18.0,
+    8.3,
+    18.0,
+    18.0
+  ],
+  "simulator_peak_torque_nm": [
+    24.8,
+    48.0,
+    48.0,
+    24.8,
+    48.0,
+    48.0,
+    24.8,
+    48.0,
+    48.0,
+    24.8,
+    48.0,
+    48.0
+  ],
+  "motor_datasheet_peak_torque_nm": [
+    24.8,
+    53.0,
+    53.0,
+    24.8,
+    53.0,
+    53.0,
+    24.8,
+    53.0,
+    53.0,
+    24.8,
+    53.0,
+    53.0
+  ],
+  "rated_exceed_fraction": [
+    0.16766467065868262,
+    0.017964071856287425,
+    0.16167664670658682,
+    0.0658682634730539,
+    0.0658682634730539,
+    0.0,
+    0.0658682634730539,
+    0.08982035928143713,
+    0.041916167664670656,
+    0.04790419161676647,
+    0.023952095808383235,
+    0.47904191616766467
+  ],
+  "rms_exceeds_rated": [
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+    false
+  ],
+  "simulator_peak_exceeded": false,
+  "motor_datasheet_peak_exceeded": false,
+  "velocity_guard_exceed_frames": 0,
+  "current_semantics": "Ideal motor phase current |tau|/(Kt*gear), efficiency=1; not battery current or a measured drive moment.",
+  "max_nonadjacent_contact_force_n": 1099.1578369140625,
+  "self_contact_frames": 2,
+  "collision_checks_pass": false,
+  "pd_vs_status_max_error_nm": 1.2817382852858827e-06,
+  "torque_transport_integrity_pass": true,
+  "torso_min_ground_clearance_m": 0.19835814833641052,
+  "max_abs_tilt_deg": 16.509408950805664,
+  "compute_ms_p50_p99": [
+    0.3741479595191777,
+    95.56342782336289
+  ],
+  "contact_pairs_over_1n": {
+    "base <-> FR_shank": 1099.1578369140625,
+    "FR_shank <-> base": 1099.1578369140625
+  },
+  "task_success": false
+}

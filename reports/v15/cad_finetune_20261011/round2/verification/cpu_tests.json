@@ -1,0 +1,8 @@
+{
+  "command": "PYTHONPATH=config:ros2/v14_ros2_control:ros2/v151_ros2_control /opt/isaacsim-env/bin/python -m pytest -q config/tests/test_v15_cad_training_mdp.py config/tests/test_v15_cad_training_actions.py config/tests/test_v15_cad_training_terrain.py config/tests/test_v15_cad_training_rough.py config/tests/test_v15_cad_training_rough_torch.py config/tests/test_v15_cad_training_preflight.py",
+  "host": "ws1",
+  "passed": 55,
+  "failed": 0,
+  "duration_s": 2.43,
+  "scope": "CPU only: signed commands, ROS2 action parity, exact authored rough ground and strict finite preflight"
+}

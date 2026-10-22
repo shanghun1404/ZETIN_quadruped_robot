@@ -1,0 +1,2 @@
+({'actor_checkpoint': 'actor.pt', 'student_checkpoint': 'student.pt', 'base_com_offset': (0.010427819564938545, 0.015405300073325634, 0.06333552300930023)},)
+ROS2 launch typed parameters PASS

@@ -1,0 +1,238 @@
+{
+  "source_usd": "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+  "source_sha256": "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad",
+  "feet": [
+    {
+      "center_local_m": [
+        0.1798692178328798,
+        0.30990000861594424,
+        -0.5425212965203308
+      ],
+      "half_extents_m": [
+        0.019985238070829858,
+        0.01998809909391497,
+        0.022521271821656086
+      ],
+      "leg": "FL",
+      "collider_path": "/quadruped/base/FL_foot/collisions/foot/foot",
+      "mesh_point_count": 20094,
+      "mesh_to_foot_transform": [
+        [
+          0.0010000000474974513,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0010000000474974513,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0010000000474974513,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_points_bounds": [
+        [
+          159.88397216796875,
+          289.9118957519531,
+          -565.0425415039062
+        ],
+        [
+          199.8544464111328,
+          329.8880920410156,
+          -520.0
+        ]
+      ],
+      "collision_approximation": "convexHull",
+      "proxy": "foot_actor_frame_AABB_of_convex_hull_vertices",
+      "actual_contact_measured": false,
+      "physical_pair_filtered": true,
+      "interpretation": "Positive gap separates modeled geometry; negative gap is possible proxy overlap, not confirmed mesh collision. Contact offsets and solver tolerances excluded."
+    },
+    {
+      "center_local_m": [
+        0.1798692178328798,
+        0.30990000861594424,
+        -0.5425212965203308
+      ],
+      "half_extents_m": [
+        0.019985238070829858,
+        0.01998809909391497,
+        0.022521271821656086
+      ],
+      "leg": "FR",
+      "collider_path": "/quadruped/base/FR_foot/collisions/foot/foot",
+      "mesh_point_count": 20094,
+      "mesh_to_foot_transform": [
+        [
+          0.0010000000474974513,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0010000000474974513,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0010000000474974513,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_points_bounds": [
+        [
+          159.88397216796875,
+          289.9118957519531,
+          -565.0425415039062
+        ],
+        [
+          199.8544464111328,
+          329.8880920410156,
+          -520.0
+        ]
+      ],
+      "collision_approximation": "convexHull",
+      "proxy": "foot_actor_frame_AABB_of_convex_hull_vertices",
+      "actual_contact_measured": false,
+      "physical_pair_filtered": true,
+      "interpretation": "Positive gap separates modeled geometry; negative gap is possible proxy overlap, not confirmed mesh collision. Contact offsets and solver tolerances excluded."
+    },
+    {
+      "center_local_m": [
+        0.1798692178328798,
+        0.30990000861594424,
+        -0.5425212965203308
+      ],
+      "half_extents_m": [
+        0.019985238070829858,
+        0.01998809909391497,
+        0.022521271821656086
+      ],
+      "leg": "RL",
+      "collider_path": "/quadruped/base/RL_foot/collisions/foot/foot",
+      "mesh_point_count": 20094,
+      "mesh_to_foot_transform": [
+        [
+          0.0010000000474974513,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0010000000474974513,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0010000000474974513,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_points_bounds": [
+        [
+          159.88397216796875,
+          289.9118957519531,
+          -565.0425415039062
+        ],
+        [
+          199.8544464111328,
+          329.8880920410156,
+          -520.0
+        ]
+      ],
+      "collision_approximation": "convexHull",
+      "proxy": "foot_actor_frame_AABB_of_convex_hull_vertices",
+      "actual_contact_measured": false,
+      "physical_pair_filtered": true,
+      "interpretation": "Positive gap separates modeled geometry; negative gap is possible proxy overlap, not confirmed mesh collision. Contact offsets and solver tolerances excluded."
+    },
+    {
+      "center_local_m": [
+        0.1798692178328798,
+        0.30990000861594424,
+        -0.5425212965203308
+      ],
+      "half_extents_m": [
+        0.019985238070829858,
+        0.01998809909391497,
+        0.022521271821656086
+      ],
+      "leg": "RR",
+      "collider_path": "/quadruped/base/RR_foot/collisions/foot/foot",
+      "mesh_point_count": 20094,
+      "mesh_to_foot_transform": [
+        [
+          0.0010000000474974513,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0010000000474974513,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0010000000474974513,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "mesh_points_bounds": [
+        [
+          159.88397216796875,
+          289.9118957519531,
+          -565.0425415039062
+        ],
+        [
+          199.8544464111328,
+          329.8880920410156,
+          -520.0
+        ]
+      ],
+      "collision_approximation": "convexHull",
+      "proxy": "foot_actor_frame_AABB_of_convex_hull_vertices",
+      "actual_contact_measured": false,
+      "physical_pair_filtered": true,
+      "interpretation": "Positive gap separates modeled geometry; negative gap is possible proxy overlap, not confirmed mesh collision. Contact offsets and solver tolerances excluded."
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "baseline_job": 508,
+  "no_repeated_physics_run": true,
+  "cases": {
+    "flat": {
+      "trace_sha256": "af149a55a3d5e35986f14ac9b6c89fb831a13d55f2a12e311f282d9d9cfc73d0",
+      "LPF25_alpha": 0.43990084648844263,
+      "inferred_filter_recurrence_max_abs_error_rad": 5.960464477539063e-08,
+      "physx_gains_300_8": true,
+      "nominal_guard_fraction": 0.99
+    },
+    "rough": {
+      "trace_sha256": "e4513d68317bfe7bbddef7ee7229272df6469b574346c7b0f99a4141361a745c",
+      "LPF25_alpha": 0.43990084648844263,
+      "inferred_filter_recurrence_max_abs_error_rad": 1.1874362826347351e-07,
+      "physx_gains_300_8": true,
+      "nominal_guard_fraction": 0.99
+    }
+  },
+  "actual_delay_zero_from_immutable_evaluator_source": true,
+  "source_evaluator_sha256": "3b50b31cb90b16b83f1eb2b0efa5a79ff4aa3775492f52143f079c702f005264"
+}

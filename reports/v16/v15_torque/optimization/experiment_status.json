@@ -1,0 +1,39 @@
+{
+  "baseline_job": 508,
+  "screening_job": 516,
+  "screening_status": "COMPLETED",
+  "screening_exit_code": "0:0",
+  "screening_elapsed": "00:31:59",
+  "screening_max_rss_kib": 12545984,
+  "selected_candidate": null,
+  "selection_reason": "All five candidates fail at least one fixed control or torque gate",
+  "refinement_job": 525,
+  "refinement_initial_state": "PENDING (Dependency)",
+  "refinement_dependency": "afterany:528",
+  "refinement_policy": {
+    "first": "g095_lpf20",
+    "second_if_first_fails_any_original_gate": "g097_lpf20",
+    "stop_after_first_pass": true,
+    "hypothesis": "20 Hz is an intermediate LPF setting; outcomes are not predicted observations."
+  },
+  "source_hashes": {
+    "v15_torque_refinement_gate.py": "dde70e17eb0fb7dbc68d4605929e2f932a441da2e6a9a2153bd1fb06f517ec85",
+    "v15_torque_refinement_capture.py": "088df2e6423c375fa9c1495bd4d744d08543bc1cd4c1fe2e01cedeac475bb16a",
+    "v15_torque_refinement.sbatch": "8c278b02debbb5a72bc756dec08f1c0a0c96d659da1c99d6d0d9cc651a71c1d0",
+    "v15_torque_refinement_candidates.json": "e28113591232dbab782bdf10e703a704fed30fb99cdf430eca307e0792a841e0"
+  },
+  "actual_solver_motor_torque_recorded": false,
+  "motor_thermal_safety_proven": false,
+  "refinement_note": "Parent changed dependency to afterany528 and released hold after replacing V16 probe/pilot jobs. Original V15 evaluator unchanged; prior516 completed normally.",
+  "refinement_last_observed_state": "COMPLETED",
+  "preceding_v16_probe_job": 527,
+  "preceding_v16_pilot_job": 528,
+  "preceding_v16_pilot_state": "COMPLETED 0:0",
+  "refinement_exit_code": "0:0",
+  "refinement_elapsed": "00:18:37",
+  "refinement_max_rss_kib": 11506620,
+  "total_completed_candidates": 5,
+  "finetune_status": "COMPLETED536 0:0, checkpoint/optimizer tensors finite and saved LR verified; behavior/torque gates not evaluated",
+  "finetune_job": 536,
+  "finetune_output": "/home/shanghun1404/v15_large_scale/results/v16_20260929/v15_torque_finetune_536"
+}

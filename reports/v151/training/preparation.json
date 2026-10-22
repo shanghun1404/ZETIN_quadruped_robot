@@ -1,0 +1,127 @@
+{
+  "status": "prepared_and_deployed_not_submitted_by_training_agent",
+  "date": "2026-10-01",
+  "objective": "Original rewards plus -0.02 * mean_j((estimated_applied_torque_j / rating_j)^2); Isaac reward manager integrates at dt=0.02s.",
+  "rationale": "Prior 1.25x unnormalized torque norm failed all torque gates. Squared load normalizes continuous motor ratings and integrates sustained demand, including demand below rating. Small fixed learning rate limits drift; adoption still requires paired control and torque gates.",
+  "ratings_nm": {
+    "HAA": 8.3,
+    "HFE": 18.0,
+    "KFE": 18.0
+  },
+  "hyperparameters": {
+    "num_envs": 512,
+    "updates": 500,
+    "seed": 47,
+    "learning_rate": 1e-05,
+    "schedule": "fixed",
+    "optimizer_restored": true,
+    "rollout_steps_per_env": 24,
+    "additional_environment_steps": 6144000
+  },
+  "actuation": {
+    "type": "implicit_pd",
+    "cutoff_hz": 25.0,
+    "guard_fraction": 0.99,
+    "delay_steps": [
+      0,
+      3
+    ],
+    "physics_dt_s": 0.005,
+    "control_dt_s": 0.02,
+    "gain_randomization": "unchanged V15"
+  },
+  "checkpoints": {
+    "250": "pilot_update_0250.pt; expected iteration11949",
+    "500": "pilot_update_0500.pt; expected iteration12199",
+    "manifest": "pilot_checkpoints.json"
+  },
+  "input_sha256": {
+    "actor_checkpoint": [
+      "/home/shanghun1404/v15_large_scale/locomotion_jobs/339/guide_v15_physx_pd/2026-09-27_12-47-59_v14_m5700_physx_pd_lane_stairs/model_11699.pt",
+      "e2bb747acb4737f9e73dc34446cfae692ca2564ed36560fb1f137814eea46d33"
+    ],
+    "student_checkpoint": [
+      "/home/projects/legacy/quadruped_training_smooth_v11/runs/v12_distillation_dagger/best.pt",
+      "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05"
+    ],
+    "usd_path": [
+      "/home/shanghun1404/v14_leg_collision/assets/robot_v2_v14_leg_collision.usda",
+      "864f4b11fc24af1099acf292ce5358192294426928387c6d903cba41d45050ad"
+    ]
+  },
+  "original_trainer_sha256": "3da8cdcefa600f851795d3d48cdd30a6172b55070556ff8d888971057a1391d2",
+  "inherited_source_hashes": {
+    "v15_env_cfg": "9d7630498116cff12bde9f05f38a7957ea8dd176a2a42d00aaaa73bb1d1e8672",
+    "v14_leg_env_cfg": "2cc074a3419189b1b95378d025106c0a189a68d4a58710967071f8520d60a3c4",
+    "v13_torque_actions": "909f240bd141f5d9e0e676f75227a89aa17b98ac8722d2949ae0c3b767173066",
+    "v13_torque_mdp": "b156a82fa97f5d5bc2590dd0ca63ed5256605b1548f4d4d1caf20c79f0f98297",
+    "v15_math": "36d64aca24c0eb339d0dcfcef74670e2e71fcc737129ccda6f848e183471e2d3",
+    "v8_env_cfg": "750a8a006c9749c49f1868437cc7bfbb88d2912b155c630452e5340dd190c351",
+    "isaaclab_tasks.manager_based.locomotion.velocity.config.spot.mdp.rewards": "a757a62b1f7bb06f4c5bc5c6380c411588c15ca089c03000f9c259754cc515c4"
+  },
+  "new_source_hashes": {
+    "train_v151_locomotion.py": "d7e5c58debf0e4df03b9f90bd61c3b6a0d8b48d99227b5968e44bfb6252b9581",
+    "v151_training_math.py": "2d82c3ba78281cf08ebb288a39b1dd9fd1de0e872d00553d74afe2125aac4187",
+    "tests/test_v151_training_math.py": "c15e8ead718a2a8ba0fd3ac9e1d964653443306077b25db8d420090e0eb36390",
+    "experiments/v151_20261001/train_v151.sbatch": "e6d5e7bdfbb4a28ba08ff1fd44c364f098da74822196df1072a83053d05696ee"
+  },
+  "launch": "ssh -o ClearAllForwardings=yes ws1 'sbatch /home/shanghun1404/v151_ros2/config/experiments/v151_20261001/train_v151.sbatch'",
+  "resources": {
+    "qos": "admin",
+    "gpus": 1,
+    "memory_gb": 16,
+    "cpus": 4,
+    "time_limit": "03:00:00"
+  },
+  "output_root": "/home/shanghun1404/v151_ros2/training_jobs/$SLURM_JOB_ID/guide_v151_rated_load/",
+  "verification": {
+    "initial_red": "4 failures: objective module absent before implementation",
+    "local_objective": "4 passed",
+    "remote_objective": "4 passed",
+    "mutation": "RMS substituted for mean square:2 expected assertion failures; source unchanged",
+    "torch_cpu": "hand-calculated values and finite sign-correct gradients passed",
+    "overlay": "frozen trainer SHA and generated AST parsed",
+    "deployment": "4 source SHA checks passed",
+    "shell_syntax": "passed",
+    "full_local_suite": {
+      "status": "blocked at collection",
+      "cause": "torch not installed in system python3",
+      "error_count": 26,
+      "modules": [
+        "config/tests/test_aggregate_v11_multiseed.py",
+        "config/tests/test_evaluation_cfg.py",
+        "config/tests/test_expand_v11_checkpoint.py",
+        "config/tests/test_flat_reference_gate.py",
+        "config/tests/test_gait_phase_metrics.py",
+        "config/tests/test_grounded_gate.py",
+        "config/tests/test_guide_frame.py",
+        "config/tests/test_v10_wasd_commands.py",
+        "config/tests/test_v11_eval_metrics.py",
+        "config/tests/test_v11_layout.py",
+        "config/tests/test_v12_camera_contract.py",
+        "config/tests/test_v12_collection_contract.py",
+        "config/tests/test_v12_dataset.py",
+        "config/tests/test_v12_eval_metrics.py",
+        "config/tests/test_v12_teacher_actor.py",
+        "config/tests/test_v12_training.py",
+        "config/tests/test_v12_vision_student.py",
+        "config/tests/test_v13_depth_policy.py",
+        "config/tests/test_v13_torque_math.py",
+        "config/tests/test_v13_torque_metrics.py",
+        "config/tests/test_v14_heading.py",
+        "config/tests/test_v14_residual.py",
+        "config/tests/test_v15_math.py",
+        "ros2/v14_ros2_control/test/test_joint_command.py",
+        "ros2/v14_ros2_control/test/test_lockstep_nodes.py",
+        "ros2/v14_ros2_control/test/test_policy.py"
+      ]
+    }
+  },
+  "limitations": [
+    "Training rollout itself is the existing Isaac RL runner; deployed inference evaluation must use ROS2 as assigned to parent.",
+    "Implicit actuator applied torque is a clipped PD estimate, not measured PhysX solver motor torque.",
+    "Rated normalization does not prove thermal safety.",
+    "No improvement claim before paired V15/250/500 evaluation.",
+    "The two 250-update calls reset runner logging window; second call does not randomize episode lengths."
+  ]
+}

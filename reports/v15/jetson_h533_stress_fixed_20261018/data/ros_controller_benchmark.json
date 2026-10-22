@@ -1,0 +1,330 @@
+{
+  "recorded_utc": "2026-10-17T16:25:40.315530+00:00",
+  "device": "cuda",
+  "scenario": "walk",
+  "child": {
+    "torch": "2.14.1+cu132",
+    "cuda_runtime": "13.2",
+    "gpu": "Orin",
+    "compute_capability": [
+      8,
+      7
+    ],
+    "compiled_architectures": [
+      "sm_80",
+      "sm_90",
+      "sm_100",
+      "sm_110",
+      "sm_120"
+    ],
+    "cudnn": 92400,
+    "cpu_threads": 1,
+    "cudnn_benchmark": false,
+    "cudnn_allow_tf32": true,
+    "matmul_allow_tf32": false,
+    "worker_pid": 91399,
+    "actor_parameter_device": "cuda:0",
+    "student_parameter_device": "cuda:0",
+    "cuda_graph_enabled": true,
+    "pre_stream_policy_warmup_steps": 100,
+    "pre_stream_policy_warmup_ms": 834.468749
+  },
+  "method": "Actual C++/CUDA planner and independent command process; production device/backend parameters; no constructor override",
+  "sensors": "Synthetic depth, nominal joints, odometry and contacts over DDS; actual production USB gateway and H533, motors disabled; MCU feedback synthetic zeros",
+  "power_mode": "NV Power Mode: 25W\n1",
+  "requested_seconds": 3605.0,
+  "warmup_seconds": 5,
+  "continue_after_fault": true,
+  "live_startup": false,
+  "faults_during_stream": [],
+  "first_command_source_ms": 20.0,
+  "published_total": 721000,
+  "measured_expected": 720000,
+  "measured_complete": 720000,
+  "missing": 0,
+  "measured_command_hz": 200.00001204873968,
+  "all": {
+    "compute_ms": {
+      "samples": 720000,
+      "mean_ms": 1.4683903365928677,
+      "p50_ms": 1.4311939994513523,
+      "p95_ms": 1.7814079983509146,
+      "p99_ms": 2.069317330824561,
+      "max_ms": 15.627074000803987,
+      "above_5ms": 273,
+      "above_20ms": 0
+    },
+    "command_latency_ms": {
+      "samples": 720000,
+      "mean_ms": 3.599537374868056,
+      "p50_ms": 3.302044,
+      "p95_ms": 6.017391349999998,
+      "p99_ms": 7.88196315,
+      "max_ms": 40.852718,
+      "above_5ms": 61284,
+      "above_20ms": 40
+    },
+    "scheduled_to_command_ms": {
+      "samples": 720000,
+      "mean_ms": 4.06268588621111,
+      "p50_ms": 3.762928,
+      "p95_ms": 6.433589649999998,
+      "p99_ms": 8.42798398,
+      "max_ms": 41.340743,
+      "above_5ms": 86365,
+      "above_20ms": 46
+    },
+    "publisher_lateness_ms": {
+      "samples": 720000,
+      "mean_ms": 0.46314851134305546,
+      "p50_ms": 0.45309200000000005,
+      "p95_ms": 0.8341990499999999,
+      "p99_ms": 1.00386306,
+      "max_ms": 7.720196,
+      "above_5ms": 18,
+      "above_20ms": 0
+    }
+  },
+  "policy_ticks": {
+    "compute_ms": {
+      "samples": 180000,
+      "mean_ms": 1.4670248487734068,
+      "p50_ms": 1.4272264997998718,
+      "p95_ms": 1.7802239999582525,
+      "p99_ms": 2.0857979980428354,
+      "max_ms": 9.42957799998112,
+      "above_5ms": 21,
+      "above_20ms": 0
+    },
+    "command_latency_ms": {
+      "samples": 180000,
+      "mean_ms": 4.397831937872222,
+      "p50_ms": 3.770709,
+      "p95_ms": 7.5370994,
+      "p99_ms": 9.122232030000013,
+      "max_ms": 36.872004,
+      "above_5ms": 38308,
+      "above_20ms": 10
+    },
+    "scheduled_to_command_ms": {
+      "samples": 180000,
+      "mean_ms": 4.848704473927777,
+      "p50_ms": 4.2655355,
+      "p95_ms": 8.115325050000001,
+      "p99_ms": 9.755049820000002,
+      "max_ms": 37.50438,
+      "above_5ms": 47530,
+      "above_20ms": 12
+    },
+    "publisher_lateness_ms": {
+      "samples": 180000,
+      "mean_ms": 0.45087253605555555,
+      "p50_ms": 0.447835,
+      "p95_ms": 0.8034112499999999,
+      "p99_ms": 0.9547261400000001,
+      "max_ms": 6.901268,
+      "above_5ms": 10,
+      "above_20ms": 0
+    }
+  },
+  "non_policy_ticks": {
+    "compute_ms": {
+      "samples": 540000,
+      "mean_ms": 1.4688454991993545,
+      "p50_ms": 1.4324740004667547,
+      "p95_ms": 1.781634550025046,
+      "p99_ms": 2.06467700900248,
+      "max_ms": 15.627074000803987,
+      "above_5ms": 252,
+      "above_20ms": 0
+    },
+    "command_latency_ms": {
+      "samples": 540000,
+      "mean_ms": 3.333439187200001,
+      "p50_ms": 3.05468,
+      "p95_ms": 4.8369462,
+      "p99_ms": 6.3501313,
+      "max_ms": 40.852718,
+      "above_5ms": 22976,
+      "above_20ms": 30
+    },
+    "scheduled_to_command_ms": {
+      "samples": 540000,
+      "mean_ms": 3.800679690305556,
+      "p50_ms": 3.57967,
+      "p95_ms": 5.33408165,
+      "p99_ms": 6.79694908,
+      "max_ms": 41.340743,
+      "above_5ms": 38835,
+      "above_20ms": 34
+    },
+    "publisher_lateness_ms": {
+      "samples": 540000,
+      "mean_ms": 0.4672405031055556,
+      "p50_ms": 0.45475,
+      "p95_ms": 0.8433622,
+      "p99_ms": 1.0208962500000003,
+      "max_ms": 7.720196,
+      "above_5ms": 8,
+      "above_20ms": 0
+    }
+  },
+  "by_mode": {
+    "WALK": {
+      "compute_ms": {
+        "samples": 720000,
+        "mean_ms": 1.4683903365928677,
+        "p50_ms": 1.4311939994513523,
+        "p95_ms": 1.7814079983509146,
+        "p99_ms": 2.069317330824561,
+        "max_ms": 15.627074000803987,
+        "above_5ms": 273,
+        "above_20ms": 0
+      },
+      "command_latency_ms": {
+        "samples": 720000,
+        "mean_ms": 3.599537374868056,
+        "p50_ms": 3.302044,
+        "p95_ms": 6.017391349999998,
+        "p99_ms": 7.88196315,
+        "max_ms": 40.852718,
+        "above_5ms": 61284,
+        "above_20ms": 40
+      },
+      "scheduled_to_command_ms": {
+        "samples": 720000,
+        "mean_ms": 4.06268588621111,
+        "p50_ms": 3.762928,
+        "p95_ms": 6.433589649999998,
+        "p99_ms": 8.42798398,
+        "max_ms": 41.340743,
+        "above_5ms": 86365,
+        "above_20ms": 46
+      },
+      "publisher_lateness_ms": {
+        "samples": 720000,
+        "mean_ms": 0.46314851134305546,
+        "p50_ms": 0.45309200000000005,
+        "p95_ms": 0.8341990499999999,
+        "p99_ms": 1.00386306,
+        "max_ms": 7.720196,
+        "above_5ms": 18,
+        "above_20ms": 0
+      }
+    }
+  },
+  "command_interval_ms": {
+    "samples": 719999,
+    "mean_ms": 4.999999698781528,
+    "p50_ms": 4.908985,
+    "p95_ms": 7.452460999999998,
+    "p99_ms": 9.89722422,
+    "max_ms": 23.172296,
+    "above_5ms": 332328,
+    "above_20ms": 2
+  },
+  "planner_compute_ms": {
+    "samples": 179999,
+    "mean_ms": 7.8159444032616365,
+    "p50_ms": 7.654634999198606,
+    "p95_ms": 8.599965599205461,
+    "p99_ms": 11.222413518626121,
+    "max_ms": 32.31406499980949,
+    "above_5ms": 179999,
+    "above_20ms": 4
+  },
+  "planner_expected_samples": 180000,
+  "planner_samples_complete": false,
+  "planner_measured_samples": 179999,
+  "planner_first_measured_source_s": 5.0,
+  "planner_last_measured_source_s": 3604.98,
+  "planner_by_mode": {
+    "WALK": {
+      "samples": 179999,
+      "mean_ms": 7.8159444032616365,
+      "p50_ms": 7.654634999198606,
+      "p95_ms": 8.599965599205461,
+      "p99_ms": 11.222413518626121,
+      "max_ms": 32.31406499980949,
+      "above_5ms": 179999,
+      "above_20ms": 4
+    }
+  },
+  "plan_age_ms": {
+    "samples": 720000,
+    "mean_ms": 20.379916666666666,
+    "p50_ms": 20.0,
+    "p95_ms": 30.0,
+    "p99_ms": 30.0,
+    "max_ms": 50.0,
+    "above_5ms": 719944,
+    "above_20ms": 283680
+  },
+  "physical_gateway": {
+    "scheduler": "SCHED_OTHER",
+    "configuration": "/home/scienceowl/robot_dog/h533_link_20261017/h533_gateway_config.json",
+    "motors_enabled": false,
+    "controller_consumes_synthetic_nominal_joints": true,
+    "mcu_feedback_is_synthetic_zero": true,
+    "raw_feedback_samples": 719968,
+    "expected_raw_feedback_samples": 720000,
+    "last_feedback_before_end_ms": 0.992325,
+    "raw_feedback_hz": 199.99100339723856,
+    "missing_feedback_ticks": 0,
+    "status_messages": 36055,
+    "any_armed": false,
+    "any_mcu_fault": false,
+    "gateway_faults_during_stream": [],
+    "observed_command_publications": 720996,
+    "last_observed_cumulative_ack": 720992
+  },
+  "continuous_wbc_enabled": true,
+  "elapsed_stream_s": 3653.81338352,
+  "gateway_ack_fraction": 0.9999944521190132,
+  "integration_checks_passed": false,
+  "by_mode_policy_ticks": {
+    "WALK": {
+      "compute_ms": {
+        "samples": 180000,
+        "mean_ms": 1.4670248487734068,
+        "p50_ms": 1.4272264997998718,
+        "p95_ms": 1.7802239999582525,
+        "p99_ms": 2.0857979980428354,
+        "max_ms": 9.42957799998112,
+        "above_5ms": 21,
+        "above_20ms": 0
+      },
+      "command_latency_ms": {
+        "samples": 180000,
+        "mean_ms": 4.397831937872222,
+        "p50_ms": 3.770709,
+        "p95_ms": 7.5370994,
+        "p99_ms": 9.122232030000013,
+        "max_ms": 36.872004,
+        "above_5ms": 38308,
+        "above_20ms": 10
+      },
+      "scheduled_to_command_ms": {
+        "samples": 180000,
+        "mean_ms": 4.848704473927777,
+        "p50_ms": 4.2655355,
+        "p95_ms": 8.115325050000001,
+        "p99_ms": 9.755049820000002,
+        "max_ms": 37.50438,
+        "above_5ms": 47530,
+        "above_20ms": 12
+      },
+      "publisher_lateness_ms": {
+        "samples": 180000,
+        "mean_ms": 0.45087253605555555,
+        "p50_ms": 0.447835,
+        "p95_ms": 0.8034112499999999,
+        "p99_ms": 0.9547261400000001,
+        "max_ms": 6.901268,
+        "above_5ms": 10,
+        "above_20ms": 0
+      }
+    }
+  },
+  "diagnostic_cleanup_passed": true
+}

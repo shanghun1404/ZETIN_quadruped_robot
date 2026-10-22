@@ -1,0 +1,28 @@
+{
+  "training_job": 2330,
+  "training_state": "COMPLETED",
+  "preflight_passed": true,
+  "requested_updates": 2000,
+  "completed": true,
+  "adopted": false,
+  "evaluation_jobs": [
+    2331,
+    2332
+  ],
+  "evaluation_dependency": "afterok:2330",
+  "preserved_failed_setup_job": 2329,
+  "last_observed_completed_updates": 2000,
+  "last_observed_iteration": 13699,
+  "nonfinite_steps": 0,
+  "training_completed": true,
+  "evaluation_state": "COMPLETED",
+  "candidate_checkpoint": "train_jobs/2330/results/model_13699.pt",
+  "candidate_sha256": "1a3ac12414ffbcb69ed68245f6df90e3dd7971258c4bf576ccc434fa7d7b4357",
+  "passed_cases": 7,
+  "tested_cases": 15,
+  "followup_state": "COMPLETED",
+  "followup_training_job": 2333,
+  "followup_passed_cases": 12,
+  "total_updates": 3000,
+  "overview": "overview.html"
+}

@@ -1,0 +1,18 @@
+{
+  "position": {
+    "exact": true,
+    "max_abs_delta": 0.0
+  },
+  "joint_position": {
+    "exact": true,
+    "max_abs_delta": 0.0
+  },
+  "position_target": {
+    "exact": true,
+    "max_abs_delta": 0.0
+  },
+  "estimated_torque": {
+    "exact": true,
+    "max_abs_delta": 0.0
+  }
+}

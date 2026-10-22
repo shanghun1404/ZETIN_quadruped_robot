@@ -1,0 +1,114 @@
+{
+  "raw_logs_complete": true,
+  "source_result_unchanged": true,
+  "integration_checks_passed": false,
+  "integration_checks": {
+    "commands_complete": true,
+    "plans_complete": true,
+    "no_stream_faults": true,
+    "never_armed": true,
+    "no_mcu_fault": true,
+    "no_feedback_tick_gaps": true,
+    "feedback_hz_within_one": true,
+    "feedback_arrival_count_within_two": false,
+    "feedback_end_fresh": true,
+    "acknowledgements_complete": true
+  },
+  "failed_checks": [
+    "feedback_arrival_count_within_two"
+  ],
+  "strict_wbc_all_compute_below_20ms": false,
+  "measurement_seconds": 300.0,
+  "counts": {
+    "all_commands": 60997,
+    "measured_commands": 60000,
+    "measured_plans": 15000,
+    "measured_wbc": 15000,
+    "worker_including_warmup": 15350,
+    "gateway_writes": 61000
+  },
+  "planner_ms": {
+    "samples": 15000,
+    "mean_ms": 7.73307080873492,
+    "p99_ms": 10.6576421682621,
+    "max_ms": 15.85362599871587,
+    "above_20ms": 0
+  },
+  "policy_worker_ms": {
+    "samples": 15000,
+    "mean_ms": 5.291612654733334,
+    "p99_ms": 7.055253670000012,
+    "max_ms": 13.187589,
+    "above_20ms": 0
+  },
+  "wbc_ms": {
+    "samples": 15000,
+    "mean_ms": 11.2665196654,
+    "p99_ms": 14.143894900000001,
+    "max_ms": 26.483352,
+    "above_20ms": 4
+  },
+  "max_command_plan_age_ms": 35.0,
+  "recorded_gc_threshold_ms": 1.0,
+  "gc": {
+    "gc_gateway.jsonl": {
+      "total_events": 2,
+      "during_stream_events": 0,
+      "max_during_stream_ms": 0
+    },
+    "gc_child_87590.jsonl": {
+      "total_events": 35,
+      "during_stream_events": 0,
+      "max_during_stream_ms": 0
+    },
+    "gc_policy.jsonl": {
+      "total_events": 2,
+      "during_stream_events": 0,
+      "max_during_stream_ms": 0
+    },
+    "gc_wbc.jsonl": {
+      "total_events": 3,
+      "during_stream_events": 0,
+      "max_during_stream_ms": 0
+    },
+    "gc_command_child_87591.jsonl": {
+      "total_events": 34,
+      "during_stream_events": 0,
+      "max_during_stream_ms": 0
+    },
+    "gc_ros_87585.jsonl": {
+      "total_events": 5,
+      "during_stream_events": 0,
+      "max_during_stream_ms": 0
+    }
+  },
+  "mcu": {
+    "magic": 1211446065,
+    "version": 1,
+    "clock_hz": 250000000,
+    "boot_stage": 3,
+    "rx_bytes": 16347268,
+    "rx_overflows": 0,
+    "uart_errors": 0,
+    "tx_errors": 0,
+    "frames_received": 61000,
+    "commands_received": 60997,
+    "commands_accepted": 60997,
+    "feedback_sent": 70307,
+    "missed_ticks": 0,
+    "max_rx_depth": 519,
+    "session": 1092685978,
+    "apply_calls": 0,
+    "ready_checks": 0,
+    "last_uart_error": 0,
+    "parse_calls": 4054463,
+    "parse_cycles_mod32": 4111158089,
+    "max_parse_cycles": 274070,
+    "tx_cycles_mod32": 4241154496,
+    "max_tx_cycles": 488526,
+    "consumed_bytes": 16347268,
+    "max_tick_lateness_ms": 1,
+    "icache_enabled": 1
+  },
+  "note": "Five-second warmup and 300-second measured integration. Synthetic sensors, motors disabled. The strict feedback arrival count check remains failed (59997 vs 60000); no source tick gaps. Four WBC computations exceed 20ms. No corrected one-hour test is claimed."
+}

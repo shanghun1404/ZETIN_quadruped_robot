@@ -1,0 +1,16 @@
+{
+  "candidate": "589 update500",
+  "trial": "594 rough seed42",
+  "first_contact_over_1N_s": 5.55,
+  "max_contact_s": 6.195,
+  "max_body_channel": "RL_calf",
+  "max_force_N": 217.9922637939453,
+  "minimum_capsule_gap_m": -0.008696525877403771,
+  "minimum_pair": [
+    "RL_calf",
+    "RR_calf"
+  ],
+  "termination": "RuntimeError(\"Robot terminated before reset; terms=['base_tilt']\")",
+  "contact_pair_identity": "body channels store maximum over partners; exact force partner not logged",
+  "selected": false
+}

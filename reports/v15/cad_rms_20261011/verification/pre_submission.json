@@ -1,0 +1,11 @@
+{
+  "native_cpu_tests_passed": 97,
+  "duration_seconds": 2.08,
+  "warning": "Upstream Torch indexing deprecation",
+  "review_blocking_findings": 0,
+  "review_notes": [
+    "Analytical terrain ground lookup is not a PhysX raycast",
+    "Training EWMA is a surrogate; full recorded case RMS controls acceptance"
+  ],
+  "original_actor_unchanged": true
+}

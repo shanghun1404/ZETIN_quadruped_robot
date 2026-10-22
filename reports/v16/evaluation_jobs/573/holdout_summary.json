@@ -1,0 +1,111 @@
+{
+  "rows": [
+    {
+      "run": "model_seed1001",
+      "seed": 1001,
+      "controller": "model",
+      "seconds": 32.0,
+      "survived": 32,
+      "num_envs": 32,
+      "speed_command_m_s": 0.05,
+      "mean_speed_m_s": 0.04981091804802418,
+      "mean_progress_m": 1.5433404855430126,
+      "mean_power_w_per_joint": 0.6676772125065327,
+      "mean_guard_fraction": 0.0,
+      "source_and_conditions_verified": true,
+      "mean_completed_steps": 20.0,
+      "mean_qp_infeasible_tick_fraction": 0.008691406255820766,
+      "max_qp_torque_violation_nm": 0.0,
+      "gates": {
+        "survival_at_least_95_percent": true,
+        "mean_speed_error_at_most_0_05_m_s": true,
+        "mean_progress_75_to_125_percent_of_command": true,
+        "finite_metrics": true
+      },
+      "gates_passed": true
+    },
+    {
+      "run": "model_seed1002",
+      "seed": 1002,
+      "controller": "model",
+      "seconds": 32.0,
+      "survived": 32,
+      "num_envs": 32,
+      "speed_command_m_s": 0.05,
+      "mean_speed_m_s": 0.049812306300736964,
+      "mean_progress_m": 1.5434819012880325,
+      "mean_power_w_per_joint": 0.6671639457345009,
+      "mean_guard_fraction": 0.0,
+      "source_and_conditions_verified": true,
+      "mean_completed_steps": 20.0,
+      "mean_qp_infeasible_tick_fraction": 0.00871093750174623,
+      "max_qp_torque_violation_nm": 0.0,
+      "gates": {
+        "survival_at_least_95_percent": true,
+        "mean_speed_error_at_most_0_05_m_s": true,
+        "mean_progress_75_to_125_percent_of_command": true,
+        "finite_metrics": true
+      },
+      "gates_passed": true
+    },
+    {
+      "run": "model_seed1003",
+      "seed": 1003,
+      "controller": "model",
+      "seconds": 32.0,
+      "survived": 32,
+      "num_envs": 32,
+      "speed_command_m_s": 0.05,
+      "mean_speed_m_s": 0.04981679446063936,
+      "mean_progress_m": 1.5435795783996582,
+      "mean_power_w_per_joint": 0.6673401575535536,
+      "mean_guard_fraction": 0.0,
+      "source_and_conditions_verified": true,
+      "mean_completed_steps": 20.03125,
+      "mean_qp_infeasible_tick_fraction": 0.008535156201105565,
+      "max_qp_torque_violation_nm": 0.0,
+      "gates": {
+        "survival_at_least_95_percent": true,
+        "mean_speed_error_at_most_0_05_m_s": true,
+        "mean_progress_75_to_125_percent_of_command": true,
+        "finite_metrics": true
+      },
+      "gates_passed": true
+    },
+    {
+      "run": "pd_default_seed1001",
+      "seed": 1001,
+      "controller": "pd",
+      "seconds": 32.0,
+      "survived": 0,
+      "num_envs": 32,
+      "speed_command_m_s": 0.05,
+      "mean_speed_m_s": -0.004382725644973107,
+      "mean_progress_m": -0.20494392327964306,
+      "mean_power_w_per_joint": 0.15127219958230853,
+      "mean_guard_fraction": 1.5961022484134446e-05,
+      "source_and_conditions_verified": null,
+      "mean_completed_steps": 0.0,
+      "mean_qp_infeasible_tick_fraction": 0.0,
+      "max_qp_torque_violation_nm": 0.0,
+      "gates": {
+        "survival_at_least_95_percent": false,
+        "mean_speed_error_at_most_0_05_m_s": false,
+        "mean_progress_75_to_125_percent_of_command": false,
+        "finite_metrics": true
+      },
+      "gates_passed": false
+    }
+  ],
+  "expected_holdout_seeds": [
+    1001,
+    1002,
+    1003
+  ],
+  "evaluation_seconds": 32.0,
+  "source_and_conditions_verified": true,
+  "all_holdouts_present": true,
+  "quality_gates_are_experiment_criteria_not_hardware_certification": true,
+  "hardware_motor_continuous_rating_available": false,
+  "model_holdout_passed": true
+}

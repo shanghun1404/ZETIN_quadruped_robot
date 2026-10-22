@@ -1,0 +1,9 @@
+{
+  "old_sha256": "507ef25c8cdaaa5e251c3820092c9bfc2d24b8c590874c1cf342ac6c78ba5f77",
+  "new_sha256": "b8e14793ea00444c70413197fd3630c3cc07d05ada600f24215c149b2002170a",
+  "bytes": 14415542,
+  "changed_payload_files": [
+    "evidence/docs/superpowers/plans/2026-10-12-v15-jetson-usb.md"
+  ],
+  "runtime_checkpoints_unchanged": true
+}

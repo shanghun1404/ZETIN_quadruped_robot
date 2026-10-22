@@ -1,0 +1,45 @@
+{
+  "acceptance_reference_remains_original508": true,
+  "torque_average_populations_differ_when_survival_changes": true,
+  "comparison_is_seed42_observation_not_generalization_proof": true,
+  "cases": [
+    {
+      "scenario": "flat",
+      "guard_fraction": 0.97,
+      "cutoff_hz": 23.0,
+      "pre339_survived": 32,
+      "adapt536_survived": 32,
+      "pre339_corridor": 32,
+      "adapt536_corridor": 32,
+      "pre339_progress_m": 5.867825984954834,
+      "adapt536_progress_m": 5.322419166564941,
+      "pre339_speed_m_s": 0.4887467476228873,
+      "adapt536_speed_m_s": 0.43695271740357083,
+      "rms_ratio_adapted_to_same_settings339": 0.9044352852593686,
+      "power_ratio_adapted_to_same_settings339": 0.9541167790810595,
+      "above80_ratio_adapted_to_same_settings339": 0.7299180030476745,
+      "slew_ratio_adapted_to_same_settings339": 1.0536953081407276,
+      "peak_fraction_ratio_adapted_to_same_settings339": 1.0020502852812665,
+      "p99_fraction_mean_ratio_adapted_to_same_settings339": 1.009428471813756
+    },
+    {
+      "scenario": "rough",
+      "guard_fraction": 0.97,
+      "cutoff_hz": 23.0,
+      "pre339_survived": 30,
+      "adapt536_survived": 32,
+      "pre339_corridor": 29,
+      "adapt536_corridor": 32,
+      "pre339_progress_m": 3.972031593322754,
+      "adapt536_progress_m": 3.9312803745269775,
+      "pre339_speed_m_s": 0.33484258878859985,
+      "adapt536_speed_m_s": 0.32864219047129156,
+      "rms_ratio_adapted_to_same_settings339": 1.0009360376374974,
+      "power_ratio_adapted_to_same_settings339": 0.9718180485206691,
+      "above80_ratio_adapted_to_same_settings339": 1.006584879955773,
+      "slew_ratio_adapted_to_same_settings339": 1.0332220411979491,
+      "peak_fraction_ratio_adapted_to_same_settings339": 1.0007481498038047,
+      "p99_fraction_mean_ratio_adapted_to_same_settings339": 0.9942276350847583
+    }
+  ]
+}

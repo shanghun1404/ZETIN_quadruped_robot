@@ -1,0 +1,7 @@
+{
+  "startup_returned": true,
+  "spin_count": 0,
+  "contact_subscribers": 0,
+  "status_publishers": 0,
+  "inference": "Archived readiness predicate permits return while mandatory contact/status endpoints have zero peers. TRANSIENT_LOCAL durability means this is not proof of lost first messages or root cause of616."
+}

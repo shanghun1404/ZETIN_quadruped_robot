@@ -1,0 +1,101 @@
+{
+  "schema": 1,
+  "scenario": "flat",
+  "seed": 42,
+  "failure": "TimeoutError('V15.1 command missing at 15.500s')",
+  "completed": false,
+  "seconds_recorded": 15.5,
+  "joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "geometry": {},
+  "reset_after_initialization": false,
+  "terminal_position": [
+    0.00023389968555420637,
+    -0.003153681755065918,
+    0.4189009964466095
+  ],
+  "terminal_quaternion": [
+    0.999808132648468,
+    0.017907455563545227,
+    -0.007863394916057587,
+    0.0010777611751109362
+  ],
+  "torque_semantics": "implicit PD estimate, not measured PhysX drive force",
+  "torque_rms": [
+    0.2773979604244232,
+    7.827528476715088,
+    27.46340560913086,
+    0.23350763320922852,
+    7.3470377922058105,
+    27.041147232055664,
+    0.5433910489082336,
+    4.44768762588501,
+    35.886356353759766,
+    0.3338943123817444,
+    3.6057381629943848,
+    35.79507064819336
+  ],
+  "torque_peak": [
+    1.88453209400177,
+    9.036844253540039,
+    32.57410430908203,
+    1.7026503086090088,
+    8.189689636230469,
+    33.47515869140625,
+    3.2714288234710693,
+    5.116837501525879,
+    41.20655822753906,
+    3.254720449447632,
+    4.935747146606445,
+    41.857608795166016
+  ],
+  "rated_exceed_fraction": [
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0,
+    0.0,
+    0.0,
+    1.0
+  ],
+  "mean_absolute_power": 10.417306900024414,
+  "min_interleg_gap_m": 0.29939580644410907,
+  "negative_gap_fraction": 0.0,
+  "contact_pair_force_max_N": 0.0,
+  "min_leg_trunk_proxy_gap_m": -0.008448755327638821,
+  "trunk_proxy_overlap_fraction": 1.0,
+  "collision_scope": "8 thigh/calf capsules cross-leg pairs; adjacent same-leg and leg-ground filtered; no trunk collider in V14 asset",
+  "final_position": [
+    0.00023892999161034822,
+    -0.003154305275529623,
+    0.41890040040016174
+  ],
+  "modes": [
+    "RISE",
+    "SIT",
+    "STABILIZE"
+  ],
+  "compute_ms_p50_p99": [
+    0.2649485250003636,
+    76.60397662373722
+  ],
+  "demo_sequence_required": true,
+  "task_success": false
+}

@@ -1,0 +1,27 @@
+{
+  "torch": "2.14.1+cu132",
+  "cuda_runtime": "13.2",
+  "gpu": "Orin",
+  "compute_capability": [
+    8,
+    7
+  ],
+  "compiled_architectures": [
+    "sm_80",
+    "sm_90",
+    "sm_100",
+    "sm_110",
+    "sm_120"
+  ],
+  "cudnn": 92400,
+  "cpu_threads": 1,
+  "cudnn_benchmark": false,
+  "cudnn_allow_tf32": true,
+  "matmul_allow_tf32": false,
+  "worker_pid": 91399,
+  "actor_parameter_device": "cuda:0",
+  "student_parameter_device": "cuda:0",
+  "cuda_graph_enabled": true,
+  "pre_stream_policy_warmup_steps": 100,
+  "pre_stream_policy_warmup_ms": 834.468749
+}

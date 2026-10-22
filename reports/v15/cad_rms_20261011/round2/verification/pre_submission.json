@@ -1,0 +1,14 @@
+{
+  "native_cpu_tests_passed": 113,
+  "duration_seconds": 3.76,
+  "new_retention_test_red": 16,
+  "new_retention_test_green": 16,
+  "retention_teacher_frozen": true,
+  "selective_forward_zero_mean_squared_error_weight": 5,
+  "native_ppo_version": "3.1.2",
+  "upstream_ppo_sha256": "4373ac1b2f9fdf14d9da57516968fc95d8f605d2967fee01dc61bf0d09423478",
+  "initial_policy_std_minimum": 0.1,
+  "warning": "Upstream Torch indexing deprecation",
+  "review_state": "COMPLETE",
+  "review_blocking_findings": 0
+}

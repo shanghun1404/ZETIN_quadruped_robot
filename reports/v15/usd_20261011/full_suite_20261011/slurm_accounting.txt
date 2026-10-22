@@ -1,0 +1,13 @@
+JobID|State|ExitCode|Elapsed|QOS|ReqTRES|MaxRSS
+2317|CANCELLED by 2002|0:0|00:01:51|admin|billing=4,cpu=4,gres/shard=1,mem=16G,node=1|
+2317.batch|CANCELLED|0:15|00:01:52|||7217092K
+2318|FAILED|2:0|00:13:22|admin|billing=4,cpu=4,gres/shard=1,mem=13G,node=1|
+2318.batch|FAILED|2:0|00:13:22|||10949188K
+2319|FAILED|2:0|00:11:20|admin|billing=4,cpu=4,gres/shard=1,mem=13G,node=1|
+2319.batch|FAILED|2:0|00:11:20|||11832884K
+2320|FAILED|2:0|00:11:27|admin|billing=4,cpu=4,gres/shard=1,mem=13G,node=1|
+2320.batch|FAILED|2:0|00:11:27|||12146752K
+2321|FAILED|2:0|00:10:20|admin|billing=4,cpu=4,gres/shard=1,mem=13G,node=1|
+2321.batch|FAILED|2:0|00:10:20|||10820136K
+2322|FAILED|2:0|00:07:38|admin|billing=4,cpu=4,gres/shard=1,mem=13G,node=1|
+2322.batch|FAILED|2:0|00:07:38|||11780492K

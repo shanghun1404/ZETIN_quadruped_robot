@@ -1,0 +1,161 @@
+{
+  "passed": true,
+  "asset_checks": [
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/train_jobs/2330/source",
+      "file": "quadruped_robot.usda",
+      "sha256": "2a41b7f8ad3822b7929ec94a0399dc5cbcdd2e95e309c348d562013b9ba7df78",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/train_jobs/2330/source",
+      "file": "quadruped_meshes.usda",
+      "sha256": "62e4b3d87963a1e077c460fdd5f3970fe6026e0cd2e9a39861a473977f427961",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/train_jobs/2330/source",
+      "file": "quadruped_scene.usda",
+      "sha256": "5e8687d163e58eed04a82c915e4ef9c7bbe3ed76fdcf2226299ba148a628ab2a",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/train_jobs/2330/source",
+      "file": "README_isaac.md",
+      "sha256": "a07b8747935e227daa0bd40d6f40dee71efeb452bb9b4ccd6aea6b8064d699b1",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/suite_jobs/2331/source",
+      "file": "quadruped_robot.usda",
+      "sha256": "2a41b7f8ad3822b7929ec94a0399dc5cbcdd2e95e309c348d562013b9ba7df78",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/suite_jobs/2331/source",
+      "file": "quadruped_meshes.usda",
+      "sha256": "62e4b3d87963a1e077c460fdd5f3970fe6026e0cd2e9a39861a473977f427961",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/suite_jobs/2331/source",
+      "file": "quadruped_scene.usda",
+      "sha256": "5e8687d163e58eed04a82c915e4ef9c7bbe3ed76fdcf2226299ba148a628ab2a",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/suite_jobs/2331/source",
+      "file": "README_isaac.md",
+      "sha256": "a07b8747935e227daa0bd40d6f40dee71efeb452bb9b4ccd6aea6b8064d699b1",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/suite_jobs/2332/source",
+      "file": "quadruped_robot.usda",
+      "sha256": "2a41b7f8ad3822b7929ec94a0399dc5cbcdd2e95e309c348d562013b9ba7df78",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/suite_jobs/2332/source",
+      "file": "quadruped_meshes.usda",
+      "sha256": "62e4b3d87963a1e077c460fdd5f3970fe6026e0cd2e9a39861a473977f427961",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/suite_jobs/2332/source",
+      "file": "quadruped_scene.usda",
+      "sha256": "5e8687d163e58eed04a82c915e4ef9c7bbe3ed76fdcf2226299ba148a628ab2a",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/suite_jobs/2332/source",
+      "file": "README_isaac.md",
+      "sha256": "a07b8747935e227daa0bd40d6f40dee71efeb452bb9b4ccd6aea6b8064d699b1",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/round2/train_jobs/2333/source",
+      "file": "quadruped_robot.usda",
+      "sha256": "2a41b7f8ad3822b7929ec94a0399dc5cbcdd2e95e309c348d562013b9ba7df78",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/round2/train_jobs/2333/source",
+      "file": "quadruped_meshes.usda",
+      "sha256": "62e4b3d87963a1e077c460fdd5f3970fe6026e0cd2e9a39861a473977f427961",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/round2/train_jobs/2333/source",
+      "file": "quadruped_scene.usda",
+      "sha256": "5e8687d163e58eed04a82c915e4ef9c7bbe3ed76fdcf2226299ba148a628ab2a",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/round2/train_jobs/2333/source",
+      "file": "README_isaac.md",
+      "sha256": "a07b8747935e227daa0bd40d6f40dee71efeb452bb9b4ccd6aea6b8064d699b1",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/round2/suite_jobs/2334/source",
+      "file": "quadruped_robot.usda",
+      "sha256": "2a41b7f8ad3822b7929ec94a0399dc5cbcdd2e95e309c348d562013b9ba7df78",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/round2/suite_jobs/2334/source",
+      "file": "quadruped_meshes.usda",
+      "sha256": "62e4b3d87963a1e077c460fdd5f3970fe6026e0cd2e9a39861a473977f427961",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/round2/suite_jobs/2334/source",
+      "file": "quadruped_scene.usda",
+      "sha256": "5e8687d163e58eed04a82c915e4ef9c7bbe3ed76fdcf2226299ba148a628ab2a",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/round2/suite_jobs/2334/source",
+      "file": "README_isaac.md",
+      "sha256": "a07b8747935e227daa0bd40d6f40dee71efeb452bb9b4ccd6aea6b8064d699b1",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/round2/suite_jobs/2335/source",
+      "file": "quadruped_robot.usda",
+      "sha256": "2a41b7f8ad3822b7929ec94a0399dc5cbcdd2e95e309c348d562013b9ba7df78",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/round2/suite_jobs/2335/source",
+      "file": "quadruped_meshes.usda",
+      "sha256": "62e4b3d87963a1e077c460fdd5f3970fe6026e0cd2e9a39861a473977f427961",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/round2/suite_jobs/2335/source",
+      "file": "quadruped_scene.usda",
+      "sha256": "5e8687d163e58eed04a82c915e4ef9c7bbe3ed76fdcf2226299ba148a628ab2a",
+      "matches_baseline": true
+    },
+    {
+      "snapshot": "reports/v15/cad_finetune_20261011/round2/suite_jobs/2335/source",
+      "file": "README_isaac.md",
+      "sha256": "a07b8747935e227daa0bd40d6f40dee71efeb452bb9b4ccd6aea6b8064d699b1",
+      "matches_baseline": true
+    }
+  ],
+  "controller_checks": [
+    {
+      "job": 2334,
+      "files": 39,
+      "identical_to_round1": true
+    },
+    {
+      "job": 2335,
+      "files": 39,
+      "identical_to_round1": true
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "source": "Parent-authorized evaluation schedule, 2026-10-01; scope only, never result evidence.",
+  "integration": {
+    "601": {
+      "demo_sequence_required": true,
+      "scenario": "flat"
+    },
+    "602": {
+      "demo_sequence_required": false,
+      "scenario": "stairs_up"
+    }
+  }
+}

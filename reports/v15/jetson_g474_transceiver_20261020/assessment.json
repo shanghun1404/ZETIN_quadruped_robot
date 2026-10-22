@@ -1,0 +1,84 @@
+{
+  "status": "RX path not verified",
+  "user_confirmed": {
+    "channels": [
+      1,
+      2,
+      3
+    ],
+    "supply_v": 3.3,
+    "peer_connected": false,
+    "transceiver_model": "TJA1051T"
+  },
+  "scope": "TX-pad and physical GPIO RX samples; not CAN_H/L voltage or external node ACK",
+  "modes": {
+    "mit": {
+      "1": {
+        "tx_crc_valid": 8,
+        "rx_echo_verified": 0,
+        "rx_low_samples": 0
+      },
+      "2": {
+        "tx_crc_valid": 8,
+        "rx_echo_verified": 0,
+        "rx_low_samples": 0
+      },
+      "3": {
+        "tx_crc_valid": 8,
+        "rx_echo_verified": 0,
+        "rx_low_samples": 0
+      }
+    },
+    "servo": {
+      "1": {
+        "tx_crc_valid": 8,
+        "rx_echo_verified": 0,
+        "rx_low_samples": 0
+      },
+      "2": {
+        "tx_crc_valid": 8,
+        "rx_echo_verified": 0,
+        "rx_low_samples": 0
+      },
+      "3": {
+        "tx_crc_valid": 8,
+        "rx_echo_verified": 0,
+        "rx_low_samples": 0
+      }
+    }
+  },
+  "normal_mode": {
+    "1": {
+      "attempted": 4,
+      "completed": 0,
+      "last_error_code": 5,
+      "error": "Bit0 dominant-bit mismatch",
+      "tec": 160
+    },
+    "2": {
+      "attempted": 4,
+      "completed": 0,
+      "last_error_code": 5,
+      "error": "Bit0 dominant-bit mismatch",
+      "tec": 160
+    },
+    "3": {
+      "attempted": 4,
+      "completed": 0,
+      "last_error_code": 5,
+      "error": "Bit0 dominant-bit mismatch",
+      "tec": 160
+    }
+  },
+  "mode_after_test": "external loopback, no active CAN command generator",
+  "supply_diagnosis": {
+    "datasheet_url": "https://www.nxp.com/docs/en/data-sheet/TJA1051.pdf",
+    "vcc_required_v": [
+      4.5,
+      5.5
+    ],
+    "reported_supply_v": 3.3,
+    "pending": "Confirm whether 3.3V is VCC or VIO and whether /3 variant or module level translation exists",
+    "hypothesis": "If actual chip VCC is 3.3V, undervoltage is a sufficient explanation for the missing TX-to-bus-to-RX path; physical VCC has not been measured"
+  }
+}

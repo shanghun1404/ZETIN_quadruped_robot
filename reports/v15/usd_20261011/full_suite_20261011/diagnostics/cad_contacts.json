@@ -1,0 +1,827 @@
+{
+  "schema": 1,
+  "scope": "CPU replay of actual recorded canonical joint configurations through authored CAD convex hulls; no PhysX stepping",
+  "model_sha256": "914e645273bf5b89b9482007f42f489183f55a75d25f0ac8688aa0a728576678",
+  "source_usd_sha256": "2a41b7f8ad3822b7929ec94a0399dc5cbcdd2e95e309c348d562013b9ba7df78",
+  "collision_hulls_sha256": "25b71bbc630f696d812c785df69e4928356e52974f08fccb87ea91c1657acb8d",
+  "method": "derive_v15_cad_model.collision_screen; each physical body placed from recorded joint positions. Self-intersection is invariant to rigid root pose, so the root is identity.",
+  "intersection_metric": "Positive max_common_interior_radius_m proves overlapping interiors. It is an inscribed common-ball lower bound, not a penetration depth. Negative values are shared plane slack and are not Euclidean clearance.",
+  "controls": {
+    "nominal_candidates": 0,
+    "inward_haa_candidates": 2
+  },
+  "references": [
+    {
+      "url": "https://nvidia-omniverse.github.io/PhysX/physx/5.1.2/docs/AdvancedCollisionDetection.html",
+      "supports": "PhysX can generate contact before shape interiors intersect, according to the sum of contact offsets. The actual runtime offsets were not recorded in these trials."
+    }
+  ],
+  "cases": [
+    {
+      "job_id": "2318",
+      "case": "stairs_up_10cm",
+      "telemetry_sha256": "3c4323cb43c2b037370a602c12e1e4d1e63e6946550e3bfc8ea411492c769f2c",
+      "peak_frame_index": 2530,
+      "peak_state_time_s": 12.655000000000001,
+      "peak_force_N": 435.57037353515625,
+      "peak_pair": "base <-> FL_shank",
+      "self_contact_frames": 2,
+      "frames": [
+        {
+          "role": "predecessor",
+          "index": 2529,
+          "state_time_s": 12.65,
+          "canonical_joint_position_rad": [
+            -0.06457018852233887,
+            -1.2095630168914795,
+            1.261181116104126,
+            0.043232280761003494,
+            -0.6012411713600159,
+            0.9368680715560913,
+            -0.2754595875740051,
+            -0.43043848872184753,
+            0.8498404622077942,
+            0.14911790192127228,
+            -0.9006205797195435,
+            1.4902373552322388
+          ],
+          "canonical_joint_velocity_rad_s": [
+            -0.8938367366790771,
+            -3.5740768909454346,
+            7.524903297424316,
+            -1.6531617641448975,
+            -1.875071406364441,
+            -0.42641472816467285,
+            -0.6339269280433655,
+            -3.0198585987091064,
+            -3.3391711711883545,
+            -1.047438144683838,
+            -0.7202329635620117,
+            4.936033725738525
+          ],
+          "estimated_torque_pre_step_nm": [
+            -1.4950923919677734,
+            13.735984802246094,
+            16.592693328857422,
+            6.817869186401367,
+            4.693785667419434,
+            -5.916720867156982,
+            -9.083504676818848,
+            -41.586788177490234,
+            -16.865623474121094,
+            -11.96780014038086,
+            45.071044921875,
+            37.13274383544922
+          ],
+          "feedforward_torque_pre_step_nm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "measured_base_fl_shank_force_N": 0.0,
+          "authored_hull_intersections": [],
+          "authored_base_fl_shank_intersections": [],
+          "closest_base_fl_shank_mesh_pairs": [
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.000527496614806971,
+              "witness_point_root_m": [
+                -0.14384391519879214,
+                0.04460941940034341,
+                0.025097924328247763
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/AK10_9_KV60_V3_0_3D_7",
+              "max_common_interior_radius_m": -0.0037952929830421837,
+              "witness_point_root_m": [
+                -0.1439589697506955,
+                0.04488703671700959,
+                0.020591616703420974
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_B_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.004555019007734893,
+              "witness_point_root_m": [
+                -0.13913522876619386,
+                0.00455501900773489,
+                0.014693460300502685
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_bulkhead_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.006516204096977284,
+              "witness_point_root_m": [
+                -0.13742892201648482,
+                0.006204884841075492,
+                0.018698618708521176
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_B_1",
+              "second": "/quadruped/FL_shank/AK10_9_KV60_V3_0_3D_7",
+              "max_common_interior_radius_m": -0.008074911779851288,
+              "witness_point_root_m": [
+                -0.1435371790417152,
+                0.008074911779851483,
+                0.01411753068321452
+              ]
+            }
+          ]
+        },
+        {
+          "role": "peak_post_step",
+          "index": 2530,
+          "state_time_s": 12.655000000000001,
+          "canonical_joint_position_rad": [
+            -0.06781230121850967,
+            -1.216648817062378,
+            1.2939790487289429,
+            0.04004047065973282,
+            -0.6099322438240051,
+            0.939195454120636,
+            -0.2808004319667816,
+            -0.4452334940433502,
+            0.8419525623321533,
+            0.1417780965566635,
+            -0.9004313349723816,
+            1.5166610479354858
+          ],
+          "canonical_joint_velocity_rad_s": [
+            -0.42085856199264526,
+            0.254905104637146,
+            6.043830394744873,
+            -0.7302810549736023,
+            -1.463973045349121,
+            0.23137511312961578,
+            -1.4737918376922607,
+            -2.6789956092834473,
+            1.2012524604797363,
+            -1.7782726287841797,
+            0.7816572785377502,
+            5.302131652832031
+          ],
+          "estimated_torque_pre_step_nm": [
+            -3.2886648178100586,
+            15.657537460327148,
+            7.637092590332031,
+            17.946208953857422,
+            12.876655578613281,
+            -9.401433944702148,
+            -8.510290145874023,
+            -34.37162780761719,
+            -0.13091087341308594,
+            -8.17837905883789,
+            40.88304901123047,
+            12.746177673339844
+          ],
+          "feedforward_torque_pre_step_nm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "measured_base_fl_shank_force_N": 435.57037353515625,
+          "authored_hull_intersections": [
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "interior_radius_m": 4.850977894894556e-06
+            }
+          ],
+          "authored_base_fl_shank_intersections": [
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "interior_radius_m": 4.850977894894556e-06
+            }
+          ],
+          "closest_base_fl_shank_mesh_pairs": [
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": 4.850977894894556e-06,
+              "witness_point_root_m": [
+                -0.14430773952773432,
+                0.04244922898907454,
+                0.02631460193212027
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/AK10_9_KV60_V3_0_3D_7",
+              "max_common_interior_radius_m": -0.0031462191844723393,
+              "witness_point_root_m": [
+                -0.1443656843436795,
+                0.04285460000940565,
+                0.02191626035746451
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_B_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.004008250528543357,
+              "witness_point_root_m": [
+                -0.1395787663307856,
+                0.004008250528543356,
+                0.01591024535220597
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_bulkhead_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.005918241943372718,
+              "witness_point_root_m": [
+                -0.1379463247380492,
+                0.005910787265588935,
+                0.020061667548779794
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_B_1",
+              "second": "/quadruped/FL_shank/AK10_9_KV60_V3_0_3D_7",
+              "max_common_interior_radius_m": -0.007445286437204878,
+              "witness_point_root_m": [
+                -0.14367910538803022,
+                0.0074452864372048485,
+                0.01514988179080781
+              ]
+            }
+          ]
+        }
+      ],
+      "reported_estimated_peak_torque_nm": [
+        24.552003860473633,
+        47.5200080871582,
+        47.52001190185547,
+        24.552001953125,
+        47.52001190185547,
+        47.5200080871582,
+        24.552001953125,
+        47.52000427246094,
+        47.520015716552734,
+        24.552003860473633,
+        47.52000427246094,
+        47.520015716552734
+      ]
+    },
+    {
+      "job_id": "2318",
+      "case": "stairs_down_10cm",
+      "telemetry_sha256": "a0704ca727134199eb36154c6ebb790914f4433f963b3a489238494892c3dcb9",
+      "peak_frame_index": 2444,
+      "peak_state_time_s": 12.225000000000001,
+      "peak_force_N": 992.0887451171875,
+      "peak_pair": "base <-> FL_shank",
+      "self_contact_frames": 4,
+      "frames": [
+        {
+          "role": "predecessor",
+          "index": 2443,
+          "state_time_s": 12.22,
+          "canonical_joint_position_rad": [
+            -0.1277744323015213,
+            -1.2166831493377686,
+            1.3355751037597656,
+            0.05402707681059837,
+            -0.6823579668998718,
+            1.0018879175186157,
+            -0.2104303389787674,
+            -0.3626313805580139,
+            0.9719592928886414,
+            0.16466715931892395,
+            -1.0151692628860474,
+            1.5493696928024292
+          ],
+          "canonical_joint_velocity_rad_s": [
+            2.0748863220214844,
+            -5.9320969581604,
+            7.680902481079102,
+            -0.6485031247138977,
+            0.2908174693584442,
+            -0.28673726320266724,
+            -0.44210827350616455,
+            -0.6697027087211609,
+            -1.5485200881958008,
+            1.2133581638336182,
+            -2.4499988555908203,
+            6.671335220336914
+          ],
+          "estimated_torque_pre_step_nm": [
+            5.140129089355469,
+            6.946994781494141,
+            -4.19659423828125,
+            -4.405994892120361,
+            -20.076080322265625,
+            -2.3789799213409424,
+            -11.558846473693848,
+            -46.3686637878418,
+            -44.95259094238281,
+            9.716625213623047,
+            18.007850646972656,
+            -3.153606414794922
+          ],
+          "feedforward_torque_pre_step_nm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "measured_base_fl_shank_force_N": 0.0,
+          "authored_hull_intersections": [
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "interior_radius_m": 0.00013323846129887677
+            }
+          ],
+          "authored_base_fl_shank_intersections": [
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "interior_radius_m": 0.00013323846129887677
+            }
+          ],
+          "closest_base_fl_shank_mesh_pairs": [
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": 0.00013323846129887677,
+              "witness_point_root_m": [
+                -0.14142255987066582,
+                0.043720100456237115,
+                0.02361098929789079
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/AK10_9_KV60_V3_0_3D_7",
+              "max_common_interior_radius_m": -0.0025717690817925977,
+              "witness_point_root_m": [
+                -0.12789620214892597,
+                0.04299988981148538,
+                0.006259171579084252
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_B_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.003711630441367267,
+              "witness_point_root_m": [
+                -0.13617309275702155,
+                0.0037116304413672683,
+                0.012924055588430199
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_bulkhead_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.005622827155294451,
+              "witness_point_root_m": [
+                -0.13481450318839125,
+                0.005765492496658929,
+                0.0173476258125789
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_B_1",
+              "second": "/quadruped/FL_shank/AK10_9_KV60_V3_0_3D_7",
+              "max_common_interior_radius_m": -0.007126272480385712,
+              "witness_point_root_m": [
+                -0.13858438482411295,
+                0.00712627248038561,
+                0.01050631457294978
+              ]
+            }
+          ]
+        },
+        {
+          "role": "peak_post_step",
+          "index": 2444,
+          "state_time_s": 12.225000000000001,
+          "canonical_joint_position_rad": [
+            -0.11180362850427628,
+            -1.214534878730774,
+            1.358571171760559,
+            0.04676731675863266,
+            -0.6815029382705688,
+            0.999936044216156,
+            -0.21722641587257385,
+            -0.3643399477005005,
+            0.9615607261657715,
+            0.17132185399532318,
+            -1.0261504650115967,
+            1.5867371559143066
+          ],
+          "canonical_joint_velocity_rad_s": [
+            3.18204927444458,
+            0.7201011180877686,
+            5.461180210113525,
+            -1.4823970794677734,
+            0.09138922393321991,
+            -0.4138650894165039,
+            -1.782278299331665,
+            0.6453406810760498,
+            2.6611695289611816,
+            1.6201484203338623,
+            -1.7324981689453125,
+            7.620837688446045
+          ],
+          "estimated_torque_pre_step_nm": [
+            5.896751403808594,
+            16.995500564575195,
+            5.644622802734375,
+            -5.4649529457092285,
+            -12.249605178833008,
+            -3.0913338661193848,
+            -6.6911163330078125,
+            -46.88029479980469,
+            -46.04084777832031,
+            16.48214340209961,
+            19.51169204711914,
+            19.086868286132812
+          ],
+          "feedforward_torque_pre_step_nm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "measured_base_fl_shank_force_N": 992.0887451171875,
+          "authored_hull_intersections": [],
+          "authored_base_fl_shank_intersections": [],
+          "closest_base_fl_shank_mesh_pairs": [
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -6.131099919460971e-05,
+              "witness_point_root_m": [
+                -0.14200127134242102,
+                0.042556190981392274,
+                0.023914566331018183
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/AK10_9_KV60_V3_0_3D_7",
+              "max_common_interior_radius_m": -0.00298235711488656,
+              "witness_point_root_m": [
+                -0.12853252389715536,
+                0.04231020966873672,
+                0.0063148341991907725
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_B_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.003947611606303843,
+              "witness_point_root_m": [
+                -0.13690087013235866,
+                0.003947611606303832,
+                0.013318105259551858
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_bulkhead_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.005870118755189996,
+              "witness_point_root_m": [
+                -0.1354508677157588,
+                0.0058871186891012285,
+                0.01763426717178286
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_B_1",
+              "second": "/quadruped/FL_shank/AK10_9_KV60_V3_0_3D_7",
+              "max_common_interior_radius_m": -0.007403598630961181,
+              "witness_point_root_m": [
+                -0.14070906112903764,
+                0.007403598630961197,
+                0.012238792679802813
+              ]
+            }
+          ]
+        }
+      ],
+      "reported_estimated_peak_torque_nm": [
+        24.552003860473633,
+        47.5200080871582,
+        47.5200080871582,
+        24.552001953125,
+        47.5200080871582,
+        47.5200080871582,
+        23.734325408935547,
+        47.5200080871582,
+        47.52001953125,
+        24.552001953125,
+        47.52000427246094,
+        47.52001953125
+      ]
+    },
+    {
+      "job_id": "2319",
+      "case": "stairs_up_157mm",
+      "telemetry_sha256": "631c349ab68cc82c51bf5e9c16dbd968c314fce58e335896d7f36c1ea3511d9b",
+      "peak_frame_index": 4338,
+      "peak_state_time_s": 21.695,
+      "peak_force_N": 1032.723388671875,
+      "peak_pair": "base <-> FL_shank",
+      "self_contact_frames": 8,
+      "frames": [
+        {
+          "role": "predecessor",
+          "index": 4337,
+          "state_time_s": 21.69,
+          "canonical_joint_position_rad": [
+            -0.1349548101425171,
+            -1.2093127965927124,
+            1.2490696907043457,
+            0.041530705988407135,
+            -0.635861873626709,
+            0.9713469743728638,
+            -0.18668703734874725,
+            -0.36685195565223694,
+            0.8479296565055847,
+            0.1769704818725586,
+            -1.0665194988250732,
+            1.4471567869186401
+          ],
+          "canonical_joint_velocity_rad_s": [
+            2.564650535583496,
+            -7.219666004180908,
+            10.019682884216309,
+            -0.7379434108734131,
+            0.9448850750923157,
+            0.6662082672119141,
+            -0.6541995406150818,
+            0.15839684009552002,
+            3.5051140785217285,
+            1.9147807359695435,
+            -4.918684959411621,
+            10.967995643615723
+          ],
+          "estimated_torque_pre_step_nm": [
+            17.629432678222656,
+            3.733287811279297,
+            3.2509994506835938,
+            -3.780529737472534,
+            -4.177087783813477,
+            -0.01861429214477539,
+            3.216984272003174,
+            -28.127490997314453,
+            -47.19552993774414,
+            15.999995231628418,
+            -4.696174621582031,
+            13.842269897460938
+          ],
+          "feedforward_torque_pre_step_nm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "measured_base_fl_shank_force_N": 0.0,
+          "authored_hull_intersections": [],
+          "authored_base_fl_shank_intersections": [],
+          "closest_base_fl_shank_mesh_pairs": [
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.0003543238369667658,
+              "witness_point_root_m": [
+                -0.14036320988434714,
+                0.045282657698818056,
+                0.021862121947412647
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/AK10_9_KV60_V3_0_3D_7",
+              "max_common_interior_radius_m": -0.0030729327938539656,
+              "witness_point_root_m": [
+                -0.12665885461443696,
+                0.04460201939024994,
+                0.004313071356606506
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_B_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.004181154629162057,
+              "witness_point_root_m": [
+                -0.13504421389219026,
+                0.004181154629162057,
+                0.01113116909386382
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_bulkhead_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.006139853683552358,
+              "witness_point_root_m": [
+                -0.13365487856507002,
+                0.006019783253199715,
+                0.015456815372363637
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_B_1",
+              "second": "/quadruped/FL_shank/AK10_9_KV60_V3_0_3D_7",
+              "max_common_interior_radius_m": -0.007679792960521732,
+              "witness_point_root_m": [
+                -0.13648084525457743,
+                0.007679792960521776,
+                0.007619978567797286
+              ]
+            }
+          ]
+        },
+        {
+          "role": "peak_post_step",
+          "index": 4338,
+          "state_time_s": 21.695,
+          "canonical_joint_position_rad": [
+            -0.11677485704421997,
+            -1.2138220071792603,
+            1.2830876111984253,
+            0.034130483865737915,
+            -0.6315131783485413,
+            0.97446608543396,
+            -0.19193261861801147,
+            -0.36625954508781433,
+            0.8514066338539124,
+            0.18710516393184662,
+            -1.0916893482208252,
+            1.5013267993927002
+          ],
+          "canonical_joint_velocity_rad_s": [
+            4.045360565185547,
+            0.41266149282455444,
+            6.73090124130249,
+            -1.3948339223861694,
+            0.7707500457763672,
+            0.5760440826416016,
+            -0.8345754742622375,
+            -0.24174968898296356,
+            -0.7538408637046814,
+            2.3217835426330566,
+            -4.994704723358154,
+            10.3834810256958
+          ],
+          "estimated_torque_pre_step_nm": [
+            11.932357788085938,
+            7.285736083984375,
+            -1.0558624267578125,
+            -3.0611438751220703,
+            -6.133378982543945,
+            -0.6462788581848145,
+            7.618268013000488,
+            -36.80813217163086,
+            -47.5200080871582,
+            10.862698554992676,
+            -2.1970443725585938,
+            4.211456298828125
+          ],
+          "feedforward_torque_pre_step_nm": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "measured_base_fl_shank_force_N": 1032.723388671875,
+          "authored_hull_intersections": [],
+          "authored_base_fl_shank_intersections": [],
+          "closest_base_fl_shank_mesh_pairs": [
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -9.685564553447727e-05,
+              "witness_point_root_m": [
+                -0.14169341641130592,
+                0.043181196575931176,
+                0.023556443643536852
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_F_1",
+              "second": "/quadruped/FL_shank/AK10_9_KV60_V3_0_3D_7",
+              "max_common_interior_radius_m": -0.002968231511403322,
+              "witness_point_root_m": [
+                -0.1281828033597886,
+                0.04307689119693593,
+                0.005985090245686273
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_B_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.0039741422902848725,
+              "witness_point_root_m": [
+                -0.13654199766336805,
+                0.003974142290293033,
+                0.01292171269726182
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_bulkhead_1",
+              "second": "/quadruped/FL_shank/knee_4",
+              "max_common_interior_radius_m": -0.005902652000569009,
+              "witness_point_root_m": [
+                -0.1351073976689859,
+                0.005903119615806975,
+                0.017244788194951875
+              ]
+            },
+            {
+              "first": "/quadruped/base/body_shell_B_1",
+              "second": "/quadruped/FL_shank/AK10_9_KV60_V3_0_3D_7",
+              "max_common_interior_radius_m": -0.0074363734190982765,
+              "witness_point_root_m": [
+                -0.1405817038345317,
+                0.007436373419098275,
+                0.012065084819387025
+              ]
+            }
+          ]
+        }
+      ],
+      "reported_estimated_peak_torque_nm": [
+        24.552003860473633,
+        47.52001190185547,
+        47.5200080871582,
+        24.552003860473633,
+        47.5200080871582,
+        47.5200080871582,
+        24.552001953125,
+        47.5200080871582,
+        47.5200080871582,
+        24.552001953125,
+        47.5200080871582,
+        47.520015716552734
+      ]
+    }
+  ],
+  "torque_interpretation": {
+    "estimated_torque": "The telemetry estimate is pre-step clipped implicit drive PD plus separately applied feedforward. It is neither a measured PhysX drive moment nor a joint reaction wrench.",
+    "structural_contact_load": "Nonadjacent body contact force is a separate structural collision load. Its reaction and joint-constraint moments are absent from the PD+feedforward estimate.",
+    "current": "The ideal current derived from estimated drive torque excludes collision reaction loads. A force norm alone cannot determine the moment about each motor axis or actual motor current.",
+    "duplicate_pair": "base -> FL_shank and FL_shank -> base are two directed reports of the same interaction; do not add the two peak force norms.",
+    "temporal_alignment": "joint_position is post-step; estimated_torque is calculated before that step. The predecessor joint_position is the pre-step pose for the peak force step."
+  },
+  "limits": "Isaac cooked-hull differences, contact offsets, and solver correction within the 5 ms step are not reconstructed. Absence of post-step authored-hull intersection cannot dismiss the recorded contact."
+}

@@ -1,0 +1,643 @@
+{
+  "scope": "Offline FK replay of recorded Isaac telemetry, with authored CAD hulls; no new physics/controller execution.",
+  "nominal_foot_center_vs_original_usd_audit_max_error_m": 1.6653345369377348e-16,
+  "model_sha256": "914e645273bf5b89b9482007f42f489183f55a75d25f0ac8688aa0a728576678",
+  "hulls_sha256": "25b71bbc630f696d812c785df69e4928356e52974f08fccb87ea91c1657acb8d",
+  "limitations": [
+    "Original baseline/USB runs have different world origins and preceding case histories.",
+    "Authored hull geometry does not reconstruct cooked PhysX hulls or contact offsets.",
+    "A fixed material contact point can differ from the lowest rotated foot-mesh vertex.",
+    "COM distance to a support line is a geometric indicator; it is not a dynamic stability criterion.",
+    "QP feasibility alone does not demonstrate actual physical stability.",
+    "This analysis does not identify a unique causal fix. Controlled comparison2424 remains required."
+  ],
+  "trials": [
+    {
+      "job": 2343,
+      "case": "sit_rise_walk_stop_sit",
+      "task_success": true,
+      "telemetry_sha256": "7f49577eb8bb39ec931c844648899d2b607f27308b806511cc1c57504bc83874",
+      "contact_raw_to_canonical_indices": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "contact_permutation_matched_policy_ticks": 634,
+      "contact_permutation_candidates_this_recording": [
+        [
+          1,
+          0,
+          3,
+          2
+        ],
+        [
+          1,
+          3,
+          0,
+          2
+        ],
+        [
+          2,
+          0,
+          3,
+          1
+        ],
+        [
+          2,
+          3,
+          0,
+          1
+        ]
+      ],
+      "contact_mapping_basis": {
+        "path": "reports/v15/usd_20261011/full_suite_20261011/diagnostics/cad_landing_ik_replay.json",
+        "sha256": "800cd8ee175b1cfff61f9adf78e1e0e85f10dd45960e9faf68f1b62696980d66",
+        "note": "Earlier CAD replay identified this order uniquely; this recording validates it but can leave pair swaps ambiguous."
+      },
+      "post_blend_window_s": [
+        18.3,
+        18.8
+      ],
+      "post_blend_samples": 26,
+      "post_blend_two_support_samples": 0,
+      "post_blend_numerically_feasible_samples": 26,
+      "max_nonadjacent_contact_force_n": 0.0,
+      "snapshots": [
+        {
+          "time_s": 17.3,
+          "mode": "BLEND_STAND",
+          "walk_weight": 1.0,
+          "support_count": 4,
+          "stance_mask": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "height_m": 0.4862874448299408,
+          "virtual_contact_z_m": [
+            0.0002483310162544883,
+            1.5015236041193702e-06,
+            3.2258094899706435e-05,
+            4.673836111301899e-05
+          ],
+          "authored_foot_min_z_m": [
+            -0.00021290909471449737,
+            -1.3819860351649282e-05,
+            -7.427928339187595e-06,
+            -0.0002068981648220003
+          ],
+          "com_xy_diagonal_line_distance_m": 0.012192546651000344,
+          "joint_reference_error_rad": null,
+          "wbc_feasible": null,
+          "wbc_converged": null,
+          "max_constraint_violation": null
+        },
+        {
+          "time_s": 18.0,
+          "mode": "BLEND_STAND",
+          "walk_weight": 0.1630800000000009,
+          "support_count": 4,
+          "stance_mask": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "height_m": 0.475449800491333,
+          "virtual_contact_z_m": [
+            3.668497358400025e-05,
+            2.1433777908863583e-05,
+            8.231265864555581e-05,
+            -0.00015456317979034573
+          ],
+          "authored_foot_min_z_m": [
+            -1.8827910195973185e-05,
+            -7.746243943573816e-05,
+            -1.866841291409127e-05,
+            -4.2670000828137766e-05
+          ],
+          "com_xy_diagonal_line_distance_m": 0.01288010585317801,
+          "joint_reference_error_rad": [
+            0.025788783949284813,
+            -0.018329930472479328,
+            0.03764254218256391,
+            0.024696610112648357,
+            -0.006988301585432954,
+            0.01582594641791224,
+            0.025112781899169323,
+            -0.029117329008109594,
+            0.057599505176674226,
+            0.026289294658627622,
+            -0.015625428197723168,
+            0.03301954316672284
+          ],
+          "wbc_feasible": true,
+          "wbc_converged": true,
+          "max_constraint_violation": 2.4829669411463918e-08
+        },
+        {
+          "time_s": 18.3,
+          "mode": "STABILIZE",
+          "walk_weight": 0.0,
+          "support_count": 4,
+          "stance_mask": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "height_m": 0.46901166439056396,
+          "virtual_contact_z_m": [
+            -5.003222489197157e-06,
+            -3.1331413506918704e-05,
+            6.0497149753091506e-05,
+            -0.00017916371562365363
+          ],
+          "authored_foot_min_z_m": [
+            -1.6039037604442807e-05,
+            -5.004527374730117e-05,
+            -1.4540872991353204e-05,
+            -4.417735051720495e-05
+          ],
+          "com_xy_diagonal_line_distance_m": 0.011792453567468525,
+          "joint_reference_error_rad": [
+            0.027975439676429355,
+            -0.00719310026645803,
+            0.006464038742346023,
+            0.0264554541194483,
+            0.008422019742100217,
+            -0.021337618421255256,
+            0.026679422162826504,
+            -0.030594795307382183,
+            0.05031673170015649,
+            0.027592609347664485,
+            -0.013581902713966532,
+            0.019207679380178533
+          ],
+          "wbc_feasible": true,
+          "wbc_converged": true,
+          "max_constraint_violation": 9.209849660386434e-10
+        },
+        {
+          "time_s": 18.5,
+          "mode": "STABILIZE",
+          "walk_weight": 0.0,
+          "support_count": 4,
+          "stance_mask": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "height_m": 0.4670470952987671,
+          "virtual_contact_z_m": [
+            -1.0584893239629078e-05,
+            -3.65641796755134e-05,
+            3.3022694706508204e-05,
+            -0.00020132980653697619
+          ],
+          "authored_foot_min_z_m": [
+            -1.7033447829273296e-05,
+            -4.540085365040136e-05,
+            -1.7103038727039888e-05,
+            -5.5333214234010164e-05
+          ],
+          "com_xy_diagonal_line_distance_m": 0.01174513588792188,
+          "joint_reference_error_rad": [
+            0.027812845656075905,
+            -0.0046889303254931125,
+            0.008191023720035995,
+            0.02629395812840065,
+            0.013201835415904917,
+            -0.02351438004840345,
+            0.026554990016586004,
+            -0.014135032254382618,
+            0.02593044495912844,
+            0.026803795890783397,
+            0.003902106552110318,
+            -0.007186091791718141
+          ],
+          "wbc_feasible": true,
+          "wbc_converged": true,
+          "max_constraint_violation": 2.003330643448124e-09
+        },
+        {
+          "time_s": 18.8,
+          "mode": "STAND",
+          "walk_weight": 0.0,
+          "support_count": 4,
+          "stance_mask": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "height_m": 0.4667128026485443,
+          "virtual_contact_z_m": [
+            -7.281935905878445e-06,
+            -3.7388652883441065e-05,
+            2.4756916782386895e-05,
+            -0.00021218551548241038
+          ],
+          "authored_foot_min_z_m": [
+            -1.0505721440401405e-05,
+            -3.945552521061879e-05,
+            -1.8428186753016718e-05,
+            -6.631230413556288e-05
+          ],
+          "com_xy_diagonal_line_distance_m": 0.011656497450995899,
+          "joint_reference_error_rad": [
+            0.027378849336310088,
+            -0.006179582886656876,
+            0.00949219311544014,
+            0.025864227266014755,
+            0.013023617528043152,
+            -0.024643530439058647,
+            0.02615776603736341,
+            -0.013054102021203273,
+            0.022421996358033436,
+            0.02629686024961487,
+            0.005642025737737755,
+            -0.012011326204846018
+          ],
+          "wbc_feasible": true,
+          "wbc_converged": true,
+          "max_constraint_violation": 6.229037384185309e-10
+        },
+        {
+          "time_s": 19.0,
+          "mode": "STAND",
+          "walk_weight": 0.0,
+          "support_count": 4,
+          "stance_mask": [
+            true,
+            true,
+            true,
+            true
+          ],
+          "height_m": 0.4666450023651123,
+          "virtual_contact_z_m": [
+            -1.0090504194482097e-05,
+            -3.9122571241667625e-05,
+            2.2721161674343904e-05,
+            -0.00021817993792583312
+          ],
+          "authored_foot_min_z_m": [
+            -1.2233408928252754e-05,
+            -3.895193394198859e-05,
+            -1.895085310721356e-05,
+            -7.239904721811907e-05
+          ],
+          "com_xy_diagonal_line_distance_m": 0.01162525573975972,
+          "joint_reference_error_rad": [
+            0.027163006016402334,
+            -0.0066772816705162885,
+            0.009684239280882467,
+            0.025637032986588336,
+            0.01286846663769825,
+            -0.025158872197800664,
+            0.026034585588352824,
+            -0.01320299442382522,
+            0.021959821942398206,
+            0.02614746865806898,
+            0.005604117183660273,
+            -0.012776530634472483
+          ],
+          "wbc_feasible": true,
+          "wbc_converged": true,
+          "max_constraint_violation": 7.550532113918549e-10
+        }
+      ]
+    },
+    {
+      "job": 2355,
+      "case": "sit_rise_walk_stop_sit",
+      "task_success": false,
+      "telemetry_sha256": "a3bfb6676f2c558798ac190a3104cda7b6a3f852f682cceea9e85ff02ee77b53",
+      "contact_raw_to_canonical_indices": [
+        2,
+        3,
+        0,
+        1
+      ],
+      "contact_permutation_matched_policy_ticks": 86,
+      "contact_permutation_candidates_this_recording": [
+        [
+          2,
+          3,
+          0,
+          1
+        ]
+      ],
+      "contact_mapping_basis": {
+        "path": "reports/v15/usd_20261011/full_suite_20261011/diagnostics/cad_landing_ik_replay.json",
+        "sha256": "800cd8ee175b1cfff61f9adf78e1e0e85f10dd45960e9faf68f1b62696980d66",
+        "note": "Earlier CAD replay identified this order uniquely; this recording validates it but can leave pair swaps ambiguous."
+      },
+      "post_blend_window_s": [
+        18.3,
+        18.8
+      ],
+      "post_blend_samples": 26,
+      "post_blend_two_support_samples": 23,
+      "post_blend_numerically_feasible_samples": 26,
+      "max_nonadjacent_contact_force_n": 375.5765686035156,
+      "snapshots": [
+        {
+          "time_s": 17.3,
+          "mode": "BLEND_STAND",
+          "walk_weight": 1.0,
+          "support_count": 2,
+          "stance_mask": [
+            false,
+            true,
+            true,
+            false
+          ],
+          "height_m": 0.4892566204071045,
+          "virtual_contact_z_m": [
+            0.00948074449457692,
+            2.1129432426603145e-05,
+            0.00011203597651976427,
+            0.009871424877733403
+          ],
+          "authored_foot_min_z_m": [
+            0.00937324661035055,
+            -8.256038230425311e-05,
+            -3.319837370363565e-05,
+            0.009853993168758901
+          ],
+          "com_xy_diagonal_line_distance_m": 0.0008151579232644989,
+          "joint_reference_error_rad": null,
+          "wbc_feasible": null,
+          "wbc_converged": null,
+          "max_constraint_violation": null
+        },
+        {
+          "time_s": 18.0,
+          "mode": "BLEND_STAND",
+          "walk_weight": 0.1630800000000009,
+          "support_count": 2,
+          "stance_mask": [
+            true,
+            false,
+            false,
+            true
+          ],
+          "height_m": 0.477974534034729,
+          "virtual_contact_z_m": [
+            1.781149264395987e-05,
+            0.0041364771836531755,
+            0.0028525295995242006,
+            -0.00011642035750447643
+          ],
+          "authored_foot_min_z_m": [
+            -1.0992687682620517e-05,
+            0.004131566936122599,
+            0.0026642664220178913,
+            -4.8423231645777776e-05
+          ],
+          "com_xy_diagonal_line_distance_m": 0.011577187963657969,
+          "joint_reference_error_rad": [
+            0.038677873776580135,
+            0.0045212152016555485,
+            0.030301112325710644,
+            0.0020127689026165495,
+            0.05630082051805774,
+            -0.026101271498585543,
+            0.044043252651020666,
+            0.04652531553219852,
+            -0.04208535591425322,
+            0.029695207136120894,
+            -0.002229477368568822,
+            0.05156036475184855
+          ],
+          "wbc_feasible": true,
+          "wbc_converged": false,
+          "max_constraint_violation": 6.4487281888191e-06
+        },
+        {
+          "time_s": 18.3,
+          "mode": "STABILIZE",
+          "walk_weight": 0.0,
+          "support_count": 2,
+          "stance_mask": [
+            true,
+            false,
+            false,
+            true
+          ],
+          "height_m": 0.46985435485839844,
+          "virtual_contact_z_m": [
+            -5.2651663877301136e-05,
+            -0.00010236373688232714,
+            0.00012420923525469085,
+            -0.00017681450090378803
+          ],
+          "authored_foot_min_z_m": [
+            -5.0642862305771974e-05,
+            -2.4634948657786815e-05,
+            1.5475474618775742e-05,
+            -2.8337999003702485e-05
+          ],
+          "com_xy_diagonal_line_distance_m": 0.022720433305857563,
+          "joint_reference_error_rad": [
+            0.04977116110206668,
+            -0.004923662597442591,
+            0.004305089303443088,
+            -0.02075459417022223,
+            0.024243037552995506,
+            -0.00708080778849185,
+            -0.02225224443534719,
+            -0.010814293603468972,
+            0.01256657954536644,
+            0.04108153447734861,
+            -0.013468624293375864,
+            0.0281284079025077
+          ],
+          "wbc_feasible": true,
+          "wbc_converged": true,
+          "max_constraint_violation": 5.85318741612128e-07
+        },
+        {
+          "time_s": 18.5,
+          "mode": "STABILIZE",
+          "walk_weight": 0.0,
+          "support_count": 2,
+          "stance_mask": [
+            true,
+            false,
+            false,
+            true
+          ],
+          "height_m": 0.46492069959640503,
+          "virtual_contact_z_m": [
+            -0.00011011520605430647,
+            -6.408775799349176e-05,
+            0.0030480713851664953,
+            -0.00022760380955344495
+          ],
+          "authored_foot_min_z_m": [
+            -0.00016828443368854806,
+            -9.039586388992493e-05,
+            0.003037523713730894,
+            -4.087531309648895e-05
+          ],
+          "com_xy_diagonal_line_distance_m": 0.0530689354483431,
+          "joint_reference_error_rad": [
+            0.08269298943894188,
+            -0.013296894573209261,
+            -0.01961723245276059,
+            -0.07119483189854126,
+            0.07402922425856318,
+            -0.02073037094348429,
+            -0.05076980528780774,
+            -0.0322974043898373,
+            0.011297987441349466,
+            0.07548572473890809,
+            -0.02890613849999918,
+            0.016180896457236305
+          ],
+          "wbc_feasible": true,
+          "wbc_converged": true,
+          "max_constraint_violation": 1.1202061626622144e-06
+        },
+        {
+          "time_s": 18.8,
+          "mode": "STABILIZE",
+          "walk_weight": 0.0,
+          "support_count": 2,
+          "stance_mask": [
+            true,
+            false,
+            false,
+            true
+          ],
+          "height_m": 0.4215225577354431,
+          "virtual_contact_z_m": [
+            0.001067724337112358,
+            0.0010702771056027016,
+            0.011229213470293598,
+            -0.0003409842007946473
+          ],
+          "authored_foot_min_z_m": [
+            -0.0005321243144128518,
+            0.0008142642112549114,
+            0.009934536722262965,
+            -0.0010386259232381123
+          ],
+          "com_xy_diagonal_line_distance_m": 0.19473347003873256,
+          "joint_reference_error_rad": [
+            0.26138023666838484,
+            -0.06099978176737475,
+            -0.0873057376328088,
+            -0.11285108063293801,
+            0.23232511477475626,
+            -0.0037038645613336474,
+            0.02647083239967825,
+            -0.34860453922211543,
+            0.09459663932456275,
+            0.26283353099396123,
+            -0.10373558386179449,
+            -0.0029953423692667958
+          ],
+          "wbc_feasible": true,
+          "wbc_converged": false,
+          "max_constraint_violation": 1.2521762384339503e-05
+        },
+        {
+          "time_s": 19.0,
+          "mode": "STABILIZE",
+          "walk_weight": 0.0,
+          "support_count": 3,
+          "stance_mask": [
+            true,
+            false,
+            true,
+            true
+          ],
+          "height_m": 0.21419885754585266,
+          "virtual_contact_z_m": [
+            0.11588213492563554,
+            0.007278099400541083,
+            0.026033616230262235,
+            0.006113200617004655
+          ],
+          "authored_foot_min_z_m": [
+            0.0958255661354166,
+            0.005689200270403844,
+            0.013710191004287442,
+            -0.000451702042807145
+          ],
+          "com_xy_diagonal_line_distance_m": 0.2528807060584073,
+          "joint_reference_error_rad": [
+            0.7978380803000459,
+            -0.5191688160872504,
+            -0.4742239484771693,
+            0.16525750474053993,
+            0.11255918797727249,
+            0.21562885013368938,
+            0.6573971918197905,
+            -0.38344105877569723,
+            -0.22835820205641066,
+            0.4152421423080198,
+            -0.26609081655415207,
+            -0.3871151443378469
+          ],
+          "wbc_feasible": true,
+          "wbc_converged": false,
+          "max_constraint_violation": 0.00019850322048089563
+        }
+      ],
+      "first_self_contact_state_time_s": 18.925,
+      "contact_pair_peaks_n": {
+        "base <-> FR_shank": 375.5765686035156,
+        "FR_shank <-> base": 375.5765686035156
+      },
+      "authored_base_fr_hull_screen": [
+        {
+          "state_time_s": 18.92,
+          "candidates": [
+            {
+              "base_mesh": "/quadruped/base/body_shell_F_1",
+              "shank_mesh": "/quadruped/FR_shank/AK10_9_KV60_V3_0_3D_5",
+              "shared_interior_radius_m": 0.000233859584878624
+            },
+            {
+              "base_mesh": "/quadruped/base/body_shell_F_1",
+              "shank_mesh": "/quadruped/FR_shank/knee_1",
+              "shared_interior_radius_m": -0.00041494445419217014
+            },
+            {
+              "base_mesh": "/quadruped/base/body_shell_B_1",
+              "shank_mesh": "/quadruped/FR_shank/knee_1",
+              "shared_interior_radius_m": -0.0018109369591757629
+            }
+          ]
+        },
+        {
+          "state_time_s": 18.925,
+          "candidates": [
+            {
+              "base_mesh": "/quadruped/base/body_shell_F_1",
+              "shank_mesh": "/quadruped/FR_shank/AK10_9_KV60_V3_0_3D_5",
+              "shared_interior_radius_m": 0.0003945418117879964
+            },
+            {
+              "base_mesh": "/quadruped/base/body_shell_F_1",
+              "shank_mesh": "/quadruped/FR_shank/knee_1",
+              "shared_interior_radius_m": -0.000493159364391253
+            },
+            {
+              "base_mesh": "/quadruped/base/body_shell_B_1",
+              "shank_mesh": "/quadruped/FR_shank/knee_1",
+              "shared_interior_radius_m": -0.0019406262421927665
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
