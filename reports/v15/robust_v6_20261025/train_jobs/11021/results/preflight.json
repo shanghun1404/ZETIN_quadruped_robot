@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "steps": 100,
+  "nonfinite_steps": 0,
+  "raw_state_checked": true,
+  "checks": [
+    {
+      "step": 0,
+      "finite": true,
+      "episode_resets": 0,
+      "reward_mean": 0.1533120572566986,
+      "estimated_torque_abs_max_nm": 33.137916564941406,
+      "contact_force_count": 0
+    },
+    {
+      "step": 25,
+      "finite": true,
+      "episode_resets": 0,
+      "reward_mean": 0.3315054774284363,
+      "estimated_torque_abs_max_nm": 40.979881286621094,
+      "contact_force_count": 0
+    },
+    {
+      "step": 50,
+      "finite": true,
+      "episode_resets": 0,
+      "reward_mean": 0.34691759943962097,
+      "estimated_torque_abs_max_nm": 45.75594711303711,
+      "contact_force_count": 0
+    },
+    {
+      "step": 75,
+      "finite": true,
+      "episode_resets": 0,
+      "reward_mean": 0.32941967248916626,
+      "estimated_torque_abs_max_nm": 44.33729553222656,
+      "contact_force_count": 0
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "bus": 3,
+  "protocol": "v3",
+  "id": 1,
+  "handled": true,
+  "sent": 1,
+  "tx_queued": 1,
+  "rx_frames": 0,
+  "last_lec": 3,
+  "tec": 8,
+  "new_unknown": []
+}

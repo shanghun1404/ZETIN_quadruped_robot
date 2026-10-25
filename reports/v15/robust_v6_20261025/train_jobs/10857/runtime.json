@@ -1,0 +1,6 @@
+{
+  "SLURM_JOB_ID": "10857",
+  "SLURM_JOB_QOS": "admin",
+  "CUDA_VISIBLE_DEVICES": "0",
+  "ROS_DOMAIN_ID": "67"
+}

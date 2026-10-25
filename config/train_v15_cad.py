@@ -21,6 +21,10 @@ p.add_argument('--retention-weight',type=float,default=5.)
 p.add_argument('--seed',type=int,default=73);p.add_argument('--learning-rate',type=float,default=5e-5)
 p.add_argument('--minimum-policy-std',type=float,default=.18)
 p.add_argument('--max-delay-steps',type=int,default=3)
+p.add_argument('--robust',action='store_true',help='Ramp push, motor delay/missed updates and sensor noise')
+p.add_argument('--robust-ramp-iterations',type=int,default=4000)
+p.add_argument('--robust-ramp-offset-iterations',type=int,default=0,help='Ramp iterations completed by earlier segments')
+p.add_argument('--robust-profile',choices=['v1','motor'],default='v1',help='motor adds delay jitter, feedback delay and motor torque lag')
 p.add_argument('--preflight-steps',type=int,default=100)
 p.add_argument('--contract-only',action='store_true')
 AppLauncher.add_app_launcher_args(p);args=p.parse_args()
@@ -67,6 +71,11 @@ def main():
     if args.profile in ('rms','rms_retain'):
         if args.terrain!='mixed':raise ValueError('RMS profile requires its flat/rough generated terrain')
         enable_rms_finetune(cfg)
+    if args.robust:
+        from v15_cad_robust import enable_robust_finetune
+        if args.robust_ramp_iterations<0 or args.robust_ramp_offset_iterations<0:raise ValueError('Invalid robust ramp')
+        enable_robust_finetune(cfg,ramp_steps=args.robust_ramp_iterations*V14_LEG_PPO_CFG.num_steps_per_env,
+            offset_steps=args.robust_ramp_offset_iterations*V14_LEG_PPO_CFG.num_steps_per_env,profile=args.robust_profile)
     agent=copy.deepcopy(V14_LEG_PPO_CFG)
     agent.experiment_name='v15_cad_finetune'
     agent.run_name=args.terrain+'_'+args.profile+'_commands_rated_load'
@@ -82,7 +91,13 @@ def main():
     agent.save_interval=100
     gym.register(id='Isaac-V15-CAD-Finetune',entry_point='isaaclab.envs:ManagerBasedRLEnv',disable_env_checker=True)
     raw=gym.make('Isaac-V15-CAD-Finetune',cfg=cfg)
-    env=make_finite_rollout(make_v13_depth_wrapper())(raw,student_checkpoint=args.student,clip_actions=agent.clip_actions)
+    wrapper=make_v13_depth_wrapper()
+    if args.robust:
+        from v15_cad_robust import PROFILES,ROBUST_START,interpolate_settings,make_noisy_proprioception,ramp_level
+        raw.unwrapped.v15_robust_settings=interpolate_settings(ramp_level(args.robust_ramp_offset_iterations,args.robust_ramp_iterations),
+            ROBUST_START,PROFILES[args.robust_profile])
+        wrapper=make_noisy_proprioception(wrapper)
+    env=make_finite_rollout(wrapper)(raw,student_checkpoint=args.student,clip_actions=agent.clip_actions)
     faulthandler.cancel_dump_traceback_later()
     robot=raw.unwrapped.scene['robot'];action=raw.unwrapped.action_manager.get_term('joint_pos')
     metadata=json.loads(MODEL_METADATA.read_text())
@@ -156,6 +171,14 @@ def main():
         reward_weights={name:inherited_config.get_term_cfg(name).weight for name in inherited_config.active_terms},
         current_semantics='Pre-step bounded PD motor phase estimate; contact reactions are separate',
         adoption='Candidate only; original339 and unchanged physical acceptance retained')
+    if args.robust:
+        from v15_cad_robust import PROFILES,ROBUST_START,PUSH_INTERVAL_S,PROPRIOCEPTIVE_NOISE,settings_record
+        manifest['robust']=dict(profile=args.robust_profile,start=settings_record(ROBUST_START),end=settings_record(PROFILES[args.robust_profile]),
+            max_feedback_delay_physics_steps=action.cfg.max_feedback_delay_steps,
+            ramp_iterations=args.robust_ramp_iterations,ramp_policy_steps=args.robust_ramp_iterations*agent.num_steps_per_env,
+            ramp_offset_iterations=args.robust_ramp_offset_iterations,
+            push_interval_s=list(PUSH_INTERVAL_S),proprioceptive_noise_half_width=list(PROPRIOCEPTIVE_NOISE),
+            semantics='Linear ramp on the global policy-step counter; delay drawn per episode; hold keeps the previous target for one policy step')
     write(output/'training_contract.json',manifest)
     dump_yaml(str(output/'params/env.yaml'),cfg);dump_yaml(str(output/'params/agent.yaml'),agent)
     print('CAD TRAINING CONTRACT '+json.dumps(manifest),flush=True)

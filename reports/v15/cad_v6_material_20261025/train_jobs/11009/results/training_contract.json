@@ -1,0 +1,346 @@
+{
+  "schema": 1,
+  "training_seed": 73,
+  "terrain": "mixed",
+  "profile": "rms_retain",
+  "num_envs": 128,
+  "command_probabilities": [
+    0.1,
+    0.2,
+    0.25,
+    0.1,
+    0.3,
+    0.05
+  ],
+  "command_hold_seconds": [
+    14.0,
+    18.0
+  ],
+  "terrain_forward_fraction_start": 0.9,
+  "rough_training_seed": 73,
+  "retention_teacher_sha256": "c87d6b1d797a2df76f22d610cb25bb33c33c6b8ef89a6394acbcc226ead885d5",
+  "retention_weight": 5.0,
+  "retention_scope": "Forward/zero commands only; frozen actor mean targets",
+  "terrain_columns": {
+    "flat": 116,
+    "rough": 12
+  },
+  "iterations_requested": 400,
+  "starting_iteration": 16100,
+  "actor": "/home/shanghun1404/v15_cad_20261011/v6_train_jobs/10806/results/model_16099.pt",
+  "actor_sha256": "c87d6b1d797a2df76f22d610cb25bb33c33c6b8ef89a6394acbcc226ead885d5",
+  "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+  "usd_sha256": "780d946745daeb272cadf880ed31bbd57367c8deb9d1a220749e4e30d4765645",
+  "mass_min_max_kg": [
+    33.63624572753906,
+    33.63624572753906
+  ],
+  "body_count": 13,
+  "collider_count": 75,
+  "action_joint_order": [
+    "FL_HAA",
+    "FR_HAA",
+    "FL_HFE",
+    "FR_HFE",
+    "RR_HAA",
+    "RL_HAA",
+    "RR_HFE",
+    "RL_HFE",
+    "FL_KFE",
+    "FR_KFE",
+    "RR_KFE",
+    "RL_KFE"
+  ],
+  "physical_joint_order": [
+    "FL_hip_roll",
+    "FR_hip_roll",
+    "BR_hip_roll",
+    "BL_hip_roll",
+    "FL_hip_pitch",
+    "FR_hip_pitch",
+    "BR_hip_pitch",
+    "BL_hip_pitch",
+    "FL_knee",
+    "FR_knee",
+    "BR_knee",
+    "BL_knee"
+  ],
+  "policy_std_before": [
+    0.050054047256708145,
+    0.05064559355378151,
+    0.07503514736890793,
+    0.08324608206748962,
+    0.04567130282521248,
+    0.053123701363801956,
+    0.07349821925163269,
+    0.06539512425661087,
+    0.09026090800762177,
+    0.0832119807600975,
+    0.08983071893453598,
+    0.08699189871549606
+  ],
+  "policy_std_after": [
+    0.10000000149011612,
+    0.10000000149011612,
+    0.10000000149011612,
+    0.10000000149011612,
+    0.10000000149011612,
+    0.10000000149011612,
+    0.10000000149011612,
+    0.10000000149011612,
+    0.10000000149011612,
+    0.10000000149011612,
+    0.10000000149011612,
+    0.10000000149011612
+  ],
+  "exploration_std_semantics": "Initial boost only; std remains trainable during PPO",
+  "restored_optimizer": true,
+  "optimizer_groups_lr": [
+    3e-05
+  ],
+  "learning_rate": 3e-05,
+  "schedule": "fixed",
+  "physics_dt": 0.005,
+  "policy_dt": 0.02,
+  "cutoff_hz": 25.0,
+  "two_ros2_guards": [
+    0.99,
+    0.99
+  ],
+  "max_delay_physics_steps": 3,
+  "training_rms_time_constant_s": 0.5,
+  "stiffness_min_max": [
+    240.0850067138672,
+    359.9397277832031
+  ],
+  "damping_min_max": [
+    6.400613784790039,
+    9.598302841186523
+  ],
+  "self_collision_filters": [
+    {
+      "body": "base",
+      "targets": [
+        "FL_thigh",
+        "FL_shank",
+        "FR_thigh",
+        "FR_shank",
+        "BL_thigh",
+        "BL_shank",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "FL_hip",
+      "targets": [
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "FL_thigh",
+      "targets": [
+        "base",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "FL_shank",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "FR_hip",
+      "targets": [
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "FR_thigh",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "FR_shank",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "BL_hip",
+      "targets": [
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "BL_thigh",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "BL_shank",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "BR_hip",
+      "targets": [
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "BR_thigh",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank"
+      ]
+    },
+    {
+      "body": "BR_shank",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip"
+      ]
+    }
+  ],
+  "reward_weights": {
+    "air_time": 1.0,
+    "base_angular_velocity": 8.0,
+    "base_linear_velocity": 8.0,
+    "foot_clearance": -0.25,
+    "gait": 2.0,
+    "action_smoothness": -1.0,
+    "air_time_variance": -1.0,
+    "base_motion": -2.0,
+    "base_orientation": -3.0,
+    "foot_slip": -0.5,
+    "joint_acc": -0.0001,
+    "joint_pos": -0.7,
+    "joint_torques": -0.0005,
+    "joint_vel": -0.01,
+    "duty_floor": -3.0,
+    "zero_command_motion": -3.0,
+    "rated_motor_load": -0.75,
+    "excess_rated_motor_load": -1.0,
+    "self_contact_count": -5.0,
+    "self_contact_force": -0.025,
+    "stair_lane": -4.0,
+    "directed_motion_progress": 6.0,
+    "rms_motor_load": -12.0
+  },
+  "current_semantics": "Pre-step bounded PD motor phase estimate; contact reactions are separate",
+  "adoption": "Candidate only; original339 and unchanged physical acceptance retained"
+}

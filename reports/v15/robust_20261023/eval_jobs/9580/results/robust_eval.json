@@ -1,0 +1,56 @@
+{
+  "schema": 1,
+  "seed": 2026,
+  "num_envs": 64,
+  "steps": 100,
+  "step_dt": 0.02,
+  "push_interval_s": [
+    8.0,
+    12.0
+  ],
+  "falls": [
+    "base_tilt",
+    "low_height",
+    "physics_diverged"
+  ],
+  "student_sha256": "74c0c15644aec802c2637e5054286ea261e0fd6060637506eee61776af3b6f05",
+  "usd_sha256": "2a41b7f8ad3822b7929ec94a0399dc5cbcdd2e95e309c348d562013b9ba7df78",
+  "actors": {
+    "base": {
+      "path": "/home/shanghun1404/v15_cad_20261011/train_jobs/2341/results/model_15699.pt",
+      "sha256": "9a440065d0f93835abbf02278f79fff91aea95a18c3bf4020b83bb092f9e6db6"
+    }
+  },
+  "results": {
+    "base": {
+      "nominal": {
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0
+        },
+        "terminations": {
+          "time_out": 0,
+          "base_tilt": 0,
+          "physics_diverged": 0,
+          "low_height": 0,
+          "tile_exit": 0
+        },
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "mean_planar_velocity_error_mps": 0.03165928363800049,
+        "mean_yaw_rate_error_radps": 0.025681934356689452,
+        "nonfinite_steps": 0,
+        "robot_seconds": 128.0
+      }
+    }
+  }
+}

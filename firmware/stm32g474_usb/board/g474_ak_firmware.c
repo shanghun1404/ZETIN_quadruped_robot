@@ -1,6 +1,7 @@
 /* NUCLEO-G474RE firmware for real AK MIT motors.
  * USB: STLINK VCP -> LPUART1 PA2/PA3, 921600 8N1, qd_protocol.
- * CAN: FDCAN1 PA12/PA11, FDCAN2 PB13/PB12, FDCAN3 PA15/PA8, 1 Mbit/s normal mode
+ * CAN: FDCAN1 PA12/PA11, FDCAN2 PB13/PB12, FDCAN3 PA15/PA8, normal mode,
+ * G474_CAN_KBPS (default 1000; the AK manuals list 1 Mbit/s)
  * (user wiring, bench-verified with TJA1051T/3 on 2026-10-20).
  * Motors are driven only through qd_ak_motor with a verified g474_ak_config.
  * There is no hardware power cut: if this MCU or the CAN link stops, AK motors
@@ -13,7 +14,14 @@
 
 #define RX_SIZE 4096u
 #define CAN_RING 64u
-#define TX_WAIT_CYCLES 80000u /* 0.5 ms at 160 MHz, several 1 Mbit/s frames */
+#ifndef G474_CAN_KBPS
+#define G474_CAN_KBPS 1000u
+#endif
+/* 80 MHz FDCAN kernel (PLLQ/2), 16 time quanta per bit, sample point 87.5 %. */
+#define CAN_PRESCALER (5000u/G474_CAN_KBPS)
+_Static_assert(CAN_PRESCALER*G474_CAN_KBPS==5000u&&CAN_PRESCALER<=512u,"unsupported CAN bit rate");
+/* 0.5 ms at 1 Mbit/s, scaled with the bit time: several frames at any rate. */
+#define TX_WAIT_CYCLES (80000u*1000u/G474_CAN_KBPS)
 
 extern const qd_ak_motor_config g474_ak_config;
 volatile g474_ak_diag g_diag __attribute__((section(".diag")));
@@ -120,7 +128,7 @@ static void can_init(void) {
   c->ClockDivider=FDCAN_CLOCK_DIV2; c->FrameFormat=FDCAN_FRAME_CLASSIC; c->Mode=FDCAN_MODE_NORMAL;
   /* One attempt per frame: a missing ACK must not flood the bus. */
   c->AutoRetransmission=DISABLE; c->TransmitPause=DISABLE; c->ProtocolException=DISABLE;
-  c->NominalPrescaler=5; c->NominalSyncJumpWidth=2; c->NominalTimeSeg1=13; c->NominalTimeSeg2=2;
+  c->NominalPrescaler=CAN_PRESCALER; c->NominalSyncJumpWidth=2; c->NominalTimeSeg1=13; c->NominalTimeSeg2=2;
   c->DataPrescaler=5; c->DataSyncJumpWidth=2; c->DataTimeSeg1=13; c->DataTimeSeg2=2;
   c->StdFiltersNbr=0; c->ExtFiltersNbr=0; c->TxFifoQueueMode=FDCAN_TX_FIFO_OPERATION;
   if(HAL_FDCAN_Init(&can[i])!=HAL_OK) fatal();

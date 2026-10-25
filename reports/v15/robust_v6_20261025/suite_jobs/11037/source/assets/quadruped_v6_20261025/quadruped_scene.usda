@@ -1,0 +1,69 @@
+#usda 1.0
+(
+    defaultPrim = "World"
+    metersPerUnit = 1
+    kilogramsPerUnit = 1
+    upAxis = "Z"
+)
+
+def Xform "World"
+{
+    def PhysicsScene "physicsScene" (
+        prepend apiSchemas = ["PhysxSceneAPI"]
+    )
+    {
+        vector3f physics:gravityDirection = (0, 0, -1)
+        float physics:gravityMagnitude = 9.81
+        uniform token physxScene:solverType = "TGS"
+        uint physxScene:timeStepsPerSecond = 240
+    }
+
+    def Scope "physics_materials"
+    {
+        def Material "ground" (
+            prepend apiSchemas = ["PhysicsMaterialAPI"]
+        )
+        {
+            float physics:dynamicFriction = 0.7
+            float physics:restitution = 0
+            float physics:staticFriction = 0.8
+        }
+    }
+
+    def Xform "GroundPlane"
+    {
+        def Mesh "CollisionMesh" (
+            prepend apiSchemas = ["PhysicsCollisionAPI", "MaterialBindingAPI"]
+        )
+        {
+            float3[] extent = [(-25, -25, 0), (25, 25, 0)]
+            int[] faceVertexCounts = [4]
+            int[] faceVertexIndices = [0, 1, 2, 3]
+            normal3f[] normals = [(0, 0, 1), (0, 0, 1), (0, 0, 1), (0, 0, 1)]
+            point3f[] points = [(-25, -25, 0), (25, -25, 0), (25, 25, 0), (-25, 25, 0)]
+            color3f[] primvars:displayColor = [(0.5, 0.5, 0.5)]
+            rel material:binding:physics = </World/physics_materials/ground>
+        }
+    }
+
+    def DistantLight "Sun"
+    {
+        float inputs:angle = 1
+        float inputs:intensity = 3000
+        float3 xformOp:rotateXYZ = (315, 0, 30)
+        uniform token[] xformOpOrder = ["xformOp:rotateXYZ"]
+    }
+
+    def DomeLight "Dome"
+    {
+        float inputs:intensity = 800
+    }
+
+    def "quadruped" (
+        prepend references = @./quadruped_robot.usda@
+    )
+    {
+        double3 xformOp:translate = (0, 0, 0.55504)
+        uniform token[] xformOpOrder = ["xformOp:translate"]
+    }
+}

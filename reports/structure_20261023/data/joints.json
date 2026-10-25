@@ -1,0 +1,562 @@
+[
+ {
+  "joint": "J1 AK70-10 housing -> body shell end plate",
+  "case": "D1 stance p99 (Fz 220 N)",
+  "force": [
+   0,
+   0,
+   220.0
+  ],
+  "N": 0.0,
+  "V": 220.0,
+  "T_Nm": -15.3737720399973,
+  "Mb_Nm": 17.151065032173666,
+  "bolt_tension_N": 103.31966886851605,
+  "bolt_shear_N": 73.8065422891485,
+  "n": 8,
+  "bolt": "M3",
+  "pcd": 83,
+  "holds": "motor thread; PLA plate 8 mm clamped",
+  "source": "log \u00a76, mesh PCD 83"
+ },
+ {
+  "joint": "J1 AK70-10 housing -> body shell end plate",
+  "case": "D2 severe p99.9 (Fz 380 N)",
+  "force": [
+   0,
+   0,
+   380.0
+  ],
+  "N": 0.0,
+  "V": 380.0,
+  "T_Nm": -26.55469715999534,
+  "Mb_Nm": 29.62456687375451,
+  "bolt_tension_N": 178.4612462274368,
+  "bolt_shear_N": 127.4840275903474,
+  "n": 8,
+  "bolt": "M3",
+  "pcd": 83,
+  "holds": "motor thread; PLA plate 8 mm clamped",
+  "source": "log \u00a76, mesh PCD 83"
+ },
+ {
+  "joint": "J1 AK70-10 housing -> body shell end plate",
+  "case": "D3 severe + horizontal (Fz 380 N, Fxy 197 N)",
+  "force": [
+   0,
+   197.0,
+   380.0
+  ],
+  "N": -197.0,
+  "V": 380.0,
+  "T_Nm": -26.55469715999534,
+  "Mb_Nm": 135.89464385573183,
+  "bolt_tension_N": 818.6424328658544,
+  "bolt_shear_N": 127.4840275903474,
+  "n": 8,
+  "bolt": "M3",
+  "pcd": 83,
+  "holds": "motor thread; PLA plate 8 mm clamped",
+  "source": "log \u00a76, mesh PCD 83"
+ },
+ {
+  "joint": "J1 AK70-10 housing -> body shell end plate",
+  "case": "D4 impact peak (Fz 1045 N)",
+  "force": [
+   0,
+   0,
+   1045.0
+  ],
+  "N": 0.0,
+  "V": 1045.0,
+  "T_Nm": -73.02541718998718,
+  "Mb_Nm": 81.4675589028249,
+  "bolt_tension_N": 490.7684271254512,
+  "bolt_shear_N": 350.58107587345535,
+  "n": 8,
+  "bolt": "M3",
+  "pcd": 83,
+  "holds": "motor thread; PLA plate 8 mm clamped",
+  "source": "log \u00a76, mesh PCD 83"
+ },
+ {
+  "joint": "J2 AK70-10 output -> combine_1",
+  "case": "D1 stance p99 (Fz 220 N)",
+  "force": [
+   0,
+   0,
+   220.0
+  ],
+  "N": 0.0,
+  "V": 220.0,
+  "T_Nm": 15.3737720399973,
+  "Mb_Nm": 15.831065032173663,
+  "bolt_tension_N": 422.1617341912976,
+  "bolt_shear_N": 241.65029386663062,
+  "n": 6,
+  "bolt": "M3",
+  "pcd": 25,
+  "holds": "motor thread; PLA boss clamped",
+  "source": "log \u00a71/\u00a73"
+ },
+ {
+  "joint": "J2 AK70-10 output -> combine_1",
+  "case": "D2 severe p99.9 (Fz 380 N)",
+  "force": [
+   0,
+   0,
+   380.0
+  ],
+  "N": 0.0,
+  "V": 380.0,
+  "T_Nm": 26.55469715999534,
+  "Mb_Nm": 27.34456687375451,
+  "bolt_tension_N": 729.1884499667868,
+  "bolt_shear_N": 417.3959621332711,
+  "n": 6,
+  "bolt": "M3",
+  "pcd": 25,
+  "holds": "motor thread; PLA boss clamped",
+  "source": "log \u00a71/\u00a73"
+ },
+ {
+  "joint": "J2 AK70-10 output -> combine_1",
+  "case": "D3 severe + horizontal (Fz 380 N, Fxy 197 N)",
+  "force": [
+   0,
+   197.0,
+   380.0
+  ],
+  "N": 197.0,
+  "V": 380.0,
+  "T_Nm": 26.55469715999534,
+  "Mb_Nm": 133.62657262273956,
+  "bolt_tension_N": 3596.2086032730545,
+  "bolt_shear_N": 417.3959621332711,
+  "n": 6,
+  "bolt": "M3",
+  "pcd": 25,
+  "holds": "motor thread; PLA boss clamped",
+  "source": "log \u00a71/\u00a73"
+ },
+ {
+  "joint": "J2 AK70-10 output -> combine_1",
+  "case": "D4 impact peak (Fz 1045 N)",
+  "force": [
+   0,
+   0,
+   1045.0
+  ],
+  "N": 0.0,
+  "V": 1045.0,
+  "T_Nm": 73.02541718998718,
+  "Mb_Nm": 75.19755890282491,
+  "bolt_tension_N": 2005.268237408664,
+  "bolt_shear_N": 1147.8388958664957,
+  "n": 6,
+  "bolt": "M3",
+  "pcd": 25,
+  "holds": "motor thread; PLA boss clamped",
+  "source": "log \u00a71/\u00a73"
+ },
+ {
+  "joint": "J4 AK10-9 hip output -> fake_motor end wall",
+  "case": "D1 stance p99 (Fz 220 N)",
+  "force": [
+   0,
+   0,
+   220.0
+  ],
+  "N": 0.0,
+  "V": 220.0,
+  "T_Nm": -2.851065032173664,
+  "Mb_Nm": 8.619772039997304,
+  "bolt_tension_N": 239.4381122221473,
+  "bolt_shear_N": 76.2647921135231,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 24,
+  "holds": "motor thread; PLA end wall 9 mm clamped (+2 dowels)",
+  "source": "log \u00a73, mesh PCD 24"
+ },
+ {
+  "joint": "J4 AK10-9 hip output -> fake_motor end wall",
+  "case": "D2 severe p99.9 (Fz 380 N)",
+  "force": [
+   0,
+   0,
+   380.0
+  ],
+  "N": 0.0,
+  "V": 380.0,
+  "T_Nm": -4.92456687375451,
+  "Mb_Nm": 14.888697159995344,
+  "bolt_tension_N": 413.57492111098173,
+  "bolt_shear_N": 131.73009546881264,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 24,
+  "holds": "motor thread; PLA end wall 9 mm clamped (+2 dowels)",
+  "source": "log \u00a73, mesh PCD 24"
+ },
+ {
+  "joint": "J4 AK10-9 hip output -> fake_motor end wall",
+  "case": "D3 severe + horizontal (Fz 380 N, Fxy 197 N)",
+  "force": [
+   -197.0,
+   0,
+   380.0
+  ],
+  "N": 197.0,
+  "V": 380.0,
+  "T_Nm": -4.92456687375451,
+  "Mb_Nm": 120.48673327705762,
+  "bolt_tension_N": 3379.6870354738226,
+  "bolt_shear_N": 131.73009546881264,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 24,
+  "holds": "motor thread; PLA end wall 9 mm clamped (+2 dowels)",
+  "source": "log \u00a73, mesh PCD 24"
+ },
+ {
+  "joint": "J4 AK10-9 hip output -> fake_motor end wall",
+  "case": "D4 impact peak (Fz 1045 N)",
+  "force": [
+   0,
+   0,
+   1045.0
+  ],
+  "N": 0.0,
+  "V": 1045.0,
+  "T_Nm": -13.542558902824902,
+  "Mb_Nm": 40.9439171899872,
+  "bolt_tension_N": 1137.3310330551997,
+  "bolt_shear_N": 362.2577625392347,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 24,
+  "holds": "motor thread; PLA end wall 9 mm clamped (+2 dowels)",
+  "source": "log \u00a73, mesh PCD 24"
+ },
+ {
+  "joint": "J5 fake_motor rim -> fake_cover",
+  "case": "D1 stance p99 (Fz 220 N)",
+  "force": [
+   0,
+   0,
+   220.0
+  ],
+  "N": 0.0,
+  "V": 220.0,
+  "T_Nm": -2.851065032173664,
+  "Mb_Nm": 5.6802279600026955,
+  "bolt_tension_N": 42.07576266668663,
+  "bolt_shear_N": 47.22616678582838,
+  "n": 6,
+  "bolt": "M3",
+  "pcd": 90,
+  "holds": "M3 heat-set inserts in PLA",
+  "source": "log \u00a73, mesh PCD 90"
+ },
+ {
+  "joint": "J5 fake_motor rim -> fake_cover",
+  "case": "D2 severe p99.9 (Fz 380 N)",
+  "force": [
+   0,
+   0,
+   380.0
+  ],
+  "N": 0.0,
+  "V": 380.0,
+  "T_Nm": -4.92456687375451,
+  "Mb_Nm": 9.811302840004657,
+  "bolt_tension_N": 72.67631733336783,
+  "bolt_shear_N": 81.57246990279448,
+  "n": 6,
+  "bolt": "M3",
+  "pcd": 90,
+  "holds": "M3 heat-set inserts in PLA",
+  "source": "log \u00a73, mesh PCD 90"
+ },
+ {
+  "joint": "J5 fake_motor rim -> fake_cover",
+  "case": "D3 severe + horizontal (Fz 380 N, Fxy 197 N)",
+  "force": [
+   197.0,
+   0,
+   380.0
+  ],
+  "N": -197.0,
+  "V": 380.0,
+  "T_Nm": -4.92456687375451,
+  "Mb_Nm": 115.41052904367422,
+  "bolt_tension_N": 854.89280773092,
+  "bolt_shear_N": 81.57246990279448,
+  "n": 6,
+  "bolt": "M3",
+  "pcd": 90,
+  "holds": "M3 heat-set inserts in PLA",
+  "source": "log \u00a73, mesh PCD 90"
+ },
+ {
+  "joint": "J5 fake_motor rim -> fake_cover",
+  "case": "D4 impact peak (Fz 1045 N)",
+  "force": [
+   0,
+   0,
+   1045.0
+  ],
+  "N": 0.0,
+  "V": 1045.0,
+  "T_Nm": -13.542558902824902,
+  "Mb_Nm": 26.981082810012808,
+  "bolt_tension_N": 199.85987266676153,
+  "bolt_shear_N": 224.3242922326848,
+  "n": 6,
+  "bolt": "M3",
+  "pcd": 90,
+  "holds": "M3 heat-set inserts in PLA",
+  "source": "log \u00a73, mesh PCD 90"
+ },
+ {
+  "joint": "J6 fake_cover -> com_pro (hub side)",
+  "case": "D1 stance p99 (Fz 220 N)",
+  "force": [
+   0,
+   0,
+   220.0
+  ],
+  "N": 0.0,
+  "V": 220.0,
+  "T_Nm": -2.851065032173664,
+  "Mb_Nm": 6.780227960002696,
+  "bolt_tension_N": 188.33966555563043,
+  "bolt_shear_N": 76.2647921135231,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 24,
+  "holds": "M4 heat-set inserts in PLA disk 5 mm",
+  "source": "log \u00a73, mesh PCD 24"
+ },
+ {
+  "joint": "J6 fake_cover -> com_pro (hub side)",
+  "case": "D2 severe p99.9 (Fz 380 N)",
+  "force": [
+   0,
+   0,
+   380.0
+  ],
+  "N": 0.0,
+  "V": 380.0,
+  "T_Nm": -4.92456687375451,
+  "Mb_Nm": 11.711302840004658,
+  "bolt_tension_N": 325.3139677779071,
+  "bolt_shear_N": 131.73009546881264,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 24,
+  "holds": "M4 heat-set inserts in PLA disk 5 mm",
+  "source": "log \u00a73, mesh PCD 24"
+ },
+ {
+  "joint": "J6 fake_cover -> com_pro (hub side)",
+  "case": "D3 severe + horizontal (Fz 380 N, Fxy 197 N)",
+  "force": [
+   197.0,
+   0,
+   380.0
+  ],
+  "N": -197.0,
+  "V": 380.0,
+  "T_Nm": -4.92456687375451,
+  "Mb_Nm": 117.31007164331248,
+  "bolt_tension_N": 3258.613101203124,
+  "bolt_shear_N": 131.73009546881264,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 24,
+  "holds": "M4 heat-set inserts in PLA disk 5 mm",
+  "source": "log \u00a73, mesh PCD 24"
+ },
+ {
+  "joint": "J6 fake_cover -> com_pro (hub side)",
+  "case": "D4 impact peak (Fz 1045 N)",
+  "force": [
+   0,
+   0,
+   1045.0
+  ],
+  "N": 0.0,
+  "V": 1045.0,
+  "T_Nm": -13.542558902824902,
+  "Mb_Nm": 32.20608281001281,
+  "bolt_tension_N": 894.6134113892446,
+  "bolt_shear_N": 362.2577625392347,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 24,
+  "holds": "M4 heat-set inserts in PLA disk 5 mm",
+  "source": "log \u00a73, mesh PCD 24"
+ },
+ {
+  "joint": "J9 com_pro (knee side) -> knee motor output",
+  "case": "D1 stance p99 (Fz 220 N)",
+  "force": [
+   0,
+   0,
+   220.0
+  ],
+  "N": 0.0,
+  "V": 220.0,
+  "T_Nm": 36.19851023794972,
+  "Mb_Nm": 6.780227960002696,
+  "bolt_tension_N": 188.33966555563043,
+  "bolt_shear_N": 539.4237533048571,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 24,
+  "holds": "motor thread; PLA flange 7.5 mm clamped (+dowels)",
+  "source": "log \u00a73, mesh PCD 24"
+ },
+ {
+  "joint": "J9 com_pro (knee side) -> knee motor output",
+  "case": "D2 severe p99.9 (Fz 380 N)",
+  "force": [
+   0,
+   0,
+   380.0
+  ],
+  "N": 0.0,
+  "V": 380.0,
+  "T_Nm": 62.524699501913155,
+  "Mb_Nm": 11.711302840004658,
+  "bolt_tension_N": 325.3139677779071,
+  "bolt_shear_N": 931.7319375265715,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 24,
+  "holds": "motor thread; PLA flange 7.5 mm clamped (+dowels)",
+  "source": "log \u00a73, mesh PCD 24"
+ },
+ {
+  "joint": "J9 com_pro (knee side) -> knee motor output",
+  "case": "D3 severe + horizontal (Fz 380 N, Fxy 197 N)",
+  "force": [
+   197.0,
+   0,
+   380.0
+  ],
+  "N": 197.0,
+  "V": 380.0,
+  "T_Nm": 62.524699501913155,
+  "Mb_Nm": 75.85220657492889,
+  "bolt_tension_N": 2139.8390715258024,
+  "bolt_shear_N": 931.7319375265715,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 24,
+  "holds": "motor thread; PLA flange 7.5 mm clamped (+dowels)",
+  "source": "log \u00a73, mesh PCD 24"
+ },
+ {
+  "joint": "J9 com_pro (knee side) -> knee motor output",
+  "case": "D4 impact peak (Fz 1045 N)",
+  "force": [
+   0,
+   0,
+   1045.0
+  ],
+  "N": 0.0,
+  "V": 1045.0,
+  "T_Nm": 171.9429236302612,
+  "Mb_Nm": 32.20608281001281,
+  "bolt_tension_N": 894.6134113892446,
+  "bolt_shear_N": 2562.2628281980715,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 24,
+  "holds": "motor thread; PLA flange 7.5 mm clamped (+dowels)",
+  "source": "log \u00a73, mesh PCD 24"
+ },
+ {
+  "joint": "J10 knee motor housing -> knee cup backplate",
+  "case": "D1 stance p99 (Fz 220 N)",
+  "force": [
+   0,
+   0,
+   220.0
+  ],
+  "N": 0.0,
+  "V": 220.0,
+  "T_Nm": -36.19851023794972,
+  "Mb_Nm": 4.536227960002699,
+  "bolt_tension_N": 33.60168859261258,
+  "bolt_shear_N": 170.73522310351746,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 90,
+  "holds": "motor thread; PLA backplate 5 mm clamped",
+  "source": "log \u00a73, mesh PCD 90"
+ },
+ {
+  "joint": "J10 knee motor housing -> knee cup backplate",
+  "case": "D2 severe p99.9 (Fz 380 N)",
+  "force": [
+   0,
+   0,
+   380.0
+  ],
+  "N": 0.0,
+  "V": 380.0,
+  "T_Nm": -62.524699501913155,
+  "Mb_Nm": 7.835302840004662,
+  "bolt_tension_N": 58.03928029633082,
+  "bolt_shear_N": 294.9062944515302,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 90,
+  "holds": "motor thread; PLA backplate 5 mm clamped",
+  "source": "log \u00a73, mesh PCD 90"
+ },
+ {
+  "joint": "J10 knee motor housing -> knee cup backplate",
+  "case": "D3 severe + horizontal (Fz 380 N, Fxy 197 N)",
+  "force": [
+   197.0,
+   0,
+   380.0
+  ],
+  "N": -197.0,
+  "V": 380.0,
+  "T_Nm": -62.524699501913155,
+  "Mb_Nm": 72.36689406340398,
+  "bolt_tension_N": 536.0510671363257,
+  "bolt_shear_N": 294.9062944515302,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 90,
+  "holds": "motor thread; PLA backplate 5 mm clamped",
+  "source": "log \u00a73, mesh PCD 90"
+ },
+ {
+  "joint": "J10 knee motor housing -> knee cup backplate",
+  "case": "D4 impact peak (Fz 1045 N)",
+  "force": [
+   0,
+   0,
+   1045.0
+  ],
+  "N": 0.0,
+  "V": 1045.0,
+  "T_Nm": -171.9429236302612,
+  "Mb_Nm": 21.54708281001282,
+  "bolt_tension_N": 159.60802081490976,
+  "bolt_shear_N": 810.992309741708,
+  "n": 6,
+  "bolt": "M4",
+  "pcd": 90,
+  "holds": "motor thread; PLA backplate 5 mm clamped",
+  "source": "log \u00a73, mesh PCD 90"
+ }
+]

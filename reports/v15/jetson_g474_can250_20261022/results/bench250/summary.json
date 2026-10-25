@@ -1,0 +1,176 @@
+{
+  "kbps": 250,
+  "stage": 6,
+  "faults": 0,
+  "tx_errors": 0,
+  "rx_errors": 0,
+  "interlock_ok": true,
+  "bit_timing": [
+    {
+      "prescaler": 20,
+      "tseg1": 13,
+      "tseg2": 2,
+      "sjw": 2,
+      "configured_bps": 250000.0,
+      "sample_point": 0.875
+    },
+    {
+      "prescaler": 20,
+      "tseg1": 13,
+      "tseg2": 2,
+      "sjw": 2,
+      "configured_bps": 250000.0,
+      "sample_point": 0.875
+    },
+    {
+      "prescaler": 20,
+      "tseg1": 13,
+      "tseg2": 2,
+      "sjw": 2,
+      "configured_bps": 250000.0,
+      "sample_point": 0.875
+    }
+  ],
+  "interlock": [
+    {
+      "lec": 3,
+      "rx": 0
+    },
+    {
+      "lec": 3,
+      "rx": 0
+    },
+    {
+      "lec": 3,
+      "rx": 0
+    }
+  ],
+  "burst": [
+    {
+      "pattern": "zero",
+      "bus": 1,
+      "frame": "standard",
+      "frames": 1000,
+      "us_per_frame": 503.99963713713714,
+      "bits_per_frame": 126.0,
+      "measured_bps": 250000.17999162903
+    },
+    {
+      "pattern": "zero",
+      "bus": 2,
+      "frame": "extended",
+      "frames": 1000,
+      "us_per_frame": 590.4949887387388,
+      "bits_per_frame": 147.62462462462463,
+      "measured_bps": 250001.485939689
+    },
+    {
+      "pattern": "zero",
+      "bus": 3,
+      "frame": "extended",
+      "frames": 1000,
+      "us_per_frame": 590.4910285285287,
+      "bits_per_frame": 147.62462462462463,
+      "measured_bps": 250003.16260942546
+    },
+    {
+      "pattern": "xorshift",
+      "bus": 1,
+      "frame": "standard",
+      "frames": 1000,
+      "us_per_frame": 459.998460960961,
+      "bits_per_frame": 115.001001001001,
+      "measured_bps": 250003.01253347207
+    },
+    {
+      "pattern": "xorshift",
+      "bus": 2,
+      "frame": "extended",
+      "frames": 1000,
+      "us_per_frame": 548.1313563563564,
+      "bits_per_frame": 137.03303303303304,
+      "measured_bps": 250000.35382749353
+    },
+    {
+      "pattern": "xorshift",
+      "bus": 3,
+      "frame": "extended",
+      "frames": 1000,
+      "us_per_frame": 547.9011136136137,
+      "bits_per_frame": 136.97897897897897,
+      "measured_bps": 250006.7540939115
+    }
+  ],
+  "schedule": [
+    {
+      "pattern": "zero",
+      "bus": 1,
+      "frame": "standard",
+      "cycles": 2000,
+      "samples": 2000,
+      "overrun": 0,
+      "mean_ms": 4.028,
+      "max_ms": 4.02879375,
+      "mean_load": 0.8055999999999999
+    },
+    {
+      "pattern": "zero",
+      "bus": 2,
+      "frame": "extended",
+      "cycles": 2000,
+      "samples": 2000,
+      "overrun": 0,
+      "mean_ms": 4.7249995,
+      "max_ms": 4.7253875,
+      "mean_load": 0.9449999
+    },
+    {
+      "pattern": "zero",
+      "bus": 3,
+      "frame": "extended",
+      "cycles": 2000,
+      "samples": 2000,
+      "overrun": 0,
+      "mean_ms": 4.729,
+      "max_ms": 4.7298937500000005,
+      "mean_load": 0.9458
+    },
+    {
+      "pattern": "xorshift",
+      "bus": 1,
+      "frame": "standard",
+      "cycles": 2000,
+      "samples": 2000,
+      "overrun": 0,
+      "mean_ms": 3.6773665,
+      "max_ms": 3.738975,
+      "mean_load": 0.7354733
+    },
+    {
+      "pattern": "xorshift",
+      "bus": 2,
+      "frame": "extended",
+      "cycles": 2000,
+      "samples": 2000,
+      "overrun": 0,
+      "mean_ms": 4.3858045,
+      "max_ms": 4.4434499999999995,
+      "mean_load": 0.8771609
+    },
+    {
+      "pattern": "xorshift",
+      "bus": 3,
+      "frame": "extended",
+      "cycles": 2000,
+      "samples": 2000,
+      "overrun": 0,
+      "mean_ms": 4.390581500000001,
+      "max_ms": 4.45468125,
+      "mean_load": 0.8781163000000001
+    }
+  ],
+  "schedule_zero_late_start_over_100us": 0,
+  "schedule_zero_max_start_late_us": 0.4625,
+  "schedule_xorshift_late_start_over_100us": 0,
+  "schedule_xorshift_max_start_late_us": 1.5812499999999998
+}

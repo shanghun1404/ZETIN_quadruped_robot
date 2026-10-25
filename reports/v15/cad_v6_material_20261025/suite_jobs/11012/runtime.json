@@ -1,0 +1,8 @@
+{
+  "RMW_IMPLEMENTATION": "rmw_cyclonedds_cpp",
+  "ROS_DOMAIN_ID": "42",
+  "ROS_DISTRO": "jazzy",
+  "SLURM_JOB_ID": "11012",
+  "SLURM_JOB_QOS": "admin",
+  "CUDA_VISIBLE_DEVICES": "0"
+}

@@ -4,8 +4,10 @@ CC = arm-none-eabi-gcc
 VENDOR ?= vendor
 CORE ?= ..
 BUILD ?= build
+# CAN bit rate in kbit/s. Objects do not track it: use a separate BUILD per rate.
+CAN_KBPS ?= 1000
 CPU = -mcpu=cortex-m4 -mthumb -mfpu=fpv4-sp-d16 -mfloat-abi=hard
-CPPFLAGS = -DSTM32G474xx -DUSE_HAL_DRIVER -I. -I$(CORE)/include -I$(CORE)/examples -I$(VENDOR)/hal/Inc -I$(VENDOR)/device/Include -I$(VENDOR)/core
+CPPFLAGS = -DSTM32G474xx -DUSE_HAL_DRIVER -DG474_CAN_KBPS=$(CAN_KBPS)u -I. -I$(CORE)/include -I$(CORE)/examples -I$(VENDOR)/hal/Inc -I$(VENDOR)/device/Include -I$(VENDOR)/core
 CFLAGS = $(CPU) -std=c11 -O2 -g3 -Wall -Wextra -Werror -ffunction-sections -fdata-sections
 HAL_NAMES = hal hal_cortex hal_rcc hal_rcc_ex hal_flash hal_flash_ex hal_pwr hal_pwr_ex hal_gpio hal_uart hal_uart_ex hal_dma hal_dma_ex hal_fdcan
 SOURCES = g474_ak_firmware.c g474_ak_config.c $(CORE)/src/qd_protocol.c $(CORE)/src/qd_controller.c $(CORE)/examples/qd_ak_motor.c $(VENDOR)/device/Source/Templates/system_stm32g4xx.c $(addprefix $(VENDOR)/hal/Src/stm32g4xx_,$(addsuffix .c,$(HAL_NAMES)))

@@ -1,0 +1,1315 @@
+{
+  "schema": 1,
+  "training_iterations": 11200,
+  "training_first": {
+    "iteration": 15700,
+    "robust_level": 0.0,
+    "error_vel_xy": 0.0,
+    "time_out": 0.0,
+    "base_tilt": 0.0,
+    "low_height": 0.0,
+    "tile_exit": 0.0,
+    "iteration_s": 2.58
+  },
+  "training_last": {
+    "iteration": 26899,
+    "retention_loss": 0.005,
+    "reward": 276.74,
+    "episode_length": 912.32,
+    "robust_level": 1.0,
+    "error_vel_xy": 0.0727,
+    "time_out": 0.7812,
+    "base_tilt": 0.0469,
+    "low_height": 0.0,
+    "tile_exit": 0.1719,
+    "iteration_s": 1.54
+  },
+  "robust_eval": {
+    "base": {
+      "nominal": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.03008721923828125,
+        "yaw_error_radps": 0.024738719940185547,
+        "tile_exit": 18,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "push_0.5": {
+        "falls": 1,
+        "falls_per_robot_minute": 0.0234375,
+        "fall_fraction_of_ended_episodes": 0.007751937984496124,
+        "planar_error_mps": 0.03503805160522461,
+        "yaw_error_radps": 0.025214956283569335,
+        "tile_exit": 19,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.5,
+            0.5
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "push_1.0": {
+        "falls": 12,
+        "falls_per_robot_minute": 0.28125,
+        "fall_fraction_of_ended_episodes": 0.09375,
+        "planar_error_mps": 0.04706684875488281,
+        "yaw_error_radps": 0.033505062103271484,
+        "tile_exit": 18,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            1.0,
+            1.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "push_1.5": {
+        "falls": 54,
+        "falls_per_robot_minute": 1.265625,
+        "fall_fraction_of_ended_episodes": 0.391304347826087,
+        "planar_error_mps": 0.06533584594726563,
+        "yaw_error_radps": 0.040251121520996094,
+        "tile_exit": 20,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            1.5,
+            1.5
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "delay_30ms": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.03878363418579102,
+        "yaw_error_radps": 0.040527748107910155,
+        "tile_exit": 15,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            6,
+            6
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "delay_40ms": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.049519184112548825,
+        "yaw_error_radps": 0.08574778747558594,
+        "tile_exit": 19,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            8,
+            8
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "missed_10pct": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.0315498046875,
+        "yaw_error_radps": 0.02751613998413086,
+        "tile_exit": 20,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.1,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "noise_1x": {
+        "falls": 1,
+        "falls_per_robot_minute": 0.0234375,
+        "fall_fraction_of_ended_episodes": 0.0078125,
+        "planar_error_mps": 0.05895896530151367,
+        "yaw_error_radps": 0.11424140167236328,
+        "tile_exit": 22,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 1.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "noise_2x": {
+        "falls": 1,
+        "falls_per_robot_minute": 0.0234375,
+        "fall_fraction_of_ended_episodes": 0.0078125,
+        "planar_error_mps": 0.10042450714111328,
+        "yaw_error_radps": 0.1998467559814453,
+        "tile_exit": 14,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 2.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "combined_train_end": {
+        "falls": 4,
+        "falls_per_robot_minute": 0.09375,
+        "fall_fraction_of_ended_episodes": 0.031007751937984496,
+        "planar_error_mps": 0.07150785064697265,
+        "yaw_error_radps": 0.13547901916503907,
+        "tile_exit": 24,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            1.0
+          ],
+          "delay_steps": [
+            0,
+            6
+          ],
+          "hold_probability": 0.05,
+          "noise_scale": 1.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "combined_hard": {
+        "falls": 32,
+        "falls_per_robot_minute": 0.75,
+        "fall_fraction_of_ended_episodes": 0.23880597014925373,
+        "planar_error_mps": 0.11552213287353516,
+        "yaw_error_radps": 0.20470765686035156,
+        "tile_exit": 17,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            1.0,
+            1.0
+          ],
+          "delay_steps": [
+            6,
+            6
+          ],
+          "hold_probability": 0.1,
+          "noise_scale": 1.5,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "delay_jitter": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.03219827651977539,
+        "yaw_error_radps": 0.028874942779541016,
+        "tile_exit": 20,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            2,
+            2
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 2,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "feedback_10ms": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.03326031494140625,
+        "yaw_error_radps": 0.042922428131103516,
+        "tile_exit": 17,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            2,
+            2
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "motor_lag_10ms": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.033997337341308595,
+        "yaw_error_radps": 0.03234099197387695,
+        "tile_exit": 17,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.01,
+            0.01
+          ]
+        }
+      },
+      "motor_lag_20ms": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.042767200469970706,
+        "yaw_error_radps": 0.051419746398925784,
+        "tile_exit": 19,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.02,
+            0.02
+          ]
+        }
+      },
+      "combined_motor_end": {
+        "falls": 6,
+        "falls_per_robot_minute": 0.140625,
+        "fall_fraction_of_ended_episodes": 0.046875,
+        "planar_error_mps": 0.07508126831054687,
+        "yaw_error_radps": 0.14235609436035157,
+        "tile_exit": 19,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            1.0
+          ],
+          "delay_steps": [
+            0,
+            4
+          ],
+          "hold_probability": 0.05,
+          "noise_scale": 1.0,
+          "delay_jitter_steps": 2,
+          "feedback_delay_steps": [
+            0,
+            2
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.01
+          ]
+        }
+      },
+      "combined_motor_hard": {
+        "falls": 47,
+        "falls_per_robot_minute": 1.1015625,
+        "fall_fraction_of_ended_episodes": 0.34814814814814815,
+        "planar_error_mps": 0.13299382019042968,
+        "yaw_error_radps": 0.2371524353027344,
+        "tile_exit": 12,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            1.0,
+            1.0
+          ],
+          "delay_steps": [
+            4,
+            4
+          ],
+          "hold_probability": 0.1,
+          "noise_scale": 1.5,
+          "delay_jitter_steps": 2,
+          "feedback_delay_steps": [
+            2,
+            2
+          ],
+          "motor_lag_s": [
+            0.01,
+            0.01
+          ]
+        }
+      }
+    },
+    "final": {
+      "nominal": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.03655962371826172,
+        "yaw_error_radps": 0.03832133102416992,
+        "tile_exit": 20,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "push_0.5": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.04353134155273437,
+        "yaw_error_radps": 0.03985575866699219,
+        "tile_exit": 24,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.5,
+            0.5
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "push_1.0": {
+        "falls": 5,
+        "falls_per_robot_minute": 0.1171875,
+        "fall_fraction_of_ended_episodes": 0.038461538461538464,
+        "planar_error_mps": 0.05240975570678711,
+        "yaw_error_radps": 0.04400996780395508,
+        "tile_exit": 21,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            1.0,
+            1.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "push_1.5": {
+        "falls": 56,
+        "falls_per_robot_minute": 1.3125,
+        "fall_fraction_of_ended_episodes": 0.3835616438356164,
+        "planar_error_mps": 0.07106167602539062,
+        "yaw_error_radps": 0.05026913833618164,
+        "tile_exit": 23,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            1.5,
+            1.5
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "delay_30ms": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.03876961517333984,
+        "yaw_error_radps": 0.03706575393676758,
+        "tile_exit": 24,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            6,
+            6
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "delay_40ms": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.04472932815551758,
+        "yaw_error_radps": 0.047928001403808596,
+        "tile_exit": 24,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            8,
+            8
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "missed_10pct": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.03642910385131836,
+        "yaw_error_radps": 0.03621307373046875,
+        "tile_exit": 23,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.1,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "noise_1x": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.05133880615234375,
+        "yaw_error_radps": 0.06634664916992188,
+        "tile_exit": 20,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 1.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "noise_2x": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.07787574005126953,
+        "yaw_error_radps": 0.12088295745849609,
+        "tile_exit": 17,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 2.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "combined_train_end": {
+        "falls": 4,
+        "falls_per_robot_minute": 0.09375,
+        "fall_fraction_of_ended_episodes": 0.031007751937984496,
+        "planar_error_mps": 0.059635498046875,
+        "yaw_error_radps": 0.07360733795166016,
+        "tile_exit": 21,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            1.0
+          ],
+          "delay_steps": [
+            0,
+            6
+          ],
+          "hold_probability": 0.05,
+          "noise_scale": 1.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "combined_hard": {
+        "falls": 19,
+        "falls_per_robot_minute": 0.4453125,
+        "fall_fraction_of_ended_episodes": 0.14393939393939395,
+        "planar_error_mps": 0.09281602478027344,
+        "yaw_error_radps": 0.11871477508544923,
+        "tile_exit": 29,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            1.0,
+            1.0
+          ],
+          "delay_steps": [
+            6,
+            6
+          ],
+          "hold_probability": 0.1,
+          "noise_scale": 1.5,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "delay_jitter": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.03533181762695312,
+        "yaw_error_radps": 0.03406845474243164,
+        "tile_exit": 26,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            2,
+            2
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 2,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "feedback_10ms": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.03430109024047852,
+        "yaw_error_radps": 0.0334286994934082,
+        "tile_exit": 23,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            2,
+            2
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "motor_lag_10ms": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.04081986236572266,
+        "yaw_error_radps": 0.04639567184448242,
+        "tile_exit": 20,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.01,
+            0.01
+          ]
+        }
+      },
+      "motor_lag_20ms": {
+        "falls": 0,
+        "falls_per_robot_minute": 0.0,
+        "fall_fraction_of_ended_episodes": 0.0,
+        "planar_error_mps": 0.04992498016357422,
+        "yaw_error_radps": 0.06310831069946289,
+        "tile_exit": 26,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            0.0
+          ],
+          "delay_steps": [
+            0,
+            3
+          ],
+          "hold_probability": 0.0,
+          "noise_scale": 0.0,
+          "delay_jitter_steps": 0,
+          "feedback_delay_steps": [
+            0,
+            0
+          ],
+          "motor_lag_s": [
+            0.02,
+            0.02
+          ]
+        }
+      },
+      "combined_motor_end": {
+        "falls": 4,
+        "falls_per_robot_minute": 0.09375,
+        "fall_fraction_of_ended_episodes": 0.03076923076923077,
+        "planar_error_mps": 0.06413325500488282,
+        "yaw_error_radps": 0.08175006103515625,
+        "tile_exit": 26,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            0.0,
+            1.0
+          ],
+          "delay_steps": [
+            0,
+            4
+          ],
+          "hold_probability": 0.05,
+          "noise_scale": 1.0,
+          "delay_jitter_steps": 2,
+          "feedback_delay_steps": [
+            0,
+            2
+          ],
+          "motor_lag_s": [
+            0.0,
+            0.01
+          ]
+        }
+      },
+      "combined_motor_hard": {
+        "falls": 34,
+        "falls_per_robot_minute": 0.796875,
+        "fall_fraction_of_ended_episodes": 0.2537313432835821,
+        "planar_error_mps": 0.10685943603515625,
+        "yaw_error_radps": 0.1512794647216797,
+        "tile_exit": 17,
+        "robot_seconds": 2560.0,
+        "nonfinite_steps": 0,
+        "settings": {
+          "push_speed_mps": [
+            1.0,
+            1.0
+          ],
+          "delay_steps": [
+            4,
+            4
+          ],
+          "hold_probability": 0.1,
+          "noise_scale": 1.5,
+          "delay_jitter_steps": 2,
+          "feedback_delay_steps": [
+            2,
+            2
+          ],
+          "motor_lag_s": [
+            0.01,
+            0.01
+          ]
+        }
+      }
+    }
+  },
+  "suite": {
+    "base 15699": {
+      "flat_14s": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 14.0,
+        "max_tilt_deg": 2.503896474838257,
+        "failure": null,
+        "reasons": []
+      },
+      "stop_restart": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 24.0,
+        "max_tilt_deg": 2.4430437088012695,
+        "failure": null,
+        "reasons": []
+      },
+      "reverse": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 14.0,
+        "max_tilt_deg": 2.434295177459717,
+        "failure": null,
+        "reasons": []
+      },
+      "lateral": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 14.0,
+        "max_tilt_deg": 2.1983792781829834,
+        "failure": null,
+        "reasons": []
+      },
+      "yaw": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 14.0,
+        "max_tilt_deg": 2.0734872817993164,
+        "failure": null,
+        "reasons": []
+      },
+      "rough": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 24.0,
+        "max_tilt_deg": 2.6519558429718018,
+        "failure": null,
+        "reasons": []
+      },
+      "standing_hold": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 12.0,
+        "max_tilt_deg": 1.0241199731826782,
+        "failure": null,
+        "reasons": []
+      },
+      "sit_rise_walk_stop_sit": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 30.0,
+        "max_tilt_deg": 2.4442451000213623,
+        "failure": null,
+        "reasons": []
+      },
+      "deep_crouch_rise_walk_stop_sit": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 30.0,
+        "max_tilt_deg": 2.5295615196228027,
+        "failure": null,
+        "reasons": []
+      }
+    },
+    "mid 24700": {
+      "flat_14s": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 14.0,
+        "max_tilt_deg": 1.9343149662017822,
+        "failure": null,
+        "reasons": []
+      },
+      "stop_restart": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 24.0,
+        "max_tilt_deg": 1.997431755065918,
+        "failure": null,
+        "reasons": []
+      },
+      "reverse": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 14.0,
+        "max_tilt_deg": 4.525886535644531,
+        "failure": null,
+        "reasons": []
+      },
+      "lateral": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 14.0,
+        "max_tilt_deg": 2.6593265533447266,
+        "failure": null,
+        "reasons": []
+      },
+      "yaw": {
+        "task_success": false,
+        "rated_exceed": 0,
+        "seconds": 14.0,
+        "max_tilt_deg": 3.1508238315582275,
+        "failure": null,
+        "reasons": [
+          "yaw_tracking_error"
+        ]
+      },
+      "rough": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 24.0,
+        "max_tilt_deg": 2.77748966217041,
+        "failure": null,
+        "reasons": []
+      },
+      "standing_hold": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 12.0,
+        "max_tilt_deg": 1.0241199731826782,
+        "failure": null,
+        "reasons": []
+      },
+      "sit_rise_walk_stop_sit": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 30.0,
+        "max_tilt_deg": 2.108771800994873,
+        "failure": null,
+        "reasons": []
+      },
+      "deep_crouch_rise_walk_stop_sit": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 30.0,
+        "max_tilt_deg": 2.2573275566101074,
+        "failure": null,
+        "reasons": []
+      }
+    },
+    "final 26899": {
+      "flat_14s": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 14.0,
+        "max_tilt_deg": 1.944909691810608,
+        "failure": null,
+        "reasons": []
+      },
+      "stop_restart": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 24.0,
+        "max_tilt_deg": 2.7781944274902344,
+        "failure": null,
+        "reasons": []
+      },
+      "reverse": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 14.0,
+        "max_tilt_deg": 6.817479610443115,
+        "failure": null,
+        "reasons": []
+      },
+      "lateral": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 14.0,
+        "max_tilt_deg": 2.5623128414154053,
+        "failure": null,
+        "reasons": []
+      },
+      "yaw": {
+        "task_success": false,
+        "rated_exceed": 0,
+        "seconds": 14.0,
+        "max_tilt_deg": 4.009268760681152,
+        "failure": null,
+        "reasons": [
+          "yaw_tracking_error"
+        ]
+      },
+      "rough": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 24.0,
+        "max_tilt_deg": 3.1928560733795166,
+        "failure": null,
+        "reasons": []
+      },
+      "standing_hold": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 12.0,
+        "max_tilt_deg": 1.0241199731826782,
+        "failure": null,
+        "reasons": []
+      },
+      "sit_rise_walk_stop_sit": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 30.0,
+        "max_tilt_deg": 2.0402798652648926,
+        "failure": null,
+        "reasons": []
+      },
+      "deep_crouch_rise_walk_stop_sit": {
+        "task_success": true,
+        "rated_exceed": 0,
+        "seconds": 30.0,
+        "max_tilt_deg": 2.1705148220062256,
+        "failure": null,
+        "reasons": []
+      }
+    }
+  }
+}

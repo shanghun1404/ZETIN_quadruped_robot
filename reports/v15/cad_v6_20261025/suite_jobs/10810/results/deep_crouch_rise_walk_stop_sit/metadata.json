@@ -1,0 +1,268 @@
+{
+  "base_com_offset": [
+    0.010295690037310123,
+    0.015198299661278725,
+    0.06383222341537476
+  ],
+  "initial_joint_canonical_rad": [
+    -2.0766166024461017e-14,
+    -1.0274998378122076,
+    1.9634785725432233,
+    3.0700106103945795e-14,
+    -1.0272165596938094,
+    1.9631139656591865,
+    -2.202564788019617e-14,
+    -1.0274998512332145,
+    1.9634785912645065,
+    1.7701378735204133e-14,
+    -1.02721658307256,
+    1.9631139982818062
+  ],
+  "initial_root_world_m": [
+    90.0,
+    0.0,
+    0.28688541054725647
+  ],
+  "physical_joint_names": [
+    "FL_hip_roll",
+    "FR_hip_roll",
+    "FL_hip_pitch",
+    "FR_hip_pitch",
+    "BR_hip_roll",
+    "BL_hip_roll",
+    "BR_hip_pitch",
+    "BL_hip_pitch",
+    "FL_knee",
+    "FR_knee",
+    "BR_knee",
+    "BL_knee"
+  ],
+  "physical_sign": [
+    -1.0,
+    -1.0,
+    -1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    -1.0,
+    1.0,
+    -1.0,
+    -1.0,
+    1.0
+  ],
+  "canonical_joint_order": [
+    "FL_HAA",
+    "FL_HFE",
+    "FL_KFE",
+    "FR_HAA",
+    "FR_HFE",
+    "FR_KFE",
+    "RL_HAA",
+    "RL_HFE",
+    "RL_KFE",
+    "RR_HAA",
+    "RR_HFE",
+    "RR_KFE"
+  ],
+  "pair_order": [
+    {
+      "body": "base",
+      "targets": [
+        "FL_thigh",
+        "FL_shank",
+        "FR_thigh",
+        "FR_shank",
+        "BL_thigh",
+        "BL_shank",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "FL_hip",
+      "targets": [
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "FL_thigh",
+      "targets": [
+        "base",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "FL_shank",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "FR_hip",
+      "targets": [
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "FR_thigh",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "FR_shank",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "BL_hip",
+      "targets": [
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "BL_thigh",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "BL_shank",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BR_hip",
+        "BR_thigh",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "BR_hip",
+      "targets": [
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_shank"
+      ]
+    },
+    {
+      "body": "BR_thigh",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank"
+      ]
+    },
+    {
+      "body": "BR_shank",
+      "targets": [
+        "base",
+        "FL_hip",
+        "FL_thigh",
+        "FL_shank",
+        "FR_hip",
+        "FR_thigh",
+        "FR_shank",
+        "BL_hip",
+        "BL_thigh",
+        "BL_shank",
+        "BR_hip"
+      ]
+    }
+  ],
+  "actual_mass_kg": 25.641000747680664
+}
